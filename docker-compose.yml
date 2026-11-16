@@ -1,0 +1,41 @@
+name: recipes
+services:
+  # Разработка: http://localhost:4321 (променените файлове се виждат веднага)
+  dev:
+    build: { context: ., target: dev }
+    ports: ["4321:4321"]
+    volumes:
+      - ./src:/app/src
+      - ./public:/app/public
+      - ./scripts:/app/scripts
+      - ./astro.config.mjs:/app/astro.config.mjs
+    environment:
+      CHOKIDAR_USEPOLLING: "true"
+
+  # Преглед на готовия сайт (както ще е в продукция): http://localhost:8080
+  web:
+    build:
+      context: .
+      target: serve
+      args:
+        SITE_URL: ${SITE_URL:-http://localhost:8080}
+        NOINDEX: ${NOINDEX:-}
+    ports: ["8080:8080"]
+
+  # Проверки (не са част от сайта): docker compose --profile qa run --rm qa node shots.mjs
+  qa:
+    profiles: ["qa"]
+    build: { context: tools/qa }
+    depends_on: [web]
+    volumes:
+      - ./qa-output:/out
+
+  # Същото, но през localhost (Lighthouse третира http://localhost като сигурен произход)
+  qa-local:
+    profiles: ["qa"]
+    build: { context: tools/qa }
+    network_mode: "service:web"
+    environment:
+      BASE: http://localhost:8080
+    volumes:
+      - ./qa-output:/out

@@ -1,0 +1,26 @@
+---
+import Base from '../../layouts/Base.astro';
+import RecipeCard from '../../components/RecipeCard.astro';
+import { getRecipes, getCategories } from '../../lib/recipes';
+
+export async function getStaticPaths() {
+  const recipes = await getRecipes();
+  return getCategories(recipes).map((term) => ({ params: { slug: term.slug }, props: { term } }));
+}
+const { term } = Astro.props;
+---
+<Base title={`Категория: ${term.name}`} description={`Рецепти в категория „${term.name}“.`}>
+  <div class="wrap">
+    <nav class="breadcrumb" aria-label="Път до страницата">
+      <ol>
+        <li><a href="/">Начало</a></li>
+        <li><a href="/kategorii/">Категории</a></li>
+        <li aria-current="page">{term.name}</li>
+      </ol>
+    </nav>
+    <div class="page-head"><h1>{term.name}</h1><p>{term.recipes.length} {term.recipes.length === 1 ? 'рецепта' : 'рецепти'}</p></div>
+    <ul class="grid section">
+      {term.recipes.map((r, i) => <li><RecipeCard recipe={r} eager={i === 0} level={2} /></li>)}
+    </ul>
+  </div>
+</Base>

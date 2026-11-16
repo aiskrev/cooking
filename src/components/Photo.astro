@@ -1,0 +1,68 @@
+---
+import { Picture } from 'astro:assets';
+import type { Photo } from '../lib/recipes';
+import { lightboxData, fitWidths } from '../lib/images';
+
+interface Props {
+  photo: Photo;
+  sizes: string;
+  widths?: number[];
+  /** true само за главната снимка (LCP): без lazy, с висок приоритет */
+  eager?: boolean;
+  /** увеличаване по клик (лайтбокс) */
+  zoom?: boolean;
+  class?: string;
+}
+const { photo, sizes, widths = [360, 560, 800, 1120], eager = false, zoom = false, class: cls = '' } = Astro.props;
+const max = photo.image.width;
+const usable = fitWidths(widths, max);
+const lb = zoom ? await lightboxData(photo) : null;
+---
+{zoom && lb ? (
+  <a
+    class={`photo-link ${cls}`}
+    href={lb.href}
+    data-lightbox
+    data-key={photo.key}
+    data-alt={photo.alt}
+    data-caption={photo.caption ?? ''}
+    data-avif={lb.avif}
+    data-webp={lb.webp}
+    data-jpeg={lb.jpeg}
+    data-w={lb.width}
+    data-h={lb.height}
+  >
+    <span class="photo">
+      <img class="lqip" src={photo.lqip} alt="" width="20" height="25" aria-hidden="true" />
+      <Picture
+        src={photo.image}
+        alt={photo.alt}
+        widths={usable}
+        sizes={sizes}
+        formats={['avif', 'webp']}
+        fallbackFormat="jpeg"
+        loading={eager ? 'eager' : 'lazy'}
+        decoding={eager ? 'sync' : 'async'}
+        fetchpriority={eager ? 'high' : 'auto'}
+        width={usable[usable.length - 1]}
+      />
+    </span>
+    <span class="sr-only"> (увеличи снимката)</span>
+  </a>
+) : (
+  <span class={`photo ${cls}`}>
+    <img class="lqip" src={photo.lqip} alt="" width="20" height="25" aria-hidden="true" />
+    <Picture
+      src={photo.image}
+      alt={photo.alt}
+      widths={usable}
+      sizes={sizes}
+      formats={['avif', 'webp']}
+      fallbackFormat="jpeg"
+      loading={eager ? 'eager' : 'lazy'}
+      decoding={eager ? 'sync' : 'async'}
+      fetchpriority={eager ? 'high' : 'auto'}
+      width={usable[usable.length - 1]}
+    />
+  </span>
+)}

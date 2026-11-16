@@ -1,0 +1,60 @@
+---
+import Base from '../layouts/Base.astro';
+import RecipeCard from '../components/RecipeCard.astro';
+import { getRecipes, getCategories, getCoverPhoto } from '../lib/recipes';
+import { ogImage } from '../lib/images';
+import { site } from '../site.config';
+
+const recipes = await getRecipes();
+const latest = recipes.slice(0, 6);
+const categories = getCategories(recipes);
+const first = recipes[0];
+const cover = first ? await getCoverPhoto(first) : undefined;
+const og = cover ? await ogImage(cover, Astro.site) : undefined;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: site.name,
+  url: new URL('/', Astro.site).href,
+  inLanguage: site.lang,
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: new URL('/tursene/?q={search_term_string}', Astro.site).href.replace('%7Bsearch_term_string%7D', '{search_term_string}'),
+    'query-input': 'required name=search_term_string',
+  },
+};
+---
+<Base title={site.name} description={site.description} image={og} jsonLd={jsonLd}>
+  <div class="wrap">
+    <section class="hero" aria-labelledby="h-hero">
+      <h1 id="h-hero">{site.name}</h1>
+      <p class="lead">{site.description}</p>
+      <div class="actions">
+        <a class="btn" href="/recepti/">Всички рецепти</a>
+        <a class="btn secondary" href="/tursene/">Търсене</a>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="h-latest">
+      <div class="section-head">
+        <h2 id="h-latest">Нови рецепти</h2>
+        <a href="/recepti/">Виж всички</a>
+      </div>
+      <ul class="grid">
+        {latest.map((r, i) => <li><RecipeCard recipe={r} eager={i === 0} /></li>)}
+      </ul>
+    </section>
+
+    {categories.length > 0 && (
+      <section class="section" aria-labelledby="h-cats">
+        <div class="section-head"><h2 id="h-cats">Категории</h2></div>
+        <ul class="chips">
+          {categories.map((c) => (
+            <li><a href={`/kategorii/${c.slug}/`}>{c.name}<span class="count">{c.recipes.length}</span></a></li>
+          ))}
+        </ul>
+      </section>
+    )}
+  </div>
+</Base>

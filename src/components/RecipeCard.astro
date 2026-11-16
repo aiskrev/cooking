@@ -1,0 +1,24 @@
+---
+import type { Recipe } from '../lib/recipes';
+import { getCoverPhoto } from '../lib/recipes';
+import { formatMinutes } from '../lib/text';
+import Photo from './Photo.astro';
+interface Props { recipe: Recipe; eager?: boolean; level?: 2 | 3 }
+const { recipe, eager = false, level = 3 } = Astro.props;
+const Heading = level === 2 ? 'h2' : 'h3';
+const cover = await getCoverPhoto(recipe);
+const total = recipe.data.prepTime + recipe.data.cookTime;
+---
+<article class="card">
+  {cover && (
+    <a class="card-media" href={`/recepti/${recipe.id}/`} tabindex="-1" aria-hidden="true">
+      <Photo photo={cover} widths={[360, 560, 800]} sizes="(min-width: 960px) 360px, (min-width: 600px) 45vw, 100vw" eager={eager} class="card-photo" />
+    </a>
+  )}
+  <div class="card-body">
+    <p class="card-meta">{recipe.data.category} · {formatMinutes(total)}</p>
+    <Heading class="card-title"><a href={`/recepti/${recipe.id}/`}>{recipe.data.title}</a></Heading>
+    <p class="card-desc">{recipe.data.description}</p>
+    {recipe.data.illustrative && <p class="badge">Илюстративни снимки</p>}
+  </div>
+</article>

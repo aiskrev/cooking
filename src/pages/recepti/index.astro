@@ -1,0 +1,18 @@
+---
+import Base from '../../layouts/Base.astro';
+import RecipeCard from '../../components/RecipeCard.astro';
+import { getRecipes } from '../../lib/recipes';
+
+const recipes = await getRecipes();
+---
+<Base title="Всички рецепти" description="Всички рецепти със снимки на стъпките – от най-новите към по-старите.">
+  <div class="wrap">
+    <div class="page-head">
+      <h1>Всички рецепти</h1>
+      <p>{recipes.length} {recipes.length === 1 ? 'рецепта' : 'рецепти'}</p>
+    </div>
+    <ul class="grid section">
+      {recipes.map((r, i) => <li><RecipeCard recipe={r} eager={i === 0} level={2} /></li>)}
+    </ul>
+  </div>
+</Base>
