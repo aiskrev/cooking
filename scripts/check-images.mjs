@@ -49,7 +49,7 @@ for (const f of pages) {
     const tag = m[0];
     imgTags++;
     if (!/\swidth="\d+"/.test(tag) || !/\sheight="\d+"/.test(tag)) err(`${rel}: <img> без width/height: ${tag.slice(0, 100)}`);
-    if (!/\salt="/.test(tag)) err(`${rel}: <img> без alt: ${tag.slice(0, 100)}`);
+    if (!/\salt(="|[\s>])/.test(tag)) err(`${rel}: <img> без alt: ${tag.slice(0, 100)}`); // alt без стойност = празен alt (декоративно повторение; връзката има aria-label)
     const isLqip = /class="lqip"/.test(tag);
     if (!isLqip && !/loading="lazy"/.test(tag)) { eager++; console.log(`  без lazy (главна снимка): ${rel}`); }
     if (!isLqip && /loading="lazy"/.test(tag) && /fetchpriority="high"/.test(tag)) err(`${rel}: lazy и high едновременно`);

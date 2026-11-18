@@ -35,3 +35,17 @@ export function formatDate(d: Date): string {
 export function pluralPortions(n: number): string {
   return n === 1 ? '1 порция' : `${n} порции`;
 }
+
+/** Форматира количество с дроби: 1.5 -> „1½“, 0.25 -> „¼“ */
+export function formatAmount(n: number): string {
+  const frac = [[0.25, '¼'], [0.5, '½'], [0.75, '¾'], [0.333, '⅓'], [0.667, '⅔']] as const;
+  const whole = Math.floor(n + 1e-9);
+  const rest = n - whole;
+  if (rest < 0.04) return String(whole);
+  for (const [v, ch] of frac) if (Math.abs(rest - v) < 0.04) return (whole ? String(whole) : '') + ch;
+  if (rest > 0.96) return String(whole + 1);
+  return String(Math.round(n * 10) / 10).replace('.', ',');
+}
+
+/** Нормализира име на ястие за търсене/филтър */
+export const norm = (s: string) => s.toLocaleLowerCase('bg').normalize('NFC');

@@ -1,0 +1,40 @@
+---
+// Фото-история: до 10 кадъра по реда на готвенето, плъзгане/стрелки, увеличаване по клик.
+import type { Photo as PhotoT } from '../lib/recipes';
+import Photo from './Photo.astro';
+interface Props { items: Array<{ photo: PhotoT; lite: boolean }>; title: string }
+const { items, title } = Astro.props;
+---
+<section class="story" aria-roledescription="карусел" aria-label={`Фото-история: ${title}`} data-carousel>
+  <div class="story-head">
+    <h2>Фото-история</h2>
+    <p class="muted">{items.length} кадъра по реда на приготвяне</p>
+    <div class="story-nav">
+      <button type="button" class="round-btn" data-prev aria-label="Предишни кадри">‹</button>
+      <button type="button" class="round-btn" data-next aria-label="Следващи кадри">›</button>
+    </div>
+  </div>
+  <ol class="story-track" tabindex="0" aria-label="Кадри, превъртайте хоризонтално или със стрелките">
+    {items.map(({ photo, lite }, i) => (
+      <li class="story-slide">
+        <figure>
+          <Photo photo={photo} zoom lite={lite} label={`Увеличи кадър ${i + 1}: ${photo.caption ?? photo.alt}`} sizes="(min-width: 960px) 300px, 70vw" widths={[480, 800]} class="story-photo" />
+          <figcaption><span class="story-no">{i + 1}</span> {photo.caption}</figcaption>
+        </figure>
+      </li>
+    ))}
+  </ol>
+</section>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-carousel]').forEach((root) => {
+    const track = root.querySelector<HTMLElement>('.story-track')!;
+    const step = () => Math.max(track.clientWidth * 0.85, 240);
+    root.querySelector('[data-prev]')?.addEventListener('click', () => track.scrollBy({ left: -step(), behavior: 'smooth' }));
+    root.querySelector('[data-next]')?.addEventListener('click', () => track.scrollBy({ left: step(), behavior: 'smooth' }));
+    track.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight') { e.preventDefault(); track.scrollBy({ left: step(), behavior: 'smooth' }); }
+      if (e.key === 'ArrowLeft') { e.preventDefault(); track.scrollBy({ left: -step(), behavior: 'smooth' }); }
+    });
+  });
+</script>

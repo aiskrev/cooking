@@ -21,9 +21,9 @@ FROM deps AS build
 COPY . .
 # Публичен адрес на сайта (канонични връзки, sitemap, RSS). Задайте при сборка за продукция.
 ARG SITE_URL=http://localhost:8080
-# NOINDEX=1 забранява индексирането (тестов период)
-ARG NOINDEX=
-ENV SITE_URL=$SITE_URL NOINDEX=$NOINDEX
+# INDEXABLE=1 позволява индексиране (по подразбиране сайтът е НЕиндексируем)
+ARG INDEXABLE=
+ENV SITE_URL=$SITE_URL INDEXABLE=$INDEXABLE
 RUN --mount=type=cache,target=/app/node_modules/.astro npm run build
 
 FROM build AS check

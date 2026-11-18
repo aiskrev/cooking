@@ -5,7 +5,7 @@ import fs from 'node:fs';
 const BASE = process.env.BASE || 'http://web:8080';
 const pages = {
   home: '/',
-  recipe: '/recepti/pylneni-chushki-s-kayma-i-oriz/',
+  recipe: '/recepti/banitsa-sas-sirene/',
   list: '/recepti/',
   search: '/tursene/',
 };

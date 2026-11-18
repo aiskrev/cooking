@@ -11,32 +11,39 @@ interface Props {
   eager?: boolean;
   /** увеличаване по клик (лайтбокс) */
   zoom?: boolean;
+  /** повторение на снимка, която вече е на страницата: само ключ към лайтбокса (без дублиране на данните) */
+  lite?: boolean;
+  /** името на връзката при alt="" (когато снимката е повторение и не бива да се чете втори път) */
+  label?: string;
   class?: string;
 }
-const { photo, sizes, widths = [360, 560, 800, 1120], eager = false, zoom = false, class: cls = '' } = Astro.props;
+const { photo, sizes, widths = [480, 800, 1120], eager = false, zoom = false, lite = false, label, class: cls = '' } = Astro.props;
 const max = photo.image.width;
 const usable = fitWidths(widths, max);
-const lb = zoom ? await lightboxData(photo) : null;
+const lb = zoom && !lite ? await lightboxData(photo) : null;
+const alt = label ? '' : photo.alt;
+const w = usable[usable.length - 1];
 ---
-{zoom && lb ? (
+{zoom ? (
   <a
     class={`photo-link ${cls}`}
-    href={lb.href}
+    href={lb?.href ?? '#'}
     data-lightbox
     data-key={photo.key}
-    data-alt={photo.alt}
-    data-caption={photo.caption ?? ''}
-    data-avif={lb.avif}
-    data-webp={lb.webp}
-    data-jpeg={lb.jpeg}
-    data-w={lb.width}
-    data-h={lb.height}
+    aria-label={label}
+    data-alt={lb ? photo.alt : undefined}
+    data-caption={lb ? (photo.caption ?? '') : undefined}
+    data-avif={lb?.avif}
+    data-webp={lb?.webp}
+    data-jpeg={lb?.jpeg}
+    data-w={lb?.width}
+    data-h={lb?.height}
   >
     <span class="photo">
       <img class="lqip" src={photo.lqip} alt="" width="20" height="25" aria-hidden="true" />
       <Picture
         src={photo.image}
-        alt={photo.alt}
+        alt={alt}
         widths={usable}
         sizes={sizes}
         formats={['avif', 'webp']}
@@ -44,10 +51,10 @@ const lb = zoom ? await lightboxData(photo) : null;
         loading={eager ? 'eager' : 'lazy'}
         decoding={eager ? 'sync' : 'async'}
         fetchpriority={eager ? 'high' : 'auto'}
-        width={usable[usable.length - 1]}
+        width={w}
       />
     </span>
-    <span class="sr-only"> (увеличи снимката)</span>
+    {!label && <span class="sr-only"> (увеличи снимката)</span>}
   </a>
 ) : (
   <span class={`photo ${cls}`}>
@@ -62,7 +69,7 @@ const lb = zoom ? await lightboxData(photo) : null;
       loading={eager ? 'eager' : 'lazy'}
       decoding={eager ? 'sync' : 'async'}
       fetchpriority={eager ? 'high' : 'auto'}
-      width={usable[usable.length - 1]}
+      width={w}
     />
   </span>
 )}

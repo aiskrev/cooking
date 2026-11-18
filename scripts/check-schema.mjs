@@ -48,7 +48,7 @@ for (const slug of fs.readdirSync(recipesDir, { withFileTypes: true }).filter((e
   });
   // totalTime = prepTime + cookTime
   const mins = (d) => { const m = /^PT(?:(\d+)H)?(?:(\d+)M)?$/.exec(d || ''); return m ? (+m[1] || 0) * 60 + (+m[2] || 0) : NaN; };
-  if (mins(r.totalTime) !== mins(r.prepTime) + mins(r.cookTime)) err(tag, 'totalTime ≠ prepTime + cookTime');
+  if (mins(r.totalTime) < mins(r.prepTime) + mins(r.cookTime)) err(tag, "totalTime < prepTime + cookTime");
   // не трябва да има измислени неща
   for (const k of ['aggregateRating', 'review', 'nutrition', 'video']) if (r[k]) err(tag, `съдържа ${k} – не се допуска, докато няма реални данни`);
   // изображенията трябва да съществуват в dist

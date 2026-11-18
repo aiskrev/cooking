@@ -1,11 +1,43 @@
-# Домашна кухня – сайт с рецепти (статичен)
+# Модерна българска кухня – локален кулинарен блог (статичен)
 
-Статичен сайт с рецепти и много снимки. Построен с [Astro](https://astro.build): всяка рецепта е папка с текст (`index.md`) и снимки; при сборката снимките се оптимизират автоматично, а резултатът е обикновени файлове (HTML/CSS/снимки), които се обслужват от Caddy – **без база данни и без админ панел**.
+Статичен сайт с рецепти и много снимки. Построен с [Astro](https://astro.build): всяка рецепта е папка с текст (`index.md`) и снимки; при сборката снимките се оптимизират автоматично, а резултатът е обикновени файлове (HTML/CSS/снимки) – **без база данни и без админ панел**.
 
-> Това е **отделен проект**, не е свързан с A.I. Commerce Studio. Нищо тук не е качено на сървър и не е публикувано в GitHub.
-> „Домашна кухня“ е **примерно име** – сменя се в `src/site.config.ts`.
+> Това е **отделен проект**, не е свързан с A.I. Commerce Studio. Сайтът се ползва **само локално**; нищо не е разгръщано.
+> Хранилището в GitHub (`aiskrev/cooking`) е **публично** и съдържа само първата рецепта и кода. Новите рецепти, снимките, манифестите и отчетите са в `.gitignore` и **не се качват** без изрично одобрение.
+> Името е **примерно** – сменя се в `src/site.config.ts`.
 
 Всички команди работят през Docker (на компютъра не са нужни Node, npm или Python).
+
+## 0. Внасяне на рецепти и снимки от `D:\Cooking`
+
+Изходната папка се чете **само за четене** – нищо там не се мести, трие или презаписва.
+
+1. **Инвентар** (SHA-256, размери, дубликати, перцептивен хеш, партиди по време):
+
+   ```powershell
+   docker build -t recipes-import tools/import
+   docker run --rm -v D:\Cooking:/src:ro -v D:\Projects\recipes\reports\_work:/out -v D:\Projects\recipes\tools\import:/t/scripts:ro recipes-import node /t/scripts/scan.mjs /src /out/inventory.json
+   docker run --rm -v D:\Cooking:/src:ro -v D:\Projects\recipes\reports\_work:/out -v D:\Projects\recipes\tools\import:/t/scripts:ro recipes-import node /t/scripts/sheets.mjs /src /out/inventory.json /out/sheets
+   ```
+
+   Контактните листове (`reports/_work/sheets/`) са за визуален преглед: на всеки кадър има номер `#N`.
+2. **Описание на рецептите** – в `_private-imports/source-recipes/*.mjs` (лично, не се качва): заглавие, текст, съставки, стъпки и към всяка стъпка номер на снимка `ph: N`.
+3. **Импорт** (идемпотентен – повторното пускане не дублира; ръчно редактиран `index.md` не се презаписва, а се записва `index.generated.md`):
+
+   ```powershell
+   docker run --rm -v D:\Cooking:/src:ro -v D:\Projects\recipes:/work -v D:\Projects\recipes\tools\import\run.sh:/run.sh:ro recipes-import sh /run.sh import-recipes.mjs --dry-run
+   docker run --rm -v D:\Cooking:/src:ro -v D:\Projects\recipes:/work -v D:\Projects\recipes\tools\import\run.sh:/run.sh:ro recipes-import sh /run.sh import-recipes.mjs
+   ```
+
+   За всяка внесена снимка в `src/content/recipes/<рецепта>/manifest.json` се пази оригиналното име, SHA-256, размер и роля. Копията са WebP до 1600 px без метаданни.
+4. **Отчети** – `reports/ASSET_INVENTORY.md`, `RECIPE_INVENTORY.md`, `MISSING_ASSETS.md`, `IMAGE_RECOGNITION_REVIEW.md`, `IMPORT_REPORT.md` (копие и в `D:\Cooking\reports`).
+
+### Какво има на страницата на рецептата
+- Фото-история до 10 кадъра по реда на готвенето, увеличаване на цял екран (клавиатура, плъзгане, подписи).
+- Съставки с отметки, **преоразмеряване на порциите** (само числовите количества; „на вкус“, времето и температурата не се пипат), копиране и **списък за пазаруване** (`/spisak/`, пази се само в браузъра).
+- **Режим „готвене“** – голям текст, стъпка по стъпка, таймер за стъпките с време, списък със съставки, екранът не заспива (където браузърът позволява). Работи без интернет.
+- Техника, контрол на температурата, съвети, чести грешки, заместители, поднасяне, съхранение, редакционна индикация за алергени.
+- Състояние на текста („шеф-реконструкция – чака проверка“) и бележка „Илюстративни снимки“.
 
 ## 1. Бърз преглед на сайта
 
@@ -103,7 +135,7 @@ SITE_URL=https://recepti.вашдомейн.bg docker compose up -d --build web
 
 (в PowerShell: `$env:SITE_URL="https://..."; docker compose up -d --build web`)
 
-- `NOINDEX=1` – забранява индексирането (`robots.txt` + `noindex`). **Задължително за тестов период и докато рецептите са чернови.**
+- По подразбиране сайтът е **неиндексируем** (`robots.txt` забранява всичко + `noindex`). `INDEXABLE=1` го прави индексируем – само при бъдещо публикуване.
 - Автоматични проверки (счупени връзки, `schema.org/Recipe`, снимки, EXIF) – падат при грешка:
 
   ```bash
@@ -134,7 +166,7 @@ SITE_URL=https://recepti.вашдомейн.bg docker compose up -d --build web
    docker build --target export --build-arg SITE_URL=https://recepti.вашдомейн.bg --output type=local,dest=release .
    ```
 
-   В `release/` са готовите файлове. (Добавете `--build-arg NOINDEX=1` за тестово публикуване.)
+   В `release/` са готовите файлове. (Добавете `--build-arg INDEXABLE=1` само когато сайтът трябва да се индексира.)
 3. **Папка на сървъра** (еднократно): `/srv/recipes/releases/` и символна връзка `/srv/recipes/current`.
 4. **Качване на нова версия** (атомарно – посетителите никога не виждат наполовина качен сайт):
 

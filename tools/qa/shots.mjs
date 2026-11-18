@@ -9,10 +9,14 @@ const BASE = process.env.BASE || 'http://web:8080';
 const OUT = '/out';
 fs.mkdirSync(OUT, { recursive: true });
 const widths = [360, 390, 768, 1024, 1440];
+const RECIPE = process.env.RECIPE || '/recepti/banitsa-sas-sirene/';
 const pages = {
   home: '/',
-  recipe: '/recepti/pylneni-chushki-s-kayma-i-oriz/',
+  recipe: RECIPE,
+  recipe2: '/recepti/beef-wellington/',
+  recipe3: '/recepti/pylneni-chushki-s-kayma-i-oriz/',
   list: '/recepti/',
+  shopping: '/spisak/',
   categories: '/kategorii/',
   category: '/kategorii/osnovni-yastiya/',
   tag: '/etiketi/chushki/',
@@ -45,9 +49,9 @@ for (const w of widths) {
     if (resp.status() !== expected) problems.push(`HTTP ${resp.status()}`);
     // скролваме до дъното, за да се заредят ленивите снимки
     await page.evaluate(async () => {
-      for (let y = 0; y < document.body.scrollHeight; y += 500) {
+      for (let y = 0; y < document.body.scrollHeight; y += 350) {
         window.scrollTo(0, y);
-        await new Promise((r) => setTimeout(r, 40));
+        await new Promise((r) => setTimeout(r, 110));
       }
       window.scrollTo(0, 0);
       await Promise.race([
@@ -62,6 +66,7 @@ for (const w of widths) {
       const bad = [];
       if (document.documentElement.scrollWidth > vw) bad.push('scrollWidth ' + document.documentElement.scrollWidth + ' > ' + vw);
       for (const el of document.querySelectorAll('body *:not(.lqip)')) {
+        if (el.closest('.story-track, .journey-strip')) continue; // нарочно хоризонтално превъртане
         const r = el.getBoundingClientRect();
         if (r.width > 0 && (r.right > vw + 1 || r.left < -1)) {
           bad.push(el.tagName + '.' + el.className + ' ' + Math.round(r.left) + '..' + Math.round(r.right));
@@ -71,7 +76,7 @@ for (const w of widths) {
       return bad;
     });
     if (over.length) problems.push('преливане: ' + over.join('; '));
-    if (name === 'recipe' || name === 'home') await page.screenshot({ path: `${OUT}/${name}-${w}.png`, fullPage: true });
+    if (['recipe', 'home', 'list', 'recipe2'].includes(name)) await page.screenshot({ path: `${OUT}/${name}-${w}.png`, fullPage: true });
     log(problems.length === 0, `${w}px ${name} ${p} ${problems.join(' | ')}`);
     await page.close();
   }
@@ -148,6 +153,79 @@ for (const w of widths) {
     ['.site-header', '.site-footer', '.step-photo', '.actions'].map((s) => [s, [...document.querySelectorAll(s)].every((e) => getComputedStyle(e).display === 'none')]),
   );
   log(hidden.every(([, h]) => h), 'печат: скрити ' + hidden.map(([s]) => s).join(', '));
+  await ctx.close();
+}
+
+// ---- 4б. Порции, списък за пазаруване, режим „готвене“, фото-история, филтри ----
+{
+  const ctx = await browser.newContext({ viewport: { width: 1024, height: 900 }, colorScheme: 'light' });
+  const page = await ctx.newPage();
+  const errs = [];
+  page.on('console', (m) => { if (m.type() === 'error') errs.push(m.text()); });
+  page.on('pageerror', (e) => errs.push(e.message));
+  await page.goto(BASE + pages.recipe, { waitUntil: 'load' });
+  const first = page.locator('[data-ing][data-scale="y"] .ing-text').first();
+  const before = (await first.textContent()).trim();
+  await page.click('[data-plus]');
+  await page.click('[data-plus]');
+  const after = (await first.textContent()).trim();
+  const serv = await page.locator('[data-servings]').textContent();
+  log(before !== after, `порции ${serv}: „${before}“ → „${after}“`);
+  const salt = page.locator('[data-ing][data-scale="n"] .ing-text').first();
+  if (await salt.count()) { const s1 = await salt.textContent(); await page.click('[data-plus]'); log(s1 === (await salt.textContent()), `непреоразмеряем ред остава: „${s1.trim()}“`); }
+  await page.click('[data-reset]');
+  log((await first.textContent()).trim() === before, 'връщане към началните порции');
+  await page.click('[data-add-list]');
+  const st = await page.locator('[data-tools-status]').textContent();
+  log(/Добавени са \d+/.test(st), `списък: ${st}`);
+  await page.goto(BASE + '/spisak/', { waitUntil: 'load' });
+  const n = await page.locator('.shop-list .ing-list li').count();
+  log(n > 0, `страница „Списък“: ${n} съставки`);
+  await page.screenshot({ path: `${OUT}/shopping-1024.png` });
+  // режим „готвене“
+  await page.goto(BASE + pages.recipe, { waitUntil: 'load' });
+  await page.click('[data-cook-open]');
+  const cook = page.locator('dialog.cook');
+  log(await cook.evaluate((d) => d.open), 'режим „готвене“ се отваря');
+  const p1 = await page.locator('.ck-progress').textContent();
+  await page.keyboard.press('ArrowRight');
+  const p2 = await page.locator('.ck-progress').textContent();
+  log(p1 !== p2, `стъпки: „${p1}“ → „${p2}“`);
+  await page.click('.ck-ing-toggle');
+  log((await page.locator('.ck-ings li').count()) > 0, 'съставки в режим „готвене“');
+  // таймер: намери стъпка с време
+  let timerSeen = false;
+  for (let i = 0; i < 12 && !timerSeen; i++) { if (await page.locator('.ck-timer').isVisible()) timerSeen = true; else await page.keyboard.press('ArrowRight'); }
+  if (timerSeen) { const c1 = await page.locator('.ck-clock').textContent(); await page.click('.ck-start'); await page.waitForTimeout(2200); const c2 = await page.locator('.ck-clock').textContent(); log(/^\d\d:\d\d$/.test(c1) && /^\d\d:\d\d$/.test(c2) && c1 !== c2, `таймер: ${c1} → ${c2}`); } else log(false, "няма стъпка с таймер");
+  await page.screenshot({ path: `${OUT}/cooking-mode-1024.png` });
+  await page.keyboard.press('Escape');
+  log(!(await cook.evaluate((d) => d.open)), 'режим „готвене“ се затваря с Esc');
+  // фото-история
+  const slides = await page.locator('.story-slide').count();
+  log(slides >= 5 && slides <= 10, `фото-история: ${slides} кадъра`);
+  await page.locator('.story').scrollIntoViewIfNeeded();
+  await page.waitForTimeout(600);
+  await page.screenshot({ path: `${OUT}/story-1024.png` });
+  // лайтбокс от фото-историята
+  await page.locator('.story-slide a[data-lightbox]').nth(2).click();
+  await page.waitForTimeout(400);
+  // отвореният кадър трябва да е същият като кликнатия: сравняваме подписа (номерът в галерията включва и корицата)
+  const slideCap = (await page.locator('.story-slide figcaption').nth(2).textContent()).replace(/^\s*\d+\s*/, '').trim();
+  const lbCap = (await page.locator('.lb-caption').textContent()).trim();
+  log(lbCap === slideCap, `лайтбокс от фото-историята отваря кликнатия кадър: „${lbCap}“ (${await page.locator('.lb-count').textContent()})`);
+  await page.screenshot({ path: `${OUT}/lightbox-1024.png` });
+  await page.keyboard.press('Escape');
+  // филтри
+  await page.goto(BASE + '/recepti/', { waitUntil: 'load' });
+  const all = await page.locator('[data-count]').textContent();
+  await page.selectOption('#f-collection', 'fine-dining');
+  const fine = await page.locator('[data-count]').textContent();
+  await page.fill('#f-q', 'патица');
+  await page.waitForTimeout(400);
+  const duck = await page.locator('[data-count]').textContent();
+  log(+fine < +all && +duck >= 1, `филтри: всички ${all} → фино ядене ${fine} → „патица“ ${duck}`);
+  await page.screenshot({ path: `${OUT}/catalogue-filtered-1024.png` });
+  log(errs.length === 0, `без грешки в конзолата при взаимодействие ${errs.join(' | ')}`);
   await ctx.close();
 }
 
