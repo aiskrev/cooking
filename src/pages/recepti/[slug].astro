@@ -2,28 +2,67 @@
 import { render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import Photo from '../../components/Photo.astro';
+import Carousel from '../../components/Carousel.astro';
 import Lightbox from '../../components/Lightbox.astro';
-import { getRecipes, getPhotos, type Photo as PhotoT } from '../../lib/recipes';
+import RecipeCard from '../../components/RecipeCard.astro';
+import RecipeTools from '../../components/RecipeTools.astro';
+import { getRecipes, getPhotos, getRelated, type Photo as PhotoT } from '../../lib/recipes';
 import { ogImage, schemaImages, stepImageUrl, thumbUrl } from '../../lib/images';
-import { formatMinutes, formatDate, isoDuration, pluralPortions, slugify } from '../../lib/text';
-import { site, illustrativeNote } from '../../site.config';
+import { formatMinutes, formatDate, isoDuration, pluralPortions, slugify, formatAmount } from '../../lib/text';
+import { site, illustrativeNote, statusLabels, collectionLabels } from '../../site.config';
 
 export async function getStaticPaths() {
   const recipes = await getRecipes();
-  return recipes.map((recipe) => ({ params: { slug: recipe.id }, props: { recipe } }));
+  return recipes.map((recipe) => ({ params: { slug: recipe.id }, props: { recipe, all: recipes } }));
 }
 
-const { recipe } = Astro.props;
+const { recipe, all } = Astro.props;
 const d = recipe.data;
 const { Content } = await render(recipe);
 const photos = await getPhotos(recipe);
-const all = [...photos.values()];
-const cover: PhotoT | undefined = d.cover ? photos.get(d.cover) : all[0];
-const usedInSteps = new Set(d.steps.flatMap((s) => (s.photo ? [s.photo] : [])));
-const extras = all.filter((p) => !usedInSteps.has(p.file) && p.file !== cover?.file);
-const total = d.prepTime + d.cookTime;
+const allPhotos = [...photos.values()];
+const cover: PhotoT | undefined = d.cover ? photos.get(d.cover) : allPhotos[0];
+const total = d.prepTime + d.cookTime + d.restTime;
 const url = new URL(Astro.url.pathname, Astro.site).href;
+const status = statusLabels[d.status];
 
+// ---- Фото-история (до 10 кадъра по реда на готвенето) ----
+const stepPhotoFiles = d.steps.flatMap((s) => (s.photo ? [s.photo] : []));
+let storyFiles = d.carousel ?? [...new Set(stepPhotoFiles)];
+if (storyFiles.length > 10) {
+  storyFiles = Array.from({ length: 10 }, (_, i) => storyFiles[Math.round((i * (storyFiles.length - 1)) / 9)]);
+}
+const storyPhotos = storyFiles.map((f) => photos.get(f)).filter((p): p is PhotoT => !!p);
+const showStory = storyPhotos.length >= 5;
+
+// Данни за лайтбокса се изписват само при първото появяване на снимка в страницата
+const rendered = new Set<string>();
+const first = (p: PhotoT) => { const lite = rendered.has(p.key); rendered.add(p.key); return { photo: p, lite }; };
+const heroItem = cover ? first(cover) : undefined;
+const storyItems = showStory ? storyPhotos.map(first) : [];
+
+const usedSet = new Set([...stepPhotoFiles, cover?.file, ...storyPhotos.map((p) => p.file)]);
+const extras = allPhotos.filter((p) => !usedSet.has(p.file));
+const extraGroups = new Map<string, PhotoT[]>();
+for (const p of extras) {
+  const g = d.photos[p.file]?.session ?? 'Допълнителни кадри';
+  extraGroups.set(g, [...(extraGroups.get(g) ?? []), p]);
+}
+
+// ---- Съставки ----
+type Ing = { text: string; name: string; amount?: number; unit?: string; note?: string; scale: boolean };
+const ingGroups = d.ingredients.map((g) => ({
+  title: g.title,
+  items: g.items.map((it): Ing => {
+    if (typeof it === 'string') return { text: it, name: it, scale: false };
+    const amountText = it.amount ? formatAmount(it.amount) : '';
+    const text = [amountText, it.unit, it.name].filter(Boolean).join(' ') + (it.note ? ` (${it.note})` : '');
+    return { text, name: it.name, amount: it.amount, unit: it.unit, note: it.note, scale: it.scale && !!it.amount };
+  }),
+}));
+const canScale = ingGroups.some((g) => g.items.some((i) => i.scale));
+
+// ---- Структурирани данни (само реални стойности) ----
 const og = cover ? await ogImage(cover, Astro.site) : undefined;
 const thumb = cover ? await thumbUrl(cover) : undefined;
 const ldImages = cover ? await schemaImages(cover, Astro.site) : [];
@@ -56,8 +95,9 @@ const jsonLd = {
   totalTime: isoDuration(total),
   recipeYield: [String(d.servings), pluralPortions(d.servings)],
   recipeCategory: d.category,
+  ...(d.cuisine ? { recipeCuisine: d.cuisine } : {}),
   ...(d.tags.length ? { keywords: d.tags.join(', ') } : {}),
-  recipeIngredient: d.ingredients.flatMap((g) => g.items),
+  recipeIngredient: ingGroups.flatMap((g) => g.items.map((i) => i.text)),
   recipeInstructions: ldSteps,
 };
 const crumbs = {
@@ -69,6 +109,13 @@ const crumbs = {
     { '@type': 'ListItem', position: 3, name: d.title },
   ],
 };
+const related = getRelated(recipe, all, 3);
+const cookData = d.steps.map((s, i) => ({ n: i + 1, title: s.title ?? '', text: s.text, why: s.why ?? '', cue: s.cue ?? '', avoid: s.avoid ?? '', time: s.time ?? 0 }));
+const chef = [
+  d.technique && { h: 'Основна техника', t: d.technique },
+  d.temperature && { h: 'Контрол на температурата', t: d.temperature },
+  d.balance && { h: 'Консистенция, текстура и баланс на вкуса', t: d.balance },
+].filter(Boolean) as { h: string; t: string }[];
 ---
 <Base
   title={d.title}
@@ -79,7 +126,7 @@ const crumbs = {
   published={d.date}
   modified={d.updated}
 >
-  <article class="wrap recipe" data-pagefind-body>
+  <article class="wrap recipe" data-pagefind-body data-recipe data-base-servings={d.servings}>
     <span hidden data-pagefind-filter="category[data-v]" data-v={d.category}></span>
     {thumb && <span hidden data-pagefind-meta="image[data-src]" data-src={thumb}></span>}
     <nav class="breadcrumb" aria-label="Път до страницата">
@@ -92,41 +139,40 @@ const crumbs = {
 
     {d.review && (
       <div class="notice" role="note">
-        <strong>Чернова – чака проверка от автора</strong>
-        <p>Текстът на тази рецепта (съставки, количества, температура и време) е примерен и още не е проверен. Не го публикувайте, преди да го потвърдите.</p>
+        <strong>{status.label}</strong>
+        <p>{status.text}</p>
       </div>
     )}
 
     <header class="recipe-head">
       <div>
+        <p class="eyebrow">{collectionLabels[d.collection].name}</p>
         <h1>{d.title}</h1>
         <p class="lead">{d.description}</p>
+        {d.intro && <p class="intro">{d.intro}</p>}
         <dl class="facts">
           <div><dt>Подготовка</dt><dd>{formatMinutes(d.prepTime)}</dd></div>
           <div><dt>Готвене</dt><dd>{formatMinutes(d.cookTime)}</dd></div>
-          <div><dt>Общо време</dt><dd>{formatMinutes(total)}</dd></div>
+          {d.restTime > 0 && <div><dt>Почивка</dt><dd>{formatMinutes(d.restTime)}</dd></div>}
+          <div><dt>Общо</dt><dd>{formatMinutes(total)}</dd></div>
           <div><dt>Порции</dt><dd>{d.servings}</dd></div>
           {d.difficulty && <div><dt>Трудност</dt><dd>{d.difficulty}</dd></div>}
         </dl>
-        <p class="muted">
-          Категория: <a href={`/kategorii/${slugify(d.category)}/`}>{d.category}</a>
-          · Публикувано на <time datetime={d.date.toISOString().slice(0, 10)}>{formatDate(d.date)}</time>
+        <p class="muted meta-line">
+          <a href={`/kategorii/${slugify(d.category)}/`}>{d.category}</a>
+          {d.method.length > 0 && <> · {d.method.join(', ')}</>}
+          {d.cuisine && <> · {d.cuisine}</>}
+          · <time datetime={d.date.toISOString().slice(0, 10)}>{formatDate(d.date)}</time>
         </p>
         <div class="actions">
           <a class="btn" href="#sastavki">Към съставките</a>
-          <button type="button" class="btn secondary" data-print>Отпечатай рецептата</button>
+          <button type="button" class="btn secondary" data-cook-open>Режим „готвене“</button>
+          <button type="button" class="btn secondary" data-print>Отпечатай</button>
         </div>
       </div>
-      {cover && (
+      {heroItem && (
         <figure class="hero-fig">
-          <Photo
-            photo={cover}
-            zoom
-            eager
-            class="hero-photo"
-            sizes="(min-width: 900px) 416px, calc(100vw - 32px)"
-           
-          />
+          <Photo photo={heroItem.photo} lite={heroItem.lite} zoom eager class="hero-photo" sizes="(min-width: 900px) 430px, calc(100vw - 32px)" widths={[480, 800, 1120]} />
           {d.illustrative && <p class="photo-note"><span class="badge">{illustrativeNote.badge}</span></p>}
         </figure>
       )}
@@ -139,33 +185,55 @@ const crumbs = {
       </div>
     )}
 
+    {showStory && <Carousel items={storyItems} title={d.title} />}
+
     <div class="recipe-grid">
       <section class="ingredients" id="sastavki" aria-labelledby="h-sastavki">
         <h2 id="h-sastavki">Съставки</h2>
-        <p class="muted">За {pluralPortions(d.servings)}</p>
-        {d.ingredients.map((g) => (
+        <RecipeTools servings={d.servings} canScale={canScale} />
+        {ingGroups.map((g) => (
           <>
             {g.title && <h3>{g.title}</h3>}
-            <ul>{g.items.map((i) => <li>{i}</li>)}</ul>
+            <ul class="ing-list">
+              {g.items.map((i) => (
+                <li data-ing data-scale={i.scale ? 'y' : 'n'} data-amount={i.amount} data-unit={i.unit} data-name={i.name} data-note={i.note}>
+                  <label>
+                    <input type="checkbox" class="ing-check" />
+                    <span class="ing-text">{i.text}</span>
+                  </label>
+                </li>
+              ))}
+            </ul>
           </>
         ))}
+        {canScale && <p class="muted small">При смяна на порциите се преоразмеряват само количествата. Времето, температурата и размерът на съда не се променят автоматично.</p>}
+        {d.mise.length > 0 && (
+          <div class="mise">
+            <h3>Mise en place</h3>
+            <ul>{d.mise.map((m) => <li>{m}</li>)}</ul>
+          </div>
+        )}
       </section>
 
-      <section aria-labelledby="h-prigotvyane">
+      <section aria-labelledby="h-prigotvyane" class="method">
         <h2 id="h-prigotvyane">Приготвяне</h2>
         <ol class="steps">
           {d.steps.map((s, i) => {
             const p = s.photo ? photos.get(s.photo) : undefined;
+            const item = p ? first(p) : undefined;
             return (
-              <li class="step" id={`stapka-${i + 1}`}>
-                <div>
-                  {s.title && <h3>{s.title}</h3>}
+              <li class="step" id={`stapka-${i + 1}`} data-step>
+                <div class="step-body">
+                  {s.title && <h3>{s.title}{s.time && <span class="step-time"> · {formatMinutes(s.time)}</span>}</h3>}
                   <p class="step-text">{s.text}</p>
+                  {s.why && <p class="step-note"><strong>Защо:</strong> {s.why}</p>}
+                  {s.cue && <p class="step-note"><strong>Как разбираш, че е готово:</strong> {s.cue}</p>}
+                  {s.avoid && <p class="step-note avoid"><strong>Избягвай:</strong> {s.avoid}</p>}
                 </div>
-                {p && (
+                {item && (
                   <figure class="step-photo">
-                    <Photo photo={p} zoom sizes="(min-width: 640px) 416px, calc(100vw - 32px)" />
-                    {p.caption && <figcaption>{p.caption}</figcaption>}
+                    <Photo photo={item.photo} lite={item.lite} zoom sizes="(min-width: 640px) 416px, calc(100vw - 32px)" widths={[480, 800]} />
+                    {item.photo.caption && <figcaption>{item.photo.caption}</figcaption>}
                   </figure>
                 )}
               </li>
@@ -175,16 +243,61 @@ const crumbs = {
       </section>
     </div>
 
-    <section class="notes" aria-label="Бележки"><Content /></section>
+    {chef.length > 0 && (
+      <section class="chef" aria-labelledby="h-chef">
+        <h2 id="h-chef">Техника и контрол</h2>
+        <div class="chef-grid">
+          {chef.map((c) => (
+            <div class="chef-card"><h3>{c.h}</h3><p>{c.t}</p></div>
+          ))}
+        </div>
+      </section>
+    )}
+
+    {(d.tips.length > 0 || d.mistakes.length > 0 || d.substitutions.length > 0) && (
+      <section class="advice" aria-labelledby="h-tips">
+        <h2 id="h-tips">Съвети от шефа</h2>
+        <div class="chef-grid">
+          {d.tips.length > 0 && <div class="chef-card"><h3>Съвети</h3><ul>{d.tips.map((t) => <li>{t}</li>)}</ul></div>}
+          {d.mistakes.length > 0 && <div class="chef-card"><h3>Чести грешки</h3><ul>{d.mistakes.map((t) => <li>{t}</li>)}</ul></div>}
+          {d.substitutions.length > 0 && <div class="chef-card"><h3>Заместители</h3><ul>{d.substitutions.map((t) => <li>{t}</li>)}</ul></div>}
+        </div>
+      </section>
+    )}
+
+    {(d.plating || d.serving || d.storage) && (
+      <section class="serve" aria-labelledby="h-serve">
+        <h2 id="h-serve">Поднасяне</h2>
+        <dl class="serve-list">
+          {d.plating && <div><dt>Поднасяне в чиния</dt><dd>{d.plating}</dd></div>}
+          {d.serving && <div><dt>Сервиране</dt><dd>{d.serving}</dd></div>}
+          {d.storage && <div><dt>Съхранение и претопляне</dt><dd>{d.storage}</dd></div>}
+        </dl>
+      </section>
+    )}
+
+    {d.context && <p class="notice small-notice" role="note"><strong>Бележка:</strong> {d.context}</p>}
+
+    <section class="notes-md" aria-label="Допълнителни бележки"><Content /></section>
+
+    {d.allergens.length > 0 && (
+      <p class="allergens"><strong>Възможни алергени (редакционна индикация по съставките – не е проверена):</strong> {d.allergens.join(', ')}.</p>
+    )}
 
     {extras.length > 0 && (
       <section class="more-photos" aria-labelledby="h-more">
-        <h2 id="h-more">Още снимки</h2>
-        <ul class="thumbs">
-          {extras.map((p) => (
-            <li><Photo photo={p} zoom widths={[360]} sizes="(min-width: 640px) 160px, 45vw" /></li>
-          ))}
-        </ul>
+        <h2 id="h-more">Още снимки <span class="count">({extras.length})</span></h2>
+        {[...extraGroups.entries()].map(([group, list]) => (
+          <>
+            <h3 class="session">{group}</h3>
+            <ul class="thumbs">
+              {list.map((p) => {
+                const it = first(p);
+                return <li><Photo photo={it.photo} lite={it.lite} zoom label={p.caption ?? p.alt} widths={[480]} sizes="(min-width: 640px) 160px, 45vw" /></li>;
+              })}
+            </ul>
+          </>
+        ))}
       </section>
     )}
 
@@ -199,5 +312,16 @@ const crumbs = {
 
     <p class="print-only">Рецептата е от {site.name} – {url}</p>
   </article>
+
+  {related.length > 0 && (
+    <section class="wrap related" aria-labelledby="h-related">
+      <h2 id="h-related">Може да ви хареса</h2>
+      <ul class="grid">
+        {related.map((r) => <li><RecipeCard recipe={r} level={3} /></li>)}
+      </ul>
+    </section>
+  )}
+
+  <script type="application/json" id="cook-data" set:html={JSON.stringify({ title: d.title, steps: cookData })} />
   <Lightbox />
 </Base>

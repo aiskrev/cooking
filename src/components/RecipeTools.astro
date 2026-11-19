@@ -1,0 +1,194 @@
+---
+// Инструменти към рецептата: преоразмеряване на порциите, копиране на списък, списък за пазаруване, режим „готвене“.
+interface Props { servings: number; canScale: boolean }
+const { servings, canScale } = Astro.props;
+---
+<div class="tools" data-tools>
+  {canScale && (
+    <div class="scaler" role="group" aria-label="Брой порции">
+      <button type="button" class="round-btn" data-minus aria-label="По-малко порции">−</button>
+      <output data-servings aria-live="polite">{servings}</output>
+      <span class="scaler-label">порции</span>
+      <button type="button" class="round-btn" data-plus aria-label="Повече порции">+</button>
+      <button type="button" class="link-btn" data-reset hidden>Върни към {servings}</button>
+    </div>
+  )}
+  <div class="list-actions">
+    <button type="button" class="btn small secondary" data-copy>Копирай съставките</button>
+    <button type="button" class="btn small secondary" data-add-list>Добави в списъка за пазаруване</button>
+    <a class="small" href="/spisak/">Моят списък</a>
+  </div>
+  <p class="muted small" role="status" aria-live="polite" data-tools-status></p>
+</div>
+
+<script>
+  const root = document.querySelector<HTMLElement>('[data-recipe]');
+  if (root) {
+    const base = Number(root.dataset.baseServings || 1);
+    let servings = base;
+    const ings = [...root.querySelectorAll<HTMLElement>('[data-ing]')];
+    const out = root.querySelector<HTMLOutputElement>('[data-servings]');
+    const reset = root.querySelector<HTMLElement>('[data-reset]');
+    const status = root.querySelector<HTMLElement>('[data-tools-status]')!;
+
+    const frac = (n: number) => {
+      const whole = Math.floor(n + 1e-9);
+      const rest = n - whole;
+      const f: [number, string][] = [[0.25, '¼'], [0.5, '½'], [0.75, '¾']];
+      if (rest < 0.04) return String(whole);
+      for (const [v, ch] of f) if (Math.abs(rest - v) < 0.04) return (whole ? String(whole) : '') + ch;
+      if (rest > 0.96) return String(whole + 1);
+      return String(Math.round(n * 10) / 10).replace('.', ',');
+    };
+    const nice = (v: number, unit: string) => {
+      if (unit === 'г' || unit === 'мл') return v >= 100 ? Math.round(v / 10) * 10 : v >= 20 ? Math.round(v / 5) * 5 : Math.max(1, Math.round(v));
+      if (unit === 'кг' || unit === 'л') return Math.round(v * 20) / 20;
+      if (unit === 'с. л.' || unit === 'ч. л.') return Math.max(0.25, Math.round(v * 4) / 4);
+      return Math.max(0.5, Math.round(v * 2) / 2);
+    };
+    const render = () => {
+      const k = servings / base;
+      for (const li of ings) {
+        const text = li.querySelector<HTMLElement>('.ing-text')!;
+        if (li.dataset.scale !== 'y') continue;
+        const a = Number(li.dataset.amount);
+        const unit = li.dataset.unit ?? '';
+        const v = k === 1 ? a : nice(a * k, unit);
+        text.textContent = [frac(v), unit, li.dataset.name].filter(Boolean).join(' ') + (li.dataset.note ? ` (${li.dataset.note})` : '');
+      }
+      if (out) out.textContent = String(servings);
+      if (reset) reset.hidden = servings === base;
+      document.dispatchEvent(new CustomEvent('recipe:scaled'));
+    };
+    root.querySelector('[data-minus]')?.addEventListener('click', () => { servings = Math.max(1, servings - 1); render(); });
+    root.querySelector('[data-plus]')?.addEventListener('click', () => { servings = Math.min(24, servings + 1); render(); });
+    reset?.addEventListener('click', () => { servings = base; render(); });
+
+    const lines = () => {
+      const checked = ings.filter((li) => li.querySelector<HTMLInputElement>('.ing-check')?.checked);
+      return (checked.length ? checked : ings).map((li) => li.querySelector('.ing-text')!.textContent!.trim());
+    };
+    const say = (t: string) => { status.textContent = t; };
+    root.querySelector('[data-copy]')?.addEventListener('click', async () => {
+      const text = lines().map((l) => `• ${l}`).join('\n');
+      try { await navigator.clipboard.writeText(text); say('Съставките са копирани.'); }
+      catch {
+        const ta = document.createElement('textarea'); ta.value = text; document.body.appendChild(ta); ta.select();
+        try { document.execCommand('copy'); say('Съставките са копирани.'); } catch { say('Копирането не е възможно в този браузър.'); }
+        ta.remove();
+      }
+    });
+    root.querySelector('[data-add-list]')?.addEventListener('click', () => {
+      try {
+        const slug = location.pathname.split('/').filter(Boolean).pop()!;
+        const title = (document.querySelector('h1')?.textContent ?? slug).trim();
+        const list = JSON.parse(localStorage.getItem('shopping-list') || '[]').filter((x: any) => x.slug !== slug);
+        const items = lines();
+        list.push({ slug, title, servings, items });
+        localStorage.setItem('shopping-list', JSON.stringify(list));
+        say(`Добавени са ${items.length} съставки в списъка за пазаруване.`);
+      } catch { say('Списъкът не може да се запише (браузърът блокира локалното хранилище).'); }
+    });
+  }
+
+  // ---------------- Режим „готвене“ ----------------
+  const dataEl = document.getElementById('cook-data');
+  const openBtn = document.querySelector<HTMLElement>('[data-cook-open]');
+  if (dataEl && openBtn) {
+    const data = JSON.parse(dataEl.textContent || '{}') as { title: string; steps: { n: number; title: string; text: string; why: string; cue: string; avoid: string; time: number }[] };
+    let dlg: HTMLDialogElement | null = null;
+    let idx = 0, wake: any = null, timer: number | undefined, left = 0;
+    const $ = <T extends HTMLElement>(s: string) => dlg!.querySelector<T>(s)!;
+    const pad = (n: number) => String(n).padStart(2, '0');
+
+    async function lock() { try { wake = await (navigator as any).wakeLock?.request('screen'); } catch { wake = null; } }
+    function unlock() { try { wake?.release(); } catch {} wake = null; }
+
+    function stopTimer() { clearInterval(timer); timer = undefined; }
+    function drawTimer() {
+      $('.ck-clock').textContent = `${pad(Math.floor(left / 60))}:${pad(left % 60)}`;
+    }
+    function show(i: number) {
+      idx = Math.max(0, Math.min(data.steps.length - 1, i));
+      const s = data.steps[idx];
+      stopTimer();
+      $('.ck-progress').textContent = `Стъпка ${idx + 1} от ${data.steps.length}`;
+      $('.ck-bar-fill').className = 'ck-bar-fill w' + Math.round(((idx + 1) / data.steps.length) * 10) * 10;
+      $('.ck-title').textContent = s.title || `Стъпка ${idx + 1}`;
+      $('.ck-text').textContent = s.text;
+      const notes = $('.ck-notes'); notes.replaceChildren();
+      for (const [label, v, cls] of [['Защо', s.why, ''], ['Как разбираш, че е готово', s.cue, ''], ['Избягвай', s.avoid, 'avoid']] as const) {
+        if (!v) continue;
+        const p = document.createElement('p'); p.className = 'ck-note ' + cls;
+        const b = document.createElement('strong'); b.textContent = label + ': ';
+        p.append(b, v); notes.appendChild(p);
+      }
+      const tw = $('.ck-timer');
+      tw.hidden = !s.time; left = s.time * 60; if (s.time) drawTimer();
+      $('.ck-start').textContent = 'Старт';
+      $('.ck-done').textContent = '';
+      const img = document.querySelector<HTMLImageElement>(`#stapka-${s.n} .step-photo img:not(.lqip)`);
+      const ph = $('.ck-photo'); ph.replaceChildren();
+      const src = img?.currentSrc || img?.src; // ленивите снимки още нямат currentSrc
+      if (img && src) { const im = document.createElement('img'); im.src = src; im.alt = img.alt || ''; ph.appendChild(im); }
+      ($('.ck-prev') as HTMLButtonElement).disabled = idx === 0;
+      ($('.ck-next') as HTMLButtonElement).textContent = idx === data.steps.length - 1 ? 'Готово ✓' : 'Напред ›';
+    }
+    function syncIngredients() {
+      const list = $('.ck-ings'); list.replaceChildren();
+      document.querySelectorAll<HTMLElement>('[data-recipe] [data-ing]').forEach((li, k) => {
+        const src = li.querySelector<HTMLInputElement>('.ing-check')!;
+        const row = document.createElement('li'); const lab = document.createElement('label'); const cb = document.createElement('input'); cb.type = 'checkbox'; cb.checked = src.checked;
+        const span = document.createElement('span'); span.textContent = li.querySelector('.ing-text')!.textContent;
+        cb.addEventListener('change', () => { src.checked = cb.checked; });
+        lab.append(cb, span); row.appendChild(lab); list.appendChild(row);
+      });
+    }
+    function build() {
+      dlg = document.createElement('dialog');
+      dlg.className = 'cook';
+      dlg.setAttribute('aria-label', `Режим „готвене“: ${data.title}`);
+      dlg.innerHTML = `
+        <div class="ck-top"><div><p class="ck-recipe"></p><p class="ck-progress" aria-live="polite"></p></div>
+          <div class="ck-top-btns"><button type="button" class="ck-btn ck-ing-toggle" aria-expanded="false">Съставки</button><button type="button" class="ck-btn ck-close">Затвори</button></div></div>
+        <div class="ck-bar"><div class="ck-bar-fill"></div></div>
+        <div class="ck-main"><div class="ck-step"><h2 class="ck-title"></h2><p class="ck-text"></p><div class="ck-notes"></div>
+          <div class="ck-timer" hidden><span class="ck-clock" role="timer"></span><button type="button" class="ck-btn ck-start">Старт</button><button type="button" class="ck-btn ck-reset">Нулирай</button><span class="ck-done" role="status"></span></div></div>
+          <div class="ck-photo"></div>
+          <aside class="ck-panel" hidden><h3>Съставки</h3><ul class="ck-ings"></ul></aside></div>
+        <div class="ck-foot"><button type="button" class="ck-btn ck-prev">‹ Назад</button><button type="button" class="ck-btn primary ck-next">Напред ›</button></div>`;
+      document.body.appendChild(dlg);
+      $('.ck-recipe').textContent = data.title;
+      $('.ck-close').addEventListener('click', () => dlg!.close());
+      $('.ck-prev').addEventListener('click', () => show(idx - 1));
+      $('.ck-next').addEventListener('click', () => { if (idx === data.steps.length - 1) dlg!.close(); else show(idx + 1); });
+      $('.ck-ing-toggle').addEventListener('click', (e) => {
+        const p = $('.ck-panel'); p.hidden = !p.hidden; (e.currentTarget as HTMLElement).setAttribute('aria-expanded', String(!p.hidden)); if (!p.hidden) syncIngredients();
+      });
+      $('.ck-start').addEventListener('click', () => {
+        if (timer) { stopTimer(); $('.ck-start').textContent = 'Продължи'; return; }
+        if (left <= 0) return;
+        $('.ck-start').textContent = 'Пауза';
+        timer = window.setInterval(() => {
+          left--; drawTimer();
+          if (left <= 0) { stopTimer(); $('.ck-start').textContent = 'Старт'; $('.ck-done').textContent = 'Времето изтече!'; try { navigator.vibrate?.([300, 150, 300]); } catch {} }
+        }, 1000);
+      });
+      $('.ck-reset').addEventListener('click', () => { stopTimer(); left = data.steps[idx].time * 60; drawTimer(); $('.ck-start').textContent = 'Старт'; $('.ck-done').textContent = ''; });
+      dlg.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight') { e.preventDefault(); if (idx < data.steps.length - 1) show(idx + 1); }
+        if (e.key === 'ArrowLeft') { e.preventDefault(); show(idx - 1); }
+      });
+      dlg.addEventListener('close', () => { stopTimer(); unlock(); document.documentElement.classList.remove('lb-open'); openBtn!.focus(); });
+      document.addEventListener('visibilitychange', () => { if (dlg?.open && document.visibilityState === 'visible') lock(); });
+      document.addEventListener('recipe:scaled', () => { if (dlg?.open && !$('.ck-panel').hidden) syncIngredients(); });
+    }
+    openBtn.addEventListener('click', () => {
+      if (typeof HTMLDialogElement === 'undefined') return;
+      if (!dlg) build();
+      show(0); lock();
+      document.documentElement.classList.add('lb-open');
+      dlg!.showModal();
+    });
+  }
+</script>

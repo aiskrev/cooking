@@ -21,6 +21,7 @@ const nav = [
   { href: '/recepti/', label: 'Рецепти' },
   { href: '/kategorii/', label: 'Категории' },
   { href: '/tursene/', label: 'Търсене' },
+  { href: '/spisak/', label: 'Списък' },
 ];
 const path = Astro.url.pathname;
 ---
@@ -38,6 +39,7 @@ const path = Astro.url.pathname;
     <link rel="alternate" type="application/rss+xml" title={`${site.name} – RSS`} href="/rss.xml" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="preload" href="/fonts/lora-cyrillic-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/source-sans-3-cyrillic-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
 
     <meta property="og:site_name" content={site.name} />
     <meta property="og:locale" content={site.locale} />

@@ -9,7 +9,8 @@
     "build": "astro build && pagefind --site dist --output-subdir pagefind",
     "preview": "astro preview --host 0.0.0.0 --port 4321",
     "new-recipe": "node scripts/new-recipe.mjs",
-    "check": "node scripts/check-links.mjs && node scripts/check-schema.mjs && node scripts/check-images.mjs"
+    "validate": "node scripts/validate-recipes.mjs",
+    "check": "node scripts/validate-recipes.mjs && node scripts/check-links.mjs && node scripts/check-schema.mjs && node scripts/check-images.mjs"
   },
   "dependencies": {
     "@astrojs/rss": "4.0.19",
@@ -18,6 +19,7 @@
     "sharp": "0.35.5"
   },
   "devDependencies": {
-    "pagefind": "1.6.0"
+    "pagefind": "1.6.0",
+    "yaml": "2.9.1"
   }
 }

@@ -19,7 +19,7 @@ services:
       target: serve
       args:
         SITE_URL: ${SITE_URL:-http://localhost:8080}
-        NOINDEX: ${NOINDEX:-}
+        INDEXABLE: ${INDEXABLE:-}
     ports: ["8080:8080"]
 
   # Проверки (не са част от сайта): docker compose --profile qa run --rm qa node shots.mjs

@@ -101,3 +101,29 @@ function collect(recipes: Recipe[], pick: (r: Recipe) => string[]): Term[] {
 
 export const getCategories = (recipes: Recipe[]) => collect(recipes, (r) => [r.data.category]);
 export const getTags = (recipes: Recipe[]) => collect(recipes, (r) => r.data.tags);
+
+// ---------- Сродни рецепти ----------
+export function getRelated(recipe: Recipe, all: Recipe[], limit = 3): Recipe[] {
+  const score = (r: Recipe) => {
+    if (r.id === recipe.id) return -1;
+    let s = 0;
+    if (r.data.category === recipe.data.category) s += 3;
+    if (r.data.collection === recipe.data.collection) s += 1;
+    s += r.data.tags.filter((t) => recipe.data.tags.includes(t)).length * 2;
+    s += r.data.method.filter((m) => recipe.data.method.includes(m)).length;
+    return s;
+  };
+  return all.map((r) => [r, score(r)] as const).filter(([, s]) => s > 0).sort((a, b) => b[1] - a[1]).slice(0, limit).map(([r]) => r);
+}
+
+// ---------- Снимки за сайта (заглавни кадри) ----------
+const siteModules = import.meta.glob<{ default: ImageMetadata }>('/src/assets/site/*.{webp,jpg,jpeg,png}');
+export async function getSiteImage(file: string): Promise<{ image: ImageMetadata; alt: string } | undefined> {
+  const key = `/src/assets/site/${file}`;
+  if (!siteModules[key]) return undefined;
+  const mod = await siteModules[key]();
+  return { image: mod.default, alt: siteMeta[file]?.alt ?? '' };
+}
+// alt текстовете са в src/assets/site/manifest.json (създава се от импортера; файлът е по избор)
+const siteManifests = import.meta.glob<Record<string, { alt: string; caption: string }>>('../assets/site/manifest.json', { eager: true, import: 'default' });
+const siteMeta: Record<string, { alt: string; caption: string }> = Object.values(siteManifests)[0] ?? {};

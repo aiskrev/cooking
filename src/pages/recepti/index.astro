@@ -1,18 +1,149 @@
 ---
 import Base from '../../layouts/Base.astro';
 import RecipeCard from '../../components/RecipeCard.astro';
-import { getRecipes } from '../../lib/recipes';
+import { getRecipes, getCategories } from '../../lib/recipes';
+import { collectionLabels } from '../../site.config';
 
 const recipes = await getRecipes();
+const categories = getCategories(recipes);
+const methods = [...new Set(recipes.flatMap((r) => r.data.method))].sort((a, b) => a.localeCompare(b, 'bg'));
+const difficulties = ['лесна', 'средна', 'сложна'];
 ---
-<Base title="Всички рецепти" description="Всички рецепти със снимки на стъпките – от най-новите към по-старите.">
+<Base title="Всички рецепти" description="Всички рецепти със снимки на стъпките: търсете и филтрирайте по вид ястие, начин на готвене, трудност и време.">
   <div class="wrap">
     <div class="page-head">
       <h1>Всички рецепти</h1>
-      <p>{recipes.length} {recipes.length === 1 ? 'рецепта' : 'рецепти'}</p>
+      <p><span data-count>{recipes.length}</span> от {recipes.length} рецепти</p>
     </div>
-    <ul class="grid section">
-      {recipes.map((r, i) => <li><RecipeCard recipe={r} eager={i === 0} level={2} /></li>)}
+
+    <form class="filters" data-filters role="search" aria-label="Филтри за рецепти">
+      <div class="f-field f-search">
+        <label for="f-q">Търсене по име, съставка или етикет</label>
+        <input id="f-q" type="search" autocomplete="off" placeholder="напр. сарми, патица, баница" />
+      </div>
+      <div class="f-field">
+        <label for="f-collection">Колекция</label>
+        <select id="f-collection">
+          <option value="">Всички</option>
+          <option value="traditional">{collectionLabels.traditional.name}</option>
+          <option value="fine-dining">{collectionLabels['fine-dining'].name}</option>
+        </select>
+      </div>
+      <div class="f-field">
+        <label for="f-category">Вид ястие</label>
+        <select id="f-category">
+          <option value="">Всички</option>
+          {categories.map((c) => <option value={c.name}>{c.name} ({c.recipes.length})</option>)}
+        </select>
+      </div>
+      <div class="f-field">
+        <label for="f-method">Начин на готвене</label>
+        <select id="f-method">
+          <option value="">Всички</option>
+          {methods.map((m) => <option value={m}>{m}</option>)}
+        </select>
+      </div>
+      <div class="f-field">
+        <label for="f-difficulty">Трудност</label>
+        <select id="f-difficulty">
+          <option value="">Всички</option>
+          {difficulties.map((d) => <option value={d}>{d}</option>)}
+        </select>
+      </div>
+      <div class="f-field">
+        <label for="f-time">Общо време</label>
+        <select id="f-time">
+          <option value="">Без ограничение</option>
+          <option value="45">до 45 минути</option>
+          <option value="90">до 1 ч 30 мин</option>
+          <option value="180">до 3 часа</option>
+        </select>
+      </div>
+      <div class="f-field">
+        <label for="f-sort">Подредба</label>
+        <select id="f-sort">
+          <option value="new">Най-нови</option>
+          <option value="title">По азбучен ред</option>
+          <option value="time">Най-бързи</option>
+        </select>
+      </div>
+      <div class="f-field f-reset"><button type="button" class="btn secondary small" data-reset>Изчисти филтрите</button></div>
+    </form>
+
+    <p class="muted" role="status" aria-live="polite" data-status></p>
+
+    <ul class="grid section" data-grid>
+      {recipes.map((r, i) => <li><RecipeCard recipe={r} eager={i === 0} level={2} filterable /></li>)}
     </ul>
+    <p class="empty" data-empty hidden>Няма рецепти по тези критерии. Опитайте с по-малко филтри.</p>
+    <p class="center-cta"><button type="button" class="btn secondary" data-more hidden>Покажи още</button></p>
+    <noscript><p class="muted">Филтрите изискват JavaScript; показани са всички рецепти.</p></noscript>
   </div>
 </Base>
+
+<script>
+  const PAGE = 24;
+  const form = document.querySelector<HTMLElement>('[data-filters]')!;
+  const grid = document.querySelector<HTMLElement>('[data-grid]')!;
+  const items = [...grid.querySelectorAll<HTMLLIElement>(':scope > li')];
+  const cards = items.map((li) => li.querySelector<HTMLElement>('[data-card]')!);
+  const $ = (id: string) => document.getElementById(id) as HTMLInputElement & HTMLSelectElement;
+  const q = $('f-q'), collection = $('f-collection'), category = $('f-category'), method = $('f-method'), difficulty = $('f-difficulty'), time = $('f-time'), sort = $('f-sort');
+  const countEl = document.querySelector<HTMLElement>('[data-count]')!;
+  const status = document.querySelector<HTMLElement>('[data-status]')!;
+  const empty = document.querySelector<HTMLElement>('[data-empty]')!;
+  const more = document.querySelector<HTMLButtonElement>('[data-more]')!;
+  let shown = PAGE;
+  form.addEventListener('submit', (e) => e.preventDefault());
+
+  const params = new URLSearchParams(location.search);
+  q.value = params.get('q') ?? '';
+  collection.value = params.get('collection') ?? '';
+  category.value = params.get('category') ?? '';
+  method.value = params.get('method') ?? '';
+  difficulty.value = params.get('difficulty') ?? '';
+  time.value = params.get('time') ?? '';
+  sort.value = params.get('sort') ?? 'new';
+
+  function apply(reset = true) {
+    if (reset) shown = PAGE;
+    const term = q.value.trim().toLocaleLowerCase('bg');
+    const maxT = Number(time.value || 0);
+    const matched = cards.filter((c) => {
+      const d = c.dataset;
+      return (!term || d.search!.includes(term))
+        && (!collection.value || d.collection === collection.value)
+        && (!category.value || d.category === category.value)
+        && (!method.value || d.method!.split('|').includes(method.value))
+        && (!difficulty.value || d.difficulty === difficulty.value)
+        && (!maxT || Number(d.time) <= maxT);
+    });
+    const key = sort.value;
+    matched.sort((a, b) => key === 'title' ? a.dataset.title!.localeCompare(b.dataset.title!, 'bg')
+      : key === 'time' ? Number(a.dataset.time) - Number(b.dataset.time) || a.dataset.title!.localeCompare(b.dataset.title!, 'bg')
+      : b.dataset.date!.localeCompare(a.dataset.date!) || a.dataset.title!.localeCompare(b.dataset.title!, 'bg'));
+    const set = new Set(matched);
+    const frag = document.createDocumentFragment();
+    matched.forEach((c) => frag.appendChild(c.parentElement!));
+    items.forEach((li) => { if (!set.has(li.querySelector('[data-card]') as HTMLElement)) li.hidden = true; });
+    grid.append(frag);
+    matched.forEach((c, i) => { c.parentElement!.hidden = i >= shown; });
+    countEl.textContent = String(matched.length);
+    status.textContent = matched.length === cards.length ? '' : `Намерени: ${matched.length}`;
+    empty.hidden = matched.length > 0;
+    more.hidden = matched.length <= shown;
+    const p = new URLSearchParams();
+    if (q.value) p.set('q', q.value);
+    for (const [k, el] of [['collection', collection], ['category', category], ['method', method], ['difficulty', difficulty], ['time', time]] as const) if (el.value) p.set(k, el.value);
+    if (sort.value !== 'new') p.set('sort', sort.value);
+    history.replaceState(null, '', p.toString() ? `?${p}` : location.pathname);
+  }
+  let t: number | undefined;
+  q.addEventListener('input', () => { clearTimeout(t); t = window.setTimeout(() => apply(), 150); });
+  [collection, category, method, difficulty, time, sort].forEach((el) => el.addEventListener('change', () => apply()));
+  more.addEventListener('click', () => { shown += PAGE; apply(false); });
+  document.querySelector('[data-reset]')?.addEventListener('click', () => {
+    q.value = ''; collection.value = category.value = method.value = difficulty.value = time.value = ''; sort.value = 'new'; apply();
+  });
+  apply();
+</script>

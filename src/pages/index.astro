@@ -1,16 +1,29 @@
 ---
 import Base from '../layouts/Base.astro';
 import RecipeCard from '../components/RecipeCard.astro';
-import { getRecipes, getCategories, getCoverPhoto } from '../lib/recipes';
+import Photo from '../components/Photo.astro';
+import { getRecipes, getCategories, getPhotos, getCoverPhoto, getSiteImage } from '../lib/recipes';
 import { ogImage } from '../lib/images';
-import { site } from '../site.config';
+import { site, collectionLabels } from '../site.config';
 
 const recipes = await getRecipes();
-const latest = recipes.slice(0, 6);
 const categories = getCategories(recipes);
-const first = recipes[0];
-const cover = first ? await getCoverPhoto(first) : undefined;
-const og = cover ? await ogImage(cover, Astro.site) : undefined;
+const featured = recipes.filter((r) => r.data.featured).slice(0, 6);
+const traditional = recipes.filter((r) => r.data.collection === 'traditional' && !r.data.featured).slice(0, 6);
+const fine = recipes.filter((r) => r.data.collection === 'fine-dining').slice(0, 6);
+const shownIds = new Set([...featured, ...traditional, ...fine].map((r) => r.id));
+const latest = [...recipes].filter((r) => !shownIds.has(r.id)).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf() || a.data.title.localeCompare(b.data.title, 'bg')).slice(0, 6);
+
+// Заглавен кадър: завършено ястие от избрана рецепта (ако липсва – първата с корица)
+const heroRecipe = recipes.find((r) => r.id === 'banitsa-sas-sirene') ?? featured[0] ?? recipes[0];
+const heroPhoto = heroRecipe ? await getCoverPhoto(heroRecipe) : undefined;
+const og = heroPhoto ? await ogImage(heroPhoto, Astro.site) : undefined;
+
+// Фотографско пътешествие: всички кадри на една рецепта по реда на приготвяне
+const journeyRecipe = recipes.find((r) => r.id === 'beef-wellington') ?? recipes.find((r) => r.data.steps.filter((s) => s.photo).length >= 6);
+const journeyPhotos = journeyRecipe ? await getPhotos(journeyRecipe) : new Map();
+const journey = journeyRecipe ? journeyRecipe.data.steps.flatMap((s) => (s.photo ? [{ photo: journeyPhotos.get(s.photo)!, step: s.title ?? '' }] : [])).slice(0, 8) : [];
+const banner = await getSiteImage('trapeza-tradicionni.webp');
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -26,35 +39,84 @@ const jsonLd = {
 };
 ---
 <Base title={site.name} description={site.description} image={og} jsonLd={jsonLd}>
-  <div class="wrap">
-    <section class="hero" aria-labelledby="h-hero">
-      <h1 id="h-hero">{site.name}</h1>
-      <p class="lead">{site.description}</p>
-      <div class="actions">
-        <a class="btn" href="/recepti/">Всички рецепти</a>
-        <a class="btn secondary" href="/tursene/">Търсене</a>
+  <section class="home-hero" aria-labelledby="h-hero">
+    <div class="wrap home-hero-grid">
+      <div class="home-hero-text">
+        <p class="eyebrow">Рецепти със снимки на всяка стъпка</p>
+        <h1 id="h-hero">{site.name}</h1>
+        <p class="hero-tagline">{site.tagline}</p>
+        <p class="lead">{site.description}</p>
+        <p class="stat-line"><strong>{recipes.length}</strong> рецепти · <strong>{categories.length}</strong> категории · подробна техника, контрол на температурата и съвети от шефа</p>
+        <div class="actions">
+          <a class="btn" href="/recepti/">Всички рецепти</a>
+          <a class="btn secondary" href="/tursene/">Търсене</a>
+        </div>
       </div>
-    </section>
+      {heroPhoto && heroRecipe && (
+        <a class="home-hero-photo" href={`/recepti/${heroRecipe.id}/`}>
+          <Photo photo={heroPhoto} eager sizes="(min-width: 960px) 460px, calc(100vw - 32px)" widths={[480, 800, 1120]} />
+          <span class="hero-caption">{heroRecipe.data.title}<small>Илюстративна снимка</small></span>
+        </a>
+      )}
+    </div>
+  </section>
 
-    <section class="section" aria-labelledby="h-latest">
-      <div class="section-head">
-        <h2 id="h-latest">Нови рецепти</h2>
-        <a href="/recepti/">Виж всички</a>
-      </div>
-      <ul class="grid">
-        {latest.map((r, i) => <li><RecipeCard recipe={r} eager={i === 0} /></li>)}
+  {featured.length > 0 && (
+    <section class="section wrap" aria-labelledby="h-feat">
+      <div class="section-head"><h2 id="h-feat">Избрани рецепти</h2><a href="/recepti/">Всички рецепти →</a></div>
+      <ul class="grid">{featured.map((r) => <li><RecipeCard recipe={r} /></li>)}</ul>
+    </section>
+  )}
+
+  {categories.length > 0 && (
+    <section class="section wrap" aria-labelledby="h-cats">
+      <div class="section-head"><h2 id="h-cats">Разгледайте по вид ястие</h2></div>
+      <ul class="chips big">
+        {categories.map((c) => <li><a href={`/kategorii/${c.slug}/`}>{c.name}<span class="count">{c.recipes.length}</span></a></li>)}
       </ul>
     </section>
+  )}
 
-    {categories.length > 0 && (
-      <section class="section" aria-labelledby="h-cats">
-        <div class="section-head"><h2 id="h-cats">Категории</h2></div>
-        <ul class="chips">
-          {categories.map((c) => (
-            <li><a href={`/kategorii/${c.slug}/`}>{c.name}<span class="count">{c.recipes.length}</span></a></li>
-          ))}
-        </ul>
-      </section>
-    )}
-  </div>
+  {traditional.length > 0 && (
+    <section class="section wrap" aria-labelledby="h-trad">
+      <div class="section-head"><div><h2 id="h-trad">{collectionLabels.traditional.name}</h2><p class="muted">{collectionLabels.traditional.description}</p></div><a href="/recepti/?collection=traditional">Всички традиционни →</a></div>
+      <ul class="grid">{traditional.map((r) => <li><RecipeCard recipe={r} /></li>)}</ul>
+    </section>
+  )}
+
+  {banner && (
+    <section class="banner" aria-label="Илюстрация">
+      <Photo photo={{ file: 'banner', key: 'site/banner', image: banner.image, lqip: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7', alt: banner.alt }} sizes="100vw" widths={[800, 1120, 1600]} />
+      <p class="banner-note">Илюстрация, генерирана с изкуствен интелект</p>
+    </section>
+  )}
+
+  {fine.length > 0 && (
+    <section class="section wrap" aria-labelledby="h-fine">
+      <div class="section-head"><div><h2 id="h-fine">{collectionLabels['fine-dining'].name}</h2><p class="muted">{collectionLabels['fine-dining'].description}</p></div><a href="/recepti/?collection=fine-dining">Всички фино ядене →</a></div>
+      <ul class="grid">{fine.map((r) => <li><RecipeCard recipe={r} /></li>)}</ul>
+    </section>
+  )}
+
+  {journeyRecipe && journey.length >= 6 && (
+    <section class="section wrap journey" aria-labelledby="h-journey">
+      <div class="section-head"><div><h2 id="h-journey">Фотографско пътешествие</h2><p class="muted">От съставките до чинията: {journeyRecipe.data.title}</p></div><a href={`/recepti/${journeyRecipe.id}/`}>Към рецептата →</a></div>
+      <ol class="journey-strip">
+        {journey.map((j, i) => (
+          <li>
+            <a href={`/recepti/${journeyRecipe.id}/#stapka-${i + 1}`} aria-label={`Стъпка ${i + 1}: ${j.step}`}>
+              <Photo photo={j.photo} sizes="(min-width: 960px) 160px, 40vw" widths={[480]} />
+              <span class="journey-no">{i + 1}</span>
+            </a>
+          </li>
+        ))}
+      </ol>
+    </section>
+  )}
+
+  <section class="section wrap" aria-labelledby="h-new">
+    <div class="section-head"><h2 id="h-new">Още рецепти</h2></div>
+    <ul class="grid">{latest.map((r) => <li><RecipeCard recipe={r} /></li>)}</ul>
+    <p class="center-cta"><a class="btn" href="/recepti/">Към всички {recipes.length} рецепти</a></p>
+  </section>
 </Base>
