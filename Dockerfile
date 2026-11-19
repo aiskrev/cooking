@@ -36,3 +36,33 @@ FROM caddy:2-alpine AS serve
 COPY deploy/Caddyfile.container /etc/caddy/Caddyfile
 COPY --from=build /app/dist /srv
 EXPOSE 8080
+
+# ---- Администрация, оценки и коментари (локална услуга; публичният сайт остава статичен) ----
+#   cms           – Node услуга: /admin, /api; сглобява и включва нови версии на сайта (стъпка „Публикувай“)
+#   astro-cache   – кеш на оптимизираните снимки от сглобяването; изнася се, за да не е първата публикация „студена“
+FROM deps AS cms
+COPY astro.config.mjs ./
+COPY public ./public
+COPY scripts ./scripts
+COPY cms ./cms
+COPY src/components ./src/components
+COPY src/layouts ./src/layouts
+COPY src/lib ./src/lib
+COPY src/scripts ./src/scripts
+COPY src/pages ./src/pages
+COPY src/styles ./src/styles
+COPY src/content.config.ts src/site.config.ts ./src/
+# Рецептите (src/content/recipes) и заглавните снимки (src/assets/site) се монтират при пускане;
+# данните (/data), версиите на сайта (/releases) и кешът на снимките са в отделни томове.
+RUN mkdir -p src/content/recipes src/assets/site node_modules/.astro .astro /data /releases \
+ && chown node:node /app /app/node_modules /app/node_modules/.astro /app/.astro /data /releases
+USER node
+ENV NODE_ENV=production DATA_DIR=/data RELEASES_DIR=/releases PORT=3000
+EXPOSE 3000
+CMD ["node", "--disable-warning=ExperimentalWarning", "cms/server.mjs"]
+
+FROM build AS astro-cache-src
+RUN --mount=type=cache,target=/app/node_modules/.astro mkdir -p /out && cp -a /app/node_modules/.astro/. /out/
+
+FROM scratch AS astro-cache
+COPY --from=astro-cache-src /out/ /

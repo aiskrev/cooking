@@ -8,10 +8,12 @@ const site = (process.env.SITE_URL || 'http://localhost:8080').replace(/\/+$/, '
 export default defineConfig({
   site,
   output: 'static',
+  // Администрацията сглобява нова версия в отделна папка и после я включва (ASTRO_OUT_DIR); иначе – ./dist
+  outDir: process.env.ASTRO_OUT_DIR || './dist',
   trailingSlash: 'always',
   build: { format: 'directory' },
   compressHTML: true,
-  integrations: [sitemap()],
+  integrations: [sitemap({ filter: (page) => !page.includes('/lyubimi/') })],
   security: {
     csp: {
       // 'wasm-unsafe-eval' – нужно на търсачката Pagefind (WebAssembly)

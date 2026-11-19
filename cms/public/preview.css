@@ -1,0 +1,4 @@
+.preview-bar { position: sticky; top: 0; z-index: 40; background: #7b1e2d; color: #fff; padding: .6rem 1rem; font: 600 .9rem/1.4 'Source Sans 3', system-ui, sans-serif; }
+.preview-bar a { color: #fff; margin-left: .75rem; }
+.preview-notes { white-space: pre-wrap; font-family: inherit; }
+body { margin: 0; }

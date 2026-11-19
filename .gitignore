@@ -16,3 +16,7 @@ src/content/recipes/*/index.generated.md
 
 # Заглавни снимки на сайта от личния импорт
 src/assets/site/
+
+# Данни на администрацията и временни файлове (никога в Git)
+data/
+.cache/

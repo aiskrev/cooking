@@ -1,9 +1,9 @@
 name: recipes
 services:
-  # Разработка: http://localhost:4321 (променените файлове се виждат веднага)
+  # Разработка на сайта: http://localhost:4321 (променените файлове се виждат веднага; без администрация)
   dev:
     build: { context: ., target: dev }
-    ports: ["4321:4321"]
+    ports: ["127.0.0.1:4321:4321"]
     volumes:
       - ./src:/app/src
       - ./public:/app/public
@@ -12,15 +12,50 @@ services:
     environment:
       CHOKIDAR_USEPOLLING: "true"
 
-  # Преглед на готовия сайт (както ще е в продукция): http://localhost:8080
+  # Сайтът + администрацията: http://localhost:8080 (достъпен само от този компютър)
+  #   /            – статичната версия на сайта (том „releases“)
+  #   /admin, /api – Node услугата „cms“
   web:
+    image: caddy:2-alpine
+    ports: ["127.0.0.1:8080:8080"]
+    volumes:
+      - ./deploy/Caddyfile.cms:/etc/caddy/Caddyfile:ro
+      - releases:/srv:ro
+    depends_on: [cms]
+    restart: unless-stopped
+
+  # Администрация, оценки и коментари (SQLite). Не е публикувана на хоста – достига се само през „web“.
+  cms:
+    build: { context: ., target: cms }
+    environment:
+      SITE_URL: ${SITE_URL:-http://localhost:8080}
+      INDEXABLE: ${INDEXABLE:-}
+      CMS_COOKIE_SECURE: ${CMS_COOKIE_SECURE:-auto}
+      TURNSTILE_SECRET: ${TURNSTILE_SECRET:-}
+    volumes:
+      - cms-data:/data                         # база данни, оригинали на снимките, журнали, резервни копия
+      - releases:/releases                     # сглобените версии на сайта
+      - astro-cache:/app/node_modules/.astro   # кеш на оптимизираните снимки
+      - ./src/content/recipes:/app/src/content/recipes   # рецептите (Markdown + снимки) – в хранилището
+      - ./src/assets/site:/app/src/assets/site:ro        # заглавните снимки (само локално)
+    expose: ["3000"]
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3000/api/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+
+  # Старият начин: само статичен сайт, сглобен в образа (без администрация): docker compose --profile static up web-static
+  web-static:
+    profiles: ["static"]
     build:
       context: .
       target: serve
       args:
         SITE_URL: ${SITE_URL:-http://localhost:8080}
         INDEXABLE: ${INDEXABLE:-}
-    ports: ["8080:8080"]
+    ports: ["127.0.0.1:8081:8080"]
 
   # Проверки (не са част от сайта): docker compose --profile qa run --rm qa node shots.mjs
   qa:
@@ -37,5 +72,12 @@ services:
     network_mode: "service:web"
     environment:
       BASE: http://localhost:8080
+      E2E_ADMIN_EMAIL: ${E2E_ADMIN_EMAIL:-}
+      E2E_ADMIN_PASSWORD: ${E2E_ADMIN_PASSWORD:-}
     volumes:
       - ./qa-output:/out
+
+volumes:
+  cms-data:
+  releases:
+  astro-cache:

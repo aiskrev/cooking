@@ -6,6 +6,7 @@ import Carousel from '../../components/Carousel.astro';
 import Lightbox from '../../components/Lightbox.astro';
 import RecipeCard from '../../components/RecipeCard.astro';
 import RecipeTools from '../../components/RecipeTools.astro';
+import Community from '../../components/Community.astro';
 import { getRecipes, getPhotos, getRelated, type Photo as PhotoT } from '../../lib/recipes';
 import { ogImage, schemaImages, stepImageUrl, thumbUrl } from '../../lib/images';
 import { formatMinutes, formatDate, isoDuration, pluralPortions, slugify, formatAmount } from '../../lib/text';
@@ -164,11 +165,15 @@ const chef = [
           {d.cuisine && <> · {d.cuisine}</>}
           · <time datetime={d.date.toISOString().slice(0, 10)}>{formatDate(d.date)}</time>
         </p>
+        <p class="rating-line" data-rating-line data-slug={recipe.id} hidden></p>
         <div class="actions">
           <a class="btn" href="#sastavki">Към съставките</a>
           <button type="button" class="btn secondary" data-cook-open>Режим „готвене“</button>
+          <button type="button" class="btn secondary" data-fav-toggle aria-pressed="false">♡ Запази в любими</button>
+          <button type="button" class="btn secondary" data-cooked-toggle aria-pressed="false">Сготвих тази рецепта</button>
           <button type="button" class="btn secondary" data-print>Отпечатай</button>
         </div>
+        <p class="muted small" data-cooked-count hidden></p>
       </div>
       {heroItem && (
         <figure class="hero-fig">
@@ -185,7 +190,17 @@ const chef = [
       </div>
     )}
 
-    {showStory && <Carousel items={storyItems} title={d.title} />}
+    <nav class="page-nav" aria-label="В тази страница">
+      <ul>
+        <li><a href="#sastavki">Съставки</a></li>
+        <li><a href="#prigotvyane">Приготвяне</a></li>
+        {(showStory || extras.length > 0) && <li><a href="#snimki">Снимки</a></li>}
+        <li><a href="#ocenki">Оценки</a></li>
+        <li><a href="#komentari">Коментари</a></li>
+      </ul>
+    </nav>
+
+    {showStory && <div id="snimki"><Carousel items={storyItems} title={d.title} /></div>}
 
     <div class="recipe-grid">
       <section class="ingredients" id="sastavki" aria-labelledby="h-sastavki">
@@ -215,7 +230,7 @@ const chef = [
         )}
       </section>
 
-      <section aria-labelledby="h-prigotvyane" class="method">
+      <section aria-labelledby="h-prigotvyane" class="method" id="prigotvyane">
         <h2 id="h-prigotvyane">Приготвяне</h2>
         <ol class="steps">
           {d.steps.map((s, i) => {
@@ -285,7 +300,7 @@ const chef = [
     )}
 
     {extras.length > 0 && (
-      <section class="more-photos" aria-labelledby="h-more">
+      <section class="more-photos" aria-labelledby="h-more" id={showStory ? undefined : 'snimki'}>
         <h2 id="h-more">Още снимки <span class="count">({extras.length})</span></h2>
         {[...extraGroups.entries()].map(([group, list]) => (
           <>
@@ -321,6 +336,8 @@ const chef = [
       </ul>
     </section>
   )}
+
+  <Community slug={recipe.id} title={d.title} />
 
   <script type="application/json" id="cook-data" set:html={JSON.stringify({ title: d.title, steps: cookData })} />
   <Lightbox />

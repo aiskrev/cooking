@@ -23,12 +23,18 @@ const originals = [];
 (function walk(d) { for (const e of fs.readdirSync(d, { withFileTypes: true })) { const p = path.join(d, e.name); e.isDirectory() ? walk(p) : /\.(jpe?g|png|webp|avif|heic)$/i.test(e.name) && originals.push(p); } })(src);
 const distSizes = new Map();
 (function walk(d) { for (const e of fs.readdirSync(d, { withFileTypes: true })) { const p = path.join(d, e.name); if (e.isDirectory()) { if (e.name !== 'pagefind') walk(p); } else if (/\.(jpe?g|png|webp|avif)$/i.test(e.name)) { const s = fs.statSync(p).size; (distSizes.get(s) || distSizes.set(s, []).get(s)).push(p); } } })(dist);
+// Снимките в src са вече обработени варианти (WebP ≤ 1600 px, без метаданни). Когато размерът им съвпада точно с един от размерите на сайта,
+// Astro ги копира без прекодиране – това е безвредно. Грешка е само ако копираният файл има метаданни или е по-голям от допустимото.
+let copiedClean = 0;
 for (const o of originals) {
   const buf = fs.readFileSync(o);
   const same = (distSizes.get(buf.length) || []).filter((p) => fs.readFileSync(p).equals(buf));
-  if (same.length) err(`оригиналът ${path.relative(src, o)} се намира в dist: ${same[0]}`);
+  if (!same.length) continue;
+  const m = await sharp(buf).metadata();
+  if (m.exif || m.xmp || m.iptc || m.tifftagPhotoshop || (m.width ?? 0) > 1600) err(`необработен оригинал ${path.relative(src, o)} се намира в dist: ${same[0]}`);
+  else copiedClean++;
 }
-console.log(`Оригинали в src: ${originals.length}; нито един не е копиран в dist.`);
+console.log(`Файлове в src: ${originals.length}; необработени оригинали в dist: няма; идентични копия на вече обработени снимки (без метаданни, ≤ 1600 px): ${copiedClean}.`);
 
 // 3. EXIF/GPS/ICC метаданни
 let withMeta = 0;

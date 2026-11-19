@@ -7,6 +7,10 @@ const photoMeta = z.object({
   caption: z.string().optional(),
   // от коя фотосесия е кадърът (когато една рецепта има няколко независими серии)
   session: z.string().optional(),
+  // ръчно зададен ред на снимките (записва се от администрацията); без него – по име на файла
+  order: z.number().int().optional(),
+  // произход на снимката (напр. „собствена снимка“, „генерирана с изкуствен интелект“)
+  provenance: z.string().optional(),
 });
 
 // Съставка: просто текстов ред или структуриран запис (нужен за преоразмеряване на порциите)
@@ -42,6 +46,9 @@ const recipes = defineCollection({
     //  incomplete     – липсва необходима информация
     status: z.enum(['verified', 'reconstruction', 'review', 'incomplete']).default('reconstruction'),
     review: z.boolean().default(false), // true = показва се бележка „чернова“
+    // Публикуване (различно от редакторския статус по-горе):
+    //  published – показва се на сайта; draft – само в администрацията; archived – скрита, но запазена
+    publication: z.enum(['published', 'draft', 'archived']).default('published'),
     illustrative: z.boolean().default(false), // true = снимките са илюстративни/генерирани
     featured: z.boolean().default(false),
     collection: z.enum(['traditional', 'fine-dining']).default('traditional'),
