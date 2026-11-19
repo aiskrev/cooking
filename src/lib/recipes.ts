@@ -7,7 +7,8 @@ import { slugify } from './text';
 export type Recipe = CollectionEntry<'recipes'>;
 
 export async function getRecipes(): Promise<Recipe[]> {
-  const all = await getCollection('recipes');
+  // Чернови и архивирани рецепти не стигат до каталога, категориите, етикетите, търсенето, RSS и sitemap.
+  const all = await getCollection('recipes', ({ data }) => data.publication === 'published');
   return all.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 }
 
@@ -47,6 +48,9 @@ export async function getPhotos(recipe: Recipe): Promise<Map<string, Photo>> {
   const keys = Object.keys(modules)
     .filter((k) => k.startsWith(prefix))
     .sort((a, b) => a.localeCompare(b, 'en', { numeric: true }));
+  // Ръчно зададен ред (поле order в photos:) има предимство; останалите остават по име на файла.
+  const orderOf = (k: string) => recipe.data.photos[k.slice(prefix.length)]?.order ?? Number.MAX_SAFE_INTEGER;
+  keys.sort((a, b) => orderOf(a) - orderOf(b));
   for (const k of keys) {
     const file = k.slice(prefix.length);
     const mod = await modules[k]();
@@ -103,7 +107,13 @@ export const getCategories = (recipes: Recipe[]) => collect(recipes, (r) => [r.d
 export const getTags = (recipes: Recipe[]) => collect(recipes, (r) => r.data.tags);
 
 // ---------- Сродни рецепти ----------
+// Обикновени съставки не показват, че две ястия си приличат
+const STAPLES = new Set(['сол', 'вода', 'олио', 'черен пипер', 'захар', 'масло', 'брашно', 'яйце', 'яйца', 'лук', 'чесън', 'червен пипер', 'зехтин', 'лимон']);
+const mainIngredients = (r: Recipe) =>
+  new Set(r.data.ingredients.flatMap((g) => g.items.map((i) => (typeof i === 'string' ? i : i.name).toLocaleLowerCase('bg').trim())).filter((n) => n && !STAPLES.has(n)));
+
 export function getRelated(recipe: Recipe, all: Recipe[], limit = 3): Recipe[] {
+  const mine = mainIngredients(recipe);
   const score = (r: Recipe) => {
     if (r.id === recipe.id) return -1;
     let s = 0;
@@ -111,6 +121,8 @@ export function getRelated(recipe: Recipe, all: Recipe[], limit = 3): Recipe[] {
     if (r.data.collection === recipe.data.collection) s += 1;
     s += r.data.tags.filter((t) => recipe.data.tags.includes(t)).length * 2;
     s += r.data.method.filter((m) => recipe.data.method.includes(m)).length;
+    // припокриване по основни съставки (до 4 общи, по 0,75 точки)
+    s += Math.min(4, [...mainIngredients(r)].filter((n) => mine.has(n)).length) * 0.75;
     return s;
   };
   return all.map((r) => [r, score(r)] as const).filter(([, s]) => s > 0).sort((a, b) => b[1] - a[1]).slice(0, limit).map(([r]) => r);

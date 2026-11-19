@@ -22,6 +22,7 @@ const nav = [
   { href: '/kategorii/', label: 'Категории' },
   { href: '/tursene/', label: 'Търсене' },
   { href: '/spisak/', label: 'Списък' },
+  { href: '/lyubimi/', label: 'Любими' },
 ];
 const path = Astro.url.pathname;
 ---
@@ -96,6 +97,9 @@ const path = Astro.url.pathname;
         <p class="muted">Сайтът не използва бисквитки за проследяване. Темата (светла/тъмна) се пази само в браузъра ви.</p>
       </div>
     </footer>
+    <script>
+      import '../scripts/summary';
+    </script>
     <script>
       const root = document.documentElement;
       const btn = document.querySelector<HTMLButtonElement>('[data-theme-toggle]');

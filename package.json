@@ -3,23 +3,30 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "engines": { "node": ">=22.12.0" },
+  "engines": {
+    "node": ">=22.12.0"
+  },
   "scripts": {
     "dev": "astro dev --host 0.0.0.0 --port 4321",
     "build": "astro build && pagefind --site dist --output-subdir pagefind",
     "preview": "astro preview --host 0.0.0.0 --port 4321",
     "new-recipe": "node scripts/new-recipe.mjs",
     "validate": "node scripts/validate-recipes.mjs",
-    "check": "node scripts/validate-recipes.mjs && node scripts/check-links.mjs && node scripts/check-schema.mjs && node scripts/check-images.mjs"
+    "check": "node scripts/validate-recipes.mjs && node scripts/check-links.mjs && node scripts/check-schema.mjs && node scripts/check-images.mjs",
+    "cms": "node --disable-warning=ExperimentalWarning cms/server.mjs",
+    "cms:cli": "node --disable-warning=ExperimentalWarning cms/cli.mjs"
   },
   "dependencies": {
     "@astrojs/rss": "4.0.19",
     "@astrojs/sitemap": "3.7.5",
+    "@hono/node-server": "2.1.9",
+    "@node-rs/argon2": "2.2.2",
     "astro": "7.4.12",
-    "sharp": "0.35.5"
+    "hono": "4.13.19",
+    "sharp": "0.35.5",
+    "yaml": "2.9.1"
   },
   "devDependencies": {
-    "pagefind": "1.6.0",
-    "yaml": "2.9.1"
+    "pagefind": "1.6.0"
   }
 }

@@ -1,0 +1,54 @@
+---
+// Оценки и коментари. Страницата е статична – данните се зареждат от /api/public/… с JavaScript (src/scripts/community.ts).
+// Показва се само реална информация: без оценки и коментари виждате празно състояние, никога примерни стойности.
+interface Props { slug: string; title: string }
+const { slug, title } = Astro.props;
+---
+<section class="wrap community" aria-labelledby="h-community" data-community data-slug={slug} data-title={title}>
+  <h2 id="h-community" class="sr-only">Оценки и коментари</h2>
+  <div class="community-grid">
+    <div class="rate-box" id="ocenki">
+      <h3 class="cm-h">Оценки</h3>
+      <div data-rating-summary hidden>
+        <p class="rate-big"><strong data-avg></strong> <span class="stars" aria-hidden="true" data-avg-stars></span></p>
+        <p class="muted" data-count-text></p>
+        <ul class="dist" data-dist aria-label="Разпределение на оценките"></ul>
+      </div>
+      <p class="muted" data-rating-empty>Още няма оценки. Бъдете първи!</p>
+      <div class="star-input" role="group" aria-labelledby={`yr-${slug}`}>
+        <p id={`yr-${slug}`} class="small"><strong>Вашата оценка</strong> <span class="muted" data-my-rating></span></p>
+        <div class="star-row">
+          {[1, 2, 3, 4, 5].map((n) => (
+            <button type="button" class="star-btn" data-score={n} aria-pressed="false" aria-label={`${n} от 5`} title={`${n} от 5`}><span aria-hidden="true">★</span></button>
+          ))}
+        </div>
+      </div>
+      <p class="small" role="status" aria-live="polite" data-rating-status></p>
+      <p class="muted small">Оценките са от посетители на сайта и не са проверени. Един браузър – една оценка; можете да я промените.</p>
+    </div>
+
+    <div class="comment-box" id="komentari">
+      <h3 class="cm-h">Коментари <span class="muted" data-comment-count></span></h3>
+      <ul class="comment-list" data-comments></ul>
+      <p class="muted" data-comments-empty hidden>Още няма коментари. Споделете как е излязла рецептата.</p>
+      <p class="muted" data-community-error hidden>Оценките и коментарите не са налични в момента.</p>
+
+      <form class="comment-form" data-comment-form novalidate aria-labelledby={`cf-${slug}`}>
+        <h4 id={`cf-${slug}`} class="cm-h2">Вашият коментар</h4>
+        <div class="field"><label for={`cn-${slug}`}>Име</label><input id={`cn-${slug}`} name="name" type="text" maxlength="40" autocomplete="nickname" required /></div>
+        <div class="field"><label for={`cb-${slug}`}>Коментар</label><textarea id={`cb-${slug}`} name="body" rows="4" maxlength="2000" required></textarea>
+          <p class="muted small">Без връзки. Коментарите се показват след преглед от редакцията.</p></div>
+        <div class="field"><label for={`ce-${slug}`}>Имейл (по желание)</label><input id={`ce-${slug}`} name="email" type="email" maxlength="120" autocomplete="email" />
+          <p class="muted small">Не се публикува и не се ползва за автоматични писма – само ако редакцията поиска да ви отговори лично.</p></div>
+        <div class="hp" aria-hidden="true"><label>Не попълвайте <input name="website" type="text" tabindex="-1" autocomplete="off" /></label></div>
+        <button class="btn" type="submit">Изпрати коментара</button>
+        <p class="small" role="status" aria-live="polite" data-form-status></p>
+      </form>
+      <p class="muted small">Името не е проверена самоличност. Не публикуваме лични данни; неподходящи коментари се премахват.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+  import '../scripts/community';
+</script>
