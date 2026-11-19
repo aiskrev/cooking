@@ -1,0 +1,30 @@
+{
+  "slug": "omlet-sufle-sas-smetanov-sos",
+  "photos": {
+    "01-dopalnitelen-1.webp": {
+      "sourceName": "ChatGPT Image May 31, 2026, 07_46_47 PM.png",
+      "sourceSha256": "70daec20c6042d8c71495bd0022030ecf491394c0c1657e9f5882711f51a4836",
+      "sourceIdx": 1039,
+      "sourceBytes": 1892287,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 24,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-gotovo-yastie.webp": {
+      "sourceName": "ChatGPT Image May 31, 2026, 07_44_34 PM.png",
+      "sourceSha256": "a8dc734587af23bf203b82123ce99bf0aeb6183b62393b69c3f5b90db770ddc7",
+      "sourceIdx": 1036,
+      "sourceBytes": 1713215,
+      "sourceSize": "1122x1402",
+      "role": "hero",
+      "batch": 23,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    }
+  },
+  "generatedHash": "a9a6a321a4c2f5b625546e9d0f80e367ad7e4edc3a6015a0996d062e0238f1dd",
+  "excludedSources": [],
+  "importedAt": "2026-11-19T05:27:58.098Z"
+}

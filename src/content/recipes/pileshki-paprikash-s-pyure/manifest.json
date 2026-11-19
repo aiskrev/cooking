@@ -1,0 +1,19 @@
+{
+  "slug": "pileshki-paprikash-s-pyure",
+  "photos": {
+    "01-gotovo-yastie.webp": {
+      "sourceName": "ChatGPT Image May 24, 2026, 07_26_53 PM - Copy.png",
+      "sourceSha256": "c0d6094f2117a96f660d84518e9c219d2ce9928f00d8dba06239ef59cfb67edb",
+      "sourceIdx": 1013,
+      "sourceBytes": 2248329,
+      "sourceSize": "1122x1402",
+      "role": "hero",
+      "batch": 6,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    }
+  },
+  "generatedHash": "d78d1a6adeb8045140130c9e2e4cf1abaf52fd47abcceb79fefee60a55f7d050",
+  "excludedSources": [],
+  "importedAt": "2026-11-19T05:27:57.244Z"
+}

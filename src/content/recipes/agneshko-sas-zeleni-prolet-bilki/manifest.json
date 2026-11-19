@@ -1,0 +1,19 @@
+{
+  "slug": "agneshko-sas-zeleni-prolet-bilki",
+  "photos": {
+    "01-gotovo-yastie.webp": {
+      "sourceName": "ChatGPT Image May 30, 2026, 10_11_15 AM.png",
+      "sourceSha256": "12d686c5a61d4807876e3293f12ebdccee885c4084fe065be8c641bf850ceb16",
+      "sourceIdx": 1030,
+      "sourceBytes": 2219288,
+      "sourceSize": "1448x1086",
+      "role": "hero",
+      "batch": 17,
+      "confidence": "LOW",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    }
+  },
+  "generatedHash": "e341fe5a7ad448c0d38ed8c65dcb6e6bcdf6ccde56a0a21dc51316819f69b741",
+  "excludedSources": [],
+  "importedAt": "2026-11-19T05:27:56.969Z"
+}

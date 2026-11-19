@@ -1,0 +1,19 @@
+{
+  "slug": "syomga-uelingtun",
+  "photos": {
+    "01-gotovo-yastie.webp": {
+      "sourceName": "ChatGPT Image May 30, 2026, 03_11_15 PM.png",
+      "sourceSha256": "a8a49b3d7c30e7673f5cf936861f26fed5cc3acd51f3a5a5268af31076eda12a",
+      "sourceIdx": 1032,
+      "sourceBytes": 2172493,
+      "sourceSize": "1448x1086",
+      "role": "hero",
+      "batch": 19,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    }
+  },
+  "generatedHash": "517387cf79192a7a347d5fd48970b47d73ba3d3dabf158e302150eb1cc7b7c56",
+  "excludedSources": [],
+  "importedAt": "2026-11-19T05:27:58.850Z"
+}

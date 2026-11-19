@@ -1,0 +1,63 @@
+{
+  "slug": "svinsko-rulo-s-gabena-plynka-i-trufel",
+  "photos": {
+    "01-dopalnitelen-1.webp": {
+      "sourceName": "ChatGPT Image Jun 5, 2026, 09_40_58 PM.png",
+      "sourceSha256": "6d8de4eab7db9329504a05962f67511eb41f9d28eab3423c208aa5eb658b7b1c",
+      "sourceIdx": 1068,
+      "sourceBytes": 1975166,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 50,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-dopalnitelen-2.webp": {
+      "sourceName": "ChatGPT Image Jun 5, 2026, 09_41_09 PM.png",
+      "sourceSha256": "da57b249c7893b3ee1e7742eff67da8c6cf941775b0996761eac1ef03d8807e0",
+      "sourceIdx": 1069,
+      "sourceBytes": 2453525,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 51,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "03-dopalnitelen-3.webp": {
+      "sourceName": "ChatGPT Image Jun 5, 2026, 09_41_19 PM.png",
+      "sourceSha256": "a3f33478df410bfc0eb9bc7770eda56dd699a4d26a6131896e745f0c801aeea4",
+      "sourceIdx": 1070,
+      "sourceBytes": 2101633,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 52,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "04-dopalnitelen-4.webp": {
+      "sourceName": "ChatGPT Image Jun 5, 2026, 09_41_32 PM.png",
+      "sourceSha256": "3cbd025cf3394d338ae1059e93a01f168d15c903dfb41c3bccb30fb3e3b5ab4d",
+      "sourceIdx": 1072,
+      "sourceBytes": 1868238,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 53,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "05-gotovo-yastie.webp": {
+      "sourceName": "ChatGPT Image Jun 5, 2026, 09_40_46 PM.png",
+      "sourceSha256": "3bd31e8897b0664f054205f71554f1dac4a841266fa042b691ed4e3381bccd79",
+      "sourceIdx": 1067,
+      "sourceBytes": 1862198,
+      "sourceSize": "1122x1402",
+      "role": "hero",
+      "batch": 49,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    }
+  },
+  "generatedHash": "9c4d8aa8dba74b2fb056b207925979eb9d5692cb24cf440552ba94d57f602ed9",
+  "excludedSources": [],
+  "importedAt": "2026-11-19T05:27:59.940Z"
+}

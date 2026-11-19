@@ -1,0 +1,19 @@
+{
+  "slug": "tart-taten-s-yabalki",
+  "photos": {
+    "01-gotovo-yastie.webp": {
+      "sourceName": "ChatGPT Image May 31, 2026, 08_19_08 PM.png",
+      "sourceSha256": "916ba8d75c062dfd70da13af844005595b92c350b75d37142ae7d324fa2def56",
+      "sourceIdx": 1040,
+      "sourceBytes": 1908781,
+      "sourceSize": "1122x1402",
+      "role": "hero",
+      "batch": 25,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    }
+  },
+  "generatedHash": "79ab9dad14390088f092ac892b9a9a548a7dacecfccac43e0eaf4fc430780a92",
+  "excludedSources": [],
+  "importedAt": "2026-11-19T05:27:58.331Z"
+}

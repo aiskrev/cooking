@@ -1,0 +1,19 @@
+{
+  "slug": "kartofena-yahniya",
+  "photos": {
+    "01-gotovo-yastie.webp": {
+      "sourceName": "ChatGPT Image Jun 1, 2026, 09_42_27 AM.png",
+      "sourceSha256": "bf4eb7899f521637baac89058c4eb0658c68c9df4b84f37463b326d776fb0599",
+      "sourceIdx": 1042,
+      "sourceBytes": 2543525,
+      "sourceSize": "1448x1086",
+      "role": "hero",
+      "batch": 27,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    }
+  },
+  "generatedHash": "5e811dda3760d40f54907dbd4961264cfa8500233c042b6ce791460f24e76210",
+  "excludedSources": [],
+  "importedAt": "2026-11-19T05:27:56.190Z"
+}

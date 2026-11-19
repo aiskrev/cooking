@@ -1,0 +1,19 @@
+{
+  "slug": "pavlova-s-gorski-plodove",
+  "photos": {
+    "01-gotovo-yastie.webp": {
+      "sourceName": "ChatGPT Image May 30, 2026, 10_31_43 AM.png",
+      "sourceSha256": "0d25b65f3138c954cf71859c39cb16e398c1f9410a0ea304fe137637e40db8e1",
+      "sourceIdx": 1031,
+      "sourceBytes": 2116225,
+      "sourceSize": "1448x1086",
+      "role": "hero",
+      "batch": 18,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    }
+  },
+  "generatedHash": "9e3813f9743ba4feed4b10ec42daabf664891cb0e6925f361b5a943300679e88",
+  "excludedSources": [],
+  "importedAt": "2026-11-19T05:27:58.580Z"
+}

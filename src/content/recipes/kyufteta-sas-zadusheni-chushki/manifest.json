@@ -1,0 +1,19 @@
+{
+  "slug": "kyufteta-sas-zadusheni-chushki",
+  "photos": {
+    "01-gotovo-yastie.webp": {
+      "sourceName": "ChatGPT Image May 31, 2026, 04_56_46 PM.png",
+      "sourceSha256": "1afd923399b890d39fa6871c1d216a77c8734b2a043a92fcdb7b9c3fd19bfbff",
+      "sourceIdx": 1033,
+      "sourceBytes": 2231412,
+      "sourceSize": "1448x1086",
+      "role": "hero",
+      "batch": 20,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    }
+  },
+  "generatedHash": "73650c008f187385b97e1ecafb1b4983fb91a1748fffb0f5110fdb8acdce08aa",
+  "excludedSources": [],
+  "importedAt": "2026-11-19T05:27:56.697Z"
+}
