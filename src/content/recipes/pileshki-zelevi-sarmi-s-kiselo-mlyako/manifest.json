@@ -1,0 +1,15 @@
+{
+  "slug": "pileshki-zelevi-sarmi-s-kiselo-mlyako",
+  "photos": {
+    "01-gotovo-yastie.webp": {
+      "sourceName": "src6.webp",
+      "sourceSha256": "142a3d1064e9984724218a9a70034640f5ce50a4dcf0ed97c4abef8c1979d83f",
+      "sourceBytes": 20462,
+      "sourceSize": "474x340",
+      "role": "hero",
+      "batch": "owner-added-unverified",
+      "confidence": "MEDIUM",
+      "provenance": "Снимка с непотвърден произход (интернет/Facebook), добавена по решение на собственика; не е генерирана с ИИ; авторът и правата не са потвърдени"
+    }
+  }
+}

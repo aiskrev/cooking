@@ -1,0 +1,15 @@
+{
+  "slug": "domashni-galushki-s-magdanoz",
+  "photos": {
+    "01-gotovo-yastie.webp": {
+      "sourceName": "src4.jpg",
+      "sourceSha256": "2e1d14a26be0380a0e438a3bfc69ff0cf2ea6cf45c43fe54513a0d89cfd7680c",
+      "sourceBytes": 373353,
+      "sourceSize": "1365x2048",
+      "role": "hero",
+      "batch": "owner-added-unverified",
+      "confidence": "MEDIUM",
+      "provenance": "Снимка с непотвърден произход (интернет/Facebook), добавена по решение на собственика; не е генерирана с ИИ; авторът и правата не са потвърдени"
+    }
+  }
+}

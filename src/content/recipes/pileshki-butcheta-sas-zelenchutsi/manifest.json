@@ -1,0 +1,15 @@
+{
+  "slug": "pileshki-butcheta-sas-zelenchutsi",
+  "photos": {
+    "01-gotovo-yastie.webp": {
+      "sourceName": "src3.jpg",
+      "sourceSha256": "6a2b1dce1949afe5b3174f9bd818d73e018cb7b016cfc9b09b6b35a8c7465c9d",
+      "sourceBytes": 369456,
+      "sourceSize": "1536x2048",
+      "role": "hero",
+      "batch": "owner-added-unverified",
+      "confidence": "MEDIUM",
+      "provenance": "Снимка с непотвърден произход (интернет/Facebook), добавена по решение на собственика; не е генерирана с ИИ; авторът и правата не са потвърдени (на снимката е изписано име на автор – „Анушка Кирова“)"
+    }
+  }
+}
