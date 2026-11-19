@@ -1,0 +1,15 @@
+{
+  "slug": "parzheni-kyufteta",
+  "photos": {
+    "01-gotovo-yastie.webp": {
+      "sourceName": "src2.jpg",
+      "sourceSha256": "0ca73865a2dde9b9f98c7aee6dcecb278f2d82cd7c6d39461ae02eb384f23a32",
+      "sourceBytes": 62786,
+      "sourceSize": "552x517",
+      "role": "hero",
+      "batch": "owner-added-unverified",
+      "confidence": "MEDIUM",
+      "provenance": "Снимка с непотвърден произход (интернет/Facebook), добавена по решение на собственика; не е генерирана с ИИ; авторът и правата не са потвърдени"
+    }
+  }
+}

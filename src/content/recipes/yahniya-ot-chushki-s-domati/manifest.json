@@ -11,6 +11,16 @@
       "batch": 38,
       "confidence": "HIGH",
       "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-dopalnitelen-1.webp": {
+      "sourceName": "src7.jpg",
+      "sourceSha256": "6818ddf66cb6de764a9e9c7b08fa12462373d88d35316eace7b53e1b59392035",
+      "sourceBytes": 791396,
+      "sourceSize": "1536x2048",
+      "role": "extra",
+      "batch": "owner-added-unverified",
+      "confidence": "MEDIUM",
+      "provenance": "Снимка с непотвърден произход (интернет/Facebook), добавена по решение на собственика; не е генерирана с ИИ; авторът и правата не са потвърдени"
     }
   },
   "generatedHash": "87807a45d7dfcc02c12b9f09789d89857243dd4d73c1de62a012e85c8886a3ba",

@@ -1,0 +1,15 @@
+{
+  "slug": "pileshki-hapki-na-tigan",
+  "photos": {
+    "01-gotovo-yastie.webp": {
+      "sourceName": "src8.jpg",
+      "sourceSha256": "e19d88fe1946f3c84cb07c6cd39ebf1d5ac72baef2c3b31dd591ee9e9d541b82",
+      "sourceBytes": 695420,
+      "sourceSize": "1536x2048",
+      "role": "hero",
+      "batch": "owner-added-unverified",
+      "confidence": "MEDIUM",
+      "provenance": "Снимка с непотвърден произход (интернет/Facebook), добавена по решение на собственика; не е генерирана с ИИ; авторът и правата не са потвърдени"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "slug": "dzholan-v-glinen-sad-s-mashterka",
+  "photos": {
+    "01-gotovo-yastie.webp": {
+      "sourceName": "src5.jpg",
+      "sourceSha256": "45fe19df704109c9e3204aa39b612196e75b544dc8f01f4a9e4129e935f8694b",
+      "sourceBytes": 77945,
+      "sourceSize": "513x590",
+      "role": "hero",
+      "batch": "owner-added-unverified",
+      "confidence": "MEDIUM",
+      "provenance": "Снимка с непотвърден произход (интернет/Facebook), добавена по решение на собственика; не е генерирана с ИИ; авторът и правата не са потвърдени"
+    }
+  }
+}
