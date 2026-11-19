@@ -20,7 +20,8 @@ const OVERWRITE = !!opt('overwrite-edited', false);
 const ONLY = (opt('only', '') || '').split(',').filter(Boolean);
 
 const sha = (buf) => crypto.createHash('sha256').update(buf).digest('hex');
-const inv = JSON.parse(fs.readFileSync(INV, 'utf8'));
+// --inventory може да е списък, разделен със запетая (напр. стария и инвентара на новите снимки; номерата им не се застъпват)
+const inv = String(INV).split(',').flatMap((f) => JSON.parse(fs.readFileSync(f.trim(), 'utf8')));
 const byIdx = new Map(inv.map((r) => [r.idx, r]));
 
 // ---------- YAML (блоков стил, всички низове в двойни кавички = JSON) ----------
@@ -96,10 +97,17 @@ const allergensOf = (texts) => ALLERGENS.filter(([, re]) => texts.some((t) => re
 const defFiles = fs.readdirSync(DEFS).filter((f) => f.endsWith('.mjs')).sort();
 const defs = [];
 const siteAssets = [];
+const addExtras = {}; // { slug: [{ph, cap, session, confidence}] } – допълнителни кадри към вече описани рецепти
 for (const f of defFiles) {
   const mod = await import(path.resolve(DEFS, f));
   defs.push(...(mod.default ?? []));
   siteAssets.push(...(mod.siteAssets ?? []));
+  for (const [slug, list] of Object.entries(mod.addExtras ?? {})) (addExtras[slug] ||= []).push(...list);
+}
+for (const [slug, list] of Object.entries(addExtras)) {
+  const d = defs.find((x) => x.slug === slug);
+  if (!d) throw new Error(`addExtras: няма рецепта „${slug}“`);
+  d.extraAdded = [...(d.extraAdded ?? []), ...list]; // вземат се след заглавната снимка, за да не се променят номерата на вече внесените файлове
 }
 const selected = defs.filter((d) => !ONLY.length || ONLY.includes(d.slug));
 
@@ -119,7 +127,7 @@ for (const d of selected) {
     // 1. Подреждане на снимките: стъпки (ph), след това допълнителни (extra)
     const photoRows = []; // {file, idx, role, cap, session}
     let n = 0;
-    const take = (idx, role, cap, session, hint) => {
+    const take = (idx, role, cap, session, hint, confidence) => {
       const row = byIdx.get(idx);
       if (!row) throw new Error(`${d.slug}: липсва снимка с номер #${idx}`);
       if (row.exactDuplicateOf) throw new Error(`${d.slug}: #${idx} е точен дубликат – посочете оригинала`);
@@ -128,7 +136,7 @@ for (const d of selected) {
       if (existing) return existing;
       n++;
       const file = `${String(n).padStart(2, '0')}-${hint}.webp`;
-      const p = { file, idx, role, cap, session, row };
+      const p = { file, idx, role, cap, session, row, confidence };
       photoRows.push(p); usedSources.add(row.name);
       return p;
     };
@@ -141,8 +149,9 @@ for (const d of selected) {
       const { ph, cap, ...rest } = s;
       return { ...(s.title ? { title: s.title } : {}), text: s.text, ...(s.why ? { why: s.why } : {}), ...(s.cue ? { cue: s.cue } : {}), ...(s.avoid ? { avoid: s.avoid } : {}), ...(s.time ? { time: s.time } : {}), ...(photo ? { photo } : {}) };
     });
-    for (const [k, e] of (d.extra ?? []).entries()) take(e.ph, 'extra', e.cap, e.session ?? 'Допълнителна сесия', `dopalnitelen-${k + 1}`);
+    for (const [k, e] of (d.extra ?? []).entries()) take(e.ph, 'extra', e.cap, e.session ?? 'Допълнителна сесия', `dopalnitelen-${k + 1}`, e.confidence);
     const cover = d.cover ? (photoRows.find((p) => p.idx === d.cover) ?? take(d.cover, 'hero', d.coverCap ?? 'Готовото ястие', d.session, 'gotovo-yastie')) : photoRows[0];
+    for (const [k, e] of (d.extraAdded ?? []).entries()) take(e.ph, 'extra', e.cap, e.session ?? 'Допълнителна сесия', `dopalnitelen-${(d.extra ?? []).length + k + 1}`, e.confidence);
 
     // 2. Конвертиране (идемпотентно): само ако целевият файл липсва или изходният SHA се е променил
     const photosMeta = {};
@@ -158,7 +167,7 @@ for (const d of selected) {
       } else report.photos.reused++;
       manifest.photos[p.file] = {
         sourceName: p.row.name, sourceSha256: p.row.sha256, sourceIdx: p.row.idx, sourceBytes: p.row.bytes,
-        sourceSize: `${p.row.width}x${p.row.height}`, role: p.role, batch: p.row.batch, confidence: d.confidence ?? 'HIGH',
+        sourceSize: `${p.row.width}x${p.row.height}`, role: p.role, batch: p.row.batch, confidence: p.confidence ?? d.confidence ?? 'HIGH',
         provenance: 'ChatGPT Image (AI-генерирана илюстрация)',
       };
       photosMeta[p.file] = {
@@ -203,7 +212,8 @@ for (const d of selected) {
       if (!DRY) { fs.writeFileSync(mdPath, md); manifest.generatedHash = mdHash; }
       report.created.push(d.slug);
     } else {
-      const cur = sha(fs.readFileSync(mdPath));
+      // Git на Windows (autocrlf) превежда окончанията на редовете в CRLF – не е ръчна редакция.
+      const cur = sha(Buffer.from(fs.readFileSync(mdPath, 'utf8').replace(/\r\n/g, '\n')));
       if (cur === mdHash) report.unchanged.push(d.slug);
       else if (manifest.generatedHash && cur === manifest.generatedHash || OVERWRITE) {
         if (!DRY) { fs.writeFileSync(mdPath, md); manifest.generatedHash = mdHash; }

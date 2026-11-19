@@ -176,9 +176,20 @@
       "batch": 64,
       "confidence": "HIGH",
       "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "17-dopalnitelen-7.webp": {
+      "sourceName": "ChatGPT Image May 26, 2026, 11_48_11 AM - Copy.png",
+      "sourceSha256": "e234e122c96a44b650215ddce5ff30b05d31252e7178ac55fb20301efea4dbfa",
+      "sourceIdx": 1024,
+      "sourceBytes": 2475816,
+      "sourceSize": "1448x1086",
+      "role": "extra",
+      "batch": 12,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
     }
   },
-  "generatedHash": "aba4094a951dbad2f80521dbf92efaf3c154bff416d5f54fa71cf74b05ae5370",
+  "generatedHash": "f88a187c3d4234ece759b7cfab94c2fc33d9f7d2edfe19bfe7f058c76cf5bfeb",
   "excludedSources": [],
-  "importedAt": "2026-11-19T04:45:50.372Z"
+  "importedAt": "2026-11-19T05:27:50.576Z"
 }

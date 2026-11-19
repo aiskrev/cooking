@@ -1,0 +1,19 @@
+{
+  "slug": "yahniya-ot-chushki-s-domati",
+  "photos": {
+    "01-gotovo-yastie.webp": {
+      "sourceName": "ChatGPT Image Jun 5, 2026, 11_54_06 AM.png",
+      "sourceSha256": "0b2f7a263a1b72d83698dac27d8c36021cf159ad141a88cf44546ee27ba0bdf7",
+      "sourceIdx": 1053,
+      "sourceBytes": 2409323,
+      "sourceSize": "1448x1086",
+      "role": "hero",
+      "batch": 38,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    }
+  },
+  "generatedHash": "87807a45d7dfcc02c12b9f09789d89857243dd4d73c1de62a012e85c8886a3ba",
+  "excludedSources": [],
+  "importedAt": "2026-11-19T05:27:56.451Z"
+}

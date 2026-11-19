@@ -1,0 +1,19 @@
+{
+  "slug": "palachinki-s-orehi-i-med",
+  "photos": {
+    "01-gotovo-yastie.webp": {
+      "sourceName": "ChatGPT Image May 24, 2026, 10_40_12 AM - Copy.png",
+      "sourceSha256": "b43a6fccb874ee1aa19d2788762bb00710a32415a9bbc7ecb2c97ffa389526b3",
+      "sourceIdx": 1003,
+      "sourceBytes": 2439750,
+      "sourceSize": "1448x1086",
+      "role": "hero",
+      "batch": 1,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    }
+  },
+  "generatedHash": "50b2056621e35fd49e56c084378f43d2ad06766189bc0e2ffc541b32ad7c18f7",
+  "excludedSources": [],
+  "importedAt": "2026-11-19T05:27:54.622Z"
+}

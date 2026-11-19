@@ -1,0 +1,19 @@
+{
+  "slug": "banitsa-sas-zele",
+  "photos": {
+    "01-gotovo-yastie.webp": {
+      "sourceName": "ChatGPT Image Jun 2, 2026, 09_41_48 AM.png",
+      "sourceSha256": "74c9ebcb5fd858ad2d06bf7f8879018dfd170a7ff1caa4260f49da9c46e5a5cf",
+      "sourceIdx": 1043,
+      "sourceBytes": 2444143,
+      "sourceSize": "1448x1086",
+      "role": "hero",
+      "batch": 28,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    }
+  },
+  "generatedHash": "3ef283a1a26381a2c53d84abdfd8657e40c49a612510a4532f3198ed3324ca87",
+  "excludedSources": [],
+  "importedAt": "2026-11-19T05:27:55.679Z"
+}
