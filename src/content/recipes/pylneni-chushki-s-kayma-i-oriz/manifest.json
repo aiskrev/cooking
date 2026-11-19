@@ -1,0 +1,60 @@
+{
+  "slug": "pylneni-chushki-s-kayma-i-oriz",
+  "photos": {
+    "01-palnene-na-chushkite.webp": {
+      "sourceName": "Gourmet Stuffed Peppers in a Rustic Kitchen-6.webp",
+      "sourceIdx": 295,
+      "sourceSha256": "aee1aabeb2e630ddacb3250bcdf036220abe679e0bf351cf7fb8d2db3c45fc16",
+      "hammingDistance64": 1,
+      "matchConfidence": "HIGH",
+      "role": "step",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-gotova-palnezh.webp": {
+      "sourceName": "Rustic Steaming Tomato Rice Skillet-5.webp",
+      "sourceIdx": 294,
+      "sourceSha256": "c6784bc8c1d29f007490b5eb20f974a3ec2a9f3216fae2d509a71198ffad8fce",
+      "hammingDistance64": 1,
+      "matchConfidence": "HIGH",
+      "role": "step",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "03-zadushavane-luk-morkov.webp": {
+      "sourceName": "Sautéed Onions and Carrots in Copper Pan-4.webp",
+      "sourceIdx": 293,
+      "sourceSha256": "95ead607c5d1dcd642484e1b506998d2dd32ed05712c34f5ad6db3b1745244ac",
+      "hammingDistance64": 0,
+      "matchConfidence": "HIGH",
+      "role": "step",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "04-narezani-luk-i-morkov.webp": {
+      "sourceName": "Rustic Stuffed Pepper Prep Scene-3.webp",
+      "sourceIdx": 292,
+      "sourceSha256": "f2c8719ee585dbb8ae5e3092d59efc57bbf723b761833b32ba3272eb11fec25c",
+      "hammingDistance64": 0,
+      "matchConfidence": "HIGH",
+      "role": "step",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "05-izchistvane-na-chushkite.webp": {
+      "sourceName": "Chef Prepares Stuffed Red Peppers-2.webp",
+      "sourceIdx": 291,
+      "sourceSha256": "beecd4b6986f618fda62506a9c31293056afd1a4d61a3b7f1227cbf7ed080ea0",
+      "hammingDistance64": 2,
+      "matchConfidence": "HIGH",
+      "role": "step",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "06-sastavki.webp": {
+      "sourceName": "Rustic Stuffed Pepper Mise en Place-1.webp",
+      "sourceIdx": 290,
+      "sourceSha256": "dc8df49f8707e0c57d6d1b9865a132c5c026cfdcf54e9dd3c6c169ec945deeaf",
+      "hammingDistance64": 0,
+      "matchConfidence": "HIGH",
+      "role": "step",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    }
+  },
+  "note": "Снимките са преди импорта; произходът е определен по перцептивен хеш (не по SHA-256 – файловете са прекодирани)."
+}

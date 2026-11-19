@@ -1,0 +1,74 @@
+{
+  "slug": "banitsa-s-luk",
+  "photos": {
+    "01-banitsa-stapka-1.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 04_46_29 PM.png",
+      "sourceSha256": "8d903de5422388f1b38e8ef8620aa39538cdf125de1584f9e15bf196856001a6",
+      "sourceIdx": 145,
+      "sourceBytes": 2859698,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 52,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-banitsa-stapka-2.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 04_46_39 PM.png",
+      "sourceSha256": "aad3167101e29a9326bf13b7144706dce4aac84b43ab63b84091d2d3f60a926f",
+      "sourceIdx": 147,
+      "sourceBytes": 2320429,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 53,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "03-banitsa-stapka-3.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 04_46_43 PM.png",
+      "sourceSha256": "cedd84058a348ff18498a2ac847452cf8a9d239392549d929523d02aef83238e",
+      "sourceIdx": 148,
+      "sourceBytes": 2485443,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 53,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "04-banitsa-stapka-4.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 04_46_36 PM.png",
+      "sourceSha256": "7eaf0275ab4d9fc7ea649f05b7e53f3e176b2cd7c8048e0392f188faedee5435",
+      "sourceIdx": 146,
+      "sourceBytes": 2496289,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 53,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "05-banitsa-stapka-5.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 04_46_46 PM.png",
+      "sourceSha256": "6671c5736b09fa9b994acec7bbb43e8440710a935a496669464f45475be64d64",
+      "sourceIdx": 149,
+      "sourceBytes": 2155006,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 53,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "06-banitsa-stapka-6.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 04_46_57 PM.png",
+      "sourceSha256": "5c2f23e3e35ba25221fb40d93f108577ead2fa67464ecaacec259346ff1844c2",
+      "sourceIdx": 150,
+      "sourceBytes": 2040506,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 54,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    }
+  },
+  "generatedHash": "4498fd4b7936b2238255fceae42b5012f7051868bc528220a1bfa2b59659dc8e",
+  "excludedSources": [],
+  "importedAt": "2026-11-19T04:45:51.232Z"
+}

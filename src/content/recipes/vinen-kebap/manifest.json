@@ -1,0 +1,244 @@
+{
+  "slug": "vinen-kebap",
+  "photos": {
+    "01-vinen-stapka-1.webp": {
+      "sourceName": "Rustic Stew Ingredients Mise en Place-2.webp",
+      "sourceSha256": "17611d9e6150d92724495b563e42e7d547c883953df7651a821c2ebbeeede8b6",
+      "sourceIdx": 411,
+      "sourceBytes": 1832850,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 106,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-vinen-stapka-2.webp": {
+      "sourceName": "Cinematic Pork Preparation in a Warm Kitchen-12.webp",
+      "sourceSha256": "b0eb89a99280abad57bd0e0b3436d0477e9a50260c77f766b24e39b460836b07",
+      "sourceIdx": 421,
+      "sourceBytes": 1610752,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 106,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "03-vinen-stapka-3.webp": {
+      "sourceName": "Sizzling Caramelized Pork in Cast Iron-15.webp",
+      "sourceSha256": "343e9ec00fcd63071e358be664e7fd3745254cadff622fcb4b37fde933aa5ed0",
+      "sourceIdx": 424,
+      "sourceBytes": 1699228,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 106,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "04-vinen-stapka-4.webp": {
+      "sourceName": "Caramelized Onion and Carrot Sauté-18.webp",
+      "sourceSha256": "fecacfbb57ccfe5d93036923d9ad9865a1f80539b33102bb3304642c655072bb",
+      "sourceIdx": 427,
+      "sourceBytes": 1700488,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 106,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "05-vinen-stapka-5.webp": {
+      "sourceName": "Red Wine Sauté in a Skillet-21.webp",
+      "sourceSha256": "f5ab91cad62c9cc5d1a40c7104d8e9008bc1bb114b7e32de365efd9d48f1048e",
+      "sourceIdx": 430,
+      "sourceBytes": 1759168,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 106,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "06-vinen-stapka-6.webp": {
+      "sourceName": "Rustic Braised Meat Skillet-24.webp",
+      "sourceSha256": "7b20a7040ff3a6c27978a31e7f45d3ab47d5f20e3055d85d44ade656f64760b6",
+      "sourceIdx": 433,
+      "sourceBytes": 1755562,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 106,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "07-vinen-stapka-7.webp": {
+      "sourceName": "Buttery Rice in a Copper Pan-4.webp",
+      "sourceSha256": "8f97b324b536e7701a9aab38cec5757dbc17c3403c2d4b2f3549847588699d87",
+      "sourceIdx": 413,
+      "sourceBytes": 1491488,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 106,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "08-vinen-stapka-8.webp": {
+      "sourceName": "Rustic Braised Meat with Herbed Rice-5.webp",
+      "sourceSha256": "bfd753356334c0e2b5004e22d6e14f89255bb55cbe19bfa0aa2db583b786da21",
+      "sourceIdx": 414,
+      "sourceBytes": 1654612,
+      "sourceSize": "1071x1468",
+      "role": "step",
+      "batch": 106,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "09-dopalnitelen-1.webp": {
+      "sourceName": "Rustic Pork Stew Ingredients-1.webp",
+      "sourceSha256": "1ee6237a58cc38af49e2adb984c6e20af59f6c7c78f3818d95759b993263f9e7",
+      "sourceIdx": 410,
+      "sourceBytes": 1963120,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 106,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "10-dopalnitelen-2.webp": {
+      "sourceName": "Rustic Braised Pork Ingredients spread-3.webp",
+      "sourceSha256": "2feda993ffb7c127fb5afaa7576dd4a38e08c56c31889dd3d4161adbc5a2a017",
+      "sourceIdx": 412,
+      "sourceBytes": 1930588,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 106,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "11-dopalnitelen-3.webp": {
+      "sourceName": "Culinary Craft_ Pork Preparation-11.webp",
+      "sourceSha256": "29f4d0b4cdc40fb087f7f171fdbd0d0c12b80bf79fc812d423a9b493d8475170",
+      "sourceIdx": 420,
+      "sourceBytes": 1547198,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 106,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "12-dopalnitelen-4.webp": {
+      "sourceName": "Rustic Meat Preparation Mise en Place-13.webp",
+      "sourceSha256": "eba999e7f06a0693532788d9e5183d0a05af737452ab8666ad3c3c51e8e2cdb6",
+      "sourceIdx": 422,
+      "sourceBytes": 1752818,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 106,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "13-dopalnitelen-5.webp": {
+      "sourceName": "Sizzling Caramelized Meat in Cast Iron-14.webp",
+      "sourceSha256": "fb6b556c00098d0b7d5254d65dd37af48f63db607fc73bfacb05318628615871",
+      "sourceIdx": 423,
+      "sourceBytes": 1847506,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 106,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "14-dopalnitelen-6.webp": {
+      "sourceName": "Sizzling Caramelized Meat in Skillet-16.webp",
+      "sourceSha256": "d5a9ec8bb2c51940ca81f66001b09867ae6d294b3707987a0ff825b845baf9fb",
+      "sourceIdx": 425,
+      "sourceBytes": 1819922,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 106,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "15-dopalnitelen-7.webp": {
+      "sourceName": "Sizzling Carrots and Onions in a Rustic Skillet-17.webp",
+      "sourceSha256": "c6fc4ba996b8615455959a5de4a82d4cf23f44ca63c038128dca3a67cc7c6197",
+      "sourceIdx": 426,
+      "sourceBytes": 1820216,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 106,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "16-dopalnitelen-8.webp": {
+      "sourceName": "Sizzling Skillet with Caramelized Meat-19.webp",
+      "sourceSha256": "4171b5e10680752c92dbcddc8ad185316a21b7817b5fd0b5e7524acdad5debbe",
+      "sourceIdx": 428,
+      "sourceBytes": 1684684,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 106,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "17-dopalnitelen-9.webp": {
+      "sourceName": "Red Wine Deglazing in a Sauté Pan-20.webp",
+      "sourceSha256": "58b451c18f61e128e0bc08eff952f6b939afda76b10352bfdf2c29d82a5feeab",
+      "sourceIdx": 429,
+      "sourceBytes": 1597988,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 106,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "18-dopalnitelen-10.webp": {
+      "sourceName": "Red Wine Deglazing a Sizzling Skillet-22.webp",
+      "sourceSha256": "8389a5939f6a7d9d6ba41c465ee4b664af9694a9a62cbcb9fd798f789390346d",
+      "sourceIdx": 431,
+      "sourceBytes": 1527280,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 106,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "19-dopalnitelen-11.webp": {
+      "sourceName": "Sizzling Red Wine Braised Beef-23.webp",
+      "sourceSha256": "7d50ee9121b0f9546479f3258239c450ec9669d5200d194068a2590a3e2f79e8",
+      "sourceIdx": 432,
+      "sourceBytes": 1694360,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 106,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "20-dopalnitelen-12.webp": {
+      "sourceName": "Steaming Braised Meat Stew-25.webp",
+      "sourceSha256": "3d8ddfddcf1000cd9f95820a504f7f4551a1d312248ea27a460913fee47dc869",
+      "sourceIdx": 434,
+      "sourceBytes": 1814830,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 106,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "21-gotovo-yastie.webp": {
+      "sourceName": "Braised Beef with Herb Rice-9.webp",
+      "sourceSha256": "dbb5bd6fa3ca93e491019e17f457a79dd97a702405a97b1cdc3e95f99b091048",
+      "sourceIdx": 418,
+      "sourceBytes": 1690834,
+      "sourceSize": "1122x1402",
+      "role": "hero",
+      "batch": 106,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    }
+  },
+  "generatedHash": "1655c2913646cccdd1dded0a8e93e197a711bd499f9801d21ae3791cb8d723ff",
+  "excludedSources": [
+    "Bulgarian Wine Kebab Storyboard-6.webp",
+    "Cinematic Wine-Braised Pork Storyboard-?.webp",
+    "Bulgarian Wine-Braised Pork Journey-8.webp",
+    "Bulgarian Wine-Braised Pork Journey-10.webp (колажи)"
+  ],
+  "importedAt": "2026-11-19T04:45:47.421Z"
+}

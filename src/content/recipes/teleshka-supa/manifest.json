@@ -1,0 +1,74 @@
+{
+  "slug": "teleshka-supa",
+  "photos": {
+    "01-teleshka-stapka-1.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 12_44_15 PM.png",
+      "sourceSha256": "028d5888485a8e93d3ed95f08ba9aeaf84997125544626102301b95178091490",
+      "sourceIdx": 54,
+      "sourceBytes": 2531224,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 27,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-teleshka-stapka-2.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 12_44_22 PM.png",
+      "sourceSha256": "ae2653033b2d75440d84367e108862af89c3184ea8f513a3d276c93baed266ce",
+      "sourceIdx": 55,
+      "sourceBytes": 2203746,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 28,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "03-teleshka-stapka-3.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 12_44_26 PM.png",
+      "sourceSha256": "4dff86981cb294671984e0c13d5168cae50220c1b464b81c6b300a2e18682084",
+      "sourceIdx": 56,
+      "sourceBytes": 2214607,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 28,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "04-teleshka-stapka-4.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 12_44_31 PM.png",
+      "sourceSha256": "5749793da5055c87744c115474eea4f35639b960868cf97acecacd774f9a4bdc",
+      "sourceIdx": 57,
+      "sourceBytes": 2272342,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 28,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "05-teleshka-stapka-5.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 12_44_36 PM.png",
+      "sourceSha256": "063ffbb46a791cb09e4a91f0e0455daee3e4e782df5f0ae6e5de4d539ad60b4f",
+      "sourceIdx": 58,
+      "sourceBytes": 2418439,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 28,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "06-teleshka-stapka-6.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 12_44_45 PM.png",
+      "sourceSha256": "48782bdae96bffa93978c6189a64f3ba39cc71bf1ceff601cf75a92db2f65c6b",
+      "sourceIdx": 59,
+      "sourceBytes": 2425561,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 29,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    }
+  },
+  "generatedHash": "34cc62421f39ebb752e25f3fe22b5963597727ec67c5f0c6bc8560ad32de9937",
+  "excludedSources": [],
+  "importedAt": "2026-11-19T04:45:50.884Z"
+}
