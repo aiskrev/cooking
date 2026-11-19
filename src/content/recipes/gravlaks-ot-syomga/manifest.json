@@ -1,0 +1,74 @@
+{
+  "slug": "gravlaks-ot-syomga",
+  "photos": {
+    "01-gravlaks-stapka-1.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 06_48_13 PM.png",
+      "sourceSha256": "b8b436f600bf5e0b05eac7d29123fb29306f9fdbf5ec0474b104a455467a3c0a",
+      "sourceIdx": 205,
+      "sourceBytes": 2883484,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 73,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-gravlaks-stapka-2.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 06_48_20 PM.png",
+      "sourceSha256": "fff6bb93d9ace051338b1a32d42aeced2753988088e8df54ae620a41b4c5959d",
+      "sourceIdx": 206,
+      "sourceBytes": 2506340,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 74,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "03-gravlaks-stapka-3.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 06_48_25 PM.png",
+      "sourceSha256": "306493abadabfe6e1de2b705d7b6f377f7e4690d8e8af48211a657b02f532b32",
+      "sourceIdx": 207,
+      "sourceBytes": 2565525,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 74,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "04-gravlaks-stapka-4.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 06_48_28 PM.png",
+      "sourceSha256": "3a7e67f404e56fa7e1aaeb95efc2f48b9e2c1de0eccaaa23aa21e527862b500e",
+      "sourceIdx": 208,
+      "sourceBytes": 2097998,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 74,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "05-gravlaks-stapka-5.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 06_48_31 PM.png",
+      "sourceSha256": "9edff0564a10994e290c0de6bc505442abaf16f396da4ab7c526e4366915b089",
+      "sourceIdx": 209,
+      "sourceBytes": 2192689,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 74,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "06-gravlaks-stapka-6.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 06_48_37 PM.png",
+      "sourceSha256": "f99c74c47dd005e59ae77ad2a417b152cba38fa07cd372cff55c775196fa9d2c",
+      "sourceIdx": 210,
+      "sourceBytes": 2037577,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 74,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    }
+  },
+  "generatedHash": "c9ae835d2be72e421005307e04596b0714d283e0204e52b3cb6db400de71d3cd",
+  "excludedSources": [],
+  "importedAt": "2026-11-19T04:45:51.680Z"
+}

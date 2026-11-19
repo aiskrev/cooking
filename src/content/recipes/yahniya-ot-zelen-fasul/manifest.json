@@ -1,0 +1,74 @@
+{
+  "slug": "yahniya-ot-zelen-fasul",
+  "photos": {
+    "01-yahniya-stapka-1.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 04_13_06 PM.png",
+      "sourceSha256": "3501b3752b10a5f0d437051d65e1c2d465185ca94792f74973c0ff78fb5316f3",
+      "sourceIdx": 109,
+      "sourceBytes": 3031284,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 43,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-yahniya-stapka-2.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 04_13_11 PM.png",
+      "sourceSha256": "57b33a82081b661e50ef4ca1634085a5b5beed2424b9952002de739ce8b0241f",
+      "sourceIdx": 110,
+      "sourceBytes": 2135207,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 43,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "03-yahniya-stapka-3.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 04_13_14 PM.png",
+      "sourceSha256": "46941aea494585bbe88b769540ba639ea6463a68c48b974af08d0e0e544fd0a6",
+      "sourceIdx": 111,
+      "sourceBytes": 2476777,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 43,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "04-yahniya-stapka-4.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 04_13_17 PM.png",
+      "sourceSha256": "e3a4b0850af5442fbe0aadcdfa08deca27bf3d72c65789bcc2695650039219fd",
+      "sourceIdx": 112,
+      "sourceBytes": 2667916,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 43,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "05-yahniya-stapka-5.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 04_13_20 PM.png",
+      "sourceSha256": "f30b11d4dbb4d3961f25820788997b91c0d1b8960091fc4c8cc48e353697b1f8",
+      "sourceIdx": 113,
+      "sourceBytes": 2232956,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 43,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "06-yahniya-stapka-6.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 04_13_23 PM.png",
+      "sourceSha256": "b47217c90d9e2a0d71c28b9987dc0d512c2f751b8a8fee678d8b02cfe5d4097c",
+      "sourceIdx": 114,
+      "sourceBytes": 2632082,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 43,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    }
+  },
+  "generatedHash": "e4b38bf0b8b0bb51edc36cf896ba1b765493dcdeb863bc9fc339a80c50c7e3e3",
+  "excludedSources": [],
+  "importedAt": "2026-11-19T04:45:51.061Z"
+}

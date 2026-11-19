@@ -8,13 +8,11 @@ dist/
 .DS_Store
 qa-output/
 
-# --- Лично/ново съдържание: НЕ се качва в публичното хранилище без одобрение ---
+# --- Лично съдържание: НЕ се качва в публичното хранилище без одобрение ---
+# (Рецептите със снимките и манифестите се качват – решение на собственика от 2026-11-19.)
 _private-imports/
 reports/
-# Нови рецепти (текстове, снимки, манифести) остават локални; оригиналната рецепта е в хранилището
-src/content/recipes/*/
-!src/content/recipes/pylneni-chushki-s-kayma-i-oriz/
-src/content/recipes/pylneni-chushki-s-kayma-i-oriz/manifest.json
+src/content/recipes/*/index.generated.md
 
 # Заглавни снимки на сайта от личния импорт
 src/assets/site/
