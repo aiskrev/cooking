@@ -103,7 +103,7 @@ for (const f of defFiles) {
 }
 const selected = defs.filter((d) => !ONLY.length || ONLY.includes(d.slug));
 
-const report = { created: [], updated: [], unchanged: [], conflicts: [], errors: [], photos: { converted: 0, reused: 0, missing: [] } };
+const report = { created: [], updated: [], unchanged: [], conflicts: [], errors: [], photos: { converted: 0, reused: 0, pruned: 0, missing: [] } };
 const usedSources = new Set();
 const today = new Date().toISOString().slice(0, 10);
 
@@ -168,10 +168,22 @@ for (const d of selected) {
       };
     }
 
+    // 2а. Почистване: внесени по-рано файлове, които вече не участват (напр. след пренареждане на стъпките).
+    //     Пипат се само файлове, записани в манифеста; ръчно добавени снимки остават.
+    const keep = new Set(photoRows.map((p) => p.file));
+    for (const f of Object.keys(manifest.photos)) {
+      if (keep.has(f)) continue;
+      const stale = path.join(photoDir, f);
+      if (!DRY) { if (fs.existsSync(stale)) fs.unlinkSync(stale); delete manifest.photos[f]; }
+      report.photos.pruned++;
+    }
+
     // 3. Frontmatter
-    const flatTexts = d.ingredients.flatMap((g) => g.items).concat(d.steps.map((s) => s.text));
+    const flatTexts = d.ingredients.flatMap((g) => g.items.map((t) => (typeof t === 'string' ? t : t.name))).concat(d.steps.map((s) => s.text));
+    // Датата не се мени при повторен импорт: взима се от описанието, после от съществуващия файл, накрая – днешната.
+    const prevDate = fs.existsSync(mdPath) ? /^date:\s*"?(\d{4}-\d{2}-\d{2})/m.exec(fs.readFileSync(mdPath, 'utf8'))?.[1] : undefined;
     const fm = {
-      title: d.title, description: d.description, intro: d.intro, context: d.context, date: d.date ?? today,
+      title: d.title, description: d.description, intro: d.intro, context: d.context, date: d.date ?? prevDate ?? today,
       status: d.status ?? 'reconstruction', review: d.review ?? true, illustrative: d.illustrative ?? true, featured: d.featured ?? false,
       collection: d.collection ?? 'traditional', category: d.category, method: d.method ?? [], cuisine: d.cuisine, tags: d.tags ?? [],
       prepTime: d.prepTime, cookTime: d.cookTime, restTime: d.restTime ?? 0, servings: d.servings, difficulty: d.difficulty,
@@ -237,7 +249,7 @@ fs.mkdirSync(REPORTS, { recursive: true });
 const summary = {
   mode: DRY ? 'dry-run' : 'import', definitions: selected.length, created: report.created.length, updated: report.updated.length,
   unchanged: report.unchanged.length, conflicts: report.conflicts, errors: report.errors,
-  photosConverted: report.photos.converted, photosReused: report.photos.reused, distinctSourcesUsed: usedSources.size,
+  photosConverted: report.photos.converted, photosReused: report.photos.reused, photosPruned: report.photos.pruned, distinctSourcesUsed: usedSources.size,
 };
 console.log(JSON.stringify(summary, null, 1));
 if (!DRY) fs.writeFileSync(path.join(REPORTS, '_work', 'last-import.json'), JSON.stringify({ ...summary, createdSlugs: report.created, updatedSlugs: report.updated, usedSources: [...usedSources] }, null, 1));
