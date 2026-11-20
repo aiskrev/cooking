@@ -1,0 +1,52 @@
+# Продукция (VPS): Caddy в контейнера сервира статичния сайт и препраща /admin и /api към Node услугата.
+# Пред него стои Caddy на хоста (TLS от Cloudflare Origin CA), който слага реалния адрес на посетителя в X-Forwarded-For.
+# Този контейнер слуша само на 127.0.0.1:8081 на хоста (виж docker-compose.prod.yml).
+{
+	auto_https off
+	admin off
+	servers {
+		# вярва на X-Forwarded-* само от Caddy на хоста (частни мрежи) – запазва реалния адрес и протокола
+		trusted_proxies static private_ranges
+	}
+}
+
+:8080 {
+	encode zstd gzip
+
+	header {
+		X-Content-Type-Options "nosniff"
+		X-Frame-Options "DENY"
+		?Content-Security-Policy "frame-ancestors 'none'"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		Permissions-Policy "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+		Cross-Origin-Opener-Policy "same-origin"
+		-Server
+	}
+
+	# Администрация и API (/admin е недостъпен отвън – блокира се в Caddy на хоста; отваря се само през SSH тунел)
+	@cms path /admin /admin/* /api/*
+	handle @cms {
+		reverse_proxy cms:3000
+	}
+
+	handle {
+		root * /srv/current
+
+		@hashed path /_astro/*
+		header @hashed Cache-Control "public, max-age=31536000, immutable"
+		@fonts path /fonts/* /favicon.svg
+		header @fonts Cache-Control "public, max-age=2592000"
+		@pagefind path /pagefind/*
+		header @pagefind Cache-Control "public, max-age=3600"
+		@pages not path /_astro/* /fonts/* /pagefind/* /favicon.svg
+		header @pages Cache-Control "public, max-age=0, must-revalidate"
+
+		file_server
+	}
+
+	handle_errors {
+		rewrite * /404.html
+		root * /srv/current
+		file_server
+	}
+}
