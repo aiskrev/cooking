@@ -1,0 +1,34 @@
+---
+import Base from '../layouts/Base.astro';
+import { getRecipes, getCategories, getTags } from '../lib/recipes';
+import { href, t, type Locale } from '../i18n';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const recipes = await getRecipes(locale);
+const categories = getCategories(recipes, locale);
+const tags = getTags(recipes, locale);
+---
+<Base locale={locale} title={t(locale, 'categories.title')} description={t(locale, 'categories.description')} alt={{ bg: href('bg', 'categories'), en: href('en', 'categories') }}>
+  <div class="wrap">
+    <div class="page-head"><h1>{t(locale, 'categories.heading')}</h1></div>
+    <section class="section" aria-labelledby="h-c">
+      <h2 id="h-c">{t(locale, 'nav.categories')}</h2>
+      <ul class="chips">
+        {categories.map((c) => (
+          <li><a href={href(locale, 'categories', c.slug)}>{c.name}<span class="count">{c.recipes.length}</span></a></li>
+        ))}
+      </ul>
+    </section>
+    {tags.length > 0 && (
+      <section class="section" aria-labelledby="h-t">
+        <h2 id="h-t">{t(locale, 'recipe.tagsHeading')}</h2>
+        <ul class="chips">
+          {tags.map((x) => (
+            <li><a href={href(locale, 'tags', x.slug)}>{x.name}<span class="count">{x.recipes.length}</span></a></li>
+          ))}
+        </ul>
+      </section>
+    )}
+  </div>
+</Base>

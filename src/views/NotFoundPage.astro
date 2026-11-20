@@ -1,0 +1,22 @@
+---
+// Страница 404 – двуезична (адресът на грешката няма езиков префикс, затова показва и двата езика)
+import Base from '../layouts/Base.astro';
+import { href, t } from '../i18n';
+---
+<Base locale="bg" title={`${t('bg', '404.title')} / ${t('en', '404.title')}`} description={t("bg", "404.description")} noindex alt={{ bg: href("bg"), en: href("en") }}>
+  <div class="wrap empty">
+    <h1>{t('bg', '404.heading')}</h1>
+    <p>{t('bg', '404.text')}</p>
+    <p class="actions center">
+      <a class="btn" href={href('bg', 'recipes')} lang="bg">{t('bg', 'home.allRecipes')}</a>
+      <a class="btn secondary" href={href('bg', 'search')} lang="bg">{t('bg', 'home.search')}</a>
+    </p>
+    <hr />
+    <h2 lang="en">{t('en', '404.heading')}</h2>
+    <p lang="en">{t('en', '404.text')}</p>
+    <p class="actions center">
+      <a class="btn" href={href('en', 'recipes')} lang="en">{t('en', 'home.allRecipes')}</a>
+      <a class="btn secondary" href={href('en', 'search')} lang="en">{t('en', 'home.search')}</a>
+    </p>
+  </div>
+</Base>

@@ -2,8 +2,10 @@
 import { Picture } from 'astro:assets';
 import type { Photo } from '../lib/recipes';
 import { lightboxData, fitWidths } from '../lib/images';
+import { t, type Locale } from '../i18n';
 
 interface Props {
+  locale: Locale;
   photo: Photo;
   sizes: string;
   widths?: number[];
@@ -17,7 +19,7 @@ interface Props {
   label?: string;
   class?: string;
 }
-const { photo, sizes, widths = [480, 800, 1120], eager = false, zoom = false, lite = false, label, class: cls = '' } = Astro.props;
+const { locale, photo, sizes, widths = [480, 800, 1120], eager = false, zoom = false, lite = false, label, class: cls = '' } = Astro.props;
 const max = photo.image.width;
 const usable = fitWidths(widths, max);
 const lb = zoom && !lite ? await lightboxData(photo) : null;
@@ -54,7 +56,7 @@ const w = usable[usable.length - 1];
         width={w}
       />
     </span>
-    {!label && <span class="sr-only"> (увеличи снимката)</span>}
+    {!label && <span class="sr-only">{t(locale, 'photo.zoomHidden')}</span>}
   </a>
 ) : (
   <span class={`photo ${cls}`}>

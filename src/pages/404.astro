@@ -1,13 +1,4 @@
 ---
-import Base from '../layouts/Base.astro';
+import NotFoundPage from '../views/NotFoundPage.astro';
 ---
-<Base title="Страницата не е намерена" description="Страницата, която търсите, не съществува." noindex>
-  <div class="wrap empty">
-    <h1>Страницата не е намерена</h1>
-    <p>Възможно е адресът да е сгрешен или рецептата да е преместена.</p>
-    <p class="actions center">
-      <a class="btn" href="/recepti/">Към всички рецепти</a>
-      <a class="btn secondary" href="/tursene/">Търсене</a>
-    </p>
-  </div>
-</Base>
+<NotFoundPage />

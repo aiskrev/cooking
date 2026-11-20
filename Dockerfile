@@ -47,6 +47,8 @@ COPY scripts ./scripts
 COPY cms ./cms
 COPY src/components ./src/components
 COPY src/layouts ./src/layouts
+COPY src/views ./src/views
+COPY src/i18n ./src/i18n
 COPY src/lib ./src/lib
 COPY src/scripts ./src/scripts
 COPY src/pages ./src/pages

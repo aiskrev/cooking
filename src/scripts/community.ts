@@ -1,5 +1,7 @@
+import { tc, tnc, intl, num, locale } from '../i18n/client';
 // Оценки, коментари, „Сготвих“ и любими на страницата на рецепта.
 // Всичко от посетителя се показва като текст (textContent) – никакъв HTML от потребители.
+// Данните са общи за двата езика: заявките са по стабилния идентификатор на рецептата (slug).
 type Rating = { count: number; average: number | null; distribution: Record<string, number>; mine: number | null };
 type Cm = { id: number; author: string; body: string; createdAt: number; isAdmin: boolean; pending: boolean; mine: boolean; replies: Cm[] };
 type Community = { rating: Rating; comments: Cm[]; cooked: { count: number; mine: boolean }; limits: { maxDepth: number } };
@@ -7,16 +9,17 @@ type Community = { rating: Rating; comments: Cm[]; cooked: { count: number; mine
 const root = document.querySelector<HTMLElement>('[data-community]');
 const slug = root?.dataset.slug ?? document.querySelector<HTMLElement>('[data-rating-line]')?.dataset.slug ?? '';
 const $ = <T extends HTMLElement>(sel: string) => (root ?? document).querySelector<T>(sel);
-const fmt = new Intl.DateTimeFormat('bg-BG', { day: 'numeric', month: 'long', year: 'numeric' });
-const num = (n: number) => String(n).replace('.', ',');
-const plural = (n: number, one: string, many: string) => (n === 1 ? `1 ${one}` : `${n} ${many}`);
+const fmt = new Intl.DateTimeFormat(intl, { day: 'numeric', month: 'long', year: 'numeric' });
 const stars = (avg: number) => '★'.repeat(Math.round(avg)) + '☆'.repeat(5 - Math.round(avg));
 
+// Сървърът връща съобщенията на езика от заглавката x-site-language (само bg/en)
 async function call(path: string, method: 'GET' | 'POST', body?: unknown) {
-  const res = await fetch(path, { method, headers: body ? { 'content-type': 'application/json' } : undefined, body: body ? JSON.stringify(body) : undefined, credentials: 'same-origin' });
+  const headers: Record<string, string> = { 'x-site-language': locale };
+  if (body) headers['content-type'] = 'application/json';
+  const res = await fetch(path, { method, headers, body: body ? JSON.stringify(body) : undefined, credentials: 'same-origin' });
   let data: any = null;
   try { data = await res.json(); } catch { /* не е JSON */ }
-  if (!res.ok) throw new Error(data?.error || 'Възникна грешка. Опитайте отново.');
+  if (!res.ok) throw new Error(data?.error || tc('community.error'));
   return data;
 }
 
@@ -26,8 +29,8 @@ function renderRating(r: Rating, commentCount: number) {
   const line = document.querySelector<HTMLElement>('[data-rating-line]');
   if (line) {
     const parts: string[] = [];
-    if (r.count && r.average != null) parts.push(`★ ${num(r.average)} (${plural(r.count, 'оценка', 'оценки')})`);
-    if (commentCount) parts.push(plural(commentCount, 'коментар', 'коментара'));
+    if (r.count && r.average != null) parts.push(`★ ${num(r.average)} (${tnc('community.rating', r.count)})`);
+    if (commentCount) parts.push(tnc('community.comment', commentCount));
     line.replaceChildren();
     if (parts.length) { const a = document.createElement('a'); a.href = r.count ? '#ocenki' : '#komentari'; a.textContent = parts.join(' · '); line.append(a); line.hidden = false; } else line.hidden = true;
   }
@@ -37,7 +40,7 @@ function renderRating(r: Rating, commentCount: number) {
   if (r.count && r.average != null) {
     $('[data-avg]')!.textContent = num(r.average);
     $('[data-avg-stars]')!.textContent = stars(r.average);
-    $('[data-count-text]')!.textContent = `${plural(r.count, 'оценка', 'оценки')} от посетители`;
+    $('[data-count-text]')!.textContent = tc('community.ratingsFromVisitors', { count: tnc('community.rating', r.count) });
     const dist = $('[data-dist]')!; dist.replaceChildren();
     for (const s of [5, 4, 3, 2, 1]) {
       const n = r.distribution[String(s)] ?? 0;
@@ -54,7 +57,7 @@ function renderRating(r: Rating, commentCount: number) {
     b.setAttribute('aria-pressed', String(r.mine === n));
     b.classList.toggle('on', r.mine != null && n <= r.mine);
   });
-  $('[data-my-rating]')!.textContent = r.mine ? `– ${r.mine} от 5` : '';
+  $('[data-my-rating]')!.textContent = r.mine ? tc('community.myRating', { n: r.mine }) : '';
 }
 
 function commentNode(c: Cm, depth: number): HTMLLIElement {
@@ -63,22 +66,23 @@ function commentNode(c: Cm, depth: number): HTMLLIElement {
   li.id = `comment-${c.id}`;
   const head = document.createElement('p'); head.className = 'cm-meta';
   const who = document.createElement('strong'); who.textContent = c.author; head.append(who);
-  if (c.isAdmin) { const b = document.createElement('span'); b.className = 'tag-soft'; b.textContent = 'Редакция'; head.append(' ', b); }
-  if (c.pending) { const b = document.createElement('span'); b.className = 'tag-soft draft'; b.textContent = 'Чака одобрение – вижда се само от вас'; head.append(' ', b); }
+  if (c.isAdmin) { const b = document.createElement('span'); b.className = 'tag-soft'; b.textContent = tc('community.editorial'); head.append(' ', b); }
+  if (c.pending) { const b = document.createElement('span'); b.className = 'tag-soft draft'; b.textContent = tc('community.pending'); head.append(' ', b); }
   const time = document.createElement('time'); time.dateTime = new Date(c.createdAt).toISOString(); time.textContent = fmt.format(new Date(c.createdAt)); time.className = 'muted small';
   head.append(' · ', time);
+  // Коментарите се показват на езика, на който са написани – не се превеждат и не се променят автоматично
   const body = document.createElement('p'); body.className = 'cm-body'; body.textContent = c.body;
   li.append(head, body);
   if (!c.pending) {
     const actions = document.createElement('p'); actions.className = 'cm-actions';
     if (depth < (state?.limits.maxDepth ?? 3)) {
-      const reply = document.createElement('button'); reply.type = 'button'; reply.className = 'link-btn'; reply.textContent = 'Отговор'; reply.setAttribute('aria-expanded', 'false');
+      const reply = document.createElement('button'); reply.type = 'button'; reply.className = 'link-btn'; reply.textContent = tc('community.reply'); reply.setAttribute('aria-expanded', 'false');
       reply.addEventListener('click', () => toggleReply(li, c.id, reply));
       actions.append(reply);
     }
-    const rep = document.createElement('button'); rep.type = 'button'; rep.className = 'link-btn'; rep.textContent = 'Докладвай';
+    const rep = document.createElement('button'); rep.type = 'button'; rep.className = 'link-btn'; rep.textContent = tc('community.report');
     rep.addEventListener('click', async () => {
-      try { const r = await call(`/api/public/comments/${c.id}/report`, 'POST', { reason: '' }); rep.textContent = r.already ? 'Вече е докладван' : 'Благодарим – ще го прегледаме'; rep.disabled = true; }
+      try { const r = await call(`/api/public/comments/${c.id}/report`, 'POST', { reason: '' }); rep.textContent = r.already ? tc('community.reported') : tc('community.reportThanks'); rep.disabled = true; }
       catch (e) { rep.textContent = (e as Error).message; }
     });
     actions.append(rep);
@@ -93,10 +97,13 @@ function toggleReply(li: HTMLElement, parentId: number, btn: HTMLButtonElement) 
   if (existing) { existing.remove(); btn.setAttribute('aria-expanded', 'false'); return; }
   const form = document.createElement('form'); form.className = 'reply-form'; form.noValidate = true;
   const id = `rf-${parentId}`;
-  form.innerHTML = `<div class="field"><label for="${id}-n">Име</label><input id="${id}-n" name="name" maxlength="40" required></div>
-    <div class="field"><label for="${id}-b">Отговор</label><textarea id="${id}-b" name="body" rows="3" maxlength="2000" required></textarea></div>
+  form.innerHTML = `<div class="field"><label for="${id}-n"></label><input id="${id}-n" name="name" maxlength="40" required></div>
+    <div class="field"><label for="${id}-b"></label><textarea id="${id}-b" name="body" rows="3" maxlength="2000" required></textarea></div>
     <div class="hp" aria-hidden="true"><input name="website" tabindex="-1" autocomplete="off"></div>
-    <button class="btn small" type="submit">Изпрати отговора</button> <span class="small" role="status" aria-live="polite"></span>`;
+    <button class="btn small" type="submit"></button> <span class="small" role="status" aria-live="polite"></span>`;
+  form.querySelector(`label[for="${id}-n"]`)!.textContent = tc('community.name');
+  form.querySelector(`label[for="${id}-b"]`)!.textContent = tc('community.replyLabel');
+  form.querySelector('button[type=submit]')!.textContent = tc('community.replySubmit');
   try { (form.querySelector('[name=name]') as HTMLInputElement).value = localStorage.getItem('community-name') ?? ''; } catch { /* без съхранение */ }
   const status = form.querySelector('span[role=status]') as HTMLElement;
   form.addEventListener('submit', async (e) => {
@@ -122,11 +129,11 @@ function renderComments(list: Cm[]) {
 function renderCooked(c: { count: number; mine: boolean }) {
   document.querySelectorAll<HTMLButtonElement>('[data-cooked-toggle]').forEach((b) => {
     b.setAttribute('aria-pressed', String(c.mine));
-    b.textContent = c.mine ? '✓ Сготвих тази рецепта' : 'Сготвих тази рецепта';
+    b.textContent = c.mine ? tc('recipe.cookedOn') : tc('recipe.cooked');
   });
   document.querySelectorAll<HTMLElement>('[data-cooked-count]').forEach((n) => {
     n.hidden = !c.count;
-    n.textContent = c.count ? `Отбелязана като сготвена от ${plural(c.count, 'посетител', 'посетители')} (отметките не са проверени).` : '';
+    n.textContent = c.count ? tnc('recipe.cookedCount', c.count) : '';
   });
 }
 
@@ -145,7 +152,7 @@ root?.querySelectorAll<HTMLButtonElement>('[data-score]').forEach((b) => b.addEv
   const status = $('[data-rating-status]')!;
   try {
     const r = await call(`/api/public/recipes/${slug}/rating`, 'POST', { score: Number(b.dataset.score) });
-    status.textContent = r.changed ? 'Оценката ви е променена. Благодарим!' : 'Благодарим за оценката!';
+    status.textContent = r.changed ? tc('community.thanksChanged') : tc('community.thanks');
     state = state ?? ({ comments: [], cooked: { count: 0, mine: false }, limits: { maxDepth: 3 } } as unknown as Community);
     state.rating = r.rating; renderRating(r.rating, document.querySelectorAll('#komentari .comment:not(.is-pending)').length);
   } catch (e) { status.textContent = (e as Error).message; }
@@ -173,15 +180,15 @@ if (form) {
 // ---- Сготвих тази рецепта (отметка за този браузър; броят не е проверена статистика) ----
 document.querySelectorAll<HTMLButtonElement>('[data-cooked-toggle]').forEach((b) => b.addEventListener('click', async () => {
   const on = b.getAttribute('aria-pressed') !== 'true';
-  try { const r = await call(`/api/public/recipes/${slug}/cooked`, 'POST', { on }); renderCooked(r.cooked); } catch { b.textContent = 'Не може да се запише в момента'; }
+  try { const r = await call(`/api/public/recipes/${slug}/cooked`, 'POST', { on }); renderCooked(r.cooked); } catch { b.textContent = tc('recipe.cookedFail'); }
 }));
 
-// ---- Любими (само в този браузър; без регистрация) ----
+// ---- Любими (само в този браузър; без регистрация). Ключът е стабилният идентификатор – общ за двата езика ----
 const FAV = 'favorites';
 const favs = (): string[] => { try { return JSON.parse(localStorage.getItem(FAV) ?? '[]'); } catch { return []; } };
 const setFavs = (a: string[]) => { try { localStorage.setItem(FAV, JSON.stringify(a)); } catch { /* без съхранение */ } };
 document.querySelectorAll<HTMLButtonElement>('[data-fav-toggle]').forEach((b) => {
-  const paint = () => { const on = favs().includes(slug); b.setAttribute('aria-pressed', String(on)); b.textContent = on ? '♥ В любими' : '♡ Запази в любими'; };
+  const paint = () => { const on = favs().includes(slug); b.setAttribute('aria-pressed', String(on)); b.textContent = on ? tc('favorites.on') : tc('favorites.add'); };
   b.addEventListener('click', () => { const f = favs(); setFavs(f.includes(slug) ? f.filter((x) => x !== slug) : [...f, slug]); paint(); });
   paint();
 });

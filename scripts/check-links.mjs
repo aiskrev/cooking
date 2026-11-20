@@ -62,6 +62,7 @@ for (const f of files) {
   }
 }
 console.log(`Проверени ${files.length} HTML страници, ${checked} вътрешни връзки/ресурса.`);
+try { fs.writeFileSync(path.join(dist, ".link-report.json"), JSON.stringify({ pages: files.length, checked, broken: new Set(broken).size })); } catch { /* dist само за четене */ }
 if (broken.length) {
   console.error('СЧУПЕНИ ВРЪЗКИ:\n' + [...new Set(broken)].join('\n'));
   process.exit(1);

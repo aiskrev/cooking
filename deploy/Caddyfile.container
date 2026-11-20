@@ -18,6 +18,15 @@
 		-Server
 	}
 
+	# --- Стари адреси (преди двуезичната версия) -> български адреси, постоянно (301), със запазена заявка (?…) ---
+	# Корен „/“ -> /bg/ ; /recepti/… -> /bg/recepti/… ; /rss.xml -> /bg/rss.xml. Администрацията (/admin) и API (/api) не се пипат.
+	@legacyRoot path /
+	redir @legacyRoot /bg/ 301
+	@legacy path /recepti /recepti/* /kategorii /kategorii/* /etiketi /etiketi/* /tursene /tursene/* /lyubimi /lyubimi/* /spisak /spisak/*
+	redir @legacy /bg{uri} 301
+	@legacyRss path /rss.xml
+	redir @legacyRss /bg/rss.xml 301
+
 	@hashed path /_astro/*
 	header @hashed Cache-Control "public, max-age=31536000, immutable"
 	@fonts path /fonts/* /favicon.svg

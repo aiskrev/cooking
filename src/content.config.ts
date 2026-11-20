@@ -25,14 +25,22 @@ const ingredient = z.union([
   }),
 ]);
 
-const recipes = defineCollection({
-  // Всяка рецепта е папка: index.md + photos/ със снимките (+ manifest.json с произход на снимките).
-  loader: glob({
-    pattern: '*/index.md',
-    base: './src/content/recipes',
-    generateId: ({ entry }) => entry.split('/')[0],
-  }),
-  schema: z.object({
+// Състояние на превода (само в index.en.md). Не пипа редакторския статус на рецептата (status/review).
+//   draft        – чернова на превода (не се публикува)
+//   needs-review – очаква редакторска проверка (не се публикува)
+//   ready        – готов за публикуване, но още не е включен (не се публикува)
+//   published    – английската страница се показва на сайта
+export const translationMeta = z.object({
+  status: z.enum(['draft', 'needs-review', 'ready', 'published']).default('draft'),
+  // хеш на българския източник към момента на превода; различие = „остарял превод“
+  sourceHash: z.string().optional(),
+  // false = превеждано с помощта на ИИ и още непроверено от автора (показва се бележка на страницата)
+  reviewed: z.boolean().default(false),
+  translator: z.string().optional(),
+  updated: z.coerce.date().optional(),
+});
+
+const recipeFields = z.object({
     title: z.string(),
     description: z.string().max(240),
     intro: z.string().optional(), // кратко апетитно въведение
@@ -91,7 +99,32 @@ const recipes = defineCollection({
     serving: z.string().optional(),
     storage: z.string().optional(),
     allergens: z.array(z.string()).default([]), // редакционна индикация от съставките – изисква проверка
+});
+
+// Български оригинал: <рецепта>/index.md
+const recipes = defineCollection({
+  // Всяка рецепта е папка: index.md + photos/ със снимките (+ manifest.json с произход на снимките).
+  loader: glob({
+    pattern: '*/index.md',
+    base: './src/content/recipes',
+    generateId: ({ entry }) => entry.split('/')[0],
+  }),
+  schema: recipeFields,
+});
+
+// Английски превод: <рецепта>/index.en.md – същият идентификатор, същите снимки (photos/ е общо).
+// Полетата, които не се превеждат (дата, времена, порции, снимки, количества), се дублират и се сверяват
+// автоматично от `npm run translations:check`.
+const recipesEn = defineCollection({
+  loader: glob({
+    pattern: '*/index.en.md',
+    base: './src/content/recipes',
+    generateId: ({ entry }) => entry.split('/')[0],
+  }),
+  schema: recipeFields.extend({
+    difficulty: z.string().optional(),
+    translation: translationMeta,
   }),
 });
 
-export const collections = { recipes };
+export const collections = { recipes, recipesEn };

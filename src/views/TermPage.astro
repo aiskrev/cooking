@@ -1,0 +1,34 @@
+---
+// Страница на категория или етикет. Идентичност = стабилният ключ (българската стойност); адресът е на езика на страницата.
+import Base from '../layouts/Base.astro';
+import RecipeCard from '../components/RecipeCard.astro';
+import { getRecipes, getCategories, getTags } from '../lib/recipes';
+import { href, t, tn, type Locale } from '../i18n';
+
+interface Props { locale: Locale; kind: 'category' | 'tag'; termKey: string }
+const { locale, kind, termKey } = Astro.props;
+const route = kind === 'category' ? 'categories' : 'tags';
+const collect = kind === 'category' ? getCategories : getTags;
+const term = collect(await getRecipes(locale), locale).find((x) => x.key === termKey)!;
+// Еквивалентът на другия език съществува само ако там има публикувани рецепти с този термин
+const other = locale === 'bg' ? 'en' : 'bg';
+const otherTerm = collect(await getRecipes(other), other).find((x) => x.key === termKey);
+const alt = { [locale]: href(locale, route, term.slug), ...(otherTerm ? { [other]: href(other, route, otherTerm.slug) } : {}) };
+const title = kind === 'category' ? t(locale, 'category.title', { name: term.name }) : t(locale, 'tag.title', { name: term.name });
+const description = kind === 'category' ? t(locale, 'category.description', { name: term.name }) : t(locale, 'tag.description', { name: term.name });
+---
+<Base locale={locale} title={title} description={description} alt={alt} fallback={href(other, 'categories')}>
+  <div class="wrap">
+    <nav class="breadcrumb" aria-label={t(locale, 'breadcrumb.label')}>
+      <ol>
+        <li><a href={href(locale)}>{t(locale, 'breadcrumb.home')}</a></li>
+        <li><a href={href(locale, 'categories')}>{t(locale, kind === 'category' ? 'nav.categories' : 'categories.title')}</a></li>
+        <li aria-current="page">{term.name}</li>
+      </ol>
+    </nav>
+    <div class="page-head"><h1>{kind === 'category' ? term.name : t(locale, 'tag.heading', { name: term.name })}</h1><p>{tn(locale, 'category.count', term.recipes.length)}</p></div>
+    <ul class="grid section">
+      {term.recipes.map((r, i) => <li><RecipeCard recipe={r} locale={locale} eager={i === 0} level={2} /></li>)}
+    </ul>
+  </div>
+</Base>

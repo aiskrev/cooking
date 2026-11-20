@@ -1,0 +1,12 @@
+---
+import RecipePage from '../../../views/RecipePage.astro';
+import { getRecipes } from '../../../lib/recipes';
+
+export async function getStaticPaths() {
+  const recipes = await getRecipes('en');
+  const other = await getRecipes('bg');
+  return recipes.map((recipe) => ({ params: { slug: recipe.id }, props: { recipe, all: recipes, otherRecipe: other.find((o) => o.id === recipe.id) } }));
+}
+const { recipe, all, otherRecipe } = Astro.props;
+---
+<RecipePage locale="en" recipe={recipe} all={all} otherRecipe={otherRecipe} />

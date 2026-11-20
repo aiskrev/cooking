@@ -1,104 +1,112 @@
 ---
-import Base from '../../layouts/Base.astro';
-import RecipeCard from '../../components/RecipeCard.astro';
-import { getRecipes, getCategories, getTags } from '../../lib/recipes';
-import { collectionLabels } from '../../site.config';
+import Base from '../layouts/Base.astro';
+import RecipeCard from '../components/RecipeCard.astro';
+import { getRecipes, getCategories, getTags } from '../lib/recipes';
+import { href, t, termLabel, localeInfo, type Locale } from '../i18n';
 
-const recipes = await getRecipes();
-const categories = getCategories(recipes);
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const recipes = await getRecipes(locale);
+const categories = getCategories(recipes, locale);
 // „Основна съставка“ – най-често срещаните етикети (поне 2 рецепти)
-const tags = getTags(recipes).filter((t) => t.recipes.length >= 2).slice(0, 60);
-const methods = [...new Set(recipes.flatMap((r) => r.data.method))].sort((a, b) => a.localeCompare(b, 'bg'));
-const difficulties = ['лесна', 'средна', 'сложна'];
+const tags = getTags(recipes, locale).filter((x) => x.recipes.length >= 2).slice(0, 60);
+// Стойностите във филтрите са стабилните (български) ключове – така адресите с филтри работят и при смяна на езика
+const methods = [...new Set(recipes.flatMap((r) => r.bg.method))]
+  .map((key) => ({ key, name: termLabel(locale, 'method', key) ?? key }))
+  .sort((a, b) => a.name.localeCompare(b.name, localeInfo[locale].intl));
+const difficulties = ['лесна', 'средна', 'сложна'].map((key) => ({ key, name: termLabel(locale, 'difficulty', key) ?? key }));
 ---
-<Base title="Всички рецепти" description="Всички рецепти със снимки на стъпките: търсете и филтрирайте по вид ястие, начин на готвене, трудност и време.">
+<Base locale={locale} title={t(locale, 'catalog.title')} description={t(locale, 'catalog.description')} alt={{ bg: href('bg', 'recipes'), en: href('en', 'recipes') }}>
   <div class="wrap">
     <div class="page-head">
-      <h1>Всички рецепти</h1>
-      <p><span data-count>{recipes.length}</span> от {recipes.length} рецепти</p>
+      <h1>{t(locale, 'catalog.title')}</h1>
+      <p><span data-count>{recipes.length}</span> {t(locale, 'catalog.countSuffix', { total: recipes.length })}</p>
     </div>
 
-    <form class="filters" data-filters role="search" aria-label="Филтри за рецепти">
+    <form class="filters" data-filters role="search" aria-label={t(locale, 'catalog.filters')}>
       <div class="f-field f-search">
-        <label for="f-q">Търсене по име, съставка или етикет</label>
-        <input id="f-q" type="search" autocomplete="off" placeholder="напр. сарми, патица, баница" />
+        <label for="f-q">{t(locale, 'catalog.q')}</label>
+        <input id="f-q" type="search" autocomplete="off" placeholder={t(locale, 'catalog.qPlaceholder')} />
       </div>
       <div class="f-field">
-        <label for="f-collection">Колекция</label>
+        <label for="f-collection">{t(locale, 'catalog.collection')}</label>
         <select id="f-collection">
-          <option value="">Всички</option>
-          <option value="traditional">{collectionLabels.traditional.name}</option>
-          <option value="fine-dining">{collectionLabels['fine-dining'].name}</option>
+          <option value="">{t(locale, 'catalog.all')}</option>
+          <option value="traditional">{t(locale, 'collection.traditional.name')}</option>
+          <option value="fine-dining">{t(locale, 'collection.fine-dining.name')}</option>
         </select>
       </div>
       <div class="f-field">
-        <label for="f-category">Вид ястие</label>
+        <label for="f-category">{t(locale, 'catalog.category')}</label>
         <select id="f-category">
-          <option value="">Всички</option>
-          {categories.map((c) => <option value={c.name}>{c.name} ({c.recipes.length})</option>)}
+          <option value="">{t(locale, 'catalog.all')}</option>
+          {categories.map((c) => <option value={c.key}>{c.name} ({c.recipes.length})</option>)}
         </select>
       </div>
       <div class="f-field">
-        <label for="f-method">Начин на готвене</label>
+        <label for="f-method">{t(locale, 'catalog.method')}</label>
         <select id="f-method">
-          <option value="">Всички</option>
-          {methods.map((m) => <option value={m}>{m}</option>)}
+          <option value="">{t(locale, 'catalog.all')}</option>
+          {methods.map((m) => <option value={m.key}>{m.name}</option>)}
         </select>
       </div>
       <div class="f-field">
-        <label for="f-difficulty">Трудност</label>
+        <label for="f-difficulty">{t(locale, 'catalog.difficulty')}</label>
         <select id="f-difficulty">
-          <option value="">Всички</option>
-          {difficulties.map((d) => <option value={d}>{d}</option>)}
+          <option value="">{t(locale, 'catalog.all')}</option>
+          {difficulties.map((x) => <option value={x.key}>{x.name}</option>)}
         </select>
       </div>
       <div class="f-field">
-        <label for="f-time">Общо време</label>
+        <label for="f-time">{t(locale, 'catalog.time')}</label>
         <select id="f-time">
-          <option value="">Без ограничение</option>
-          <option value="45">до 45 минути</option>
-          <option value="90">до 1 ч 30 мин</option>
-          <option value="180">до 3 часа</option>
+          <option value="">{t(locale, 'catalog.timeAny')}</option>
+          <option value="45">{t(locale, 'catalog.time45')}</option>
+          <option value="90">{t(locale, 'catalog.time90')}</option>
+          <option value="180">{t(locale, 'catalog.time180')}</option>
         </select>
       </div>
       <div class="f-field">
-        <label for="f-tag">Основна съставка</label>
+        <label for="f-tag">{t(locale, 'catalog.tag')}</label>
         <select id="f-tag">
-          <option value="">Всички</option>
-          {tags.map((t) => <option value={t.name.toLocaleLowerCase('bg')}>{t.name} ({t.recipes.length})</option>)}
+          <option value="">{t(locale, 'catalog.all')}</option>
+          {tags.map((x) => <option value={x.key.toLocaleLowerCase('bg')}>{x.name} ({x.recipes.length})</option>)}
         </select>
       </div>
       <div class="f-field" data-rating-field hidden>
-        <label for="f-rating">Оценка от посетители</label>
+        <label for="f-rating">{t(locale, 'catalog.rating')}</label>
         <select id="f-rating">
-          <option value="">Всички</option>
-          <option value="4">4★ и нагоре</option>
-          <option value="3">3★ и нагоре</option>
+          <option value="">{t(locale, 'catalog.all')}</option>
+          <option value="4">{t(locale, 'catalog.rating4')}</option>
+          <option value="3">{t(locale, 'catalog.rating3')}</option>
         </select>
       </div>
       <div class="f-field">
-        <label for="f-sort">Подредба</label>
+        <label for="f-sort">{t(locale, 'catalog.sort')}</label>
         <select id="f-sort">
-          <option value="new">Най-нови</option>
-          <option value="title">По азбучен ред</option>
-          <option value="time">Най-бързи</option>
+          <option value="new">{t(locale, 'catalog.sortNew')}</option>
+          <option value="title">{t(locale, 'catalog.sortTitle')}</option>
+          <option value="time">{t(locale, 'catalog.sortTime')}</option>
         </select>
       </div>
-      <div class="f-field f-reset"><button type="button" class="btn secondary small" data-reset>Изчисти филтрите</button></div>
+      <div class="f-field f-reset"><button type="button" class="btn secondary small" data-reset>{t(locale, 'catalog.reset')}</button></div>
     </form>
 
     <p class="muted" role="status" aria-live="polite" data-status></p>
 
     <ul class="grid section" data-grid>
-      {recipes.map((r, i) => <li><RecipeCard recipe={r} eager={i === 0} level={2} filterable /></li>)}
+      {recipes.map((r, i) => <li><RecipeCard recipe={r} locale={locale} eager={i === 0} level={2} filterable /></li>)}
     </ul>
-    <p class="empty" data-empty hidden>Няма рецепти по тези критерии. Опитайте с по-малко филтри.</p>
-    <p class="center-cta"><button type="button" class="btn secondary" data-more hidden>Покажи още</button></p>
-    <noscript><p class="muted">Филтрите изискват JavaScript; показани са всички рецепти.</p></noscript>
+    <p class="empty" data-empty hidden>{t(locale, 'catalog.empty')}</p>
+    <p class="center-cta"><button type="button" class="btn secondary" data-more hidden>{t(locale, 'catalog.more')}</button></p>
+    <noscript><p class="muted">{t(locale, 'catalog.noscript')}</p></noscript>
   </div>
 </Base>
 
 <script>
+  import { tc, intl, locale } from '../i18n/client';
+  import { norm } from '../i18n';
+
   const PAGE = 24;
   const form = document.querySelector<HTMLElement>('[data-filters]')!;
   const grid = document.querySelector<HTMLElement>('[data-grid]')!;
@@ -128,7 +136,7 @@ const difficulties = ['лесна', 'средна', 'сложна'];
 
   function apply(reset = true) {
     if (reset) shown = PAGE;
-    const term = q.value.trim().toLocaleLowerCase('bg');
+    const term = norm(locale, q.value.trim());
     const maxT = Number(time.value || 0);
     const matched = cards.filter((c) => {
       const d = c.dataset;
@@ -142,10 +150,10 @@ const difficulties = ['лесна', 'средна', 'сложна'];
         && (!maxT || Number(d.time) <= maxT);
     });
     const key = sort.value;
-    matched.sort((a, b) => key === 'rating' ? Number(b.dataset.rating || 0) - Number(a.dataset.rating || 0) || a.dataset.title!.localeCompare(b.dataset.title!, 'bg')
-      : key === 'title' ? a.dataset.title!.localeCompare(b.dataset.title!, 'bg')
-      : key === 'time' ? Number(a.dataset.time) - Number(b.dataset.time) || a.dataset.title!.localeCompare(b.dataset.title!, 'bg')
-      : b.dataset.date!.localeCompare(a.dataset.date!) || a.dataset.title!.localeCompare(b.dataset.title!, 'bg'));
+    matched.sort((a, b) => key === 'rating' ? Number(b.dataset.rating || 0) - Number(a.dataset.rating || 0) || a.dataset.title!.localeCompare(b.dataset.title!, intl)
+      : key === 'title' ? a.dataset.title!.localeCompare(b.dataset.title!, intl)
+      : key === 'time' ? Number(a.dataset.time) - Number(b.dataset.time) || a.dataset.title!.localeCompare(b.dataset.title!, intl)
+      : b.dataset.date!.localeCompare(a.dataset.date!) || a.dataset.title!.localeCompare(b.dataset.title!, intl));
     const set = new Set(matched);
     const frag = document.createDocumentFragment();
     matched.forEach((c) => frag.appendChild(c.parentElement!));
@@ -153,7 +161,7 @@ const difficulties = ['лесна', 'средна', 'сложна'];
     grid.append(frag);
     matched.forEach((c, i) => { c.parentElement!.hidden = i >= shown; });
     countEl.textContent = String(matched.length);
-    status.textContent = matched.length === cards.length ? '' : `Намерени: ${matched.length}`;
+    status.textContent = matched.length === cards.length ? '' : tc('catalog.found', { n: matched.length });
     empty.hidden = matched.length > 0;
     more.hidden = matched.length <= shown;
     const p = new URLSearchParams();
@@ -175,7 +183,7 @@ const difficulties = ['лесна', 'средна', 'сложна'];
     const s = (e as CustomEvent<Record<string, { ratings: number }>>).detail;
     if (!Object.values(s).some((x) => x.ratings > 0)) return;
     ratingField.hidden = false;
-    if (![...sort.options].some((o) => o.value === 'rating')) sort.add(new Option('Най-високо оценени', 'rating'));
+    if (![...sort.options].some((o) => o.value === 'rating')) sort.add(new Option(tc('catalog.sortRating'), 'rating'));
     if (wantedRating) ratingSel.value = wantedRating;
     if (params.get('sort') === 'rating') sort.value = 'rating';
     apply(false);

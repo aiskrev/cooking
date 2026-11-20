@@ -1,0 +1,49 @@
+---
+// Любими рецепти: списъкът е само в браузъра на посетителя (localStorage), без регистрация. Ключът е стабилният
+// идентификатор на рецептата – любимите се запазват при смяна на езика. Страницата съдържа всички рецепти скрити и показва избраните.
+import Base from '../layouts/Base.astro';
+import RecipeCard from '../components/RecipeCard.astro';
+import { getRecipes } from '../lib/recipes';
+import { href, t, type Locale } from '../i18n';
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const recipes = await getRecipes(locale);
+---
+<Base locale={locale} title={t(locale, 'favorites.title')} description={t(locale, 'favorites.description')} noindex alt={{ bg: href('bg', 'favorites'), en: href('en', 'favorites') }}>
+  <div class="wrap">
+    <div class="page-head">
+      <h1>{t(locale, 'favorites.title')}</h1>
+      <p class="muted">{t(locale, 'favorites.lead')}</p>
+    </div>
+    <p class="empty" data-fav-empty hidden>{t(locale, 'favorites.empty')}</p>
+    <ul class="grid section" data-fav-grid>
+      {recipes.map((r) => <li data-fav-item hidden><RecipeCard recipe={r} locale={locale} level={2} /></li>)}
+    </ul>
+    <noscript><p class="muted">{t(locale, 'favorites.noscript')}</p></noscript>
+  </div>
+</Base>
+
+<script>
+  import { tc } from '../i18n/client';
+  const read = (): string[] => { try { return JSON.parse(localStorage.getItem('favorites') ?? '[]'); } catch { return []; } };
+  const grid = document.querySelector<HTMLElement>('[data-fav-grid]')!;
+  const empty = document.querySelector<HTMLElement>('[data-fav-empty]')!;
+  function render() {
+    const favs = new Set(read());
+    let shown = 0;
+    grid.querySelectorAll<HTMLElement>('[data-fav-item]').forEach((li) => {
+      const slug = li.querySelector<HTMLElement>('[data-slug]')?.dataset.slug ?? '';
+      const on = favs.has(slug);
+      li.hidden = !on;
+      if (on) shown++;
+      if (on && !li.querySelector('.fav-remove')) {
+        const b = document.createElement('button');
+        b.type = 'button'; b.className = 'btn secondary small fav-remove'; b.textContent = tc('favorites.remove');
+        b.addEventListener('click', () => { try { localStorage.setItem('favorites', JSON.stringify(read().filter((x) => x !== slug))); } catch { /* */ } render(); });
+        li.querySelector('.card-body')?.append(b);
+      }
+    });
+    empty.hidden = shown > 0;
+  }
+  render();
+</script>

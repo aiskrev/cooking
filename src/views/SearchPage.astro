@@ -1,24 +1,28 @@
 ---
 import Base from '../layouts/Base.astro';
+import { href, t, type Locale } from '../i18n';
+interface Props { locale: Locale }
+const { locale } = Astro.props;
 ---
-<Base title="Търсене" description="Търсете в рецептите по име, съставка или етикет.">
+<Base locale={locale} title={t(locale, 'search.title')} description={t(locale, 'search.description')} alt={{ bg: href('bg', 'search'), en: href('en', 'search') }}>
   <div class="wrap">
     <div class="page-head">
-      <h1>Търсене</h1>
-      <p>Въведете име на ястие, съставка или етикет. Търсенето работи в браузъра ви – нищо не се изпраща към сървър.</p>
+      <h1>{t(locale, 'search.title')}</h1>
+      <p>{t(locale, 'search.lead')}</p>
     </div>
-    <form class="search-form" role="search" action="/tursene/" method="get" data-search-form>
-      <label for="q">Какво търсите?</label>
+    <form class="search-form" role="search" action={href(locale, 'search')} method="get" data-search-form>
+      <label for="q">{t(locale, 'search.label')}</label>
       <input id="q" name="q" type="search" autocomplete="off" enterkeyhint="search" />
-      <button class="btn" type="submit">Търси</button>
+      <button class="btn" type="submit">{t(locale, 'search.button')}</button>
     </form>
     <p class="muted" id="search-status" role="status" aria-live="polite"></p>
     <ol class="results" id="search-results"></ol>
-    <noscript><p>Търсенето изисква JavaScript. Можете да разгледате <a href="/recepti/">всички рецепти</a> или <a href="/kategorii/">категориите</a>.</p></noscript>
+    <noscript><p set:html={t(locale, 'search.noscript', { recipes: href(locale, 'recipes'), categories: href(locale, 'categories') })} /></noscript>
   </div>
 </Base>
 
 <script>
+  import { tc, locale } from '../i18n/client';
   const form = document.querySelector<HTMLFormElement>('[data-search-form]')!;
   const input = form.querySelector<HTMLInputElement>('#q')!;
   const status = document.getElementById('search-status')!;
@@ -32,10 +36,11 @@ import Base from '../layouts/Base.astro';
     try {
       const url = '/pagefind/pagefind.js';
       pagefind = await import(/* @vite-ignore */ url);
-      await pagefind.options({ baseUrl: '/' });
+      // Отделен индекс за всеки език: български заявки търсят в българския текст, английски – в английския
+      await pagefind.options({ baseUrl: '/', language: locale });
     } catch {
       pagefind = null;
-      status.textContent = 'Търсенето не е налично в този изглед (индексът се създава при сглобяване на сайта).';
+      status.textContent = tc('search.unavailable');
     }
     return pagefind;
   }
@@ -61,12 +66,12 @@ import Base from '../layouts/Base.astro';
     if (!q) { status.textContent = ''; return; }
     const pf = await load();
     if (!pf) return;
-    status.textContent = 'Търсене…';
+    status.textContent = tc('search.loading');
     const res = await pf.search(q);
     const data = await Promise.all(res.results.slice(0, 30).map((r: any) => r.data()));
     status.textContent = data.length
-      ? `Намерени: ${res.results.length}`
-      : `Няма резултати за „${q}“. Опитайте с друга дума.`;
+      ? tc('search.found', { n: res.results.length })
+      : tc('search.none', { q });
     for (const d of data) {
       const li = document.createElement('li');
       li.className = 'result';

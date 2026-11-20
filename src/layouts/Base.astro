@@ -1,8 +1,10 @@
 ---
 import '../styles/global.css';
-import { site } from '../site.config';
+import { site, siteText, copyrightHolder } from '../site.config';
+import { locales, localeInfo, otherLocale, href, t, type Locale } from '../i18n';
 
 interface Props {
+  locale: Locale;
   title: string;
   description: string;
   /** абсолютен адрес на картинка за Open Graph */
@@ -12,22 +14,38 @@ interface Props {
   noindex?: boolean;
   published?: Date;
   modified?: Date;
+  /** Пътища на ИСТИНСКИТЕ еквиваленти на тази страница по езици (само публикувани). От тях се правят hreflang и превключвателят. */
+  alt?: Partial<Record<Locale, string>>;
+  /** Къде да води превключвателят, когато няма еквивалент на другия език (по подразбиране – началото на другия език) */
+  fallback?: string;
+  /** страница „Начало“ – заглавието е „Име – подзаглавие“ */
+  home?: boolean;
 }
-const { title, description, image, type = 'website', jsonLd, noindex = false, published, modified } = Astro.props;
+const { locale, title, description, image, type = 'website', jsonLd, noindex = false, published, modified, alt = {}, fallback, home = false } = Astro.props;
+const info = localeInfo[locale];
+const text = siteText[locale];
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
-const fullTitle = Astro.url.pathname === '/' ? `${site.name} – ${site.en.name}` : `${title} | ${site.name}`;
+const fullTitle = home ? `${text.name} – ${text.tagline}` : `${title} | ${text.name}`;
 const robots = noindex || site.noindex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large';
 const nav = [
-  { href: '/recepti/', label: 'Рецепти' },
-  { href: '/kategorii/', label: 'Категории' },
-  { href: '/tursene/', label: 'Търсене' },
-  { href: '/spisak/', label: 'Списък' },
-  { href: '/lyubimi/', label: 'Любими' },
+  { href: href(locale, 'recipes'), label: t(locale, 'nav.recipes') },
+  { href: href(locale, 'categories'), label: t(locale, 'nav.categories') },
+  { href: href(locale, 'search'), label: t(locale, 'nav.search') },
+  { href: href(locale, 'shopping'), label: t(locale, 'nav.shopping') },
+  { href: href(locale, 'favorites'), label: t(locale, 'nav.favorites') },
 ];
 const path = Astro.url.pathname;
+const abs = (p: string) => new URL(p, Astro.site).href;
+const other = otherLocale(locale);
+const switchHref = alt[other] ?? fallback ?? href(other);
+// Взаимни hreflang само когато и двата езика наистина съществуват
+const pair = !noindex && alt.bg && alt.en;
+const switchTo: Record<Locale, string> = { bg: alt.bg ?? '', en: alt.en ?? '' };
+switchTo[locale] = alt[locale] ?? path;
+switchTo[other] = switchHref;
 ---
 <!doctype html>
-<html lang={site.lang}>
+<html lang={info.lang} data-locale={locale}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -35,16 +53,19 @@ const path = Astro.url.pathname;
     <meta name="description" content={description} />
     <meta name="robots" content={robots} />
     {!noindex && <link rel="canonical" href={canonical} />}
+    {pair && locales.map((l) => <link rel="alternate" hreflang={localeInfo[l].lang} href={abs(alt[l]!)} />)}
+    {pair && <link rel="alternate" hreflang="x-default" href={abs(alt.bg!)} />}
     <meta name="color-scheme" content="light dark" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="alternate" type="application/rss+xml" title={`${site.name} – RSS`} href="/rss.xml" />
+    <link rel="alternate" type="application/rss+xml" title={t(locale, 'rss.title', { name: text.name })} href={`/${locale}/rss.xml`} />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="preload" href="/fonts/lora-cyrillic-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/source-sans-3-cyrillic-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/source-sans-3-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
 
-    <meta property="og:site_name" content={site.name} />
-    <meta property="og:locale" content={site.locale} />
-    <meta property="og:locale:alternate" content={site.en.locale} />
+    <meta property="og:site_name" content={text.name} />
+    <meta property="og:locale" content={info.og} />
+    {pair && <meta property="og:locale:alternate" content={localeInfo[other].og} />}
     <meta property="og:type" content={type} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
@@ -69,23 +90,35 @@ const path = Astro.url.pathname;
     </script>
   </head>
   <body>
-    <a class="skip-link" href="#main">Към съдържанието</a>
+    <a class="skip-link" href="#main">{t(locale, 'skip.main')}</a>
     <header class="site-header">
       <div class="wrap header-inner">
-        <a class="brand" href="/" aria-label={`${site.name} – начална страница`}>
+        <a class="brand" href={href(locale)} aria-label={t(locale, 'brand.home', { name: text.name })}>
           <svg aria-hidden="true" width="26" height="26" viewBox="0 0 32 32"><path fill="currentColor" d="M16 3c-5 0-9 3.6-9 8.2 0 2.5 1.2 4.6 3 6V25a4 4 0 0 0 4 4h4a4 4 0 0 0 4-4v-7.8c1.8-1.4 3-3.5 3-6C25 6.600 21 3 16 3Z"/></svg>
-          <span class="brand-text">{site.name}<small lang="en">{site.en.name}</small></span>
+          <span class="brand-text">{text.name}</span>
         </a>
-        <nav class="main-nav" aria-label="Основно меню">
+        <nav class="main-nav" aria-label={t(locale, 'nav.label')}>
           <ul>
             {nav.map((n) => (
               <li><a href={n.href} aria-current={path.startsWith(n.href) ? 'page' : undefined}>{n.label}</a></li>
             ))}
           </ul>
         </nav>
-        <button type="button" class="theme-toggle" data-theme-toggle aria-pressed="false">
-          Тъмна тема
+        <div class="header-tools">
+        <nav class="lang-switch" aria-label={`${t('bg', 'lang.label')} / ${t('en', 'lang.label')}`} data-lang-switch>
+          {locales.map((l, i) => (
+            <>
+              {i > 0 && <span aria-hidden="true" class="lang-sep">|</span>}
+              {l === locale
+                ? <a lang={l} hreflang={l} href={switchTo[l]} aria-current="true" title={localeInfo[l].name} data-lang={l}>{l.toUpperCase()}</a>
+                : <a lang={l} hreflang={l} href={switchTo[l]} title={t(locale, 'lang.switchTo', { language: localeInfo[l].name })} aria-label={t(locale, 'lang.switchTo', { language: localeInfo[l].name })} data-lang={l}>{l.toUpperCase()}</a>}
+            </>
+          ))}
+        </nav>
+        <button type="button" class="theme-toggle" data-theme-toggle data-label-dark={t(locale, 'theme.dark')} data-label-light={t(locale, 'theme.light')} aria-pressed="false">
+          {t(locale, 'theme.dark')}
         </button>
+        </div>
       </div>
     </header>
     <main id="main" tabindex="-1">
@@ -93,9 +126,9 @@ const path = Astro.url.pathname;
     </main>
     <footer class="site-footer">
       <div class="wrap footer-inner">
-        <p>© {new Date().getFullYear()} {site.copyrightHolder}</p>
-        <p><a href="/rss.xml">RSS</a> · <a href="/sitemap-index.xml">Карта на сайта</a></p>
-        <p class="muted">Сайтът не използва бисквитки за проследяване. Темата (светла/тъмна) се пази само в браузъра ви.</p>
+        <p>{t(locale, 'footer.copyright', { year: new Date().getFullYear(), holder: copyrightHolder[locale] })}</p>
+        <p><a href={`/${locale}/rss.xml`}>{t(locale, 'footer.rss')}</a> · <a href="/sitemap-index.xml">{t(locale, 'footer.sitemap')}</a></p>
+        <p class="muted">{t(locale, 'footer.privacy')}</p>
       </div>
     </footer>
     <script>
@@ -109,7 +142,6 @@ const path = Astro.url.pathname;
       const sync = () => {
         const dark = current() === 'dark';
         btn?.setAttribute('aria-pressed', String(dark));
-
       };
       btn?.addEventListener('click', () => {
         const next = current() === 'dark' ? 'light' : 'dark';
@@ -118,6 +150,16 @@ const path = Astro.url.pathname;
         sync();
       });
       sync();
+
+      // Превключвател на езика: запазва филтрите (?…) и котвата (#…) на страницата и помни явния избор на посетителя.
+      // Няма автоматично пренасочване по език на браузъра – адресът винаги решава езика.
+      document.querySelectorAll<HTMLAnchorElement>('[data-lang-switch] a').forEach((a) => {
+        const base = a.getAttribute('href') ?? '';
+        const keep = () => { if (a.getAttribute('aria-current') !== 'true' && !base.includes('?')) a.href = base + location.search + location.hash; };
+        keep();
+        window.addEventListener('hashchange', keep);
+        a.addEventListener('click', () => { try { localStorage.setItem('lang', a.dataset.lang ?? ''); } catch {} });
+      });
     </script>
   </body>
 </html>

@@ -13,7 +13,16 @@ export default defineConfig({
   trailingSlash: 'always',
   build: { format: 'directory' },
   compressHTML: true,
-  integrations: [sitemap({ filter: (page) => !page.includes('/lyubimi/') })],
+  // В карта на сайта: всички публикувани страници и на двата езика (/bg/…, /en/…). Не влизат: корен „/“ (само пренасочване),
+  // „Любими“ (/bg/lyubimi/, /en/favorites/ – лични, noindex) и 404. Връзките между езиците са в <head> (hreflang), само за реални двойки.
+  integrations: [
+    sitemap({
+      filter: (page) => {
+        const p = new URL(page).pathname;
+        return p !== '/' && !/^\/(bg|en)\/(lyubimi|favorites)\/$/.test(p) && !p.startsWith('/404');
+      },
+    }),
+  ],
   security: {
     csp: {
       // 'wasm-unsafe-eval' – нужно на търсачката Pagefind (WebAssembly)
