@@ -4,18 +4,19 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const dist = path.resolve(process.argv[2] || 'dist');
-const recipesDir = path.join(dist, 'recepti');
+const LOCALES = [{ lang: "bg", dir: "bg/recepti", other: "en/recipes" }, { lang: "en", dir: "en/recipes", other: "bg/recepti" }];
 const iso = /^P(?:\d+D)?(?:T(?:\d+H)?(?:\d+M)?(?:\d+S)?)?$/;
 const abs = /^https?:\/\/[^\s]+$/;
 let errors = 0, warnings = 0, pagesChecked = 0;
 const err = (p, m) => { errors++; console.error(`ГРЕШКА  ${p}: ${m}`); };
 const warn = (p, m) => { warnings++; console.warn(`ПРЕДУПР. ${p}: ${m}`); };
 
-for (const slug of fs.readdirSync(recipesDir, { withFileTypes: true }).filter((e) => e.isDirectory())) {
-  const file = path.join(recipesDir, slug.name, 'index.html');
+for (const loc of LOCALES) for (const slug of (fs.existsSync(path.join(dist, loc.dir)) ? fs.readdirSync(path.join(dist, loc.dir), { withFileTypes: true }) : []).filter((e) => e.isDirectory())) {
+  const recipesDir = path.join(dist, loc.dir);
+  const file = path.join(recipesDir, slug.name, "index.html");
   const html = fs.readFileSync(file, 'utf8');
   const blocks = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map((m) => m[1]);
-  const tag = `/recepti/${slug.name}/`;
+  const tag = `/${loc.dir}/${slug.name}/`;
   let recipe;
   for (const b of blocks) {
     let j;
@@ -25,6 +26,15 @@ for (const slug of fs.readdirSync(recipesDir, { withFileTypes: true }).filter((e
   if (!recipe) { err(tag, 'няма Recipe в JSON-LD'); continue; }
   pagesChecked++;
   const r = recipe;
+  // Двуезичност: език на страницата, език на данните, взаимни hreflang само за реални двойки, без кирилица в английските данни
+  const htmlLang = /<html lang="([^"]+)"/.exec(html)?.[1];
+  if (htmlLang !== loc.lang) err(tag, `html lang=${htmlLang}, очакван ${loc.lang}`);
+  if (r.inLanguage !== loc.lang) err(tag, `inLanguage=${r.inLanguage}, очакван ${loc.lang}`);
+  const hasPair = fs.existsSync(path.join(dist, loc.other, slug.name, "index.html"));
+  const alts = [...html.matchAll(/<link rel="alternate" hreflang="([^"]+)" href="([^"]+)"/g)].map((m) => m[1]);
+  if (hasPair && !(alts.includes("bg") && alts.includes("en") && alts.includes("x-default"))) err(tag, "има превод, но липсват взаимните hreflang (bg, en, x-default)");
+  if (!hasPair && alts.length) err(tag, "hreflang към страница, която не съществува");
+  if (loc.lang === "en") { const cyr = JSON.stringify([r.name, r.description, r.recipeIngredient, r.recipeInstructions, r.recipeCategory, r.keywords]).match(/[Ѐ-ӿ]{3,}/g); if (cyr) err(tag, `кирилица в английските структурирани данни: ${cyr.slice(0, 3).join(", ")}`); }
   if (r['@context'] !== 'https://schema.org') err(tag, '@context');
   // Задължителни по Google
   if (!r.name) err(tag, 'липсва name');

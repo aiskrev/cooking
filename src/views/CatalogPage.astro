@@ -1,0 +1,192 @@
+---
+import Base from '../layouts/Base.astro';
+import RecipeCard from '../components/RecipeCard.astro';
+import { getRecipes, getCategories, getTags } from '../lib/recipes';
+import { href, t, termLabel, localeInfo, type Locale } from '../i18n';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const recipes = await getRecipes(locale);
+const categories = getCategories(recipes, locale);
+// „Основна съставка“ – най-често срещаните етикети (поне 2 рецепти)
+const tags = getTags(recipes, locale).filter((x) => x.recipes.length >= 2).slice(0, 60);
+// Стойностите във филтрите са стабилните (български) ключове – така адресите с филтри работят и при смяна на езика
+const methods = [...new Set(recipes.flatMap((r) => r.bg.method))]
+  .map((key) => ({ key, name: termLabel(locale, 'method', key) ?? key }))
+  .sort((a, b) => a.name.localeCompare(b.name, localeInfo[locale].intl));
+const difficulties = ['лесна', 'средна', 'сложна'].map((key) => ({ key, name: termLabel(locale, 'difficulty', key) ?? key }));
+---
+<Base locale={locale} title={t(locale, 'catalog.title')} description={t(locale, 'catalog.description')} alt={{ bg: href('bg', 'recipes'), en: href('en', 'recipes') }}>
+  <div class="wrap">
+    <div class="page-head">
+      <h1>{t(locale, 'catalog.title')}</h1>
+      <p><span data-count>{recipes.length}</span> {t(locale, 'catalog.countSuffix', { total: recipes.length })}</p>
+    </div>
+
+    <form class="filters" data-filters role="search" aria-label={t(locale, 'catalog.filters')}>
+      <div class="f-field f-search">
+        <label for="f-q">{t(locale, 'catalog.q')}</label>
+        <input id="f-q" type="search" autocomplete="off" placeholder={t(locale, 'catalog.qPlaceholder')} />
+      </div>
+      <div class="f-field">
+        <label for="f-collection">{t(locale, 'catalog.collection')}</label>
+        <select id="f-collection">
+          <option value="">{t(locale, 'catalog.all')}</option>
+          <option value="traditional">{t(locale, 'collection.traditional.name')}</option>
+          <option value="fine-dining">{t(locale, 'collection.fine-dining.name')}</option>
+        </select>
+      </div>
+      <div class="f-field">
+        <label for="f-category">{t(locale, 'catalog.category')}</label>
+        <select id="f-category">
+          <option value="">{t(locale, 'catalog.all')}</option>
+          {categories.map((c) => <option value={c.key}>{c.name} ({c.recipes.length})</option>)}
+        </select>
+      </div>
+      <div class="f-field">
+        <label for="f-method">{t(locale, 'catalog.method')}</label>
+        <select id="f-method">
+          <option value="">{t(locale, 'catalog.all')}</option>
+          {methods.map((m) => <option value={m.key}>{m.name}</option>)}
+        </select>
+      </div>
+      <div class="f-field">
+        <label for="f-difficulty">{t(locale, 'catalog.difficulty')}</label>
+        <select id="f-difficulty">
+          <option value="">{t(locale, 'catalog.all')}</option>
+          {difficulties.map((x) => <option value={x.key}>{x.name}</option>)}
+        </select>
+      </div>
+      <div class="f-field">
+        <label for="f-time">{t(locale, 'catalog.time')}</label>
+        <select id="f-time">
+          <option value="">{t(locale, 'catalog.timeAny')}</option>
+          <option value="45">{t(locale, 'catalog.time45')}</option>
+          <option value="90">{t(locale, 'catalog.time90')}</option>
+          <option value="180">{t(locale, 'catalog.time180')}</option>
+        </select>
+      </div>
+      <div class="f-field">
+        <label for="f-tag">{t(locale, 'catalog.tag')}</label>
+        <select id="f-tag">
+          <option value="">{t(locale, 'catalog.all')}</option>
+          {tags.map((x) => <option value={x.key.toLocaleLowerCase('bg')}>{x.name} ({x.recipes.length})</option>)}
+        </select>
+      </div>
+      <div class="f-field" data-rating-field hidden>
+        <label for="f-rating">{t(locale, 'catalog.rating')}</label>
+        <select id="f-rating">
+          <option value="">{t(locale, 'catalog.all')}</option>
+          <option value="4">{t(locale, 'catalog.rating4')}</option>
+          <option value="3">{t(locale, 'catalog.rating3')}</option>
+        </select>
+      </div>
+      <div class="f-field">
+        <label for="f-sort">{t(locale, 'catalog.sort')}</label>
+        <select id="f-sort">
+          <option value="new">{t(locale, 'catalog.sortNew')}</option>
+          <option value="title">{t(locale, 'catalog.sortTitle')}</option>
+          <option value="time">{t(locale, 'catalog.sortTime')}</option>
+        </select>
+      </div>
+      <div class="f-field f-reset"><button type="button" class="btn secondary small" data-reset>{t(locale, 'catalog.reset')}</button></div>
+    </form>
+
+    <p class="muted" role="status" aria-live="polite" data-status></p>
+
+    <ul class="grid section" data-grid>
+      {recipes.map((r, i) => <li><RecipeCard recipe={r} locale={locale} eager={i === 0} level={2} filterable /></li>)}
+    </ul>
+    <p class="empty" data-empty hidden>{t(locale, 'catalog.empty')}</p>
+    <p class="center-cta"><button type="button" class="btn secondary" data-more hidden>{t(locale, 'catalog.more')}</button></p>
+    <noscript><p class="muted">{t(locale, 'catalog.noscript')}</p></noscript>
+  </div>
+</Base>
+
+<script>
+  import { tc, intl, locale } from '../i18n/client';
+  import { norm } from '../i18n';
+
+  const PAGE = 24;
+  const form = document.querySelector<HTMLElement>('[data-filters]')!;
+  const grid = document.querySelector<HTMLElement>('[data-grid]')!;
+  const items = [...grid.querySelectorAll<HTMLLIElement>(':scope > li')];
+  const cards = items.map((li) => li.querySelector<HTMLElement>('[data-card]')!);
+  const $ = (id: string) => document.getElementById(id) as HTMLInputElement & HTMLSelectElement;
+  const q = $('f-q'), collection = $('f-collection'), category = $('f-category'), method = $('f-method'), difficulty = $('f-difficulty'), time = $('f-time'), sort = $('f-sort');
+  const tag = $('f-tag'), ratingSel = $('f-rating');
+  const ratingField = document.querySelector<HTMLElement>('[data-rating-field]')!;
+  const countEl = document.querySelector<HTMLElement>('[data-count]')!;
+  const status = document.querySelector<HTMLElement>('[data-status]')!;
+  const empty = document.querySelector<HTMLElement>('[data-empty]')!;
+  const more = document.querySelector<HTMLButtonElement>('[data-more]')!;
+  let shown = PAGE;
+  form.addEventListener('submit', (e) => e.preventDefault());
+
+  const params = new URLSearchParams(location.search);
+  q.value = params.get('q') ?? '';
+  collection.value = params.get('collection') ?? '';
+  category.value = params.get('category') ?? '';
+  method.value = params.get('method') ?? '';
+  difficulty.value = params.get('difficulty') ?? '';
+  time.value = params.get('time') ?? '';
+  tag.value = params.get('tag') ?? '';
+  const wantedRating = params.get('rating') ?? '';
+  sort.value = params.get('sort') ?? 'new';
+
+  function apply(reset = true) {
+    if (reset) shown = PAGE;
+    const term = norm(locale, q.value.trim());
+    const maxT = Number(time.value || 0);
+    const matched = cards.filter((c) => {
+      const d = c.dataset;
+      return (!term || d.search!.includes(term))
+        && (!collection.value || d.collection === collection.value)
+        && (!category.value || d.category === category.value)
+        && (!method.value || d.method!.split('|').includes(method.value))
+        && (!difficulty.value || d.difficulty === difficulty.value)
+        && (!tag.value || (d.tags ?? '').split('|').includes(tag.value))
+        && (ratingField.hidden || !ratingSel.value || Number(d.rating || 0) >= Number(ratingSel.value))
+        && (!maxT || Number(d.time) <= maxT);
+    });
+    const key = sort.value;
+    matched.sort((a, b) => key === 'rating' ? Number(b.dataset.rating || 0) - Number(a.dataset.rating || 0) || a.dataset.title!.localeCompare(b.dataset.title!, intl)
+      : key === 'title' ? a.dataset.title!.localeCompare(b.dataset.title!, intl)
+      : key === 'time' ? Number(a.dataset.time) - Number(b.dataset.time) || a.dataset.title!.localeCompare(b.dataset.title!, intl)
+      : b.dataset.date!.localeCompare(a.dataset.date!) || a.dataset.title!.localeCompare(b.dataset.title!, intl));
+    const set = new Set(matched);
+    const frag = document.createDocumentFragment();
+    matched.forEach((c) => frag.appendChild(c.parentElement!));
+    items.forEach((li) => { if (!set.has(li.querySelector('[data-card]') as HTMLElement)) li.hidden = true; });
+    grid.append(frag);
+    matched.forEach((c, i) => { c.parentElement!.hidden = i >= shown; });
+    countEl.textContent = String(matched.length);
+    status.textContent = matched.length === cards.length ? '' : tc('catalog.found', { n: matched.length });
+    empty.hidden = matched.length > 0;
+    more.hidden = matched.length <= shown;
+    const p = new URLSearchParams();
+    if (q.value) p.set('q', q.value);
+    for (const [k, el] of [['collection', collection], ['category', category], ['method', method], ['difficulty', difficulty], ['time', time], ['tag', tag]] as const) if (el.value) p.set(k, el.value);
+    if (!ratingField.hidden && ratingSel.value) p.set('rating', ratingSel.value);
+    if (sort.value !== 'new') p.set('sort', sort.value);
+    history.replaceState(null, '', p.toString() ? `?${p}` : location.pathname);
+  }
+  let t: number | undefined;
+  q.addEventListener('input', () => { clearTimeout(t); t = window.setTimeout(() => apply(), 150); });
+  [collection, category, method, difficulty, time, tag, ratingSel, sort].forEach((el) => el.addEventListener('change', () => apply()));
+  more.addEventListener('click', () => { shown += PAGE; apply(false); });
+  document.querySelector('[data-reset]')?.addEventListener('click', () => {
+    q.value = ''; collection.value = category.value = method.value = difficulty.value = time.value = tag.value = ratingSel.value = ''; sort.value = 'new'; apply();
+  });
+  // Оценките са реални данни от сървъра: филтърът и подредбата „по оценка“ се показват само когато има поне една оценка.
+  document.addEventListener('community:summary', (e) => {
+    const s = (e as CustomEvent<Record<string, { ratings: number }>>).detail;
+    if (!Object.values(s).some((x) => x.ratings > 0)) return;
+    ratingField.hidden = false;
+    if (![...sort.options].some((o) => o.value === 'rating')) sort.add(new Option(tc('catalog.sortRating'), 'rating'));
+    if (wantedRating) ratingSel.value = wantedRating;
+    if (params.get('sort') === 'rating') sort.value = 'rating';
+    apply(false);
+  });
+  apply();
+</script>

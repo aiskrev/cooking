@@ -1,0 +1,82 @@
+---
+import Base from '../layouts/Base.astro';
+import { href, t, type Locale } from '../i18n';
+import { getRecipes } from '../lib/recipes';
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+// Кои рецепти имат публикуван превод на английски – за правилните връзки в списъка
+const translated = locale === 'en' ? (await getRecipes('en')).map((r) => r.id) : [];
+---
+<Base locale={locale} title={t(locale, 'shopping.title')} description={t(locale, 'shopping.description')} alt={{ bg: href('bg', 'shopping'), en: href('en', 'shopping') }}>
+  <div class="wrap">
+    <div class="page-head">
+      <h1>{t(locale, 'shopping.title')}</h1>
+      <p>{t(locale, 'shopping.lead')}</p>
+    </div>
+    <div class="actions">
+      <button type="button" class="btn small" data-copy-all>{t(locale, 'shopping.copyAll')}</button>
+      <button type="button" class="btn small secondary" data-print-list>{t(locale, 'shopping.print')}</button>
+      <button type="button" class="btn small secondary" data-clear>{t(locale, 'shopping.clear')}</button>
+    </div>
+    <p class="muted" role="status" aria-live="polite" data-status></p>
+    <div data-list class="shop-list" data-translated={translated.join('|')}></div>
+    <p class="empty" data-empty hidden>{t(locale, 'shopping.empty')}</p>
+    <noscript><p>{t(locale, 'shopping.noscript')}</p></noscript>
+  </div>
+</Base>
+
+<script>
+  import { tc, locale, hrefc } from '../i18n/client';
+  // Запис: нов формат { slug, servings, titles:{bg,en}, items, itemsByLang:{bg:[],en:[]} };
+  // стар формат (само български): { slug, title, servings, items }. Рецептата е еднозначна по slug – превключването на езика не създава дубликати.
+  type Entry = { slug: string; servings: number; title?: string; titles?: Record<string, string>; items: string[]; itemsByLang?: Record<string, string[]> };
+  const box = document.querySelector<HTMLElement>('[data-list]')!;
+  const empty = document.querySelector<HTMLElement>('[data-empty]')!;
+  const status = document.querySelector<HTMLElement>('[data-status]')!;
+  const translated = new Set((box.dataset.translated ?? '').split('|').filter(Boolean));
+  const load = (): Entry[] => { try { return JSON.parse(localStorage.getItem('shopping-list') || '[]'); } catch { return []; } };
+  const save = (l: Entry[]) => { try { localStorage.setItem('shopping-list', JSON.stringify(l)); } catch {} };
+  let checked = new Set<string>();
+  try { checked = new Set(JSON.parse(localStorage.getItem('shopping-checked') || '[]')); } catch {}
+  const saveChecked = () => { try { localStorage.setItem('shopping-checked', JSON.stringify([...checked])); } catch {} };
+
+  // Показва реда и заглавието на избрания език; ако няма такива (стар запис), показва записаното
+  const view = (e: Entry) => {
+    const items = e.itemsByLang?.[locale] ?? e.items;
+    const title = e.titles?.[locale] ?? e.titles?.bg ?? e.title ?? e.slug;
+    // рецепта без английски превод води към българската страница
+    const url = locale === 'bg' || translated.has(e.slug) ? hrefc('recipes', e.slug) : `/bg/recepti/${e.slug}/`;
+    return { items, title, url };
+  };
+
+  function render() {
+    const list = load();
+    box.replaceChildren();
+    empty.hidden = list.length > 0;
+    for (const e of list) {
+      const v = view(e);
+      const sec = document.createElement('section');
+      const h = document.createElement('h2'); const a = document.createElement('a'); a.href = v.url; a.textContent = v.title; h.appendChild(a);
+      const sub = document.createElement('p'); sub.className = 'muted'; sub.textContent = tc('shopping.forServings', { n: e.servings });
+      const rm = document.createElement('button'); rm.type = 'button'; rm.className = 'link-btn'; rm.textContent = tc('shopping.removeRecipe');
+      rm.addEventListener('click', () => { save(load().filter((x) => x.slug !== e.slug)); render(); });
+      const ul = document.createElement('ul'); ul.className = 'ing-list';
+      v.items.forEach((text, i) => {
+        // отметките са по идентификатор на рецепта и позиция – не зависят от езика
+        const id = `${e.slug}::${i}`;
+        const li = document.createElement('li'); const lab = document.createElement('label'); const cb = document.createElement('input'); cb.type = 'checkbox'; cb.className = 'ing-check'; cb.checked = checked.has(id) || checked.has(`${e.slug}::${text}`);
+        const sp = document.createElement('span'); sp.className = 'ing-text'; sp.textContent = text;
+        cb.addEventListener('change', () => { cb.checked ? checked.add(id) : checked.delete(id); saveChecked(); });
+        lab.append(cb, sp); li.appendChild(lab); ul.appendChild(li);
+      });
+      sec.append(h, sub, ul, rm); box.appendChild(sec);
+    }
+  }
+  document.querySelector('[data-copy-all]')?.addEventListener('click', async () => {
+    const text = load().map((e) => { const v = view(e); return `${v.title}\n${v.items.map((i) => `• ${i}`).join('\n')}`; }).join('\n\n');
+    try { await navigator.clipboard.writeText(text); status.textContent = tc('shopping.copied'); } catch { status.textContent = tc('shopping.copyFail'); }
+  });
+  document.querySelector('[data-print-list]')?.addEventListener('click', () => window.print());
+  document.querySelector('[data-clear]')?.addEventListener('click', () => { if (confirm(tc('shopping.confirmClear'))) { save([]); checked.clear(); saveChecked(); render(); } });
+  render();
+</script>

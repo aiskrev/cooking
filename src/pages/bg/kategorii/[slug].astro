@@ -1,0 +1,11 @@
+---
+import TermPage from '../../../views/TermPage.astro';
+import { getRecipes, getCategories } from '../../../lib/recipes';
+
+export async function getStaticPaths() {
+  const recipes = await getRecipes('bg');
+  return getCategories(recipes, 'bg').map((term) => ({ params: { slug: term.slug }, props: { termKey: term.key } }));
+}
+const { termKey } = Astro.props;
+---
+<TermPage locale="bg" kind="category" termKey={termKey} />

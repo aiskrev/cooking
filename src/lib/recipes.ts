@@ -3,17 +3,59 @@ import type { ImageMetadata } from 'astro';
 import sharp from 'sharp';
 import path from 'node:path';
 import { slugify } from './text';
+import { t, localeInfo, termLabel, type Locale } from '../i18n';
 
-export type Recipe = CollectionEntry<'recipes'>;
+export type BgEntry = CollectionEntry<'recipes'>;
+export type EnEntry = CollectionEntry<'recipesEn'>;
+export type RecipeData = Omit<BgEntry['data'], 'difficulty'> & { difficulty?: string };
 
-export async function getRecipes(): Promise<Recipe[]> {
+/** Рецепта на конкретен език. `id` е общ за двата езика (стабилен идентификатор); `bg` е винаги българският оригинал. */
+export interface Recipe {
+  id: string;
+  locale: Locale;
+  entry: BgEntry | EnEntry;
+  data: RecipeData;
+  bg: BgEntry['data'];
+  translation?: EnEntry['data']['translation'];
+}
+
+const byDate = (a: Recipe, b: Recipe) => b.data.date.valueOf() - a.data.date.valueOf();
+
+/** Български оригинали на публикуваните рецепти */
+async function publishedBg(): Promise<BgEntry[]> {
   // Чернови и архивирани рецепти не стигат до каталога, категориите, етикетите, търсенето, RSS и sitemap.
-  const all = await getCollection('recipes', ({ data }) => data.publication === 'published');
-  return all.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+  return getCollection('recipes', ({ data }) => data.publication === 'published');
+}
+
+/** Публикувани английски преводи по идентификатор (само ако оригиналът е публикуван и преводът е със статус „published“) */
+async function publishedEn(): Promise<Map<string, EnEntry>> {
+  const bgIds = new Set((await publishedBg()).map((e) => e.id));
+  const all = await getCollection('recipesEn', ({ data }) => data.translation.status === 'published');
+  return new Map(all.filter((e) => bgIds.has(e.id)).map((e) => [e.id, e]));
+}
+
+export async function getRecipes(locale: Locale): Promise<Recipe[]> {
+  const bgs = await publishedBg();
+  if (locale === 'bg') {
+    return bgs.map((e): Recipe => ({ id: e.id, locale, entry: e, data: e.data, bg: e.data })).sort(byDate);
+  }
+  const ens = await publishedEn();
+  return bgs
+    .filter((e) => ens.has(e.id))
+    .map((e): Recipe => {
+      const en = ens.get(e.id)!;
+      return { id: e.id, locale, entry: en, data: en.data, bg: e.data, translation: en.data.translation };
+    })
+    .sort(byDate);
+}
+
+/** Идентификатори на рецептите, които имат публикуван превод (за превключвателя на езика и hreflang) */
+export async function translatedIds(): Promise<Set<string>> {
+  return new Set((await publishedEn()).keys());
 }
 
 // ---------- Снимки ----------
-// Всички снимки от src/content/recipes/<рецепта>/photos/ се откриват автоматично.
+// Всички снимки от src/content/recipes/<рецепта>/photos/ се откриват автоматично. Снимките са общи за двата езика.
 const modules = import.meta.glob<{ default: ImageMetadata }>(
   '/src/content/recipes/*/photos/*.{jpg,jpeg,png,webp,avif,JPG,JPEG,PNG,WEBP,AVIF}',
 );
@@ -49,7 +91,8 @@ export async function getPhotos(recipe: Recipe): Promise<Map<string, Photo>> {
     .filter((k) => k.startsWith(prefix))
     .sort((a, b) => a.localeCompare(b, 'en', { numeric: true }));
   // Ръчно зададен ред (поле order в photos:) има предимство; останалите остават по име на файла.
-  const orderOf = (k: string) => recipe.data.photos[k.slice(prefix.length)]?.order ?? Number.MAX_SAFE_INTEGER;
+  // Редът и описанията идват от езика на страницата; редът се взема от оригинала, за да е еднакъв.
+  const orderOf = (k: string) => recipe.bg.photos[k.slice(prefix.length)]?.order ?? Number.MAX_SAFE_INTEGER;
   keys.sort((a, b) => orderOf(a) - orderOf(b));
   for (const k of keys) {
     const file = k.slice(prefix.length);
@@ -57,18 +100,18 @@ export async function getPhotos(recipe: Recipe): Promise<Map<string, Photo>> {
     const meta = recipe.data.photos[file];
     const n = result.size + 1;
     if (!meta) {
-      console.warn(`[снимки] ${recipe.id}/${file}: няма alt/описание в "photos:" — ползва се общ текст. Добавете го в index.md.`);
+      console.warn(`[снимки] ${recipe.id}/${file} (${recipe.locale}): няма alt/описание в "photos:" — ползва се общ текст. Добавете го в рецептата.`);
     }
     result.set(file, {
       file,
       key: `${recipe.id}/${file}`,
       image: mod.default,
       lqip: await makeLqip(k),
-      alt: meta?.alt ?? `${recipe.data.title} — снимка ${n}`,
+      alt: meta?.alt ?? t(recipe.locale, 'photo.alt', { title: recipe.data.title, n }),
       caption: meta?.caption,
     });
   }
-  // Проверка: всяка снимка, посочена в index.md, трябва да съществува.
+  // Проверка: всяка снимка, посочена в рецептата, трябва да съществува.
   const referenced = [
     ...(recipe.data.cover ? [recipe.data.cover] : []),
     ...recipe.data.steps.flatMap((s) => (s.photo ? [s.photo] : [])),
@@ -76,7 +119,7 @@ export async function getPhotos(recipe: Recipe): Promise<Map<string, Photo>> {
   ];
   for (const f of referenced) {
     if (!result.has(f)) {
-      throw new Error(`Рецепта "${recipe.id}": снимката "${f}" е посочена в index.md, но липсва в папката photos/.`);
+      throw new Error(`Рецепта "${recipe.id}" (${recipe.locale}): снимката "${f}" е посочена в рецептата, но липсва в папката photos/.`);
     }
   }
   return result;
@@ -88,39 +131,44 @@ export async function getCoverPhoto(recipe: Recipe): Promise<Photo | undefined> 
 }
 
 // ---------- Категории и етикети ----------
-export interface Term { name: string; slug: string; recipes: Recipe[] }
+// Групирането е по СТАБИЛЕН КЛЮЧ (българската стойност от оригинала), а не по показваното име:
+// двата езика дават едни и същи групи и броят рецепти съвпада. Адресът (slug) е на езика на страницата.
+export interface Term { key: string; name: string; slug: string; recipes: Recipe[] }
 
-function collect(recipes: Recipe[], pick: (r: Recipe) => string[]): Term[] {
+function collect(recipes: Recipe[], locale: Locale, group: 'category' | 'tag', pick: (r: Recipe) => string[]): Term[] {
   const map = new Map<string, Term>();
   for (const r of recipes) {
-    for (const name of pick(r)) {
-      const slug = slugify(name);
-      const t = map.get(slug) ?? { name, slug, recipes: [] };
-      t.recipes.push(r);
-      map.set(slug, t);
+    for (const key of pick(r)) {
+      const name = termLabel(locale, group, key) ?? key;
+      const term = map.get(key) ?? { key, name, slug: slugify(name), recipes: [] };
+      term.recipes.push(r);
+      map.set(key, term);
     }
   }
-  return [...map.values()].sort((a, b) => a.name.localeCompare(b.name, 'bg'));
+  return [...map.values()].sort((a, b) => a.name.localeCompare(b.name, localeInfo[locale].intl));
 }
 
-export const getCategories = (recipes: Recipe[]) => collect(recipes, (r) => [r.data.category]);
-export const getTags = (recipes: Recipe[]) => collect(recipes, (r) => r.data.tags);
+export const getCategories = (recipes: Recipe[], locale: Locale) => collect(recipes, locale, 'category', (r) => [r.bg.category]);
+export const getTags = (recipes: Recipe[], locale: Locale) => collect(recipes, locale, 'tag', (r) => r.bg.tags);
+
+/** Етикет на термин (категория/етикет) на езика на страницата */
+export const categoryName = (locale: Locale, r: Recipe) => termLabel(locale, 'category', r.bg.category) ?? r.data.category;
 
 // ---------- Сродни рецепти ----------
-// Обикновени съставки не показват, че две ястия си приличат
+// Обикновени съставки не показват, че две ястия си приличат (сравнението е по българския оригинал – общо за двата езика)
 const STAPLES = new Set(['сол', 'вода', 'олио', 'черен пипер', 'захар', 'масло', 'брашно', 'яйце', 'яйца', 'лук', 'чесън', 'червен пипер', 'зехтин', 'лимон']);
 const mainIngredients = (r: Recipe) =>
-  new Set(r.data.ingredients.flatMap((g) => g.items.map((i) => (typeof i === 'string' ? i : i.name).toLocaleLowerCase('bg').trim())).filter((n) => n && !STAPLES.has(n)));
+  new Set(r.bg.ingredients.flatMap((g) => g.items.map((i) => (typeof i === 'string' ? i : i.name).toLocaleLowerCase('bg').trim())).filter((n) => n && !STAPLES.has(n)));
 
 export function getRelated(recipe: Recipe, all: Recipe[], limit = 3): Recipe[] {
   const mine = mainIngredients(recipe);
   const score = (r: Recipe) => {
     if (r.id === recipe.id) return -1;
     let s = 0;
-    if (r.data.category === recipe.data.category) s += 3;
-    if (r.data.collection === recipe.data.collection) s += 1;
-    s += r.data.tags.filter((t) => recipe.data.tags.includes(t)).length * 2;
-    s += r.data.method.filter((m) => recipe.data.method.includes(m)).length;
+    if (r.bg.category === recipe.bg.category) s += 3;
+    if (r.bg.collection === recipe.bg.collection) s += 1;
+    s += r.bg.tags.filter((tg) => recipe.bg.tags.includes(tg)).length * 2;
+    s += r.bg.method.filter((m) => recipe.bg.method.includes(m)).length;
     // припокриване по основни съставки (до 4 общи, по 0,75 точки)
     s += Math.min(4, [...mainIngredients(r)].filter((n) => mine.has(n)).length) * 0.75;
     return s;

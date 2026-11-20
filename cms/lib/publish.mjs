@@ -4,6 +4,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { spawn } from 'node:child_process';
 import { slugs, contentHash, readRecipe } from './recipes.mjs';
+import { readTranslation } from './translations.mjs';
 
 const CURRENT = 'current';
 const stamp = () => new Date().toISOString().replace(/[-:T]/g, '').slice(0, 14);
@@ -12,11 +13,18 @@ export function currentReleaseId(ctx) {
   try { return path.basename(fs.readlinkSync(path.join(ctx.config.releasesDir, CURRENT))); } catch { return null; }
 }
 
-function scanLiveSlugs(dir) {
-  const d = path.join(dir, 'recepti');
-  if (!fs.existsSync(d)) return [];
-  return fs.readdirSync(d, { withFileTypes: true }).filter((e) => e.isDirectory() && fs.existsSync(path.join(d, e.name, 'index.html'))).map((e) => e.name);
+// Публикуваните рецепти във версия на сайта: /bg/recepti/<адрес>/ (и /en/recipes/<адрес>/ за превода);
+// по-старите версии (преди двуезичната) са с /recepti/<адрес>/.
+const LIVE_DIRS = { bg: ["bg/recepti", "recepti"], en: ["en/recipes"] };
+function scanLiveLocale(dir, locale) {
+  for (const rel of LIVE_DIRS[locale]) {
+    const d = path.join(dir, rel);
+    if (!fs.existsSync(d)) continue;
+    return fs.readdirSync(d, { withFileTypes: true }).filter((e) => e.isDirectory() && fs.existsSync(path.join(d, e.name, "index.html"))).map((e) => e.name);
+  }
+  return [];
 }
+const scanLiveSlugs = (dir) => scanLiveLocale(dir, 'bg');
 
 /** При пускане: версиите на диска, които не са в базата (напр. началната), се регистрират като „seed“. */
 export function registerExistingReleases(ctx) {
@@ -28,8 +36,9 @@ export function registerExistingReleases(ctx) {
     if (!fs.statSync(full).isDirectory()) continue;
     if (ctx.db.get('SELECT id FROM site_releases WHERE id = ?', name)) continue;
     const live = scanLiveSlugs(full);
+    const en = new Set(scanLiveLocale(full, 'en'));
     ctx.db.run('INSERT INTO site_releases (id, created_at, source, recipe_count, manifest, note) VALUES (?, ?, ?, ?, ?, ?)',
-      name, fs.statSync(full).mtimeMs, 'seed', live.length, JSON.stringify(Object.fromEntries(live.map((s) => [s, { hash: null }]))), 'Начална версия (преди администрацията)');
+      name, fs.statSync(full).mtimeMs, 'seed', live.length, JSON.stringify(Object.fromEntries(live.map((s) => [s, { hash: null, locales: en.has(s) ? ['bg', 'en'] : ['bg'] }]))), 'Начална версия (преди администрацията)');
   }
   // прекъснати сглобявания (рестарт по време на работа)
   ctx.db.run("UPDATE build_jobs SET status = 'failed', finished_at = ?, error = 'Прекъснато (услугата е рестартирана).' WHERE status = 'running'", Date.now());
@@ -59,7 +68,12 @@ export function currentManifest(ctx) {
   const m = {};
   for (const s of slugs(ctx)) {
     const r = readRecipe(ctx, s);
-    if (r && !r.error && (r.data.publication ?? 'published') === 'published') m[s] = { hash: contentHash(ctx, s) };
+    if (r && !r.error && (r.data.publication ?? 'published') === 'published') {
+      // английската страница е публикувана само ако преводът е със статус „published“ (виж src/lib/recipes.ts)
+      const tr = readTranslation(ctx, s);
+      const en = tr && !tr.error && tr.data.translation?.status === 'published';
+      m[s] = { hash: contentHash(ctx, s), locales: en ? ['bg', 'en'] : ['bg'] };
+    }
   }
   return m;
 }
@@ -97,6 +111,7 @@ export function startBuild(ctx, userId, { note = '' } = {}) {
     const bin = (n) => path.join(ctx.config.appDir, 'node_modules/.bin', n);
     const stages = [
       ['проверка на рецептите', 'node', ['scripts/validate-recipes.mjs', ctx.config.contentDir]],
+      ['проверка на превода BG/EN', 'node', ['scripts/translations.mjs', 'check', '--content', ctx.config.contentDir]],
       ['сглобяване на сайта', bin('astro'), ['build']],
       ['индекс за търсене', bin('pagefind'), ['--site', tmp, '--output-subdir', 'pagefind']],
       ['проверка на връзките', 'node', ['scripts/check-links.mjs', tmp]],

@@ -3,12 +3,26 @@
 // от чужд сайт, която не разрешаваме), ограничаване на честотата и проверка на данните на сървъра.
 import { bodyLimit } from 'hono/body-limit';
 import { clientIp, originOk } from '../lib/http.mjs';
+import { requestLocale, translateBody } from '../lib/i18n.mjs';
 import {
   guestRead, guestEnsure, isPublished, ratingStats, setRating, allSummaries, listPublicComments, addComment, reportComment, verifyTurnstile, markCooked, cookedStats,
 } from '../lib/community.mjs';
 
 export function registerPublic(app, ctx) {
-  const small = bodyLimit({ maxSize: 16 * 1024, onError: (c) => c.json({ error: 'Заявката е твърде голяма.' }, 413) });
+  // Съобщенията се превеждат според заглавката x-site-language (само bg/en); данните и сигурността не зависят от езика.
+  app.use('/api/public/*', async (c, next) => {
+    await next();
+    const locale = requestLocale(c);
+    if (locale === 'bg' || !(c.res.headers.get('content-type') || '').includes('application/json')) return;
+    let data;
+    try { data = await c.res.clone().json(); } catch { return; }
+    const headers = new Headers(c.res.headers);
+    headers.delete('content-length');
+    headers.append('Vary', 'X-Site-Language');
+    c.res = new Response(JSON.stringify(translateBody(data, locale)), { status: c.res.status, headers });
+  });
+
+  const small =bodyLimit({ maxSize: 16 * 1024, onError: (c) => c.json({ error: 'Заявката е твърде голяма.' }, 413) });
 
   const guardWrite = async (c) => {
     if (!originOk(ctx, c)) return c.json({ error: 'Заявката е от друг произход.' }, 403);

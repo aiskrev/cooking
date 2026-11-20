@@ -8,6 +8,7 @@ import {
   allSummaries, readRecipe, slugs, contentHash, vocabulary, listPhotoFiles, SLUG_RE, COLLECTIONS, DIFFICULTIES, STATUSES, PUBLICATIONS, PLACEHOLDER_ALT, listRevisions, validate, normalize,
 } from '../lib/recipes.mjs';
 import { currentRelease, siteState, listReleases, lastJobs, runningJob, currentReleaseId } from '../lib/publish.mjs';
+import { readTranslation, translationState, TRANSLATION_STATUS_LABELS } from '../lib/translations.mjs';
 import sharp from 'sharp';
 import { thumbnail, quotaUsed, mediaFor } from '../lib/media.mjs';
 import { commentCounts, listAdminComments, ratingOverview, ratingsFor, STATUS_BG } from '../lib/community.mjs';
@@ -25,6 +26,17 @@ export function registerPages(app, ctx) {
     return allSummaries(ctx).map((s) => ({ ...s, site: siteState(rel, s, contentHash(ctx, s.slug)) }));
   }
   const thumbImg = (s, cls = 'thumb') => (s.cover ? `<img class="${cls}" loading="lazy" src="/admin/media/thumb/${esc(s.slug)}/${esc(s.cover)}" alt="">` : `<span class="${cls}" aria-hidden="true"></span>`);
+  // Състояние на английския превод за списъци
+  const trBadge = (slug) => {
+    const rec = readRecipe(ctx, slug); if (!rec || rec.error) return '';
+    const tr = readTranslation(ctx, slug);
+    const st = tr && !tr.error ? translationState(rec.data, rec.body, tr.data) : 'missing';
+    return badge(TRANSLATION_STATUS_LABELS[st], st === 'published' ? 'ok' : st === 'missing' ? '' : 'warn');
+  };
+  // Езикови табове на рецептата: български (оригинал) и английски (превод); снимките са общи
+  const langTabs = (slug, active) => `<nav class="lang-tabs" aria-label="Език на рецептата">
+  <a href="/admin/recipes/${esc(slug)}/edit"${active === 'bg' ? ' aria-current="page"' : ''} lang="bg">🇧🇬 Български <span class="muted small">(оригинал)</span></a>
+  <a href="/admin/recipes/${esc(slug)}/translation"${active === 'en' ? ' aria-current="page"' : ''} lang="en">🇬🇧 English ${trBadge(slug)}</a></nav>`;
   const siteBadge = (st) => (SITE_STATE[st]?.[0] ? badge(SITE_STATE[st][0], SITE_STATE[st][1]) : '');
 
   // ---------- Табло ----------
@@ -43,7 +55,7 @@ export function registerPages(app, ctx) {
 <section class="stats" aria-label="Обобщение">
   ${stat(rows.length, 'Рецепти общо')}${stat(rows.filter((r) => r.publication === 'published').length, 'Публикувани')}
   ${stat(rows.filter((r) => r.publication === 'draft').length, 'Чернови')}${stat(review, 'За редакторски преглед')}
-  ${stat(rows.reduce((n, r) => n + r.photos, 0), 'Качени снимки')}${stat(counts.pending, 'Коментари за одобрение')}
+  ${stat(rows.filter((r) => { const t = readTranslation(ctx, r.slug); return t && !t.error && t.data.translation?.status === 'published'; }).length, 'Публикувани преводи (EN)')}${stat(rows.reduce((n, r) => n + r.photos, 0), 'Качени снимки')}${stat(counts.pending, 'Коментари за одобрение')}
   ${stat(rating.total.count ? `${String(rating.total.average).replace('.', ',')} ★ <span class="small muted">(${rating.total.count})</span>` : '—', rating.total.count ? 'Средна оценка от посетители' : 'Още няма оценки')}
 </section>
 <section class="card" aria-labelledby="h-site"><h2 id="h-site">Сайт</h2>
@@ -113,12 +125,12 @@ ${recentComments.length ? recentComments.map((m) => commentCard(m, true)).join('
   <div><label for="review">Преглед</label><select id="review" name="review">${opt('', 'Всички', f.review)}${opt('1', 'Чакат редакторски преглед', f.review)}${opt('pending', 'Чакат публикуване на сайта', f.review)}</select></div>
   <div><button class="btn secondary" type="submit">Филтрирай</button></div>
 </form>
-<div class="card">${table(['~Снимка', 'Рецепта', 'Раздел и категория', 'Състояние', 'Снимки', 'Обновена', '~Действия'], slice.map((r) => [
+<div class="card">${table(['~Снимка', 'Рецепта', 'Раздел и категория', 'Състояние', 'Превод (EN)', 'Снимки', 'Обновена', '~Действия'], slice.map((r) => [
     thumbImg(r),
     `<a href="/admin/recipes/${esc(r.slug)}/edit"><strong>${esc(r.title)}</strong></a><br><span class="muted small">${esc(r.slug)}</span>${r.error ? `<br>${badge('Грешка във файла', 'bad')}` : ''}`,
     `${esc(COLLECTIONS[r.collection] ?? r.collection)}<br><span class="muted small">${esc(r.category)}</span>`,
     `${pubBadge(r.publication)} ${r.review ? badge('Чака преглед', 'info') : ''}<br>${siteBadge(r.site)}`,
-    r.photos, `<span class="nowrap">${fmtDay(r.updatedMs)}</span>`,
+    `<a href="/admin/recipes/${esc(r.slug)}/translation">${trBadge(r.slug)}</a>`, r.photos, `<span class="nowrap">${fmtDay(r.updatedMs)}</span>`,
     `<div class="btn-row"><a class="btn small" href="/admin/recipes/${esc(r.slug)}/edit">Редактирай</a><a class="btn small ghost" href="/admin/recipes/${esc(r.slug)}/preview" target="_blank" rel="noopener">Преглед</a></div>`,
   ]), 'Няма рецепти по зададените условия.')}
 ${pages > 1 ? `<nav class="pager" aria-label="Страници">${page > 1 ? `<a class="btn small ghost" href="${qs(page - 1)}">← Назад</a>` : ''}<span class="muted">Страница ${page} от ${pages}</span>${page < pages ? `<a class="btn small ghost" href="${qs(page + 1)}">Напред →</a>` : ''}</nav>` : ''}</div>`;
@@ -149,6 +161,7 @@ ${pages > 1 ? `<nav class="pager" aria-label="Страници">${page > 1 ? `<a
     const body = `
 <div class="page-head"><h1>${esc(isNew ? 'Нова рецепта' : r.data.title ?? slug)}</h1>
   <div class="btn-row">${isNew ? '' : `<a class="btn ghost" href="/admin/recipes/${esc(slug)}/preview" target="_blank" rel="noopener">Преглед</a>`}<a class="btn ghost" href="/admin/recipes">← Всички рецепти</a></div></div>
+${isNew ? '' : langTabs(slug, 'bg')}
 <div id="editor-root" data-editor><div class="empty">Зареждане на редактора… (нужен е JavaScript)</div></div>`;
     return render(c, { title, active: isNew ? 'new' : 'recipes', body, data, scripts: ['/admin/assets/admin.js', '/admin/assets/editor.js'] });
   }
@@ -164,7 +177,26 @@ ${pages > 1 ? `<nav class="pager" aria-label="Страници">${page > 1 ? `<a
     const slug = c.req.param('slug');
     const r = SLUG_RE.test(slug) ? readRecipe(ctx, slug) : null;
     if (!r || r.error) return c.text('Рецептата не е намерена.', 404);
+    if (c.req.query('lang') === 'en') {
+      const tr = readTranslation(ctx, slug);
+      if (!tr || tr.error) return c.text('Няма превод на тази рецепта.', 404);
+      return c.html(renderPreview(ctx, { slug, data: tr.data, body: '' }, { lang: 'en', publication: r.data.publication ?? 'published' }));
+    }
     return c.html(renderPreview(ctx, r));
+  });
+
+  // Редактор на превода на английски (данните се зареждат от /admin/api/recipes/:slug/translation)
+  app.get('/admin/recipes/:slug/translation', (c) => {
+    const slug = c.req.param('slug');
+    const r = SLUG_RE.test(slug) ? readRecipe(ctx, slug) : null;
+    if (!r) return c.text('Рецептата не е намерена.', 404);
+    if (r.error) return render(c, { title: 'Грешка във файла', active: 'recipes', body: `<h1>Грешка във файла на рецептата</h1>${notice('bad', `Файлът „${esc(slug)}/index.md“ не може да се прочете: ${esc(r.error)}.`)}` });
+    const body = `
+<div class="page-head"><h1>${esc(r.data.title ?? slug)} <span class="muted small">– превод на английски</span></h1>
+  <div class="btn-row"><a class="btn ghost" href="/admin/recipes/${esc(slug)}/preview?lang=en" target="_blank" rel="noopener">Преглед на английската версия</a><a class="btn ghost" href="/admin/recipes">← Всички рецепти</a></div></div>
+${langTabs(slug, 'en')}
+<div id="translation-root"><div class="empty">Зареждане на редактора на превода… (нужен е JavaScript)</div></div>`;
+    return render(c, { title: `Превод: ${r.data.title ?? slug}`, active: 'recipes', body, data: { slug, building: !!runningJob(ctx) }, scripts: ['/admin/assets/admin.js', '/admin/assets/translation.js'] });
   });
 
   // ---------- Снимки: умалени копия за списъци и преглед ----------

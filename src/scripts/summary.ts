@@ -1,4 +1,7 @@
 // Оценки и брой коментари по картите на рецептите – само когато има реални данни. Без данни картите остават непроменени.
+// Данните са общи за двата езика (по идентификатор на рецептата).
+import { tnc, num } from '../i18n/client';
+
 const cards = [...document.querySelectorAll<HTMLElement>('[data-slug][data-rating-slot-host], [data-card][data-slug]')];
 const slots = document.querySelectorAll<HTMLElement>('[data-rating-slot]');
 if (slots.length || cards.length) {
@@ -14,8 +17,8 @@ if (slots.length || cards.length) {
         const slot = card.querySelector<HTMLElement>('[data-rating-slot]');
         if (!slot) return;
         const parts: string[] = [];
-        if (d.ratings) parts.push(`★ ${String(d.average).replace('.', ',')} (${d.ratings})`);
-        if (d.comments) parts.push(`${d.comments} ${d.comments === 1 ? 'коментар' : 'коментара'}`);
+        if (d.ratings && d.average != null) parts.push(`★ ${num(d.average)} (${d.ratings})`);
+        if (d.comments) parts.push(tnc('community.comment', d.comments));
         if (parts.length) { slot.textContent = parts.join(' · '); slot.hidden = false; }
       });
       document.dispatchEvent(new CustomEvent('community:summary', { detail: s }));

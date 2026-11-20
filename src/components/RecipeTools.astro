@@ -1,27 +1,34 @@
 ---
 // Инструменти към рецептата: преоразмеряване на порциите, копиране на списък, списък за пазаруване, режим „готвене“.
-interface Props { servings: number; canScale: boolean }
-const { servings, canScale } = Astro.props;
+import { t, href, type Locale } from '../i18n';
+interface Props { locale: Locale; servings: number; canScale: boolean }
+const { locale, servings, canScale } = Astro.props;
 ---
 <div class="tools" data-tools>
   {canScale && (
-    <div class="scaler" role="group" aria-label="Брой порции">
-      <button type="button" class="round-btn" data-minus aria-label="По-малко порции">−</button>
+    <div class="scaler" role="group" aria-label={t(locale, 'tools.servingsGroup')}>
+      <button type="button" class="round-btn" data-minus aria-label={t(locale, 'tools.less')}>−</button>
       <output data-servings aria-live="polite">{servings}</output>
-      <span class="scaler-label">порции</span>
-      <button type="button" class="round-btn" data-plus aria-label="Повече порции">+</button>
-      <button type="button" class="link-btn" data-reset hidden>Върни към {servings}</button>
+      <span class="scaler-label">{t(locale, 'tools.servingsLabel')}</span>
+      <button type="button" class="round-btn" data-plus aria-label={t(locale, 'tools.more')}>+</button>
+      <button type="button" class="link-btn" data-reset hidden>{t(locale, 'tools.resetTo', { n: servings })}</button>
     </div>
   )}
   <div class="list-actions">
-    <button type="button" class="btn small secondary" data-copy>Копирай съставките</button>
-    <button type="button" class="btn small secondary" data-add-list>Добави в списъка за пазаруване</button>
-    <a class="small" href="/spisak/">Моят списък</a>
+    <button type="button" class="btn small secondary" data-copy>{t(locale, 'tools.copy')}</button>
+    <button type="button" class="btn small secondary" data-add-list>{t(locale, 'tools.addToList')}</button>
+    <a class="small" href={href(locale, 'shopping')}>{t(locale, 'tools.myList')}</a>
   </div>
   <p class="muted small" role="status" aria-live="polite" data-tools-status></p>
 </div>
 
 <script>
+  import { tc, locale } from '../i18n/client';
+  import { ingredientLine, type Ing } from '../i18n/ingredients';
+
+  type IngData = { titles: Record<string, string | undefined>; lines: Record<string, Ing[] | undefined> };
+  const ingData: IngData | null = (() => { try { return JSON.parse(document.getElementById('ing-data')?.textContent || 'null'); } catch { return null; } })();
+
   const root = document.querySelector<HTMLElement>('[data-recipe]');
   if (root) {
     const base = Number(root.dataset.baseServings || 1);
@@ -30,32 +37,15 @@ const { servings, canScale } = Astro.props;
     const out = root.querySelector<HTMLOutputElement>('[data-servings]');
     const reset = root.querySelector<HTMLElement>('[data-reset]');
     const status = root.querySelector<HTMLElement>('[data-tools-status]')!;
+    const mine = ingData?.lines[locale] ?? [];
 
-    const frac = (n: number) => {
-      const whole = Math.floor(n + 1e-9);
-      const rest = n - whole;
-      const f: [number, string][] = [[0.25, '¼'], [0.5, '½'], [0.75, '¾']];
-      if (rest < 0.04) return String(whole);
-      for (const [v, ch] of f) if (Math.abs(rest - v) < 0.04) return (whole ? String(whole) : '') + ch;
-      if (rest > 0.96) return String(whole + 1);
-      return String(Math.round(n * 10) / 10).replace('.', ',');
-    };
-    const nice = (v: number, unit: string) => {
-      if (unit === 'г' || unit === 'мл') return v >= 100 ? Math.round(v / 10) * 10 : v >= 20 ? Math.round(v / 5) * 5 : Math.max(1, Math.round(v));
-      if (unit === 'кг' || unit === 'л') return Math.round(v * 20) / 20;
-      if (unit === 'с. л.' || unit === 'ч. л.') return Math.max(0.25, Math.round(v * 4) / 4);
-      return Math.max(0.5, Math.round(v * 2) / 2);
-    };
     const render = () => {
       const k = servings / base;
-      for (const li of ings) {
-        const text = li.querySelector<HTMLElement>('.ing-text')!;
-        if (li.dataset.scale !== 'y') continue;
-        const a = Number(li.dataset.amount);
-        const unit = li.dataset.unit ?? '';
-        const v = k === 1 ? a : nice(a * k, unit);
-        text.textContent = [frac(v), unit, li.dataset.name].filter(Boolean).join(' ') + (li.dataset.note ? ` (${li.dataset.note})` : '');
-      }
+      ings.forEach((li, idx) => {
+        const ing = mine[idx];
+        if (!ing || !ing.s) return;
+        li.querySelector<HTMLElement>('.ing-text')!.textContent = ingredientLine(locale, ing, k);
+      });
       if (out) out.textContent = String(servings);
       if (reset) reset.hidden = servings === base;
       document.dispatchEvent(new CustomEvent('recipe:scaled'));
@@ -64,30 +54,43 @@ const { servings, canScale } = Astro.props;
     root.querySelector('[data-plus]')?.addEventListener('click', () => { servings = Math.min(24, servings + 1); render(); });
     reset?.addEventListener('click', () => { servings = base; render(); });
 
-    const lines = () => {
-      const checked = ings.filter((li) => li.querySelector<HTMLInputElement>('.ing-check')?.checked);
-      return (checked.length ? checked : ings).map((li) => li.querySelector('.ing-text')!.textContent!.trim());
+    // Избрани (отметнатите) или всички съставки – по индекс, за да може същият избор да се запише и на двата езика
+    const selected = () => {
+      const checked = ings.map((li, i) => (li.querySelector<HTMLInputElement>('.ing-check')?.checked ? i : -1)).filter((i) => i >= 0);
+      return checked.length ? checked : ings.map((_, i) => i);
     };
+    const lines = () => selected().map((i) => ings[i].querySelector('.ing-text')!.textContent!.trim());
     const say = (t: string) => { status.textContent = t; };
     root.querySelector('[data-copy]')?.addEventListener('click', async () => {
       const text = lines().map((l) => `• ${l}`).join('\n');
-      try { await navigator.clipboard.writeText(text); say('Съставките са копирани.'); }
+      try { await navigator.clipboard.writeText(text); say(tc('tools.copied')); }
       catch {
         const ta = document.createElement('textarea'); ta.value = text; document.body.appendChild(ta); ta.select();
-        try { document.execCommand('copy'); say('Съставките са копирани.'); } catch { say('Копирането не е възможно в този браузър.'); }
+        try { document.execCommand('copy'); say(tc('tools.copied')); } catch { say(tc('tools.copyFail')); }
         ta.remove();
       }
     });
     root.querySelector('[data-add-list]')?.addEventListener('click', () => {
       try {
+        // Стабилният идентификатор на рецептата е последният сегмент от адреса – еднакъв в двата езика
         const slug = location.pathname.split('/').filter(Boolean).pop()!;
-        const title = (document.querySelector('h1')?.textContent ?? slug).trim();
         const list = JSON.parse(localStorage.getItem('shopping-list') || '[]').filter((x: any) => x.slug !== slug);
-        const items = lines();
-        list.push({ slug, title, servings, items });
+        const idx = selected();
+        const k = servings / base;
+        // редовете се записват и на двата езика (ако рецептата има превод), за да се показват на избрания език
+        const byLang: Record<string, string[]> = {};
+        for (const l of ['bg', 'en'] as const) {
+          const src = ingData?.lines[l];
+          if (src) byLang[l] = idx.map((i) => (src[i] ? ingredientLine(l, src[i], k) : '')).filter(Boolean);
+        }
+        byLang[locale] = lines();
+        const titles: Record<string, string> = {};
+        for (const l of ['bg', 'en']) { const tt = ingData?.titles[l]; if (tt) titles[l] = tt; }
+        titles[locale] = titles[locale] ?? (document.querySelector('h1')?.textContent ?? slug).trim();
+        list.push({ slug, servings, titles, items: byLang[locale], itemsByLang: byLang });
         localStorage.setItem('shopping-list', JSON.stringify(list));
-        say(`Добавени са ${items.length} съставки в списъка за пазаруване.`);
-      } catch { say('Списъкът не може да се запише (браузърът блокира локалното хранилище).'); }
+        say(tc('tools.added', { n: byLang[locale].length }));
+      } catch { say(tc('tools.addFail')); }
     });
   }
 
@@ -112,12 +115,12 @@ const { servings, canScale } = Astro.props;
       idx = Math.max(0, Math.min(data.steps.length - 1, i));
       const s = data.steps[idx];
       stopTimer();
-      $('.ck-progress').textContent = `Стъпка ${idx + 1} от ${data.steps.length}`;
+      $('.ck-progress').textContent = tc('cook.progress', { n: idx + 1, total: data.steps.length });
       $('.ck-bar-fill').className = 'ck-bar-fill w' + Math.round(((idx + 1) / data.steps.length) * 10) * 10;
-      $('.ck-title').textContent = s.title || `Стъпка ${idx + 1}`;
+      $('.ck-title').textContent = s.title || tc('recipe.step', { n: idx + 1 });
       $('.ck-text').textContent = s.text;
       const notes = $('.ck-notes'); notes.replaceChildren();
-      for (const [label, v, cls] of [['Защо', s.why, ''], ['Как разбираш, че е готово', s.cue, ''], ['Избягвай', s.avoid, 'avoid']] as const) {
+      for (const [label, v, cls] of [[tc('recipe.why').replace(/:$/, ''), s.why, ''], [tc('recipe.cue').replace(/:$/, ''), s.cue, ''], [tc('recipe.avoid').replace(/:$/, ''), s.avoid, 'avoid']] as const) {
         if (!v) continue;
         const p = document.createElement('p'); p.className = 'ck-note ' + cls;
         const b = document.createElement('strong'); b.textContent = label + ': ';
@@ -125,18 +128,18 @@ const { servings, canScale } = Astro.props;
       }
       const tw = $('.ck-timer');
       tw.hidden = !s.time; left = s.time * 60; if (s.time) drawTimer();
-      $('.ck-start').textContent = 'Старт';
+      $('.ck-start').textContent = tc('cook.start');
       $('.ck-done').textContent = '';
       const img = document.querySelector<HTMLImageElement>(`#stapka-${s.n} .step-photo img:not(.lqip)`);
       const ph = $('.ck-photo'); ph.replaceChildren();
       const src = img?.currentSrc || img?.src; // ленивите снимки още нямат currentSrc
       if (img && src) { const im = document.createElement('img'); im.src = src; im.alt = img.alt || ''; ph.appendChild(im); }
       ($('.ck-prev') as HTMLButtonElement).disabled = idx === 0;
-      ($('.ck-next') as HTMLButtonElement).textContent = idx === data.steps.length - 1 ? 'Готово ✓' : 'Напред ›';
+      ($('.ck-next') as HTMLButtonElement).textContent = idx === data.steps.length - 1 ? tc('cook.done') : tc('cook.next');
     }
     function syncIngredients() {
       const list = $('.ck-ings'); list.replaceChildren();
-      document.querySelectorAll<HTMLElement>('[data-recipe] [data-ing]').forEach((li, k) => {
+      document.querySelectorAll<HTMLElement>('[data-recipe] [data-ing]').forEach((li) => {
         const src = li.querySelector<HTMLInputElement>('.ing-check')!;
         const row = document.createElement('li'); const lab = document.createElement('label'); const cb = document.createElement('input'); cb.type = 'checkbox'; cb.checked = src.checked;
         const span = document.createElement('span'); span.textContent = li.querySelector('.ing-text')!.textContent;
@@ -147,18 +150,23 @@ const { servings, canScale } = Astro.props;
     function build() {
       dlg = document.createElement('dialog');
       dlg.className = 'cook';
-      dlg.setAttribute('aria-label', `Режим „готвене“: ${data.title}`);
+      dlg.setAttribute('aria-label', tc('cook.label', { title: data.title }));
       dlg.innerHTML = `
         <div class="ck-top"><div><p class="ck-recipe"></p><p class="ck-progress" aria-live="polite"></p></div>
-          <div class="ck-top-btns"><button type="button" class="ck-btn ck-ing-toggle" aria-expanded="false">Съставки</button><button type="button" class="ck-btn ck-close">Затвори</button></div></div>
+          <div class="ck-top-btns"><button type="button" class="ck-btn ck-ing-toggle" aria-expanded="false"></button><button type="button" class="ck-btn ck-close"></button></div></div>
         <div class="ck-bar"><div class="ck-bar-fill"></div></div>
         <div class="ck-main"><div class="ck-step"><h2 class="ck-title"></h2><p class="ck-text"></p><div class="ck-notes"></div>
-          <div class="ck-timer" hidden><span class="ck-clock" role="timer"></span><button type="button" class="ck-btn ck-start">Старт</button><button type="button" class="ck-btn ck-reset">Нулирай</button><span class="ck-done" role="status"></span></div></div>
+          <div class="ck-timer" hidden><span class="ck-clock" role="timer"></span><button type="button" class="ck-btn ck-start"></button><button type="button" class="ck-btn ck-reset"></button><span class="ck-done" role="status"></span></div></div>
           <div class="ck-photo"></div>
-          <aside class="ck-panel" hidden><h3>Съставки</h3><ul class="ck-ings"></ul></aside></div>
-        <div class="ck-foot"><button type="button" class="ck-btn ck-prev">‹ Назад</button><button type="button" class="ck-btn primary ck-next">Напред ›</button></div>`;
+          <aside class="ck-panel" hidden><h3></h3><ul class="ck-ings"></ul></aside></div>
+        <div class="ck-foot"><button type="button" class="ck-btn ck-prev"></button><button type="button" class="ck-btn primary ck-next"></button></div>`;
       document.body.appendChild(dlg);
       $('.ck-recipe').textContent = data.title;
+      $('.ck-ing-toggle').textContent = tc('cook.ingredients');
+      $('.ck-close').textContent = tc('cook.close');
+      $('.ck-reset').textContent = tc('cook.reset');
+      $('.ck-prev').textContent = tc('cook.prev');
+      $('.ck-panel h3').textContent = tc('cook.ingredients');
       $('.ck-close').addEventListener('click', () => dlg!.close());
       $('.ck-prev').addEventListener('click', () => show(idx - 1));
       $('.ck-next').addEventListener('click', () => { if (idx === data.steps.length - 1) dlg!.close(); else show(idx + 1); });
@@ -166,15 +174,15 @@ const { servings, canScale } = Astro.props;
         const p = $('.ck-panel'); p.hidden = !p.hidden; (e.currentTarget as HTMLElement).setAttribute('aria-expanded', String(!p.hidden)); if (!p.hidden) syncIngredients();
       });
       $('.ck-start').addEventListener('click', () => {
-        if (timer) { stopTimer(); $('.ck-start').textContent = 'Продължи'; return; }
+        if (timer) { stopTimer(); $('.ck-start').textContent = tc('cook.resume'); return; }
         if (left <= 0) return;
-        $('.ck-start').textContent = 'Пауза';
+        $('.ck-start').textContent = tc('cook.pause');
         timer = window.setInterval(() => {
           left--; drawTimer();
-          if (left <= 0) { stopTimer(); $('.ck-start').textContent = 'Старт'; $('.ck-done').textContent = 'Времето изтече!'; try { navigator.vibrate?.([300, 150, 300]); } catch {} }
+          if (left <= 0) { stopTimer(); $('.ck-start').textContent = tc('cook.start'); $('.ck-done').textContent = tc('cook.timeUp'); try { navigator.vibrate?.([300, 150, 300]); } catch {} }
         }, 1000);
       });
-      $('.ck-reset').addEventListener('click', () => { stopTimer(); left = data.steps[idx].time * 60; drawTimer(); $('.ck-start').textContent = 'Старт'; $('.ck-done').textContent = ''; });
+      $('.ck-reset').addEventListener('click', () => { stopTimer(); left = data.steps[idx].time * 60; drawTimer(); $('.ck-start').textContent = tc('cook.start'); $('.ck-done').textContent = ''; });
       dlg.addEventListener('keydown', (e) => {
         if (e.key === 'ArrowRight') { e.preventDefault(); if (idx < data.steps.length - 1) show(idx + 1); }
         if (e.key === 'ArrowLeft') { e.preventDefault(); show(idx - 1); }

@@ -3,6 +3,7 @@
 // Без JavaScript връзките отварят оптимизирания файл в нов изглед.
 ---
 <script>
+  import { tc } from '../i18n/client';
   type Item = { el: HTMLAnchorElement; key: string };
 
   const links = Array.from(document.querySelectorAll<HTMLAnchorElement>('a[data-lightbox]'));
@@ -24,18 +25,22 @@
   function build() {
     dialog = document.createElement('dialog');
     dialog.className = 'lightbox';
-    dialog.setAttribute('aria-label', 'Галерия със снимки');
+    dialog.setAttribute('aria-label', tc('lightbox.label'));
     dialog.innerHTML = `
       <div class="lb-bar">
         <span class="lb-count" aria-live="polite"></span>
-        <button type="button" class="lb-btn lb-close" aria-label="Затвори галерията">✕ Затвори</button>
+        <button type="button" class="lb-btn lb-close"></button>
       </div>
       <div class="lb-stage">
-        <button type="button" class="lb-btn lb-nav lb-prev" aria-label="Предишна снимка">‹</button>
+        <button type="button" class="lb-btn lb-nav lb-prev">‹</button>
         <div class="lb-picture"></div>
-        <button type="button" class="lb-btn lb-nav lb-next" aria-label="Следваща снимка">›</button>
+        <button type="button" class="lb-btn lb-nav lb-next">›</button>
       </div>
       <p class="lb-caption"></p>`;
+    const closeBtn = dialog.querySelector('.lb-close') as HTMLElement;
+    closeBtn.textContent = tc('lightbox.close'); closeBtn.setAttribute('aria-label', tc('lightbox.closeAria'));
+    dialog.querySelector('.lb-prev')!.setAttribute('aria-label', tc('lightbox.prev'));
+    dialog.querySelector('.lb-next')!.setAttribute('aria-label', tc('lightbox.next'));
     document.body.appendChild(dialog);
     stage = dialog.querySelector('.lb-picture')!;
     caption = dialog.querySelector('.lb-caption')!;
@@ -106,7 +111,7 @@
     stage.replaceChildren(pictureFor(el));
     const text = el.dataset.caption || el.dataset.alt || '';
     caption.textContent = text;
-    count.textContent = `Снимка ${current + 1} от ${items.length}`;
+    count.textContent = tc('lightbox.count', { n: current + 1, total: items.length });
     const single = items.length < 2;
     prevBtn.hidden = nextBtn.hidden = single;
     preload(current + 1); preload(current - 1);

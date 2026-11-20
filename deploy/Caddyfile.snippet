@@ -20,6 +20,15 @@ recepti.example.bg {
 		Cross-Origin-Opener-Policy "same-origin"
 		-Server
 	}
+
+	# --- Стари адреси (преди двуезичната версия) -> български адреси, постоянно (301), със запазена заявка (?…) ---
+	# Корен „/“ -> /bg/ ; /recepti/… -> /bg/recepti/… ; /rss.xml -> /bg/rss.xml. Администрацията (/admin) и API (/api) не се пипат.
+	@legacyRoot path /
+	redir @legacyRoot /bg/ 301
+	@legacy path /recepti /recepti/* /kategorii /kategorii/* /etiketi /etiketi/* /tursene /tursene/* /lyubimi /lyubimi/* /spisak /spisak/*
+	redir @legacy /bg{uri} 301
+	@legacyRss path /rss.xml
+	redir @legacyRss /bg/rss.xml 301
 	# (Политиката за съдържанието – скриптове, снимки, шрифтове – е в самите HTML страници
 	#  и съдържа хешове на вградените скриптове; не я дублирайте тук.)
 

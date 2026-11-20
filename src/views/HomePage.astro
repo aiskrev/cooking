@@ -1,0 +1,120 @@
+---
+import Base from '../layouts/Base.astro';
+import RecipeCard from '../components/RecipeCard.astro';
+import Photo from '../components/Photo.astro';
+import { getRecipes, getCategories, getPhotos, getCoverPhoto } from '../lib/recipes';
+import { ogImage } from '../lib/images';
+import { siteText } from '../site.config';
+import { href, t, localeInfo, type Locale } from '../i18n';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const text = siteText[locale];
+const recipes = await getRecipes(locale);
+const categories = getCategories(recipes, locale);
+const featured = recipes.filter((r) => r.bg.featured).slice(0, 6);
+const traditional = recipes.filter((r) => r.bg.collection === 'traditional' && !r.bg.featured).slice(0, 6);
+const fine = recipes.filter((r) => r.bg.collection === 'fine-dining').slice(0, 6);
+const shownIds = new Set([...featured, ...traditional, ...fine].map((r) => r.id));
+const latest = [...recipes].filter((r) => !shownIds.has(r.id)).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf() || a.data.title.localeCompare(b.data.title, localeInfo[locale].intl)).slice(0, 6);
+
+// Заглавен кадър: завършено ястие от избрана рецепта (ако липсва – първата с корица)
+const heroRecipe = recipes.find((r) => r.id === 'banitsa-sas-sirene') ?? featured[0] ?? recipes[0];
+const heroPhoto = heroRecipe ? await getCoverPhoto(heroRecipe) : undefined;
+const og = heroPhoto ? await ogImage(heroPhoto, Astro.site) : undefined;
+
+// Фотографско пътешествие: всички кадри на една рецепта по реда на приготвяне
+const journeyRecipe = recipes.find((r) => r.id === 'beef-wellington') ?? recipes.find((r) => r.data.steps.filter((s) => s.photo).length >= 6);
+const journeyPhotos = journeyRecipe ? await getPhotos(journeyRecipe) : new Map();
+const journey = journeyRecipe ? journeyRecipe.data.steps.flatMap((s) => (s.photo ? [{ photo: journeyPhotos.get(s.photo)!, step: s.title ?? '' }] : [])).slice(0, 8) : [];
+
+const searchUrl = new URL(href(locale, 'search') + '?q={search_term_string}', Astro.site).href.replace('%7Bsearch_term_string%7D', '{search_term_string}');
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: text.name,
+  url: new URL(href(locale), Astro.site).href,
+  inLanguage: localeInfo[locale].lang,
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: searchUrl,
+    'query-input': 'required name=search_term_string',
+  },
+};
+const stats = t(locale, 'home.stats', { recipes: `<strong>${recipes.length}</strong>`, categories: `<strong>${categories.length}</strong>` });
+---
+<Base locale={locale} home title={text.name} description={text.description} image={og} jsonLd={jsonLd} alt={{ bg: href('bg'), en: href('en') }}>
+  <section class="home-hero" aria-labelledby="h-hero">
+    <div class="wrap home-hero-grid">
+      <div class="home-hero-text">
+        <p class="eyebrow">{t(locale, 'home.eyebrow')}</p>
+        <h1 id="h-hero">{text.name}</h1>
+        <p class="hero-tagline">{text.tagline}</p>
+        <p class="lead">{text.description}</p>
+        <p class="stat-line" set:html={stats} />
+        <div class="actions">
+          <a class="btn" href={href(locale, 'recipes')}>{t(locale, 'home.allRecipes')}</a>
+          <a class="btn secondary" href={href(locale, 'search')}>{t(locale, 'home.search')}</a>
+        </div>
+      </div>
+      {heroPhoto && heroRecipe && (
+        <a class="home-hero-photo" href={href(locale, 'recipes', heroRecipe.id)}>
+          <Photo photo={heroPhoto} locale={locale} eager sizes="(min-width: 960px) 460px, calc(100vw - 32px)" widths={[480, 800, 1120]} />
+          <span class="hero-caption">{heroRecipe.data.title}<small>{t(locale, 'home.heroNote')}</small></span>
+        </a>
+      )}
+    </div>
+  </section>
+
+  {featured.length > 0 && (
+    <section class="section wrap" aria-labelledby="h-feat">
+      <div class="section-head"><h2 id="h-feat">{t(locale, 'home.featured')}</h2><a href={href(locale, 'recipes')}>{t(locale, 'home.allLink')}</a></div>
+      <ul class="grid">{featured.map((r) => <li><RecipeCard recipe={r} locale={locale} /></li>)}</ul>
+    </section>
+  )}
+
+  {categories.length > 0 && (
+    <section class="section wrap" aria-labelledby="h-cats">
+      <div class="section-head"><h2 id="h-cats">{t(locale, 'home.byType')}</h2></div>
+      <ul class="chips big">
+        {categories.map((c) => <li><a href={href(locale, 'categories', c.slug)}>{c.name}<span class="count">{c.recipes.length}</span></a></li>)}
+      </ul>
+    </section>
+  )}
+
+  {traditional.length > 0 && (
+    <section class="section wrap" aria-labelledby="h-trad">
+      <div class="section-head"><div><h2 id="h-trad">{t(locale, 'collection.traditional.name')}</h2><p class="muted">{t(locale, 'collection.traditional.description')}</p></div><a href={`${href(locale, 'recipes')}?collection=traditional`}>{t(locale, 'home.allTraditional')}</a></div>
+      <ul class="grid">{traditional.map((r) => <li><RecipeCard recipe={r} locale={locale} /></li>)}</ul>
+    </section>
+  )}
+
+  {fine.length > 0 && (
+    <section class="section wrap" aria-labelledby="h-fine">
+      <div class="section-head"><div><h2 id="h-fine">{t(locale, 'collection.fine-dining.name')}</h2><p class="muted">{t(locale, 'collection.fine-dining.description')}</p></div><a href={`${href(locale, 'recipes')}?collection=fine-dining`}>{t(locale, 'home.allFine')}</a></div>
+      <ul class="grid">{fine.map((r) => <li><RecipeCard recipe={r} locale={locale} /></li>)}</ul>
+    </section>
+  )}
+
+  {journeyRecipe && journey.length >= 6 && (
+    <section class="section wrap journey" aria-labelledby="h-journey">
+      <div class="section-head"><div><h2 id="h-journey">{t(locale, 'home.journey')}</h2><p class="muted">{t(locale, 'home.journeyFrom', { title: journeyRecipe.data.title })}</p></div><a href={href(locale, 'recipes', journeyRecipe.id)}>{t(locale, 'home.toRecipe')}</a></div>
+      <ol class="journey-strip">
+        {journey.map((j, i) => (
+          <li>
+            <a href={`${href(locale, 'recipes', journeyRecipe.id)}#stapka-${i + 1}`} aria-label={t(locale, 'home.stepAria', { n: i + 1, title: j.step })}>
+              <Photo photo={j.photo} locale={locale} sizes="(min-width: 960px) 160px, 40vw" widths={[480]} />
+              <span class="journey-no">{i + 1}</span>
+            </a>
+          </li>
+        ))}
+      </ol>
+    </section>
+  )}
+
+  <section class="section wrap" aria-labelledby="h-new">
+    <div class="section-head"><h2 id="h-new">{t(locale, 'home.more')}</h2></div>
+    <ul class="grid">{latest.map((r) => <li><RecipeCard recipe={r} locale={locale} /></li>)}</ul>
+    <p class="center-cta"><a class="btn" href={href(locale, 'recipes')}>{t(locale, 'home.allN', { n: recipes.length })}</a></p>
+  </section>
+</Base>

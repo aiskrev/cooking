@@ -39,7 +39,7 @@ const settle = (page, ms = 400) => page.waitForTimeout(ms);
   expect(!bad.length, `A3 всички ${calls.length} административни API заявки без сесия са отказани (${bad.join('; ') || 'ok'})`);
   const pub = await api.get(BASE + '/api/public/summary');
   expect(pub.status() === 200, 'A4 публичното API работи без вход');
-  const site = await api.get(BASE + '/recepti/kartofena-yahniya/');
+  const site = await api.get(BASE + '/bg/recepti/kartofena-yahniya/');
   expect(site.status() === 200, 'A5 публичният сайт се чете без вход');
   const fake = await ctx.addCookies([{ name: 'rsid', value: 'a'.repeat(43), url: BASE }]);
   const r6 = await api.get(BASE + '/admin', { maxRedirects: 0 });
@@ -185,7 +185,7 @@ await pv.close();
 // ---- Чернова не е публична ----
 const anon = await browser.newContext();
 const pubGet = (p) => anon.request.get(BASE + p);
-expect((await pubGet(`/recepti/${state.slug}/`)).status() === 404, 'C22 чернова няма публична страница (404)');
+expect((await pubGet(`/bg/recepti/${state.slug}/`)).status() === 404, 'C22 чернова няма публична страница (404)');
 
 // ---- Публикуване: блокери, после публикуване на рецептата ----
 await admin.setInputFiles('#file-input', [png(7)]);
@@ -201,7 +201,7 @@ await admin.locator('[data-state=published]').click();
 await dlg(admin, 'Отказ').click({ timeout: 8000 }).catch(() => {});
 await settle(admin, 800);
 expect((await admin.locator('#pubpanel .badge').first().innerText()).includes('Публикувана'), 'C24 рецептата е маркирана като публикувана');
-expect((await pubGet(`/recepti/${state.slug}/`)).status() === 404, 'C25 докато сайтът не е публикуван, публичната страница още не съществува');
+expect((await pubGet(`/bg/recepti/${state.slug}/`)).status() === 404, 'C25 докато сайтът не е публикуван, публичната страница още не съществува');
 
 // ---- Публикуване на сайта ----
 await admin.goto(BASE + '/admin/publish');
@@ -211,17 +211,17 @@ expect(job1.status === 'succeeded', `C27 публикуването на сай�
 await admin.screenshot({ path: '/out/e2e/publish-done.png' });
 
 // ---- Публично: страница, каталог, търсене, sitemap, RSS, JSON-LD ----
-const rp = await pubGet(`/recepti/${state.slug}/`);
+const rp = await pubGet(`/bg/recepti/${state.slug}/`);
 const html = await rp.text();
 expect(rp.status() === 200 && html.includes(TITLE), 'C28 публикуваната рецепта е достъпна');
 expect(!/aggregateRating/.test(html), 'C29 в структурираните данни няма aggregateRating (няма оценки/не са проверени)');
 expect(html.includes('"@type":"Recipe"') && html.includes('recipeInstructions'), 'C30 JSON-LD на рецептата е налично');
-expect((await (await pubGet('/recepti/')).text()).includes(TITLE), 'C31 рецептата е в каталога');
+expect((await (await pubGet('/bg/recepti/')).text()).includes(TITLE), 'C31 рецептата е в каталога');
 const sm = await (await pubGet('/sitemap-0.xml')).text();
-expect(sm.includes(`/recepti/${state.slug}/`), 'C32 рецептата е в sitemap');
-expect((await (await pubGet('/rss.xml')).text()).includes(TITLE), 'C33 рецептата е в RSS');
+expect(sm.includes(`/bg/recepti/${state.slug}/`), 'C32 рецептата е в sitemap');
+expect((await (await pubGet('/bg/rss.xml')).text()).includes(TITLE), 'C33 рецептата е в RSS');
 const pubPage = await adminCtx.newPage();
-await pubPage.goto(BASE + `/tursene/?q=${encodeURIComponent(UNIQUE_WORD)}`);
+await pubPage.goto(BASE + `/bg/tursene/?q=${encodeURIComponent(UNIQUE_WORD)}`);
 await pubPage.waitForTimeout(2500);
 const searchText = await pubPage.locator('main').innerText();
 expect(searchText.includes(TITLE) || searchText.toLowerCase().includes(UNIQUE_WORD), 'C34 търсенето намира новата рецепта (индексът е обновен)');
@@ -233,7 +233,7 @@ const gp = await guest.newPage(); gp.problems = [];
 gp.on('pageerror', (e) => gp.problems.push(e.message));
 gp.on('console', (m) => { if (m.type() === 'error' && !/Failed to load resource/.test(m.text())) gp.problems.push(m.text()); });
 let dialogs = 0; gp.on('dialog', async (d) => { dialogs++; await d.dismiss(); });
-await gp.goto(BASE + `/recepti/${state.slug}/`);
+await gp.goto(BASE + `/bg/recepti/${state.slug}/`);
 await gp.waitForSelector('[data-community]');
 await settle(gp, 800);
 expect(await gp.locator('[data-rating-empty]').isVisible() && !(await gp.locator('[data-rating-summary]').isVisible()), 'D1 без оценки – празно състояние, без измислени стойности');
@@ -246,7 +246,7 @@ expect((await gp.locator('[data-avg]').innerText()) === '4' && (await gp.locator
 await gp.locator('[data-score="2"]').click(); await settle(gp, 700);
 expect((await gp.locator('[data-avg]').innerText()) === '2' && (await gp.locator('[data-count-text]').innerText()).includes('1 оценка'), 'D6 промяна на оценката не създава втори глас');
 const guest2 = await browser.newContext(); const g2 = await guest2.newPage();
-await g2.goto(BASE + `/recepti/${state.slug}/`); await g2.waitForSelector('[data-community]'); await settle(g2, 600);
+await g2.goto(BASE + `/bg/recepti/${state.slug}/`); await g2.waitForSelector('[data-community]'); await settle(g2, 600);
 await g2.locator('[data-score="5"]').click(); await settle(g2, 700);
 expect((await g2.locator('[data-avg]').innerText()) === '3,5' && (await g2.locator('[data-count-text]').innerText()).includes('2 оценки'), 'D7 втори посетител: средна 3,5 от 2 оценки (преизчислява се)');
 const dist = await g2.locator('[data-dist] li').allInnerTexts();
@@ -268,7 +268,7 @@ await guest2.close();
 
 // каталог: оценката се показва само когато има реални данни
 const cat = await guest.newPage();
-await cat.goto(BASE + '/recepti/'); await cat.waitForSelector('[data-card]'); await settle(cat, 1200);
+await cat.goto(BASE + '/bg/recepti/'); await cat.waitForSelector('[data-card]'); await settle(cat, 1200);
 const slot = cat.locator(`[data-card][data-slug="${state.slug}"] [data-rating-slot]`);
 expect((await slot.innerText()).includes('3,5') && (await cat.locator('[data-rating-slot]:visible').count()) === 1, 'D14 карта в каталога показва оценка само за рецептата с реални оценки');
 expect(await cat.locator('[data-rating-field]').isVisible(), 'D15 филтърът по оценка се показва, когато има реални оценки');
@@ -284,7 +284,7 @@ await comment(gp, 'Мария', 'Много вкусна рецепта, бла�
 expect((await gp.locator('[data-form-status]').innerText()).includes('след като бъде одобрен'), 'E1 ясно съобщение, че коментарът чака одобрение');
 expect((await gp.locator('#komentari .comment.is-pending').count()) === 1 && (await gp.locator('#komentari .comment.is-pending').innerText()).includes('Чака одобрение'), 'E2 авторът вижда коментара си със статус „чака одобрение“');
 const viewer = await browser.newContext(); const vp = await viewer.newPage();
-await vp.goto(BASE + `/recepti/${state.slug}/`); await vp.waitForSelector('[data-community]'); await settle(vp, 800);
+await vp.goto(BASE + `/bg/recepti/${state.slug}/`); await vp.waitForSelector('[data-community]'); await settle(vp, 800);
 expect((await vp.locator('#komentari .comment').count()) === 0 && await vp.locator('[data-comments-empty]').isVisible(), 'E3 чакащ коментар не се вижда публично');
 // XSS
 await comment(gp, 'Хакер', '<img src=x onerror=alert(1)> <script>alert(2)</script> &lt;b&gt;');
@@ -342,7 +342,7 @@ await mod.goto(BASE + '/admin/ratings'); await settle(mod, 500);
 expect((await mod.locator('main').innerText()).includes(TITLE), 'E18 страницата „Оценки“ показва реалните оценки');
 await mod.screenshot({ path: '/out/e2e/admin-ratings.png', fullPage: true });
 await mod.goto(BASE + '/admin/comments?status=all'); await mod.screenshot({ path: '/out/e2e/admin-comments.png', fullPage: true });
-await gp.goto(BASE + `/recepti/${state.slug}/`); await settle(gp, 1200);
+await gp.goto(BASE + `/bg/recepti/${state.slug}/`); await settle(gp, 1200);
 await gp.screenshot({ path: '/out/e2e/public-community.png', fullPage: true });
 expect(gp.problems.length === 0, `E19 няма грешки в конзолата на публичната страница (${gp.problems.slice(0, 2).join(' | ')})`);
 

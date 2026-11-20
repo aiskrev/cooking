@@ -1,26 +1,27 @@
 ---
 import type { Recipe } from '../lib/recipes';
 import { getCoverPhoto } from '../lib/recipes';
-import { formatMinutes } from '../lib/text';
-import { collectionLabels } from '../site.config';
+import { formatMinutes, href, norm, t, type Locale } from '../i18n';
 import Photo from './Photo.astro';
-interface Props { recipe: Recipe; eager?: boolean; level?: 2 | 3; filterable?: boolean }
-const { recipe, eager = false, level = 3, filterable = false } = Astro.props;
+interface Props { recipe: Recipe; locale: Locale; eager?: boolean; level?: 2 | 3; filterable?: boolean }
+const { recipe, locale, eager = false, level = 3, filterable = false } = Astro.props;
 const Heading = level === 2 ? 'h2' : 'h3';
 const cover = await getCoverPhoto(recipe);
 const d = recipe.data;
+const b = recipe.bg; // стабилни ключове за филтрите: еднакви в двата езика
 const total = d.prepTime + d.cookTime + d.restTime;
+const url = href(locale, 'recipes', recipe.id);
 const attrs = filterable
   ? {
       'data-card': '',
       'data-slug': recipe.id,
-      'data-tags': d.tags.map((t) => t.toLocaleLowerCase('bg')).join('|'),
-      'data-title': d.title.toLocaleLowerCase('bg'),
-      'data-search': [d.title, d.description, d.category, d.tags.join(' '), d.method.join(' ')].join(' ').toLocaleLowerCase('bg'),
-      'data-collection': d.collection,
-      'data-category': d.category,
-      'data-method': d.method.join('|'),
-      'data-difficulty': d.difficulty ?? '',
+      'data-tags': b.tags.map((tg) => tg.toLocaleLowerCase('bg')).join('|'),
+      'data-title': norm(locale, d.title),
+      'data-search': norm(locale, [d.title, d.description, d.category, d.tags.join(' '), d.method.join(' ')].join(' ')),
+      'data-collection': b.collection,
+      'data-category': b.category,
+      'data-method': b.method.join('|'),
+      'data-difficulty': b.difficulty ?? '',
       'data-time': String(total),
       'data-date': d.date.toISOString(),
     }
@@ -28,19 +29,19 @@ const attrs = filterable
 ---
 <article class="card" {...attrs}>
   {cover && (
-    <a class="card-media" href={`/recepti/${recipe.id}/`} tabindex="-1" aria-hidden="true">
-      <Photo photo={cover} sizes="(min-width: 960px) 360px, (min-width: 600px) 45vw, 100vw" widths={[480, 800]} eager={eager} class="card-photo" />
+    <a class="card-media" href={url} tabindex="-1" aria-hidden="true">
+      <Photo photo={cover} locale={locale} sizes="(min-width: 960px) 360px, (min-width: 600px) 45vw, 100vw" widths={[480, 800]} eager={eager} class="card-photo" />
     </a>
   )}
   <div class="card-body">
     <p class="card-meta">
-      <span>{d.category}</span><span aria-hidden="true">·</span><span>{formatMinutes(total)}</span>
+      <span>{d.category}</span><span aria-hidden="true">·</span><span>{formatMinutes(locale, total)}</span>
       {d.difficulty && <><span aria-hidden="true">·</span><span>{d.difficulty}</span></>}
     </p>
-    <Heading class="card-title"><a href={`/recepti/${recipe.id}/`}>{d.title}</a></Heading>
+    <Heading class="card-title"><a href={url}>{d.title}</a></Heading>
     <p class="card-desc">{d.description}</p>
     <p class="card-foot">
-      <span class="tag-soft">{d.collection === 'fine-dining' ? 'Фино ядене' : 'Традиционна'}</span>
+      <span class="tag-soft">{t(locale, b.collection === 'fine-dining' ? 'collection.fine-dining.short' : 'collection.traditional.short')}</span>
       <span class="card-rating" data-rating-slot hidden></span>
     </p>
   </div>

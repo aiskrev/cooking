@@ -1,0 +1,111 @@
+---
+import Base from '../layouts/Base.astro';
+import { href, t, type Locale } from '../i18n';
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+---
+<Base locale={locale} title={t(locale, 'search.title')} description={t(locale, 'search.description')} alt={{ bg: href('bg', 'search'), en: href('en', 'search') }}>
+  <div class="wrap">
+    <div class="page-head">
+      <h1>{t(locale, 'search.title')}</h1>
+      <p>{t(locale, 'search.lead')}</p>
+    </div>
+    <form class="search-form" role="search" action={href(locale, 'search')} method="get" data-search-form>
+      <label for="q">{t(locale, 'search.label')}</label>
+      <input id="q" name="q" type="search" autocomplete="off" enterkeyhint="search" />
+      <button class="btn" type="submit">{t(locale, 'search.button')}</button>
+    </form>
+    <p class="muted" id="search-status" role="status" aria-live="polite"></p>
+    <ol class="results" id="search-results"></ol>
+    <noscript><p set:html={t(locale, 'search.noscript', { recipes: href(locale, 'recipes'), categories: href(locale, 'categories') })} /></noscript>
+  </div>
+</Base>
+
+<script>
+  import { tc, locale } from '../i18n/client';
+  const form = document.querySelector<HTMLFormElement>('[data-search-form]')!;
+  const input = form.querySelector<HTMLInputElement>('#q')!;
+  const status = document.getElementById('search-status')!;
+  const list = document.getElementById('search-results')!;
+
+  let pagefind: any = null;
+  let timer: number | undefined;
+
+  async function load() {
+    if (pagefind) return pagefind;
+    try {
+      const url = '/pagefind/pagefind.js';
+      pagefind = await import(/* @vite-ignore */ url);
+      // Отделен индекс за всеки език: български заявки търсят в българския текст, английски – в английския
+      await pagefind.options({ baseUrl: '/', language: locale });
+    } catch {
+      pagefind = null;
+      status.textContent = tc('search.unavailable');
+    }
+    return pagefind;
+  }
+
+  // Само <mark> и текст от откъса; всичко останало се игнорира.
+  function excerptNodes(html: string): Node[] {
+    const doc = new DOMParser().parseFromString(html, 'text/html');
+    const out: Node[] = [];
+    doc.body.childNodes.forEach((n) => {
+      if (n.nodeType === Node.TEXT_NODE) out.push(document.createTextNode(n.textContent ?? ''));
+      else if ((n as Element).tagName === 'MARK') {
+        const m = document.createElement('mark');
+        m.textContent = n.textContent;
+        out.push(m);
+      } else out.push(document.createTextNode(n.textContent ?? ''));
+    });
+    return out;
+  }
+
+  async function run(q: string) {
+    list.replaceChildren();
+    q = q.trim();
+    if (!q) { status.textContent = ''; return; }
+    const pf = await load();
+    if (!pf) return;
+    status.textContent = tc('search.loading');
+    const res = await pf.search(q);
+    const data = await Promise.all(res.results.slice(0, 30).map((r: any) => r.data()));
+    status.textContent = data.length
+      ? tc('search.found', { n: res.results.length })
+      : tc('search.none', { q });
+    for (const d of data) {
+      const li = document.createElement('li');
+      li.className = 'result';
+      const img = document.createElement('img');
+      img.alt = '';
+      img.width = 96; img.height = 96;
+      img.loading = 'lazy';
+      if (d.meta?.image) img.src = d.meta.image;
+      else img.hidden = true;
+      const box = document.createElement('div');
+      const h = document.createElement('h2');
+      const a = document.createElement('a');
+      a.href = d.url;
+      a.textContent = d.meta?.title ?? d.url;
+      h.appendChild(a);
+      const p = document.createElement('p');
+      p.append(...excerptNodes(d.excerpt ?? ''));
+      box.append(h, p);
+      li.append(img, box);
+      list.appendChild(li);
+    }
+  }
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const q = input.value;
+    history.replaceState(null, '', q ? `?q=${encodeURIComponent(q)}` : location.pathname);
+    run(q);
+  });
+  input.addEventListener('input', () => {
+    clearTimeout(timer);
+    timer = window.setTimeout(() => run(input.value), 250);
+  });
+
+  const initial = new URLSearchParams(location.search).get('q');
+  if (initial) { input.value = initial; run(initial); }
+</script>

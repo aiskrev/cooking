@@ -68,8 +68,8 @@ Pagefind индексира готовите HTML страници при сгл
 | `src/content.config.ts` | `publication`, `photos.<файл>.order`, `photos.<файл>.provenance` |
 | `src/lib/recipes.ts` | филтър по `publication`; ред на снимките по `order` |
 | `astro.config.mjs` | `outDir` от `ASTRO_OUT_DIR`; sitemap без `/lyubimi/` |
-| `src/pages/recepti/[slug].astro` | ред за оценка, любими, „Сготвих“, навигация в страницата, секция „Оценки и коментари“ |
+| `src/views/RecipePage.astro` (обвивки в `src/pages/bg/…` и `src/pages/en/…`) | ред за оценка, любими, „Сготвих“, навигация в страницата, секция „Оценки и коментари“ |
 | `src/components/Community.astro`, `src/scripts/*` | публичен интерфейс на оценките и коментарите; любими; значки по картите |
-| `src/pages/recepti/index.astro` | филтър „Основна съставка“; филтър и подредба по оценка (само при реални оценки) |
-| `src/pages/lyubimi.astro` | любими (localStorage) |
+| `src/views/CatalogPage.astro` | филтър „Основна съставка“; филтър и подредба по оценка (само при реални оценки) |
+| `src/views/FavoritesPage.astro` | любими (localStorage) |
 | `Dockerfile`, `docker-compose.yml`, `deploy/Caddyfile.cms` | услуга „cms“, Caddy пред нея, томове |
