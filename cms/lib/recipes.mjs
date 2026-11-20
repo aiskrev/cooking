@@ -54,6 +54,9 @@ export function contentHash(ctx, slug) {
   const file = path.join(dirOf(ctx, slug), 'index.md');
   if (!fs.existsSync(file)) return null;
   const parts = [fs.readFileSync(file, 'utf8').replace(/\r\n/g, '\n')];
+  // английският превод е част от съдържанието: промяна в него също означава „чака публикуване“
+  const enFile = path.join(dirOf(ctx, slug), 'index.en.md');
+  if (fs.existsSync(enFile)) parts.push('EN:' + fs.readFileSync(enFile, 'utf8').replace(/\r\n/g, '\n'));
   for (const f of listPhotoFiles(ctx, slug)) parts.push(f + ':' + fs.statSync(path.join(photoDir(ctx, slug), f)).size);
   return sha256(parts.join('\n')).slice(0, 20);
 }

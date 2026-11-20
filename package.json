@@ -12,7 +12,7 @@
     "preview": "astro preview --host 0.0.0.0 --port 4321",
     "new-recipe": "node scripts/new-recipe.mjs",
     "validate": "node scripts/validate-recipes.mjs",
-    "check": "node scripts/validate-recipes.mjs && node scripts/check-links.mjs && node scripts/check-schema.mjs && node scripts/check-images.mjs && node scripts/translations.mjs check",
+    "check": "node scripts/validate-recipes.mjs && node scripts/check-links.mjs && node scripts/check-schema.mjs && node scripts/check-images.mjs && node scripts/check-i18n.mjs && node scripts/translations.mjs check",
     "translations:report": "node scripts/translations.mjs report",
     "translations:check": "node scripts/translations.mjs check",
     "translations:export": "node scripts/translations.mjs export",

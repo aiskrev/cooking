@@ -20,7 +20,7 @@ const flag = (n) => args.includes(`--${n}`);
 const opt = (n, d) => { const i = args.indexOf(`--${n}`); return i >= 0 && args[i + 1] && !args[i + 1].startsWith('--') ? args[i + 1] : d; };
 const root = process.cwd();
 const contentDir = path.resolve(opt('content', 'src/content/recipes'));
-const tax = loadTaxonomy(root);
+const tax = loadTaxonomy(root, contentDir);
 const only = opt('only', '') ? new Set(opt('only').split(',').map((s) => s.trim()).filter(Boolean)) : null;
 
 const items = readAll(contentDir).filter((i) => !only || only.has(i.slug));
@@ -44,7 +44,9 @@ function evaluate() {
     const state = translationState(i);
     if (!i.en) { rows.push({ i, state, errors: published(i) && !allowMissing ? ['липсва превод (index.en.md)'] : [], warnings: published(i) && allowMissing ? ['няма превод (политика: публикуване на български без английски)'] : [] }); continue; }
     const r = checkPair(i, tax, { photoFiles: photoFiles(i) });
-    rows.push({ i, state, ...r });
+    // Грешките блокират само ПУБЛИКУВАНИ преводи; чернова / за преглед / готов не се показват на сайта, затова са предупреждения
+    const live = (i.en.translation?.status ?? 'draft') === 'published';
+    rows.push({ i, state, errors: live ? r.errors : [], pending: live ? [] : r.errors, warnings: r.warnings });
   }
   return rows;
 }
@@ -63,8 +65,8 @@ if (cmd === 'report' || cmd === 'check') {
   const pub = bgRows.filter((r) => published(r.i));
   const have = bgRows.filter((r) => r.i.en);
   const errs = rows.flatMap((r) => r.errors.map((e) => [r.i.slug, e]));
-  const complete = pub.filter((r) => r.i.en && !r.errors.length && r.state === 'published');
-  const incomplete = pub.filter((r) => r.i.en && r.errors.length);
+  const complete = pub.filter((r) => r.i.en && !r.errors.length && !(r.pending?.length) && r.state === 'published');
+  const incomplete = pub.filter((r) => r.i.en && (r.errors.length || (r.pending?.length ?? 0)));
   const missing = pub.filter((r) => !r.i.en);
   const outdated = pub.filter((r) => r.state === 'outdated');
   const cnt = (k) => errs.filter(([, m]) => classify(m) === k).length;

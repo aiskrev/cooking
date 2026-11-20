@@ -10,6 +10,8 @@ import { startBuild, activateRelease, runningJob, readLogTail } from '../lib/pub
 import { moderate, adminReply, blockActorOf, unblockActor, dismissReports, setRatingStatus } from '../lib/community.mjs';
 import { startTotpSetup, enableTotp, disableTotp, changePassword, verifyPassword, destroyOtherSessions, checkSecondFactor } from '../lib/auth.mjs';
 import { slugify, moveSync } from '../lib/util.mjs';
+import { translationInfo, createSkeleton, saveTranslation, approveCurrent, setTranslationStatus, afterSourceSaved, saveTaxonomyTerm, readTranslation, taxonomy } from '../lib/translations.mjs';
+import { extractSource, extractEnglishPayload } from '../../scripts/lib/translation.mjs';
 
 export function registerApi(app, ctx) {
   const A = '/admin/api';
@@ -71,7 +73,8 @@ export function registerApi(app, ctx) {
     const rev = recordRevision(ctx, r.slug, 'save', d, body, who(c).id);
     ctx.audit(who(c).email, 'recipe.save', r.slug, { rev }, c.get('ip'));
     const fresh = readRecipe(ctx, r.slug);
-    return c.json({ ok: true, rev, mtime: fresh.mtime, warnings: v.warnings, publishBlockers: v.publishBlockers, hash: contentHash(ctx, r.slug) });
+    const translation = afterSourceSaved(ctx, r.slug, d, body, who(c).id);
+    return c.json({ ok: true, rev, mtime: fresh.mtime, warnings: v.warnings, publishBlockers: v.publishBlockers, hash: contentHash(ctx, r.slug), translation });
   });
 
   app.post(`${A}/recipes/:slug/state`, async (c) => {
@@ -120,6 +123,72 @@ export function registerApi(app, ctx) {
     moveSync(path.join(ctx.config.contentDir, r.slug), path.join(dest, `${r.slug}-${Date.now()}`));
     ctx.db.run('DELETE FROM media_assets WHERE recipe_slug = ?', r.slug);
     ctx.audit(who(c).email, 'recipe.delete', r.slug, null, c.get('ip'));
+    return c.json({ ok: true });
+  });
+
+  // ---- Превод на английски (index.en.md до оригинала; снимките са общи) ----
+  // Редакторът изпраща само преводимия текст; числата, снимките и таксономията винаги идват от българския оригинал.
+  const bgOr404 = (c) => { const [r, e] = loadOr404(c); return e ? [null, e] : r.error ? [null, err(c, 409, 'Файлът на оригинала не може да се прочете.')] : [r, null]; };
+  const trModel = (r) => {
+    const tr = readTranslation(ctx, r.slug);
+    const d = r.data;
+    return {
+      slug: r.slug,
+      source: extractSource(d, { keepAlt: true }),
+      sourceData: { title: d.title, servings: d.servings, prepTime: d.prepTime, cookTime: d.cookTime, restTime: d.restTime, ingredients: d.ingredients ?? [], steps: (d.steps ?? []).map((x) => ({ time: x.time, photo: x.photo })), category: d.category, method: d.method ?? [], cuisine: d.cuisine ?? '', tags: d.tags ?? [], difficulty: d.difficulty ?? '', allergens: d.allergens ?? [] },
+      translation: tr && !tr.error ? {
+        payload: extractEnglishPayload(tr.data), meta: tr.data.translation ?? {}, mtime: tr.mtime,
+        taxonomy: { category: tr.data.category, method: tr.data.method ?? [], cuisine: tr.data.cuisine ?? '', tags: tr.data.tags ?? [], difficulty: tr.data.difficulty ?? '', allergens: tr.data.allergens ?? [] },
+        units: (tr.data.ingredients ?? []).map((g) => g.items.map((i) => (typeof i === 'string' ? '' : i.unit ?? ''))),
+      } : null,
+      info: translationInfo(ctx, r.slug, r),
+      files: listPhotoFiles(ctx, r.slug),
+    };
+  };
+  app.get(`${A}/recipes/:slug/translation`, (c) => { const [r, e] = bgOr404(c); return e || c.json(trModel(r)); });
+  app.post(`${A}/recipes/:slug/translation`, async (c) => {
+    const bz = busy(c); if (bz) return bz;
+    const [r, e] = bgOr404(c); if (e) return e;
+    const x = createSkeleton(ctx, r.slug, r, who(c).id);
+    if (x.error) return err(c, 409, x.error);
+    ctx.audit(who(c).email, 'translation.create', r.slug, null, c.get('ip'));
+    return c.json({ ok: true, ...trModel(r) }, 201);
+  });
+  app.put(`${A}/recipes/:slug/translation`, bodyLimit({ maxSize: 2 * 1024 * 1024 }), async (c) => {
+    const bz = busy(c); if (bz) return bz;
+    const [r, e] = bgOr404(c); if (e) return e;
+    const input = await json(c); if (!input?.payload || typeof input.payload !== 'object') return err(c, 400, 'Липсва текст на превода.');
+    const cur = readTranslation(ctx, r.slug);
+    if (cur && typeof input.expectedMtime === 'number' && Math.abs(input.expectedMtime - cur.mtime) > 1 && !input.force) {
+      return err(c, 409, 'Преводът е променен от друго място, откакто сте го отворили. Презаредете, за да не загубите чужда промяна.', { conflict: true, mtime: cur.mtime });
+    }
+    const x = saveTranslation(ctx, r.slug, r, { payload: input.payload, status: String(input.status ?? 'draft'), reviewed: !!input.reviewed }, who(c).id);
+    if (x.error) return err(c, x.status ?? 400, x.error, { errors: x.errors });
+    ctx.audit(who(c).email, 'translation.save', r.slug, { rev: x.rev, status: input.status }, c.get('ip'));
+    return c.json({ ok: true, ...trModel(r) });
+  });
+  app.post(`${A}/recipes/:slug/translation/status`, async (c) => {
+    const bz = busy(c); if (bz) return bz;
+    const [r, e] = bgOr404(c); if (e) return e;
+    const input = await json(c);
+    const x = setTranslationStatus(ctx, r.slug, r, String(input?.status ?? ''), who(c).id);
+    if (x.error) return err(c, x.status ?? 400, x.error, { errors: x.errors });
+    ctx.audit(who(c).email, 'translation.status', r.slug, { to: input.status }, c.get('ip'));
+    return c.json({ ok: true, needsSitePublish: true, ...trModel(r) });
+  });
+  app.post(`${A}/recipes/:slug/translation/approve`, async (c) => {
+    const bz = busy(c); if (bz) return bz;
+    const [r, e] = bgOr404(c); if (e) return e;
+    const x = approveCurrent(ctx, r.slug, r, who(c).id);
+    if (x.error) return err(c, x.status ?? 400, x.error);
+    ctx.audit(who(c).email, 'translation.approve', r.slug, null, c.get('ip'));
+    return c.json({ ok: true, ...trModel(r) });
+  });
+  app.post(`${A}/taxonomy/translate`, async (c) => {
+    const input = await json(c);
+    const x = saveTaxonomyTerm(ctx, String(input?.group ?? ''), input?.value, input?.label);
+    if (x.error) return err(c, x.status ?? 400, x.error);
+    ctx.audit(who(c).email, 'taxonomy.translate', String(input.group), { value: input.value }, c.get('ip'));
     return c.json({ ok: true });
   });
 
@@ -226,6 +295,8 @@ export function registerApi(app, ctx) {
     const t = String(to ?? '').trim();
     if (!['category', 'tag', 'method'].includes(kind) || !from || !t) return err(c, 400, 'Невалидна заявка.');
     let changed = 0;
+    // новото българско име наследява английския етикет на старото (иначе преводите губят категорията/етикета)
+    { const group = kind === 'category' ? 'category' : kind === 'tag' ? 'tag' : 'method'; const lbl = taxonomy(ctx)[group]?.[from]; if (lbl && !(t in taxonomy(ctx)[group])) saveTaxonomyTerm(ctx, group, t, lbl); }
     for (const s of slugs(ctx)) {
       const r = readRecipe(ctx, s); if (!r || r.error) continue;
       const d = { ...r.data };
@@ -237,6 +308,7 @@ export function registerApi(app, ctx) {
       } else continue;
       writeRecipe(ctx, s, d, r.body);
       recordRevision(ctx, s, 'save', d, r.body, who(c).id);
+      afterSourceSaved(ctx, s, d, r.body, who(c).id);
       changed++;
     }
     ctx.audit(who(c).email, 'taxonomy.rename', kind, { from, to: t, changed }, c.get('ip'));

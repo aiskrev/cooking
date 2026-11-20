@@ -38,9 +38,16 @@ export function serialize(d, body = '') {
   return `---\n${yaml}---\n${body ? '\n' + body.trim() + '\n' : ''}`;
 }
 
-export function loadTaxonomy(root = process.cwd()) {
-  return JSON.parse(fs.readFileSync(path.join(root, 'src/i18n/taxonomy.json'), 'utf8'));
+/** Речникът на таксономията: вграденият (src/i18n/taxonomy.json) + допълнителен от редактора (<рецепти>/_taxonomy.json) */
+export function loadTaxonomy(root = process.cwd(), contentDir = path.join(root, "src/content/recipes")) {
+  const base = JSON.parse(fs.readFileSync(path.join(root, "src/i18n/taxonomy.json"), "utf8"));
+  try {
+    const extra = JSON.parse(fs.readFileSync(path.join(contentDir, OVERLAY_FILE), "utf8"));
+    for (const [group, map] of Object.entries(extra)) if (base[group] && map && typeof map === "object") Object.assign(base[group], map);
+  } catch { /* няма допълнителен речник */ }
+  return base;
 }
+export const OVERLAY_FILE = "_taxonomy.json";
 export function loadPolicy(root = process.cwd()) {
   try { return JSON.parse(fs.readFileSync(path.join(root, 'src/i18n/policy.json'), 'utf8')); } catch { return { publishBulgarianWithoutEnglish: true }; }
 }
@@ -67,12 +74,12 @@ export function readAll(contentDir) {
 const clean = (o) => { for (const k of Object.keys(o)) if (o[k] === undefined || (Array.isArray(o[k]) && !o[k].length)) delete o[k]; return o; };
 
 /** Само текстът, който се превежда (в български) – формат на файловете за превод */
-export function extractSource(bg) {
+export function extractSource(bg, { keepAlt = false } = {}) {
   const photos = {}; const sessions = new Set();
   for (const [file, m] of Object.entries(bg.photos ?? {})) {
     // alt = „<Заглавие>: <подпис>“ се извежда автоматично и от превода – така файлът за превод е по-кратък
     const derived = m.caption && m.alt === `${bg.title}: ${m.caption}`;
-    photos[file] = clean({ alt: derived ? undefined : m.alt, caption: m.caption });
+    photos[file] = clean({ alt: derived && !keepAlt ? undefined : m.alt, caption: m.caption });
     if (m.session) sessions.add(m.session);
   }
   return clean({
@@ -152,7 +159,8 @@ export function buildEnglish(bg, payload, tax, { status = 'draft', reviewed = fa
     const pm = payload.photos?.[file] ?? {};
     const derived = m.caption && m.alt === `${bg.title}: ${m.caption}`;
     const cap = m.caption ? need(pm.caption, `photos.${file}.caption`) : undefined;
-    const o = { alt: derived && !str(pm.alt) ? `${str(payload.altName) || en.title}: ${cap}` : need(pm.alt, `photos.${file}.alt`) };
+    // alt: изрично зададен; иначе „<кратко име>: <подпис>“, когато оригиналът е по същия образец; иначе – липсва превод
+    const o = { alt: str(pm.alt) ? str(pm.alt) : derived && cap ? `${str(payload.altName) || en.title}: ${cap}` : need('', `photos.${file}.alt`) };
     if (m.caption) o.caption = cap;
     if (m.session) { const s = str(sessions[m.session]) || str(tax.session?.[m.session]); if (!s || s === m.session) P(`липсва превод на сесията „${m.session}“`); o.session = s || m.session; }
     if (m.order !== undefined) o.order = m.order;
@@ -326,4 +334,75 @@ export function checkPair(item, tax, { photoFiles = null } = {}) {
   }
   if (item.enBody && !item.bgBody) W('index.en.md има тяло, а оригиналът няма');
   return { errors, warnings };
+}
+
+// ---------- Помощници за администрацията ----------
+/** Преводимият текст на английския файл във формата на файловете за превод (за редактора) */
+export function extractEnglishPayload(en) {
+  const p = extractSource(en, { keepAlt: true });
+  // сесиите в английския файл са вече преведени – не се връщат като „речник“
+  delete p.sessions;
+  return p;
+}
+
+/** Празен чернови превод: структурата, числата, снимките и таксономията са от оригинала, текстовете са празни */
+export function buildSkeleton(bg, tax, { bgBody = '', translator = '' } = {}) {
+  const empty = {
+    title: '', description: '', altName: '',
+    ingredients: (bg.ingredients ?? []).map((g) => ({ ...(g.title ? { title: '' } : {}), items: g.items.map((it) => (typeof it === 'string' ? '' : { name: '', ...(it.note ? { note: '' } : {}) })) })),
+    steps: (bg.steps ?? []).map((s) => ({ title: '', text: '', why: '', cue: '', avoid: '' })),
+    photos: Object.fromEntries(Object.entries(bg.photos ?? {}).map(([f]) => [f, { alt: '', caption: '' }])),
+  };
+  for (const k of ['intro', 'context', 'technique', 'temperature', 'balance', 'plating', 'serving', 'storage']) if (bg[k]) empty[k] = '';
+  for (const k of ['mise', 'tips', 'mistakes', 'substitutions']) if ((bg[k] ?? []).length) empty[k] = bg[k].map(() => '');
+  const built = buildEnglish(bg, empty, tax, { status: 'draft', reviewed: false, translator, bgBody });
+  return built.data;
+}
+
+/**
+ * След промяна в оригинала: общите полета (числа, снимки, флагове) и таксономията се обновяват автоматично в превода.
+ * Връща { data, structural } – structural = true, когато броят на съставки/стъпки/снимки вече не съвпада и преводът не може
+ * да остане публикуван без преглед.
+ */
+export function syncFromSource(bg, en, tax) {
+  const next = structuredClone(en);
+  for (const k of SHARED_FIELDS) { if (bg[k] === undefined) delete next[k]; else next[k] = structuredClone(bg[k]); }
+  if (bg.updated) next.updated = bg.updated; else delete next.updated;
+  if (bg.category && tax.category?.[bg.category]) next.category = tax.category[bg.category];
+  if (bg.cuisine && tax.cuisine?.[bg.cuisine]) next.cuisine = tax.cuisine[bg.cuisine]; else if (!bg.cuisine) delete next.cuisine;
+  if (bg.difficulty && tax.difficulty?.[bg.difficulty]) next.difficulty = tax.difficulty[bg.difficulty]; else if (!bg.difficulty) delete next.difficulty;
+  const mapAll = (group, arr) => (arr ?? []).map((v) => tax[group]?.[v]);
+  if (mapAll('method', bg.method).every((v) => v !== undefined)) next.method = mapAll('method', bg.method);
+  if (mapAll('tag', bg.tags).every((v) => v !== undefined)) next.tags = mapAll('tag', bg.tags);
+  if (mapAll('allergen', bg.allergens).every((v) => v !== undefined)) next.allergens = mapAll('allergen', bg.allergens);
+  // числата в съставките и стъпките се пренасят по позиция, когато структурата е същата
+  const sameIng = (bg.ingredients ?? []).length === (next.ingredients ?? []).length && (bg.ingredients ?? []).every((g, gi) => g.items.length === next.ingredients[gi].items.length);
+  if (sameIng) {
+    next.ingredients.forEach((g, gi) => g.items.forEach((it, ii) => {
+      const src = bg.ingredients[gi].items[ii];
+      if (typeof it === 'string' || typeof src === 'string') return;
+      if (src.amount === undefined) delete it.amount; else it.amount = src.amount;
+      const u = src.unit ? tax.unit?.[src.unit] : undefined;
+      if (u) it.unit = u; else delete it.unit;
+      it.scale = src.scale;
+    }));
+  }
+  if ((bg.steps ?? []).length === (next.steps ?? []).length) {
+    next.steps.forEach((s, i) => {
+      const src = bg.steps[i];
+      if (src.time === undefined) delete s.time; else s.time = src.time;
+      if (src.photo === undefined) delete s.photo; else s.photo = src.photo;
+    });
+  }
+  const photoKeys = (o) => Object.keys(o ?? {}).sort().join('|');
+  const structural = !sameIng || (bg.steps ?? []).length !== (next.steps ?? []).length || photoKeys(bg.photos) !== photoKeys(next.photos)
+    || (bg.mise ?? []).length !== (next.mise ?? []).length || (bg.tips ?? []).length !== (next.tips ?? []).length
+    || (bg.mistakes ?? []).length !== (next.mistakes ?? []).length || (bg.substitutions ?? []).length !== (next.substitutions ?? []).length;
+  // подредбата и произходът на снимките следват оригинала
+  for (const [f, m] of Object.entries(bg.photos ?? {})) {
+    const e = next.photos?.[f]; if (!e) continue;
+    if (m.order !== undefined) e.order = m.order; else delete e.order;
+    if (m.provenance) e.provenance = m.provenance; else delete e.provenance;
+  }
+  return { data: next, structural };
 }

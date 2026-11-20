@@ -121,8 +121,11 @@ const recipesEn = defineCollection({
     base: './src/content/recipes',
     generateId: ({ entry }) => entry.split('/')[0],
   }),
+  // Чернови на превод (draft / needs-review) могат да са непълни (напр. празно описание на снимка) и не се публикуват;
+  // пълнотата на публикуваните преводи се проверява от `npm run translations:check` (и при всяко публикуване от администрацията).
   schema: recipeFields.extend({
     difficulty: z.string().optional(),
+    photos: z.record(z.string(), photoMeta.extend({ alt: z.string() })).default({}),
     translation: translationMeta,
   }),
 });
