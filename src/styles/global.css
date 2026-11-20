@@ -119,11 +119,6 @@ a:hover { text-decoration-thickness: 0.14em; }
 .home-hero-photo .photo picture img { object-fit: cover; }
 .hero-caption { position: absolute; left: 0; right: 0; bottom: 0; padding: 2.5rem 1rem 0.9rem; color: #fff; font-family: var(--font-head); font-size: 1.2rem; background: linear-gradient(transparent, rgb(10 6 4 / 0.82)); }
 .hero-caption small { display: block; font-family: var(--font-body); font-size: 0.8rem; opacity: 0.9; }
-.banner { margin-top: 3.5rem; position: relative; }
-.banner .photo { height: clamp(220px, 34vw, 420px); }
-.banner .photo picture, .banner .photo picture img { height: 100%; }
-.banner .photo picture img { object-fit: cover; }
-.banner-note { position: absolute; right: 0.75rem; bottom: 0.6rem; margin: 0; font-size: 0.8rem; color: #fff; background: rgb(0 0 0 / 0.55); padding: 0.15rem 0.6rem; border-radius: 999px; }
 .journey-strip { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(130px, 1fr); gap: 0.75rem; list-style: none; padding: 0; margin: 0; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 0.5rem; }
 .journey-strip li { scroll-snap-align: start; position: relative; }
 .journey-strip .photo { border-radius: 10px; aspect-ratio: 4 / 5; }
