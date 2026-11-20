@@ -28,6 +28,7 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   name: site.name,
+  alternateName: site.en.name,
   url: new URL('/', Astro.site).href,
   inLanguage: site.lang,
   potentialAction: {
@@ -42,9 +43,10 @@ const jsonLd = {
     <div class="wrap home-hero-grid">
       <div class="home-hero-text">
         <p class="eyebrow">Рецепти със снимки на всяка стъпка</p>
-        <h1 id="h-hero">{site.name}</h1>
-        <p class="hero-tagline">{site.tagline}</p>
+        <h1 id="h-hero">{site.name}<span class="h1-en" lang="en">{site.en.name}</span></h1>
+        <p class="hero-tagline">{site.tagline}<span class="tagline-en" lang="en">{site.en.tagline}</span></p>
         <p class="lead">{site.description}</p>
+        <p class="lead lead-en" lang="en">{site.en.description}</p>
         <p class="stat-line"><strong>{recipes.length}</strong> рецепти · <strong>{categories.length}</strong> категории · подробна техника, контрол на температурата и съвети от шефа</p>
         <div class="actions">
           <a class="btn" href="/recepti/">Всички рецепти</a>

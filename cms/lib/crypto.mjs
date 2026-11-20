@@ -75,5 +75,5 @@ export function verifyTotp(secretB32, code, now = Date.now()) {
   for (const s of [step, step - 1, step + 1]) if (safeEq(hotp(secretB32, s), clean)) return s;
   return null;
 }
-export const otpauthUri = (email, secretB32, issuer = 'Модерна българска кухня') =>
+export const otpauthUri = (email, secretB32, issuer = 'Модерна българска кухня и Мишлен щрих') =>
   `otpauth://totp/${encodeURIComponent(issuer)}:${encodeURIComponent(email)}?secret=${secretB32}&issuer=${encodeURIComponent(issuer)}&algorithm=SHA1&digits=6&period=30`;
