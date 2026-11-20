@@ -111,7 +111,7 @@ switchTo[other] = switchHref;
               {i > 0 && <span aria-hidden="true" class="lang-sep">|</span>}
               {l === locale
                 ? <a lang={l} hreflang={l} href={switchTo[l]} aria-current="true" title={localeInfo[l].name} data-lang={l}>{l.toUpperCase()}</a>
-                : <a lang={l} hreflang={l} href={switchTo[l]} title={t(locale, 'lang.switchTo', { language: localeInfo[l].name })} aria-label={t(locale, 'lang.switchTo', { language: localeInfo[l].name })} data-lang={l}>{l.toUpperCase()}</a>}
+                : <a lang={l} hreflang={l} href={switchTo[l]} title={t(locale, 'lang.switchTo', { language: localeInfo[l].name })} aria-label={`${l.toUpperCase()} – ${t(locale, 'lang.switchTo', { language: localeInfo[l].name })}`} data-lang={l}>{l.toUpperCase()}</a>}
             </>
           ))}
         </nav>

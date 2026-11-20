@@ -5,6 +5,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const dist = path.resolve(process.argv[2] || 'dist');
+const repoRoot = process.cwd();
 let errors = 0, checked = 0;
 const err = (p, m) => { errors++; if (errors <= 60) console.error(`ГРЕШКА  ${p}: ${m}`); };
 const read = (rel) => { const f = path.join(dist, rel); return fs.existsSync(f) ? fs.readFileSync(f, 'utf8') : null; };
@@ -21,6 +22,19 @@ const mainText = (html) => {
   return m.replace(/<script[\s\S]*?<\/script>/g, ' ').replace(/<style[\s\S]*?<\/style>/g, ' ').replace(/<[^>]+>/g, ' ').replace(/&[a-z#0-9]+;/gi, ' ');
 };
 const CYR_RUN = /([Ѐ-ӿ]{2,}[\s,.;:()«»„“"–—-]+){2,}[Ѐ-ӿ]{2,}/;
+
+// 0) речници: еднакви ключове в bg и en; английските стойности без български текст; български стойности без непреведени английски изречения не се изискват
+{
+  const keys = (f) => { const t = fs.readFileSync(path.join(repoRoot, 'src/i18n/ui', f), 'utf8'); return [...t.matchAll(/^  '([^']+)': ('(?:[^'\\]|\\.)*'|`[^`]*`),?$/gm)].map((m) => [m[1], m[2]]); };
+  if (fs.existsSync(path.join(repoRoot, 'src/i18n/ui/bg.ts'))) {
+    const bgK = new Map(keys('bg.ts')), enK = new Map(keys('en.ts'));
+    for (const k of bgK.keys()) if (!enK.has(k)) err('src/i18n/ui/en.ts', `липсва ключ „${k}“`);
+    for (const k of enK.keys()) if (!bgK.has(k)) err('src/i18n/ui/en.ts', `ключ „${k}“ го няма в bg.ts`);
+    for (const [k, v] of enK) if (/[Ѐ-ӿ]/.test(v) && k !== 'lang.bg') err('src/i18n/ui/en.ts', `български знаци в „${k}“`);
+    for (const [k, v] of bgK) { const ph = (x) => [...x.matchAll(/\{(\w+)\}/g)].map((m) => m[1]).sort().join(','); if (enK.has(k) && ph(v) !== ph(enK.get(k))) err('src/i18n/ui', `различни {параметри} в „${k}“`); }
+    checked += bgK.size;
+  }
+}
 
 // 1) основни страници и на двата езика
 for (const [loc, r] of Object.entries(ROUTES)) for (const [name, url] of Object.entries(r)) {

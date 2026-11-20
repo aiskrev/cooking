@@ -9,18 +9,18 @@ const BASE = process.env.BASE || 'http://web:8080';
 const OUT = '/out';
 fs.mkdirSync(OUT, { recursive: true });
 const widths = [360, 390, 768, 1024, 1440];
-const RECIPE = process.env.RECIPE || '/recepti/banitsa-sas-sirene/';
+const RECIPE = process.env.RECIPE || '/bg/recepti/banitsa-sas-sirene/';
 const pages = {
   home: '/',
   recipe: RECIPE,
-  recipe2: '/recepti/beef-wellington/',
-  recipe3: '/recepti/pylneni-chushki-s-kayma-i-oriz/',
-  list: '/recepti/',
-  shopping: '/spisak/',
-  categories: '/kategorii/',
-  category: '/kategorii/osnovni-yastiya/',
-  tag: '/etiketi/chushki/',
-  search: '/tursene/',
+  recipe2: '/bg/recepti/beef-wellington/',
+  recipe3: '/bg/recepti/pylneni-chushki-s-kayma-i-oriz/',
+  list: '/bg/recepti/',
+  shopping: '/bg/spisak/',
+  categories: '/bg/kategorii/',
+  category: '/bg/kategorii/osnovni-yastiya/',
+  tag: '/bg/etiketi/chushki/',
+  search: '/bg/tursene/',
   notfound: '/nqma-takava/',
 };
 const results = [];
@@ -125,7 +125,7 @@ for (const w of widths) {
   page.on('console', (m) => {
     if (m.type() === 'error') errs.push(m.text());
   });
-  await page.goto(BASE + '/tursene/', { waitUntil: 'load' });
+  await page.goto(BASE + '/bg/tursene/', { waitUntil: 'load' });
   await page.fill('#q', 'чушки');
   await page.waitForSelector('.result', { timeout: 8000 }).catch(() => {});
   const n = await page.locator('.result').count();
@@ -178,7 +178,7 @@ for (const w of widths) {
   await page.click('[data-add-list]');
   const st = await page.locator('[data-tools-status]').textContent();
   log(/Добавени са \d+/.test(st), `списък: ${st}`);
-  await page.goto(BASE + '/spisak/', { waitUntil: 'load' });
+  await page.goto(BASE + '/bg/spisak/', { waitUntil: 'load' });
   const n = await page.locator('.shop-list .ing-list li').count();
   log(n > 0, `страница „Списък“: ${n} съставки`);
   await page.screenshot({ path: `${OUT}/shopping-1024.png` });
@@ -216,7 +216,7 @@ for (const w of widths) {
   await page.screenshot({ path: `${OUT}/lightbox-1024.png` });
   await page.keyboard.press('Escape');
   // филтри
-  await page.goto(BASE + '/recepti/', { waitUntil: 'load' });
+  await page.goto(BASE + '/bg/recepti/', { waitUntil: 'load' });
   const all = await page.locator('[data-count]').textContent();
   await page.selectOption('#f-collection', 'fine-dining');
   const fine = await page.locator('[data-count]').textContent();

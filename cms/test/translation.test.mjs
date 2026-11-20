@@ -145,3 +145,16 @@ test('API на публичната част: съобщенията се пре
   assert.equal(I.requestLocale(fakeReq('../../etc/passwd')), 'bg', 'езикът е само от списъка');
   assert.equal(I.requestLocale(fakeReq(undefined)), 'bg');
 });
+
+test('версии на сайта: двуезичната (/bg, /en) и старата (/recepti) се разпознават; езиците се записват в манифеста', async () => {
+  const P = await import('../lib/publish.mjs');
+  const mk = (rel) => { const d = path.join(ctx.config.releasesDir, rel); fs.mkdirSync(d, { recursive: true }); fs.writeFileSync(path.join(d, 'index.html'), '<html></html>'); };
+  mk('r-20260101000000/bg/recepti/aaa'); mk('r-20260101000000/en/recipes/aaa'); mk('r-20260101000000/bg/recepti/bbb');
+  mk('r-20250101000000/recepti/old-one'); // преди двуезичната версия
+  P.registerExistingReleases(ctx);
+  const rows = ctx.db.all('SELECT id, manifest FROM site_releases ORDER BY id');
+  const byId = Object.fromEntries(rows.map((r) => [r.id, JSON.parse(r.manifest)]));
+  assert.deepEqual(byId['r-20260101000000'].aaa.locales, ['bg', 'en']);
+  assert.deepEqual(byId['r-20260101000000'].bbb.locales, ['bg']);
+  assert.deepEqual(Object.keys(byId['r-20250101000000']), ['old-one'], 'старата версия остава разпознаваема (за връщане назад)');
+});

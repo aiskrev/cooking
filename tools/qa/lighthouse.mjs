@@ -5,9 +5,9 @@ import fs from 'node:fs';
 const BASE = process.env.BASE || 'http://web:8080';
 const pages = {
   home: '/',
-  recipe: '/recepti/banitsa-sas-sirene/',
-  list: '/recepti/',
-  search: '/tursene/',
+  recipe: '/bg/recepti/banitsa-sas-sirene/',
+  list: '/bg/recepti/',
+  search: '/bg/tursene/',
 };
 const runs = Number(process.env.RUNS || 3);
 fs.mkdirSync('/out/lighthouse', { recursive: true });
