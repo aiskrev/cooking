@@ -2,7 +2,7 @@
 import Base from '../layouts/Base.astro';
 import RecipeCard from '../components/RecipeCard.astro';
 import Photo from '../components/Photo.astro';
-import { getRecipes, getCategories, getPhotos, getCoverPhoto, getSiteImage } from '../lib/recipes';
+import { getRecipes, getCategories, getPhotos, getCoverPhoto } from '../lib/recipes';
 import { ogImage } from '../lib/images';
 import { site, collectionLabels } from '../site.config';
 
@@ -23,7 +23,6 @@ const og = heroPhoto ? await ogImage(heroPhoto, Astro.site) : undefined;
 const journeyRecipe = recipes.find((r) => r.id === 'beef-wellington') ?? recipes.find((r) => r.data.steps.filter((s) => s.photo).length >= 6);
 const journeyPhotos = journeyRecipe ? await getPhotos(journeyRecipe) : new Map();
 const journey = journeyRecipe ? journeyRecipe.data.steps.flatMap((s) => (s.photo ? [{ photo: journeyPhotos.get(s.photo)!, step: s.title ?? '' }] : [])).slice(0, 8) : [];
-const banner = await getSiteImage('trapeza-tradicionni.webp');
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -81,13 +80,6 @@ const jsonLd = {
     <section class="section wrap" aria-labelledby="h-trad">
       <div class="section-head"><div><h2 id="h-trad">{collectionLabels.traditional.name}</h2><p class="muted">{collectionLabels.traditional.description}</p></div><a href="/recepti/?collection=traditional">Всички традиционни →</a></div>
       <ul class="grid">{traditional.map((r) => <li><RecipeCard recipe={r} /></li>)}</ul>
-    </section>
-  )}
-
-  {banner && (
-    <section class="banner" aria-label="Илюстрация">
-      <Photo photo={{ file: 'banner', key: 'site/banner', image: banner.image, lqip: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7', alt: banner.alt }} sizes="100vw" widths={[800, 1120, 1600]} />
-      <p class="banner-note">Илюстрация, генерирана с изкуствен интелект</p>
     </section>
   )}
 
