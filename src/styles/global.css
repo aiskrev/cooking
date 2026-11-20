@@ -96,7 +96,6 @@ a:hover { text-decoration-thickness: 0.14em; }
 .link-btn { background: none; border: 0; color: var(--accent); font: inherit; text-decoration: underline; cursor: pointer; padding: 0.5rem 0; min-height: 44px; }
 .badge { display: inline-block; font-size: 0.85rem; font-weight: 700; padding: 0.15rem 0.7rem; border-radius: 999px; background: var(--accent-soft); color: var(--text); border: 1px solid var(--line); margin: 0; }
 .tag-soft { display: inline-block; font-size: 0.78rem; font-weight: 700; padding: 0.1rem 0.6rem; border-radius: 999px; background: var(--surface-2); color: var(--muted); }
-.tag-soft.draft { background: var(--accent-soft); color: var(--text); }
 .chips { display: flex; flex-wrap: wrap; gap: 0.5rem; list-style: none; padding: 0; margin: 0; }
 .chips a { display: inline-flex; align-items: center; min-height: 38px; padding: 0 0.95rem; border-radius: 999px; background: var(--surface); border: 1px solid var(--line); color: var(--text); text-decoration: none; font-size: 0.97rem; }
 .chips a:hover { border-color: var(--accent); color: var(--accent); }
