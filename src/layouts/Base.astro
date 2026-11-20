@@ -15,7 +15,7 @@ interface Props {
 }
 const { title, description, image, type = 'website', jsonLd, noindex = false, published, modified } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
-const fullTitle = Astro.url.pathname === '/' ? `${site.name} – ${site.tagline}` : `${title} | ${site.name}`;
+const fullTitle = Astro.url.pathname === '/' ? `${site.name} – ${site.en.name}` : `${title} | ${site.name}`;
 const robots = noindex || site.noindex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large';
 const nav = [
   { href: '/recepti/', label: 'Рецепти' },
@@ -44,6 +44,7 @@ const path = Astro.url.pathname;
 
     <meta property="og:site_name" content={site.name} />
     <meta property="og:locale" content={site.locale} />
+    <meta property="og:locale:alternate" content={site.en.locale} />
     <meta property="og:type" content={type} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
@@ -73,7 +74,7 @@ const path = Astro.url.pathname;
       <div class="wrap header-inner">
         <a class="brand" href="/" aria-label={`${site.name} – начална страница`}>
           <svg aria-hidden="true" width="26" height="26" viewBox="0 0 32 32"><path fill="currentColor" d="M16 3c-5 0-9 3.6-9 8.2 0 2.5 1.2 4.6 3 6V25a4 4 0 0 0 4 4h4a4 4 0 0 0 4-4v-7.8c1.8-1.4 3-3.5 3-6C25 6.600 21 3 16 3Z"/></svg>
-          <span>{site.name}</span>
+          <span class="brand-text">{site.name}<small lang="en">{site.en.name}</small></span>
         </a>
         <nav class="main-nav" aria-label="Основно меню">
           <ul>

@@ -1,15 +1,24 @@
 // Единно място за настройките на сайта. Сменете стойностите със свои.
 export const site = {
   // ПРИМЕРНО ИМЕ — собственикът ще го смени.
-  name: 'Модерна българска кухня',
+  name: 'Модерна българска кухня и Мишлен щрих',
   tagline: 'Традиционни вкусове. Съвременна техника.',
   description:
-    'Модерна българска кухня: традиционни рецепти и съвременни интерпретации с подробни обяснения на техниката и снимки на всяка стъпка.',
+    'Модерна българска кухня и Мишлен щрих: традиционни рецепти и съвременни интерпретации с подробни обяснения на техниката и снимки на всяка стъпка.',
   lang: 'bg',
   locale: 'bg_BG',
+  // Английска версия на марката – сайтът се пише двуезично (български е основният език).
+  en: {
+    name: 'Modern Bulgarian Cuisine with a Michelin Touch',
+    tagline: 'Traditional flavours. Modern technique.',
+    description:
+      'Modern Bulgarian cuisine with a Michelin touch: traditional recipes and contemporary interpretations, with detailed technique explanations and a photo of every step.',
+    lang: 'en',
+    locale: 'en_US',
+  },
   // Автор за структурираните данни (schema.org). Сменете с реално име.
-  author: 'Модерна българска кухня',
-  copyrightHolder: 'Модерна българска кухня',
+  author: 'Модерна българска кухня и Мишлен щрих',
+  copyrightHolder: 'Модерна българска кухня и Мишлен щрих',
   // По подразбиране локалната версия е НЕиндексируема. За индексиране при бъдещо публикуване: INDEXABLE=1.
   noindex: process.env.INDEXABLE !== '1' && process.env.INDEXABLE !== 'true',
 };
