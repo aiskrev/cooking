@@ -8,7 +8,7 @@ export const en: Record<UiKey, string> = {
   'nav.recipes': 'Recipes',
   'nav.categories': 'Categories',
   'nav.search': 'Search',
-  'nav.shopping': 'Shopping list',
+  'nav.shopping': 'Shopping',
   'nav.favorites': 'Favourites',
   'brand.home': '{name} – home page',
   'theme.dark': 'Dark theme',
