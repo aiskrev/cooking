@@ -87,7 +87,7 @@ ingredients:
         amount: 0.5
         unit: tsp
         scale: true
-      - name: sprigs of thyme
+      - name: thyme
         amount: 4
         unit: sprig
         scale: true
@@ -97,7 +97,7 @@ ingredients:
         scale: true
   - title: For the endive
     items:
-      - name: heads of white endive
+      - name: white endive
         amount: 4
         unit: head
         scale: true

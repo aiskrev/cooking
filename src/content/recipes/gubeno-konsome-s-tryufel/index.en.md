@@ -107,7 +107,7 @@ ingredients:
       - name: egg whites
         amount: 2
         scale: true
-      - name: sprig of thyme
+      - name: thyme
         amount: 1
         unit: sprig
         scale: true

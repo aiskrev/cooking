@@ -127,7 +127,7 @@ ingredients:
         scale: true
   - title: For the fennel
     items:
-      - name: heads of fennel
+      - name: fennel
         amount: 2
         unit: head
         scale: true

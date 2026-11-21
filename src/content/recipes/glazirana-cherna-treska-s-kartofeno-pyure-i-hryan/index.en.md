@@ -116,7 +116,7 @@ ingredients:
         scale: false
   - title: For the green oil
     items:
-      - name: bunch of dill
+      - name: dill
         amount: 1
         unit: bunch
         scale: true

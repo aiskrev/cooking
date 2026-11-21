@@ -121,7 +121,7 @@ ingredients:
         amount: 2
         unit: leaf
         scale: true
-      - name: bunch of basil
+      - name: basil
         amount: 1
         unit: bunch
         scale: true

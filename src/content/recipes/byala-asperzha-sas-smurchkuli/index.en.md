@@ -109,7 +109,7 @@ ingredients:
         amount: 1
         unit: tsp
         scale: true
-      - name: sprigs of tarragon
+      - name: tarragon
         amount: 2
         unit: sprig
         scale: true

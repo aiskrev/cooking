@@ -92,7 +92,7 @@ ingredients:
         amount: 40
         unit: g
         scale: true
-      - name: slices of brioche
+      - name: brioche
         amount: 4
         unit: slice
         scale: true
@@ -100,7 +100,7 @@ ingredients:
         amount: 20
         unit: g
         scale: true
-      - name: sprigs of thyme
+      - name: thyme
         amount: 2
         unit: sprig
         scale: true

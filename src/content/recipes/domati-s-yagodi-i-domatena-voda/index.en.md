@@ -86,7 +86,7 @@ ingredients:
         amount: 1
         unit: tsp
         scale: true
-      - name: sprig of basil
+      - name: basil
         amount: 1
         unit: sprig
         scale: true

@@ -100,7 +100,7 @@ ingredients:
         amount: 400
         unit: g
         scale: true
-      - name: heads of fennel
+      - name: fennel
         amount: 2
         unit: head
         scale: true
