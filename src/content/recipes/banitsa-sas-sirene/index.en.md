@@ -78,6 +78,14 @@ photos:
   16-gotovo-yastie.webp:
     alt: "Cheese banitsa: The finished dish"
     caption: The finished dish
+  17-dopalnitelen-7.webp:
+    alt: "Cheese banitsa: A round cheese banitsa served with yogurt, honey and forest-fruit preserve"
+    caption: A round cheese banitsa served with yogurt, honey and forest-fruit preserve
+    session: Photo session 1 (June 2026)
+  18-dopalnitelen-8.webp:
+    alt: "Cheese banitsa: Cheese banitsa with a glass of milk, yogurt, honey and preserve"
+    caption: Cheese banitsa with a glass of milk, yogurt, honey and preserve
+    session: Photo session 1 (June 2026)
 mise:
   - Take the filo out of the refrigerator 30 minutes ahead – cold sheets break when unfolded.
   - Melt half of the butter and let it cool slightly; you will need the other half at the end.
@@ -180,7 +188,7 @@ allergens:
   - Milk and dairy
 translation:
   status: published
-  sourceHash: 5025aa5f10ddb96a
+  sourceHash: a63011cecbeb283a
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-20
