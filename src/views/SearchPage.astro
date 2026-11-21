@@ -17,8 +17,10 @@ const filterNames = ['category', 'cuisine', 'difficulty', 'method', 'time', 'tag
       <button class="btn" type="submit">{t(locale, 'search.button')}</button>
       <button class="btn secondary" type="button" id="search-clear" hidden>{t(locale, 'search.clear')}</button>
     </form>
-    <fieldset class="search-filters" id="search-filters" hidden>
-      <legend>{t(locale, 'search.filters')}</legend>
+    <details class="filters-panel" id="filters-panel" hidden>
+      <summary><span>{t(locale, 'search.filters')}</span> <span class="filters-count" id="filters-count"></span></summary>
+    <fieldset class="search-filters" id="search-filters">
+      <legend class="sr-only">{t(locale, 'search.filters')}</legend>
       {filterNames.map((n) => (
         <div class="search-filter">
           <label for={`f-${n}`}>{t(locale, `search.filter.${n}` as any)}</label>
@@ -27,6 +29,7 @@ const filterNames = ['category', 'cuisine', 'difficulty', 'method', 'time', 'tag
       ))}
       <button class="btn secondary" type="button" id="filters-reset">{t(locale, 'search.reset')}</button>
     </fieldset>
+    </details>
     <p class="muted" id="search-status" role="status" aria-live="polite"></p>
     <ol class="results" id="search-results"></ol>
     <noscript><p set:html={t(locale, 'search.noscript', { recipes: href(locale, 'recipes'), categories: href(locale, 'categories') })} /></noscript>
@@ -39,6 +42,10 @@ const filterNames = ['category', 'cuisine', 'difficulty', 'method', 'time', 'tag
   const input = form.querySelector<HTMLInputElement>('#q')!;
   const clearBtn = document.getElementById('search-clear') as HTMLButtonElement;
   const box = document.getElementById('search-filters') as HTMLFieldSetElement;
+  const panel = document.getElementById('filters-panel') as HTMLDetailsElement;
+  const countEl = document.getElementById('filters-count')!;
+  // На широк екран филтрите са отворени; на телефон са сгънати под „Филтри“, за да не избутват резултатите.
+  panel.open = window.matchMedia('(min-width: 48rem)').matches;
   const resetBtn = document.getElementById('filters-reset') as HTMLButtonElement;
   const selects = [...box.querySelectorAll<HTMLSelectElement>('select[data-filter]')];
   const status = document.getElementById('search-status')!;
@@ -152,7 +159,10 @@ const filterNames = ['category', 'cuisine', 'difficulty', 'method', 'time', 'tag
     // Без дума – азбучен списък по заглавие; с дума – по значимост. Филтрите се прилагат и в двата случая.
     const res = await pf.search(q || null, { filters: f, ...(q ? {} : { sort: { title: 'asc' } }) });
     if (my !== seq) return;
-    box.hidden = false;
+    panel.hidden = false;
+    const active = Object.keys(f).length;
+    countEl.textContent = active ? `(${active})` : '';
+    if (active) panel.open = true; // избраните филтри (напр. от споделен адрес) винаги се виждат
     fillFilters(res.filters ?? {}, f);
     const total = res.results.length;
     const data = await Promise.all(res.results.slice(0, PAGE).map((r: any) => r.data()));
