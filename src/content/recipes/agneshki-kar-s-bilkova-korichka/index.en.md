@@ -98,7 +98,7 @@ ingredients:
         amount: 30
         unit: g
         scale: true
-      - name: sprigs of rosemary
+      - name: rosemary
         amount: 2
         unit: sprig
         scale: true
@@ -188,7 +188,7 @@ ingredients:
         amount: 500
         unit: ml
         scale: true
-      - name: sprigs of rosemary
+      - name: rosemary
         amount: 2
         unit: sprig
         scale: true

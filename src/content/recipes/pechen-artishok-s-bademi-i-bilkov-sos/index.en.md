@@ -91,7 +91,7 @@ ingredients:
         amount: 100
         unit: ml
         scale: true
-      - name: sprigs of thyme
+      - name: thyme
         amount: 3
         unit: sprig
         scale: true
@@ -116,11 +116,11 @@ ingredients:
         scale: false
   - title: For the herb sauce
     items:
-      - name: bunch of parsley
+      - name: parsley
         amount: 1
         unit: bunch
         scale: true
-      - name: bunch of basil
+      - name: basil
         amount: 1
         unit: bunch
         scale: true

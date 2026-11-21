@@ -90,7 +90,7 @@ ingredients:
         amount: 2
         unit: tbsp
         scale: true
-      - name: sprigs of thyme
+      - name: thyme
         amount: 4
         unit: sprig
         scale: true

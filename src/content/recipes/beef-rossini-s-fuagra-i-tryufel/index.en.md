@@ -111,7 +111,7 @@ ingredients:
         amount: 20
         unit: g
         scale: true
-      - name: sprigs of thyme
+      - name: thyme
         amount: 2
         unit: sprig
         scale: true
