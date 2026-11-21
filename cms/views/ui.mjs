@@ -33,7 +33,7 @@ export function layout({ title, body, user, csrf, active, scripts = [], badges =
 <a class="skip" href="#main">Към съдържанието</a>
 <div class="shell">
   <aside class="side">
-    <a class="brand" href="/admin">Модерна българска кухня и Мишлен щрих<small>Администрация</small></a>
+    <a class="brand" href="/admin">Модерна кухня с Мишлен щрих<small>Администрация</small></a>
     <nav aria-label="Администрация"><ul class="nav">${nav}</ul></nav>
     <div class="side-foot">
       <a class="btn ghost small" href="/" target="_blank" rel="noopener">Към сайта ↗</a>
