@@ -1,0 +1,74 @@
+{
+  "slug": "morski-nozhcheta-s-limonovo-maslo-i-vodorasli",
+  "photos": {
+    "01-morski-stapka-1.webp": {
+      "sourceName": "Rustic Razor Clam Seafood Platter-3.webp",
+      "sourceSha256": "132c3d324e353b11668528e9f40b829fc1025fb8b3ef16c984b406c884e219fb",
+      "sourceIdx": 3128,
+      "sourceBytes": 2025366,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 10,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-morski-stapka-3.webp": {
+      "sourceName": "Razor Clam Preparation on Slate-9.webp",
+      "sourceSha256": "41e100d7aac8c7dc95bfa9eed6001ead0996dd593b264ad6d1142ec19e147659",
+      "sourceIdx": 3134,
+      "sourceBytes": 1846258,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 10,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "03-morski-stapka-5.webp": {
+      "sourceName": "Gourmet Razor Clams with Charred Lemon-15.webp",
+      "sourceSha256": "963feffe66e3877dc2dec3a17961ac66c889d92ddb84882d04b14f5e82d417d7",
+      "sourceIdx": 3140,
+      "sourceBytes": 2107372,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 10,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "04-morski-stapka-6.webp": {
+      "sourceName": "Gourmet Razor Clam with Seaweed-18.webp",
+      "sourceSha256": "be4abcd37c01a9a797c1e52d58d9f9655e899777d4aacb9d058c1156b6938ff8",
+      "sourceIdx": 3143,
+      "sourceBytes": 1804038,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 10,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "05-dopalnitelen-1.webp": {
+      "sourceName": "Rustic Razor Clam Feast-6.webp",
+      "sourceSha256": "45253bc98491b7c8f935d227d48838c28f28347e6cf07eb9cf07fe2bfeacc6d9",
+      "sourceIdx": 3131,
+      "sourceBytes": 1850730,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 10,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "06-gotovo-yastie.webp": {
+      "sourceName": "Macro Razor Clams with Lemon Herbs-12.webp",
+      "sourceSha256": "063b0b43c4c642ec510234d6f4ffee111ff2d254e9f54e97e4aac31a76de9389",
+      "sourceIdx": 3137,
+      "sourceBytes": 1804772,
+      "sourceSize": "1536x1024",
+      "role": "hero",
+      "batch": 10,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    }
+  },
+  "generatedHash": "5cddf016b17f65afbb76c80b09bb44a1979dd193fe541f125502080f2c4a8913",
+  "excludedSources": [],
+  "importedAt": "2026-11-21T12:35:35.809Z"
+}

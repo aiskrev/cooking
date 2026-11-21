@@ -76,7 +76,8 @@
     "Единични кадри": "Single frames",
     "Втора сесия": "Second session",
     "Допълнителна снимка (непотвърден произход)": "Additional photo (unconfirmed origin)",
-    "Фотосесия 3 (ноември 2026)": "Photo session 3 (November 2026)"
+    "Фотосесия 3 (ноември 2026)": "Photo session 3 (November 2026)",
+    "Фотосесия 4 (ноември 2026)": "Photo session 4 (November 2026)"
   },
   "tag": {
     "агнешко": "lamb",
@@ -290,6 +291,34 @@
     "Шварцвалд": "Black Forest",
     "сорбе": "sorbet",
     "бял шоколад": "white chocolate",
-    "кокос": "coconut"
+    "кокос": "coconut",
+    "тимусни жлези": "sweetbreads",
+    "токачка": "guinea fowl",
+    "кестени": "chestnuts",
+    "савойско зеле": "savoy cabbage",
+    "конфи": "confit",
+    "черен корен": "salsify",
+    "свинска гърда": "pork belly",
+    "ананас": "pineapple",
+    "джинджифил": "ginger",
+    "кафе": "coffee",
+    "пащърнак": "parsnip",
+    "дюли": "quince",
+    "градински чай": "sage",
+    "ромеско": "romesco",
+    "маслини": "olives",
+    "морски дявол": "monkfish",
+    "чоризо": "chorizo",
+    "барбуня": "red mullet",
+    "буябес": "bouillabaisse",
+    "руй": "rouille",
+    "скумрия": "mackerel",
+    "цариградско грозде": "gooseberries",
+    "морски ножчета": "razor clams",
+    "водорасли": "seaweed",
+    "заешко": "rabbit",
+    "сушени сливи": "prunes",
+    "арманяк": "Armagnac",
+    "морски език": "Dover sole"
   }
 }
