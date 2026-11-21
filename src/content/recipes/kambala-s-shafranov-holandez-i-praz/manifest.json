@@ -1,0 +1,140 @@
+{
+  "slug": "kambala-s-shafranov-holandez-i-praz",
+  "photos": {
+    "01-kambala-stapka-1.webp": {
+      "sourceName": "Luxurious Turbot Feast Ingredients-2.webp",
+      "sourceSha256": "14aba0cfcc5e1f73e618e1191546e4eac90d8bdca2311ce9f4bb79e738efb6b6",
+      "sourceIdx": 2098,
+      "sourceBytes": 2063086,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 10,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-kambala-stapka-2.webp": {
+      "sourceName": "Luxury Fish Preparation on Marble Countertop-3.webp",
+      "sourceSha256": "42eceb03b3ce9ff9fbe0606a000052e1eae284cb40e6c7403bcf9c4f1b325a92",
+      "sourceIdx": 2099,
+      "sourceBytes": 1744962,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 10,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "03-kambala-stapka-3.webp": {
+      "sourceName": "Chef’s Salted Fish Fillet Preparation-6.webp",
+      "sourceSha256": "3b53c18380e722e955af57b8362fb8db40efa8fa184213e6ad82404e726f6b97",
+      "sourceIdx": 2102,
+      "sourceBytes": 1730574,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 10,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "04-kambala-stapka-4.webp": {
+      "sourceName": "Butter-Basted Golden Seared Fish-7.webp",
+      "sourceSha256": "3c8da9cee53ee1766c695c517b35b969d09c0b9324d630837bbe10b2f9eb84e8",
+      "sourceIdx": 2103,
+      "sourceBytes": 1829584,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 10,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "05-kambala-stapka-5.webp": {
+      "sourceName": "Seared Leeks with Herb Oil and Potato-9.webp",
+      "sourceSha256": "31c1cd399d783edd8b93a074492a38c84f25e842437abafac9b5b5d8fc87fcd1",
+      "sourceIdx": 2105,
+      "sourceBytes": 1524662,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 10,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "06-kambala-stapka-6.webp": {
+      "sourceName": "Saffron Hollandaise in Copper Pan-11.webp",
+      "sourceSha256": "9556f2eb462613eb801836a307924bd86578b89d09af8c68e4074df3685b12df",
+      "sourceIdx": 2107,
+      "sourceBytes": 1609094,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 10,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "07-kambala-stapka-7.webp": {
+      "sourceName": "Gourmet Turbot Mise en Place-10.webp",
+      "sourceSha256": "1780f6a346342198bc778c587c97fe247d4f57fe26f3d0fd16c113c596ef8d3b",
+      "sourceIdx": 2106,
+      "sourceBytes": 1839098,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 10,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "08-dopalnitelen-1.webp": {
+      "sourceName": "Gourmet Flatfish Mise en Place-1.webp",
+      "sourceSha256": "223347723eb3b588bd8bde50660dcd96b24d01ef8ff8e7b81e1576a20dc07d2f",
+      "sourceIdx": 2097,
+      "sourceBytes": 1850752,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 10,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "09-dopalnitelen-2.webp": {
+      "sourceName": "Gourmet Fish Preparation Mise en Place-4.webp",
+      "sourceSha256": "4531e0d63ac6fb40a96de979d1137e50645f4bbbe7ff01b0395fafeca57eec0b",
+      "sourceIdx": 2100,
+      "sourceBytes": 1781882,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 10,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "10-dopalnitelen-3.webp": {
+      "sourceName": "Gourmet Flatfish Preparation with Lemon and Thyme-5.webp",
+      "sourceSha256": "22e759a944fe5e47f3e5b56c42556bcbe50c1cff151d54c8741d9bde39b61d47",
+      "sourceIdx": 2101,
+      "sourceBytes": 1881888,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 10,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "11-dopalnitelen-4.webp": {
+      "sourceName": "Butter-Basted Golden Seared Fish-8.webp",
+      "sourceSha256": "dff744814144c88dc814aa82bcb8c35d6850fc8f8c5891aacbaa6a3c4612a455",
+      "sourceIdx": 2104,
+      "sourceBytes": 1861566,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 10,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "12-dopalnitelen-5.webp": {
+      "sourceName": "Saffron Sauce in the Making-12.webp",
+      "sourceSha256": "bca52c19c7625cd9611213c844931b616f0e63a5bf563924e8dc271aeedd4bfd",
+      "sourceIdx": 2108,
+      "sourceBytes": 1603266,
+      "sourceSize": "1535x1024",
+      "role": "extra",
+      "batch": 10,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    }
+  },
+  "generatedHash": "7b537753d3460ff09c41daa635fdbf7823430cc5c309cc0d72cbc94384af88d3",
+  "excludedSources": [],
+  "importedAt": "2026-11-21T06:46:55.611Z"
+}

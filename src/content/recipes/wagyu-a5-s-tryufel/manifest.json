@@ -1,0 +1,239 @@
+{
+  "slug": "wagyu-a5-s-tryufel",
+  "photos": {
+    "01-wagyu-stapka-1.webp": {
+      "sourceName": "Wagyu, Truffles, and Marrow Feast-1.webp",
+      "sourceSha256": "af7148bc24448493ca47c71857d8943994be8aab923b046176efc620413c9852",
+      "sourceIdx": 2002,
+      "sourceBytes": 1917746,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 1,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-wagyu-stapka-2.webp": {
+      "sourceName": "Wagyu Steak Trimming in a Gourmet Kitchen-6.webp",
+      "sourceSha256": "1f96d306089c8fde7f7efb6bb76a0aa07a5094bcce0fabbe0603c225fecc9050",
+      "sourceIdx": 2007,
+      "sourceBytes": 1661404,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 1,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "03-wagyu-stapka-3.webp": {
+      "sourceName": "Gourmet Celeriac Purée Mise en Place-10.webp",
+      "sourceSha256": "3548afaa19133d729b88bc741efc4de43059212f876a712085b3e2bc84981f15",
+      "sourceIdx": 2011,
+      "sourceBytes": 1901094,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 1,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "04-wagyu-stapka-4.webp": {
+      "sourceName": "Gourmet Mise en Place Overhead-9.webp",
+      "sourceSha256": "c65af098e9afa43be40cb001c1f5ccb2d52e221da55eaaacabbf04ffe97f69fb",
+      "sourceIdx": 2010,
+      "sourceBytes": 2065318,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 1,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "05-wagyu-stapka-5.webp": {
+      "sourceName": "Gourmet Mise en Place_ Celeriac, Leeks, and Black Garlic-8.webp",
+      "sourceSha256": "5f634d72ac5a63d7353d487ec45b09a2f00af353cd60166cb2ab5e5ac6b1967a",
+      "sourceIdx": 2021,
+      "sourceBytes": 1839430,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 2,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "06-wagyu-stapka-6.webp": {
+      "sourceName": "Bone Marrow Wine Jus Reduction-11.webp",
+      "sourceSha256": "914dcdaf3aa441d7bcc665341f6c0aacfa0b2eae76144794d25ceb979a19f336",
+      "sourceIdx": 2012,
+      "sourceBytes": 1811432,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 1,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "07-wagyu-stapka-7.webp": {
+      "sourceName": "Butter-Basted Steak in a Skillet-7.webp",
+      "sourceSha256": "5d6ee737fed63f0f4efffdee1102ac6f516832cc4bd9f089d72b21c4c66f6713",
+      "sourceIdx": 2008,
+      "sourceBytes": 1827422,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 1,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "08-wagyu-stapka-8.webp": {
+      "sourceName": "Butter-Basted Wagyu Steak with Thyme-8.webp",
+      "sourceSha256": "6d2ca2f4b0502a08e81737b83ef980463f87025f62f087372d83a044a2fe2d1d",
+      "sourceIdx": 2009,
+      "sourceBytes": 1866380,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 1,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "09-wagyu-stapka-9.webp": {
+      "sourceName": "Luxurious Wagyu Steak with Truffle and Leek.webp",
+      "sourceSha256": "e7d2f4ceb25f0d622153df414e81775d053ce57cdf260f5bcda70699b719f2ff",
+      "sourceIdx": 2001,
+      "sourceBytes": 1654838,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 0,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "10-dopalnitelen-1.webp": {
+      "sourceName": "Gourmet Wagyu Mise en Place-2.webp",
+      "sourceSha256": "699a71a3fab8c74c6a1c1c0510a6f710cde407888fa6225732a4b084a9e6788c",
+      "sourceIdx": 2003,
+      "sourceBytes": 1913238,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 1,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "11-dopalnitelen-2.webp": {
+      "sourceName": "Gourmet Wagyu Mise en Place-3.webp",
+      "sourceSha256": "a7e661bb4c7ca4010d34c333a3334035580379e65ae95f6d5f2d0e5af3b0e0ba",
+      "sourceIdx": 2004,
+      "sourceBytes": 2176662,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 1,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "12-dopalnitelen-3.webp": {
+      "sourceName": "Luxury Wagyu Mise en Place-4.webp",
+      "sourceSha256": "d94c534b11832cb5542ab7bc0c1be94ceeb667095e5bd2d98cbdbc50f6ddcfe1",
+      "sourceIdx": 2005,
+      "sourceBytes": 2001850,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 1,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "13-dopalnitelen-4.webp": {
+      "sourceName": "Wagyu Steak Seasoning in a Gourmet Kitchen-5.webp",
+      "sourceSha256": "6ec1e6e6b9b752a11ddcb8bd7aec80bf3c0656539adf29595a0f2117540b0bac",
+      "sourceIdx": 2006,
+      "sourceBytes": 1626006,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 1,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "14-dopalnitelen-5.webp": {
+      "sourceName": "Glazed Bone Marrow Reduction Sauce-12.webp",
+      "sourceSha256": "38a9f4f61e05334dc5dbfb0558024726be89f9cd5a94eeec27d03481d1667248",
+      "sourceIdx": 2013,
+      "sourceBytes": 1550266,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 1,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "15-dopalnitelen-6.webp": {
+      "sourceName": "Luxury Wagyu Truffle Mise en Place-1.webp",
+      "sourceSha256": "5ed33e84cbb1225814f5cdd4c5ec27f665b9b9cbf3e3aea1cee894743e6e18ef",
+      "sourceIdx": 2014,
+      "sourceBytes": 1963784,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 2,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "16-dopalnitelen-7.webp": {
+      "sourceName": "Luxurious Wagyu Mise en Place-3.webp",
+      "sourceSha256": "60aa968fcfbf22a564a24dcfd1f64b529e4a7e8b34c03e0dffe3a8684a9f9a9a",
+      "sourceIdx": 2016,
+      "sourceBytes": 2057158,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 2,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "17-dopalnitelen-8.webp": {
+      "sourceName": "Gourmet Wagyu Mise en Scène-4.webp",
+      "sourceSha256": "1d873d77db2bec9f8d0c0fcdc945d471b4bdbf15696b0aa428079afaa2ac7e78",
+      "sourceIdx": 2017,
+      "sourceBytes": 1928274,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 2,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "18-dopalnitelen-9.webp": {
+      "sourceName": "Gourmet Wagyu Mise en Place-5.webp",
+      "sourceSha256": "6ccfcd37cf069ed290104ae8351dd5b16798e0f2b956abee2e1bd8bb4bfa66c6",
+      "sourceIdx": 2018,
+      "sourceBytes": 1778196,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 2,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "19-dopalnitelen-10.webp": {
+      "sourceName": "Wagyu and Truffle Mise en Place-6.webp",
+      "sourceSha256": "08d045c98688bb128f80e68f41ef6419868c7b29345a2ef69f3b7beac0e3ccb8",
+      "sourceIdx": 2019,
+      "sourceBytes": 1834732,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 2,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "20-dopalnitelen-11.webp": {
+      "sourceName": "Wagyu Steak Mise en Place-7.webp",
+      "sourceSha256": "ad2b2b5dd97eb8502ab83703d71cc5ab3680c1e88d4e4b960887f3cc2bf93861",
+      "sourceIdx": 2020,
+      "sourceBytes": 1755920,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 2,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "21-dopalnitelen-12.webp": {
+      "sourceName": "Glistening Marrow Sauce with Thyme-9.webp",
+      "sourceSha256": "925846ab5088c1ecaf8bed033fbab18d1499a77acfdaeedf33c891750b374842",
+      "sourceIdx": 2022,
+      "sourceBytes": 1685600,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 2,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    }
+  },
+  "generatedHash": "daa0e69456177d7205e92bb6813d592981445aad23b800aa7fdb1ef9b3207d20",
+  "excludedSources": [],
+  "importedAt": "2026-11-21T06:46:53.652Z"
+}

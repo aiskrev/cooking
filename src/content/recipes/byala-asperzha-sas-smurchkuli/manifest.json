@@ -1,0 +1,151 @@
+{
+  "slug": "byala-asperzha-sas-smurchkuli",
+  "photos": {
+    "01-byala-stapka-1.webp": {
+      "sourceName": "Gourmet Asparagus and Morel Ingredients-6.webp",
+      "sourceSha256": "f2a6c6bae5d47789bc9e13f32d27aebe1b0ca02c5fb821ae5317a5509f8ea7fb",
+      "sourceIdx": 2151,
+      "sourceBytes": 1758310,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 14,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-byala-stapka-2.webp": {
+      "sourceName": "Professional Asparagus Peeling Prep-8.webp",
+      "sourceSha256": "159840154139663329b53e0d205973b539abe8273596b1d9150de3fb766d79ac",
+      "sourceIdx": 2153,
+      "sourceBytes": 1494008,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 14,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "03-byala-stapka-3.webp": {
+      "sourceName": "Gourmet White Asparagus Preparation-9.webp",
+      "sourceSha256": "a02ebfbb6c0f8f206720a40bc967df74717bba0109304d751149051794adab46",
+      "sourceIdx": 2154,
+      "sourceBytes": 1604320,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 14,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "04-byala-stapka-4.webp": {
+      "sourceName": "Golden Buttered Asparagus Broth-10.webp",
+      "sourceSha256": "4b70690354431860cc774dd4eaf0b12f71bbe13d3826460c2a0108b0e2049171",
+      "sourceIdx": 2155,
+      "sourceBytes": 1409752,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 14,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "05-byala-stapka-5.webp": {
+      "sourceName": "Golden Butter-Sautéed Morels with Tarragon-13.webp",
+      "sourceSha256": "d0f49edf4e7e764612e6d0ae3c566c54a9eed7efa1ab7ecac10bcff6955f445c",
+      "sourceIdx": 2158,
+      "sourceBytes": 1982918,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 14,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "06-byala-stapka-6.webp": {
+      "sourceName": "Creamy Morel Mushroom Sauce-14.webp",
+      "sourceSha256": "39f4d4fe2bb955027ae510dba0f5ea30697bb529e4882678b3a1466aa42cea4a",
+      "sourceIdx": 2159,
+      "sourceBytes": 1875316,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 14,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "07-byala-stapka-7.webp": {
+      "sourceName": "Buttery White Asparagus with Tarragon-11.webp",
+      "sourceSha256": "c30324a51979e76aa25304bcc508f82873d5baf73d7f4a422f0a668009c5c4ac",
+      "sourceIdx": 2156,
+      "sourceBytes": 1494406,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 14,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "08-dopalnitelen-1.webp": {
+      "sourceName": "Rustic Asparagus Mise en Place-1.webp",
+      "sourceSha256": "19dd3b6cccdf705123a6b8454bfedb308f92a2d2f70bb54bad7ba89398c63e9e",
+      "sourceIdx": 2146,
+      "sourceBytes": 1759076,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 14,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "09-dopalnitelen-2.webp": {
+      "sourceName": "Golden Wine Pour Over Morels-2.webp",
+      "sourceSha256": "a730b0ea51bb5c5dcfcbc79fec019323e834e381cb1420d7f84017bdc9ef5e56",
+      "sourceIdx": 2147,
+      "sourceBytes": 1599242,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 14,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "10-dopalnitelen-3.webp": {
+      "sourceName": "Gourmet Asparagus and Morel Still Life-4.webp",
+      "sourceSha256": "88d31035f4e79f43940fa53e5b09da9ef0ad5ab3c47b81b44e346889ee8229ae",
+      "sourceIdx": 2149,
+      "sourceBytes": 1802382,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 14,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "11-dopalnitelen-4.webp": {
+      "sourceName": "Buttery Morels with Fresh Herbs-12.webp",
+      "sourceSha256": "380a74f12544796bd3d608aecedf1e355471f00ead369e40f66f65250220d34a",
+      "sourceIdx": 2157,
+      "sourceBytes": 1666462,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 14,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "12-dopalnitelen-5.webp": {
+      "sourceName": "Creamy Morels in Copper Pan-15.webp",
+      "sourceSha256": "57d3bf539a7d2df9b3b500a99f7e1d1aaf5f083733623cdf9cf933a67266f55d",
+      "sourceIdx": 2160,
+      "sourceBytes": 1587926,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 14,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "13-gotovo-yastie.webp": {
+      "sourceName": "Rustic Asparagus and Morel Mise en Place-7.webp",
+      "sourceSha256": "b6485ceaa27ade62f8a37e835c1d15308a34695ee6851d14c19668964b590be2",
+      "sourceIdx": 2152,
+      "sourceBytes": 1936924,
+      "sourceSize": "1536x1024",
+      "role": "hero",
+      "batch": 14,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    }
+  },
+  "generatedHash": "fbcb3c87b18e645dea503d732813e276500e17de7140b17a67aa2b1232219f72",
+  "excludedSources": [],
+  "importedAt": "2026-11-21T06:46:55.769Z"
+}

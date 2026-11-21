@@ -1,0 +1,140 @@
+{
+  "slug": "pudpudak-s-artishok-i-tsitrus",
+  "photos": {
+    "01-pudpudak-stapka-1.webp": {
+      "sourceName": "Rustic Quail Gourmet Mise en Place-1.webp",
+      "sourceSha256": "efaa61c295a032af1863191fc26f7bb687f98d9dd2b8f73a1495c995a7ca4b5b",
+      "sourceIdx": 2122,
+      "sourceBytes": 1899154,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 12,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-pudpudak-stapka-2.webp": {
+      "sourceName": "Culinary Artistry_ Preparing Quail and Artichokes-5.webp",
+      "sourceSha256": "f880cbef7ec634aacd4bd78132fc3d966c4e67e27715efafdd331a6ca318460a",
+      "sourceIdx": 2126,
+      "sourceBytes": 1766778,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 12,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "03-pudpudak-stapka-3.webp": {
+      "sourceName": "Gourmet Quail Mise en Place-6.webp",
+      "sourceSha256": "92f36b161a2cc274c3cfeaf57f14bfa022d6fb0c48bbae2eb583f41e888dc888",
+      "sourceIdx": 2127,
+      "sourceBytes": 1723388,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 12,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "04-pudpudak-stapka-4.webp": {
+      "sourceName": "Sizzling Herb-Butter Seared Quail-7.webp",
+      "sourceSha256": "6c9c085add034d8ba54cfa755e92ab53981b80624a97b92312d2961f89f5a4f3",
+      "sourceIdx": 2128,
+      "sourceBytes": 1774328,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 12,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "05-pudpudak-stapka-5.webp": {
+      "sourceName": "Buttery Basted Quail in the Skillet-8.webp",
+      "sourceSha256": "d254a9e056c8179fc4b4064fab39ca0774d1f55f2c36c527d1bf55be27d5c8a0",
+      "sourceIdx": 2129,
+      "sourceBytes": 1749580,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 12,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "06-pudpudak-stapka-6.webp": {
+      "sourceName": "Gourmet Citrus and Artichoke Sauce Mise en Place-12.webp",
+      "sourceSha256": "a346e433f998f0ef16eb3bf91db65d261de771d26383eed1edd41faaa3cecf00",
+      "sourceIdx": 2133,
+      "sourceBytes": 1892394,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 12,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "07-pudpudak-stapka-7.webp": {
+      "sourceName": "Roasted Quail with Artichoke and Citrus-2.webp",
+      "sourceSha256": "28b78d9a584652fd2be7df9dde36768fdc86f992881542df2a64aa5089fc7f55",
+      "sourceIdx": 2123,
+      "sourceBytes": 1894498,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 12,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "08-dopalnitelen-1.webp": {
+      "sourceName": "Gourmet Quail Mise en Place-3.webp",
+      "sourceSha256": "e31746eba27c0025517fb3f0c0732c20e123893763b0f5fd97db52af5b0056bd",
+      "sourceIdx": 2124,
+      "sourceBytes": 1974470,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 12,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "09-dopalnitelen-2.webp": {
+      "sourceName": "Moody Quail Mise en Place-4.webp",
+      "sourceSha256": "c50424a31b54f2619acfc68823dba9b24df96aca385c3844d1cbb8bd26d85340",
+      "sourceIdx": 2125,
+      "sourceBytes": 2052812,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 12,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "10-dopalnitelen-3.webp": {
+      "sourceName": "Golden Roasted Quails in Browned Butter-9.webp",
+      "sourceSha256": "88f021b50cb5278ee6db856d373832295cdd1b75afc38c20d65cded0cc298b7d",
+      "sourceIdx": 2130,
+      "sourceBytes": 2169318,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 12,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "11-dopalnitelen-4.webp": {
+      "sourceName": "Golden Butter-Basted Roast Bird-10.webp",
+      "sourceSha256": "c9a8319af82220f9b9d6ad54f25b0acdf482dfca03b47e6f709964c2e6f5dd89",
+      "sourceIdx": 2131,
+      "sourceBytes": 1955736,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 12,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "12-dopalnitelen-5.webp": {
+      "sourceName": "Bubbling Copper Saucepan Mise en Place-11.webp",
+      "sourceSha256": "29db112ce803d2faa21d814e1c97c3a3192be2fb72e03a780a3771d05e8527de",
+      "sourceIdx": 2132,
+      "sourceBytes": 1687578,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 12,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    }
+  },
+  "generatedHash": "fabdb9ee1895175013b8524fa0c5ba314e296486b07f9318044601a03fd850ce",
+  "excludedSources": [],
+  "importedAt": "2026-11-21T07:24:53.166Z"
+}

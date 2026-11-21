@@ -3,6 +3,7 @@ import Base from '../layouts/Base.astro';
 import { href, t, type Locale } from '../i18n';
 interface Props { locale: Locale }
 const { locale } = Astro.props;
+const filterNames = ['category', 'cuisine', 'difficulty', 'method', 'time', 'tag'] as const;
 ---
 <Base locale={locale} title={t(locale, 'search.title')} description={t(locale, 'search.description')} alt={{ bg: href('bg', 'search'), en: href('en', 'search') }}>
   <div class="wrap">
@@ -12,9 +13,20 @@ const { locale } = Astro.props;
     </div>
     <form class="search-form" role="search" action={href(locale, 'search')} method="get" data-search-form>
       <label for="q">{t(locale, 'search.label')}</label>
-      <input id="q" name="q" type="search" autocomplete="off" enterkeyhint="search" />
+      <input id="q" name="q" type="search" autocomplete="off" enterkeyhint="search" placeholder={t(locale, 'search.placeholder')} />
       <button class="btn" type="submit">{t(locale, 'search.button')}</button>
+      <button class="btn secondary" type="button" id="search-clear" hidden>{t(locale, 'search.clear')}</button>
     </form>
+    <fieldset class="search-filters" id="search-filters" hidden>
+      <legend>{t(locale, 'search.filters')}</legend>
+      {filterNames.map((n) => (
+        <div class="search-filter">
+          <label for={`f-${n}`}>{t(locale, `search.filter.${n}` as any)}</label>
+          <select id={`f-${n}`} data-filter={n}><option value="">{t(locale, 'search.filter.any')}</option></select>
+        </div>
+      ))}
+      <button class="btn secondary" type="button" id="filters-reset">{t(locale, 'search.reset')}</button>
+    </fieldset>
     <p class="muted" id="search-status" role="status" aria-live="polite"></p>
     <ol class="results" id="search-results"></ol>
     <noscript><p set:html={t(locale, 'search.noscript', { recipes: href(locale, 'recipes'), categories: href(locale, 'categories') })} /></noscript>
@@ -22,14 +34,21 @@ const { locale } = Astro.props;
 </Base>
 
 <script>
-  import { tc, locale } from '../i18n/client';
+  import { tc, locale, intl } from '../i18n/client';
   const form = document.querySelector<HTMLFormElement>('[data-search-form]')!;
   const input = form.querySelector<HTMLInputElement>('#q')!;
+  const clearBtn = document.getElementById('search-clear') as HTMLButtonElement;
+  const box = document.getElementById('search-filters') as HTMLFieldSetElement;
+  const resetBtn = document.getElementById('filters-reset') as HTMLButtonElement;
+  const selects = [...box.querySelectorAll<HTMLSelectElement>('select[data-filter]')];
   const status = document.getElementById('search-status')!;
   const list = document.getElementById('search-results')!;
+  const PAGE = 30;
+  const TIME_ORDER = ['search.time.1', 'search.time.2', 'search.time.3', 'search.time.4'].map((k) => tc(k as any));
 
   let pagefind: any = null;
   let timer: number | undefined;
+  let seq = 0; // отхвърля закъснели отговори
 
   async function load() {
     if (pagefind) return pagefind;
@@ -60,52 +79,96 @@ const { locale } = Astro.props;
     return out;
   }
 
-  async function run(q: string) {
-    list.replaceChildren();
-    q = q.trim();
-    if (!q) { status.textContent = ''; return; }
-    const pf = await load();
-    if (!pf) return;
-    status.textContent = tc('search.loading');
-    const res = await pf.search(q);
-    const data = await Promise.all(res.results.slice(0, 30).map((r: any) => r.data()));
-    status.textContent = data.length
-      ? tc('search.found', { n: res.results.length })
-      : tc('search.none', { q });
-    for (const d of data) {
-      const li = document.createElement('li');
-      li.className = 'result';
-      const img = document.createElement('img');
-      img.alt = '';
-      img.width = 96; img.height = 96;
-      img.loading = 'lazy';
-      if (d.meta?.image) img.src = d.meta.image;
-      else img.hidden = true;
-      const box = document.createElement('div');
-      const h = document.createElement('h2');
-      const a = document.createElement('a');
-      a.href = d.url;
-      a.textContent = d.meta?.title ?? d.url;
-      h.appendChild(a);
-      const p = document.createElement('p');
-      p.append(...excerptNodes(d.excerpt ?? ''));
-      box.append(h, p);
-      li.append(img, box);
-      list.appendChild(li);
+  const activeFilters = () => Object.fromEntries(selects.filter((s) => s.value).map((s) => [s.dataset.filter!, s.value]));
+
+  /** Попълва падащите списъкове с налични стойности и брой рецепти; запазва избора. */
+  function fillFilters(avail: Record<string, Record<string, number>>, keep: Record<string, string>) {
+    for (const s of selects) {
+      const name = s.dataset.filter!;
+      const values = Object.entries(avail[name] ?? {});
+      if (name === 'time') values.sort((a, b) => TIME_ORDER.indexOf(a[0]) - TIME_ORDER.indexOf(b[0]));
+      else values.sort((a, b) => a[0].localeCompare(b[0], intl));
+      const cur = keep[name] ?? '';
+      s.replaceChildren(new Option(tc('search.filter.any'), ''));
+      for (const [v, n] of values) s.add(new Option(`${v} (${n})`, v));
+      if (cur && !values.some(([v]) => v === cur)) s.add(new Option(cur, cur)); // избор без резултати остава видим
+      s.value = cur;
+      s.closest('.search-filter')!.toggleAttribute('hidden', values.length === 0 && !cur);
     }
   }
 
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const q = input.value;
-    history.replaceState(null, '', q ? `?q=${encodeURIComponent(q)}` : location.pathname);
-    run(q);
-  });
-  input.addEventListener('input', () => {
-    clearTimeout(timer);
-    timer = window.setTimeout(() => run(input.value), 250);
-  });
+  function syncUrl(q: string, f: Record<string, string>) {
+    const p = new URLSearchParams();
+    if (q) p.set('q', q);
+    for (const [k, v] of Object.entries(f)) p.set(k, v);
+    const qs = p.toString();
+    history.replaceState(null, '', qs ? `?${qs}` : location.pathname);
+  }
 
-  const initial = new URLSearchParams(location.search).get('q');
-  if (initial) { input.value = initial; run(initial); }
+  function card(d: any) {
+    const li = document.createElement('li');
+    li.className = 'result';
+    const img = document.createElement('img');
+    img.alt = '';
+    img.width = 96; img.height = 96;
+    img.loading = 'lazy';
+    if (d.meta?.image) img.src = d.meta.image; else img.hidden = true;
+    const body = document.createElement('div');
+    const h = document.createElement('h2');
+    const a = document.createElement('a');
+    a.href = d.url;
+    a.textContent = d.meta?.title ?? d.url;
+    h.appendChild(a);
+    const facts = [d.meta?.category, d.meta?.time, d.meta?.difficulty].filter(Boolean);
+    body.append(h);
+    if (facts.length) {
+      const m = document.createElement('p');
+      m.className = 'result-meta';
+      m.textContent = facts.join(' · ');
+      body.append(m);
+    }
+    if (d.excerpt) {
+      const p = document.createElement('p');
+      p.append(...excerptNodes(d.excerpt));
+      body.append(p);
+    }
+    li.append(img, body);
+    return li;
+  }
+
+  async function run(opts: { sync?: boolean } = {}) {
+    const q = input.value.trim();
+    const f = activeFilters();
+    clearBtn.hidden = !q;
+    if (opts.sync !== false) syncUrl(q, f);
+    const my = ++seq;
+    const pf = await load();
+    if (!pf) return;
+    status.textContent = tc('search.loading');
+    // Без дума – азбучен списък по заглавие; с дума – по значимост. Филтрите се прилагат и в двата случая.
+    const res = await pf.search(q || null, { filters: f, ...(q ? {} : { sort: { title: 'asc' } }) });
+    if (my !== seq) return;
+    box.hidden = false;
+    fillFilters(res.filters ?? {}, f);
+    const total = res.results.length;
+    const data = await Promise.all(res.results.slice(0, PAGE).map((r: any) => r.data()));
+    if (my !== seq) return;
+    list.replaceChildren(...data.map(card));
+    if (!total) status.textContent = Object.keys(f).length ? tc('search.none.filters') : q ? tc('search.none', { q }) : tc('search.browse');
+    else status.textContent = total > PAGE ? tc('search.showing', { shown: PAGE, n: total }) : tc('search.found', { n: total });
+  }
+
+  form.addEventListener('submit', (e) => { e.preventDefault(); run(); });
+  input.addEventListener('input', () => { clearTimeout(timer); timer = window.setTimeout(run, 250); });
+  clearBtn.addEventListener('click', () => { input.value = ''; run(); input.focus(); });
+  for (const s of selects) s.addEventListener('change', () => run());
+  resetBtn.addEventListener('click', () => { for (const s of selects) s.value = ''; run(); });
+
+  // Начално състояние от адреса (споделяне на връзка): ?q=…&category=…&difficulty=…
+  const params = new URLSearchParams(location.search);
+  const initial = params.get('q') ?? '';
+  for (const s of selects) { const v = params.get(s.dataset.filter!); if (v) { s.add(new Option(v, v)); s.value = v; } }
+  if (initial) input.value = initial;
+  // Страницата показва филтрите и пълния списък веднага щом индексът е наличен.
+  run({ sync: false });
 </script>
