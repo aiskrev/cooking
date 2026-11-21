@@ -1,0 +1,118 @@
+{
+  "slug": "teleshko-file-i-timusni-zhlezi-sas-smrachkuli-i-grah",
+  "photos": {
+    "01-teleshko-stapka-1.webp": {
+      "sourceName": "Gourmet Veal Mise en Place-1.webp",
+      "sourceSha256": "bb53c3e33c527b1bc71a088b167cf6a2f3b9696f00db55dec0020549265a433a",
+      "sourceIdx": 3001,
+      "sourceBytes": 1906056,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 0,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-teleshko-stapka-2.webp": {
+      "sourceName": "Chef Preparing Veal and Sweetbreads-7.webp",
+      "sourceSha256": "27f15fe1592b8a148cf3cc1c225c071dd0f3d8f1518ec990468c3577995042b6",
+      "sourceIdx": 3007,
+      "sourceBytes": 1698346,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 0,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "03-teleshko-stapka-3.webp": {
+      "sourceName": "Chef’s Mise en Place_ Peas and Morels-10.webp",
+      "sourceSha256": "a76434df860da2c07e8240fee146c5ea1eb9e8d147752b5da048c465cd4d9907",
+      "sourceIdx": 3010,
+      "sourceBytes": 1819650,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 0,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "04-teleshko-stapka-6.webp": {
+      "sourceName": "Gourmet Mise en Place Tableau-6.webp",
+      "sourceSha256": "2586e0034a1a47c2b3ac72faf618b8f5bfb43b128b53a47ea42382b6373b5832",
+      "sourceIdx": 3006,
+      "sourceBytes": 1867646,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 0,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "05-teleshko-stapka-7.webp": {
+      "sourceName": "Golden Butter-Seared Medallions-8.webp",
+      "sourceSha256": "460b4f8de4e49d1a1b532d23345e2adcc001ba7a34c9e953545da5c28fbd520a",
+      "sourceIdx": 3008,
+      "sourceBytes": 1838360,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 0,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "06-teleshko-stapka-8.webp": {
+      "sourceName": "Crispy Thyme-Butter Seared Bites-9.webp",
+      "sourceSha256": "0d1d236901f0764f5592858da4060ea86ace3b286d2513ba051da71751377402",
+      "sourceIdx": 3009,
+      "sourceBytes": 2012368,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 0,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "07-teleshko-stapka-9.webp": {
+      "sourceName": "Gourmet Roast with Morels and Pea Purée-4.webp",
+      "sourceSha256": "7b859b78ee6208df1c00302f587f9c89b6f215844777a78a5077ee9b45df4f97",
+      "sourceIdx": 3004,
+      "sourceBytes": 1881014,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 0,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "08-dopalnitelen-1.webp": {
+      "sourceName": "Elegant Veal Roast Mise en Scène-2.webp",
+      "sourceSha256": "ec0098212b11d5cccdae6b6c70b5ac98bce5369f0ffa6fbe0deb2274a70627a8",
+      "sourceIdx": 3002,
+      "sourceBytes": 1914110,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 0,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "09-dopalnitelen-2.webp": {
+      "sourceName": "Gourmet Veal Roast Ingredients Still Life-3.webp",
+      "sourceSha256": "5716edd4b681814fc7e1fbbcbe9a2ff658b2fe00fef9ba88f66424e4559d90cf",
+      "sourceIdx": 3003,
+      "sourceBytes": 1994206,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 0,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "10-dopalnitelen-3.webp": {
+      "sourceName": "Gourmet Veal Mise en Place-5.webp",
+      "sourceSha256": "3d372143735dd8af7f95aac828089d1e83346057b88735a02164cafd6a53b859",
+      "sourceIdx": 3005,
+      "sourceBytes": 1952972,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 0,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    }
+  },
+  "generatedHash": "c89cdfff005a55f6efd22dd7ededde95762d68656b040fe00d193109dd6c41ee",
+  "excludedSources": [],
+  "importedAt": "2026-11-21T12:35:35.407Z"
+}
