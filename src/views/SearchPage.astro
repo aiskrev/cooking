@@ -34,7 +34,7 @@ const filterNames = ['category', 'cuisine', 'difficulty', 'method', 'time', 'tag
 </Base>
 
 <script>
-  import { tc, locale, intl } from '../i18n/client';
+  import { tc, locale } from '../i18n/client';
   const form = document.querySelector<HTMLFormElement>('[data-search-form]')!;
   const input = form.querySelector<HTMLInputElement>('#q')!;
   const clearBtn = document.getElementById('search-clear') as HTMLButtonElement;
@@ -47,6 +47,7 @@ const filterNames = ['category', 'cuisine', 'difficulty', 'method', 'time', 'tag
   const TIME_ORDER = ['search.time.1', 'search.time.2', 'search.time.3', 'search.time.4'].map((k) => tc(k as any));
 
   let pagefind: any = null;
+  let allFilters: Record<string, Record<string, number>> = {};
   let timer: number | undefined;
   let seq = 0; // отхвърля закъснели отговори
 
@@ -57,6 +58,8 @@ const filterNames = ['category', 'cuisine', 'difficulty', 'method', 'time', 'tag
       pagefind = await import(/* @vite-ignore */ url);
       // Отделен индекс за всеки език: български заявки търсят в българския текст, английски – в английския
       await pagefind.options({ baseUrl: '/', language: locale });
+      // Индексът на филтрите се зарежда отделно – без това първото търсене връща празни филтри.
+      allFilters = await pagefind.filters();
     } catch {
       pagefind = null;
       status.textContent = tc('search.unavailable');
@@ -85,9 +88,10 @@ const filterNames = ['category', 'cuisine', 'difficulty', 'method', 'time', 'tag
   function fillFilters(avail: Record<string, Record<string, number>>, keep: Record<string, string>) {
     for (const s of selects) {
       const name = s.dataset.filter!;
-      const values = Object.entries(avail[name] ?? {});
+      const own = avail[name] && Object.keys(avail[name]).length ? avail[name] : allFilters[name] ?? {};
+      const values = Object.entries(own).filter(([, n]) => n > 0);
       if (name === 'time') values.sort((a, b) => TIME_ORDER.indexOf(a[0]) - TIME_ORDER.indexOf(b[0]));
-      else values.sort((a, b) => a[0].localeCompare(b[0], intl));
+      else values.sort((a, b) => a[0].localeCompare(b[0], locale));
       const cur = keep[name] ?? '';
       s.replaceChildren(new Option(tc('search.filter.any'), ''));
       for (const [v, n] of values) s.add(new Option(`${v} (${n})`, v));
