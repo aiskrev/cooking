@@ -1,0 +1,195 @@
+{
+  "slug": "stridi-s-shampansko-granita-i-hayver",
+  "photos": {
+    "01-stridi-stapka-1.webp": {
+      "sourceName": "Gourmet Oysters with Caviar and Sparkling Wine-1.webp",
+      "sourceSha256": "923ebe6aa83210073c930bc54c005997925211178d8283a1d54f90b98255aeae",
+      "sourceIdx": 2215,
+      "sourceBytes": 1959490,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 20,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-stridi-stapka-2.webp": {
+      "sourceName": "Champagne Granita with Lemon Accents-11.webp",
+      "sourceSha256": "bf494c30b40459981f3b9cab4a2346c951312b5f4b8c83c2e13fbe5a75d090f1",
+      "sourceIdx": 2300,
+      "sourceBytes": 1831716,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 27,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "03-stridi-stapka-3.webp": {
+      "sourceName": "Fresh Apple, Seaweed, and Citrus Still Life-14.webp",
+      "sourceSha256": "8aae0110985f15da0dc8eb46c5c7174c1d31f3972b4d187c7fab39e1c529c7da",
+      "sourceIdx": 2303,
+      "sourceBytes": 1643526,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 27,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "04-stridi-stapka-4.webp": {
+      "sourceName": "Chef Shucking Oysters at a Lavish Seafood Table-8.webp",
+      "sourceSha256": "12d4c408d410bd1005ac4728326b4c5d10731e9276161b9fa19f5e66c62ca812",
+      "sourceIdx": 2222,
+      "sourceBytes": 1818378,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 20,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "05-stridi-stapka-5.webp": {
+      "sourceName": "Gourmet Oyster Mise-en-Place-8.webp",
+      "sourceSha256": "4184e52cfa82f3b2c124dbed72e8f641dc11b61b5ed6bd45e084ad1511ce8f15",
+      "sourceIdx": 2297,
+      "sourceBytes": 2005000,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 27,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "06-stridi-stapka-6.webp": {
+      "sourceName": "Gourmet Oyster on Crystalline Ice-9.webp",
+      "sourceSha256": "8dccb85fd2f5b81ef4e283b3d682b2c2f5c6b07b922226be55e08047c974e59b",
+      "sourceIdx": 2223,
+      "sourceBytes": 1574656,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 20,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "07-stridi-stapka-7.webp": {
+      "sourceName": "Gourmet Oysters on Crushed Ice-5.webp",
+      "sourceSha256": "f011107870f1cafee47b150f2d6966b32c948fb06bb559edcff08330baa01235",
+      "sourceIdx": 2219,
+      "sourceBytes": 1881878,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 20,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "08-dopalnitelen-1.webp": {
+      "sourceName": "Moody Oyster and Caviar Tasting Spread-4.webp",
+      "sourceSha256": "3e6cd43785b371979d56672be699ab59fe085141aeec59027d05e43f44f48fd8",
+      "sourceIdx": 2218,
+      "sourceBytes": 2144054,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 20,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "09-dopalnitelen-2.webp": {
+      "sourceName": "Gourmet Oyster with Dill and Apple-10.webp",
+      "sourceSha256": "57318a4a8ebc9debc5d65ae109a0da1a160b656400f8ef617712418b38148145",
+      "sourceIdx": 2224,
+      "sourceBytes": 1743376,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 20,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "10-dopalnitelen-3.webp": {
+      "sourceName": "Luxurious Oyster and Granita Platter-11.webp",
+      "sourceSha256": "7605a304e96b124214e43b5225fbf99ddefe429747628d190ee0875cd4fd5c02",
+      "sourceIdx": 2225,
+      "sourceBytes": 1802936,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 20,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "11-dopalnitelen-4.webp": {
+      "sourceName": "Champagne Granita and Oysters-12.webp",
+      "sourceSha256": "b48b1e024af566a5904a4898c77f8b7c9878a50ace8d00a721cbf7ce239f3cbd",
+      "sourceIdx": 2226,
+      "sourceBytes": 1945108,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 20,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "12-dopalnitelen-5.webp": {
+      "sourceName": "Oysters with Chilled Green Garnishes-13.webp",
+      "sourceSha256": "afc85c3bdc122b22023cbd8b1e03ed2b712d9eca11f4980eeccee666619ce742",
+      "sourceIdx": 2227,
+      "sourceBytes": 1795688,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 20,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "13-dopalnitelen-6.webp": {
+      "sourceName": "Caviar and Oysters on Ice-14.webp",
+      "sourceSha256": "8b72cab353a18b8da0b292c20d30f8e77834767e1023b898c64f16fc474f1170",
+      "sourceIdx": 2228,
+      "sourceBytes": 1783574,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 20,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "14-dopalnitelen-7.webp": {
+      "sourceName": "Luxury Oyster Shucking Tableau-7.webp",
+      "sourceSha256": "2a135a0c62ad3fb990651ea0c35f142509cfc91e60576203d0041cf2f36a1d0c",
+      "sourceIdx": 2221,
+      "sourceBytes": 1779716,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 20,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "15-dopalnitelen-8.webp": {
+      "sourceName": "Oyster and Caviar Elegance-1.webp",
+      "sourceSha256": "90c220c3de9bb741e397c055d736b1405ed66f9a36abe5a18a30986b7db3b05f",
+      "sourceIdx": 2290,
+      "sourceBytes": 2019394,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 27,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "16-dopalnitelen-9.webp": {
+      "sourceName": "Gourmet Oyster Shucking Close-Up-5.webp",
+      "sourceSha256": "0182455a6b31cbe1242fc2efa95cbd4df13e54bd68ce2adf9aded9855d6b49fb",
+      "sourceIdx": 2294,
+      "sourceBytes": 1913496,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 27,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "17-dopalnitelen-10.webp": {
+      "sourceName": "Luxury Caviar Oysters on Crushed Ice-17.webp",
+      "sourceSha256": "84ef80a43ab2c0b5f9d4d54a6ce32985b4a6da82b8046ce0155b875091f65e44",
+      "sourceIdx": 2306,
+      "sourceBytes": 1870900,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 27,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    }
+  },
+  "generatedHash": "c400529cf2f2b0ba937f01ddcddcf0b1cb71454e4dede88a01a9f44af9a5d252",
+  "excludedSources": [],
+  "importedAt": "2026-11-21T06:46:55.961Z"
+}

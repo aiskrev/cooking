@@ -136,6 +136,15 @@ const showNote = locale === 'en' && recipe.translation && !recipe.translation.re
 >
   <article class="wrap recipe" data-pagefind-body data-recipe data-base-servings={d.servings}>
     <span hidden data-pagefind-filter="category[data-v]" data-v={d.category}></span>
+    {d.difficulty && <span hidden data-pagefind-filter="difficulty[data-v]" data-v={d.difficulty}></span>}
+    {d.cuisine && <span hidden data-pagefind-filter="cuisine[data-v]" data-v={d.cuisine}></span>}
+    {d.method.map((m) => <span hidden data-pagefind-filter="method[data-v]" data-v={m}></span>)}
+    {d.tags.map((tg) => <span hidden data-pagefind-filter="tag[data-v]" data-v={tg}></span>)}
+    <span hidden data-pagefind-filter="time[data-v]" data-v={t(locale, total <= 30 ? 'search.time.1' : total <= 60 ? 'search.time.2' : total <= 120 ? 'search.time.3' : 'search.time.4')}></span>
+    <span hidden data-pagefind-meta="time[data-v]" data-v={formatMinutes(locale, total)}></span>
+    <span hidden data-pagefind-meta="category[data-v]" data-v={d.category}></span>
+    {d.difficulty && <span hidden data-pagefind-meta="difficulty[data-v]" data-v={d.difficulty}></span>}
+    <span hidden data-pagefind-sort="title[data-v]" data-v={d.title}></span>
     {thumb && <span hidden data-pagefind-meta="image[data-src]" data-src={thumb}></span>}
     <nav class="breadcrumb" aria-label={t(locale, 'breadcrumb.label')}>
       <ol>
