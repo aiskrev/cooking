@@ -122,19 +122,35 @@ try {
         n.comments = ctx.db.run('DELETE FROM comments WHERE recipe_slug = ?', slug).changes;
         n.ratings = ctx.db.run('DELETE FROM ratings WHERE recipe_slug = ?', slug).changes;
         ctx.db.run('DELETE FROM cooked_marks WHERE recipe_slug = ?', slug);
+        ctx.db.run('DELETE FROM cook_events WHERE recipe_slug = ?', slug);
         ctx.db.run("DELETE FROM blocked_actors WHERE reason = 'блокиран от модератор'");
       });
       ctx.audit('system', 'purge-community', slug, n);
       out(`Изтрити: ${n.ratings} оценки, ${n.comments} коментара за „${slug}“.`);
       break;
     }
+    case 'set-role': {
+      // Роля на профил на посетител: user | moderator | admin (първият администратор на общността се задава оттук)
+      const email = String(opts.email || '').trim().toLowerCase();
+      const role = String(opts.role || '');
+      if (!email || !['user', 'moderator', 'admin'].includes(role)) throw new Error('Използване: set-role --email=… --role=user|moderator|admin');
+      const u = ctx.db.get('SELECT id, role FROM users WHERE email = ?', email);
+      if (!u) throw new Error('Няма профил с този имейл.');
+      ctx.db.tx(() => {
+        ctx.db.run('UPDATE users SET role = ?, updated_at = ? WHERE id = ?', role, Date.now(), u.id);
+        ctx.db.run('DELETE FROM user_sessions WHERE user_id = ?', u.id); // новата роля важи от следващия вход
+      });
+      ctx.audit('system', 'user.role', String(u.id), { from: u.role, to: role, via: 'cli' });
+      out(`Ролята е „${role}“. Потребителят трябва да влезе отново.`);
+      break;
+    }
     case 'status': {
-      out(`Администратори: ${ctx.db.get('SELECT COUNT(*) n FROM admin_users').n}; оценки: ${ctx.db.get('SELECT COUNT(*) n FROM ratings').n}; коментари: ${ctx.db.get('SELECT COUNT(*) n FROM comments').n}`);
+      out(`Администратори: ${ctx.db.get('SELECT COUNT(*) n FROM admin_users').n}; профили: ${ctx.db.get('SELECT COUNT(*) n FROM users').n}; оценки: ${ctx.db.get('SELECT COUNT(*) n FROM ratings').n}; коментари: ${ctx.db.get('SELECT COUNT(*) n FROM comments').n}`);
       out(`Текуща версия на сайта: ${currentReleaseId(ctx) ?? 'няма'}`);
       break;
     }
     default:
-      out('Команди: create-owner --email=… [--name=…] | reset-password --email=… | disable-mfa --email=… | backup [--with-originals] | restore <папка> --force | build | status');
+      out('Команди: create-owner --email=… [--name=…] | reset-password --email=… | disable-mfa --email=… | backup [--with-originals] | restore <папка> --force | build | status | set-role --email=… --role=user|moderator|admin');
       process.exit(cmd ? 1 : 0);
   }
   ctx.db.close();
