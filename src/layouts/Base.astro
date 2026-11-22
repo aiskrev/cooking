@@ -106,7 +106,7 @@ switchTo[other] = switchHref;
         </nav>
         <div class="header-tools">
         <div class="account" data-account>
-          <a class="account-link" href={href(locale, 'login')} data-account-link aria-current={path === href(locale, 'login') ? 'page' : undefined}>
+          <a class="account-link" href={href(locale, 'login')} data-account-link title={t(locale, 'nav.signIn')} aria-current={path === href(locale, 'login') ? 'page' : undefined}>
             <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M12 12a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9Zm0 2c-4.4 0-8 2.5-8 5.5V21h16v-1.5c0-3-3.6-5.5-8-5.5Z"/></svg>
             <span class="account-label">{t(locale, 'nav.signIn')}</span>
           </a>

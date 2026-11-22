@@ -19,7 +19,7 @@ const settle = (p, ms = 500) => p.waitForTimeout(ms);
 process.on('uncaughtException', (e) => { log(false, 'ИЗКЛЮЧЕНИЕ: ' + String(e.message).split('\n')[0]); summary(`Профили – стъпка ${phase} (прекъсната)`); process.exit(1); });
 
 async function axeCheck(page, label) {
-  await page.addScriptTag({ content: axe.source });
+  await page.evaluate(axe.source); // през DevTools протокола – CSP на сайта не се заобикаля и не се отслабва
   const r = await page.evaluate(async () => (await window.axe.run(document, { runOnly: ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa'] })).violations.map((v) => `${v.id}(${v.nodes.length})`));
   expect(r.length === 0, `${label}: axe без нарушения ${r.join(', ')}`);
 }

@@ -431,17 +431,22 @@ html.lb-open { overflow: hidden; }
 [hidden] { display: none !important; }
 .narrow { max-width: 40rem; }
 .account { position: relative; display: inline-flex; }
-.account-link, .account-btn { display: inline-flex; align-items: center; gap: 0.4rem; min-height: 44px; min-width: 44px; padding: 0 0.8rem; border: 1px solid var(--line); border-radius: 999px; background: transparent; color: var(--text); font: inherit; font-size: 0.9rem; font-weight: 700; text-decoration: none; cursor: pointer; justify-content: center; }
+/* Кръгъл бутон 44×44 (икона за гост, инициал за влязъл) на всички ширини: с текст заглавката не се събира на един ред.
+   Текстът („Вход“ / името) остава за екранните четци и в подсказката (title); името се показва и най-горе в менюто. */
+.account-link, .account-btn { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; padding: 0; border: 1px solid var(--line); border-radius: 50%; background: transparent; color: var(--text); font: inherit; font-size: 0.9rem; font-weight: 700; text-decoration: none; cursor: pointer; }
 .account-link:hover, .account-btn:hover { background: var(--surface-2); }
 .account-link[aria-current='page'] { border-color: var(--accent); }
 .account-btn[aria-expanded='true'] { border-color: var(--accent); background: var(--surface-2); }
 .avatar { display: inline-flex; align-items: center; justify-content: center; width: 1.7rem; height: 1.7rem; border-radius: 50%; background: var(--accent); color: var(--accent-text); font-size: 0.85rem; }
-.account-label { max-width: 10rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.account-label { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.account-menu .account-menu-name { padding: 0.45rem 0.75rem 0.55rem; margin-bottom: 0.25rem; border-bottom: 1px solid var(--line); color: var(--muted); font-size: 0.88rem; overflow-wrap: anywhere; }
+/* От 900 px нагоре: малко по-тесни точки в менюто и отстояния, за да остане заглавката на един ред и с бутона на профила
+   (английското име на сайта е най-дългото – при 1440 px остават ~11 px резерв; проверка: UX-04 в tools/qa/e2e-audit.mjs) */
+@media (min-width: 900px) { .header-inner { column-gap: 0.75rem; } .main-nav a { padding: 0 0.5rem; } }
 .account-menu { position: absolute; right: 0; top: calc(100% + 0.35rem); z-index: 30; min-width: 13rem; margin: 0; padding: 0.35rem; list-style: none; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
 .account-menu a, .account-menu button { display: flex; align-items: center; width: 100%; min-height: 44px; padding: 0 0.75rem; border: 0; border-radius: 8px; background: none; color: var(--text); font: inherit; text-align: left; text-decoration: none; cursor: pointer; }
 .account-menu a:hover, .account-menu button:hover { background: var(--surface-2); }
 .account-menu a[aria-current='page'] { color: var(--accent); }
-@media (max-width: 560px) { .account-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; } .account-link, .account-btn { padding: 0 0.5rem; } }
 
 .notice.bad { border-left-color: var(--danger); }
 .auth-box { margin-bottom: 3rem; }

@@ -20,7 +20,10 @@ function menuFor(me: Me) {
   const label = document.createElement('span'); label.className = 'account-label'; label.textContent = me.displayName;
   const sr = document.createElement('span'); sr.className = 'sr-only'; sr.textContent = tc('account.menu');
   btn.append(avatar, label, sr);
+  btn.title = me.displayName;
   const menu = document.createElement('ul'); menu.id = 'account-menu'; menu.className = 'account-menu'; menu.hidden = true;
+  // името на влезлия – най-горе в менюто (бутонът показва само инициала)
+  const who = document.createElement('li'); who.className = 'account-menu-name'; who.textContent = me.displayName; menu.append(who);
   const add = (text: string, href?: string, onClick?: () => void) => {
     const li = document.createElement('li');
     const el = href ? Object.assign(document.createElement('a'), { href }) : Object.assign(document.createElement('button'), { type: 'button' });

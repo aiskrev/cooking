@@ -158,6 +158,18 @@ test('нова сесия при всеки вход (без фиксиране 
   assert.equal((await old.req('GET', '/api/account/me')).data.user, null, 'старата сесия е унищожена');
 });
 
+test('изтекла сесия: след 14 дни без активност и след абсолютния срок – 401 и бисквитката се изчиства', async () => {
+  const b = await signup('expire@example.invalid', 'Изтичане');
+  ctx.db.run('UPDATE user_sessions SET last_seen_at = ? WHERE user_id = ?', Date.now() - 15 * 86400e3, b.user.id);
+  const r = await b.req('GET', '/api/account/favorites');
+  assert.equal(r.status, 401);
+  assert.equal(b.jar.has('msid'), false, 'бисквитката е изчистена');
+  assert.equal(ctx.db.get('SELECT COUNT(*) n FROM user_sessions WHERE user_id = ?', b.user.id).n, 0, 'сесията е изтрита');
+  await b.req('POST', '/api/account/login', { email: 'expire@example.invalid', password: PW });
+  ctx.db.run('UPDATE user_sessions SET expires_at = ? WHERE user_id = ?', Date.now() - 1, b.user.id);
+  assert.equal((await b.req('GET', '/api/account/favorites')).status, 401, 'абсолютният срок');
+});
+
 test('забравена парола: еднакъв отговор за непознат имейл; нова парола прекратява всички сесии', async () => {
   const phone = await signup('reset@example.invalid', 'Ресет');
   const laptop = browser(); await laptop.req('POST', '/api/account/login', { email: 'reset@example.invalid', password: PW });
