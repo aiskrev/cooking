@@ -72,12 +72,30 @@ docker compose start cms
 ## Тестове
 
 ```bash
-# сървърна логика (40 теста)
+# сървърна логика (вкл. профилите на посетителите)
 docker compose exec cms sh -c "node --disable-warning=ExperimentalWarning --test cms/test/*.test.mjs"
+# профили на посетителите: регистрация → потвърждаване → вход → любими → „Сготвих“ → оценка → коментар → модерация (без администратор)
+bash tools/qa/run-accounts-e2e.sh
 # браузърни проверки от край до край (публикува и сваля тестова рецепта; ≈ 10–20 мин.)
 export E2E_ADMIN_EMAIL=… E2E_ADMIN_PASSWORD=…
 bash tools/qa/run-e2e.sh
 ```
+
+## Профили на посетителите
+
+Локално писмата не се изпращат. Те са JSON файлове в `/data/outbox` (`MAIL_TRANSPORT=outbox`). Връзката за потвърждаване се взема оттам:
+
+```bash
+docker compose exec cms sh -c 'ls -t /data/outbox | head -1 | xargs -I{} cat /data/outbox/{}'
+```
+
+Роля на профил (`user` | `moderator` | `admin`):
+
+```bash
+docker compose exec cms node --disable-warning=ExperimentalWarning cms/cli.mjs set-role --email=… --role=moderator
+```
+
+Подробности: [ACCOUNTS_COMMUNITY.md](ACCOUNTS_COMMUNITY.md).
 
 ## Преди публично пускане (не е направено)
 

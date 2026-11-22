@@ -1,0 +1,161 @@
+---
+// Вход, регистрация, забравена парола, нова парола, потвърждаване на имейл. Статични страници (noindex) – формите говорят с /api/account/*.
+// Кодовете от писмата идват след „#“ в адреса (не стигат до журналите на сървъра) и се изчистват от адресната лента след прочитане.
+import Base from '../layouts/Base.astro';
+import { href, t, type Locale } from '../i18n';
+
+type Mode = 'login' | 'register' | 'forgot' | 'reset' | 'verify';
+interface Props { locale: Locale; mode: Mode }
+const { locale, mode } = Astro.props;
+const title = t(locale, `auth.${mode}.title` as any);
+const description = t(locale, `auth.${mode}.description` as any);
+const alt = { bg: href('bg', mode), en: href('en', mode) };
+---
+<Base locale={locale} title={title} description={description} noindex alt={alt}>
+  <div class="wrap narrow">
+    <div class="page-head">
+      <h1>{title}</h1>
+      {mode !== 'verify' && <p>{t(locale, `auth.${mode}.lead` as any)}</p>}
+    </div>
+    <noscript><p class="notice">{t(locale, 'auth.noscript')}</p></noscript>
+
+    <div class="auth-box" data-auth={mode} data-account-href={href(locale, 'account')} data-login-href={href(locale, 'login')}>
+      <p class="notice bad" role="alert" data-error hidden></p>
+      <p class="notice" role="status" aria-live="polite" data-status hidden></p>
+
+      {mode === 'login' && (
+        <form class="auth-form" data-form novalidate>
+          <div class="field"><label for="a-email">{t(locale, 'auth.email')}</label><input id="a-email" name="email" type="email" autocomplete="username" required maxlength="120" /></div>
+          <div class="field"><label for="a-pw">{t(locale, 'auth.password')}</label><input id="a-pw" name="password" type="password" autocomplete="current-password" required maxlength="200" /></div>
+          <label class="check"><input type="checkbox" data-show-pw /> {t(locale, 'auth.showPassword')}</label>
+          <button class="btn" type="submit">{t(locale, 'auth.login.submit')}</button>
+          <p class="small"><a href={href(locale, 'forgot')}>{t(locale, 'auth.login.forgot')}</a></p>
+          <p class="small">{t(locale, 'auth.login.noAccount')} <a href={href(locale, 'register')} data-keep-next>{t(locale, 'auth.login.toRegister')}</a></p>
+        </form>
+      )}
+
+      {mode === 'register' && (
+        <form class="auth-form" data-form novalidate>
+          <div class="field"><label for="a-name">{t(locale, 'auth.displayName')}</label><input id="a-name" name="displayName" type="text" autocomplete="nickname" required minlength="2" maxlength="40" aria-describedby="a-name-h" /><p id="a-name-h" class="muted small">{t(locale, 'auth.displayNameHint')}</p></div>
+          <div class="field"><label for="a-email">{t(locale, 'auth.email')}</label><input id="a-email" name="email" type="email" autocomplete="email" required maxlength="120" /></div>
+          <div class="field"><label for="a-pw">{t(locale, 'auth.password')}</label><input id="a-pw" name="password" type="password" autocomplete="new-password" required minlength="12" maxlength="200" aria-describedby="a-pw-h" /><p id="a-pw-h" class="muted small">{t(locale, 'auth.passwordHint')}</p></div>
+          <label class="check"><input type="checkbox" data-show-pw /> {t(locale, 'auth.showPassword')}</label>
+          <div class="field"><label for="a-lang">{t(locale, 'auth.language')}</label>
+            <select id="a-lang" name="locale"><option value="bg" selected={locale === 'bg'}>Български</option><option value="en" selected={locale === 'en'}>English</option></select></div>
+          <label class="check"><input type="checkbox" name="acceptTerms" required /> {t(locale, 'auth.accept')} <a href={href(locale, 'privacy')}>{t(locale, 'auth.readPolicy')}</a></label>
+          <div class="hp" aria-hidden="true"><label>website <input name="website" type="text" tabindex="-1" autocomplete="off" /></label></div>
+          <button class="btn" type="submit">{t(locale, 'auth.register.submit')}</button>
+          <p class="small">{t(locale, 'auth.register.haveAccount')} <a href={href(locale, 'login')} data-keep-next>{t(locale, 'auth.register.toLogin')}</a></p>
+        </form>
+      )}
+
+      {mode === 'forgot' && (
+        <form class="auth-form" data-form novalidate>
+          <div class="field"><label for="a-email">{t(locale, 'auth.email')}</label><input id="a-email" name="email" type="email" autocomplete="email" required maxlength="120" /></div>
+          <button class="btn" type="submit">{t(locale, 'auth.forgot.submit')}</button>
+          <p class="small"><a href={href(locale, 'login')}>{t(locale, 'auth.register.toLogin')}</a></p>
+        </form>
+      )}
+
+      {mode === 'reset' && (
+        <form class="auth-form" data-form novalidate>
+          <div class="field"><label for="a-pw">{t(locale, 'auth.passwordNew')}</label><input id="a-pw" name="password" type="password" autocomplete="new-password" required minlength="12" maxlength="200" aria-describedby="a-pw-h" /><p id="a-pw-h" class="muted small">{t(locale, 'auth.passwordHint')}</p></div>
+          <label class="check"><input type="checkbox" data-show-pw /> {t(locale, 'auth.showPassword')}</label>
+          <button class="btn" type="submit">{t(locale, 'auth.reset.submit')}</button>
+        </form>
+      )}
+
+      {mode === 'verify' && <p class="muted" data-verify-working>{t(locale, 'auth.verify.working')}</p>}
+      <p data-after hidden><a class="btn secondary" href={href(locale, 'account')} data-after-link>{t(locale, 'auth.toAccount')}</a></p>
+    </div>
+  </div>
+</Base>
+
+<script>
+  import { tc, tnc, hrefc } from '../i18n/client';
+  import { api, getMe, setSession, mergeLocalFavorites, safeNext, ApiError } from '../scripts/account';
+
+  const box = document.querySelector<HTMLElement>('[data-auth]')!;
+  const mode = box.dataset.auth!;
+  const form = box.querySelector<HTMLFormElement>('[data-form]');
+  const errEl = box.querySelector<HTMLElement>('[data-error]')!;
+  const statusEl = box.querySelector<HTMLElement>('[data-status]')!;
+  const after = box.querySelector<HTMLElement>('[data-after]')!;
+  const next = safeNext(new URLSearchParams(location.search).get('next'), hrefc('account'));
+
+  const showError = (msg: string, field?: HTMLElement | null) => {
+    statusEl.hidden = true; errEl.textContent = msg; errEl.hidden = false;
+    form?.querySelectorAll('[aria-invalid]').forEach((e) => e.removeAttribute('aria-invalid'));
+    if (field) { field.setAttribute('aria-invalid', 'true'); field.focus(); } else errEl.focus?.();
+  };
+  const showStatus = (msg: string) => { errEl.hidden = true; statusEl.textContent = msg; statusEl.hidden = false; };
+  errEl.tabIndex = -1;
+
+  // ?next= се пренася между „Вход“ и „Регистрация“
+  box.querySelectorAll<HTMLAnchorElement>('[data-keep-next]').forEach((a) => { if (location.search.includes('next=')) a.href += location.search; });
+  box.querySelectorAll<HTMLInputElement>('[data-show-pw]').forEach((cb) => cb.addEventListener('change', () => {
+    form?.querySelectorAll<HTMLInputElement>('input[name=password]').forEach((i) => { i.type = cb.checked ? 'text' : 'password'; });
+  }));
+
+  // код от писмото: след „#token=“; изчиства се от адреса веднага
+  const token = new URLSearchParams(location.hash.slice(1)).get('token') ?? '';
+  if (token) history.replaceState(null, '', location.pathname + location.search);
+
+  // вече влязъл → профила (освен при потвърждаване, което работи и без вход)
+  if (mode === 'login' || mode === 'register') getMe().then((r) => { if (r.user) location.replace(next); });
+
+  async function afterLogin(r: any) {
+    setSession(r);
+    let added = 0;
+    try { added = await mergeLocalFavorites(r.user.id); } catch { /* сливането не спира входа */ }
+    if (added) { try { sessionStorage.setItem('flash', tnc('auth.merged', added)); } catch { /* */ } }
+    location.href = next;
+  }
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = form.querySelector<HTMLButtonElement>('[type=submit]')!;
+    const fd = new FormData(form);
+    const v = (k: string) => String(fd.get(k) ?? '').trim();
+    // проверка в браузъра (сървърът проверява отново)
+    for (const el of form.querySelectorAll<HTMLInputElement>('input[required]')) {
+      if (!el.checkValidity()) { showError(el.validationMessage || tc('community.error'), el); return; }
+    }
+    btn.disabled = true; const label = btn.textContent; btn.textContent = tc('auth.working');
+    try {
+      if (mode === 'login') {
+        await afterLogin(await api('/api/account/login', 'POST', { email: v('email'), password: String(fd.get('password') ?? '') }));
+        return;
+      }
+      if (mode === 'register') {
+        const r = await api('/api/account/register', 'POST', {
+          email: v('email'), password: String(fd.get('password') ?? ''), displayName: v('displayName'), locale: v('locale'),
+          acceptTerms: fd.get('acceptTerms') === 'on', website: v('website'),
+        });
+        showStatus(r.message); form.hidden = true;
+        return;
+      }
+      if (mode === 'forgot') { const r = await api('/api/account/forgot', 'POST', { email: v('email') }); showStatus(r.message); form.hidden = true; return; }
+      if (mode === 'reset') {
+        if (!token) { showError(tc('auth.noToken')); return; }
+        const r = await api('/api/account/reset', 'POST', { token, password: String(fd.get('password') ?? '') });
+        showStatus(r.message); form.hidden = true;
+        (after.querySelector('[data-after-link]') as HTMLAnchorElement).href = hrefc('login');
+        (after.querySelector('[data-after-link]') as HTMLAnchorElement).textContent = tc('auth.login.submit');
+        after.hidden = false;
+      }
+    } catch (err) {
+      showError(err instanceof ApiError ? err.message : tc('community.error'));
+    } finally { btn.disabled = false; btn.textContent = label; }
+  });
+
+  if (mode === 'verify') {
+    const working = box.querySelector<HTMLElement>('[data-verify-working]')!;
+    if (!token) { working.hidden = true; showError(tc('auth.noToken')); }
+    else {
+      api('/api/account/verify', 'POST', { token })
+        .then(() => { working.hidden = true; showStatus(tc('auth.verify.done')); after.hidden = false; })
+        .catch((err) => { working.hidden = true; showError(err instanceof ApiError ? err.message : tc('community.error')); });
+    }
+  }
+</script>

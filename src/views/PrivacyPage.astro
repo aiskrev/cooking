@@ -1,0 +1,88 @@
+---
+// Поверителност и правила за коментарите. Текстът описва само това, което услугата действително пази (виж docs/ACCOUNTS_COMMUNITY.md).
+// Данните за контакт на администратора на данните се добавят от собственика на сайта, преди профилите да се пуснат публично.
+import Base from '../layouts/Base.astro';
+import { href, t, type Locale } from '../i18n';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const bg = locale === 'bg';
+---
+<Base locale={locale} title={t(locale, 'privacy.title')} description={t(locale, 'privacy.description')} alt={{ bg: href('bg', 'privacy'), en: href('en', 'privacy') }}>
+  <article class="wrap narrow prose-page">
+    <div class="page-head"><h1>{t(locale, 'privacy.title')}</h1></div>
+    {bg ? (
+      <>
+        <h2>Без профил</h2>
+        <p>Можете да четете, търсите и филтрирате рецепти, да ползвате режим „готвене“, любими и списък за пазаруване без регистрация. Тогава любимите, списъкът за пазаруване, темата и езикът се пазят само в браузъра ви (localStorage) и не се изпращат на сървъра. Сайтът не използва бисквитки за проследяване, рекламни мрежи или външни услуги за статистика.</p>
+
+        <h2>С профил – какво пазим</h2>
+        <ul>
+          <li><strong>Профил:</strong> имейл, име за показване, хеш на паролата (Argon2id – самата парола не се пази), роля, статус, език на писмата, дати на създаване и последен вход, дата на потвърждаване на имейла.</li>
+          <li><strong>Сесии:</strong> бисквитка „msid“ (HttpOnly, само за този сайт) и бисквитка-подсказка „mstate“ без съдържание. На сървъра се пази хеш на сесията, хеш на IP адреса (с таен ключ – самият адрес не се пази) и браузърът (User-Agent). Сесията изтича след 14 дни без активност и най-късно след 30 дни.</li>
+          <li><strong>Любими, история „Сготвих“ (дата, по желание порции и бележка), оценки и коментари</strong>, които сами добавите.</li>
+          <li><strong>Сигнали</strong> за коментари, които сте изпратили.</li>
+          <li><strong>Писма:</strong> изпращаме само писма за потвърждаване на имейла и за нова парола. Връзките в тях са еднократни; на сървъра се пази само хешът им, който се изтрива 7 дни след използване или изтичане.</li>
+        </ul>
+        <p>Не искаме и не пазим телефон, адрес, дата на раждане или други данни, които не са нужни за профила.</p>
+
+        <h2>Защо и колко дълго</h2>
+        <ul>
+          <li>Данните на профила – докато профилът съществува.</li>
+          <li>Записи за ограничаване на честотата на заявките (с хеширан IP адрес или номер на профил) – до 48 часа.</li>
+          <li>Журнал на действията по сигурността и модерацията (без пароли и без кодове от писмата) – до 12 месеца.</li>
+          <li>Резервните копия на базата се пазят на сървъра на сайта; изтритите данни изчезват от тях, когато старите копия бъдат премахнати.</li>
+        </ul>
+
+        <h2>Вашите права</h2>
+        <p>В „Моят профил → Настройки“ можете да промените името и езика, да смените паролата, да излезете от другите устройства, да изтеглите всичките си данни (JSON файл) и да изтриете профила.</p>
+        <p>При изтриване на профила се изтриват профилът, любимите, историята на сготвеното, оценките, сесиите и кодовете от писмата. Одобрените ви коментари остават, но без връзка с вас – авторът се показва като „Изтрит профил“. Всички други ваши коментари се изтриват по съдържание.</p>
+
+        <h2 id="pravila">Правила за коментарите</h2>
+        <ul>
+          <li>Коментират само влезли потребители с потвърден имейл. Новите и редактираните коментари се показват след преглед от модератор.</li>
+          <li>Пишете по темата на рецептата и с уважение. Без обиди, тормоз, реклама и връзки.</li>
+          <li>Не публикувайте лични данни – свои или чужди (телефони, адреси, имейли).</li>
+          <li>Модераторите могат да отхвърлят или скрият коментар, като посочат причина. Можете да докладвате коментар, който нарушава правилата.</li>
+          <li>Можете да редактирате или изтриете собствените си коментари от страницата на рецептата или от профила.</li>
+        </ul>
+      </>
+    ) : (
+      <>
+        <h2>Without an account</h2>
+        <p>You can read, search and filter recipes, use cooking mode, favourites and the shopping list without signing up. Your favourites, shopping list, theme and language are then kept only in your browser (localStorage) and are not sent to the server. The site does not use tracking cookies, advertising networks or third-party analytics.</p>
+
+        <h2>With an account – what we keep</h2>
+        <ul>
+          <li><strong>Account:</strong> email address, display name, a password hash (Argon2id – the password itself is not stored), role, status, email language, creation and last sign-in dates, and the date your email was confirmed.</li>
+          <li><strong>Sessions:</strong> a cookie “msid” (HttpOnly, for this site only) and an empty hint cookie “mstate”. The server keeps a hash of the session, a keyed hash of your IP address (the address itself is not stored) and your browser’s User-Agent. A session expires after 14 days without activity and after 30 days at the latest.</li>
+          <li><strong>Favourites, cooking history (date, optional servings and note), ratings and comments</strong> that you add yourself.</li>
+          <li><strong>Reports</strong> about comments that you have sent.</li>
+          <li><strong>Emails:</strong> we only send emails to confirm your address and to set a new password. Their links are single-use; the server keeps only a hash, deleted 7 days after use or expiry.</li>
+        </ul>
+        <p>We do not ask for or keep your phone number, address, date of birth or any other data that the account does not need.</p>
+
+        <h2>Why and for how long</h2>
+        <ul>
+          <li>Account data – for as long as the account exists.</li>
+          <li>Rate-limiting records (with a hashed IP address or account number) – up to 48 hours.</li>
+          <li>The security and moderation log (no passwords and no email codes) – up to 12 months.</li>
+          <li>Database backups are kept on the site’s server; deleted data disappears from them when the old backups are removed.</li>
+        </ul>
+
+        <h2>Your rights</h2>
+        <p>In “My account → Settings” you can change your name and language, change your password, sign out on other devices, download all your data (a JSON file) and delete your account.</p>
+        <p>Deleting your account deletes the account, favourites, cooking history, ratings, sessions and email codes. Your approved comments stay, but are no longer linked to you – the author is shown as “Deleted account”. All your other comments are deleted.</p>
+
+        <h2 id="pravila">Comment rules</h2>
+        <ul>
+          <li>Only signed-in users with a confirmed email address can comment. New and edited comments appear after a moderator has reviewed them.</li>
+          <li>Stay on the topic of the recipe and be respectful. No insults, harassment, advertising or links.</li>
+          <li>Do not post personal data – your own or anyone else’s (phone numbers, addresses, emails).</li>
+          <li>Moderators may reject or hide a comment and give a reason. You can report a comment that breaks the rules.</li>
+          <li>You can edit or delete your own comments on the recipe page or in your account.</li>
+        </ul>
+      </>
+    )}
+  </article>
+</Base>

@@ -1,7 +1,8 @@
 // Част 1 от проверките от край до край (Playwright + Chromium): достъп, вход, цикъл на рецепта със снимки, публикуване, оценки, коментари.
 // Пуска се от tools/qa/run-e2e.sh. Част 2 (e2e-2.mjs) се изпълнява СЛЕД рестарт на услугата и проверява, че данните са запазени.
 import fs from 'node:fs';
-import { BASE, launch, newPage, login, expect, summary, makePng, EMAIL, PASSWORD, publishAndWait, log } from './lib.mjs';
+import crypto from 'node:crypto';
+import { BASE, launch, newPage, login, expect, summary, makePng, EMAIL, PASSWORD, publishAndWait, log, newMember } from './lib.mjs';
 
 const stamp = Date.now().toString(36);
 const TITLE = `Тестова рецепта проверка ${stamp}`;
@@ -227,9 +228,22 @@ const searchText = await pubPage.locator('main').innerText();
 expect(searchText.includes(TITLE) || searchText.toLowerCase().includes(UNIQUE_WORD), 'C34 търсенето намира новата рецепта (индексът е обновен)');
 await pubPage.close();
 
-// =============== D. Оценки (публично, нов гост) ===============
-const guest = await browser.newContext({ viewport: { width: 1280, height: 900 }, locale: 'bg-BG' });
-const gp = await guest.newPage(); gp.problems = [];
+// =============== D. Оценки (от профили на посетители; гостите само четат) ===============
+// Профилите се създават през API с писмо за потвърждение от локалната „пощенска кутия“ (MAIL_TRANSPORT=outbox) – виж lib.mjs.
+const memberPw = () => crypto.randomBytes(18).toString('base64url');
+const m1 = await newMember(browser, { email: `e2e-a-${stamp}@example.invalid`, name: 'Мария', password: memberPw(), opts: { viewport: { width: 1280, height: 900 }, locale: 'bg-BG' } });
+const m2 = await newMember(browser, { email: `e2e-b-${stamp}@example.invalid`, name: 'Петър', password: memberPw() });
+const m3 = await newMember(browser, { email: `e2e-c-${stamp}@example.invalid`, name: 'Иван', password: memberPw() });
+expect(m1.ok && m2.ok && m3.ok, 'D0 три потвърдени тестови профила');
+const csrfOf = async (c) => (await (await c.request.get(BASE + '/api/account/me')).json()).csrf;
+const guest = m1.ctx;
+const gp = m1.page; gp.problems = [];
+{
+  const anon = await browser.newContext();
+  const r = await anon.request.post(BASE + `/api/public/recipes/${state.slug}/rating`, { data: { score: 5 } });
+  expect(r.status() === 401, `D0a гост не може да оценява (401, ${r.status()})`);
+  await anon.close();
+}
 gp.on('pageerror', (e) => gp.problems.push(e.message));
 gp.on('console', (m) => { if (m.type() === 'error' && !/Failed to load resource/.test(m.text())) gp.problems.push(m.text()); });
 let dialogs = 0; gp.on('dialog', async (d) => { dialogs++; await d.dismiss(); });
@@ -245,7 +259,9 @@ await gp.reload(); await gp.waitForSelector('[data-community]'); await settle(gp
 expect((await gp.locator('[data-avg]').innerText()) === '4' && (await gp.locator('[data-score="4"]').getAttribute('aria-pressed')) === 'true', 'D5 оценката се запазва след презареждане (сървърна база, не localStorage)');
 await gp.locator('[data-score="2"]').click(); await settle(gp, 700);
 expect((await gp.locator('[data-avg]').innerText()) === '2' && (await gp.locator('[data-count-text]').innerText()).includes('1 оценка'), 'D6 промяна на оценката не създава втори глас');
-const guest2 = await browser.newContext(); const g2 = await guest2.newPage();
+const guest2 = m2.ctx; const g2 = m2.page;
+const csrf2 = await csrfOf(guest2);
+const rate2 = (slug, data, headers = {}) => guest2.request.put(BASE + `/api/account/recipes/${slug}/rating`, { data, headers: { 'x-csrf-token': csrf2, ...headers } });
 await g2.goto(BASE + `/bg/recepti/${state.slug}/`); await g2.waitForSelector('[data-community]'); await settle(g2, 600);
 await g2.locator('[data-score="5"]').click(); await settle(g2, 700);
 expect((await g2.locator('[data-avg]').innerText()) === '3,5' && (await g2.locator('[data-count-text]').innerText()).includes('2 оценки'), 'D7 втори посетител: средна 3,5 от 2 оценки (преизчислява се)');
@@ -254,15 +270,17 @@ expect(dist.length === 5 && /5 ★/.test(dist[0]) && /1$/.test(dist[0].trim()), 
 const ls = await g2.evaluate(() => JSON.stringify(Object.entries(localStorage)));
 expect(!/rating|score/i.test(ls), 'D9 localStorage не съдържа оценки');
 for (const bad of [0, 6, 2.5, 'x', null]) {
-  const r = await guest2.request.post(BASE + `/api/public/recipes/${state.slug}/rating`, { data: { score: bad } });
+  const r = await rate2(state.slug, { score: bad });
   if (r.status() !== 400) { expect(false, `D10 невалидна оценка ${bad} → ${r.status()}`); }
 }
 expect(true, 'D10 невалидни оценки (0, 6, 2.5, текст, null) се отхвърлят с 400');
-const noCt = await guest2.request.post(BASE + `/api/public/recipes/${state.slug}/rating`, { headers: { 'content-type': 'text/plain' }, data: '{"score":5}' });
+const noCt = await guest2.request.put(BASE + `/api/account/recipes/${state.slug}/rating`, { headers: { 'content-type': 'text/plain', 'x-csrf-token': csrf2 }, data: '{"score":5}' });
 expect(noCt.status() === 415, `D11 заявка без application/json (CSRF чрез форма) → 415 (${noCt.status()})`);
-const crossOrigin = await guest2.request.post(BASE + `/api/public/recipes/${state.slug}/rating`, { data: { score: 1 }, headers: { origin: 'https://evil.example' } });
+const crossOrigin = await rate2(state.slug, { score: 1 }, { origin: 'https://evil.example' });
 expect(crossOrigin.status() === 403, `D12 чужд Origin → 403 (${crossOrigin.status()})`);
-const missing = await guest2.request.post(BASE + `/api/public/recipes/няма-такава/rating`, { data: { score: 3 } });
+const noToken = await guest2.request.put(BASE + `/api/account/recipes/${state.slug}/rating`, { data: { score: 1 } });
+expect(noToken.status() === 403, `D12a без CSRF токен → 403 (${noToken.status()})`);
+const missing = await rate2('nyama-takava', { score: 3 });
 expect(missing.status() === 404, 'D13 оценка за несъществуваща рецепта → 404');
 await guest2.close();
 
@@ -275,19 +293,19 @@ expect(await cat.locator('[data-rating-field]').isVisible(), 'D15 филтъръ
 await cat.close();
 
 // =============== E. Коментари ===============
-const comment = async (page, name, body) => {
-  await page.locator('[data-comment-form] [name=name]').fill(name);
+// Коментират само влезли с потвърден имейл; името е от профила (първият аргумент се пази само за четимост).
+const comment = async (page, _name, body) => {
   await page.locator('[data-comment-form] [name=body]').fill(body);
   await page.locator('[data-comment-form] [type=submit]').click(); await settle(page, 900);
 };
 await comment(gp, 'Мария', 'Много вкусна рецепта, благодаря!');
-expect((await gp.locator('[data-form-status]').innerText()).includes('след като бъде одобрен'), 'E1 ясно съобщение, че коментарът чака одобрение');
+expect((await gp.locator('[data-form-status]').innerText()).includes('очаква одобрение'), 'E1 ясно съобщение, че коментарът чака одобрение');
 expect((await gp.locator('#komentari .comment.is-pending').count()) === 1 && (await gp.locator('#komentari .comment.is-pending').innerText()).includes('Чака одобрение'), 'E2 авторът вижда коментара си със статус „чака одобрение“');
-const viewer = await browser.newContext(); const vp = await viewer.newPage();
+const viewer = m3.ctx; const vp = m3.page;
 await vp.goto(BASE + `/bg/recepti/${state.slug}/`); await vp.waitForSelector('[data-community]'); await settle(vp, 800);
-expect((await vp.locator('#komentari .comment').count()) === 0 && await vp.locator('[data-comments-empty]').isVisible(), 'E3 чакащ коментар не се вижда публично');
-// XSS
-await comment(gp, 'Хакер', '<img src=x onerror=alert(1)> <script>alert(2)</script> &lt;b&gt;');
+expect((await vp.locator('#komentari .comment').count()) === 0 && await vp.locator('[data-comments-empty]').isVisible(), 'E3 чакащ коментар не се вижда от други');
+// XSS (думата „Хакер“ е в текста, за да се намира коментарът по-нататък и в част 2)
+await comment(gp, 'Хакер', '<img src=x onerror=alert(1)> <script>alert(2)</script> &lt;b&gt; Хакер');
 const xssNode = gp.locator('#komentari .comment.is-pending').filter({ hasText: 'Хакер' });
 expect((await xssNode.locator('.cm-body').innerText()).includes('<img src=x onerror=alert(1)>') && (await xssNode.locator('img').count()) === 0 && dialogs === 0, 'E4 XSS: HTML се показва като текст, не се изпълнява (без диалог alert)');
 // връзки, дубликат, прекалено кратко
@@ -300,7 +318,7 @@ await comment(gp, 'Мария', 'Трети различен коментар з
 await comment(gp, 'Мария', 'Четвърти различен коментар за проверка');
 expect((await gp.locator('[data-form-status]').innerText()).includes('твърде често'), 'E7 четвърти коментар за кратко време се ограничава (429)');
 // honeypot
-const hp = await guest.request.post(BASE + `/api/public/recipes/${state.slug}/comments`, { data: { name: 'Бот', body: 'Купете евтино сега', website: 'http://spam' } });
+const hp = await guest.request.post(BASE + `/api/account/recipes/${state.slug}/comments`, { data: { body: 'Купете евтино сега', website: 'http://spam' }, headers: { 'x-csrf-token': await csrfOf(guest) } });
 expect(hp.status() === 201, 'E8 honeypot: ботът получава „успех“ (но нищо не се записва)');
 
 // ---- Модерация през интерфейса ----
@@ -326,7 +344,8 @@ await mod.locator('.comment').filter({ hasText: 'Хакер' }).getByRole('butto
 await mod.goto(BASE + `/admin/comments?status=rejected&slug=${state.slug}`); await settle(mod, 500);
 expect((await mod.locator('.comment').count()) === 1, 'E13 администраторът отхвърля коментар');
 // докладване и блокиране
-await vp.locator('#komentari .comment').first().locator(':scope > .cm-actions').getByRole('button', { name: 'Докладвай' }).click(); await settle(vp, 700);
+await vp.locator('#komentari .comment').first().locator(':scope > .cm-actions').getByRole('button', { name: 'Докладвай' }).click(); await settle(vp, 300);
+await vp.locator('#komentari .report-form').first().getByRole('button', { name: 'Изпрати сигнала' }).click(); await settle(vp, 700);
 await mod.goto(BASE + `/admin/comments?status=reported`); await settle(mod, 500);
 expect((await mod.locator('.comment').filter({ hasText: 'Много вкусна рецепта' }).count()) === 1, 'E14 докладван коментар се вижда в „Докладвани“');
 await mod.locator('.comment').filter({ hasText: 'Много вкусна рецепта' }).getByRole('button', { name: 'Скрий' }).click(); await dlg(mod, 'Да').click({ timeout: 2000 }).catch(() => {}); await settle(mod, 1200);

@@ -33,6 +33,24 @@ export function clearSessionCookie(ctx, c) {
   deleteCookie(c, 'rsid', { path: '/' });
 }
 
+// ---- Сесия на посетител с профил (отделна от администраторската) ----
+// msid – HttpOnly сесия (SameSite=Lax: работи и при отваряне от връзка в писмо; заявките, променящи състояние, изискват CSRF токен);
+// mstate=1 – само подсказка за статичните страници, че има вход (без тайна стойност), за да не питат сървъра при всяко отваряне.
+export const MEMBER_COOKIE = (secure) => (secure ? '__Host-msid' : 'msid');
+export const readMemberToken = (c) => getCookie(c, '__Host-msid') || getCookie(c, 'msid') || null;
+export function setMemberCookie(ctx, c, token) {
+  const secure = isHttps(ctx, c);
+  const maxAge = Math.floor(ctx.config.members.absoluteMs / 1000);
+  setCookie(c, MEMBER_COOKIE(secure), token, { httpOnly: true, sameSite: 'Lax', secure, path: '/', maxAge });
+  setCookie(c, 'mstate', '1', { httpOnly: false, sameSite: 'Lax', secure, path: '/', maxAge });
+}
+export function clearMemberCookie(ctx, c) {
+  const secure = isHttps(ctx, c);
+  deleteCookie(c, MEMBER_COOKIE(secure), { path: '/', secure });
+  deleteCookie(c, 'msid', { path: '/' });
+  deleteCookie(c, 'mstate', { path: '/', secure });
+}
+
 /** Заявка, променяща състояние, трябва да идва от същия произход (Origin/Sec-Fetch-Site). */
 export function originOk(ctx, c) {
   const site = c.req.header('sec-fetch-site');

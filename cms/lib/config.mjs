@@ -29,8 +29,29 @@ export const config = {
     publishWidth: 1600,
     publishQuality: 86,
   },
-  comments: { maxBody: 2000, minBody: 3, maxName: 40, maxDepth: 3 },
+  comments: { maxBody: 2000, minBody: 3, maxName: 40, maxDepth: 3, memberMaxDepth: 1 },
   releasesKept: 3,
+  // Профили на посетителите (отделни от администратора в /admin)
+  members: {
+    idleMs: 14 * 86400e3, // сесия без активност – 14 дни
+    absoluteMs: 30 * 86400e3, // най-много 30 дни след входа
+    verifyTtlMs: 48 * 3600e3, // връзка за потвърждаване на имейл – 48 ч
+    resetTtlMs: 3600e3, // връзка за нова парола – 1 ч
+    tokenRetentionMs: 7 * 86400e3, // използвани/изтекли кодове се изтриват след 7 дни
+  },
+  // Писма (потвърждаване на имейл, нова парола). 'smtp' – реално изпращане; 'outbox' – файлове в DATA_DIR/outbox (само за локална работа);
+  // 'disabled' – без писма (регистрацията и новата парола връщат „временно не е налично“).
+  mail: {
+    transport: env.MAIL_TRANSPORT || 'disabled',
+    from: env.MAIL_FROM || '',
+    smtp: {
+      host: env.MAIL_SMTP_HOST || '',
+      port: Number(env.MAIL_SMTP_PORT || 587),
+      secure: env.MAIL_SMTP_SECURE === '1', // 465 – TLS от началото; 587 – STARTTLS (задължителен)
+      user: env.MAIL_SMTP_USER || '',
+      pass: env.MAIL_SMTP_PASS || '',
+    },
+  },
 };
 
 export const paths = {
@@ -41,4 +62,5 @@ export const paths = {
   trash: path.join(config.dataDir, 'trash'),
   logs: path.join(config.dataDir, 'logs'),
   backups: path.join(config.dataDir, 'backups'),
+  outbox: path.join(config.dataDir, 'outbox'),
 };

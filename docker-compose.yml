@@ -32,6 +32,8 @@ services:
       INDEXABLE: ${INDEXABLE:-}
       CMS_COOKIE_SECURE: ${CMS_COOKIE_SECURE:-auto}
       TURNSTILE_SECRET: ${TURNSTILE_SECRET:-}
+      # Писма за профилите: локално – файлове в тома cms-data (/data/outbox), без реално изпращане
+      MAIL_TRANSPORT: ${MAIL_TRANSPORT:-outbox}
     volumes:
       - cms-data:/data                         # база данни, оригинали на снимките, журнали, резервни копия
       - releases:/releases                     # сглобените версии на сайта
@@ -76,6 +78,7 @@ services:
       E2E_ADMIN_PASSWORD: ${E2E_ADMIN_PASSWORD:-}
     volumes:
       - ./qa-output:/out
+      - cms-data:/cmsdata:ro   # само за e2e-accounts.mjs: писмата от /data/outbox (локален режим)
 
 volumes:
   cms-data:

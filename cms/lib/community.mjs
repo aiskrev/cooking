@@ -161,7 +161,8 @@ const TRANSITIONS = {
   restore: { from: ['deleted', 'rejected'], to: 'pending' },
 };
 
-export function moderate(ctx, { id, action, adminId, note }) {
+/** Модерация от собственика (adminId → admin_users) или от модератор на сайта (moderatorUserId → users). */
+export function moderate(ctx, { id, action, adminId = null, moderatorUserId = null, note }) {
   const c = ctx.db.get('SELECT * FROM comments WHERE id = ?', id);
   if (!c) return { status: 404, error: 'Коментарът не е намерен.' };
   const tr = TRANSITIONS[action];
@@ -170,17 +171,17 @@ export function moderate(ctx, { id, action, adminId, note }) {
   const t = Date.now();
   ctx.db.tx(() => {
     ctx.db.run('UPDATE comments SET status = ?, moderated_by = ?, moderated_at = ?, updated_at = ? WHERE id = ?', tr.to, adminId, t, t, id);
-    ctx.db.run('INSERT INTO moderation_events (comment_id, admin_id, action, note, created_at) VALUES (?, ?, ?, ?, ?)', id, adminId, action, clean(note).slice(0, 300) || null, t);
+    ctx.db.run('INSERT INTO moderation_events (comment_id, admin_id, moderator_user_id, action, note, created_at) VALUES (?, ?, ?, ?, ?, ?)', id, adminId, moderatorUserId, action, clean(note).slice(0, 300) || null, t);
     if (action === 'hide' || action === 'delete' || action === 'reject') ctx.db.run('UPDATE comment_reports SET resolved_at = ? WHERE comment_id = ? AND resolved_at IS NULL', t, id);
   });
   return { ok: true, status: tr.to };
 }
 
-export function dismissReports(ctx, id, adminId) {
+export function dismissReports(ctx, id, adminId, { moderatorUserId = null, note = null } = {}) {
   const t = Date.now();
   ctx.db.tx(() => {
     ctx.db.run('UPDATE comment_reports SET resolved_at = ? WHERE comment_id = ? AND resolved_at IS NULL', t, id);
-    ctx.db.run('INSERT INTO moderation_events (comment_id, admin_id, action, created_at) VALUES (?, ?, ?, ?)', id, adminId, 'dismiss-reports', t);
+    ctx.db.run('INSERT INTO moderation_events (comment_id, admin_id, moderator_user_id, action, note, created_at) VALUES (?, ?, ?, ?, ?, ?)', id, adminId, moderatorUserId, 'dismiss-reports', clean(note).slice(0, 300) || null, t);
   });
   return { ok: true };
 }
