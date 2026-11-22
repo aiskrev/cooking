@@ -1,0 +1,211 @@
+---
+// Модерация (noindex): чакащи коментари, сигнали, скрити; за администратор – профили (роли, статус) и журнал.
+// Правата се проверяват на сървъра при всяка заявка (/api/mod/*); страницата само показва резултата.
+import Base from '../layouts/Base.astro';
+import { getRecipes } from '../lib/recipes';
+import { href, t, type Locale } from '../i18n';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const recipes: Record<string, { t: string; u: string }> = {};
+for (const r of await getRecipes('bg')) recipes[r.id] = { t: r.data.title, u: href('bg', 'recipes', r.id) };
+for (const r of await getRecipes(locale)) recipes[r.id] = { t: r.data.title, u: href(locale, 'recipes', r.id) };
+const views = [['pending', 'mod.pending'], ['reported', 'mod.reported'], ['hidden', 'mod.hidden'], ['all', 'mod.all']] as const;
+---
+<Base locale={locale} title={t(locale, 'mod.title')} description={t(locale, 'mod.description')} noindex alt={{ bg: href('bg', 'moderation'), en: href('en', 'moderation') }}>
+  <div class="wrap">
+    <div class="page-head"><h1>{t(locale, 'mod.title')}</h1></div>
+    <noscript><p class="notice">{t(locale, 'auth.noscript')}</p></noscript>
+    <p class="muted" data-loading>{t(locale, 'profile.loading')}</p>
+    <p class="notice" data-forbidden hidden>{t(locale, 'mod.forbidden')}</p>
+
+    <div data-mod hidden>
+      <nav class="profile-nav" aria-label={t(locale, 'mod.sections')}>
+        <ul>
+          {views.map(([v, key]) => <li><a href={`?view=${v}`} data-view={v}>{t(locale, key)} <span class="count" data-count={v}></span></a></li>)}
+          <li data-admin-only hidden><a href="?view=users" data-view="users">{t(locale, 'mod.users')}</a></li>
+          <li data-admin-only hidden><a href="?view=audit" data-view="audit">{t(locale, 'mod.audit')}</a></li>
+        </ul>
+      </nav>
+      <p class="small" role="status" aria-live="polite" data-out></p>
+
+      <section data-panel="comments" aria-labelledby="h-queue">
+        <h2 id="h-queue" class="sr-only">{t(locale, 'mod.title')}</h2>
+        <p class="muted" data-empty hidden>{t(locale, 'mod.empty')}</p>
+        <ul class="mod-list" data-list></ul>
+        <p class="pager" data-pager></p>
+      </section>
+
+      <section data-panel="users" aria-labelledby="h-users" hidden>
+        <h2 id="h-users">{t(locale, 'mod.users')}</h2>
+        <form class="mod-search" data-user-search role="search">
+          <label for="m-q">{t(locale, 'mod.search')}</label> <input id="m-q" name="q" type="search" maxlength="80" />
+          <button class="btn small" type="submit">{t(locale, 'mod.find')}</button>
+        </form>
+        <ul class="mod-list" data-users></ul>
+        <p class="pager" data-user-pager></p>
+      </section>
+
+      <section data-panel="audit" aria-labelledby="h-audit" hidden>
+        <h2 id="h-audit">{t(locale, 'mod.audit')}</h2>
+        <ol class="plist" data-audit></ol>
+        <p class="pager" data-audit-pager></p>
+      </section>
+    </div>
+  </div>
+  <script type="application/json" id="recipe-index" set:html={JSON.stringify(recipes).replace(/</g, '\\u003c')} />
+</Base>
+
+<script>
+  import { tc, intl } from '../i18n/client';
+  import { api, getMe, ApiError, type Me } from '../scripts/account';
+
+  const index: Record<string, { t: string; u: string }> = JSON.parse(document.getElementById('recipe-index')?.textContent || '{}');
+  const $ = <T extends HTMLElement>(s: string, r: ParentNode = document) => r.querySelector<T>(s)!;
+  const fmt = new Intl.DateTimeFormat(intl, { day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+  const out = $('[data-out]');
+  const say = (s: string) => { out.textContent = s; };
+  const msg = (e: unknown) => (e instanceof ApiError ? e.message : tc('community.error'));
+  function el<K extends keyof HTMLElementTagNameMap>(tag: K, props: Record<string, unknown> = {}, ...kids: (Node | string)[]): HTMLElementTagNameMap[K] {
+    const e = document.createElement(tag);
+    Object.assign(e, props);
+    e.append(...kids);
+    return e;
+  }
+  const btn = (text: string, cls = 'btn small secondary') => el('button', { type: 'button', className: cls, textContent: text });
+  let me: Me;
+
+  function pager(box: HTMLElement, page: number, pages: number, go: (p: number) => void) {
+    box.replaceChildren();
+    if (pages <= 1) return;
+    const prev = btn(tc('mod.prev')); prev.disabled = page <= 1; prev.onclick = () => go(page - 1);
+    const next = btn(tc('mod.next')); next.disabled = page >= pages; next.onclick = () => go(page + 1);
+    box.append(prev, ' ', tc('mod.page', { n: page, total: pages }), ' ', next);
+  }
+
+  // ---------- коментари ----------
+  type C = { id: number; slug: string; parentId: number | null; author: string; userId: number | null; body: string; status: string; createdAt: number; editedAt: number | null; verified: boolean; reports: { category: string; reason: string | null }[] };
+  async function loadQueue(view: string, page = 1) {
+    const panel = $('[data-panel="comments"]'); const ul = $('[data-list]', panel);
+    const r = await api<{ comments: C[]; pages: number; counts: { pending: number; reported: number } }>(`/api/mod/comments?view=${view}&page=${page}`);
+    $('[data-count="pending"]').textContent = r.counts.pending ? `(${r.counts.pending})` : '';
+    $('[data-count="reported"]').textContent = r.counts.reported ? `(${r.counts.reported})` : '';
+    ul.replaceChildren();
+    for (const c of r.comments) ul.append(item(c, view, page));
+    $('[data-empty]', panel).hidden = r.comments.length > 0;
+    pager($('[data-pager]', panel), page, r.pages, (p) => loadQueue(view, p));
+  }
+
+  function item(c: C, view: string, page: number) {
+    const li = el('li', { className: 'mod-item' });
+    const rec = index[c.slug];
+    const head = el('p', { className: 'cm-meta' },
+      el('strong', { textContent: c.author }), ' · ',
+      el('span', { className: 'muted small', textContent: c.userId ? (c.verified ? tc('mod.verified') : tc('mod.unverified')) : '—' }), ' · ',
+      el('a', { href: (rec?.u ?? '#') + '#komentari', textContent: rec?.t ?? c.slug }), ' · ',
+      el('time', { dateTime: new Date(c.createdAt).toISOString(), textContent: fmt.format(new Date(c.createdAt)) }),
+      ' ', el('span', { className: 'tag-soft' + (c.status === 'pending' ? ' draft' : ''), textContent: tc(`profile.status.${c.status}` as any) }));
+    if (c.parentId) head.append(' · ', tc('mod.replyTo', { n: c.parentId }));
+    if (c.editedAt) head.append(' · ', tc('community.edited'));
+    const body = el('p', { className: 'cm-body', textContent: c.body }); // текстът на посетителя – само като текст
+    li.append(head, body);
+    if (c.reports.length) {
+      const rep = el('ul', { className: 'mod-reports' });
+      for (const x of c.reports) rep.append(el('li', { textContent: tc(`report.${x.category}` as any) + (x.reason ? ` – ${x.reason}` : '') }));
+      li.append(el('p', { className: 'small', textContent: tc('mod.reportsN', { n: c.reports.length }) }), rep);
+    }
+    const rid = `reason-${c.id}`;
+    const reason = el('input', { id: rid, type: 'text', maxLength: 300 });
+    const actions = el('div', { className: 'mod-actions' }, el('label', { htmlFor: rid, className: 'small', textContent: tc('mod.reason') }), reason);
+    const act = (action: string) => async () => {
+      try { await api(`/api/mod/comments/${c.id}/action`, 'POST', { action, reason: reason.value }); say(tc('mod.done')); await loadQueue(view, page); }
+      catch (e) { say(msg(e)); reason.focus(); }
+    };
+    const row = el('p', { className: 'mod-buttons' });
+    if (c.status !== 'approved') { const b = btn(tc('mod.approve'), 'btn small'); b.onclick = act('approve'); row.append(b, ' '); }
+    if (c.status === 'pending') { const b = btn(tc('mod.reject')); b.onclick = act('reject'); row.append(b, ' '); }
+    if (c.status === 'approved') { const b = btn(tc('mod.hide')); b.onclick = act('hide'); row.append(b, ' '); }
+    if (c.reports.length) { const b = btn(tc('mod.dismiss')); b.onclick = act('dismiss'); row.append(b, ' '); }
+    const hist = btn(tc('mod.history'), 'link-btn'); hist.setAttribute('aria-expanded', 'false');
+    const histBox = el('ol', { className: 'mod-history' }); histBox.hidden = true;
+    hist.onclick = async () => {
+      if (!histBox.hidden) { histBox.hidden = true; hist.setAttribute('aria-expanded', 'false'); return; }
+      try {
+        const r = await api<{ events: { action: string; note: string | null; at: number; by: string }[] }>(`/api/mod/comments/${c.id}/history`);
+        histBox.replaceChildren(...(r.events.length ? r.events.map((e) => el('li', { textContent: `${fmt.format(new Date(e.at))} · ${e.by} · ${e.action}${e.note ? ` – ${e.note}` : ''}` })) : [el('li', { textContent: tc('mod.noEvents') })]));
+        histBox.hidden = false; hist.setAttribute('aria-expanded', 'true');
+      } catch (e) { say(msg(e)); }
+    };
+    row.append(hist);
+    actions.append(row);
+    li.append(actions, histBox);
+    return li;
+  }
+
+  // ---------- профили (администратор) ----------
+  type U = { id: number; email: string; displayName: string; role: string; status: string; emailVerified: boolean; createdAt: number; lastLoginAt: number | null };
+  let q = '';
+  async function loadUsers(page = 1) {
+    const r = await api<{ users: U[]; pages: number }>(`/api/mod/users?q=${encodeURIComponent(q)}&page=${page}`);
+    const ul = $('[data-users]'); ul.replaceChildren();
+    for (const u of r.users) {
+      const li = el('li', { className: 'mod-item' });
+      li.append(el('p', { className: 'cm-meta' }, el('strong', { textContent: u.displayName }), ' · ', u.email, ' · ',
+        el('span', { className: 'muted small', textContent: `${u.emailVerified ? tc('mod.verified') : tc('mod.unverified')}${u.lastLoginAt ? ` · ${tc('mod.lastLogin')} ${fmt.format(new Date(u.lastLoginAt))}` : ''}` })));
+      const role = el('select', { id: `role-${u.id}` });
+      for (const v of ['user', 'moderator', 'admin']) role.append(el('option', { value: v, textContent: tc(`mod.role.${v}` as any), selected: u.role === v }));
+      const status = el('select', { id: `status-${u.id}` });
+      for (const v of ['active', 'suspended']) status.append(el('option', { value: v, textContent: tc(`mod.status.${v}` as any), selected: u.status === v }));
+      const reason = el('input', { id: `ureason-${u.id}`, type: 'text', maxLength: 300 });
+      const apply = btn(tc('mod.apply'), 'btn small');
+      const self = u.id === me.id;
+      role.disabled = self; status.disabled = self; reason.disabled = self; apply.disabled = self;
+      apply.onclick = async () => {
+        try { await api(`/api/mod/users/${u.id}`, 'PATCH', { role: role.value, status: status.value, reason: reason.value }); say(tc('mod.done')); await loadUsers(page); }
+        catch (e) { say(msg(e)); }
+      };
+      li.append(el('div', { className: 'mod-actions' },
+        el('label', { htmlFor: role.id, className: 'small', textContent: tc('mod.role') }), role,
+        el('label', { htmlFor: status.id, className: 'small', textContent: tc('mod.status') }), status,
+        el('label', { htmlFor: reason.id, className: 'small', textContent: tc('mod.reason') }), reason, apply));
+      ul.append(li);
+    }
+    pager($('[data-user-pager]'), page, r.pages, loadUsers);
+  }
+  $<HTMLFormElement>('[data-user-search]').addEventListener('submit', (e) => { e.preventDefault(); q = ($('#m-q') as HTMLInputElement).value.trim(); loadUsers(1).catch((er) => say(msg(er))); });
+
+  async function loadAudit(page = 1) {
+    const r = await api<{ events: { at: number; actor: string; actorName: string | null; action: string; target: string | null; detail: any }[]; pages: number }>(`/api/mod/audit?page=${page}`);
+    const ol = $('[data-audit]'); ol.replaceChildren();
+    for (const e of r.events) {
+      const d = e.detail ? Object.entries(e.detail).filter(([, v]) => v != null).map(([k, v]) => `${k}: ${v}`).join(', ') : '';
+      ol.append(el('li', { textContent: `${fmt.format(new Date(e.at))} · ${e.actorName ?? e.actor} · ${e.action} · #${e.target ?? '—'}${d ? ` (${d})` : ''}` }));
+    }
+    if (!r.events.length) ol.append(el('li', { textContent: tc('mod.noEvents') }));
+    pager($('[data-audit-pager]'), page, r.pages, loadAudit);
+  }
+
+  // ---------- изгледи ----------
+  const links = [...document.querySelectorAll<HTMLAnchorElement>('[data-view]')];
+  function route() {
+    const allowed = links.filter((a) => !a.closest('[hidden]')).map((a) => a.dataset.view!);
+    const want = new URLSearchParams(location.search).get('view') ?? '';
+    const v = allowed.includes(want) ? want : 'pending';
+    links.forEach((a) => (a.dataset.view === v ? a.setAttribute('aria-current', 'page') : a.removeAttribute('aria-current')));
+    document.querySelectorAll<HTMLElement>('[data-panel]').forEach((p) => { p.hidden = p.dataset.panel !== (v === 'users' || v === 'audit' ? v : 'comments'); });
+    say('');
+    (v === 'users' ? loadUsers() : v === 'audit' ? loadAudit() : loadQueue(v)).catch((e) => say(msg(e)));
+  }
+
+  getMe(true).then((r) => {
+    $('[data-loading]').hidden = true;
+    if (!r.user || (r.user.role !== 'moderator' && r.user.role !== 'admin')) { $('[data-forbidden]').hidden = false; return; }
+    me = r.user;
+    $('[data-mod]').hidden = false;
+    if (me.role === 'admin') document.querySelectorAll<HTMLElement>('[data-admin-only]').forEach((x) => { x.hidden = false; });
+    // изгледите се сменят без презареждане; адресът (?view=…) позволява връщане назад и споделяне
+    links.forEach((a) => a.addEventListener('click', (e) => { e.preventDefault(); history.pushState(null, '', a.href); route(); }));
+    window.addEventListener('popstate', route);
+    route();
+  });
+</script>

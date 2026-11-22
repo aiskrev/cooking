@@ -1,7 +1,7 @@
 // Действия на влезлите посетители: любими, история „Сготвих“, оценки, коментари, жалби – и модерация от модератори/администратори.
 // Всяка заявка се проверява на сървъра: кой е потребителят, дали записът е негов (без чужди идентификатори → 404), роля за модерацията.
 import { sha256 } from './crypto.mjs';
-import { allow, isPublished, moderate, dismissReports, STATUS_BG } from './community.mjs';
+import { allow, isPublished, isBlocked, moderate, dismissReports, STATUS_BG } from './community.mjs';
 import { actorOfUser } from './members.mjs';
 
 const URL_RE = /(https?:\/\/|www\.|\b[a-z0-9-]+\.(com|net|org|bg|info|ru|xyz|top|io|me|click|site|shop|online|link)\b)/i;
@@ -109,6 +109,7 @@ export function recipeCookStats(ctx, slug, userId = null) {
 export function setUserRating(ctx, user, slug, score) {
   if (!isPublished(ctx, slug)) return { status: 404, error: 'Рецептата не е намерена.' };
   if (!Number.isInteger(score) || score < 1 || score > 5) return { status: 400, error: 'Оценката трябва да е цяло число от 1 до 5.' };
+  if (isBlocked(ctx, actorOfUser(user.id))) return { status: 403, error: 'Не можете да оценявате.' }; // блокиран от собственика в /admin
   if (!allow(ctx, 'urating:' + user.id, 60, 3600e3)) return { status: 429, error: 'Твърде много заявки. Опитайте по-късно.' };
   const t = Date.now();
   const actor = actorOfUser(user.id);
@@ -160,6 +161,7 @@ export function addUserComment(ctx, { user, slug, body, parentId, ip, honeypot }
   if (!isPublished(ctx, slug)) return { status: 404, error: 'Рецептата не е намерена.' };
   if (honeypot) return { status: 201, ok: true, pending: true, silent: true }; // автоматичните заявки получават „успех“, но нищо не се записва
   if (!user.email_verified_at) return { status: 403, error: 'Потвърдете имейла си, за да коментирате.' };
+  if (isBlocked(ctx, actorOfUser(user.id))) return { status: 403, error: 'Не можете да коментирате.' };
   const v = checkBody(ctx, body);
   if (v.error) return v;
   let parent = null;

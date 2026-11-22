@@ -1,0 +1,351 @@
+---
+// Личен профил (noindex): преглед, любими, сготвени, оценки, коментари, списък за пазаруване, настройки.
+// Страницата е статична; данните идват от /api/account/* само след вход. Публични профили няма.
+import Base from '../layouts/Base.astro';
+import { getRecipes } from '../lib/recipes';
+import { href, t, type Locale } from '../i18n';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+// Заглавия и адреси на рецептите за списъците (рецепта без превод води към българската страница)
+const mine = await getRecipes(locale);
+const bgAll = await getRecipes('bg');
+const recipes: Record<string, { t: string; u: string }> = {};
+for (const r of bgAll) recipes[r.id] = { t: r.data.title, u: href('bg', 'recipes', r.id) };
+for (const r of mine) recipes[r.id] = { t: r.data.title, u: href(locale, 'recipes', r.id) };
+const sections = [
+  ['pregled', 'profile.overview'], ['lyubimi', 'profile.favorites'], ['sgotveni', 'profile.cooked'], ['otsenki', 'profile.ratings'],
+  ['komentari', 'profile.comments'], ['spisak', 'profile.shopping'], ['nastroyki', 'profile.settings'],
+] as const;
+---
+<Base locale={locale} title={t(locale, 'profile.title')} description={t(locale, 'profile.description')} noindex alt={{ bg: href('bg', 'account'), en: href('en', 'account') }}>
+  <div class="wrap">
+    <div class="page-head"><h1>{t(locale, 'profile.title')}</h1></div>
+    <noscript><p class="notice">{t(locale, 'auth.noscript')}</p></noscript>
+    <p class="muted" data-loading>{t(locale, 'profile.loading')}</p>
+    <div class="notice" data-signed-out hidden>
+      <p>{t(locale, 'profile.signedOut')}</p>
+      <p><a class="btn small" href={`${href(locale, 'login')}?next=${encodeURIComponent(href(locale, 'account'))}`}>{t(locale, 'nav.signIn')}</a>
+        <a class="btn small secondary" href={href(locale, 'register')}>{t(locale, 'auth.login.toRegister')}</a></p>
+    </div>
+
+    <div class="profile" data-profile hidden>
+      <nav class="profile-nav" aria-label={t(locale, 'profile.sections')}>
+        <ul>{sections.map(([id, key]) => <li><a href={`#${id}`} data-tab={id}>{t(locale, key)}</a></li>)}</ul>
+      </nav>
+      <p class="notice" role="status" aria-live="polite" data-flash hidden></p>
+
+      <section id="pregled" class="profile-sec" data-sec aria-labelledby="h-pregled">
+        <h2 id="h-pregled" data-hello></h2>
+        <p class="muted small" data-email></p>
+        <div class="notice" data-unverified hidden><p>{t(locale, 'profile.unverified')}</p><p><button type="button" class="btn small secondary" data-resend>{t(locale, 'profile.resend')}</button></p></div>
+        <ul class="stat-row">
+          <li><a href="#lyubimi"><strong data-stat="favorites">–</strong> {t(locale, 'profile.stat.favorites')}</a></li>
+          <li><a href="#sgotveni"><strong data-stat="cooked">–</strong> {t(locale, 'profile.stat.cooked')}</a></li>
+          <li><a href="#otsenki"><strong data-stat="ratings">–</strong> {t(locale, 'profile.stat.ratings')}</a></li>
+          <li><a href="#komentari"><strong data-stat="comments">–</strong> {t(locale, 'profile.stat.comments')}</a></li>
+        </ul>
+      </section>
+
+      <section id="lyubimi" class="profile-sec" data-sec aria-labelledby="h-lyubimi" hidden>
+        <h2 id="h-lyubimi">{t(locale, 'profile.favorites')}</h2>
+        <p class="muted" data-empty hidden>{t(locale, 'profile.empty.favorites')}</p>
+        <ul class="plist" data-list></ul>
+      </section>
+
+      <section id="sgotveni" class="profile-sec" data-sec aria-labelledby="h-sgotveni" hidden>
+        <h2 id="h-sgotveni">{t(locale, 'profile.cooked')}</h2>
+        <p class="muted" data-empty hidden>{t(locale, 'profile.empty.cooked')}</p>
+        <ol class="plist" data-list></ol>
+        <button type="button" class="btn small secondary" data-more hidden>{t(locale, 'profile.more')}</button>
+      </section>
+
+      <section id="otsenki" class="profile-sec" data-sec aria-labelledby="h-otsenki" hidden>
+        <h2 id="h-otsenki">{t(locale, 'profile.ratings')}</h2>
+        <p class="muted" data-empty hidden>{t(locale, 'profile.empty.ratings')}</p>
+        <ul class="plist" data-list></ul>
+      </section>
+
+      <section id="komentari" class="profile-sec" data-sec aria-labelledby="h-komentari" hidden>
+        <h2 id="h-komentari">{t(locale, 'profile.comments')}</h2>
+        <p class="muted" data-empty hidden>{t(locale, 'profile.empty.comments')}</p>
+        <ul class="plist" data-list></ul>
+        <button type="button" class="btn small secondary" data-more hidden>{t(locale, 'profile.more')}</button>
+      </section>
+
+      <section id="spisak" class="profile-sec" data-sec aria-labelledby="h-spisak" hidden>
+        <h2 id="h-spisak">{t(locale, 'profile.shopping')}</h2>
+        <p>{t(locale, 'profile.shoppingLead')}</p>
+        <p data-shop-count></p>
+        <p><a class="btn small secondary" href={href(locale, 'shopping')}>{t(locale, 'profile.openShopping')}</a></p>
+      </section>
+
+      <section id="nastroyki" class="profile-sec" data-sec aria-labelledby="h-nastroyki" hidden>
+        <h2 id="h-nastroyki">{t(locale, 'profile.settings')}</h2>
+
+        <form class="settings-form" data-profile-form novalidate>
+          <h3>{t(locale, 'profile.profileSection')}</h3>
+          <div class="field"><label for="s-name">{t(locale, 'auth.displayName')}</label><input id="s-name" name="displayName" type="text" required minlength="2" maxlength="40" autocomplete="nickname" /></div>
+          <div class="field"><label for="s-lang">{t(locale, 'profile.siteLanguage')}</label><select id="s-lang" name="locale"><option value="bg">Български</option><option value="en">English</option></select></div>
+          <button class="btn small" type="submit">{t(locale, 'profile.save')}</button> <span class="small" role="status" aria-live="polite" data-out></span>
+        </form>
+
+        <form class="settings-form" data-password-form novalidate>
+          <h3>{t(locale, 'profile.passwordSection')}</h3>
+          <div class="field"><label for="s-cur">{t(locale, 'auth.passwordCurrent')}</label><input id="s-cur" name="current" type="password" required autocomplete="current-password" maxlength="200" /></div>
+          <div class="field"><label for="s-new">{t(locale, 'auth.passwordNew')}</label><input id="s-new" name="next" type="password" required minlength="12" maxlength="200" autocomplete="new-password" aria-describedby="s-new-h" /><p id="s-new-h" class="muted small">{t(locale, 'auth.passwordHint')}</p></div>
+          <button class="btn small" type="submit">{t(locale, 'profile.changePassword')}</button> <span class="small" role="status" aria-live="polite" data-out></span>
+        </form>
+
+        <div class="settings-form">
+          <h3>{t(locale, 'profile.devicesSection')}</h3>
+          <p data-devices></p>
+          <button type="button" class="btn small secondary" data-revoke>{t(locale, 'profile.revokeOthers')}</button> <span class="small" role="status" aria-live="polite" data-out></span>
+        </div>
+
+        <div class="settings-form">
+          <h3>{t(locale, 'profile.dataSection')}</h3>
+          <p>{t(locale, 'profile.dataLead')}</p>
+          <p><button type="button" class="btn small secondary" data-export>{t(locale, 'profile.export')}</button> <span class="small" role="status" aria-live="polite" data-out></span></p>
+        </div>
+
+        <form class="settings-form danger" data-delete-form novalidate>
+          <h3>{t(locale, 'profile.deleteSection')}</h3>
+          <p>{t(locale, 'profile.deleteLead')}</p>
+          <div class="field"><label for="s-del">{t(locale, 'auth.password')}</label><input id="s-del" name="password" type="password" required autocomplete="current-password" maxlength="200" /></div>
+          <button class="btn small danger" type="submit">{t(locale, 'profile.deleteSubmit')}</button> <span class="small" role="status" aria-live="polite" data-out></span>
+        </form>
+      </section>
+    </div>
+  </div>
+  <script type="application/json" id="recipe-index" set:html={JSON.stringify(recipes).replace(/</g, '\\u003c')} />
+</Base>
+
+<script>
+  import { tc, tnc, intl, hrefc } from '../i18n/client';
+  import { api, getMe, setSession, ApiError, type Me } from '../scripts/account';
+
+  const index: Record<string, { t: string; u: string }> = JSON.parse(document.getElementById('recipe-index')?.textContent || '{}');
+  const $ = <T extends HTMLElement>(s: string, root: ParentNode = document) => root.querySelector<T>(s)!;
+  const fmt = new Intl.DateTimeFormat(intl, { day: 'numeric', month: 'long', year: 'numeric' });
+  const sec = (id: string) => document.getElementById(id)!;
+  const msg = (e: unknown) => (e instanceof ApiError ? e.message : tc('community.error'));
+
+  function recipeLink(slug: string, hash = '') {
+    const r = index[slug];
+    const a = document.createElement('a');
+    a.href = (r?.u ?? hrefc('recipes', slug)) + hash; a.textContent = r?.t ?? slug;
+    return a;
+  }
+  const button = (text: string, cls = 'link-btn') => Object.assign(document.createElement('button'), { type: 'button', className: cls, textContent: text });
+
+  // ---------- раздели (по котвата в адреса) ----------
+  const tabs = [...document.querySelectorAll<HTMLAnchorElement>('[data-tab]')];
+  function showTab() {
+    const id = tabs.some((a) => a.dataset.tab === location.hash.slice(1)) ? location.hash.slice(1) : 'pregled';
+    document.querySelectorAll<HTMLElement>('[data-sec]').forEach((s) => { s.hidden = s.id !== id; });
+    tabs.forEach((a) => (a.dataset.tab === id ? a.setAttribute('aria-current', 'page') : a.removeAttribute('aria-current')));
+    loaders[id]?.();
+  }
+  const loaded = new Set<string>();
+  const once = (id: string, fn: () => Promise<void>) => () => { if (loaded.has(id)) return; loaded.add(id); fn().catch(() => loaded.delete(id)); };
+
+  let me: Me;
+  const loaders: Record<string, () => void> = {
+    lyubimi: once('lyubimi', loadFavorites),
+    sgotveni: once('sgotveni', () => loadCooked(1)),
+    otsenki: once('otsenki', loadRatings),
+    komentari: once('komentari', () => loadComments(1)),
+    spisak: () => { let n = 0; try { n = JSON.parse(localStorage.getItem('shopping-list') || '[]').length; } catch { /* */ } $('[data-shop-count]').textContent = tnc('profile.shoppingCount', n); },
+    nastroyki: () => { ($('#s-name') as HTMLInputElement).value = me.displayName; ($('#s-lang') as HTMLSelectElement).value = me.locale; },
+  };
+
+  // ---------- любими ----------
+  async function loadFavorites() {
+    const s = sec('lyubimi'); const ul = $('[data-list]', s);
+    const { favorites } = await api<{ favorites: { slug: string }[] }>('/api/account/favorites');
+    ul.replaceChildren();
+    for (const f of favorites) {
+      const li = document.createElement('li'); li.append(recipeLink(f.slug));
+      const rm = button(tc('profile.remove'));
+      rm.setAttribute('aria-label', `${tc('profile.remove')}: ${index[f.slug]?.t ?? f.slug}`);
+      rm.addEventListener('click', async () => {
+        li.hidden = true; // оптимистично; при грешка се връща
+        try { await api(`/api/account/favorites/${f.slug}`, 'DELETE'); li.remove(); $('[data-empty]', s).hidden = !!ul.children.length; }
+        catch (e) { li.hidden = false; rm.textContent = msg(e); }
+      });
+      li.append(' ', rm); ul.append(li);
+    }
+    $('[data-empty]', s).hidden = favorites.length > 0;
+    $('[data-stat="favorites"]').textContent = String(favorites.length);
+  }
+
+  // ---------- сготвени ----------
+  async function loadCooked(page: number) {
+    const s = sec('sgotveni'); const ol = $('[data-list]', s); const more = $<HTMLButtonElement>('[data-more]', s);
+    const r = await api<{ total: number; pages: number; events: { id: number; slug: string; cookedAt: number; servings: number | null; note: string | null }[] }>(`/api/account/cooked?page=${page}`);
+    if (page === 1) ol.replaceChildren();
+    for (const ev of r.events) {
+      const li = document.createElement('li'); li.className = 'cook-item';
+      const head = document.createElement('p');
+      const time = document.createElement('time'); time.dateTime = new Date(ev.cookedAt).toISOString(); time.textContent = fmt.format(new Date(ev.cookedAt));
+      head.append(time, ' · ', recipeLink(ev.slug));
+      if (ev.servings) head.append(' · ', tc('profile.servingsN', { n: ev.servings }));
+      const noteId = `note-${ev.id}`;
+      const nf = document.createElement('form'); nf.className = 'note-form'; nf.noValidate = true;
+      const lab = Object.assign(document.createElement('label'), { htmlFor: noteId, textContent: tc('profile.note') });
+      const ta = Object.assign(document.createElement('textarea'), { id: noteId, rows: 2, maxLength: 500, value: ev.note ?? '' });
+      const save = Object.assign(document.createElement('button'), { type: 'submit', className: 'btn small secondary', textContent: tc('profile.saveNote') });
+      const out = Object.assign(document.createElement('span'), { className: 'small' }); out.setAttribute('role', 'status');
+      nf.append(lab, ta, save, ' ', out);
+      nf.addEventListener('submit', async (e) => { e.preventDefault(); try { await api(`/api/account/cooked/${ev.id}`, 'PATCH', { note: ta.value }); out.textContent = tc('profile.saved'); } catch (er) { out.textContent = msg(er); } });
+      const actions = document.createElement('p'); actions.className = 'cm-actions';
+      const again = button(tc('recipe.cookedAgain'));
+      again.addEventListener('click', async () => { try { await api(`/api/account/recipes/${ev.slug}/cooked`, 'POST', {}); loaded.delete('sgotveni'); await loadCooked(1); flash(tc('recipe.cookedSaved')); } catch (er) { again.textContent = msg(er); } });
+      const del = button(tc('profile.deleteEntry'));
+      del.addEventListener('click', async () => { try { await api(`/api/account/cooked/${ev.id}`, 'DELETE'); li.remove(); $('[data-empty]', s).hidden = !!ol.children.length; } catch (er) { del.textContent = msg(er); } });
+      actions.append(again, ' ', del);
+      li.append(head, nf, actions); ol.append(li);
+    }
+    $('[data-empty]', s).hidden = r.total > 0;
+    $('[data-stat="cooked"]').textContent = String(r.total);
+    more.hidden = page >= r.pages;
+    more.onclick = () => loadCooked(page + 1);
+  }
+
+  // ---------- оценки ----------
+  async function loadRatings() {
+    const s = sec('otsenki'); const ul = $('[data-list]', s);
+    const { ratings } = await api<{ ratings: { slug: string; score: number }[] }>('/api/account/ratings');
+    ul.replaceChildren();
+    for (const r of ratings) {
+      const li = document.createElement('li');
+      const stars = document.createElement('span'); stars.className = 'stars'; stars.textContent = '★'.repeat(r.score) + '☆'.repeat(5 - r.score);
+      stars.setAttribute('aria-hidden', 'true');
+      const sr = document.createElement('span'); sr.className = 'sr-only'; sr.textContent = tc('community.scoreAria', { n: r.score });
+      const rm = button(tc('community.removeRating'));
+      rm.addEventListener('click', async () => { try { await api(`/api/account/recipes/${r.slug}/rating`, 'DELETE'); li.remove(); $('[data-empty]', s).hidden = !!ul.children.length; } catch (e) { rm.textContent = msg(e); } });
+      li.append(recipeLink(r.slug, '#ocenki'), ' ', stars, sr, ' ', rm); ul.append(li);
+    }
+    $('[data-empty]', s).hidden = ratings.length > 0;
+    $('[data-stat="ratings"]').textContent = String(ratings.length);
+  }
+
+  // ---------- коментари ----------
+  async function loadComments(page: number) {
+    const s = sec('komentari'); const ul = $('[data-list]', s); const more = $<HTMLButtonElement>('[data-more]', s);
+    const r = await api<{ total: number; pages: number; comments: { id: number; slug: string; body: string; status: string; createdAt: number; editedAt: number | null }[] }>(`/api/account/comments?page=${page}`);
+    if (page === 1) ul.replaceChildren();
+    for (const c of r.comments) {
+      const li = document.createElement('li'); li.className = 'comment';
+      const head = document.createElement('p'); head.className = 'cm-meta';
+      const st = document.createElement('span'); st.className = 'tag-soft' + (c.status === 'pending' ? ' draft' : '');
+      st.textContent = tc(`profile.status.${c.status}` as any);
+      const time = document.createElement('time'); time.dateTime = new Date(c.createdAt).toISOString(); time.textContent = fmt.format(new Date(c.createdAt));
+      head.append(recipeLink(c.slug, '#komentari'), ' · ', time, ' ', st);
+      if (c.editedAt) head.append(` · ${tc('community.edited')}`);
+      const body = document.createElement('p'); body.className = 'cm-body'; body.textContent = c.body;
+      const actions = document.createElement('p'); actions.className = 'cm-actions';
+      if (c.status === 'pending' || c.status === 'approved') {
+        const ed = button(tc('community.edit'));
+        ed.addEventListener('click', () => editInline(li, body, c, st));
+        actions.append(ed, ' ');
+      }
+      const del = button(tc('community.delete'));
+      del.addEventListener('click', async () => { if (!confirm(tc('community.deleteConfirm'))) return; try { await api(`/api/account/comments/${c.id}`, 'DELETE'); li.remove(); $('[data-empty]', s).hidden = !!ul.children.length; } catch (e) { del.textContent = msg(e); } });
+      actions.append(del);
+      li.append(head, body, actions); ul.append(li);
+    }
+    $('[data-empty]', s).hidden = r.total > 0;
+    $('[data-stat="comments"]').textContent = String(r.total);
+    more.hidden = page >= r.pages;
+    more.onclick = () => loadComments(page + 1);
+  }
+
+  function editInline(li: HTMLElement, body: HTMLElement, c: { id: number; body: string; status: string }, st: HTMLElement) {
+    if (li.querySelector('form')) return;
+    const f = document.createElement('form'); f.className = 'reply-form'; f.noValidate = true;
+    const id = `edit-${c.id}`;
+    const lab = Object.assign(document.createElement('label'), { htmlFor: id, textContent: tc('community.comment') });
+    const ta = Object.assign(document.createElement('textarea'), { id, rows: 4, maxLength: 2000, value: c.body });
+    const save = Object.assign(document.createElement('button'), { type: 'submit', className: 'btn small', textContent: tc('community.save') });
+    const cancel = button(tc('community.cancel'));
+    const out = Object.assign(document.createElement('span'), { className: 'small' }); out.setAttribute('role', 'status');
+    f.append(lab, ta, save, ' ', cancel, ' ', out);
+    cancel.addEventListener('click', () => f.remove());
+    f.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      try { const r = await api(`/api/account/comments/${c.id}`, 'PATCH', { body: ta.value }); c.body = ta.value.trim(); body.textContent = c.body; st.textContent = tc('profile.status.pending'); st.className = 'tag-soft draft'; f.remove(); flash(r.message); }
+      catch (er) { out.textContent = msg(er); }
+    });
+    body.after(f); ta.focus();
+  }
+
+  // ---------- съобщения ----------
+  function flash(text: string) { const f = $('[data-flash]'); f.textContent = text; f.hidden = !text; }
+
+  // ---------- настройки ----------
+  function wireSettings() {
+    const pf = $<HTMLFormElement>('[data-profile-form]');
+    pf.addEventListener('submit', async (e) => {
+      e.preventDefault(); const out = $('[data-out]', pf);
+      try {
+        const r = await api<{ user: Me }>('/api/account/profile', 'PATCH', { displayName: ($('#s-name') as HTMLInputElement).value, locale: ($('#s-lang') as HTMLSelectElement).value });
+        me = r.user; hello(); out.textContent = tc('profile.saved');
+        document.dispatchEvent(new CustomEvent('account:change', { detail: me }));
+      } catch (er) { out.textContent = msg(er); }
+    });
+    const pw = $<HTMLFormElement>('[data-password-form]');
+    pw.addEventListener('submit', async (e) => {
+      e.preventDefault(); const out = $('[data-out]', pw);
+      const fd = new FormData(pw);
+      try { const r = await api('/api/account/password', 'POST', { current: fd.get('current'), next: fd.get('next') }); setSession(r); pw.reset(); out.textContent = r.message; devices(1); }
+      catch (er) { out.textContent = msg(er); }
+    });
+    const rv = $<HTMLButtonElement>('[data-revoke]');
+    rv.addEventListener('click', async () => { const out = rv.parentElement!.querySelector('[data-out]')!; try { const r = await api('/api/account/sessions/revoke-others', 'POST', {}); out.textContent = r.message; devices(1); } catch (er) { out.textContent = msg(er); } });
+    const ex = $<HTMLButtonElement>('[data-export]');
+    ex.addEventListener('click', async () => {
+      const outEx = ex.parentElement!.querySelector('[data-out]')!;
+      try {
+        const res = await fetch('/api/account/export', { credentials: 'same-origin' });
+        if (!res.ok) throw new Error();
+        const url = URL.createObjectURL(await res.blob());
+        const a = Object.assign(document.createElement('a'), { href: url, download: 'moite-danni.json' });
+        document.body.append(a); a.click(); a.remove();
+        setTimeout(() => URL.revokeObjectURL(url), 5000);
+        outEx.textContent = '';
+      } catch { outEx.textContent = tc('community.error'); }
+    });
+    const df = $<HTMLFormElement>('[data-delete-form]');
+    df.addEventListener('submit', async (e) => {
+      e.preventDefault(); const out = $('[data-out]', df);
+      if (!confirm(tc('profile.deleteAsk'))) return;
+      try { await api('/api/account/delete', 'POST', { password: new FormData(df).get('password') }); try { sessionStorage.setItem('flash', tc('profile.deleted')); } catch { /* */ } location.href = hrefc(); }
+      catch (er) { out.textContent = msg(er); }
+    });
+    $<HTMLButtonElement>('[data-resend]').addEventListener('click', async (e) => {
+      const b = e.currentTarget as HTMLButtonElement;
+      try { const r = await api('/api/account/verify/resend', 'POST', {}); b.textContent = r.message; b.disabled = true; } catch (er) { b.textContent = msg(er); }
+    });
+  }
+  const devices = (n: number) => { $('[data-devices]').textContent = tnc('profile.devices', n); };
+  function hello() {
+    $('[data-hello]').textContent = tc('profile.hello', { name: me.displayName });
+    $('[data-email]').textContent = tc('profile.emailLabel', { email: me.email });
+    $('[data-unverified]').hidden = me.emailVerified;
+  }
+
+  getMe(true).then(async (r: any) => {
+    $('[data-loading]').hidden = true;
+    if (!r.user) { $('[data-signed-out]').hidden = false; return; }
+    me = r.user;
+    $('[data-profile]').hidden = false;
+    hello(); devices(r.sessions ?? 1); wireSettings();
+    try { const f = sessionStorage.getItem('flash'); if (f) { flash(f); sessionStorage.removeItem('flash'); } } catch { /* */ }
+    window.addEventListener('hashchange', showTab);
+    showTab();
+    // броят в „Преглед“
+    if (!location.hash || location.hash === '#pregled') { loaders.lyubimi(); loaders.otsenki(); api('/api/account/cooked?page=1').then((x: any) => { $('[data-stat="cooked"]').textContent = String(x.total); }).catch(() => {}); api('/api/account/comments?page=1').then((x: any) => { $('[data-stat="comments"]').textContent = String(x.total); }).catch(() => {}); }
+  });
+</script>

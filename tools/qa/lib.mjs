@@ -81,3 +81,31 @@ export async function publishAndWait(page, timeoutMs = 25 * 60 * 1000) {
     if (Date.now() > deadline) return { status: 'timeout' };
   }
 }
+
+// ---- Профили на посетителите (локален режим: писмата са файлове в /cmsdata/outbox – томът cms-data, само за четене) ----
+import fs from 'node:fs';
+export const OUTBOX = '/cmsdata/outbox';
+export const tokenIn = (text) => /#token=([A-Za-z0-9_-]+)/.exec(text || '')?.[1];
+/** Последното писмо до адреса след момента since (чака до ~10 секунди). */
+export async function waitMail(email, since) {
+  for (let i = 0; i < 40; i++) {
+    const files = fs.existsSync(OUTBOX) ? fs.readdirSync(OUTBOX).filter((f) => f.endsWith('.json')).sort().reverse() : [];
+    for (const f of files) {
+      if (Number(f.split('-')[0]) < since) break;
+      const m = JSON.parse(fs.readFileSync(`${OUTBOX}/${f}`, 'utf8'));
+      if (m.to === email) return m.text;
+    }
+    await new Promise((r) => setTimeout(r, 250));
+  }
+  return null;
+}
+/** Нов потвърден профил през API (без интерфейса) и вход в браузъра. */
+export async function newMember(browser, { email, name, password, opts = {} }) {
+  const { ctx, page } = await newPage(browser, opts);
+  const since = Date.now() - 1000;
+  await ctx.request.post(BASE + '/api/account/register', { data: { email, password, displayName: name, locale: 'bg', acceptTerms: true } });
+  const token = tokenIn(await waitMail(email, since));
+  await ctx.request.post(BASE + '/api/account/verify', { data: { token } });
+  const r = await ctx.request.post(BASE + '/api/account/login', { data: { email, password } });
+  return { ctx, page, ok: r.ok() && !!token };
+}

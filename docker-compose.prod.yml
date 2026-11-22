@@ -21,6 +21,15 @@ services:
       CMS_COOKIE_SECURE: auto
       TURNSTILE_SECRET: ${TURNSTILE_SECRET:-}
       TURNSTILE_SITE_KEY: ${TURNSTILE_SITE_KEY:-}
+      # Писма за профилите (потвърждаване на имейл, нова парола). Докато не се зададат, регистрацията връща „временно не е налична“.
+      # Стойностите (с паролата за SMTP) се пазят в /opt/recipes/.env на сървъра – никога в Git.
+      MAIL_TRANSPORT: ${MAIL_TRANSPORT:-disabled}
+      MAIL_FROM: ${MAIL_FROM:-}
+      MAIL_SMTP_HOST: ${MAIL_SMTP_HOST:-}
+      MAIL_SMTP_PORT: ${MAIL_SMTP_PORT:-587}
+      MAIL_SMTP_SECURE: ${MAIL_SMTP_SECURE:-}
+      MAIL_SMTP_USER: ${MAIL_SMTP_USER:-}
+      MAIL_SMTP_PASS: ${MAIL_SMTP_PASS:-}
     volumes:
       - cms-data:/data
       - releases:/releases

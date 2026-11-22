@@ -156,6 +156,8 @@ export function purgeMembers(ctx) {
   const t = Date.now();
   ctx.db.run('DELETE FROM user_sessions WHERE expires_at < ? OR last_seen_at < ?', t, t - ctx.config.members.idleMs);
   ctx.db.run('DELETE FROM user_tokens WHERE (used_at IS NOT NULL OR expires_at < ?) AND created_at < ?', t, t - ctx.config.members.tokenRetentionMs);
+  // журнал на сигурността и модерацията – до 12 месеца (виж страницата „Поверителност“)
+  ctx.db.run('DELETE FROM audit_events WHERE at < ?', t - 365 * 86400e3);
 }
 
 // ---------- Забравена и нова парола ----------

@@ -17,9 +17,19 @@ export const localeInfo: Record<Locale, { lang: string; og: string; intl: string
 
 // ---------- Адреси ----------
 export const routeSegments = {
-  bg: { recipes: 'recepti', categories: 'kategorii', tags: 'etiketi', search: 'tursene', favorites: 'lyubimi', shopping: 'spisak' },
-  en: { recipes: 'recipes', categories: 'categories', tags: 'tags', search: 'search', favorites: 'favorites', shopping: 'shopping-list' },
+  bg: {
+    recipes: 'recepti', categories: 'kategorii', tags: 'etiketi', search: 'tursene', favorites: 'lyubimi', shopping: 'spisak',
+    login: 'vhod', register: 'registratsia', forgot: 'zabravena-parola', reset: 'nova-parola', verify: 'potvarzhdenie',
+    account: 'profil', moderation: 'moderatsia', privacy: 'poveritelnost',
+  },
+  en: {
+    recipes: 'recipes', categories: 'categories', tags: 'tags', search: 'search', favorites: 'favorites', shopping: 'shopping-list',
+    login: 'sign-in', register: 'register', forgot: 'forgot-password', reset: 'reset-password', verify: 'verify-email',
+    account: 'account', moderation: 'moderation', privacy: 'privacy',
+  },
 } as const;
+/** Лични и служебни страници: noindex и извън картата на сайта (вход, профил, модерация, любими) */
+export const privateRoutes: RouteKey[] = ['favorites', 'login', 'register', 'forgot', 'reset', 'verify', 'account', 'moderation'];
 export type RouteKey = keyof (typeof routeSegments)['bg'];
 
 /** /bg/ , /en/recipes/ , /en/recipes/<slug>/  – винаги с наклонена черта накрая (trailingSlash: 'always') */

@@ -423,3 +423,69 @@ html.lb-open { overflow: hidden; }
 .filters-panel[open] > summary::after { transform: rotate(180deg); }
 .filters-panel > summary:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
 .filters-panel .search-filters { margin: 0; }
+
+/* ---- Профил: вход, меню, профил, модерация (същите цветове, радиуси и размери като останалия сайт) ---- */
+:root { --danger: #9b1c1c; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme='light']) { --danger: #f19a9a; } }
+:root[data-theme='dark'] { --danger: #f19a9a; }
+[hidden] { display: none !important; }
+.narrow { max-width: 40rem; }
+.account { position: relative; display: inline-flex; }
+.account-link, .account-btn { display: inline-flex; align-items: center; gap: 0.4rem; min-height: 44px; min-width: 44px; padding: 0 0.8rem; border: 1px solid var(--line); border-radius: 999px; background: transparent; color: var(--text); font: inherit; font-size: 0.9rem; font-weight: 700; text-decoration: none; cursor: pointer; justify-content: center; }
+.account-link:hover, .account-btn:hover { background: var(--surface-2); }
+.account-link[aria-current='page'] { border-color: var(--accent); }
+.account-btn[aria-expanded='true'] { border-color: var(--accent); background: var(--surface-2); }
+.avatar { display: inline-flex; align-items: center; justify-content: center; width: 1.7rem; height: 1.7rem; border-radius: 50%; background: var(--accent); color: var(--accent-text); font-size: 0.85rem; }
+.account-label { max-width: 10rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.account-menu { position: absolute; right: 0; top: calc(100% + 0.35rem); z-index: 30; min-width: 13rem; margin: 0; padding: 0.35rem; list-style: none; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
+.account-menu a, .account-menu button { display: flex; align-items: center; width: 100%; min-height: 44px; padding: 0 0.75rem; border: 0; border-radius: 8px; background: none; color: var(--text); font: inherit; text-align: left; text-decoration: none; cursor: pointer; }
+.account-menu a:hover, .account-menu button:hover { background: var(--surface-2); }
+.account-menu a[aria-current='page'] { color: var(--accent); }
+@media (max-width: 560px) { .account-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; } .account-link, .account-btn { padding: 0 0.5rem; } }
+
+.notice.bad { border-left-color: var(--danger); }
+.auth-box { margin-bottom: 3rem; }
+.auth-form, .settings-form { display: grid; gap: 0.25rem; margin-bottom: 1.5rem; }
+.auth-form .field, .settings-form .field, .note-form { margin-bottom: 0.75rem; }
+.auth-form label, .settings-form label, .note-form label, .mod-actions label { display: block; font-weight: 600; margin-bottom: 0.25rem; }
+.auth-form input:not([type=checkbox]), .auth-form select, .settings-form input, .settings-form select, .note-form textarea, .mod-actions input, .mod-actions select, .mod-search input, .report-form input[type=text] {
+  width: 100%; min-height: 44px; padding: 0.5rem 0.75rem; border: 1px solid var(--line); background: var(--surface); color: var(--text); border-radius: 10px; font: inherit; }
+.auth-form input[aria-invalid='true'] { border-color: var(--danger); border-width: 2px; }
+.check { display: flex !important; gap: 0.5rem; align-items: flex-start; font-weight: 400 !important; min-height: 44px; padding-top: 0.6rem; }
+.check input { width: 1.2rem; height: 1.2rem; margin-top: 0.15rem; flex: none; accent-color: var(--accent); }
+.auth-form .btn { justify-self: start; margin-top: 0.5rem; }
+.btn.danger { background: var(--danger); border-color: var(--danger); color: var(--accent-text); }
+.settings-form { padding: 1rem 1.1rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+.settings-form.danger { border-left: 6px solid var(--danger); }
+.settings-form h3 { margin-bottom: 0.25rem; }
+
+.profile-nav { margin: 0 0 1.25rem; border-bottom: 1px solid var(--line); }
+.profile-nav ul { display: flex; flex-wrap: wrap; gap: 0.15rem; margin: 0; padding: 0; list-style: none; }
+.profile-nav a { display: inline-flex; align-items: center; gap: 0.3rem; min-height: 44px; padding: 0 0.8rem; color: var(--text); font-weight: 600; text-decoration: none; border-radius: 8px 8px 0 0; }
+.profile-nav a:hover { background: var(--surface-2); }
+.profile-nav a[aria-current='page'] { color: var(--accent); box-shadow: inset 0 -3px 0 var(--accent); }
+.profile-sec { margin-bottom: 3rem; }
+.stat-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr)); gap: 0.75rem; margin: 1rem 0; padding: 0; list-style: none; }
+.stat-row a { display: block; padding: 0.9rem 1rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); color: var(--text); text-decoration: none; }
+.stat-row strong { display: block; font-family: var(--font-head); font-size: 1.6rem; color: var(--accent); }
+.plist { margin: 0; padding: 0 0 0 1.2rem; display: grid; gap: 0.6rem; }
+ul.plist { list-style: none; padding: 0; }
+.plist > li { padding: 0.6rem 0; border-bottom: 1px solid var(--line); }
+.cook-item p { margin: 0 0 0.4rem; }
+.note-form textarea { min-height: 3.2rem; }
+.mod-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; }
+.mod-item { padding: 1rem 1.1rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+.mod-item .cm-body { white-space: pre-wrap; }
+.mod-actions { display: grid; gap: 0.35rem; max-width: 36rem; }
+.mod-buttons { display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; margin: 0.4rem 0 0; }
+.mod-reports { margin: 0 0 0.6rem; padding-left: 1.2rem; font-size: 0.95rem; }
+.mod-history { font-size: 0.9rem; color: var(--muted); padding-left: 1.2rem; }
+.mod-search { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: end; margin-bottom: 1rem; }
+.mod-search input { flex: 1 1 14rem; width: auto; }
+.pager { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin-top: 1rem; }
+.report-form fieldset { border: 1px solid var(--line); border-radius: 10px; margin: 0 0 0.5rem; padding: 0.25rem 0.9rem 0.5rem; }
+.report-form legend { font-weight: 700; padding: 0 0.3rem; }
+.prose-page h2 { margin-top: 2rem; }
+.prose-page li { margin-bottom: 0.4rem; }
+.comment .cm-body { white-space: pre-wrap; }
+@media print { .account, .profile-nav { display: none !important; } }

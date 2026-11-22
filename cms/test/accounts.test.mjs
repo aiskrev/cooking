@@ -473,6 +473,17 @@ test('изтриване на профил: изисква парола; одо�
   assert.equal((await browser().req('POST', '/api/account/login', { email: 'del@example.invalid', password: PW })).status, 401);
 });
 
+test('блокиране от собственика в /admin важи и за профила: без нови коментари и оценки', async () => {
+  const { blockActorOf } = await import('../lib/community.mjs');
+  ctx.db.run("INSERT OR IGNORE INTO admin_users (id, email, display_name, password_hash, created_at) VALUES (1, 'owner@example.invalid', 'Собственик', 'x', 0)");
+  const b = await signup('blocked@example.invalid', 'Блокиран');
+  await b.req('POST', `/api/account/recipes/${slug}/comments`, { body: 'Коментар преди блокиране' });
+  const id = ctx.db.get('SELECT id FROM comments WHERE user_id = ?', b.user.id).id;
+  assert.equal(blockActorOf(ctx, { commentId: id, adminId: 1, reason: 'тест' }).ok, true);
+  assert.equal((await b.req('POST', `/api/account/recipes/${slug}/comments`, { body: 'Коментар след блокиране' })).status, 403);
+  assert.equal((await b.req('PUT', `/api/account/recipes/${slug}/rating`, { score: 1 })).status, 403);
+});
+
 test('журналът не съдържа пароли и кодове от писмата', () => {
   const dump = JSON.stringify(ctx.db.all('SELECT * FROM audit_events'));
   assert.ok(!dump.includes(PW));

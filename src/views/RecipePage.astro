@@ -188,8 +188,10 @@ const showNote = locale === 'en' && recipe.translation && !recipe.translation.re
           <button type="button" class="btn secondary" data-fav-toggle aria-pressed="false">{t(locale, 'favorites.add')}</button>
           <button type="button" class="btn secondary" data-cooked-toggle aria-pressed="false">{t(locale, 'recipe.cooked')}</button>
           <button type="button" class="btn secondary" data-print>{t(locale, 'recipe.print')}</button>
+          <button type="button" class="btn secondary" data-share data-share-title={d.title}>{t(locale, 'recipe.share')}</button>
         </div>
         <p class="muted small" data-cooked-count hidden></p>
+        <p class="small" role="status" aria-live="polite" data-actions-status></p>
       </div>
       {heroItem && (
         <figure class="hero-fig">

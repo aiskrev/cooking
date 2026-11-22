@@ -1,10 +1,13 @@
 ---
 // Оценки и коментари. Страницата е статична – данните се зареждат от /api/public/… с JavaScript (src/scripts/community.ts).
 // Показва се само реална информация: без оценки и коментари виждате празно състояние, никога примерни стойности.
+// Четенето е за всички; оценки и коментари се записват само от влезли потребители с потвърден имейл.
 // Данните са общи за двата езика: ключът е стабилният идентификатор на рецептата (slug), не адресът на страницата.
-import { t, type Locale } from '../i18n';
+import { t, href, type Locale } from '../i18n';
 interface Props { locale: Locale; slug: string; title: string }
 const { locale, slug, title } = Astro.props;
+const login = href(locale, 'login');
+const register = href(locale, 'register');
 ---
 <section class="wrap community" aria-labelledby="h-community" data-community data-slug={slug} data-title={title}>
   <h2 id="h-community" class="sr-only">{t(locale, 'community.heading')}</h2>
@@ -17,13 +20,15 @@ const { locale, slug, title } = Astro.props;
         <ul class="dist" data-dist aria-label={t(locale, 'community.dist')}></ul>
       </div>
       <p class="muted" data-rating-empty>{t(locale, 'community.noRatings')}</p>
-      <div class="star-input" role="group" aria-labelledby={`yr-${slug}`}>
+      <p class="small" data-rate-gate hidden><span data-gate-text>{t(locale, 'community.signInToRate')}</span> <a href={login} data-signin-link>{t(locale, 'community.signIn')}</a></p>
+      <div class="star-input" role="group" aria-labelledby={`yr-${slug}`} data-star-input hidden>
         <p id={`yr-${slug}`} class="small"><strong>{t(locale, 'community.yourRating')}</strong> <span class="muted" data-my-rating></span></p>
         <div class="star-row">
           {[1, 2, 3, 4, 5].map((n) => (
             <button type="button" class="star-btn" data-score={n} aria-pressed="false" aria-label={t(locale, 'community.scoreAria', { n })} title={t(locale, 'community.scoreAria', { n })}><span aria-hidden="true">★</span></button>
           ))}
         </div>
+        <button type="button" class="link-btn small" data-rating-remove hidden>{t(locale, 'community.removeRating')}</button>
       </div>
       <p class="small" role="status" aria-live="polite" data-rating-status></p>
       <p class="muted small">{t(locale, 'community.ratingsNote')}</p>
@@ -35,18 +40,22 @@ const { locale, slug, title } = Astro.props;
       <p class="muted" data-comments-empty hidden>{t(locale, 'community.noComments')}</p>
       <p class="muted" data-community-error hidden>{t(locale, 'community.unavailable')}</p>
 
-      <form class="comment-form" data-comment-form novalidate aria-labelledby={`cf-${slug}`}>
+      <div class="notice small-notice" data-comment-gate hidden>
+        <p data-gate-guest>{t(locale, 'community.signInToComment')}</p>
+        <p data-gate-guest><a class="btn small" href={login} data-signin-link>{t(locale, 'community.signIn')}</a> <a class="btn small secondary" href={register}>{t(locale, 'community.register')}</a></p>
+        <p data-gate-verify hidden>{t(locale, 'community.verifyFirst')}</p>
+      </div>
+
+      <form class="comment-form" data-comment-form novalidate aria-labelledby={`cf-${slug}`} hidden>
         <h4 id={`cf-${slug}`} class="cm-h2">{t(locale, 'community.yourComment')}</h4>
-        <div class="field"><label for={`cn-${slug}`}>{t(locale, 'community.name')}</label><input id={`cn-${slug}`} name="name" type="text" maxlength="40" autocomplete="nickname" required /></div>
-        <div class="field"><label for={`cb-${slug}`}>{t(locale, 'community.comment')}</label><textarea id={`cb-${slug}`} name="body" rows="4" maxlength="2000" required></textarea>
-          <p class="muted small">{t(locale, 'community.noLinks')}</p></div>
-        <div class="field"><label for={`ce-${slug}`}>{t(locale, 'community.email')}</label><input id={`ce-${slug}`} name="email" type="email" maxlength="120" autocomplete="email" />
-          <p class="muted small">{t(locale, 'community.emailNote')}</p></div>
+        <p class="muted small" data-comment-as></p>
+        <div class="field"><label for={`cb-${slug}`}>{t(locale, 'community.comment')}</label><textarea id={`cb-${slug}`} name="body" rows="4" maxlength="2000" required aria-describedby={`cb-h-${slug}`}></textarea>
+          <p class="muted small" id={`cb-h-${slug}`}>{t(locale, 'community.noLinks')}</p></div>
         <div class="hp" aria-hidden="true"><label>{t(locale, 'community.honeypot')} <input name="website" type="text" tabindex="-1" autocomplete="off" /></label></div>
         <button class="btn" type="submit">{t(locale, 'community.submit')}</button>
         <p class="small" role="status" aria-live="polite" data-form-status></p>
       </form>
-      <p class="muted small">{t(locale, 'community.nameNote')}</p>
+      <p class="muted small">{t(locale, 'community.nameNote')} <a href={`${href(locale, 'privacy')}#pravila`}>{t(locale, 'auth.readPolicy')}</a></p>
     </div>
   </div>
 </section>
