@@ -162,6 +162,7 @@ const ed = await mb.ctx.request.patch(BASE + `/api/account/comments/${cid}`, { d
 const dl = await mb.ctx.request.delete(BASE + `/api/account/comments/${cid}`, { headers: { 'x-csrf-token': csrfB } });
 check('COM-04', ed.status() === 404 && dl.status() === 404, `потребител Б не може да редактира/изтрие коментара на А (${ed.status()}/${dl.status()})`);
 const guestCtx = await browser.newContext();
+await guestCtx.addInitScript(() => { try { localStorage.setItem('cookie-notice-v1', 'ok'); } catch { /* */ } });
 const g = await guestCtx.newPage();
 await g.goto(BASE + RECIPE); await settle(g, 1200);
 check('COM-07', !(await g.locator('#komentari').innerText()).includes(body) && await g.locator('[data-comment-gate]').isVisible(), 'гост: не вижда чакащия коментар; вижда покана „Влезте или създайте профил“');
@@ -260,6 +261,7 @@ const printVis = await page.evaluate(() => ({ community: getComputedStyle(docume
 check('PRINT-01', printVis.community === 'none' && printVis.account === 'none' && printVis.ingredients, `печат: без оценки/коментари и меню на профила, съставките остават (${JSON.stringify(printVis)})`);
 await page.emulateMedia({ media: 'screen' });
 const shareCtx = await browser.newContext({ permissions: ['clipboard-read', 'clipboard-write'] });
+await shareCtx.addInitScript(() => { try { localStorage.setItem('cookie-notice-v1', 'ok'); } catch { /* */ } });
 const sp = await shareCtx.newPage();
 await sp.goto(BASE + RECIPE); await settle(sp, 800);
 await sp.evaluate(() => { delete Navigator.prototype.share; }); // браузър без Web Share API → резервното копиране на връзката
@@ -286,6 +288,28 @@ const relog = await (await browser.newContext()).request.post(BASE + '/api/accou
 check('AUTH-06c', relog.ok(), 'вход с новата парола');
 A.password = newPw;
 await anon.ctx.close();
+
+// ================= известие за бисквитките (GDPR) =================
+for (const [lang, ok, title] of [['bg', 'Разбрах', 'Бисквитки и лични данни'], ['en', 'Got it', 'Cookies and personal data']]) {
+  const cn = await newPage(browser, { cookieNotice: true, viewport: { width: 360, height: 780 } });
+  await cn.page.goto(`${BASE}/${lang}/`); await settle(cn.page, 700);
+  const box = cn.page.locator('[data-cookie-notice]');
+  check('GDPR-01', await box.isVisible() && (await box.locator('h2').innerText()) === title, `${lang}: известието се показва при първо посещение („${title}“)`);
+  const link = box.locator('a');
+  check('GDPR-02', (await link.getAttribute('href')).endsWith('#biskvitki'), `${lang}: връзка към раздела за бисквитките`);
+  const ov = await cn.page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
+  check('GDPR-03', ov <= 1, `${lang} 360px: без хоризонтално преливане с известието (${ov})`);
+  await shot(cn.page, `GDPR-notice-${lang}-360`);
+  await box.getByRole('button', { name: ok }).click(); await settle(cn.page, 300);
+  await cn.page.reload(); await settle(cn.page, 700);
+  check('GDPR-04', !(await box.isVisible()), `${lang}: след „${ok}“ и презареждане известието не се показва`);
+  const cookies = await cn.ctx.cookies();
+  check('GDPR-05', cookies.length === 0, `${lang}: гост без вход – нито една бисквитка (${cookies.map((c) => c.name).join(', ') || 'няма'})`);
+  await cn.page.goto(`${BASE}${lang === 'bg' ? '/bg/poveritelnost/' : '/en/privacy/'}#biskvitki`); await settle(cn.page, 500);
+  const sec = await cn.page.evaluate(() => ({ cookies: !!document.getElementById('biskvitki'), gdpr: !!document.getElementById('gdpr'), rows: document.querySelectorAll('.data-table tbody tr').length, ov: document.documentElement.scrollWidth - document.documentElement.clientWidth }));
+  check('GDPR-06', sec.cookies && sec.gdpr && sec.rows === 3 && sec.ov <= 1, `${lang}: „Поверителност“ – раздели за бисквитките и GDPR, таблица с 3 бисквитки (${JSON.stringify(sec)})`);
+  await cn.ctx.close();
+}
 
 // ================= почистване =================
 for (const u of created) {
