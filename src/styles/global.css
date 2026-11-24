@@ -519,3 +519,5 @@ html.has-cookie-notice body { padding-bottom: var(--cookie-pad, 12rem); }
 .data-table th, .data-table td { text-align: left; vertical-align: top; padding: 0.55rem 0.7rem; border-bottom: 1px solid var(--line); }
 .data-table th { background: var(--surface-2); font-weight: 700; }
 .data-table code { white-space: nowrap; }
+.cookie-short { display: none; }
+@media (max-width: 640px) { .cookie-long { display: none; } .cookie-short { display: block; } .cookie-inner { padding-block: 0.75rem; } html.has-cookie-notice body { --cookie-pad: 11rem; } }

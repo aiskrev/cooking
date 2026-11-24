@@ -148,8 +148,10 @@ switchTo[other] = switchHref;
       <div class="wrap cookie-inner">
         <div class="cookie-text">
           <h2 id="cookie-notice-title" class="cookie-title">{t(locale, 'cookies.title')}</h2>
-          <p>{t(locale, 'cookies.text')}</p>
-          <p>{t(locale, 'cookies.gdpr')} <a href={`${href(locale, 'privacy')}#biskvitki`}>{t(locale, 'cookies.more')}</a></p>
+          <p class="cookie-long">{t(locale, 'cookies.text')}</p>
+          <p class="cookie-long">{t(locale, 'cookies.gdpr')}</p>
+          <p class="cookie-short">{t(locale, 'cookies.short')}</p>
+          <p><a href={`${href(locale, 'privacy')}#biskvitki`}>{t(locale, 'cookies.more')}</a></p>
         </div>
         <button type="button" class="btn small" data-cookie-ok>{t(locale, 'cookies.ok')}</button>
       </div>
