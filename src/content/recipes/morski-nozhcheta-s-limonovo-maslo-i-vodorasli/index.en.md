@@ -51,6 +51,46 @@ photos:
     alt: "Razor clams with lemon butter: Razor clams in their shells with lemon butter, herbs and small flowers"
     caption: Razor clams in their shells with lemon butter, herbs and small flowers
     session: Photo session 4 (November 2026)
+  07-dopalnitelen-2.webp:
+    alt: "Razor clams with lemon butter: The ingredients: razor clams, garlic, lemon, seaweed and butter"
+    caption: "The ingredients: razor clams, garlic, lemon, seaweed and butter"
+    session: Photo session 5 (November 2026)
+  08-dopalnitelen-3.webp:
+    alt: "Razor clams with lemon butter: Mise en place: clams, emulsion, seaweed and seasonings"
+    caption: "Mise en place: clams, emulsion, seaweed and seasonings"
+    session: Photo session 5 (November 2026)
+  09-dopalnitelen-4.webp:
+    alt: "Razor clams with lemon butter: Opening and cleaning the clams"
+    caption: "Opening and cleaning the clams"
+    session: Photo session 5 (November 2026)
+  10-dopalnitelen-5.webp:
+    alt: "Razor clams with lemon butter: The clams in the pan with butter and garlic"
+    caption: "The clams in the pan with butter and garlic"
+    session: Photo session 5 (November 2026)
+  11-dopalnitelen-6.webp:
+    alt: "Razor clams with lemon butter: Whisking the clam emulsion"
+    caption: "Whisking the clam emulsion"
+    session: Photo session 5 (November 2026)
+  12-dopalnitelen-7.webp:
+    alt: "Razor clams with lemon butter: The base: emulsion, roasted garlic and seaweed"
+    caption: "The base: emulsion, roasted garlic and seaweed"
+    session: Photo session 5 (November 2026)
+  13-dopalnitelen-8.webp:
+    alt: "Razor clams with lemon butter: Laying the clams on the emulsion"
+    caption: "Laying the clams on the emulsion"
+    session: Photo session 5 (November 2026)
+  14-dopalnitelen-9.webp:
+    alt: "Razor clams with lemon butter: Finishing with lemon zest and herb oil"
+    caption: "Finishing with lemon zest and herb oil"
+    session: Photo session 5 (November 2026)
+  15-dopalnitelen-10.webp:
+    alt: "Razor clams with lemon butter: The finished plate: razor clams with emulsion and seaweed"
+    caption: "The finished plate: razor clams with emulsion and seaweed"
+    session: Photo session 5 (November 2026)
+  16-dopalnitelen-11.webp:
+    alt: "Razor clams with lemon butter: Close-up of the clams with emulsion and seaweed"
+    caption: "Close-up of the clams with emulsion and seaweed"
+    session: Photo session 5 (November 2026)
 mise:
   - Soak the razor clams for 1 hour in cold salted water (20 g salt per litre) so they release their sand.
   - If the seaweed is dried, soak it for 10 minutes and chop it.
@@ -161,7 +201,7 @@ allergens:
   - Sulphites (wine)
 translation:
   status: published
-  sourceHash: caf08c1e5de439fc
+  sourceHash: 3bfb42b1749555d6
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-21

@@ -69,6 +69,46 @@ photos:
     alt: "Veal fillet and sweetbreads with morels: Mise en place with butter, shallot, peas and stock"
     caption: Mise en place with butter, shallot, peas and stock
     session: Photo session 4 (November 2026)
+  11-dopalnitelen-4.webp:
+    alt: "Veal fillet and sweetbreads with morels: The ingredients: veal fillet, sweetbreads, morels, peas and butter"
+    caption: "The ingredients: veal fillet, sweetbreads, morels, peas and butter"
+    session: Photo session 5 (November 2026)
+  12-dopalnitelen-5.webp:
+    alt: "Veal fillet and sweetbreads with morels: Mise en place: fillet, sweetbreads, peas, pods and morels"
+    caption: "Mise en place: fillet, sweetbreads, peas, pods and morels"
+    session: Photo session 5 (November 2026)
+  13-dopalnitelen-6.webp:
+    alt: "Veal fillet and sweetbreads with morels: Trimming the veal fillet"
+    caption: "Trimming the veal fillet"
+    session: Photo session 5 (November 2026)
+  14-dopalnitelen-7.webp:
+    alt: "Veal fillet and sweetbreads with morels: Searing and butter-basting the fillet"
+    caption: "Searing and butter-basting the fillet"
+    session: Photo session 5 (November 2026)
+  15-dopalnitelen-8.webp:
+    alt: "Veal fillet and sweetbreads with morels: Sweetbreads in the pan, pea purée and morels"
+    caption: "Sweetbreads in the pan, pea purée and morels"
+    session: Photo session 5 (November 2026)
+  16-dopalnitelen-9.webp:
+    alt: "Veal fillet and sweetbreads with morels: Straining the Madeira sauce"
+    caption: "Straining the Madeira sauce"
+    session: Photo session 5 (November 2026)
+  17-dopalnitelen-10.webp:
+    alt: "Veal fillet and sweetbreads with morels: Slicing the pink fillet"
+    caption: "Slicing the pink fillet"
+    session: Photo session 5 (November 2026)
+  18-dopalnitelen-11.webp:
+    alt: "Veal fillet and sweetbreads with morels: Plating: fillet, sweetbread, morels and sauce"
+    caption: "Plating: fillet, sweetbread, morels and sauce"
+    session: Photo session 5 (November 2026)
+  19-dopalnitelen-12.webp:
+    alt: "Veal fillet and sweetbreads with morels: The finished plate with pea purée"
+    caption: "The finished plate with pea purée"
+    session: Photo session 5 (November 2026)
+  20-dopalnitelen-13.webp:
+    alt: "Veal fillet and sweetbreads with morels: Close-up: fillet, morels and crisp sweetbread"
+    caption: "Close-up: fillet, morels and crisp sweetbread"
+    session: Photo session 5 (November 2026)
 mise:
   - The day before, soak the sweetbreads in cold water in the refrigerator for 12 hours, changing the water 2–3 times until it runs clear.
   - If the morels are dried, soak them for 30 minutes in warm water; strain the water through a cloth and keep it for the sauce.
@@ -252,7 +292,7 @@ allergens:
   - Sulphites (wine)
 translation:
   status: published
-  sourceHash: ad83134c2813bc81
+  sourceHash: cbbeaeebb29b09f8
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-21

@@ -165,6 +165,28 @@
       "batch": 3,
       "confidence": "HIGH",
       "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "16-dopalnitelen-6.webp": {
+      "sourceName": "Crispy Pork Belly with Charred Pineapple-2.webp",
+      "sourceSha256": "c2f5aab66cc80640bd8c23fed3bd283c64234c15969e93a52f69eb0970c57efc",
+      "sourceIdx": 4051,
+      "sourceBytes": 1762692,
+      "sourceSize": "1199x1312",
+      "role": "extra",
+      "batch": 5,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "17-dopalnitelen-7.webp": {
+      "sourceName": "Crispy Pork Belly with Charred Pineapple-4.webp",
+      "sourceSha256": "0e47eb60e2afb47d49f877785143ee6519e35b1a92d73f46d6b83517a22468f1",
+      "sourceIdx": 4053,
+      "sourceBytes": 1722312,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 5,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
     }
   },
   "generatedHash": "3c988ec76695ce1e6ecf94b8d65e50ad29b2e83fa4f677afb953cffaf916231c",

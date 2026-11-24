@@ -69,6 +69,10 @@ photos:
     alt: "Coffee-glazed beef short ribs: Lacquered beef short ribs with parsnip purée, roasted onion and sauce"
     caption: Lacquered beef short ribs with parsnip purée, roasted onion and sauce
     session: Photo session 4 (November 2026)
+  11-dopalnitelen-3.webp:
+    alt: "Coffee-glazed beef short ribs: The ingredients: short ribs, parsnip, onion, coffee and butter"
+    caption: "The ingredients: short ribs, parsnip, onion, coffee and butter"
+    session: Photo session 5 (November 2026)
 mise:
   - Take the ribs out of the refrigerator an hour ahead and pat dry.
   - Mix the coffee, sugar, salt and pepper.
@@ -249,7 +253,7 @@ allergens:
   - Sulphites (wine)
 translation:
   status: published
-  sourceHash: aaa5ba9ee924aad4
+  sourceHash: 78ff242d6535cd58
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-21

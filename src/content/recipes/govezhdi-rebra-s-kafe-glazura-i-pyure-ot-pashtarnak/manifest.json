@@ -110,6 +110,17 @@
       "batch": 4,
       "confidence": "HIGH",
       "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "11-dopalnitelen-3.webp": {
+      "sourceName": "Rustic Beef Braise Mise en Place-1.webp",
+      "sourceSha256": "ecbd60af0fffde6e420baf4e18025d25e50b708fd30f76107a51ae00c105e00f",
+      "sourceIdx": 4050,
+      "sourceBytes": 1810022,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 5,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
     }
   },
   "generatedHash": "2439eb8204233b8b771bcef32fc6e51c0b818247c88158228520e58c0c32cf2a",

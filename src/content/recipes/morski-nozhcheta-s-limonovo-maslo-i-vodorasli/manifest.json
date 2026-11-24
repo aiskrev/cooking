@@ -66,6 +66,116 @@
       "batch": 10,
       "confidence": "MEDIUM",
       "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "07-dopalnitelen-2.webp": {
+      "sourceName": "ChatGPT Image Nov 24, 2026, 02_09_26 PM-2.webp",
+      "sourceSha256": "b8f63f838ea83c4a987c3d5f0b15cf37b38564a066b5aef4a92f7f9ade47da9d",
+      "sourceIdx": 4205,
+      "sourceBytes": 1895480,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 20,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "08-dopalnitelen-3.webp": {
+      "sourceName": "ChatGPT Image Nov 24, 2026, 02_09_27 PM-3.webp",
+      "sourceSha256": "728d6f71c5a2a4693bad80c6c46840e213f9cf60d9a9a84022f42c1e5fffee90",
+      "sourceIdx": 4206,
+      "sourceBytes": 1754822,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 20,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "09-dopalnitelen-4.webp": {
+      "sourceName": "ChatGPT Image Nov 24, 2026, 02_09_28 PM-4.webp",
+      "sourceSha256": "5ca16943c53ffd19c5b250534d3db8e86720de696b4b1580d3029a6851cd31dc",
+      "sourceIdx": 4207,
+      "sourceBytes": 1631358,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 20,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "10-dopalnitelen-5.webp": {
+      "sourceName": "ChatGPT Image Nov 24, 2026, 02_09_29 PM-5.webp",
+      "sourceSha256": "fe9891ded280f252dd5f186d05c8beb2817027e0abddaa75e325749f73a0f68a",
+      "sourceIdx": 4208,
+      "sourceBytes": 1598016,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 20,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "11-dopalnitelen-6.webp": {
+      "sourceName": "ChatGPT Image Nov 24, 2026, 02_09_31 PM-6.webp",
+      "sourceSha256": "a0e6e68e443c77cfa2cf76fdfbc815b5036c5362cb0a2f4a12963077a73733af",
+      "sourceIdx": 4209,
+      "sourceBytes": 1689286,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 20,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "12-dopalnitelen-7.webp": {
+      "sourceName": "ChatGPT Image Nov 24, 2026, 02_09_33 PM-7.webp",
+      "sourceSha256": "f5057f7ef50aabb54c1a5426ef68acfe2c0acf2d3cf38aa07861772d9039f30e",
+      "sourceIdx": 4210,
+      "sourceBytes": 1372972,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 20,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "13-dopalnitelen-8.webp": {
+      "sourceName": "ChatGPT Image Nov 24, 2026, 02_09_34 PM-8.webp",
+      "sourceSha256": "a6d1759ce4a627ed98710d2aeb56d4b0104c92bc3296258556fa4027571c2d8a",
+      "sourceIdx": 4211,
+      "sourceBytes": 1407846,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 20,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "14-dopalnitelen-9.webp": {
+      "sourceName": "ChatGPT Image Nov 24, 2026, 02_09_35 PM-9.webp",
+      "sourceSha256": "c38963af46cf462f3445fe7c8687a0840b05fde52eca7e5494e25464108c6c7f",
+      "sourceIdx": 4212,
+      "sourceBytes": 1555066,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 20,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "15-dopalnitelen-10.webp": {
+      "sourceName": "ChatGPT Image Nov 24, 2026, 02_09_25 PM-1.webp",
+      "sourceSha256": "13adb92bffded38c2ea9bf2b2237ac7310676ce87c242ebdec493e9ffbc1fb08",
+      "sourceIdx": 4204,
+      "sourceBytes": 1490956,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 20,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "16-dopalnitelen-11.webp": {
+      "sourceName": "ChatGPT Image Nov 24, 2026, 02_09_36 PM-10.webp",
+      "sourceSha256": "18825ac56badd4a6c30a7a68c8c5018f9f469e048803028f5e2fb6fc34a8196a",
+      "sourceIdx": 4213,
+      "sourceBytes": 1840254,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 20,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
     }
   },
   "generatedHash": "5cddf016b17f65afbb76c80b09bb44a1979dd193fe541f125502080f2c4a8913",

@@ -77,7 +77,8 @@
     "Втора сесия": "Second session",
     "Допълнителна снимка (непотвърден произход)": "Additional photo (unconfirmed origin)",
     "Фотосесия 3 (ноември 2026)": "Photo session 3 (November 2026)",
-    "Фотосесия 4 (ноември 2026)": "Photo session 4 (November 2026)"
+    "Фотосесия 4 (ноември 2026)": "Photo session 4 (November 2026)",
+    "Фотосесия 5 (ноември 2026)": "Photo session 5 (November 2026)"
   },
   "tag": {
     "агнешко": "lamb",
@@ -319,6 +320,20 @@
     "заешко": "rabbit",
     "сушени сливи": "prunes",
     "арманяк": "Armagnac",
-    "морски език": "Dover sole"
+    "морски език": "Dover sole",
+    "киселец": "sorrel",
+    "карабинеро": "carabinero prawns",
+    "бренди": "brandy",
+    "сепия": "cuttlefish",
+    "мастило": "cuttlefish ink",
+    "тиквени семки": "pumpkin seeds",
+    "ким": "caraway",
+    "есен": "autumn",
+    "комте": "Comté",
+    "козе месо": "goat",
+    "фурми": "dates",
+    "хариса": "harissa",
+    "хайвер от сьомга": "salmon roe",
+    "моркови": "carrots"
   }
 }

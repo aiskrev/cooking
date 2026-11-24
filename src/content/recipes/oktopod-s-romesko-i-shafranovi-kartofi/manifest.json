@@ -165,6 +165,28 @@
       "batch": 6,
       "confidence": "HIGH",
       "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "16-dopalnitelen-6.webp": {
+      "sourceName": "Mediterranean Octopus Mise en Place-3.webp",
+      "sourceSha256": "e6f2f6a73d8d43053a881eeb571c840131bea56f2e20e71b1afe8b3c9ccf2024",
+      "sourceIdx": 4062,
+      "sourceBytes": 1918324,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 6,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "17-dopalnitelen-7.webp": {
+      "sourceName": "Charred Octopus with Saffron Potatoes-9.webp",
+      "sourceSha256": "21f33e22e27a6cefc573764f039372510df30318b7a38d3d5bb795dd4649a257",
+      "sourceIdx": 4068,
+      "sourceBytes": 1966542,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 6,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
     }
   },
   "generatedHash": "811701326d26ed2af38b0f6fb9fb4301ebbf8b68be181eba5d280c4e9a07ef41",

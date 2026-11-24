@@ -1,0 +1,52 @@
+{
+  "slug": "pechena-tikva-s-komte-gradinski-chay-i-pralina",
+  "photos": {
+    "01-pechena-stapka-1.webp": {
+      "sourceName": "Gourmet Pumpkin Recipe Mise-en-Scène-3.webp",
+      "sourceSha256": "4a74eebb0ceac670eaf88d9c805eb3a66e39a855ea556767bb3289dfc492b027",
+      "sourceIdx": 4186,
+      "sourceBytes": 1938678,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 18,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-pechena-stapka-2.webp": {
+      "sourceName": "Simmering Copper Saucepan of Vegetable Jus-11.webp",
+      "sourceSha256": "631f68045627153763cf530a54998cbe5865a4c5a6abbe348af4a878f54b72a4",
+      "sourceIdx": 4194,
+      "sourceBytes": 1503354,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 18,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "03-pechena-stapka-3.webp": {
+      "sourceName": "Pumpkin Seed Brittle in Copper Pan-9.webp",
+      "sourceSha256": "f6eb908d76aed792635fa8390d7d96d0ba3dc700818e0911837e131613c4bd2b",
+      "sourceIdx": 4192,
+      "sourceBytes": 2047648,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 18,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "04-dopalnitelen-1.webp": {
+      "sourceName": "Autumn Squash and Aged Cheese Still Life-1.webp",
+      "sourceSha256": "38dde39d2211db1525a20f14bddfbee621c2dad4ef87a7572997a8a4512e6ecf",
+      "sourceIdx": 4184,
+      "sourceBytes": 1816774,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 18,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    }
+  },
+  "generatedHash": "c3f4035017b80f2920b53bf296fc9ca3a4d86cc395275479aa12001da52a5619",
+  "excludedSources": [],
+  "importedAt": "2026-11-24T12:56:33.990Z"
+}

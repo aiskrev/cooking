@@ -110,6 +110,39 @@
       "batch": 7,
       "confidence": "HIGH",
       "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "11-dopalnitelen-4.webp": {
+      "sourceName": "Monkfish Mise en Place with Chorizo and Saffron-4.webp",
+      "sourceSha256": "f147b83f76e83f9220f1940a2fb4925bb55dd5e704dd90936060ce104d9b0b33",
+      "sourceIdx": 4074,
+      "sourceBytes": 1933716,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 7,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "12-dopalnitelen-5.webp": {
+      "sourceName": "Chef Preparing Monkfish with Gourmet Ingredients-6.webp",
+      "sourceSha256": "20e8b9aa3424d6ee621335ad5298b949c5d84511d9828b17cf893cae55e3408b",
+      "sourceIdx": 4076,
+      "sourceBytes": 1630300,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 7,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "13-dopalnitelen-6.webp": {
+      "sourceName": "Golden Butter-Basted Seared Fish-8.webp",
+      "sourceSha256": "bab8fd746170f1ba0984055cb13c9b057c5618c91ce52f3068e3aee711bb2331",
+      "sourceIdx": 4078,
+      "sourceBytes": 1780928,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 7,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
     }
   },
   "generatedHash": "d14e9cbed8edfd8ea26a954f40520a9b59443a26b61227f3c322b98278e97375",

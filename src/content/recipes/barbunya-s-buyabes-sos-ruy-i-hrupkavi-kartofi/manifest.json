@@ -242,6 +242,28 @@
       "batch": 9,
       "confidence": "HIGH",
       "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "23-dopalnitelen-13.webp": {
+      "sourceName": "Red Mullet with Saffron Rouille-2.webp",
+      "sourceSha256": "179d9e84cf6157d364999b7e06bf007dd71588812df719208cbfc496b9f2f4c8",
+      "sourceIdx": 4164,
+      "sourceBytes": 2097982,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 16,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "24-dopalnitelen-14.webp": {
+      "sourceName": "Crispy Red Mullet with Saffron and Fennel-8.webp",
+      "sourceSha256": "96bcf97b45148e8ad05dc93f7263d3c4b764758e7bf49c1b00e6590c2308d071",
+      "sourceIdx": 4170,
+      "sourceBytes": 1882164,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 16,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
     }
   },
   "generatedHash": "a4aa49349e0fcebd224b994c3465b6d4e884f0e6c58e34ee66604caf4f05a703",
