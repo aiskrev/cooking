@@ -36,6 +36,8 @@ const nav = [
 ];
 const path = Astro.url.pathname;
 const abs = (p: string) => new URL(p, Astro.site).href;
+// Картинка за споделяне: своята на страницата (напр. снимката на рецептата), иначе вертикалното лого (1200×630)
+const ogImage = image ?? { url: abs('/brand/og-logo.jpg'), width: 1200, height: 630, alt: t(locale, 'brand.logoAlt') };
 const other = otherLocale(locale);
 const switchHref = alt[other] ?? fallback ?? href(other);
 // Взаимни hreflang само когато и двата езика наистина съществуват
@@ -56,7 +58,9 @@ switchTo[other] = switchHref;
     {pair && locales.map((l) => <link rel="alternate" hreflang={localeInfo[l].lang} href={abs(alt[l]!)} />)}
     {pair && <link rel="alternate" hreflang="x-default" href={abs(alt.bg!)} />}
     <meta name="color-scheme" content="light dark" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
+    <link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="alternate" type="application/rss+xml" title={t(locale, 'rss.title', { name: text.name })} href={`/${locale}/rss.xml`} />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="preload" href="/fonts/lora-cyrillic-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
@@ -70,16 +74,16 @@ switchTo[other] = switchHref;
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     {!noindex && <meta property="og:url" content={canonical} />}
-    {image && <meta property="og:image" content={image.url} />}
-    {image && <meta property="og:image:width" content={String(image.width)} />}
-    {image && <meta property="og:image:height" content={String(image.height)} />}
-    {image?.alt && <meta property="og:image:alt" content={image.alt} />}
+    <meta property="og:image" content={ogImage.url} />
+    <meta property="og:image:width" content={String(ogImage.width)} />
+    <meta property="og:image:height" content={String(ogImage.height)} />
+    {ogImage.alt && <meta property="og:image:alt" content={ogImage.alt} />}
     {published && <meta property="article:published_time" content={published.toISOString()} />}
     {modified && <meta property="article:modified_time" content={modified.toISOString()} />}
-    <meta name="twitter:card" content={image ? 'summary_large_image' : 'summary'} />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    {image && <meta name="twitter:image" content={image.url} />}
+    <meta name="twitter:image" content={ogImage.url} />
 
     {jsonLd && <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
     <script is:inline>
@@ -94,7 +98,8 @@ switchTo[other] = switchHref;
     <header class="site-header">
       <div class="wrap header-inner">
         <a class="brand" href={href(locale)} aria-label={t(locale, 'brand.home', { name: text.name })}>
-          <svg aria-hidden="true" width="26" height="26" viewBox="0 0 32 32"><path fill="currentColor" d="M16 3c-5 0-9 3.6-9 8.2 0 2.5 1.2 4.6 3 6V25a4 4 0 0 0 4 4h4a4 4 0 0 0 4-4v-7.8c1.8-1.4 3-3.5 3-6C25 6.600 21 3 16 3Z"/></svg>
+          {/* Знакът на логото (декоративен: името на сайта е текст до него и в aria-label на връзката) */}
+          <img class="brand-mark" src="/brand/mark-80.webp" srcset="/brand/mark-80.webp 2x, /brand/mark-120.webp 3x" width="36" height="36" alt="" decoding="async" />
           <span class="brand-text">{text.name}</span>
         </a>
         <nav class="main-nav" aria-label={t(locale, 'nav.label')}>
@@ -121,8 +126,8 @@ switchTo[other] = switchHref;
             </>
           ))}
         </nav>
-        <button type="button" class="theme-toggle" data-theme-toggle data-label-dark={t(locale, 'theme.dark')} data-label-light={t(locale, 'theme.light')} aria-pressed="false">
-          {t(locale, 'theme.dark')}
+        <button type="button" class="theme-toggle" data-theme-toggle data-label-dark={t(locale, 'theme.dark')} data-label-light={t(locale, 'theme.light')} aria-pressed="false" title={t(locale, 'theme.dark')}>
+          <span class="theme-icon" aria-hidden="true">◐</span><span class="theme-label">{t(locale, 'theme.dark')}</span>
         </button>
         </div>
       </div>

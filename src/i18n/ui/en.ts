@@ -11,6 +11,7 @@ export const en: Record<UiKey, string> = {
   'nav.shopping': 'Shopping',
   'nav.favorites': 'Favourites',
   'brand.home': '{name} – home page',
+  'brand.logoAlt': 'Logo of Modern Cuisine with a Michelin Touch: a chef’s hat above a plated dish',
   'theme.dark': 'Dark theme',
   'theme.light': 'Light theme',
   'lang.label': 'Language',
