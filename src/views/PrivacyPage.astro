@@ -16,6 +16,21 @@ const bg = locale === 'bg';
         <h2>Без профил</h2>
         <p>Можете да четете, търсите и филтрирате рецепти, да ползвате режим „готвене“, любими и списък за пазаруване без регистрация. Тогава любимите, списъкът за пазаруване, темата и езикът се пазят само в браузъра ви (localStorage) и не се изпращат на сървъра. Сайтът не използва бисквитки за проследяване, рекламни мрежи или външни услуги за статистика.</p>
 
+        <h2 id="biskvitki">Бисквитки и съхранение в браузъра</h2>
+        <p>Сайтът използва <strong>само необходими бисквитки</strong> – без тях входът в профила не може да работи. Затова не искаме съгласие за тях (чл. 4а от Закона за електронните съобщения, който въвежда директивата за електронна поверителност), а ви информираме. Не използваме бисквитки за проследяване, реклама, статистика или социални мрежи и не зареждаме външни услуги.</p>
+        <div class="tablewrap">
+          <table class="data-table">
+            <caption class="sr-only">Бисквитки</caption>
+            <thead><tr><th scope="col">Бисквитка</th><th scope="col">За какво е</th><th scope="col">Колко време</th></tr></thead>
+            <tbody>
+              <tr><td><code>__Host-msid</code></td><td>Вход в профила (сесия). Само за този сайт, недостъпна за скриптове (HttpOnly), само през HTTPS.</td><td>До изхода; най-много 30 дни (14 дни без активност)</td></tr>
+              <tr><td><code>mstate</code></td><td>Подсказка за страниците, че има вход (стойност „1“, без лични данни).</td><td>Колкото и сесията</td></tr>
+              <tr><td><code>rguest</code></td><td>Стара гост-бисквитка от оценките преди профилите. Вече не се създава; ако я имате, ще изтече сама.</td><td>До 1 година от създаването</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>В браузъра ви (localStorage) – без да се изпращат на сървъра – се пазят: темата (<code>theme</code>), езикът (<code>lang</code>), любимите (<code>favorites</code>), списъкът за пазаруване (<code>shopping-list</code>, <code>shopping-checked</code>), че сте видели това известие (<code>cookie-notice-v1</code>) и, след вход, кои любими от браузъра вече са добавени в профила (<code>favorites-synced:…</code>). Можете да ги изтриете по всяко време от настройките на браузъра („Изчистване на данните за сайта“).</p>
+
         <h2>С профил – какво пазим</h2>
         <ul>
           <li><strong>Профил:</strong> имейл, име за показване, хеш на паролата (Argon2id – самата парола не се пази), роля, статус, език на писмата, дати на създаване и последен вход, дата на потвърждаване на имейла.</li>
@@ -34,8 +49,17 @@ const bg = locale === 'bg';
           <li>Резервните копия на базата се пазят на сървъра на сайта; изтритите данни изчезват от тях, когато старите копия бъдат премахнати.</li>
         </ul>
 
+        <h2 id="gdpr">Основания за обработване (GDPR)</h2>
+        <p>Обработваме личните данни според Общия регламент за защита на данните (Регламент (ЕС) 2016/679, GDPR):</p>
+        <ul>
+          <li><strong>Профил, вход, любими, история, оценки, коментари и писмата за потвърждаване и нова парола</strong> – за да ви предоставим услугата, която сте заявили със създаването на профил (чл. 6, пар. 1, буква „б“).</li>
+          <li><strong>Защита от злоупотреби, журнал на сигурността и модерация</strong> – законен интерес да пазим сайта и потребителите му (чл. 6, пар. 1, буква „е“).</li>
+        </ul>
+        <p>Не продаваме данни и не ги предоставяме на трети лица за реклама. Не правим профилиране и автоматизирани решения.</p>
+
         <h2>Вашите права</h2>
-        <p>В „Моят профил → Настройки“ можете да промените името и езика, да смените паролата, да излезете от другите устройства, да изтеглите всичките си данни (JSON файл) и да изтриете профила.</p>
+        <p>Имате право на достъп до данните си, на поправка, на изтриване, на преносимост, на ограничаване на обработването и на възражение. Повечето от тях можете да упражните сами: в „Моят профил → Настройки“ можете да промените името и езика, да смените паролата, да излезете от другите устройства, да изтеглите всичките си данни (JSON файл) и да изтриете профила.</p>
+        <p>Имате право и на жалба до Комисията за защита на личните данни (<a href="https://www.cpdp.bg/" rel="noopener">www.cpdp.bg</a>).</p>
         <p>При изтриване на профила се изтриват профилът, любимите, историята на сготвеното, оценките, сесиите и кодовете от писмата. Одобрените ви коментари остават, но без връзка с вас – авторът се показва като „Изтрит профил“. Всички други ваши коментари се изтриват по съдържание.</p>
 
         <h2 id="pravila">Правила за коментарите</h2>
@@ -51,6 +75,21 @@ const bg = locale === 'bg';
       <>
         <h2>Without an account</h2>
         <p>You can read, search and filter recipes, use cooking mode, favourites and the shopping list without signing up. Your favourites, shopping list, theme and language are then kept only in your browser (localStorage) and are not sent to the server. The site does not use tracking cookies, advertising networks or third-party analytics.</p>
+
+        <h2 id="biskvitki">Cookies and browser storage</h2>
+        <p>The site uses <strong>only necessary cookies</strong> – without them signing in to an account cannot work. For this reason we do not ask for consent to them (the ePrivacy exception for strictly necessary cookies, Art. 4a of the Bulgarian Electronic Communications Act); we inform you instead. We do not use cookies for tracking, advertising, analytics or social networks, and we do not load third-party services.</p>
+        <div class="tablewrap">
+          <table class="data-table">
+            <caption class="sr-only">Cookies</caption>
+            <thead><tr><th scope="col">Cookie</th><th scope="col">Purpose</th><th scope="col">Duration</th></tr></thead>
+            <tbody>
+              <tr><td><code>__Host-msid</code></td><td>Keeps you signed in (session). For this site only, not readable by scripts (HttpOnly), HTTPS only.</td><td>Until you sign out; at most 30 days (14 days without activity)</td></tr>
+              <tr><td><code>mstate</code></td><td>Tells the pages that you are signed in (value “1”, no personal data).</td><td>Same as the session</td></tr>
+              <tr><td><code>rguest</code></td><td>An old guest cookie from ratings before accounts existed. It is no longer created; if you have it, it expires on its own.</td><td>Up to 1 year from creation</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Your browser (localStorage) keeps – without sending them to the server – your theme (<code>theme</code>), language (<code>lang</code>), favourites (<code>favorites</code>), shopping list (<code>shopping-list</code>, <code>shopping-checked</code>), that you have seen the cookie notice (<code>cookie-notice-v1</code>) and, after signing in, which favourites from the browser have already been added to your account (<code>favorites-synced:…</code>). You can delete them at any time in your browser settings (“Clear site data”).</p>
 
         <h2>With an account – what we keep</h2>
         <ul>
@@ -70,8 +109,17 @@ const bg = locale === 'bg';
           <li>Database backups are kept on the site’s server; deleted data disappears from them when the old backups are removed.</li>
         </ul>
 
+        <h2 id="gdpr">Legal basis for processing (GDPR)</h2>
+        <p>We process personal data under the General Data Protection Regulation (Regulation (EU) 2016/679, GDPR):</p>
+        <ul>
+          <li><strong>Account, sign-in, favourites, cooking history, ratings, comments and the confirmation and new-password emails</strong> – to provide the service you asked for by creating an account (Art. 6(1)(b)).</li>
+          <li><strong>Abuse protection, the security log and moderation</strong> – our legitimate interest in protecting the site and its users (Art. 6(1)(f)).</li>
+        </ul>
+        <p>We do not sell data or share it with third parties for advertising. We do no profiling and no automated decision-making.</p>
+
         <h2>Your rights</h2>
-        <p>In “My account → Settings” you can change your name and language, change your password, sign out on other devices, download all your data (a JSON file) and delete your account.</p>
+        <p>You have the right of access, rectification, erasure, data portability, restriction of processing and objection. You can exercise most of them yourself: in “My account → Settings” you can change your name and language, change your password, sign out on other devices, download all your data (a JSON file) and delete your account.</p>
+        <p>You also have the right to lodge a complaint with the Bulgarian Commission for Personal Data Protection (<a href="https://www.cpdp.bg/en/" rel="noopener">www.cpdp.bg</a>).</p>
         <p>Deleting your account deletes the account, favourites, cooking history, ratings, sessions and email codes. Your approved comments stay, but are no longer linked to you – the author is shown as “Deleted account”. All your other comments are deleted.</p>
 
         <h2 id="pravila">Comment rules</h2>

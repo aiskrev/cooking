@@ -25,7 +25,10 @@ export async function launch() {
 
 /** Нов контекст със събиране на грешки от конзолата и неуспешни заявки. */
 export async function newPage(browser, opts = {}) {
-  const ctx = await browser.newContext({ viewport: { width: 1440, height: 900 }, locale: 'bg-BG', ...opts });
+  const { cookieNotice = false, ...ctxOpts } = opts;
+  const ctx = await browser.newContext({ viewport: { width: 1440, height: 900 }, locale: 'bg-BG', ...ctxOpts });
+  // Известието за бисквитките е закрепено долу и може да закрива бутони: в тестовете е „видяно“, освен ако тестът проверява самото известие.
+  if (!cookieNotice) await ctx.addInitScript(() => { try { localStorage.setItem('cookie-notice-v1', 'ok'); } catch { /* */ } });
   const page = await ctx.newPage();
   page.problems = [];
   page.on('console', (m) => { if (['error', 'warning'].includes(m.type())) page.problems.push(`${m.type()}: ${m.text()}`); });
