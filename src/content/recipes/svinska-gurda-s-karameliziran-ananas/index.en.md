@@ -87,6 +87,14 @@ photos:
     alt: "Crisp pork belly with pineapple: Pork belly with crackling, caramelised pineapple and tamarind glaze"
     caption: Pork belly with crackling, caramelised pineapple and tamarind glaze
     session: Photo session 4 (November 2026)
+  16-dopalnitelen-6.webp:
+    alt: "Crisp pork belly with pineapple: Serving variation: crisp belly with pineapple and coriander"
+    caption: "Serving variation: crisp belly with pineapple and coriander"
+    session: Photo session 5 (November 2026)
+  17-dopalnitelen-7.webp:
+    alt: "Crisp pork belly with pineapple: Serving variation on a dark plate"
+    caption: "Serving variation on a dark plate"
+    session: Photo session 5 (November 2026)
 mise:
   - Pat the skin of the belly dry and score it in a 1 cm diamond pattern without reaching the meat.
   - Rub the salt into the skin and into the cuts; leave for 1 hour.
@@ -239,7 +247,7 @@ allergens:
   - Fish
 translation:
   status: published
-  sourceHash: 80abf40bc6baa0c2
+  sourceHash: 944b5ac0757098a9
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-21

@@ -68,6 +68,18 @@ photos:
     alt: "Monkfish with chorizo and white beans: Monkfish medallion on white bean purée with chorizo and saffron broth"
     caption: Monkfish medallion on white bean purée with chorizo and saffron broth
     session: Photo session 4 (November 2026)
+  11-dopalnitelen-4.webp:
+    alt: "Monkfish with chorizo and white beans: The ingredients: monkfish, chorizo, white beans, saffron and prawns"
+    caption: "The ingredients: monkfish, chorizo, white beans, saffron and prawns"
+    session: Photo session 5 (November 2026)
+  12-dopalnitelen-5.webp:
+    alt: "Monkfish with chorizo and white beans: Trimming the monkfish fillet"
+    caption: "Trimming the monkfish fillet"
+    session: Photo session 5 (November 2026)
+  13-dopalnitelen-6.webp:
+    alt: "Monkfish with chorizo and white beans: Searing and butter-basting the fish"
+    caption: "Searing and butter-basting the fish"
+    session: Photo session 5 (November 2026)
 mise:
   - The day before, soak the beans in cold water.
   - Remove the grey membrane from the fish – it shrinks during searing and distorts the medallions.
@@ -215,7 +227,7 @@ allergens:
   - Sulphites (wine)
 translation:
   status: published
-  sourceHash: b2bd5268158e9bd9
+  sourceHash: 090d613cf0b0cfa5
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-21

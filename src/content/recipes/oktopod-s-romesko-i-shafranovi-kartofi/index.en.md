@@ -88,6 +88,14 @@ photos:
     alt: "Grilled octopus with romesco: Char-grilled octopus on romesco with saffron potatoes and tapenade"
     caption: Char-grilled octopus on romesco with saffron potatoes and tapenade
     session: Photo session 4 (November 2026)
+  16-dopalnitelen-6.webp:
+    alt: "Grilled octopus with romesco: The ingredients: octopus, red peppers, almonds, olives, potatoes and saffron"
+    caption: "The ingredients: octopus, red peppers, almonds, olives, potatoes and saffron"
+    session: Photo session 5 (November 2026)
+  17-dopalnitelen-7.webp:
+    alt: "Grilled octopus with romesco: The finished plate: charred octopus with romesco and saffron potatoes"
+    caption: "The finished plate: charred octopus with romesco and saffron potatoes"
+    session: Photo session 5 (November 2026)
 mise:
   - If the octopus is fresh, freeze it overnight and thaw it in the refrigerator – this tenderises the fibres.
   - Roast the peppers, tomatoes and the garlic bulb at 220 °C for 30–35 minutes until the skins darken.
@@ -273,7 +281,7 @@ allergens:
   - Sulphites (wine)
 translation:
   status: published
-  sourceHash: d176e421baf8367b
+  sourceHash: 61b4085e9e1fefcd
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-21

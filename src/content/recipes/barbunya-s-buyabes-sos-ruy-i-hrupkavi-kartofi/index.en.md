@@ -117,6 +117,14 @@ photos:
     alt: "Red mullet with bouillabaisse sauce: Crisp-skinned red mullet with fennel, saffron rouille and bouillabaisse sauce"
     caption: Crisp-skinned red mullet with fennel, saffron rouille and bouillabaisse sauce
     session: Photo session 4 (November 2026)
+  23-dopalnitelen-13.webp:
+    alt: "Red mullet with bouillabaisse sauce: Serving variation: red mullet with rouille and crisp potato"
+    caption: "Serving variation: red mullet with rouille and crisp potato"
+    session: Photo session 5 (November 2026)
+  24-dopalnitelen-14.webp:
+    alt: "Red mullet with bouillabaisse sauce: Serving variation on a dark plate"
+    caption: "Serving variation on a dark plate"
+    session: Photo session 5 (November 2026)
 mise:
   - Clean the red mullet, fillet them and remove the pin bones with tweezers. Keep the heads and bones, without the gills.
   - Soak saffron for the sauce and for the rouille separately in a spoonful of hot water.
@@ -301,7 +309,7 @@ allergens:
   - Sulphites (wine)
 translation:
   status: published
-  sourceHash: 2ede3a66a27a830a
+  sourceHash: 31105be071a381ba
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-21

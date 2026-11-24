@@ -67,6 +67,46 @@ photos:
     alt: "Rabbit with prunes and Armagnac: Rabbit loin and leg with prunes, wholegrain mustard and a dark sauce"
     caption: Rabbit loin and leg with prunes, wholegrain mustard and a dark sauce
     session: Photo session 4 (November 2026)
+  11-dopalnitelen-2.webp:
+    alt: "Rabbit with prunes and Armagnac: The ingredients: rabbit loin, legs, prunes, mustard and Armagnac"
+    caption: "The ingredients: rabbit loin, legs, prunes, mustard and Armagnac"
+    session: Photo session 5 (November 2026)
+  12-dopalnitelen-3.webp:
+    alt: "Rabbit with prunes and Armagnac: Mise en place: loins, legs, prunes and vegetables"
+    caption: "Mise en place: loins, legs, prunes and vegetables"
+    session: Photo session 5 (November 2026)
+  13-dopalnitelen-4.webp:
+    alt: "Rabbit with prunes and Armagnac: Trimming the rabbit loin"
+    caption: "Trimming the rabbit loin"
+    session: Photo session 5 (November 2026)
+  14-dopalnitelen-5.webp:
+    alt: "Rabbit with prunes and Armagnac: Searing the loin in butter"
+    caption: "Searing the loin in butter"
+    session: Photo session 5 (November 2026)
+  15-dopalnitelen-6.webp:
+    alt: "Rabbit with prunes and Armagnac: Crisp confit cylinders, prune sauce and mustard"
+    caption: "Crisp confit cylinders, prune sauce and mustard"
+    session: Photo session 5 (November 2026)
+  16-dopalnitelen-7.webp:
+    alt: "Rabbit with prunes and Armagnac: Straining the Armagnac sauce"
+    caption: "Straining the Armagnac sauce"
+    session: Photo session 5 (November 2026)
+  17-dopalnitelen-8.webp:
+    alt: "Rabbit with prunes and Armagnac: Sliced rabbit loin"
+    caption: "Sliced rabbit loin"
+    session: Photo session 5 (November 2026)
+  18-dopalnitelen-9.webp:
+    alt: "Rabbit with prunes and Armagnac: Plating and saucing"
+    caption: "Plating and saucing"
+    session: Photo session 5 (November 2026)
+  19-dopalnitelen-10.webp:
+    alt: "Rabbit with prunes and Armagnac: The finished plate: loin, confit, prunes, mustard and sauce"
+    caption: "The finished plate: loin, confit, prunes, mustard and sauce"
+    session: Photo session 5 (November 2026)
+  20-dopalnitelen-11.webp:
+    alt: "Rabbit with prunes and Armagnac: Close-up of the loin, confit and prunes"
+    caption: "Close-up of the loin, confit and prunes"
+    session: Photo session 5 (November 2026)
 mise:
   - Soak the prunes in the warm tea and Armagnac for at least 2 hours (or overnight).
   - Boil the vinegar, water and sugar, pour over the mustard seeds and leave to cool.
@@ -216,7 +256,7 @@ allergens:
   - Sulphites (wine)
 translation:
   status: published
-  sourceHash: 6558b697356942f5
+  sourceHash: 5a9143c75c9011ab
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-21

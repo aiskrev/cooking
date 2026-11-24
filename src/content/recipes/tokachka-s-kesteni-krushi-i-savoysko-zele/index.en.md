@@ -105,6 +105,34 @@ photos:
     alt: "Guinea fowl with chestnuts and pears: Guinea fowl breast with chestnut crumble, glazed leg, chestnut purée, pears and savoy cabbage"
     caption: Guinea fowl breast with chestnut crumble, glazed leg, chestnut purée, pears and savoy cabbage
     session: Photo session 4 (November 2026)
+  20-dopalnitelen-9.webp:
+    alt: "Guinea fowl with chestnuts and pears: The ingredients: guinea fowl, chestnuts, pears, Savoy cabbage"
+    caption: "The ingredients: guinea fowl, chestnuts, pears, Savoy cabbage"
+    session: Photo session 5 (November 2026)
+  21-dopalnitelen-10.webp:
+    alt: "Guinea fowl with chestnuts and pears: Mise en place: breasts and legs, cabbage, chestnuts and pears"
+    caption: "Mise en place: breasts and legs, cabbage, chestnuts and pears"
+    session: Photo session 5 (November 2026)
+  22-dopalnitelen-11.webp:
+    alt: "Guinea fowl with chestnuts and pears: Trimming the guinea fowl breasts"
+    caption: "Trimming the guinea fowl breasts"
+    session: Photo session 5 (November 2026)
+  23-dopalnitelen-12.webp:
+    alt: "Guinea fowl with chestnuts and pears: Searing and butter-basting the breasts"
+    caption: "Searing and butter-basting the breasts"
+    session: Photo session 5 (November 2026)
+  24-dopalnitelen-13.webp:
+    alt: "Guinea fowl with chestnuts and pears: Chestnut purée, cabbage and crisp leg confit"
+    caption: "Chestnut purée, cabbage and crisp leg confit"
+    session: Photo session 5 (November 2026)
+  25-dopalnitelen-14.webp:
+    alt: "Guinea fowl with chestnuts and pears: Straining the roast poultry jus"
+    caption: "Straining the roast poultry jus"
+    session: Photo session 5 (November 2026)
+  26-dopalnitelen-15.webp:
+    alt: "Guinea fowl with chestnuts and pears: Close-up of the breast with crisp skin"
+    caption: "Close-up of the breast with crisp skin"
+    session: Photo session 5 (November 2026)
 mise:
   - "Joint the guinea fowl: remove the breasts with the skin on and the legs; chop the backbone and wings for the sauce."
   - Pat the breasts dry and leave them uncovered in the refrigerator – drier skin crisps better.
@@ -310,7 +338,7 @@ allergens:
   - Tree nuts
 translation:
   status: published
-  sourceHash: 348b067c6fdbd9d0
+  sourceHash: d8ddb4274bb7a6af
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-21
