@@ -26,7 +26,7 @@ export function layout({ title, body, user, csrf, active, scripts = [], badges =
 <meta name="robots" content="noindex, nofollow">
 <meta name="csrf-token" content="${esc(csrf)}">
 <title>${esc(title)} · Администрация</title>
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
 <link rel="stylesheet" href="/admin/assets/admin.css">
 </head>
 <body class="admin">
@@ -59,7 +59,7 @@ export function loginLayout({ title, body, csrf = '' }) {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>${esc(title)} · Администрация</title>
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
 <link rel="stylesheet" href="/admin/assets/admin.css">
 </head>
 <body class="admin login">

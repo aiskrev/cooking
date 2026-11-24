@@ -10,6 +10,7 @@ export const bg = {
   'nav.shopping': 'Списък',
   'nav.favorites': 'Любими',
   'brand.home': '{name} – начална страница',
+  'brand.logoAlt': 'Логото на „Модерна кухня с Мишлен щрих“: готварска шапка над чиния с ястие',
   'theme.dark': 'Тъмна тема',
   'theme.light': 'Светла тема',
   'lang.label': 'Език',
