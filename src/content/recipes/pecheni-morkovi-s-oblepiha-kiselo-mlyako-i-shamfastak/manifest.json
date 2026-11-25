@@ -1,0 +1,85 @@
+{
+  "slug": "pecheni-morkovi-s-oblepiha-kiselo-mlyako-i-shamfastak",
+  "photos": {
+    "01-dopalnitelen-1.webp": {
+      "sourceName": "Charred Carrots with Sea Buckthorn and Pistachio-2.webp",
+      "sourceSha256": "64e3a5ee7fad37f75df4e1b471e7d102961034219cde1b6107908ffdba2ea8b2",
+      "sourceIdx": 5037,
+      "sourceBytes": 2278638,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 3,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-dopalnitelen-2.webp": {
+      "sourceName": "Ember-Roasted Carrots with Pistachios and Herb Oil-5.webp",
+      "sourceSha256": "8738c46174e84060c534ea126f9a841bfaab2cadeb6ed6c8c1874b549ca14e71",
+      "sourceIdx": 5040,
+      "sourceBytes": 1988590,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 3,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "03-dopalnitelen-3.webp": {
+      "sourceName": "Charred Carrots with Yogurt and Pistachios-9.webp",
+      "sourceSha256": "5a6166c30dc41c6c63815aff5f06086c23b32f417211677a51ac5735a59923d8",
+      "sourceIdx": 5044,
+      "sourceBytes": 2101490,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 3,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "04-dopalnitelen-4.webp": {
+      "sourceName": "Ember-Roasted Carrots with Yogurt and Pistachios-11.webp",
+      "sourceSha256": "02c7e24f84775bf450b5f45fa478dba3226e47b5f37d3a8c3b975f11aebfd733",
+      "sourceIdx": 5046,
+      "sourceBytes": 2043538,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 3,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "05-dopalnitelen-5.webp": {
+      "sourceName": "Charred Carrots with Citrus, Yogurt, and Pistachio-13.webp",
+      "sourceSha256": "6d4319aba890f589d344b85ee473df0f3454f515a4f1eddea362bbe3b8ba04e0",
+      "sourceIdx": 5048,
+      "sourceBytes": 2029712,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 3,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "06-dopalnitelen-6.webp": {
+      "sourceName": "Gourmet Charred Carrots with Herb Oil-5.webp",
+      "sourceSha256": "8bea3c553a07a2a3cce3ea4ccdbfccb265bdb5604cfdf069163e975f6b1ced76",
+      "sourceIdx": 5053,
+      "sourceBytes": 1787986,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 4,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "07-gotovo-yastie.webp": {
+      "sourceName": "Charred Carrots with Herbs and Pistachios-7.webp",
+      "sourceSha256": "7eef708af4e78bde6309c4ba699e458546b9f55a85628b26c4150aaf2dc162f3",
+      "sourceIdx": 5042,
+      "sourceBytes": 2187062,
+      "sourceSize": "1536x1024",
+      "role": "hero",
+      "batch": 3,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    }
+  },
+  "generatedHash": "42edddb191b8568e6cf9f76e277e45951c2a328da08298a7e81486b621998c78",
+  "excludedSources": [],
+  "importedAt": "2026-11-25T13:16:38.046Z"
+}

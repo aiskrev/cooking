@@ -1,0 +1,74 @@
+{
+  "slug": "syomga-na-skara-s-limon-kopar-i-pecheni-kartofi",
+  "photos": {
+    "01-dopalnitelen-1.webp": {
+      "sourceName": "Gourmet Grilled Salmon Feast-2.webp",
+      "sourceSha256": "9b09468822a764c2b7dc72ed1be346982635ca9bf6c4c15177d2dfd40799520a",
+      "sourceIdx": 5022,
+      "sourceBytes": 2095596,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 2,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-dopalnitelen-2.webp": {
+      "sourceName": "Grilled Salmon with Roasted Vegetables-6.webp",
+      "sourceSha256": "72525f784e77643908b1756fb8517f83e873e8d825947529e16c8f162661c0c7",
+      "sourceIdx": 5026,
+      "sourceBytes": 2053810,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 2,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "03-dopalnitelen-3.webp": {
+      "sourceName": "Herb-Crusted Salmon Dinner Plate-13.webp",
+      "sourceSha256": "dc64edf3dad24e64f3f55bced9900c11fe9c0bb2767d0f5a22e5d02fa656ce97",
+      "sourceIdx": 5033,
+      "sourceBytes": 1905610,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 2,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "04-dopalnitelen-4.webp": {
+      "sourceName": "Grilled Salmon with Roasted Vegetables-14.webp",
+      "sourceSha256": "7c641006e47ff123e7b84000e8ae706c1aa702f5b1c57ee8799c449acdc84cef",
+      "sourceIdx": 5034,
+      "sourceBytes": 2123074,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 2,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "05-dopalnitelen-5.webp": {
+      "sourceName": "Rustic Salmon Dinner with Lemon and Greens-4.webp",
+      "sourceSha256": "85837c98549a5606caa74bcdb54ee6c9852bff7b856f92649fd41b1141dc7cfd",
+      "sourceIdx": 5024,
+      "sourceBytes": 1938424,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 2,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "06-gotovo-yastie.webp": {
+      "sourceName": "Herb-Grilled Salmon with Roasted Vegetables-5.webp",
+      "sourceSha256": "30a47d7aec70d7491a71fcc7887ecfccf889c38ef6b7a6f0809d2fe32940c180",
+      "sourceIdx": 5025,
+      "sourceBytes": 2158550,
+      "sourceSize": "1536x1024",
+      "role": "hero",
+      "batch": 2,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    }
+  },
+  "generatedHash": "905e074cad696e04f7e86287a66789ac450767317e5ff6a3100933da9c4648ea",
+  "excludedSources": [],
+  "importedAt": "2026-11-25T13:18:14.909Z"
+}

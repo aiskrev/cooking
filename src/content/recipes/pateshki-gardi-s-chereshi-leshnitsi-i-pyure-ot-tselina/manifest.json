@@ -1,0 +1,96 @@
+{
+  "slug": "pateshki-gardi-s-chereshi-leshnitsi-i-pyure-ot-tselina",
+  "photos": {
+    "01-dopalnitelen-1.webp": {
+      "sourceName": "Gourmet Duck with Berry and Hazelnut Accents-12.webp",
+      "sourceSha256": "fd4a439bfe2262d59652f036d84f1a2655cd219764cbee6dccd969af739a9bbd",
+      "sourceIdx": 5047,
+      "sourceBytes": 1779072,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 3,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-dopalnitelen-2.webp": {
+      "sourceName": "Seared Duck with Berry Glaze-2.webp",
+      "sourceSha256": "40b7e0d9c933559f89a2d6f7220574bf6a2a1023320687269917429a574a498e",
+      "sourceIdx": 5083,
+      "sourceBytes": 1838990,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 7,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "03-dopalnitelen-3.webp": {
+      "sourceName": "Gourmet Seared Meat with Cherry Glaze-8.webp",
+      "sourceSha256": "cd458c9fb3655982dd75c5bc4673d1d13f257b382b43e3a6353003efea42e2cd",
+      "sourceIdx": 5089,
+      "sourceBytes": 1742646,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 7,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "04-dopalnitelen-4.webp": {
+      "sourceName": "Gourmet Duck with Cherry Reduction-10.webp",
+      "sourceSha256": "a7db20445184df7cd828db1fdf62b4c71bd809bea62c2d50c0dd4315cac5eee4",
+      "sourceIdx": 5091,
+      "sourceBytes": 1910928,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 7,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "05-dopalnitelen-5.webp": {
+      "sourceName": "Gourmet Duck with Cherry Reduction-2.webp",
+      "sourceSha256": "37422aee3e7a56f664f693689e1ce404848d8d6a6ca5357b7fbd7bc7bb3a50d4",
+      "sourceIdx": 5095,
+      "sourceBytes": 1933160,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 8,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "06-dopalnitelen-6.webp": {
+      "sourceName": "Gourmet Seared Duck with Cherry Sauce-6.webp",
+      "sourceSha256": "d9697a4c8a4a482e84b3eb64544a7ace817be1a6c050104ad4173cb58a133781",
+      "sourceIdx": 5099,
+      "sourceBytes": 1875426,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 8,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "07-dopalnitelen-7.webp": {
+      "sourceName": "Gourmet Duck with Cherry Jus and Purée-17.webp",
+      "sourceSha256": "eb8f693b0b51051de1dd7979e4551ee93db0dc224eaa38c4a90259386699a7dd",
+      "sourceIdx": 5110,
+      "sourceBytes": 1579686,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 8,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "08-gotovo-yastie.webp": {
+      "sourceName": "Caramelized Duck with Cherry Reduction-4.webp",
+      "sourceSha256": "7bc751a48aed7b1048610148addeb5d0ef98d06b2fdc6be88a74ec65f3adce22",
+      "sourceIdx": 5085,
+      "sourceBytes": 2088838,
+      "sourceSize": "1536x1024",
+      "role": "hero",
+      "batch": 7,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    }
+  },
+  "generatedHash": "10df7d5ad08f62bcc974b26814356748ac58d8c284ffd0cafebaf733e52a586c",
+  "excludedSources": [],
+  "importedAt": "2026-11-25T13:16:41.800Z"
+}

@@ -1,0 +1,892 @@
+{
+ "source": "D:Cooking\new pics",
+ "date": "2026-11-25",
+ "recipes": [
+  {
+   "slug": "konfitiran-zhaltak-s-tsarevichno-pyure-i-lisichki",
+   "titleBg": "Конфитиран жълтък с царевично пюре, лисички и кафяво масло",
+   "titleEn": "Confit Egg Yolk with Sweetcorn Purée, Chanterelles and Brown Butter",
+   "status": "NEW",
+   "photos": [
+    {
+     "file": "01-konfitiran-stapka-1.webp",
+     "source": "ChatGPT Image Nov 25, 2026, 06_38_17 AM-1.webp",
+     "role": "step",
+     "sha256": "a5a7fb02ef430f032c37b7a2d71ac4742155138924a6d796b1285811784f46ee"
+    },
+    {
+     "file": "02-konfitiran-stapka-2.webp",
+     "source": "ChatGPT Image Nov 25, 2026, 06_38_19 AM-2.webp",
+     "role": "step",
+     "sha256": "4d6bcf58bec44a6fd3c566cf861bb5bc222cd8a277e701415c7bc9567ccf0d65"
+    },
+    {
+     "file": "03-konfitiran-stapka-3.webp",
+     "source": "ChatGPT Image Nov 25, 2026, 06_38_20 AM-3.webp",
+     "role": "step",
+     "sha256": "f15754242adb9057a9e333617cee6e3c96ce7484fe559b39db47968317f425e0"
+    },
+    {
+     "file": "04-konfitiran-stapka-4.webp",
+     "source": "ChatGPT Image Nov 25, 2026, 06_38_23 AM-5.webp",
+     "role": "step",
+     "sha256": "01b3226b892a9b33a102fffb9a02a2e8e072bd82267a814da571b4f81a32b06b"
+    },
+    {
+     "file": "05-konfitiran-stapka-5.webp",
+     "source": "ChatGPT Image Nov 25, 2026, 06_38_24 AM-6.webp",
+     "role": "step",
+     "sha256": "4344511da30b8ec092e774ee7c2b45339e2244406084133eb0acd2db4faed087"
+    },
+    {
+     "file": "06-konfitiran-stapka-6.webp",
+     "source": "ChatGPT Image Nov 25, 2026, 06_38_25 AM-7.webp",
+     "role": "step",
+     "sha256": "7fd3d0de2c29ce01c50f6b5ee5ba05911e292f5759bef79f9a073baa249412d8"
+    },
+    {
+     "file": "07-konfitiran-stapka-7.webp",
+     "source": "ChatGPT Image Nov 25, 2026, 06_38_21 AM-4.webp",
+     "role": "step",
+     "sha256": "b8630940943737139990d021b634bacfe50b877a4484a87dfd5be4921a29f8f5"
+    },
+    {
+     "file": "08-konfitiran-stapka-8.webp",
+     "source": "ChatGPT Image Nov 25, 2026, 06_38_26 AM-8.webp",
+     "role": "step",
+     "sha256": "4602029a81657d07e5fde1df1a8898a85e31f6dc54281c2a8a1733f1a70da97e"
+    },
+    {
+     "file": "09-dopalnitelen-1.webp",
+     "source": "ChatGPT Image Nov 25, 2026, 06_38_28 AM-10.webp",
+     "role": "extra",
+     "sha256": "797872d2c62bebd0bbbcd89e8c748f3777e27ca64b577ee29548ff12a9c83ab3"
+    },
+    {
+     "file": "10-gotovo-yastie.webp",
+     "source": "ChatGPT Image Nov 25, 2026, 06_38_27 AM-9.webp",
+     "role": "hero",
+     "sha256": "def5f12a4550fa15778fbc5dfe4584b7f44a2be5e52b591c593dae03cd8fe40e"
+    }
+   ]
+  },
+  {
+   "slug": "tsyal-pechen-karfiol-s-bademov-krem-i-grozde",
+   "titleBg": "Цял печен карфиол с подправено масло, бадемов крем, грозде и къри листа",
+   "titleEn": "Whole Roasted Cauliflower with Spiced Butter, Almond Cream, Grapes and Curry Leaves",
+   "status": "NEW",
+   "photos": [
+    {
+     "file": "01-tsyal-stapka-1.webp",
+     "source": "ChatGPT Image Nov 25, 2026, 06_42_14 AM-1.webp",
+     "role": "step",
+     "sha256": "28de40d408a8ac46c61023a01faef177e85d89b322b922b8454f1f714e0e54e5"
+    },
+    {
+     "file": "02-tsyal-stapka-2.webp",
+     "source": "ChatGPT Image Nov 25, 2026, 06_42_17 AM-3.webp",
+     "role": "step",
+     "sha256": "e76a7b950eec11cfe7abb2f82a122bfe2e038af3d16808b9a8b3ae18412d0f20"
+    },
+    {
+     "file": "03-tsyal-stapka-3.webp",
+     "source": "ChatGPT Image Nov 25, 2026, 06_42_18 AM-4.webp",
+     "role": "step",
+     "sha256": "c2fb133012602af769392a6078a52c8f4d319925ef92907130eb98fbd199b848"
+    },
+    {
+     "file": "04-tsyal-stapka-4.webp",
+     "source": "ChatGPT Image Nov 25, 2026, 06_42_19 AM-5.webp",
+     "role": "step",
+     "sha256": "b0692f4d87bf81001a8843750ad98baa044e16464a90b957376b94e700916a4b"
+    },
+    {
+     "file": "05-tsyal-stapka-5.webp",
+     "source": "ChatGPT Image Nov 25, 2026, 06_42_21 AM-6.webp",
+     "role": "step",
+     "sha256": "432a49c183e904d5bd7e91345cbcb3af66c23000e1c93c3d5df02d145ab677e5"
+    },
+    {
+     "file": "06-tsyal-stapka-6.webp",
+     "source": "ChatGPT Image Nov 25, 2026, 06_42_22 AM-7.webp",
+     "role": "step",
+     "sha256": "b2d6d67878fb79142bc1838692659d725db6b2bb5710adf7cdbb032811700b66"
+    },
+    {
+     "file": "07-tsyal-stapka-7.webp",
+     "source": "ChatGPT Image Nov 25, 2026, 06_42_24 AM-9.webp",
+     "role": "step",
+     "sha256": "6a4b83dfdde19f9e55328a2f3d178ef756f6af881d0b6767f4dbed17ac83c510"
+    },
+    {
+     "file": "08-dopalnitelen-1.webp",
+     "source": "ChatGPT Image Nov 25, 2026, 06_42_23 AM-8.webp",
+     "role": "extra",
+     "sha256": "0ec54242f2e9de7ab3aa993bf995c1629172071264482f4d2d3014e65c7cad89"
+    },
+    {
+     "file": "09-dopalnitelen-2.webp",
+     "source": "ChatGPT Image Nov 25, 2026, 06_42_26 AM-10.webp",
+     "role": "extra",
+     "sha256": "5005c38fadd0e8c1854cc9dbb4787b4a1d0a233e074f0a8def6443a966e93cd7"
+    },
+    {
+     "file": "10-gotovo-yastie.webp",
+     "source": "ChatGPT Image Nov 25, 2026, 06_42_16 AM-2.webp",
+     "role": "hero",
+     "sha256": "a695465c342dd1f487ecd1398d251e8fae02cec2611c4ea44a3cbcc45419a2f1"
+    }
+   ]
+  },
+  {
+   "slug": "syomga-na-skara-s-limon-kopar-i-pecheni-kartofi",
+   "titleBg": "Сьомга на скара с лимон, копър, печени картофи и аспержи",
+   "titleEn": "Grilled Salmon with Lemon, Dill, Roast Potatoes and Asparagus",
+   "status": "NEW",
+   "photos": [
+    {
+     "file": "01-dopalnitelen-1.webp",
+     "source": "Gourmet Grilled Salmon Feast-2.webp",
+     "role": "extra",
+     "sha256": "9b09468822a764c2b7dc72ed1be346982635ca9bf6c4c15177d2dfd40799520a"
+    },
+    {
+     "file": "02-dopalnitelen-2.webp",
+     "source": "Grilled Salmon with Roasted Vegetables-6.webp",
+     "role": "extra",
+     "sha256": "72525f784e77643908b1756fb8517f83e873e8d825947529e16c8f162661c0c7"
+    },
+    {
+     "file": "03-dopalnitelen-3.webp",
+     "source": "Herb-Crusted Salmon Dinner Plate-13.webp",
+     "role": "extra",
+     "sha256": "dc64edf3dad24e64f3f55bced9900c11fe9c0bb2767d0f5a22e5d02fa656ce97"
+    },
+    {
+     "file": "04-dopalnitelen-4.webp",
+     "source": "Grilled Salmon with Roasted Vegetables-14.webp",
+     "role": "extra",
+     "sha256": "7c641006e47ff123e7b84000e8ae706c1aa702f5b1c57ee8799c449acdc84cef"
+    },
+    {
+     "file": "05-dopalnitelen-5.webp",
+     "source": "Rustic Salmon Dinner with Lemon and Greens-4.webp",
+     "role": "extra",
+     "sha256": "85837c98549a5606caa74bcdb54ee6c9852bff7b856f92649fd41b1141dc7cfd"
+    },
+    {
+     "file": "06-gotovo-yastie.webp",
+     "source": "Herb-Grilled Salmon with Roasted Vegetables-5.webp",
+     "role": "hero",
+     "sha256": "30a47d7aec70d7491a71fcc7887ecfccf889c38ef6b7a6f0809d2fe32940c180"
+    }
+   ]
+  },
+  {
+   "slug": "pecheni-morkovi-s-oblepiha-kiselo-mlyako-i-shamfastak",
+   "titleBg": "Печени моркови с облепиха, цедено кисело мляко, шамфъстък и билково олио",
+   "titleEn": "Roasted Carrots with Sea Buckthorn, Strained Yoghurt, Pistachios and Herb Oil",
+   "status": "NEW",
+   "photos": [
+    {
+     "file": "01-dopalnitelen-1.webp",
+     "source": "Charred Carrots with Sea Buckthorn and Pistachio-2.webp",
+     "role": "extra",
+     "sha256": "64e3a5ee7fad37f75df4e1b471e7d102961034219cde1b6107908ffdba2ea8b2"
+    },
+    {
+     "file": "02-dopalnitelen-2.webp",
+     "source": "Ember-Roasted Carrots with Pistachios and Herb Oil-5.webp",
+     "role": "extra",
+     "sha256": "8738c46174e84060c534ea126f9a841bfaab2cadeb6ed6c8c1874b549ca14e71"
+    },
+    {
+     "file": "03-dopalnitelen-3.webp",
+     "source": "Charred Carrots with Yogurt and Pistachios-9.webp",
+     "role": "extra",
+     "sha256": "5a6166c30dc41c6c63815aff5f06086c23b32f417211677a51ac5735a59923d8"
+    },
+    {
+     "file": "04-dopalnitelen-4.webp",
+     "source": "Ember-Roasted Carrots with Yogurt and Pistachios-11.webp",
+     "role": "extra",
+     "sha256": "02c7e24f84775bf450b5f45fa478dba3226e47b5f37d3a8c3b975f11aebfd733"
+    },
+    {
+     "file": "05-dopalnitelen-5.webp",
+     "source": "Charred Carrots with Citrus, Yogurt, and Pistachio-13.webp",
+     "role": "extra",
+     "sha256": "6d4319aba890f589d344b85ee473df0f3454f515a4f1eddea362bbe3b8ba04e0"
+    },
+    {
+     "file": "06-dopalnitelen-6.webp",
+     "source": "Gourmet Charred Carrots with Herb Oil-5.webp",
+     "role": "extra",
+     "sha256": "8bea3c553a07a2a3cce3ea4ccdbfccb265bdb5604cfdf069163e975f6b1ced76"
+    },
+    {
+     "file": "07-gotovo-yastie.webp",
+     "source": "Charred Carrots with Herbs and Pistachios-7.webp",
+     "role": "hero",
+     "sha256": "7eef708af4e78bde6309c4ba699e458546b9f55a85628b26c4150aaf2dc162f3"
+    }
+   ]
+  },
+  {
+   "slug": "treska-s-pyure-ot-karfiol-pechen-karfiol-i-hayver",
+   "titleBg": "Треска с хрупкава кожа, пюре от карфиол, печен карфиол и хайвер",
+   "titleEn": "Crisp-Skinned Cod with Cauliflower Purée, Roasted Cauliflower and Roe",
+   "status": "NEW",
+   "photos": [
+    {
+     "file": "01-dopalnitelen-1.webp",
+     "source": "Rustic Fine-Dining Seared Fish Bowl-4.webp",
+     "role": "extra",
+     "sha256": "c17f0a1fb751afa7db68f6eb339e60a623cf1e136ed5601bee0f238f37ce1f98"
+    },
+    {
+     "file": "02-dopalnitelen-2.webp",
+     "source": "Gourmet Seared Fish with Herb Oil-7.webp",
+     "role": "extra",
+     "sha256": "0d1461d652ea77933a342b6f15184644bdb2409a4550003450b96759f158b2d9"
+    },
+    {
+     "file": "03-dopalnitelen-3.webp",
+     "source": "Gourmet Seared Fish with Herb Oil-3 (1).webp",
+     "role": "extra",
+     "sha256": "fd57dd31e0ae2256cc117a81dcfba636cf6d73ce976628dc1a2336247b06f042"
+    },
+    {
+     "file": "04-dopalnitelen-4.webp",
+     "source": "Gourmet Seared Fish with Herb Oil-5 (1).webp",
+     "role": "extra",
+     "sha256": "660d0dde19379cc4fd2e5e0a4352cade9964a4e884ca83cb03c0c8dd9b2721ca"
+    },
+    {
+     "file": "05-dopalnitelen-5.webp",
+     "source": "Gourmet Seared Fish with Herb Oil-15.webp",
+     "role": "extra",
+     "sha256": "70ae4362f7c16631c728917430683d0de9d05ebb01c05949405259afbb0d6359"
+    },
+    {
+     "file": "06-gotovo-yastie.webp",
+     "source": "Crispy Fish with Roe and Herb Purée-10.webp",
+     "role": "hero",
+     "sha256": "24bd6a402c31d7d4452bcc99b878f222de2fac41f2efe07c0661b717dbb6a6f2"
+    }
+   ]
+  },
+  {
+   "slug": "pateshki-gardi-s-chereshi-leshnitsi-i-pyure-ot-tselina",
+   "titleBg": "Патешки гърди с череши, лешници и пюре от целина",
+   "titleEn": "Duck Breast with Cherries, Hazelnuts and Celeriac Purée",
+   "status": "NEW",
+   "photos": [
+    {
+     "file": "01-dopalnitelen-1.webp",
+     "source": "Gourmet Duck with Berry and Hazelnut Accents-12.webp",
+     "role": "extra",
+     "sha256": "fd4a439bfe2262d59652f036d84f1a2655cd219764cbee6dccd969af739a9bbd"
+    },
+    {
+     "file": "02-dopalnitelen-2.webp",
+     "source": "Seared Duck with Berry Glaze-2.webp",
+     "role": "extra",
+     "sha256": "40b7e0d9c933559f89a2d6f7220574bf6a2a1023320687269917429a574a498e"
+    },
+    {
+     "file": "03-dopalnitelen-3.webp",
+     "source": "Gourmet Seared Meat with Cherry Glaze-8.webp",
+     "role": "extra",
+     "sha256": "cd458c9fb3655982dd75c5bc4673d1d13f257b382b43e3a6353003efea42e2cd"
+    },
+    {
+     "file": "04-dopalnitelen-4.webp",
+     "source": "Gourmet Duck with Cherry Reduction-10.webp",
+     "role": "extra",
+     "sha256": "a7db20445184df7cd828db1fdf62b4c71bd809bea62c2d50c0dd4315cac5eee4"
+    },
+    {
+     "file": "05-dopalnitelen-5.webp",
+     "source": "Gourmet Duck with Cherry Reduction-2.webp",
+     "role": "extra",
+     "sha256": "37422aee3e7a56f664f693689e1ce404848d8d6a6ca5357b7fbd7bc7bb3a50d4"
+    },
+    {
+     "file": "06-dopalnitelen-6.webp",
+     "source": "Gourmet Seared Duck with Cherry Sauce-6.webp",
+     "role": "extra",
+     "sha256": "d9697a4c8a4a482e84b3eb64544a7ace817be1a6c050104ad4173cb58a133781"
+    },
+    {
+     "file": "07-dopalnitelen-7.webp",
+     "source": "Gourmet Duck with Cherry Jus and Purée-17.webp",
+     "role": "extra",
+     "sha256": "eb8f693b0b51051de1dd7979e4551ee93db0dc224eaa38c4a90259386699a7dd"
+    },
+    {
+     "file": "08-gotovo-yastie.webp",
+     "source": "Caramelized Duck with Cherry Reduction-4.webp",
+     "role": "hero",
+     "sha256": "7bc751a48aed7b1048610148addeb5d0ef98d06b2fdc6be88a74ec65f3adce22"
+    }
+   ]
+  },
+  {
+   "slug": "karamelizirani-praskovi-s-granita-ot-varbinka-i-bademov-tuil",
+   "titleBg": "Карамелизирани праскови с гранита от лимонова върбинка, бадемов туил и сметанов крем",
+   "titleEn": "Caramelised Peaches with Lemon Verbena Granita, Almond Tuile and Mascarpone Cream",
+   "status": "NEW",
+   "photos": [
+    {
+     "file": "01-karamelizirani-stapka-1.webp",
+     "source": "ChatGPT Image Nov 25, 2026, 08_15_52 AM-1.webp",
+     "role": "step",
+     "sha256": "8e0c570de31b64b753bd1bbac57a0e844257dade65bff6b82002c6bc0b66fbc0"
+    },
+    {
+     "file": "02-karamelizirani-stapka-2.webp",
+     "source": "ChatGPT Image Nov 25, 2026, 08_15_58 AM-5.webp",
+     "role": "step",
+     "sha256": "12c1abcabe8f80176a57a3ef96c057233a2ff360d3b0d622f6e7a9c31836bf22"
+    },
+    {
+     "file": "03-karamelizirani-stapka-3.webp",
+     "source": "ChatGPT Image Nov 25, 2026, 08_15_53 AM-2.webp",
+     "role": "step",
+     "sha256": "31e4a23dbd559f4f1d68331db40895089bde0ff006a757ba693912fd818d6869"
+    },
+    {
+     "file": "04-karamelizirani-stapka-4.webp",
+     "source": "ChatGPT Image Nov 25, 2026, 08_15_59 AM-6.webp",
+     "role": "step",
+     "sha256": "2eef442c0cc41ffd685da00f8583011d8fcd25466857f047bf121dcd9978dd0c"
+    },
+    {
+     "file": "05-karamelizirani-stapka-5.webp",
+     "source": "ChatGPT Image Nov 25, 2026, 08_15_55 AM-3.webp",
+     "role": "step",
+     "sha256": "304df82c5eac32b24750421a350a80e5eae9779d02072c62b388026721cbcd44"
+    },
+    {
+     "file": "06-karamelizirani-stapka-6.webp",
+     "source": "ChatGPT Image Nov 25, 2026, 08_15_56 AM-4.webp",
+     "role": "step",
+     "sha256": "31a17b9482fdbfc0d5f2776a96bd2da857d1e2e4f581e1b7e4c7da8c4c2a3e5a"
+    },
+    {
+     "file": "07-karamelizirani-stapka-7.webp",
+     "source": "ChatGPT Image Nov 25, 2026, 08_16_03 AM-8.webp",
+     "role": "step",
+     "sha256": "6db047837840d9cd1f9b042a2a9ce90a9a4784e9964307d99f6ed41245abfc60"
+    },
+    {
+     "file": "08-dopalnitelen-1.webp",
+     "source": "ChatGPT Image Nov 25, 2026, 08_16_01 AM-7.webp",
+     "role": "extra",
+     "sha256": "be284c9cb2f3195b360a5d19432833a2f49fe991fca59a6c9be6becc54396a6a"
+    },
+    {
+     "file": "09-dopalnitelen-2.webp",
+     "source": "ChatGPT Image Nov 25, 2026, 08_16_06 AM-10.webp",
+     "role": "extra",
+     "sha256": "59b90bfaac0eddffa466808801f1985eeaee63a58ea0dd481eb314b572465858"
+    },
+    {
+     "file": "10-gotovo-yastie.webp",
+     "source": "ChatGPT Image Nov 25, 2026, 08_16_04 AM-9.webp",
+     "role": "hero",
+     "sha256": "fb10f4cfc47c5f87650e2b10a5443e2e397c824d29c1e713dbed7bd5334e7126"
+    }
+   ]
+  },
+  {
+   "slug": "elensko-file-s-karamelizirana-endiviya-chereshi-i-kakao",
+   "titleBg": "Еленско филе с карамелизирана ендивия, череши и какаови зърна",
+   "titleEn": "Venison Loin with Caramelised Endive, Cherries and Cocoa Nibs",
+   "status": "NEW",
+   "photos": [
+    {
+     "file": "01-elensko-stapka-1.webp",
+     "source": "ChatGPT Image Nov 25, 2026, 11_32_20 AM-1.webp",
+     "role": "step",
+     "sha256": "1c1497d4d8c82bba7073c73b6179773938560bd2d846dc01bde2d2f328b61d69"
+    },
+    {
+     "file": "02-elensko-stapka-2.webp",
+     "source": "ChatGPT Image Nov 25, 2026, 11_32_21 AM-2.webp",
+     "role": "step",
+     "sha256": "a13f91813b34357207931b396f81dc2d1202a7b5d3fbd828cf4bf273659a67fe"
+    },
+    {
+     "file": "03-elensko-stapka-3.webp",
+     "source": "ChatGPT Image Nov 25, 2026, 11_32_22 AM-3.webp",
+     "role": "step",
+     "sha256": "df506111089680b006250c0dd09a7918ad1fcd236f8593f1bbee2ffc991de842"
+    },
+    {
+     "file": "04-elensko-stapka-4.webp",
+     "source": "ChatGPT Image Nov 25, 2026, 11_32_23 AM-4.webp",
+     "role": "step",
+     "sha256": "19c02552ddaf34a8988e3392492a57c8980ab4fe55e21c47f9de6686864278dd"
+    },
+    {
+     "file": "05-elensko-stapka-5.webp",
+     "source": "ChatGPT Image Nov 25, 2026, 11_32_25 AM-7.webp",
+     "role": "step",
+     "sha256": "6d953ac8c3cd3814a836af97b3cbe1989cd8554ef6b16de9241025101799affc"
+    },
+    {
+     "file": "06-elensko-stapka-6.webp",
+     "source": "ChatGPT Image Nov 25, 2026, 11_32_24 AM-5.webp",
+     "role": "step",
+     "sha256": "52770471978c17282cd8cb0e7bf51944393ffcbd2a2cde3b77a26bab123658b0"
+    },
+    {
+     "file": "07-elensko-stapka-7.webp",
+     "source": "ChatGPT Image Nov 25, 2026, 11_32_25 AM-6.webp",
+     "role": "step",
+     "sha256": "f0a1be1ba63deea704ff27520ec2ade6ed1c96860d9c449a87ecc164e096d732"
+    },
+    {
+     "file": "08-elensko-stapka-8.webp",
+     "source": "ChatGPT Image Nov 25, 2026, 11_32_26 AM-8.webp",
+     "role": "step",
+     "sha256": "ccc2bb4fa9b8168e1ca449bd933500096a27f19c653f224b3888efb06aba93b1"
+    },
+    {
+     "file": "09-dopalnitelen-1.webp",
+     "source": "ChatGPT Image Nov 25, 2026, 11_32_27 AM-9.webp",
+     "role": "extra",
+     "sha256": "45c013533a62dc1ccafd80522d3ae41216519e7f003453712121ee6f73fdca35"
+    },
+    {
+     "file": "10-gotovo-yastie.webp",
+     "source": "ChatGPT Image Nov 25, 2026, 11_32_28 AM-10.webp",
+     "role": "hero",
+     "sha256": "33ab75029249a36d82dee7c197fecb465e6a74dd748af56264d823698dd68a1c"
+    }
+   ]
+  },
+  {
+   "slug": "pueshko-rulo-s-manatarki-briosh-i-chervena-borovinka",
+   "titleBg": "Пуешко руло с манатарки, бриош и червени боровинки и сос от печено",
+   "titleEn": "Turkey Roulade with Porcini, Brioche and Cranberries with Pan Gravy",
+   "status": "NEW",
+   "photos": [
+    {
+     "file": "01-pueshko-stapka-1.webp",
+     "source": "Autumn Roast Mise en Place-1.webp",
+     "role": "step",
+     "sha256": "167d8dbcc0ae469ae34dfecd48f490a34f0e526d3eb863cb2dc4272d5f88ed7f"
+    },
+    {
+     "file": "02-pueshko-stapka-2.webp",
+     "source": "Gourmet Poultry Mise en Place-8.webp",
+     "role": "step",
+     "sha256": "48ec4e4758c24b151e417f94c6c093681dd2647cd012c1b50a5e6e2fb10e495b"
+    },
+    {
+     "file": "03-pueshko-stapka-3.webp",
+     "source": "Gourmet Cranberry, Mushroom, and Brioche Feast-16.webp",
+     "role": "step",
+     "sha256": "2615c22ee4196a2debcedc510b27e2bd3f705ec3a08a766cc065aaf25765733b"
+    },
+    {
+     "file": "04-pueshko-stapka-4.webp",
+     "source": "Gourmet Turkey Roulade Preparation-10.webp",
+     "role": "step",
+     "sha256": "199f47110956f584da4a96b657c2f845c2d5efbf2cc64345d342e7cf47bc9d31"
+    },
+    {
+     "file": "05-pueshko-stapka-5.webp",
+     "source": "Tying a Rustic Mushroom-Stuffed Poultry Roulade-11.webp",
+     "role": "step",
+     "sha256": "995bc66dbdaf4183bc4b61c5d26d5bd938b3765e0b6b47a461a63d78b4e8507a"
+    },
+    {
+     "file": "06-pueshko-stapka-6.webp",
+     "source": "Tying a Mushroom-Stuffed Poultry Roulade-12.webp",
+     "role": "step",
+     "sha256": "8ecbb25eceee38bf9a8232e31dd53b651613eb6dced8663d30994e9556863865"
+    },
+    {
+     "file": "07-pueshko-stapka-7.webp",
+     "source": "Thyme-Butter Skillet Roast-13.webp",
+     "role": "step",
+     "sha256": "ec28b5e8aa08702c7f2c9043268091ebad4201b8cbe97f758af794d9575e68af"
+    },
+    {
+     "file": "08-pueshko-stapka-8.webp",
+     "source": "Golden-Brown Herb-Roasted Rolled Meat-14.webp",
+     "role": "step",
+     "sha256": "1be648194b2ac3d11a6d5288435bed2d9446317d0dd722a6d1489fd4a1f0fdd2"
+    },
+    {
+     "file": "09-pueshko-stapka-9.webp",
+     "source": "Simmering Brown Sauce with Thyme and Shallots-20.webp",
+     "role": "step",
+     "sha256": "1719bde350ae700c5d8de96e7e0b7dc36e2e619c5a54a95976265a4a63e96029"
+    },
+    {
+     "file": "10-pueshko-stapka-10.webp",
+     "source": "Glossy Gravy Simmering in Skillet-19.webp",
+     "role": "step",
+     "sha256": "15e8fe3f14a0b7d8dfc3e67953eed578b7e71c4497d1f391e67f7b4f2e9ff209"
+    },
+    {
+     "file": "11-dopalnitelen-1.webp",
+     "source": "Gourmet Turkey Roulade with Cranberry and Mushrooms-17.webp",
+     "role": "extra",
+     "sha256": "3efbf02b203747b4f2c5f84bb15f569eb510cb18585c4eda2d96a43c0f473a61"
+    },
+    {
+     "file": "12-dopalnitelen-2.webp",
+     "source": "Chef Tying a Stuffed Poultry Roulade-9.webp",
+     "role": "extra",
+     "sha256": "d7830db495194b9e33ea5ea2c1f0d2b3e58f14ced92321885287159793b7ebfc"
+    },
+    {
+     "file": "13-dopalnitelen-3.webp",
+     "source": "Gourmet Roulade Mise en Place-18.webp",
+     "role": "extra",
+     "sha256": "f136bfadfb8fa808cb5a4f31ccf793b9a8bf7e2123f33ac3d2eba828041bf997"
+    },
+    {
+     "file": "14-gotovo-yastie.webp",
+     "source": "Glossy Herb-Crusted Roulade in Skillet-15.webp",
+     "role": "hero",
+     "sha256": "df7d0c197fb97ad0184b40a707311e6daf96322f43de1662929f256837ce381f"
+    }
+   ]
+  },
+  {
+   "slug": "ohlyuvi-po-burgundski-s-chesnovo-pyure-i-bilkovo-maslo",
+   "titleBg": "Охлюви по бургундски с пюре от печен чесън, билково масло и бриош",
+   "titleEn": "Burgundy-Style Snails with Roasted Garlic Purée, Herb Oil and Brioche",
+   "status": "NEW",
+   "photos": [
+    {
+     "file": "01-ohlyuvi-stapka-1.webp",
+     "source": "Gourmet Escargot Mise en Place-2.webp",
+     "role": "step",
+     "sha256": "10b24fdb3213b946ae41ff7863fc31e5fbbbf309961e5f7d8cd134a70b831bdf"
+    },
+    {
+     "file": "02-ohlyuvi-stapka-2.webp",
+     "source": "Gourmet Escargot Preparation Still Life-1.webp",
+     "role": "step",
+     "sha256": "b2cecbcfedd1ba378d67567955a234ca3ce39df1b01cb8865807739873623597"
+    },
+    {
+     "file": "03-ohlyuvi-stapka-3.webp",
+     "source": "Gourmet Escargot Preparation Station-3.webp",
+     "role": "step",
+     "sha256": "57a0a9ba2a4a9f5c879f1bcd63857cdafbcf1e713b3e480477a8357d2868c5ca"
+    },
+    {
+     "file": "04-ohlyuvi-stapka-4.webp",
+     "source": "Gourmet Garlic Purée and Herb Oil-5.webp",
+     "role": "step",
+     "sha256": "23847c7df643a23e3d401f7799280d6d86badea9528db1ffe7e9612cf1d98fc8"
+    },
+    {
+     "file": "05-ohlyuvi-stapka-5.webp",
+     "source": "Whisking Butter Into Brown Sauce-6.webp",
+     "role": "step",
+     "sha256": "b8d1dd6d0830f18c3fcb4bafad8876968a76b34370ff01168b3804621d8fc4dc"
+    },
+    {
+     "file": "06-ohlyuvi-stapka-6.webp",
+     "source": "Gourmet Escargots in Herb Butter Sauce-4.webp",
+     "role": "step",
+     "sha256": "7460572c818e15c3e1dfd5e717dfd0b6ae286d245ed867d50fd28dce12ad4951"
+    }
+   ]
+  },
+  {
+   "slug": "zhabeshki-butcheta-v-bilkovo-maslo-s-pyure-ot-kreson",
+   "titleBg": "Жабешки бутчета в билково масло с пюре от кресон и сос от кафяво масло и каперси",
+   "titleEn": "Frog Legs in Herb Butter with Watercress Purée and a Brown Butter and Caper Sauce",
+   "status": "NEW",
+   "photos": [
+    {
+     "file": "01-zhabeshki-stapka-1.webp",
+     "source": "Gourmet Frog Legs Mise en Place-5.webp",
+     "role": "step",
+     "sha256": "a2a92baf7b4606cc303dc376c31b9f4799361eaabf0b1ec2afd941bf4afac3b0"
+    },
+    {
+     "file": "02-zhabeshki-stapka-2.webp",
+     "source": "Gourmet Frog Leg Mise en Place-1 (1).webp",
+     "role": "step",
+     "sha256": "b3ebbfc644257fd1708dfedb8c53e4948869e52eb2c7040db736d5c481a9dc0e"
+    },
+    {
+     "file": "03-zhabeshki-stapka-3.webp",
+     "source": "Delicate Frog Leg Preparation in a Professional Kitchen-7.webp",
+     "role": "step",
+     "sha256": "81ecb92cf0c8175bed98f6b9fc3bf0fdbe3a9bd4183264a622679b4a80a782b3"
+    },
+    {
+     "file": "04-zhabeshki-stapka-4.webp",
+     "source": "Culinary Frog Leg Preparation-11 (1).webp",
+     "role": "step",
+     "sha256": "686d372c630a3d67ebe8965f00296e66b40d3378d93f836d2e4292f8e4378eb4"
+    },
+    {
+     "file": "05-zhabeshki-stapka-5.webp",
+     "source": "Copper Pot of Vibrant Watercress Purée-14.webp",
+     "role": "step",
+     "sha256": "6d0d6ba16eec0f71907820e64a6bd3a79d012f89b8a19065ec2e8b056f5916dc"
+    },
+    {
+     "file": "06-zhabeshki-stapka-6.webp",
+     "source": "Emerald Purée and Roasted Garlic-20 (1).webp",
+     "role": "step",
+     "sha256": "9b28f1f3489eb51c4d33c340dbfa38c00a8c3b028703c298bcb9e5db3b7f356a"
+    },
+    {
+     "file": "07-zhabeshki-stapka-7.webp",
+     "source": "Gourmet Herb-Butter Frog Legs-10.webp",
+     "role": "step",
+     "sha256": "29561611d43f75c349ff3d48bb848071fb907799bec8e847a988b83206442231"
+    },
+    {
+     "file": "08-zhabeshki-stapka-8.webp",
+     "source": "Buttery Herb-Seared Frog Legs-16 (1).webp",
+     "role": "step",
+     "sha256": "3109ffa6031ee636256e3108a906b82c15c9baa1a4ac4bece4ea7bea18aa3f7e"
+    },
+    {
+     "file": "09-zhabeshki-stapka-9.webp",
+     "source": "Gourmet Lemon Caper Pan Sauce-17.webp",
+     "role": "step",
+     "sha256": "84093dfd3ff1833b035018ebf1668d4c3da4db6e22c12a16ce84c586a4ce7129"
+    },
+    {
+     "file": "10-zhabeshki-stapka-10.webp",
+     "source": "Golden Brown Caper Herb Sauce-24 (1).webp",
+     "role": "step",
+     "sha256": "0e445ceb52e023721fb42893dd4d3ada1bcac9ae8866aa378cd32bfb820e61ef"
+    },
+    {
+     "file": "11-dopalnitelen-1.webp",
+     "source": "Herb-Butter Seared Frog Legs-12.webp",
+     "role": "extra",
+     "sha256": "57cba6eace4d18619ec71e32347a944d94a6e6eaa1e5c78b7e10866e17e45d51"
+    },
+    {
+     "file": "12-dopalnitelen-2.webp",
+     "source": "Copper Pan with Vibrant Green Purée-15.webp",
+     "role": "extra",
+     "sha256": "a77677b5022e66b32ac7287951f24cb784c07bbe2d3b551abc8afcf33c46183e"
+    },
+    {
+     "file": "13-dopalnitelen-3.webp",
+     "source": "Gourmet Frog Legs Mise en Place-12 (1).webp",
+     "role": "extra",
+     "sha256": "f9ecbfc81c7372f94c48fcba22873281ff9dcfe55c0f874767daa9c5bbdc5529"
+    },
+    {
+     "file": "14-gotovo-yastie.webp",
+     "source": "Herb-Butter Seared Frog Legs-11.webp",
+     "role": "hero",
+     "sha256": "aab185dec93d04d3cf48031c652d999c4edfcc551dd122147f88eaefd0fade39"
+    }
+   ]
+  },
+  {
+   "slug": "riba-sveti-petar-s-kamchatski-krab-tselina-i-sos-ot-rakoobrazni",
+   "titleBg": "Риба Свети Петър с камчатски краб, целина и сос от ракообразни",
+   "titleEn": "John Dory with King Crab, Celery and Shellfish Sauce",
+   "status": "NEW",
+   "photos": [
+    {
+     "file": "01-riba-stapka-1.webp",
+     "source": "ChatGPT Image Nov 25, 2026, 02_01_40 PM-1.webp",
+     "role": "step",
+     "sha256": "7201df7fa1fce184041496c6c70b3b2d71799d0811c561e6bf465842c21da104"
+    },
+    {
+     "file": "02-riba-stapka-2.webp",
+     "source": "ChatGPT Image Nov 25, 2026, 02_01_41 PM-2.webp",
+     "role": "step",
+     "sha256": "cb8e00ed8afe32badffb895531436cacd8b10e4526cae5620ebc060f8612e164"
+    },
+    {
+     "file": "03-riba-stapka-3.webp",
+     "source": "ChatGPT Image Nov 25, 2026, 02_01_45 PM-6.webp",
+     "role": "step",
+     "sha256": "2ccfcd023cdeb3164d220f1d05c69aa3c78da83224ccb5caefa4d1e8aea24fc7"
+    },
+    {
+     "file": "04-riba-stapka-4.webp",
+     "source": "ChatGPT Image Nov 25, 2026, 02_01_44 PM-5.webp",
+     "role": "step",
+     "sha256": "8ea7da58d37134bb0fb0e61c3be1bee25a643fc8f512e6c6494a3bc03441cef3"
+    },
+    {
+     "file": "05-riba-stapka-5.webp",
+     "source": "ChatGPT Image Nov 25, 2026, 02_01_42 PM-3.webp",
+     "role": "step",
+     "sha256": "bf0fa9d0d2f46f6e746702d832a8d231c7443bb2376269efe2c768edd708ca98"
+    },
+    {
+     "file": "06-riba-stapka-6.webp",
+     "source": "ChatGPT Image Nov 25, 2026, 02_01_43 PM-4.webp",
+     "role": "step",
+     "sha256": "fb5ed3b6981eac6dbcf6194d1acb4ad0798ee2506b18756487046a27d35d7176"
+    },
+    {
+     "file": "07-riba-stapka-7.webp",
+     "source": "ChatGPT Image Nov 25, 2026, 02_01_46 PM-7.webp",
+     "role": "step",
+     "sha256": "e9e371a6609151a0963793098231c84ae6ddf0d634d5a04b7c73e2eb426c5db0"
+    },
+    {
+     "file": "08-riba-stapka-8.webp",
+     "source": "ChatGPT Image Nov 25, 2026, 02_01_47 PM-8.webp",
+     "role": "step",
+     "sha256": "e41c205d891de1d0c6fe9aa2a3499a6b4f15ef8676f6c8efe11207e9a2c89212"
+    },
+    {
+     "file": "09-dopalnitelen-1.webp",
+     "source": "ChatGPT Image Nov 25, 2026, 02_01_48 PM-9.webp",
+     "role": "extra",
+     "sha256": "b65f65b7e9fd4bc75318fc78b29e65336a4e7f4c3f90b7d9019aa76984578555"
+    },
+    {
+     "file": "10-gotovo-yastie.webp",
+     "source": "ChatGPT Image Nov 25, 2026, 02_01_49 PM-10.webp",
+     "role": "hero",
+     "sha256": "75530f94fbc6e260afa739b160ea017a16aebaf128fa70ffb10ef52e7c119f12"
+    }
+   ]
+  },
+  {
+   "slug": "sardini-s-pecheni-domati-bademov-krem-i-domatena-esentsiya",
+   "titleBg": "Сардини с опечени домати, бадемов крем, доматена есенция и босилеково олио",
+   "titleEn": "Sardines with Roasted Tomatoes, Almond Cream, Tomato Essence and Basil Oil",
+   "status": "NEW",
+   "photos": [
+    {
+     "file": "01-sardini-stapka-1.webp",
+     "source": "Sardines, Tomatoes, and Herbs on Ice-1.webp",
+     "role": "step",
+     "sha256": "32999b0a6c4797671bcfa006c7cd5788e3e4490f7e04e14f9c71f57a7701ad33"
+    },
+    {
+     "file": "02-sardini-stapka-2.webp",
+     "source": "Artisanal Tomato and Herb Preparation-11.webp",
+     "role": "step",
+     "sha256": "255d78697c1eb6c0187aab272c87993f1f44257ae83cc119a7be5fc155af730b"
+    },
+    {
+     "file": "03-sardini-stapka-3.webp",
+     "source": "Tomato Essence and Herb Oil Preparation-12.webp",
+     "role": "step",
+     "sha256": "172cd5034a28e970212b0d44c9969aeafec570e3cdc2b8e5a23f5475372fb4de"
+    },
+    {
+     "file": "04-sardini-stapka-4.webp",
+     "source": "Mediterranean Sardines Mise en Place-3.webp",
+     "role": "step",
+     "sha256": "89e2377a570bf6ebc75c6a24af18058b7fa56cdd65f50226fc5fb221a16abd41"
+    },
+    {
+     "file": "05-sardini-stapka-5.webp",
+     "source": "Meticulous Fish Filleting Setup-5.webp",
+     "role": "step",
+     "sha256": "720238ba644d7cf0ada11685d3fa4bf1bb11ad4845d4facb2b30248435007e14"
+    },
+    {
+     "file": "06-sardini-stapka-6.webp",
+     "source": "Cinematic Sardine Filleting Preparation-6.webp",
+     "role": "step",
+     "sha256": "aa79068efd346ea5210c325afe2e1c96d82f7c279d3b3b475323265c7b1aab21"
+    },
+    {
+     "file": "07-sardini-stapka-7.webp",
+     "source": "Charred Tomatoes and Almond Mise en Place-9.webp",
+     "role": "step",
+     "sha256": "1d13cc533ba841f7a9d8407ade3dd4862d8ba603197e635897d4c078535625a8"
+    },
+    {
+     "file": "08-sardini-stapka-8.webp",
+     "source": "Crispy Sardines in Sizzling Herb Oil-8.webp",
+     "role": "step",
+     "sha256": "7ad1bf4a62057bd9a04c88b023b1cc4fca99170770f2156482cf446a0974eff1"
+    },
+    {
+     "file": "09-dopalnitelen-1.webp",
+     "source": "Mediterranean Sardine Feast-2.webp",
+     "role": "extra",
+     "sha256": "f28a5bde46ca97024356c640c77276c2c532ed7ac58bdd40599abe8b26cc8948"
+    },
+    {
+     "file": "10-dopalnitelen-2.webp",
+     "source": "Rustic Smoked Tomato Almond Feast-10.webp",
+     "role": "extra",
+     "sha256": "8ad2fe55faa4898b8183a8ccb89a3598d5ae9c973d64d07f24ad55aceed4105b"
+    },
+    {
+     "file": "11-gotovo-yastie.webp",
+     "source": "Crispy Herb-Garnished Fish Skillet-7.webp",
+     "role": "hero",
+     "sha256": "9b8521dc026067d71d823f04fef2284bb064b40fa253065b40f16c1f351446d1"
+    }
+   ]
+  },
+  {
+   "slug": "unagi-glazirana-zmiorka-na-zhar-s-oriz-i-umeboshi",
+   "titleBg": "Унаги – змиорка, глазирана на жар, с ориз и умебоши",
+   "titleEn": "Unagi – Eel Glazed over Charcoal with Rice and Umeboshi",
+   "status": "NEW",
+   "photos": [
+    {
+     "file": "01-unagi-stapka-1.webp",
+     "source": "Japanese Eel Cooking Mise en Place-1.webp",
+     "role": "step",
+     "sha256": "19254995f3f82900d8341306a6c6eab30c6a755bb1a7569d8da2125ab982194d"
+    },
+    {
+     "file": "02-unagi-stapka-2.webp",
+     "source": "Glazed Eel Sauce Reduction-7.webp",
+     "role": "step",
+     "sha256": "0eb83220011777166b5fae02df818592d09fcc8bdaede086b7bf891812a7f8c4"
+    },
+    {
+     "file": "03-unagi-stapka-3.webp",
+     "source": "Japanese Unagi Mise en Place-3.webp",
+     "role": "step",
+     "sha256": "38f7a9d6d25ed6388fa301976a0cc34f57523e7e6a4067a1b92fe58e2b84b269"
+    },
+    {
+     "file": "04-unagi-stapka-4.webp",
+     "source": "Japanese Unagi Preparation Scene-4.webp",
+     "role": "step",
+     "sha256": "3127dc77c9df641cbaf25c91a0e68aceef0b0890e86db9e8f141fcee1cf647c3"
+    },
+    {
+     "file": "05-unagi-stapka-5.webp",
+     "source": "Glazed Unagi Over Glowing Charcoal-5.webp",
+     "role": "step",
+     "sha256": "40315f2a8546efb7640f19c7e291929dc7e55fae093526b165098c4f83626c58"
+    },
+    {
+     "file": "06-unagi-stapka-6.webp",
+     "source": "Japanese Ume Rice Plating Ensemble-6.webp",
+     "role": "step",
+     "sha256": "2054fd8526472be4456894f0b4996bc58cef19ff90cd8c3bc9734117b0187412"
+    },
+    {
+     "file": "07-dopalnitelen-1.webp",
+     "source": "Japanese Unagi Mise en Place-2.webp",
+     "role": "extra",
+     "sha256": "38394681e87fc9ae6891dff01c5f27a94d391666a072373e34f4f5acf6045e7f"
+    }
+   ]
+  }
+ ]
+}

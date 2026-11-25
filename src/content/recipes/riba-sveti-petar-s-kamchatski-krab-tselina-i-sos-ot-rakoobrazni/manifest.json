@@ -1,0 +1,118 @@
+{
+  "slug": "riba-sveti-petar-s-kamchatski-krab-tselina-i-sos-ot-rakoobrazni",
+  "photos": {
+    "01-riba-stapka-1.webp": {
+      "sourceName": "ChatGPT Image Nov 25, 2026, 02_01_40 PM-1.webp",
+      "sourceSha256": "7201df7fa1fce184041496c6c70b3b2d71799d0811c561e6bf465842c21da104",
+      "sourceIdx": 5285,
+      "sourceBytes": 1824400,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 26,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-riba-stapka-2.webp": {
+      "sourceName": "ChatGPT Image Nov 25, 2026, 02_01_41 PM-2.webp",
+      "sourceSha256": "cb8e00ed8afe32badffb895531436cacd8b10e4526cae5620ebc060f8612e164",
+      "sourceIdx": 5286,
+      "sourceBytes": 1858260,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 26,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "03-riba-stapka-3.webp": {
+      "sourceName": "ChatGPT Image Nov 25, 2026, 02_01_45 PM-6.webp",
+      "sourceSha256": "2ccfcd023cdeb3164d220f1d05c69aa3c78da83224ccb5caefa4d1e8aea24fc7",
+      "sourceIdx": 5290,
+      "sourceBytes": 1602420,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 26,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "04-riba-stapka-4.webp": {
+      "sourceName": "ChatGPT Image Nov 25, 2026, 02_01_44 PM-5.webp",
+      "sourceSha256": "8ea7da58d37134bb0fb0e61c3be1bee25a643fc8f512e6c6494a3bc03441cef3",
+      "sourceIdx": 5289,
+      "sourceBytes": 1698506,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 26,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "05-riba-stapka-5.webp": {
+      "sourceName": "ChatGPT Image Nov 25, 2026, 02_01_42 PM-3.webp",
+      "sourceSha256": "bf0fa9d0d2f46f6e746702d832a8d231c7443bb2376269efe2c768edd708ca98",
+      "sourceIdx": 5287,
+      "sourceBytes": 1720438,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 26,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "06-riba-stapka-6.webp": {
+      "sourceName": "ChatGPT Image Nov 25, 2026, 02_01_43 PM-4.webp",
+      "sourceSha256": "fb5ed3b6981eac6dbcf6194d1acb4ad0798ee2506b18756487046a27d35d7176",
+      "sourceIdx": 5288,
+      "sourceBytes": 1770566,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 26,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "07-riba-stapka-7.webp": {
+      "sourceName": "ChatGPT Image Nov 25, 2026, 02_01_46 PM-7.webp",
+      "sourceSha256": "e9e371a6609151a0963793098231c84ae6ddf0d634d5a04b7c73e2eb426c5db0",
+      "sourceIdx": 5291,
+      "sourceBytes": 1872784,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 26,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "08-riba-stapka-8.webp": {
+      "sourceName": "ChatGPT Image Nov 25, 2026, 02_01_47 PM-8.webp",
+      "sourceSha256": "e41c205d891de1d0c6fe9aa2a3499a6b4f15ef8676f6c8efe11207e9a2c89212",
+      "sourceIdx": 5292,
+      "sourceBytes": 1612840,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 26,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "09-dopalnitelen-1.webp": {
+      "sourceName": "ChatGPT Image Nov 25, 2026, 02_01_48 PM-9.webp",
+      "sourceSha256": "b65f65b7e9fd4bc75318fc78b29e65336a4e7f4c3f90b7d9019aa76984578555",
+      "sourceIdx": 5293,
+      "sourceBytes": 1560500,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 26,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "10-gotovo-yastie.webp": {
+      "sourceName": "ChatGPT Image Nov 25, 2026, 02_01_49 PM-10.webp",
+      "sourceSha256": "75530f94fbc6e260afa739b160ea017a16aebaf128fa70ffb10ef52e7c119f12",
+      "sourceIdx": 5294,
+      "sourceBytes": 2013304,
+      "sourceSize": "1122x1402",
+      "role": "hero",
+      "batch": 26,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    }
+  },
+  "generatedHash": "104139d3aca3675d0e1adad3a3506bc7c63a61e80d8f4c5377ffb0c3322ce869",
+  "excludedSources": [],
+  "importedAt": "2026-11-25T13:16:59.333Z"
+}

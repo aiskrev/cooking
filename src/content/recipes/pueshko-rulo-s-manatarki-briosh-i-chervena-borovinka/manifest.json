@@ -1,0 +1,162 @@
+{
+  "slug": "pueshko-rulo-s-manatarki-briosh-i-chervena-borovinka",
+  "photos": {
+    "01-pueshko-stapka-1.webp": {
+      "sourceName": "Autumn Roast Mise en Place-1.webp",
+      "sourceSha256": "167d8dbcc0ae469ae34dfecd48f490a34f0e526d3eb863cb2dc4272d5f88ed7f",
+      "sourceIdx": 5177,
+      "sourceBytes": 1867236,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 19,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-pueshko-stapka-2.webp": {
+      "sourceName": "Gourmet Poultry Mise en Place-8.webp",
+      "sourceSha256": "48ec4e4758c24b151e417f94c6c093681dd2647cd012c1b50a5e6e2fb10e495b",
+      "sourceIdx": 5184,
+      "sourceBytes": 1821692,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 19,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "03-pueshko-stapka-3.webp": {
+      "sourceName": "Gourmet Cranberry, Mushroom, and Brioche Feast-16.webp",
+      "sourceSha256": "2615c22ee4196a2debcedc510b27e2bd3f705ec3a08a766cc065aaf25765733b",
+      "sourceIdx": 5192,
+      "sourceBytes": 1768550,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 19,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "04-pueshko-stapka-4.webp": {
+      "sourceName": "Gourmet Turkey Roulade Preparation-10.webp",
+      "sourceSha256": "199f47110956f584da4a96b657c2f845c2d5efbf2cc64345d342e7cf47bc9d31",
+      "sourceIdx": 5186,
+      "sourceBytes": 1663582,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 19,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "05-pueshko-stapka-5.webp": {
+      "sourceName": "Tying a Rustic Mushroom-Stuffed Poultry Roulade-11.webp",
+      "sourceSha256": "995bc66dbdaf4183bc4b61c5d26d5bd938b3765e0b6b47a461a63d78b4e8507a",
+      "sourceIdx": 5187,
+      "sourceBytes": 1647032,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 19,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "06-pueshko-stapka-6.webp": {
+      "sourceName": "Tying a Mushroom-Stuffed Poultry Roulade-12.webp",
+      "sourceSha256": "8ecbb25eceee38bf9a8232e31dd53b651613eb6dced8663d30994e9556863865",
+      "sourceIdx": 5188,
+      "sourceBytes": 1576698,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 19,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "07-pueshko-stapka-7.webp": {
+      "sourceName": "Thyme-Butter Skillet Roast-13.webp",
+      "sourceSha256": "ec28b5e8aa08702c7f2c9043268091ebad4201b8cbe97f758af794d9575e68af",
+      "sourceIdx": 5189,
+      "sourceBytes": 1946214,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 19,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "08-pueshko-stapka-8.webp": {
+      "sourceName": "Golden-Brown Herb-Roasted Rolled Meat-14.webp",
+      "sourceSha256": "1be648194b2ac3d11a6d5288435bed2d9446317d0dd722a6d1489fd4a1f0fdd2",
+      "sourceIdx": 5190,
+      "sourceBytes": 1774636,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 19,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "09-pueshko-stapka-9.webp": {
+      "sourceName": "Simmering Brown Sauce with Thyme and Shallots-20.webp",
+      "sourceSha256": "1719bde350ae700c5d8de96e7e0b7dc36e2e619c5a54a95976265a4a63e96029",
+      "sourceIdx": 5196,
+      "sourceBytes": 1635368,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 19,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "10-pueshko-stapka-10.webp": {
+      "sourceName": "Glossy Gravy Simmering in Skillet-19.webp",
+      "sourceSha256": "15e8fe3f14a0b7d8dfc3e67953eed578b7e71c4497d1f391e67f7b4f2e9ff209",
+      "sourceIdx": 5195,
+      "sourceBytes": 1613928,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 19,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "11-dopalnitelen-1.webp": {
+      "sourceName": "Gourmet Turkey Roulade with Cranberry and Mushrooms-17.webp",
+      "sourceSha256": "3efbf02b203747b4f2c5f84bb15f569eb510cb18585c4eda2d96a43c0f473a61",
+      "sourceIdx": 5193,
+      "sourceBytes": 1819614,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 19,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "12-dopalnitelen-2.webp": {
+      "sourceName": "Chef Tying a Stuffed Poultry Roulade-9.webp",
+      "sourceSha256": "d7830db495194b9e33ea5ea2c1f0d2b3e58f14ced92321885287159793b7ebfc",
+      "sourceIdx": 5185,
+      "sourceBytes": 1598736,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 19,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "13-dopalnitelen-3.webp": {
+      "sourceName": "Gourmet Roulade Mise en Place-18.webp",
+      "sourceSha256": "f136bfadfb8fa808cb5a4f31ccf793b9a8bf7e2123f33ac3d2eba828041bf997",
+      "sourceIdx": 5194,
+      "sourceBytes": 1784598,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 19,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "14-gotovo-yastie.webp": {
+      "sourceName": "Glossy Herb-Crusted Roulade in Skillet-15.webp",
+      "sourceSha256": "df7d0c197fb97ad0184b40a707311e6daf96322f43de1662929f256837ce381f",
+      "sourceIdx": 5191,
+      "sourceBytes": 1968950,
+      "sourceSize": "1536x1024",
+      "role": "hero",
+      "batch": 19,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    }
+  },
+  "generatedHash": "b744e4adc2bed68fdb19c41d130c2b2c00fa64eb418c84a01847e427f6943582",
+  "excludedSources": [],
+  "importedAt": "2026-11-25T13:16:51.066Z"
+}
