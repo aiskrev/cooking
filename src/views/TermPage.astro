@@ -27,7 +27,7 @@ const description = kind === 'category' ? t(locale, 'category.description', { na
       </ol>
     </nav>
     <div class="page-head"><h1>{kind === 'category' ? term.name : t(locale, 'tag.heading', { name: term.name })}</h1><p>{tn(locale, 'category.count', term.recipes.length)}</p></div>
-    <ul class="grid section">
+    <ul class="grid section" data-reveal-group>
       {term.recipes.map((r, i) => <li><RecipeCard recipe={r} locale={locale} eager={i === 0} level={2} /></li>)}
     </ul>
   </div>

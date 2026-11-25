@@ -508,6 +508,17 @@ export const bg = {
   // ---- Поверителност ----
   'privacy.title': 'Поверителност и правила',
   'privacy.description': 'Какви данни пазим, защо и колко дълго; правила за коментарите.',
+  // ---- Редизайн: футър, плъзгачи, филтри, етикети ----
+  'footer.navLabel': 'Навигация във футъра',
+  'footer.explore': 'Разгледайте',
+  'footer.info': 'Информация',
+  'rail.prev': 'Предишни рецепти',
+  'rail.next': 'Следващи рецепти',
+  'catalog.filtersToggle': 'Още филтри',
+  'catalog.activeFilters': 'Активни филтри',
+  'catalog.removeFilter': 'Премахни филтъра „{name}“',
+  'categories.popular': 'Най-често срещани',
+  'categories.az': 'Всички етикети от А до Я',
 } as const;
 
 export type UiKey = keyof typeof bg;

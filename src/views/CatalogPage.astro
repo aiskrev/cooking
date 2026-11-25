@@ -23,10 +23,16 @@ const difficulties = ['лесна', 'средна', 'сложна'].map((key) =>
       <p><span data-count>{recipes.length}</span> {t(locale, 'catalog.countSuffix', { total: recipes.length })}</p>
     </div>
 
-    <form class="filters" data-filters role="search" aria-label={t(locale, 'catalog.filters')}>
+    <form class="filters" id="catalog-filters" data-filters role="search" aria-label={t(locale, 'catalog.filters')}>
       <div class="f-field f-search">
         <label for="f-q">{t(locale, 'catalog.q')}</label>
         <input id="f-q" type="search" autocomplete="off" placeholder={t(locale, 'catalog.qPlaceholder')} />
+      </div>
+      {/* Телефон/таблет: допълнителните филтри са сгънати зад този бутон (показва се само при JavaScript и под 900 px) */}
+      <div class="filters-bar" data-filters-bar hidden>
+        <button type="button" class="btn secondary small filters-toggle" aria-expanded="false" aria-controls="catalog-filters" data-filters-toggle>
+          {t(locale, 'catalog.filtersToggle')} <span class="filters-badge" data-filters-badge hidden></span>
+        </button>
       </div>
       <div class="f-field">
         <label for="f-collection">{t(locale, 'catalog.collection')}</label>
@@ -81,7 +87,7 @@ const difficulties = ['лесна', 'средна', 'сложна'].map((key) =>
           <option value="3">{t(locale, 'catalog.rating3')}</option>
         </select>
       </div>
-      <div class="f-field">
+      <div class="f-field f-sort">
         <label for="f-sort">{t(locale, 'catalog.sort')}</label>
         <select id="f-sort">
           <option value="new">{t(locale, 'catalog.sortNew')}</option>
@@ -92,6 +98,7 @@ const difficulties = ['лесна', 'средна', 'сложна'].map((key) =>
       <div class="f-field f-reset"><button type="button" class="btn secondary small" data-reset>{t(locale, 'catalog.reset')}</button></div>
     </form>
 
+    <ul class="active-filters" aria-label={t(locale, 'catalog.activeFilters')} data-active-filters hidden></ul>
     <p class="muted" role="status" aria-live="polite" data-status></p>
 
     <ul class="grid section" data-grid>
@@ -121,7 +128,52 @@ const difficulties = ['лесна', 'средна', 'сложна'].map((key) =>
   const empty = document.querySelector<HTMLElement>('[data-empty]')!;
   const more = document.querySelector<HTMLButtonElement>('[data-more]')!;
   let shown = PAGE;
+  let firstRun = true;
   form.addEventListener('submit', (e) => e.preventDefault());
+
+  // ---- Сгъваеми филтри (телефон/таблет) и „чипове“ на активните филтри ----
+  const bar = document.querySelector<HTMLElement>('[data-filters-bar]')!;
+  const toggle = document.querySelector<HTMLButtonElement>('[data-filters-toggle]')!;
+  const badge = document.querySelector<HTMLElement>('[data-filters-badge]')!;
+  const activeList = document.querySelector<HTMLElement>('[data-active-filters]')!;
+  bar.hidden = false;
+  form.classList.add('is-collapsible');
+  toggle.addEventListener('click', () => {
+    const open = !form.classList.contains('is-open');
+    form.classList.toggle('is-open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+  });
+  const labelOf = (el: HTMLElement) => document.querySelector<HTMLLabelElement>(`label[for="${el.id}"]`)?.textContent?.trim() ?? '';
+  function renderActive() {
+    const chips: { text: string; clear: () => void }[] = [];
+    if (q.value.trim()) chips.push({ text: `„${q.value.trim()}“`, clear: () => { q.value = ''; } });
+    let n = 0;
+    for (const el of [collection, category, method, difficulty, time, tag, ratingSel]) {
+      if (!el.value || (el === ratingSel && ratingField.hidden)) continue;
+      n++;
+      chips.push({ text: `${labelOf(el)}: ${el.selectedOptions[0]?.textContent?.trim() ?? el.value}`, clear: () => { el.value = ''; } });
+    }
+    badge.hidden = n === 0;
+    badge.textContent = String(n);
+    activeList.hidden = chips.length === 0;
+    activeList.replaceChildren(...chips.map((c, i) => {
+      const li = document.createElement('li');
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.setAttribute('aria-label', tc('catalog.removeFilter', { name: c.text }));
+      const s = document.createElement('span'); s.textContent = c.text;
+      const x = document.createElement('span'); x.className = 'x'; x.setAttribute('aria-hidden', 'true'); x.textContent = '×';
+      b.append(s, x);
+      b.addEventListener('click', () => {
+        c.clear(); apply();
+        // фокусът остава в списъка с филтри (следващият чип) или се връща в полето за търсене
+        const next = activeList.querySelectorAll('button')[Math.min(i, activeList.querySelectorAll('button').length - 1)] as HTMLElement | undefined;
+        (next ?? q).focus();
+      });
+      li.append(b);
+      return li;
+    }));
+  }
 
   const params = new URLSearchParams(location.search);
   q.value = params.get('q') ?? '';
@@ -160,6 +212,10 @@ const difficulties = ['лесна', 'средна', 'сложна'].map((key) =>
     items.forEach((li) => { if (!set.has(li.querySelector('[data-card]') as HTMLElement)) li.hidden = true; });
     grid.append(frag);
     matched.forEach((c, i) => { c.parentElement!.hidden = i >= shown; });
+    // Кратка поява на резултатите след смяна на филтрите (не при първото зареждане)
+    if (!firstRun) { grid.classList.remove('is-updated'); void grid.offsetWidth; grid.classList.add('is-updated'); }
+    firstRun = false;
+    renderActive();
     countEl.textContent = String(matched.length);
     status.textContent = matched.length === cards.length ? '' : tc('catalog.found', { n: matched.length });
     empty.hidden = matched.length > 0;

@@ -1,0 +1,27 @@
+---
+// Плочки с категориите: снимка на ястие от категорията, име и брой рецепти.
+// На телефон – хоризонтална лента (плъзгане), на компютър – мрежа. Връзките и броят са същите като в списъка с категории.
+import Photo from './Photo.astro';
+import { getCoverPhoto, type Recipe } from '../lib/recipes';
+import { href, tn, type Locale } from '../i18n';
+interface Props { locale: Locale; categories: Array<{ slug: string; name: string; recipes: Recipe[] }>; reveal?: boolean }
+const { locale, categories, reveal = true } = Astro.props;
+const tiles = await Promise.all(
+  categories.map(async (c) => {
+    // Първата рецепта с корица в категорията (най-новата е първа в списъка)
+    let photo;
+    for (const r of c.recipes) { photo = await getCoverPhoto(r); if (photo) break; }
+    return { ...c, photo };
+  }),
+);
+---
+<ul class="cat-rail" data-reveal={reveal ? '' : undefined}>
+  {tiles.map((c) => (
+    <li class={`cat-tile${c.photo ? '' : ' no-photo'}`}>
+      <a href={href(locale, 'categories', c.slug)}>
+        {c.photo && <Photo photo={{ ...c.photo, alt: '' }} locale={locale} sizes="(min-width: 900px) 220px, 45vw" widths={[480]} />}
+        <span class="cat-name">{c.name}<span class="cat-count">{tn(locale, 'category.count', c.recipes.length)}</span></span>
+      </a>
+    </li>
+  ))}
+</ul>
