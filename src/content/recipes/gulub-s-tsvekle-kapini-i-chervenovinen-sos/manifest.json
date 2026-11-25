@@ -1,13 +1,134 @@
 {
   "slug": "gulub-s-tsvekle-kapini-i-chervenovinen-sos",
   "photos": {
+    "01-gulub-stapka-1.webp": {
+      "sourceName": "Rustic Game Bird with Beets and Berries-2.webp",
+      "sourceSha256": "3845b2b0857f99fb209ceddef6a915c4bd44d46b1a771b6db43f7627439d1f88",
+      "sourceIdx": 2135,
+      "sourceBytes": 2109316,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 13,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-gulub-stapka-2.webp": {
+      "sourceName": "Gourmet Game Bird Preparation-3.webp",
+      "sourceSha256": "185baa6b705b6ea896241fddc29cffc8410ef38b2489e81f053f92a093f07a5e",
+      "sourceIdx": 2136,
+      "sourceBytes": 1718706,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 13,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "03-gulub-stapka-3.webp": {
+      "sourceName": "Gourmet Game Bird Preparation-4.webp",
+      "sourceSha256": "9f5086937f69ce5a7c938c2c2acc10c6a9167c138d93b18a7bc51d62f15b22bd",
+      "sourceIdx": 2137,
+      "sourceBytes": 1743532,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 13,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "04-gulub-stapka-4.webp": {
+      "sourceName": "Luxurious Game Bird Mise en Place-5.webp",
+      "sourceSha256": "5eb906dd9ba1f9f5017901a2619a088f1eb4d9350f4e098f8b603a63f679a18f",
+      "sourceIdx": 2138,
+      "sourceBytes": 2121030,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 13,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "05-gulub-stapka-5.webp": {
+      "sourceName": "Sizzling Duck with Herb Butter-7.webp",
+      "sourceSha256": "012e2b009bca0bc36ae5f206c791889d7a53b5cb07ca5dbea1d2358e8e26a802",
+      "sourceIdx": 2140,
+      "sourceBytes": 1831674,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 13,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "06-gulub-stapka-6.webp": {
+      "sourceName": "Red Wine Braised Game Pot-11.webp",
+      "sourceSha256": "dc56bd072049787cb81dfd8100e987277d332f66d140b87f518a3c5695739ebb",
+      "sourceIdx": 2144,
+      "sourceBytes": 1816212,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 13,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
     "07-gulub-stapka-7.webp": {
       "sourceName": "Gourmet Duck with Beet and Blackberry-10.webp",
       "sourceSha256": "f625f1f3ee93a4dabb8785eb5252e5a096c85b45dbb393f07f6be1cfec09f976",
       "sourceIdx": 2143,
       "sourceBytes": 1730442,
       "sourceSize": "1536x1024",
-      "role": "hero",
+      "role": "step",
+      "batch": 13,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "08-dopalnitelen-1.webp": {
+      "sourceName": "Rustic Game Birds and Woodland Ingredients-1.webp",
+      "sourceSha256": "e1d944ebdb36a0d680248f60cbdd466bdec177c470e6dabcc925cf6e6c602f11",
+      "sourceIdx": 2134,
+      "sourceBytes": 2082776,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 13,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "09-dopalnitelen-2.webp": {
+      "sourceName": "Luxurious Game Bird Mise en Place-6.webp",
+      "sourceSha256": "143668cc6c2a6e54158789e63f9bf58611cf1d47efe1d687418f6aab6437b4de",
+      "sourceIdx": 2139,
+      "sourceBytes": 1938708,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 13,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "10-dopalnitelen-3.webp": {
+      "sourceName": "Cinematic Game Bird Feast in Copper and Cast Iron-8.webp",
+      "sourceSha256": "25641458ab3c4dbcd769f9b20c8f69a7ce4af8da430305d487f0aedc800c7eac",
+      "sourceIdx": 2141,
+      "sourceBytes": 1923226,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 13,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "11-dopalnitelen-4.webp": {
+      "sourceName": "Ruby Beetroot Culinary Composition-9.webp",
+      "sourceSha256": "a3d0aef888a52c3b06c1e76c880a080d03422e8901a1f895aff9173062e2911f",
+      "sourceIdx": 2142,
+      "sourceBytes": 1876260,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 13,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "12-dopalnitelen-5.webp": {
+      "sourceName": "Gourmet Venison Jus with Autumn Garnishes-12.webp",
+      "sourceSha256": "632034c4fd0e688d02b1936eee49d6e8d02a234ae39d46f055e8d410be9d2374",
+      "sourceIdx": 2145,
+      "sourceBytes": 1881090,
+      "sourceSize": "1536x1024",
+      "role": "extra",
       "batch": 13,
       "confidence": "MEDIUM",
       "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
@@ -15,10 +136,5 @@
   },
   "generatedHash": "8422f1d0d72fb30eda2ee4afdbe84a6d63d7f4b24f089ddcdfa81304c99d9399",
   "excludedSources": [],
-  "importedAt": "2026-11-21T06:46:55.732Z",
-  "singleHeroPolicy": {
-    "date": "2026-11-25",
-    "kept": "07-gulub-stapka-7.webp",
-    "removed": 11
-  }
+  "importedAt": "2026-11-21T06:46:55.732Z"
 }

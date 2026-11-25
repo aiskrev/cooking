@@ -28,9 +28,45 @@ servings: 4
 difficulty: Intermediate
 cover: 06-fuagra-stapka-6.webp
 photos:
+  01-fuagra-stapka-1.webp:
+    alt: "Seared foie gras with figs: Mise en place: foie gras, figs, hazelnuts, brioche and wine"
+    caption: "Mise en place: foie gras, figs, hazelnuts, brioche and wine"
+    session: Photo session 3 (November 2026)
+  02-fuagra-stapka-2.webp:
+    alt: "Seared foie gras with figs: Slicing foie gras and brioche on the board"
+    caption: Slicing foie gras and brioche on the board
+    session: Photo session 3 (November 2026)
+  03-fuagra-stapka-3.webp:
+    alt: "Seared foie gras with figs: Cutting crisp bread and preparing figs"
+    caption: Cutting crisp bread and preparing figs
+    session: Photo session 3 (November 2026)
+  04-fuagra-stapka-4.webp:
+    alt: "Seared foie gras with figs: Foie gras seared in a pan with butter"
+    caption: Foie gras seared in a pan with butter
+    session: Photo session 3 (November 2026)
+  05-fuagra-stapka-5.webp:
+    alt: "Seared foie gras with figs: Sauternes sauce in a copper pot"
+    caption: Sauternes sauce in a copper pot
+    session: Photo session 3 (November 2026)
   06-fuagra-stapka-6.webp:
     alt: "Seared foie gras with figs: A plated dish of foie gras with crisp tuile"
     caption: A plated dish of foie gras with crisp tuile
+    session: Photo session 3 (November 2026)
+  07-fuagra-stapka-7.webp:
+    alt: "Seared foie gras with figs: Seared foie gras with hazelnuts and figs – close-up"
+    caption: Seared foie gras with hazelnuts and figs – close-up
+    session: Photo session 3 (November 2026)
+  08-dopalnitelen-1.webp:
+    alt: "Seared foie gras with figs: Mise en place with bread, foie gras and figs"
+    caption: Mise en place with bread, foie gras and figs
+    session: Photo session 3 (November 2026)
+  09-dopalnitelen-2.webp:
+    alt: "Seared foie gras with figs: Mise en place with bread, wine and hazelnuts"
+    caption: Mise en place with bread, wine and hazelnuts
+    session: Photo session 3 (November 2026)
+  10-gotovo-yastie.webp:
+    alt: "Seared foie gras with figs: Seared foie gras with figs, hazelnuts and a crisp tuile"
+    caption: Seared foie gras with figs, hazelnuts and a crisp tuile
     session: Photo session 3 (November 2026)
 mise:
   - Keep the foie gras chilled until the moment of searing.
@@ -93,21 +129,28 @@ ingredients:
 steps:
   - title: Lay out the ingredients
     text: Lay out the foie gras, figs, hazelnuts, brioche and wine.
+    photo: 01-fuagra-stapka-1.webp
   - title: Prepare the counter
     text: Slice the foie gras and the brioche.
+    photo: 02-fuagra-stapka-2.webp
   - title: Prepare the garnishes
     text: Cut the figs and prepare the hazelnuts.
+    photo: 03-fuagra-stapka-3.webp
   - title: Sear the foie gras
     text: In a dry hot pan, sear the foie gras for 30–40 seconds on each side, adding butter and thyme.
     cue: A golden crust and a creamy centre.
     time: 2
+    photo: 04-fuagra-stapka-4.webp
   - title: Make the sauce
     text: Sweat the shallot, add the Sauternes, honey and jus; reduce and whisk in the cold butter.
     time: 6
+    photo: 05-fuagra-stapka-5.webp
   - title: Plate
     text: Put down the brioche, the foie gras on it, then figs, hazelnuts and sauce.
+    photo: 06-fuagra-stapka-6.webp
   - title: Finish
     text: Sprinkle with hazelnuts and serve immediately.
+    photo: 07-fuagra-stapka-7.webp
 tips:
   - Do not overcrowd the pan.
   - The sauce can be ready in advance.
@@ -128,7 +171,7 @@ allergens:
   - Sulphites (wine)
 translation:
   status: published
-  sourceHash: "392be2b8cd8d9090"
+  sourceHash: "4e777368660d08a4"
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-21

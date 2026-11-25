@@ -1,13 +1,68 @@
 {
   "slug": "svinski-dzholan-s-biira",
   "photos": {
+    "01-svinski-stapka-1.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 05_15_09 PM.png",
+      "sourceSha256": "49f935a711d14f1e597ff3c919a425982ed2e5c9e0fdb7b9cdc83a693c9d2975",
+      "sourceIdx": 170,
+      "sourceBytes": 2865457,
+      "sourceSize": "1254x1254",
+      "role": "step",
+      "batch": 62,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-svinski-stapka-2.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 05_15_16 PM.png",
+      "sourceSha256": "4585b0a7412b4db462588d048293f7d39e3b28e3269e73bb9d612fbb1b6695f4",
+      "sourceIdx": 171,
+      "sourceBytes": 2671406,
+      "sourceSize": "1254x1254",
+      "role": "step",
+      "batch": 63,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "03-svinski-stapka-3.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 05_15_19 PM.png",
+      "sourceSha256": "90282fe915b12417823001f0c0e28fc53d7b8e29272faf526fb7498d2e413b82",
+      "sourceIdx": 172,
+      "sourceBytes": 2645564,
+      "sourceSize": "1254x1254",
+      "role": "step",
+      "batch": 63,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "04-svinski-stapka-4.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 05_15_22 PM.png",
+      "sourceSha256": "beaa1467ac5ed66d45f73b5c0f1c7a09c9734aac6816b7f0ec350f14adb91c00",
+      "sourceIdx": 173,
+      "sourceBytes": 2695385,
+      "sourceSize": "1254x1254",
+      "role": "step",
+      "batch": 63,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
     "05-svinski-stapka-5.webp": {
       "sourceName": "ChatGPT Image Jun 10, 2026, 05_15_26 PM.png",
       "sourceSha256": "452d4402e77e27c4255f763306c172ae984ddf653b2b6dc4d3e71397f898bfb9",
       "sourceIdx": 174,
       "sourceBytes": 2554463,
       "sourceSize": "1254x1254",
-      "role": "hero",
+      "role": "step",
+      "batch": 63,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "06-svinski-stapka-6.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 05_15_31 PM.png",
+      "sourceSha256": "9cfe3d1fc9d62029b5c690f8b952b8d82ecffa5856a18f326cec9db047097973",
+      "sourceIdx": 175,
+      "sourceBytes": 2558523,
+      "sourceSize": "1254x1254",
+      "role": "step",
       "batch": 63,
       "confidence": "HIGH",
       "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
@@ -15,10 +70,5 @@
   },
   "generatedHash": "fb1dbd384302240f120a95a00cf144da0403082d7c500ca7d840faad89cba804",
   "excludedSources": [],
-  "importedAt": "2026-11-19T05:27:51.537Z",
-  "singleHeroPolicy": {
-    "date": "2026-11-25",
-    "kept": "05-svinski-stapka-5.webp",
-    "removed": 5
-  }
+  "importedAt": "2026-11-19T05:27:51.537Z"
 }

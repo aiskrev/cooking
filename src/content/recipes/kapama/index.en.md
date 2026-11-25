@@ -25,6 +25,33 @@ servings: 6
 difficulty: Intermediate
 cover: 10-gotovo-yastie.webp
 photos:
+  01-kapama-stapka-1.webp:
+    alt: "Kapama: The ingredients for the kapama"
+    caption: The ingredients for the kapama
+  02-kapama-stapka-2.webp:
+    alt: "Kapama: Cutting the meats"
+    caption: Cutting the meats
+  03-kapama-stapka-3.webp:
+    alt: "Kapama: Cutting the sauerkraut"
+    caption: Cutting the sauerkraut
+  04-kapama-stapka-4.webp:
+    alt: "Kapama: The cabbage with paprika on the bottom of the guvech"
+    caption: The cabbage with paprika on the bottom of the guvech
+  05-kapama-stapka-5.webp:
+    alt: "Kapama: The meats arranged on the cabbage"
+    caption: The meats arranged on the cabbage
+  06-kapama-stapka-6.webp:
+    alt: "Kapama: Pouring in the red wine"
+    caption: Pouring in the red wine
+  07-kapama-stapka-7.webp:
+    alt: "Kapama: The guvech in the oven"
+    caption: The guvech in the oven
+  08-kapama-stapka-8.webp:
+    alt: "Kapama: Steam escaping when the lid is lifted"
+    caption: Steam escaping when the lid is lifted
+  09-kapama-stapka-9.webp:
+    alt: "Kapama: The kapama, served on a plate"
+    caption: The kapama, served on a plate
   10-gotovo-yastie.webp:
     alt: "Kapama: The finished dish"
     caption: The finished dish
@@ -88,30 +115,39 @@ ingredients:
 steps:
   - title: Prepare the ingredients
     text: Lay out the meats, the sausage, the sauerkraut, the rice, the onion, the spices and the wine.
+    photo: 01-kapama-stapka-1.webp
   - title: Cut the meats
     text: Cut the pork into large pieces and season it and the chicken drumsticks with a tablespoon of paprika and a little black pepper. Salt only very lightly.
     why: Large pieces withstand the long roasting without falling into shreds.
+    photo: 02-kapama-stapka-2.webp
   - title: Cut the cabbage
     text: Cut the sauerkraut into thin strips and the onion finely. Mix them in a bowl with the rice, the remaining paprika and two spoonfuls of lard.
     why: Rice distributed in the cabbage absorbs the liquid and cooks evenly.
+    photo: 03-kapama-stapka-3.webp
   - title: Add the first layer
     text: Grease the guvech with the remaining lard. Spread about two thirds of the cabbage with the rice on the bottom and tuck the bay leaves and the black peppercorns into it.
     why: A thick layer of cabbage underneath protects the meat from burning on the bottom.
+    photo: 04-kapama-stapka-4.webp
   - title: Arrange the meats
     text: Arrange the pork, the chicken drumsticks and the sausage on top and fill the gaps with the remaining cabbage.
+    photo: 05-kapama-stapka-5.webp
   - title: Pour in the wine
     text: Mix the wine with the cabbage brine and pour the liquid in along the sides of the pot. Cover the top with a few whole cabbage leaves.
     cue: The liquid comes up to about half the height of the contents.
     avoid: Do not fill the guvech to the brim – the rice swells and the kapama overflows.
+    photo: 06-kapama-stapka-6.webp
   - title: Bake under a lid
     text: Close the guvech, put it into a cold oven and switch it on to 180 °C. Bake for about 2 hours 40 minutes without opening.
     cue: The meat comes away from the bone with a fork, and the rice is completely tender.
     time: 160
+    photo: 07-kapama-stapka-7.webp
   - title: Open and check
     text: Take the guvech out onto a wooden board and carefully lift the lid from the far side. If there is a lot of liquid, return it without the lid for 10–15 minutes.
     avoid: Do not put a hot clay pot onto a cold or wet surface – it may crack.
+    photo: 08-kapama-stapka-8.webp
   - title: Serve
     text: "Let the kapama settle for 15 minutes and serve: cabbage with rice, a piece of pork, chicken and a chunk of sausage on each plate."
+    photo: 09-kapama-stapka-9.webp
 tips:
   - A new clay pot is soaked in water for a few hours before the first use.
   - Kapama is tastier the next day, when the flavours have merged.
@@ -131,7 +167,7 @@ allergens:
   - Sulphites (wine)
 translation:
   status: published
-  sourceHash: "4a2bf5b6f8ad98bc"
+  sourceHash: ea88cd7522428795
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-20

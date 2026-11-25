@@ -28,6 +28,42 @@ servings: 4
 difficulty: Advanced
 cover: 10-gotovo-yastie.webp
 photos:
+  01-gardi-stapka-1.webp:
+    alt: "Guinea fowl breast with leg confit: Mise en place: guinea fowl, savoy cabbage, pears, chestnuts, butter and stock"
+    caption: "Mise en place: guinea fowl, savoy cabbage, pears, chestnuts, butter and stock"
+    session: Photo session 4 (November 2026)
+  02-gardi-stapka-2.webp:
+    alt: "Guinea fowl breast with leg confit: Jointed guinea fowl: breasts, legs and bones on the board"
+    caption: "Jointed guinea fowl: breasts, legs and bones on the board"
+    session: Photo session 4 (November 2026)
+  03-gardi-stapka-3.webp:
+    alt: "Guinea fowl breast with leg confit: Seasoning the breasts and the legs that go into the confit"
+    caption: Seasoning the breasts and the legs that go into the confit
+    session: Photo session 4 (November 2026)
+  04-gardi-stapka-5.webp:
+    alt: "Guinea fowl breast with leg confit: Dark roast-bone sauce in a copper pan"
+    caption: Dark roast-bone sauce in a copper pan
+    session: Photo session 4 (November 2026)
+  05-gardi-stapka-6.webp:
+    alt: "Guinea fowl breast with leg confit: Chestnuts, savoy cabbage and pears in butter, prepared as garnish"
+    caption: Chestnuts, savoy cabbage and pears in butter, prepared as garnish
+    session: Photo session 4 (November 2026)
+  06-gardi-stapka-7.webp:
+    alt: "Guinea fowl breast with leg confit: Guinea fowl breasts in a cast-iron pan with butter and thyme"
+    caption: Guinea fowl breasts in a cast-iron pan with butter and thyme
+    session: Photo session 4 (November 2026)
+  07-gardi-stapka-8.webp:
+    alt: "Guinea fowl breast with leg confit: Basting the crisp skin with foaming butter"
+    caption: Basting the crisp skin with foaming butter
+    session: Photo session 4 (November 2026)
+  08-gardi-stapka-9.webp:
+    alt: "Guinea fowl breast with leg confit: Plating the guinea fowl and garnishes on a dark plate"
+    caption: Plating the guinea fowl and garnishes on a dark plate
+    session: Photo session 4 (November 2026)
+  09-dopalnitelen-1.webp:
+    alt: "Guinea fowl breast with leg confit: Close-up of the breast, confit and chestnut purée"
+    caption: Close-up of the breast, confit and chestnut purée
+    session: Photo session 4 (November 2026)
   10-gotovo-yastie.webp:
     alt: "Guinea fowl breast with leg confit: Sliced guinea fowl breast with jus, leg confit, pear, savoy cabbage and chestnut purée"
     caption: Sliced guinea fowl breast with jus, leg confit, pear, savoy cabbage and chestnut purée
@@ -138,12 +174,15 @@ ingredients:
 steps:
   - title: Lay out the ingredients
     text: Arrange the guinea fowl, chestnuts, pears, cabbage, butter, the fat for the confit and the herbs.
+    photo: 01-gardi-stapka-1.webp
   - title: Joint the bird
     text: Remove the breasts with the skin on and the legs. Chop the bones for the sauce.
+    photo: 02-gardi-stapka-2.webp
   - title: Cook the confit
     text: Rinse the salt off the legs and pat dry. Cover them with the melted fat and cook in the oven at 120 °C for about 2 hours 30 minutes.
     cue: The meat comes away from the bone at a light touch.
     time: 150
+    photo: 03-gardi-stapka-3.webp
   - title: Press the confit
     text: Pull the meat from the bones and shred it. Mix with the shallot, parsley and 2 tbsp of the fat. Pack tightly into the mould, cover and press under a weight in the refrigerator overnight. Cut into cylinders or rectangles.
     why: Pressing binds the meat so it sears as one piece.
@@ -151,18 +190,23 @@ steps:
     text: Roast the bones until dark, sweat the shallot, deglaze with the wine, add the stock and reduce to a thick, glossy sauce. Strain.
     cue: The sauce coats the spoon.
     time: 45
+    photo: 04-gardi-stapka-5.webp
   - title: Prepare the garnishes
     text: Simmer the chestnuts in the milk and blend with the butter to a smooth purée. Cut the pears into eighths and cook them in the butter. Blanch the cabbage and toss it in butter just before serving.
     time: 20
+    photo: 05-gardi-stapka-6.webp
   - title: Sear the breasts
     text: Place the breasts skin-side down in a cold pan with the oil, bring up the heat and sear for 6–7 minutes. Turn and add the butter and thyme. Sear the confit on both sides until crisp as well.
     cue: The skin is crisp and the core reads 64–65 °C.
     time: 10
+    photo: 06-gardi-stapka-7.webp
   - title: Baste with butter
     text: Tilt the pan and baste the breasts with the foaming butter for the last 2 minutes. Rest for 5 minutes.
     time: 5
+    photo: 07-gardi-stapka-8.webp
   - title: Plate
     text: Slice the breasts. Place the confit with the skin crackling and a sprig of thyme on top. Add the breast, chestnut purée, pear and cabbage and pour over the sauce.
+    photo: 08-gardi-stapka-9.webp
 tips:
   - Strain the confit fat and reuse it for potatoes.
   - The confit presses best while the meat is still warm.
@@ -182,7 +226,7 @@ allergens:
   - Sulphites (wine)
 translation:
   status: published
-  sourceHash: "b8a5a68e0e655a71"
+  sourceHash: f1ca79b1d20accbe
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-21

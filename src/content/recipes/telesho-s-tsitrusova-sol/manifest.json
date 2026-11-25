@@ -1,13 +1,68 @@
 {
   "slug": "telesho-s-tsitrusova-sol",
   "photos": {
+    "01-telesho-stapka-1.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 07_49_53 PM.png",
+      "sourceSha256": "5fa6b76756b8e5d5ccb2626bcc0def5dd4237fe272600aab1043788a7730afd1",
+      "sourceIdx": 265,
+      "sourceBytes": 2403551,
+      "sourceSize": "1254x1254",
+      "role": "step",
+      "batch": 89,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-telesho-stapka-2.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 07_49_58 PM.png",
+      "sourceSha256": "30de478bfe86d0d3433fc79d0ed44d11052608ae3f6cfcf1698bd0f58e1379ae",
+      "sourceIdx": 266,
+      "sourceBytes": 1893291,
+      "sourceSize": "1254x1254",
+      "role": "step",
+      "batch": 89,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "03-telesho-stapka-3.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 07_50_01 PM.png",
+      "sourceSha256": "160831b418fa57c7863575381998f0e41fb36774ac5ef2e4a616721c9a791b48",
+      "sourceIdx": 267,
+      "sourceBytes": 2169835,
+      "sourceSize": "1254x1254",
+      "role": "step",
+      "batch": 89,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "04-telesho-stapka-4.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 07_50_04 PM.png",
+      "sourceSha256": "894bcf1dd710c081264974bb1a001c1a1dd2f03105372a6e86aab1a2a418e0b1",
+      "sourceIdx": 268,
+      "sourceBytes": 1908668,
+      "sourceSize": "1254x1254",
+      "role": "step",
+      "batch": 89,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "05-telesho-stapka-5.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 07_50_07 PM.png",
+      "sourceSha256": "88d9de4418b10671020595d4b8de2e983fac7991b36ce4c9c32bab2407de84a5",
+      "sourceIdx": 269,
+      "sourceBytes": 1995618,
+      "sourceSize": "1254x1254",
+      "role": "step",
+      "batch": 89,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
     "06-telesho-stapka-6.webp": {
       "sourceName": "ChatGPT Image Jun 10, 2026, 07_50_09 PM.png",
       "sourceSha256": "b1808dfaf64119619f1ec922b658199d93ede29e52ea0805eca3715bd3232c6d",
       "sourceIdx": 270,
       "sourceBytes": 2180409,
       "sourceSize": "1254x1254",
-      "role": "hero",
+      "role": "step",
       "batch": 89,
       "confidence": "HIGH",
       "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
@@ -15,10 +70,5 @@
   },
   "generatedHash": "d315fb48408e8df1dcbc11c6a2a3b169f4b4fdf872de4dcec5c05db23712e31b",
   "excludedSources": [],
-  "importedAt": "2026-11-19T05:27:54.277Z",
-  "singleHeroPolicy": {
-    "date": "2026-11-25",
-    "kept": "06-telesho-stapka-6.webp",
-    "removed": 5
-  }
+  "importedAt": "2026-11-19T05:27:54.277Z"
 }

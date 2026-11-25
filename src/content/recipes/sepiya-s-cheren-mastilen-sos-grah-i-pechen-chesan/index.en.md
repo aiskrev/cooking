@@ -29,9 +29,37 @@ servings: 4
 difficulty: Intermediate
 cover: 06-sepiya-stapka-7.webp
 photos:
+  01-sepiya-stapka-1.webp:
+    alt: "Cuttlefish with black ink: The ingredients: cuttlefish, ink, green peas, lemon and roasted garlic"
+    caption: "The ingredients: cuttlefish, ink, green peas, lemon and roasted garlic"
+    session: Photo session 5 (November 2026)
+  02-sepiya-stapka-2.webp:
+    alt: "Cuttlefish with black ink: Scoring the cuttlefish mantle in a diamond pattern"
+    caption: Scoring the cuttlefish mantle in a diamond pattern
+    session: Photo session 5 (November 2026)
+  03-sepiya-stapka-3.webp:
+    alt: "Cuttlefish with black ink: Pouring the ink into the sauce"
+    caption: Pouring the ink into the sauce
+    session: Photo session 5 (November 2026)
+  04-sepiya-stapka-5.webp:
+    alt: "Cuttlefish with black ink: Searing the cuttlefish quickly over high heat"
+    caption: Searing the cuttlefish quickly over high heat
+    session: Photo session 5 (November 2026)
+  05-sepiya-stapka-6.webp:
+    alt: "Cuttlefish with black ink: Adding the peas to the tentacles in the ink sauce"
+    caption: Adding the peas to the tentacles in the ink sauce
+    session: Photo session 5 (November 2026)
   06-sepiya-stapka-7.webp:
     alt: "Cuttlefish with black ink: The finished plate: cuttlefish on black sauce with peas, garlic and lemon"
     caption: "The finished plate: cuttlefish on black sauce with peas, garlic and lemon"
+    session: Photo session 5 (November 2026)
+  07-dopalnitelen-1.webp:
+    alt: "Cuttlefish with black ink: Serving variation: cuttlefish with a crisp ink tuile"
+    caption: "Serving variation: cuttlefish with a crisp ink tuile"
+    session: Photo session 5 (November 2026)
+  08-dopalnitelen-2.webp:
+    alt: "Cuttlefish with black ink: Serving variation with charred lemon and peas"
+    caption: Serving variation with charred lemon and peas
     session: Photo session 5 (November 2026)
 mise:
   - Roast the garlic bulb in foil at 180 °C for 40 minutes, until soft.
@@ -120,13 +148,16 @@ ingredients:
 steps:
   - title: Lay out the ingredients
     text: Lay out the cuttlefish, ink, peas, lemon, garlic and the remaining ingredients.
+    photo: 01-sepiya-stapka-1.webp
   - title: Clean and cut the cuttlefish
     text: Separate the tentacles from the mantle. Open the mantle out flat. With a sharp knife, make shallow diagonal cuts in a diamond grid on the inside, without cutting through. Cut the mantle into rectangles.
     why: The scoring stops the cuttlefish from curling and makes it more tender.
+    photo: 02-sepiya-stapka-2.webp
   - title: Make the ink sauce
     text: Sweat the shallot and garlic in the olive oil, pour in the wine and reduce by half. Add the stock and the ink and simmer for 10–12 minutes. Strain and whisk in the cold butter off the heat.
     cue: The sauce is deep black, glossy and coats the spoon.
     time: 15
+    photo: 03-sepiya-stapka-3.webp
   - title: Blanch the peas
     text: Cook the peas in salted water for 2–3 minutes, chill them in iced water and warm them with the butter and mint just before serving.
     cue: The peas are bright green and sweet.
@@ -136,10 +167,13 @@ steps:
     cue: The mantle is white and lightly golden at the edges, and the scoring has opened up.
     avoid: Do not crowd the pan – the cuttlefish will release water and turn rubbery.
     time: 3
+    photo: 04-sepiya-stapka-5.webp
   - title: Bring it together
     text: Return the tentacles to a little of the sauce for a minute, add the peas and stir.
+    photo: 05-sepiya-stapka-6.webp
   - title: Plate
     text: Pour the ink sauce into the centre of a shallow bowl. Top with the cuttlefish pieces and tentacles, the peas, cloves of roasted garlic and half a charred lemon. Garnish with microgreens.
+    photo: 06-sepiya-stapka-7.webp
 tips:
   - A large cuttlefish becomes more tender after 30 minutes in the freezer before cutting.
   - Ink is sold in sachets at fishmongers – 4 g is enough for 2 portions of sauce.
@@ -161,7 +195,7 @@ allergens:
   - Sulphites (wine)
 translation:
   status: published
-  sourceHash: "35f52ac83f6abda9"
+  sourceHash: 21b1fce79aacf779
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-24

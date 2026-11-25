@@ -1,13 +1,79 @@
 {
   "slug": "gris-s-vishni-i-karamel",
   "photos": {
+    "01-gris-stapka-1.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 12_21_45 PM.png",
+      "sourceSha256": "3bbd165c8d5efb66275bb5884f0c9f8f477f1ba6da133aec3bd81487eb7688ba",
+      "sourceIdx": 39,
+      "sourceBytes": 2739681,
+      "sourceSize": "1254x1254",
+      "role": "step",
+      "batch": 21,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-gris-stapka-2.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 12_21_53 PM.png",
+      "sourceSha256": "5e7b98fd10a9a6399075ccfe07fc6499b00a688a499777a004311d4785ee3204",
+      "sourceIdx": 40,
+      "sourceBytes": 2117193,
+      "sourceSize": "1254x1254",
+      "role": "step",
+      "batch": 22,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "03-gris-stapka-3.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 12_21_56 PM.png",
+      "sourceSha256": "ea72a33f400325bff5c2f781a1161797fc2f9cc253bd1cb387edaa96359111ba",
+      "sourceIdx": 41,
+      "sourceBytes": 2338768,
+      "sourceSize": "1254x1254",
+      "role": "step",
+      "batch": 22,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "04-gris-stapka-4.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 12_21_59 PM.png",
+      "sourceSha256": "899dcc7a1175d0f0c88bf8041915b558b63c0ba4cf580fe9a2eb78d57a9b0416",
+      "sourceIdx": 42,
+      "sourceBytes": 2188245,
+      "sourceSize": "1254x1254",
+      "role": "step",
+      "batch": 22,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "05-gris-stapka-5.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 12_22_11 PM.png",
+      "sourceSha256": "8c062dbe72efde5930558fd229d3caa259cf16b0f76ee1c20e3896e229e4b06b",
+      "sourceIdx": 44,
+      "sourceBytes": 2101888,
+      "sourceSize": "1254x1254",
+      "role": "step",
+      "batch": 23,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "06-gris-stapka-6.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 12_22_16 PM.png",
+      "sourceSha256": "7055e441de39da289602ecae8b78f777121ed278ad811d8fd70bdcc476b86476",
+      "sourceIdx": 45,
+      "sourceBytes": 2338521,
+      "sourceSize": "1254x1254",
+      "role": "step",
+      "batch": 23,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
     "07-gris-stapka-7.webp": {
       "sourceName": "ChatGPT Image Jun 10, 2026, 12_22_20 PM.png",
       "sourceSha256": "ed0a4c39ff6da483d2df718e0560512807a62b4a72a0989c796e5c2166668ed5",
       "sourceIdx": 46,
       "sourceBytes": 2287290,
       "sourceSize": "1254x1254",
-      "role": "hero",
+      "role": "step",
       "batch": 23,
       "confidence": "HIGH",
       "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
@@ -15,10 +81,5 @@
   },
   "generatedHash": "55a9986fa423012491f03923f46b03f743e0f7c35221c1844c592518f829525a",
   "excludedSources": [],
-  "importedAt": "2026-11-19T05:27:53.597Z",
-  "singleHeroPolicy": {
-    "date": "2026-11-25",
-    "kept": "07-gris-stapka-7.webp",
-    "removed": 6
-  }
+  "importedAt": "2026-11-19T05:27:53.597Z"
 }

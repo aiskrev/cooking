@@ -1,6 +1,105 @@
 {
   "slug": "pecheno-tselinovo-kori-s-gubi-i-tryufel",
   "photos": {
+    "01-pecheno-stapka-1.webp": {
+      "sourceName": "ChatGPT Image Nov 20, 2026, 02_44_12 PM-2.webp",
+      "sourceSha256": "3a62c30c9d19ab12ca828f3c30c9a4deef4ee3f8de8e033e2d66611a99477911",
+      "sourceIdx": 2230,
+      "sourceBytes": 1895014,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 21,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-pecheno-stapka-2.webp": {
+      "sourceName": "ChatGPT Image Nov 20, 2026, 02_44_14 PM-3.webp",
+      "sourceSha256": "715fe23a84dc1f2d0a1508201a051868d663998847b7abfbe2d9b6138f6b050a",
+      "sourceIdx": 2231,
+      "sourceBytes": 1618080,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 21,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "03-pecheno-stapka-3.webp": {
+      "sourceName": "ChatGPT Image Nov 20, 2026, 02_44_15 PM-4.webp",
+      "sourceSha256": "6c49855610085c1dc6be56a8b495e9cea2b2fa6d505409071bff65d617e13196",
+      "sourceIdx": 2232,
+      "sourceBytes": 1790052,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 21,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "04-pecheno-stapka-4.webp": {
+      "sourceName": "ChatGPT Image Nov 20, 2026, 02_44_16 PM-5.webp",
+      "sourceSha256": "90b83e7e5ee971b2cb1c0487338088aa78c88a83ca93a0f1491a34f8e8f2cf4b",
+      "sourceIdx": 2233,
+      "sourceBytes": 1784718,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 21,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "05-pecheno-stapka-5.webp": {
+      "sourceName": "ChatGPT Image Nov 20, 2026, 02_44_17 PM-6.webp",
+      "sourceSha256": "bb03a03e5356f80fde1823c0de6d76d0304a18507526420db7c454e8237affcd",
+      "sourceIdx": 2234,
+      "sourceBytes": 1686112,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 21,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "06-pecheno-stapka-6.webp": {
+      "sourceName": "ChatGPT Image Nov 20, 2026, 02_44_18 PM-7.webp",
+      "sourceSha256": "95f78e4960f10060e6b13cab91b2df40729dc8acba255c25b109b241150ec7f0",
+      "sourceIdx": 2235,
+      "sourceBytes": 1706884,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 21,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "07-pecheno-stapka-7.webp": {
+      "sourceName": "ChatGPT Image Nov 20, 2026, 02_44_20 PM-8.webp",
+      "sourceSha256": "783282e2297738f5953293f35a4755e47b10755b248fb2e2a72b92cba434a522",
+      "sourceIdx": 2236,
+      "sourceBytes": 1634746,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 21,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "08-dopalnitelen-1.webp": {
+      "sourceName": "ChatGPT Image Nov 20, 2026, 02_44_11 PM-1.webp",
+      "sourceSha256": "13f922306931906524280c87b936feaddabeedc8b6cb06ead6b69b7772de8029",
+      "sourceIdx": 2229,
+      "sourceBytes": 2045712,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 21,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "09-dopalnitelen-2.webp": {
+      "sourceName": "ChatGPT Image Nov 20, 2026, 02_44_23 PM-10.webp",
+      "sourceSha256": "326dd735599ba42fb85f8ac0d2a0bdb38162bde06fd4b7e81b30718d014840cf",
+      "sourceIdx": 2238,
+      "sourceBytes": 1885040,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 21,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
     "10-gotovo-yastie.webp": {
       "sourceName": "ChatGPT Image Nov 20, 2026, 02_44_21 PM-9.webp",
       "sourceSha256": "da30eb262e3ab7c6cc979c5f478f4cf8e8f8bb908af2bdf337a31ad7db8f4061",
@@ -15,10 +114,5 @@
   },
   "generatedHash": "e91060cb3c85ff468d757de04678150c1730bc35f79c74a86600bbab5ac0df1c",
   "excludedSources": [],
-  "importedAt": "2026-11-21T06:46:55.992Z",
-  "singleHeroPolicy": {
-    "date": "2026-11-25",
-    "kept": "10-gotovo-yastie.webp",
-    "removed": 9
-  }
+  "importedAt": "2026-11-21T06:46:55.992Z"
 }

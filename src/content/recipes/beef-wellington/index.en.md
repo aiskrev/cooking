@@ -25,6 +25,27 @@ servings: 4
 difficulty: Advanced
 cover: 08-beef-stapka-8.webp
 photos:
+  01-beef-stapka-1.webp:
+    alt: "Beef Wellington: The ingredients for the Beef Wellington"
+    caption: The ingredients for the Beef Wellington
+  02-beef-stapka-2.webp:
+    alt: "Beef Wellington: Searing the fillet"
+    caption: Searing the fillet
+  03-beef-stapka-3.webp:
+    alt: "Beef Wellington: The mushroom duxelles in the pan"
+    caption: The mushroom duxelles in the pan
+  04-beef-stapka-4.webp:
+    alt: "Beef Wellington: Wrapping in prosciutto and duxelles"
+    caption: Wrapping in prosciutto and duxelles
+  05-beef-stapka-5.webp:
+    alt: "Beef Wellington: The roll wrapped in pastry"
+    caption: The roll wrapped in pastry
+  06-beef-stapka-6.webp:
+    alt: "Beef Wellington: The baked roll"
+    caption: The baked roll
+  07-beef-stapka-7.webp:
+    alt: "Beef Wellington: The sliced roll on the board"
+    caption: The sliced roll on the board
   08-beef-stapka-8.webp:
     alt: "Beef Wellington: The Beef Wellington, served with the wine sauce"
     caption: The Beef Wellington, served with the wine sauce
@@ -112,33 +133,41 @@ ingredients:
 steps:
   - title: Prepare the ingredients
     text: Lay out the fillet, the mushrooms, the shallots, the prosciutto, the mustard and the pastry.
+    photo: 01-beef-stapka-1.webp
   - title: Sear the fillet
     text: Season the fillet with salt and sprinkle it with black pepper on all sides. Sear it in a very hot pan with the oil, about a minute on each side, including both ends. Remove the string, brush it with the mustard while it is still warm and let it cool completely.
     why: The crust gives flavour, and complete cooling stops the meat from cooking further and melting the pastry.
     cue: The fillet is dark brown outside and completely raw inside.
     time: 8
+    photo: 02-beef-stapka-2.webp
   - title: Cook the duxelles
     text: Melt the butter in a wide frying pan and add the mushrooms, the shallots, the garlic, the thyme and the salt. Cook over medium to high heat for 15–20 minutes, stirring, until all the liquid has evaporated. Spread the duxelles on a plate to cool.
     cue: The pan is dry, the mushrooms sizzle, and the duxelles gathers into a dark paste.
     avoid: Wet duxelles is the most common cause of raw, soggy pastry underneath.
     time: 20
+    photo: 03-beef-stapka-3.webp
   - title: Wrap in prosciutto
     text: Cover the work surface with two layers of cling film. Lay the slices of prosciutto like roof tiles, spread them evenly with the duxelles and place the fillet at one end. Using the film, roll it into a tight roll, twist the ends like a sweet wrapper and leave it for 30 minutes in the refrigerator.
     why: Cold, the roll firms up and can then be wrapped in the pastry without effort.
+    photo: 04-beef-stapka-4.webp
   - title: Wrap in pastry
     text: Roll out the pastry on a lightly floured surface into a rectangle about 3 mm thick. Remove the cling film from the roll, place it on the pastry and wrap it, overlapping the edges by about 2 cm. Put it on baking paper seam side down, brush with the yolk beaten with the milk and score a pattern with the back of a knife. Chill for another 15 minutes.
     avoid: Do not pierce the pastry with the knife – juice will leak through the holes.
+    photo: 05-beef-stapka-5.webp
   - title: Bake
     text: Brush once more with egg yolk, sprinkle with coarse salt and bake for 30–35 minutes at 200 °C.
     cue: The pastry is dark golden and crisp, and the thermometer in the middle shows 48–50 °C.
     time: 35
+    photo: 06-beef-stapka-6.webp
   - title: Rest and slice
     text: Leave the roll on a rack for 10–15 minutes. Slice it with a serrated knife into slices about 3 cm thick.
     why: Without a rest the juice runs out at the first cut and soaks the pastry.
     time: 12
+    photo: 07-beef-stapka-7.webp
   - title: Make the sauce and serve
     text: While the meat rests, sweat the finely chopped shallot in the pan used for the fillet, pour in the wine and reduce it by half. Add the stock and boil until the sauce coats the back of a spoon. Take it off the heat, whisk in the cold butter and strain. Serve two slices on a pool of sauce.
     cue: The sauce is glossy and slightly syrupy.
+    photo: 08-beef-stapka-8.webp
 tips:
   - Everything up to the egg-yolk glaze can be prepared the day before; the roll waits in the refrigerator, wrapped in cling film.
   - If the mushrooms release a lot of water, squeeze the finished duxelles in a clean cloth.
@@ -161,7 +190,7 @@ allergens:
   - Sulphites (wine)
 translation:
   status: published
-  sourceHash: "b5ba30e617c041b3"
+  sourceHash: b56b8e8db2de4880
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-20

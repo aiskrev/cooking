@@ -29,6 +29,42 @@ servings: 4
 difficulty: Intermediate
 cover: 10-gotovo-yastie.webp
 photos:
+  01-leko-stapka-1.webp:
+    alt: "Lightly cured salmon: The ingredients: salmon fillet, beetroot, sorrel, cream and salmon roe"
+    caption: "The ingredients: salmon fillet, beetroot, sorrel, cream and salmon roe"
+    session: Photo session 5 (November 2026)
+  02-leko-stapka-2.webp:
+    alt: "Lightly cured salmon: Mise en place: the cure, salmon on a tray, beetroot, cream and roe"
+    caption: "Mise en place: the cure, salmon on a tray, beetroot, cream and roe"
+    session: Photo session 5 (November 2026)
+  03-leko-stapka-3.webp:
+    alt: "Lightly cured salmon: Sprinkling the cure over the fillet"
+    caption: Sprinkling the cure over the fillet
+    session: Photo session 5 (November 2026)
+  04-leko-stapka-4.webp:
+    alt: "Lightly cured salmon: Roasted beetroot, slices and a velvety beetroot purée"
+    caption: Roasted beetroot, slices and a velvety beetroot purée
+    session: Photo session 5 (November 2026)
+  05-leko-stapka-5.webp:
+    alt: "Lightly cured salmon: Piping the cultured cream, and the salmon roe"
+    caption: Piping the cultured cream, and the salmon roe
+    session: Photo session 5 (November 2026)
+  06-leko-stapka-6.webp:
+    alt: "Lightly cured salmon: The base: beetroot purée, beetroot wedges and cream"
+    caption: "The base: beetroot purée, beetroot wedges and cream"
+    session: Photo session 5 (November 2026)
+  07-leko-stapka-7.webp:
+    alt: "Lightly cured salmon: Placing the salmon on the base"
+    caption: Placing the salmon on the base
+    session: Photo session 5 (November 2026)
+  08-leko-stapka-8.webp:
+    alt: "Lightly cured salmon: Salmon roe, cream and sorrel on the fish"
+    caption: Salmon roe, cream and sorrel on the fish
+    session: Photo session 5 (November 2026)
+  09-dopalnitelen-1.webp:
+    alt: "Lightly cured salmon: Close-up of the salmon with roe, cream and beetroot"
+    caption: Close-up of the salmon with roe, cream and beetroot
+    session: Photo session 5 (November 2026)
   10-gotovo-yastie.webp:
     alt: "Lightly cured salmon: The finished plate: lightly cured salmon with beetroot, sorrel, cream and roe"
     caption: "The finished plate: lightly cured salmon with beetroot, sorrel, cream and roe"
@@ -133,27 +169,35 @@ ingredients:
 steps:
   - title: Lay out the ingredients
     text: Lay out the salmon, beetroot, sorrel, cream, roe, salt, sugar and lemon. Check that the fish is suitable for eating without cooking.
+    photo: 01-leko-stapka-1.webp
   - title: Prepare the mise en place
     text: Mix the salt, sugar, lemon zest, dill and pepper. Get ready a tray with a rack, small bowls for the cream and roe, and a piping bag.
+    photo: 02-leko-stapka-2.webp
   - title: Cure the salmon
     text: Remove the pin bones with tweezers. Sprinkle the cure evenly over the flesh side, cover and leave in the refrigerator for 3–4 hours. Rinse quickly under cold water and pat thoroughly dry.
     why: A short cure firms the flesh and seasons it without drying the fish out.
     cue: The flesh is firmer and slightly glossy, and the edges have darkened.
     avoid: Do not leave it longer than 4 hours – the salmon becomes hard and salty.
     time: 240
+    photo: 03-leko-stapka-3.webp
   - title: Roast the beetroot and make the purée
     text: Wrap the beetroots individually in foil with olive oil and salt and roast for 50–60 minutes at 190 °C. Peel while still warm. Cut two into slices and wedges and dress them with the vinegar. Blend the other two with the juice, vinegar and butter until smooth and pass through a sieve.
     cue: A knife goes into the beetroot without resistance; the purée is glossy and thick.
     time: 60
+    photo: 04-leko-stapka-4.webp
   - title: Sour the cream
     text: Stir the cream with the lemon juice and salt and spoon it into a piping bag with a plain nozzle. Chill.
+    photo: 05-leko-stapka-5.webp
   - title: Start plating
     text: Swipe a spoonful of beetroot purée across a cold plate in one quick movement. Add two beetroot wedges and a dot of cream.
+    photo: 06-leko-stapka-6.webp
   - title: Slice and place the salmon
     text: Cut the salmon into thick rectangles of about 60 g with a sharp knife, in a single stroke. Place one piece in the centre of each plate.
     cue: The cut is smooth and shiny.
+    photo: 07-leko-stapka-7.webp
   - title: Finish
     text: Spoon a little roe over the salmon, add more dots of cream, sorrel leaves and dill. Finish with a few drops of olive oil.
+    photo: 08-leko-stapka-8.webp
 tips:
   - If you buy fresh salmon, freeze it yourself at −20 °C for at least 24 hours and thaw it slowly in the refrigerator.
   - Sorrel loses its colour and sourness quickly – pick the leaves just before serving.
@@ -174,7 +218,7 @@ allergens:
   - Milk and dairy
 translation:
   status: published
-  sourceHash: "6d109c16759aee2b"
+  sourceHash: d400199ddee92953
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-24

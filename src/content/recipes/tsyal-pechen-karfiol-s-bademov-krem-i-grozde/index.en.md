@@ -30,6 +30,42 @@ servings: 4
 difficulty: Intermediate
 cover: 10-gotovo-yastie.webp
 photos:
+  01-tsyal-stapka-1.webp:
+    alt: "Whole roasted cauliflower: The ingredients: cauliflower, grapes, almonds, spices and curry leaves"
+    caption: "The ingredients: cauliflower, grapes, almonds, spices and curry leaves"
+    session: Photo session 6 (November 2026)
+  02-tsyal-stapka-2.webp:
+    alt: "Whole roasted cauliflower: Mise en place: spices, almonds, grapes and shallots"
+    caption: "Mise en place: spices, almonds, grapes and shallots"
+    session: Photo session 6 (November 2026)
+  03-tsyal-stapka-3.webp:
+    alt: "Whole roasted cauliflower: Trimming the cauliflower"
+    caption: Trimming the cauliflower
+    session: Photo session 6 (November 2026)
+  04-tsyal-stapka-4.webp:
+    alt: "Whole roasted cauliflower: Basting the cauliflower with spiced butter in a copper pan"
+    caption: Basting the cauliflower with spiced butter in a copper pan
+    session: Photo session 6 (November 2026)
+  05-tsyal-stapka-5.webp:
+    alt: "Whole roasted cauliflower: The almond cream"
+    caption: The almond cream
+    session: Photo session 6 (November 2026)
+  06-tsyal-stapka-6.webp:
+    alt: "Whole roasted cauliflower: Straining the sauce, with herb oil alongside"
+    caption: Straining the sauce, with herb oil alongside
+    session: Photo session 6 (November 2026)
+  07-tsyal-stapka-7.webp:
+    alt: "Whole roasted cauliflower: Spooning over the sauce while plating"
+    caption: Spooning over the sauce while plating
+    session: Photo session 6 (November 2026)
+  08-dopalnitelen-1.webp:
+    alt: "Whole roasted cauliflower: Close-up of the roasted cauliflower"
+    caption: Close-up of the roasted cauliflower
+    session: Photo session 6 (November 2026)
+  09-dopalnitelen-2.webp:
+    alt: "Whole roasted cauliflower: The cauliflower with grapes, almonds and sauce"
+    caption: The cauliflower with grapes, almonds and sauce
+    session: Photo session 6 (November 2026)
   10-gotovo-yastie.webp:
     alt: "Whole roasted cauliflower: The finished dish: roasted cauliflower on almond cream with grapes"
     caption: "The finished dish: roasted cauliflower on almond cream with grapes"
@@ -141,22 +177,29 @@ ingredients:
 steps:
   - title: Lay out the ingredients
     text: Lay out the cauliflower, almonds, grapes, spices, curry leaves, shallots, garlic and butter.
+    photo: 01-tsyal-stapka-1.webp
   - title: Prepare the mise en place
     text: Mix the crushed spices with the turmeric and paprika. Peel the shallots and garlic, and set out the almonds and grapes in small bowls.
+    photo: 02-tsyal-stapka-2.webp
   - title: Prepare the cauliflower
     text: Trim the stalk so the cauliflower stands steady. Blanch it whole in salted water for 6–8 minutes and dry it well.
     why: Blanching cooks the core, while the oven takes care of the crust.
     time: 8
+    photo: 03-tsyal-stapka-3.webp
   - title: Roast with spiced butter
     text: Melt the butter with the olive oil and spices. Brush the cauliflower generously, put it in a roasting pan with the shallots and garlic, and roast at 200 °C for 50–60 minutes, basting with the butter every 10 minutes.
     cue: The surface is deep golden, charred in places, and a knife slides in freely.
     time: 55
+    photo: 04-tsyal-stapka-4.webp
   - title: Make the almond cream
     text: Drain the almonds and blend them with the warm stock, lemon juice and salt on high speed for 3–4 minutes until smooth.
+    photo: 05-tsyal-stapka-5.webp
   - title: Make the sauce and curry leaves
     text: Brown the butter, add the stock and the fat from the pan, simmer for 2 minutes and strain; season with lemon. Fry the curry leaves in hot oil for 10 seconds and drain.
+    photo: 06-tsyal-stapka-6.webp
   - title: Plate
     text: Spread almond cream on the plate, set the cauliflower on top and spoon over the sauce. Finish with the grapes, toasted flaked almonds, curry leaves and drops of herb oil.
+    photo: 07-tsyal-stapka-7.webp
 tips:
   - Smaller cauliflowers (400–500 g each) roast faster and make a single portion.
   - Curry leaves are sold in Asian grocers; dried ones lack the aroma.
@@ -177,7 +220,7 @@ allergens:
   - Milk and dairy
 translation:
   status: published
-  sourceHash: "4f1a63a54fd3dd93"
+  sourceHash: 19b65cff640aa33a
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-25

@@ -29,6 +29,26 @@ servings: 4
 difficulty: Easy
 cover: 06-gotovo-yastie.webp
 photos:
+  01-dopalnitelen-1.webp:
+    alt: "Grilled salmon: Grilled salmon with potatoes and roasted vegetables"
+    caption: Grilled salmon with potatoes and roasted vegetables
+    session: Photo session 6 (November 2026)
+  02-dopalnitelen-2.webp:
+    alt: "Grilled salmon: Salmon with potatoes and asparagus"
+    caption: Salmon with potatoes and asparagus
+    session: Photo session 6 (November 2026)
+  03-dopalnitelen-3.webp:
+    alt: "Grilled salmon: Salmon with asparagus, potatoes and tomatoes"
+    caption: Salmon with asparagus, potatoes and tomatoes
+    session: Photo session 6 (November 2026)
+  04-dopalnitelen-4.webp:
+    alt: "Grilled salmon: Grilled salmon with roasted peppers and courgettes"
+    caption: Grilled salmon with roasted peppers and courgettes
+    session: Photo session 6 (November 2026)
+  05-dopalnitelen-5.webp:
+    alt: "Grilled salmon: Close-up: salmon with dill and potatoes"
+    caption: "Close-up: salmon with dill and potatoes"
+    session: Photo session 6 (November 2026)
   06-gotovo-yastie.webp:
     alt: "Grilled salmon: Grilled salmon with roast potatoes, asparagus and cherry tomatoes"
     caption: Grilled salmon with roast potatoes, asparagus and cherry tomatoes
@@ -143,7 +163,7 @@ allergens:
   - Milk and dairy
 translation:
   status: published
-  sourceHash: "63daa2a25025639a"
+  sourceHash: de4e02abfde68855
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-25

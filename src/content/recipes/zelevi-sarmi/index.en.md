@@ -23,9 +23,28 @@ servings: 6
 difficulty: Advanced
 cover: 06-zelevi-stapka-6.webp
 photos:
+  01-zelevi-stapka-1.webp:
+    alt: "Sauerkraut sarmi: The ingredients for the cabbage sarmi"
+    caption: The ingredients for the cabbage sarmi
+  02-zelevi-stapka-2.webp:
+    alt: "Sauerkraut sarmi: Preparing the filling"
+    caption: Preparing the filling
+  03-zelevi-stapka-3.webp:
+    alt: "Sauerkraut sarmi: Rolling a cabbage sarma"
+    caption: Rolling a cabbage sarma
+  04-zelevi-stapka-4.webp:
+    alt: "Sauerkraut sarmi: Pouring the liquid into the clay pot"
+    caption: Pouring the liquid into the clay pot
+  05-zelevi-stapka-5.webp:
+    alt: "Sauerkraut sarmi: Whisking the liaison"
+    caption: Whisking the liaison
   06-zelevi-stapka-6.webp:
     alt: "Sauerkraut sarmi: The finished cabbage sarmi with the liaison"
     caption: The finished cabbage sarmi with the liaison
+  07-dopalnitelen-1.webp:
+    alt: "Sauerkraut sarmi: Cabbage sarmi with liaison and paprika (second photo session)"
+    caption: Cabbage sarmi with liaison and paprika (second photo session)
+    session: Photo session 2 (May–June 2026)
 mise:
   - Separate the leaves of the sauerkraut head and cut out the thick rib of each. If they are very salty, soak them for 15 minutes in cold water.
   - Chop the onion finely and wash the rice.
@@ -89,23 +108,29 @@ ingredients:
 steps:
   - title: Prepare the ingredients
     text: Lay out the cabbage leaves, the mince, the rice, the onion, the spices, the eggs and the yogurt.
+    photo: 01-zelevi-stapka-1.webp
   - title: Fry the filling
     text: Sweat the onion in the oil for 3–4 minutes, add the mince and fry it until it is in crumbs. Add the rice, the savory and the black pepper and stir for 2 minutes. Off the heat add the paprika, pour in 100 ml of the water and let the rice absorb it.
     cue: The filling is juicy, but there is no free liquid in the pan.
     time: 10
+    photo: 02-zelevi-stapka-2.webp
   - title: Roll the sarmi
     text: Put a spoonful of filling at the base of each leaf, fold the sides inwards and roll tightly.
     why: The folded sides close the sarma and the filling does not leak out during cooking.
+    photo: 03-zelevi-stapka-3.webp
   - title: Arrange and cover with liquid
     text: Line the bottom of the clay pot with the chopped cabbage. Arrange the sarmi snugly, seam down, and pour in the remaining hot water. Close, put it into a cold oven, switch it on to 180 °C and cook for about an hour and a half.
     cue: The leaves are soft and can be cut with a fork, and the rice is completely cooked.
     time: 90
+    photo: 04-zelevi-stapka-4.webp
   - title: Prepare the liaison
     text: Whisk the eggs with the yogurt and the flour. Add, spoonful by spoonful, about 200 ml of the hot sauce from the sarmi. Warm it over low heat, stirring, until the liaison thickens.
     why: Warming it gradually protects the eggs from curdling.
     avoid: The liaison must not boil.
+    photo: 05-zelevi-stapka-5.webp
   - title: Serve
     text: Let the sarmi rest for 15 minutes. Put three or four on a plate, pour the liaison over them and sprinkle with a pinch of paprika.
+    photo: 06-zelevi-stapka-6.webp
 tips:
   - The sarmi are packed tightly – this way they do not unroll and need no weight.
   - The next day they are even tastier.
@@ -124,7 +149,7 @@ allergens:
   - Milk and dairy
 translation:
   status: published
-  sourceHash: "18e288ae9de3fc6e"
+  sourceHash: 23b4552f5e0e4fd1
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-20

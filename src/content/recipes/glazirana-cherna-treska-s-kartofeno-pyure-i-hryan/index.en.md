@@ -29,9 +29,45 @@ servings: 4
 difficulty: Intermediate
 cover: 08-glazirana-stapka-8.webp
 photos:
+  01-glazirana-stapka-1.webp:
+    alt: "Glazed black cod with potato purée: Mise en place: fillet, potatoes, apple, horseradish, caviar and green oil"
+    caption: "Mise en place: fillet, potatoes, apple, horseradish, caviar and green oil"
+    session: Photo session 3 (November 2026)
+  02-glazirana-stapka-2.webp:
+    alt: "Glazed black cod with potato purée: Prepared small plates with purée, apple and horseradish"
+    caption: Prepared small plates with purée, apple and horseradish
+    session: Photo session 3 (November 2026)
+  03-glazirana-stapka-3.webp:
+    alt: "Glazed black cod with potato purée: The chef slicing a glazed fillet on the board"
+    caption: The chef slicing a glazed fillet on the board
+    session: Photo session 3 (November 2026)
+  04-glazirana-stapka-4.webp:
+    alt: "Glazed black cod with potato purée: Sieving potato purée through a sieve"
+    caption: Sieving potato purée through a sieve
+    session: Photo session 3 (November 2026)
+  05-glazirana-stapka-5.webp:
+    alt: "Glazed black cod with potato purée: Apple, cut into thin strips"
+    caption: Apple, cut into thin strips
+    session: Photo session 3 (November 2026)
+  06-glazirana-stapka-6.webp:
+    alt: "Glazed black cod with potato purée: Green dill oil, poured through a strainer"
+    caption: Green dill oil, poured through a strainer
+    session: Photo session 3 (November 2026)
+  07-glazirana-stapka-7.webp:
+    alt: "Glazed black cod with potato purée: Glazed fish – close-up"
+    caption: Glazed fish – close-up
+    session: Photo session 3 (November 2026)
   08-glazirana-stapka-8.webp:
     alt: "Glazed black cod with potato purée: A plated dish with fish, purée and caviar"
     caption: A plated dish with fish, purée and caviar
+    session: Photo session 3 (November 2026)
+  09-dopalnitelen-1.webp:
+    alt: "Glazed black cod with potato purée: The chef decorating the fish with tweezers"
+    caption: The chef decorating the fish with tweezers
+    session: Photo session 3 (November 2026)
+  10-dopalnitelen-2.webp:
+    alt: "Glazed black cod with potato purée: Fish with apple and purée on a plate"
+    caption: Fish with apple and purée on a plate
     session: Photo session 3 (November 2026)
 mise:
   - Mix the soy sauce, mirin, honey and sugar into a glaze and brush it over the fish. Leave for 2 hours.
@@ -110,22 +146,30 @@ ingredients:
 steps:
   - title: Lay out the ingredients
     text: Lay out the fish, potatoes, apple, horseradish, dill and caviar.
+    photo: 01-glazirana-stapka-1.webp
   - title: Prepare the components
     text: Prepare the purée and the garnishes.
+    photo: 02-glazirana-stapka-2.webp
   - title: Cut the fish
     text: Cut the fillets into even pieces.
+    photo: 03-glazirana-stapka-3.webp
   - title: Make the purée
     text: Boil the potatoes, blend with the milk and butter and pass through a sieve.
     time: 20
+    photo: 04-glazirana-stapka-4.webp
   - title: Cut the apple
     text: Cut the apple into thin strips with a mandoline.
+    photo: 05-glazirana-stapka-5.webp
   - title: Make the green oil
     text: Blend the dill with the olive oil and lemon; strain.
+    photo: 06-glazirana-stapka-6.webp
   - title: Roast the fish
     text: Roast the fish at 200 °C, brushing it with the glaze, for 8–10 minutes.
     time: 10
+    photo: 07-glazirana-stapka-7.webp
   - title: Plate
     text: Put down the purée, fish, apple, horseradish, caviar and green oil.
+    photo: 08-glazirana-stapka-8.webp
 tips:
   - Brush the glaze on thinly.
   - The purée is sieved for a silky texture.
@@ -145,7 +189,7 @@ allergens:
   - Sulphites (wine)
 translation:
   status: published
-  sourceHash: "4962b837b4d5d77e"
+  sourceHash: bf322016516e1edd
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-21

@@ -283,7 +283,7 @@ export const en: Record<UiKey, string> = {
   'story.title': 'Photo story',
   'story.aria': 'Photo story: {title}',
   'story.roledesc': 'carousel',
-  'story.count': '{n} photos in cooking order',
+  'story.count': '{n} photos – the finished dish and the cooking steps',
   'story.prev': 'Previous photos',
   'story.next': 'Next photos',
   'story.track': 'Photos – scroll horizontally or use the arrow keys',

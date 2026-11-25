@@ -23,9 +23,44 @@ servings: 4
 difficulty: Easy
 cover: 06-yahniya-stapka-6.webp
 photos:
+  01-yahniya-stapka-1.webp:
+    alt: "Green bean yahniya: The ingredients for the green bean yahniya"
+    caption: The ingredients for the green bean yahniya
+  02-yahniya-stapka-2.webp:
+    alt: "Green bean yahniya: The sweated onion and carrot"
+    caption: The sweated onion and carrot
+  03-yahniya-stapka-3.webp:
+    alt: "Green bean yahniya: Adding the green beans"
+    caption: Adding the green beans
+  04-yahniya-stapka-4.webp:
+    alt: "Green bean yahniya: The tomatoes and the spices in the pot"
+    caption: The tomatoes and the spices in the pot
+  05-yahniya-stapka-5.webp:
+    alt: "Green bean yahniya: The finished yahniya"
+    caption: The finished yahniya
   06-yahniya-stapka-6.webp:
     alt: "Green bean yahniya: The yahniya, served with salad and wine"
     caption: The yahniya, served with salad and wine
+  07-dopalnitelen-1.webp:
+    alt: "Green bean yahniya: Green bean yahniya in a clay bowl (second photo session)"
+    caption: Green bean yahniya in a clay bowl (second photo session)
+    session: Photo session 2 (May–June 2026)
+  08-dopalnitelen-2.webp:
+    alt: "Green bean yahniya: The yahniya on a table with salads and cheese (second photo session)"
+    caption: The yahniya on a table with salads and cheese (second photo session)
+    session: Photo session 2 (May–June 2026)
+  09-dopalnitelen-3.webp:
+    alt: "Green bean yahniya: The ingredients: green beans, tomatoes, carrot, onion, dill and garlic (second photo session)"
+    caption: "The ingredients: green beans, tomatoes, carrot, onion, dill and garlic (second photo session)"
+    session: Photo session 2 (May–June 2026)
+  10-dopalnitelen-4.webp:
+    alt: "Green bean yahniya: Serving the yahniya with a wooden spoon (second photo session)"
+    caption: Serving the yahniya with a wooden spoon (second photo session)
+    session: Photo session 2 (May–June 2026)
+  11-dopalnitelen-5.webp:
+    alt: "Green bean yahniya: The yahniya up close – beans, carrot and dill (second photo session)"
+    caption: The yahniya up close – beans, carrot and dill (second photo session)
+    session: Photo session 2 (May–June 2026)
 mise:
   - Trim the ends of the pods, pull off the strings and snap the beans into pieces of 3–4 cm.
   - Cut the onion and the carrot and grate the tomatoes.
@@ -75,22 +110,28 @@ ingredients:
 steps:
   - title: Prepare the ingredients
     text: Lay out the green beans, the onion, the carrot, the tomatoes, the garlic, the dill and the spices.
+    photo: 01-yahniya-stapka-1.webp
   - title: Sweat the onion and the carrot
     text: Heat the oil in a pot and sweat the onion and the carrot over medium heat for 5–6 minutes.
     cue: The onion is translucent and begins to colour at the edges.
     time: 6
+    photo: 02-yahniya-stapka-2.webp
   - title: Add the beans
     text: Add the beans, stir them in the fat for 2 minutes, pour in the hot water and add salt. Cover and cook for 25 minutes over low heat.
     time: 25
+    photo: 03-yahniya-stapka-3.webp
   - title: Add the tomatoes
     text: When the beans are tender, add the tomatoes, the garlic and the paprika.
     why: The acidity of the tomatoes slows the softening of the beans, so they go in after them.
+    photo: 04-yahniya-stapka-4.webp
   - title: Let it simmer
     text: Cook for another 10–15 minutes without a lid, until the sauce thickens. Take it off the heat and stir in half of the dill.
     cue: The beans are soft and the sauce coats them.
     time: 15
+    photo: 05-yahniya-stapka-5.webp
   - title: Serve
     text: Let the yahniya rest for 10 minutes, sprinkle with the remaining dill and serve with bread.
+    photo: 06-yahniya-stapka-6.webp
 tips:
   - Frozen green beans go in directly, without thawing, and cook 5 minutes less.
   - The cool yahniya is excellent the next day.
@@ -106,7 +147,7 @@ storage: Up to 3 days in the refrigerator, in a closed container.
 allergens: []
 translation:
   status: published
-  sourceHash: "d70416a4a8bf9e19"
+  sourceHash: b0f9ed4f18666fb1
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-20

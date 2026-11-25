@@ -1,13 +1,68 @@
 {
   "slug": "kartofeno-pyure-po-frenski",
   "photos": {
+    "01-kartofeno-stapka-1.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 07_41_35 PM.png",
+      "sourceSha256": "767313f4802db1f00d2a4b690dc7b636e095d8c605ab3fb228f557c4061b0b27",
+      "sourceIdx": 253,
+      "sourceBytes": 2070806,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 85,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-kartofeno-stapka-2.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 07_41_40 PM.png",
+      "sourceSha256": "7e6efb3d50667528de8859ef4aafd3814816d72b6cf0cc46be8aea3ba4cfc927",
+      "sourceIdx": 254,
+      "sourceBytes": 1755717,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 85,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "03-kartofeno-stapka-3.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 07_41_43 PM.png",
+      "sourceSha256": "e59064ba22c0beedda53479c9121074dfc2263e1072a6503afc2faa8c9d8bb87",
+      "sourceIdx": 255,
+      "sourceBytes": 1835221,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 85,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "04-kartofeno-stapka-4.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 07_41_46 PM.png",
+      "sourceSha256": "096be7bd832e0d83eddaaac04ab9ef5e5aed7c0d72ab493c8a28674c132da4aa",
+      "sourceIdx": 256,
+      "sourceBytes": 1967542,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 85,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "05-kartofeno-stapka-5.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 07_41_48 PM.png",
+      "sourceSha256": "27985095d9110820a937f6a718eead3d8161ad000ccbf5d081d256760702d75f",
+      "sourceIdx": 257,
+      "sourceBytes": 1836860,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 85,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
     "06-kartofeno-stapka-6.webp": {
       "sourceName": "ChatGPT Image Jun 10, 2026, 07_42_28 PM.png",
       "sourceSha256": "9de15621c16092573326597416c1a72b176b66762f19b67d26336686887dd495",
       "sourceIdx": 258,
       "sourceBytes": 1554966,
       "sourceSize": "1122x1402",
-      "role": "hero",
+      "role": "step",
       "batch": 86,
       "confidence": "HIGH",
       "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
@@ -15,10 +70,5 @@
   },
   "generatedHash": "8b6f552554eeed6e231942ab462e2a053946664bdbbfaa877b07552461f3bf46",
   "excludedSources": [],
-  "importedAt": "2026-11-19T05:27:54.164Z",
-  "singleHeroPolicy": {
-    "date": "2026-11-25",
-    "kept": "06-kartofeno-stapka-6.webp",
-    "removed": 5
-  }
+  "importedAt": "2026-11-19T05:27:54.164Z"
 }

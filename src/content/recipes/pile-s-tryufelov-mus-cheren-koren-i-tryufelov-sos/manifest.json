@@ -1,6 +1,149 @@
 {
   "slug": "pile-s-tryufelov-mus-cheren-koren-i-tryufelov-sos",
   "photos": {
+    "01-pile-stapka-1.webp": {
+      "sourceName": "Gourmet Chicken with Truffles and Salsify-1.webp",
+      "sourceSha256": "53410d4e0ab483436f0ec9b9f16d73bb0be724f9b15c801be8f4646b055aa557",
+      "sourceIdx": 3021,
+      "sourceBytes": 1792572,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 2,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-pile-stapka-2.webp": {
+      "sourceName": "Gourmet Chicken and Truffle Mise en Place-6.webp",
+      "sourceSha256": "07f4a9ca3209694c43504288a7c6739f8e5b24f6ade0bcc69f00cfce07da7f02",
+      "sourceIdx": 3026,
+      "sourceBytes": 1963866,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 2,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "03-pile-stapka-3.webp": {
+      "sourceName": "Gourmet Truffle-Stuffed Chicken Mise en Place-7.webp",
+      "sourceSha256": "d1f4dc33a6ea09244e51c351b70fa1e6e17697cb369703195b8fdc61b45261c5",
+      "sourceIdx": 3027,
+      "sourceBytes": 1808978,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 2,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "04-pile-stapka-4.webp": {
+      "sourceName": "Truffle Poultry Plating in a Professional Kitchen-8.webp",
+      "sourceSha256": "b8db130d0274f6acb1c7d7bae23b6c90e11926b7e47641f3f9c30f678d398625",
+      "sourceIdx": 3028,
+      "sourceBytes": 1821094,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 2,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "05-pile-stapka-5.webp": {
+      "sourceName": "Luxurious Truffle Sauce Preparation-14.webp",
+      "sourceSha256": "265e6ca4f90639f8fc550b037fd2863111f12bc8990acac94be283b3885ce713",
+      "sourceIdx": 3034,
+      "sourceBytes": 1749896,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 2,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "06-pile-stapka-6.webp": {
+      "sourceName": "Golden Salsify Butter Sauté-11.webp",
+      "sourceSha256": "1a3da8f5afbe2cb77b9057c2a22867bb36d566a0c3dc56c6ffd6ee573fdd0492",
+      "sourceIdx": 3031,
+      "sourceBytes": 1803216,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 2,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "07-pile-stapka-7.webp": {
+      "sourceName": "Caramelized Salsify in Browned Butter-12.webp",
+      "sourceSha256": "c3dd4a78dbe367e03665377cd6acaa5df5835a053d9123439a931882eea2c539",
+      "sourceIdx": 3032,
+      "sourceBytes": 1636870,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 2,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "08-pile-stapka-8.webp": {
+      "sourceName": "Butter-Basted Crispy Skillet Chicken-10.webp",
+      "sourceSha256": "c24b27e1161a041d85d28189b1dc9133ce7f5571299ca8b0c36235da66f6f6c4",
+      "sourceIdx": 3030,
+      "sourceBytes": 1848640,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 2,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "09-pile-stapka-9.webp": {
+      "sourceName": "Whisking Herb-Butter Sauce in Copper Pan-13.webp",
+      "sourceSha256": "93ba19600f4c570b4f996e38a89be3051b617fdafda687742386081f3572e40c",
+      "sourceIdx": 3033,
+      "sourceBytes": 1576852,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 2,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "10-dopalnitelen-1.webp": {
+      "sourceName": "Gourmet Chicken with Truffles Mise-en-Place-2.webp",
+      "sourceSha256": "0d77b5dc7d4bcd7f58f6e8f4db0c6fed4a2addb69e8381c79af66878eaee31f6",
+      "sourceIdx": 3022,
+      "sourceBytes": 1921476,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 2,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "11-dopalnitelen-2.webp": {
+      "sourceName": "Gourmet Truffled Chicken Ingredients-3.webp",
+      "sourceSha256": "3002ff27f0b31f10c6a050de24fcf857777a629f7f297cc299d9df30435cceef",
+      "sourceIdx": 3023,
+      "sourceBytes": 1910772,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 2,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "12-dopalnitelen-3.webp": {
+      "sourceName": "Gourmet Chicken and Truffle Mise en Scène-4.webp",
+      "sourceSha256": "a8d71e30a644c12ffcd8007d7812ad1328f0e02cbcab0c842c027845984a2430",
+      "sourceIdx": 3024,
+      "sourceBytes": 1842368,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 2,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "13-dopalnitelen-4.webp": {
+      "sourceName": "Gourmet Chicken and Truffle Mise en Place-5.webp",
+      "sourceSha256": "d4fb1805c926ddced719aff10b819a4cc0bdf9ac727c3aa4dab9dea27fb1daa3",
+      "sourceIdx": 3025,
+      "sourceBytes": 1719246,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 2,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
     "14-gotovo-yastie.webp": {
       "sourceName": "Butter-Basted Crispy Chicken Skillet-9.webp",
       "sourceSha256": "b9f49d11a621f8e7153d36d6d29d176c0ef67a67e7d8d43686cc5c1a669b0c52",
@@ -15,10 +158,5 @@
   },
   "generatedHash": "7329a102ed2c8406126bbdcf74b74a96f3c242dce59ca1c83d01ec80eaf1a302",
   "excludedSources": [],
-  "importedAt": "2026-11-21T12:35:35.518Z",
-  "singleHeroPolicy": {
-    "date": "2026-11-25",
-    "kept": "14-gotovo-yastie.webp",
-    "removed": 13
-  }
+  "importedAt": "2026-11-21T12:35:35.518Z"
 }

@@ -27,9 +27,45 @@ servings: 4
 difficulty: Intermediate
 cover: 07-morski-stapka-7.webp
 photos:
+  01-morski-stapka-1.webp:
+    alt: "Seared scallops with cauliflower: Mise en place: scallops, cauliflower, lemon, hazelnuts and caviar"
+    caption: "Mise en place: scallops, cauliflower, lemon, hazelnuts and caviar"
+    session: Photo session 3 (November 2026)
+  02-morski-stapka-2.webp:
+    alt: "Seared scallops with cauliflower: Cauliflower, scallops, hazelnuts and butter on the board"
+    caption: Cauliflower, scallops, hazelnuts and butter on the board
+    session: Photo session 3 (November 2026)
+  03-morski-stapka-3.webp:
+    alt: "Seared scallops with cauliflower: Seasoning the scallops with salt and lemon zest"
+    caption: Seasoning the scallops with salt and lemon zest
+    session: Photo session 3 (November 2026)
+  04-morski-stapka-4.webp:
+    alt: "Seared scallops with cauliflower: Scallops seared with cauliflower in a pan"
+    caption: Scallops seared with cauliflower in a pan
+    session: Photo session 3 (November 2026)
+  05-morski-stapka-5.webp:
+    alt: "Seared scallops with cauliflower: Cauliflower purée, roasted cauliflower and hazelnuts"
+    caption: Cauliflower purée, roasted cauliflower and hazelnuts
+    session: Photo session 3 (November 2026)
+  06-morski-stapka-6.webp:
+    alt: "Seared scallops with cauliflower: Brown butter with lemon in a copper pot"
+    caption: Brown butter with lemon in a copper pot
+    session: Photo session 3 (November 2026)
   07-morski-stapka-7.webp:
     alt: "Seared scallops with cauliflower: A plated dish of scallops, cauliflower and caviar"
     caption: A plated dish of scallops, cauliflower and caviar
+    session: Photo session 3 (November 2026)
+  08-dopalnitelen-1.webp:
+    alt: "Seared scallops with cauliflower: Close-up of a seared scallop"
+    caption: Close-up of a seared scallop
+    session: Photo session 3 (November 2026)
+  09-dopalnitelen-2.webp:
+    alt: "Seared scallops with cauliflower: Close-up of a scallop on purée with hazelnuts"
+    caption: Close-up of a scallop on purée with hazelnuts
+    session: Photo session 3 (November 2026)
+  10-gotovo-yastie.webp:
+    alt: "Seared scallops with cauliflower: Seared scallops with cauliflower, hazelnuts and caviar on a white plate"
+    caption: Seared scallops with cauliflower, hazelnuts and caviar on a white plate
     session: Photo session 3 (November 2026)
 mise:
   - Pat the scallops dry with kitchen paper and leave them at room temperature for 10 minutes.
@@ -96,22 +132,29 @@ ingredients:
 steps:
   - title: Lay out the ingredients
     text: Lay out the scallops, cauliflower, lemon, hazelnuts and caviar.
+    photo: 01-morski-stapka-1.webp
   - title: Prepare the components
     text: Cut the cauliflower into florets and drain the scallops.
+    photo: 02-morski-stapka-2.webp
   - title: Season the scallops
     text: Pat the scallops dry and season them with salt and lemon zest.
+    photo: 03-morski-stapka-3.webp
   - title: Sear the scallops
     text: In a very hot pan with the oil, sear the scallops for 1.5–2 minutes on each side, add the butter and baste.
     cue: A golden caramel crust and a translucent centre.
     time: 4
+    photo: 04-morski-stapka-4.webp
   - title: Make the purée
     text: Cook the cauliflower in the milk until tender and blend with the butter until silky smooth.
     time: 15
+    photo: 05-morski-stapka-5.webp
   - title: Make the brown butter
     text: Melt the butter over low heat until it darkens and smells of hazelnuts; add the lemon juice.
     time: 5
+    photo: 06-morski-stapka-6.webp
   - title: Plate
     text: Put down the purée, the scallops, roasted cauliflower, hazelnuts, caviar and brown butter.
+    photo: 07-morski-stapka-7.webp
 tips:
   - The scallops must be "dry" – moisture prevents the crust.
   - Do not overcrowd the pan.
@@ -130,7 +173,7 @@ allergens:
   - Tree nuts
 translation:
   status: published
-  sourceHash: "be442f46d7592c47"
+  sourceHash: "8e3016fdf8d38e87"
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-21

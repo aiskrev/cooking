@@ -28,6 +28,42 @@ servings: 4
 difficulty: Intermediate
 cover: 10-gotovo-yastie.webp
 photos:
+  01-morski-stapka-1.webp:
+    alt: "Dover sole with brown shrimp and capers: Mise en place: whole Dover sole, potatoes, shrimp, capers, butter and lemon"
+    caption: "Mise en place: whole Dover sole, potatoes, shrimp, capers, butter and lemon"
+    session: Photo session 4 (November 2026)
+  02-morski-stapka-2.webp:
+    alt: "Dover sole with brown shrimp and capers: Skinning and filleting the Dover sole"
+    caption: Skinning and filleting the Dover sole
+    session: Photo session 4 (November 2026)
+  03-morski-stapka-3.webp:
+    alt: "Dover sole with brown shrimp and capers: Dover sole fillets, shrimp, capers and butter ready for cooking"
+    caption: Dover sole fillets, shrimp, capers and butter ready for cooking
+    session: Photo session 4 (November 2026)
+  04-morski-stapka-4.webp:
+    alt: "Dover sole with brown shrimp and capers: New potatoes in butter and shrimp in pans"
+    caption: New potatoes in butter and shrimp in pans
+    session: Photo session 4 (November 2026)
+  05-morski-stapka-5.webp:
+    alt: "Dover sole with brown shrimp and capers: Basting the Dover sole fillets with butter in the pan"
+    caption: Basting the Dover sole fillets with butter in the pan
+    session: Photo session 4 (November 2026)
+  06-morski-stapka-6.webp:
+    alt: "Dover sole with brown shrimp and capers: Brown butter with lemon zest and capers in a copper pan"
+    caption: Brown butter with lemon zest and capers in a copper pan
+    session: Photo session 4 (November 2026)
+  07-morski-stapka-7.webp:
+    alt: "Dover sole with brown shrimp and capers: Plating the Dover sole with tweezers"
+    caption: Plating the Dover sole with tweezers
+    session: Photo session 4 (November 2026)
+  08-dopalnitelen-1.webp:
+    alt: "Dover sole with brown shrimp and capers: Close-up of Dover sole with shrimp and capers"
+    caption: Close-up of Dover sole with shrimp and capers
+    session: Photo session 4 (November 2026)
+  09-dopalnitelen-2.webp:
+    alt: "Dover sole with brown shrimp and capers: Close-up of a golden Dover sole fillet"
+    caption: Close-up of a golden Dover sole fillet
+    session: Photo session 4 (November 2026)
   10-gotovo-yastie.webp:
     alt: "Dover sole with brown shrimp and capers: Dover sole fillets with brown butter, shrimp, capers and new potatoes"
     caption: Dover sole fillets with brown butter, shrimp, capers and new potatoes
@@ -101,25 +137,32 @@ ingredients:
 steps:
   - title: Lay out the ingredients
     text: Arrange the fish, butter, shrimp, capers, lemon, parsley and potatoes.
+    photo: 01-morski-stapka-1.webp
   - title: Skin and fillet
     text: Make a cut above the tail, grip the skin with a cloth and pull it sharply towards the head. Remove the four fillets with a flexible knife.
     why: The dark skin of Dover sole is tough and is removed before cooking.
+    photo: 02-morski-stapka-2.webp
   - title: Prepare the fillets
     text: Pat the fillets dry, salt them and dust lightly in flour, shaking off the excess.
+    photo: 03-morski-stapka-3.webp
   - title: Toss the potatoes
     text: Drain the potatoes and toss them in the butter until coated in a glossy layer. Warm the shrimp for a minute in a separate pan.
     time: 5
+    photo: 04-morski-stapka-4.webp
   - title: Fry the fish
     text: Heat the oil and butter in a wide pan. Fry the fillets for 1.5–2 minutes per side, basting with the butter.
     cue: The fillets are golden and flake under light pressure.
     time: 4
+    photo: 05-morski-stapka-5.webp
   - title: Make the brown butter
     text: In a clean pan melt the butter and cook it until it stops foaming and turns hazelnut-brown. Add the capers, shrimp, lemon zest and juice, then the parsley.
     cue: The butter is hazelnut-brown and smells toasted.
     avoid: Seconds separate brown butter from burnt – take the pan off the heat in time.
     time: 3
+    photo: 06-morski-stapka-6.webp
   - title: Plate
     text: Lay the fillets on a plate, spoon over the brown butter, shrimp and capers and place the potatoes beside them.
+    photo: 07-morski-stapka-7.webp
 tips:
   - Serve on warmed plates – the butter cools quickly.
   - If you buy a whole fish, ask the fishmonger to remove the dark skin.
@@ -139,7 +182,7 @@ allergens:
   - Milk and dairy
 translation:
   status: published
-  sourceHash: "5f2e98bbea48fe2b"
+  sourceHash: 5ecfce8a5b598cb9
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-21

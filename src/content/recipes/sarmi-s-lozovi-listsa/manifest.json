@@ -1,6 +1,105 @@
 {
   "slug": "sarmi-s-lozovi-listsa",
   "photos": {
+    "01-sarmi-stapka-1.webp": {
+      "sourceName": "ChatGPT Image Nov 16, 2026, 05_45_26 PM-1.webp",
+      "sourceSha256": "1bcd7d45e794d6f2f8fabf9864ccae3ca9e5d975ddf97d48afbef34c7c9b3009",
+      "sourceIdx": 350,
+      "sourceBytes": 1978198,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 100,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-sarmi-stapka-2.webp": {
+      "sourceName": "ChatGPT Image Nov 16, 2026, 05_45_28 PM-2.webp",
+      "sourceSha256": "087ada3715e0b987515119b262e97f8ecb146b84da6a2ffa6b9d3463d0ab6055",
+      "sourceIdx": 351,
+      "sourceBytes": 1886180,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 100,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "03-sarmi-stapka-3.webp": {
+      "sourceName": "ChatGPT Image Nov 16, 2026, 05_45_29 PM-3.webp",
+      "sourceSha256": "d42c96fb85c944517692e85c3a10b98c13b3d4071d8d2e2b4a3bdfc6fc63fcab",
+      "sourceIdx": 352,
+      "sourceBytes": 1977582,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 100,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "04-sarmi-stapka-4.webp": {
+      "sourceName": "ChatGPT Image Nov 16, 2026, 05_45_30 PM-4.webp",
+      "sourceSha256": "ee3d26a732c011e59e88459219912fce5e320f52d5818af5a4837be4288dd542",
+      "sourceIdx": 353,
+      "sourceBytes": 1798362,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 100,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "05-sarmi-stapka-5.webp": {
+      "sourceName": "ChatGPT Image Nov 16, 2026, 05_45_31 PM-5.webp",
+      "sourceSha256": "26cb4feba93cdcf24d72f78b6877822d63d2c9cfef6558ee536669528f7130b0",
+      "sourceIdx": 354,
+      "sourceBytes": 1992494,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 100,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "06-sarmi-stapka-6.webp": {
+      "sourceName": "ChatGPT Image Nov 16, 2026, 05_45_32 PM-6.webp",
+      "sourceSha256": "696ffb21526793b91c903f9e676e223b63a034cf6fcdb41f35661f65636876ec",
+      "sourceIdx": 355,
+      "sourceBytes": 2028954,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 100,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "07-sarmi-stapka-7.webp": {
+      "sourceName": "ChatGPT Image Nov 16, 2026, 05_45_33 PM-7.webp",
+      "sourceSha256": "265a68d324c91204be6e1008d63c51843ab9d05e428cd1adea603400340ee2da",
+      "sourceIdx": 356,
+      "sourceBytes": 1949904,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 100,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "08-sarmi-stapka-8.webp": {
+      "sourceName": "ChatGPT Image Nov 16, 2026, 05_45_36 PM-8.webp",
+      "sourceSha256": "37ef8bb5e728374aa9dbbab6d3f8c241c5707daa006dd1c90a90169b3f6df6fd",
+      "sourceIdx": 357,
+      "sourceBytes": 1941818,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 100,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "09-sarmi-stapka-9.webp": {
+      "sourceName": "ChatGPT Image Nov 16, 2026, 05_45_36 PM-9.webp",
+      "sourceSha256": "9caf0e866917edc8d957c706c5ea9ed761091523217fe27ea309da0c8d716b11",
+      "sourceIdx": 358,
+      "sourceBytes": 1824102,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 100,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
     "10-gotovo-yastie.webp": {
       "sourceName": "ChatGPT Image Nov 16, 2026, 05_45_37 PM-10.webp",
       "sourceSha256": "1e9ecf37bf5f11ecf0fde46da7fc9090da9f99f121b471c1d4c2f619040c7bd2",
@@ -15,10 +114,5 @@
   },
   "generatedHash": "f94e02d425eb3645761e21cbcbda43d4b310a9ed1df641ffe7eda150e15d4310",
   "excludedSources": [],
-  "importedAt": "2026-11-19T05:27:45.806Z",
-  "singleHeroPolicy": {
-    "date": "2026-11-25",
-    "kept": "10-gotovo-yastie.webp",
-    "removed": 9
-  }
+  "importedAt": "2026-11-19T05:27:45.806Z"
 }

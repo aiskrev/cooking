@@ -1,7 +1,117 @@
 {
   "slug": "file-ot-divech-s-shvedska-ryapa-borovinki-i-hvoyna",
   "photos": {
-    "01-gotovo-yastie.webp": {
+    "01-file-stapka-1.webp": {
+      "sourceName": "Gourmet Bison Mise en Place-4 (1).webp",
+      "sourceSha256": "db50c283a840d3b87e964b699cc2b915d42984b7468512f1f1093ec0266f02fd",
+      "sourceIdx": 5146,
+      "sourceBytes": 1861498,
+      "sourceSize": "1024x1536",
+      "role": "step",
+      "batch": 14,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-file-stapka-2.webp": {
+      "sourceName": "Gourmet Bison Tenderloin Mise en Place-4.webp",
+      "sourceSha256": "866b4ae680c8159cb3a7179744506be52e6c9810e6c89f000c07aa2d075ac5a2",
+      "sourceIdx": 5161,
+      "sourceBytes": 1955940,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 17,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "03-file-stapka-3.webp": {
+      "sourceName": "Professional Beef Trimming Mise en Place.webp",
+      "sourceSha256": "d8debc5e6dad33f34c2a18f2f4d1bcbb73915667bbea52e6e63f11834843be67",
+      "sourceIdx": 5134,
+      "sourceBytes": 1935524,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 12,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "04-file-stapka-4.webp": {
+      "sourceName": "Trussing Tenderloin in a Warm Kitchen-7.webp",
+      "sourceSha256": "fdf77c67fd79c2a9fc249197937957126ad393abfacf40d7acda84c8edbcd756",
+      "sourceIdx": 5163,
+      "sourceBytes": 1824862,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 17,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "05-file-stapka-5.webp": {
+      "sourceName": "Butter-Basted Herb-Crusted Roast-8.webp",
+      "sourceSha256": "466331c41363c2639f3ded39afdac736bc98e20b6ba0f34b4a6b1bb1d049eeb3",
+      "sourceIdx": 5164,
+      "sourceBytes": 1984864,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 17,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "06-file-stapka-6.webp": {
+      "sourceName": "Gilded Rutabaga Purée and Glaze-9.webp",
+      "sourceSha256": "8fd43a1f5892e5a90d474f49b15e3f1df5ebfb334ffe6a501c32181243539731",
+      "sourceIdx": 5165,
+      "sourceBytes": 1864782,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 17,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "07-file-stapka-7.webp": {
+      "sourceName": "Simmering Burgundy Herb Sauce-10.webp",
+      "sourceSha256": "c2f65af8e645b1b6a2bea2486cd9be87ac8b6ac79449a67562288366b9a0b192",
+      "sourceIdx": 5166,
+      "sourceBytes": 1725800,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 17,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "08-dopalnitelen-1.webp": {
+      "sourceName": "Gourmet Game Meat Preparation Still Life-1 (1).webp",
+      "sourceSha256": "0bc71eb2b1d00c0fa1f0040f41449e2fdb3c3238bf877545ff3902855d329032",
+      "sourceIdx": 5143,
+      "sourceBytes": 1800956,
+      "sourceSize": "1024x1536",
+      "role": "extra",
+      "batch": 14,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "09-dopalnitelen-2.webp": {
+      "sourceName": "Gourmet Bison Roast Preparation-8 (1).webp",
+      "sourceSha256": "b5bfa7b75e37d570026f5cd2ad36e67b50cb7768c75a75d468d94ee20d82be2a",
+      "sourceIdx": 5150,
+      "sourceBytes": 1979426,
+      "sourceSize": "1086x1448",
+      "role": "extra",
+      "batch": 14,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "10-dopalnitelen-3.webp": {
+      "sourceName": "Refined Venison Mise en Place-1.webp",
+      "sourceSha256": "e42b548d4b824e4d7998ed619885a76dc9a8243d59cf95a5abe4cb93d4e870a4",
+      "sourceIdx": 5154,
+      "sourceBytes": 1952882,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 16,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "11-gotovo-yastie.webp": {
       "sourceName": "Bison with Rutabaga Purée and Blueberries-2.webp",
       "sourceSha256": "fd6615a4c668a3b245e0f888c47938823cb7e90b71b54f467e0f664eba1fcc08",
       "sourceIdx": 5133,
@@ -13,12 +123,7 @@
       "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
     }
   },
-  "generatedHash": "c582cff22702c9abe123eec8df5b55e9399334a29ab5e8028b1005311fbc04f0",
+  "generatedHash": "9a568252c856c49fbce6cd1d4acd0d217e1eed90f1d266c7f3d1a7a747d44770",
   "excludedSources": [],
-  "importedAt": "2026-11-25T14:55:52.123Z",
-  "singleHeroPolicy": {
-    "date": "2026-11-25",
-    "kept": "01-gotovo-yastie.webp",
-    "removed": 0
-  }
+  "importedAt": "2026-11-25T15:43:01.654Z"
 }

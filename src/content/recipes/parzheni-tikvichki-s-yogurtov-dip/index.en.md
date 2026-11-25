@@ -23,9 +23,28 @@ servings: 4
 difficulty: Easy
 cover: 06-parzheni-stapka-6.webp
 photos:
+  01-parzheni-stapka-1.webp:
+    alt: "Fried courgettes: The ingredients for the fried courgettes"
+    caption: The ingredients for the fried courgettes
+  02-parzheni-stapka-2.webp:
+    alt: "Fried courgettes: The sliced courgettes"
+    caption: The sliced courgettes
+  03-parzheni-stapka-3.webp:
+    alt: "Fried courgettes: Rolling in the flour"
+    caption: Rolling in the flour
+  04-parzheni-stapka-4.webp:
+    alt: "Fried courgettes: Frying the courgettes"
+    caption: Frying the courgettes
+  05-parzheni-stapka-5.webp:
+    alt: "Fried courgettes: The yogurt sauce"
+    caption: The yogurt sauce
   06-parzheni-stapka-6.webp:
     alt: "Fried courgettes: The fried courgettes, served with the sauce"
     caption: The fried courgettes, served with the sauce
+  07-dopalnitelen-1.webp:
+    alt: "Fried courgettes: Fried courgettes arranged in a circle, with a cold dip (second photo session)"
+    caption: Fried courgettes arranged in a circle, with a cold dip (second photo session)
+    session: Photo session 2 (May–June 2026)
 mise:
   - Choose young, firm courgettes with small seeds.
   - Prepare a plate lined with kitchen paper.
@@ -70,21 +89,27 @@ ingredients:
 steps:
   - title: Prepare the ingredients
     text: Lay out the courgettes, the flour, the oil, the yogurt, the garlic and the dill.
+    photo: 01-parzheni-stapka-1.webp
   - title: Slice and salt
     text: Slice the courgettes into rounds about half a centimetre thick, salt them and leave them for 10 minutes. Pat them dry with kitchen paper.
     why: The salt draws out the water – dry rounds become crisp and do not spit in the oil.
     time: 10
+    photo: 02-parzheni-stapka-2.webp
   - title: Roll in the flour
     text: Roll the rounds in the flour and shake off the excess – just before you drop them into the pan.
     avoid: Courgettes left standing in flour turn damp and the crust goes soggy.
+    photo: 03-parzheni-stapka-3.webp
   - title: Fry
     text: Heat the oil and fry the courgettes in a single layer, 2 minutes on each side. Lift them onto the paper.
     cue: The rounds are golden on both sides.
     time: 4
+    photo: 04-parzheni-stapka-4.webp
   - title: Stir the sauce
     text: Crush the garlic with the salt and stir it into the yogurt and the dill.
+    photo: 05-parzheni-stapka-5.webp
   - title: Serve
     text: Arrange the courgettes on a plate and serve immediately, with the sauce on the side or on top.
+    photo: 06-parzheni-stapka-6.webp
 tips:
   - Fry in batches – in an overcrowded pan the oil cools and the courgettes absorb fat.
   - Cut lengthways into tongues, they also work for a sandwich.
@@ -102,7 +127,7 @@ allergens:
   - Milk and dairy
 translation:
   status: published
-  sourceHash: "97ea4db98b4292b0"
+  sourceHash: 6e1f5e84ee70c559
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-20

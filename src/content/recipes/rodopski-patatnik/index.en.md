@@ -25,6 +25,21 @@ servings: 4
 difficulty: Intermediate
 cover: 06-rodopski-stapka-6.webp
 photos:
+  01-rodopski-stapka-1.webp:
+    alt: "Rhodope patatnik: The ingredients for the patatnik"
+    caption: The ingredients for the patatnik
+  02-rodopski-stapka-2.webp:
+    alt: "Rhodope patatnik: Grating the potatoes"
+    caption: Grating the potatoes
+  03-rodopski-stapka-3.webp:
+    alt: "Rhodope patatnik: Squeezing the grated potatoes"
+    caption: Squeezing the grated potatoes
+  04-rodopski-stapka-4.webp:
+    alt: "Rhodope patatnik: Mixing with the cheese and the spearmint"
+    caption: Mixing with the cheese and the spearmint
+  05-rodopski-stapka-5.webp:
+    alt: "Rhodope patatnik: Pressing the mixture into the cast-iron pan"
+    caption: Pressing the mixture into the cast-iron pan
   06-rodopski-stapka-6.webp:
     alt: "Rhodope patatnik: The crisp patatnik"
     caption: The crisp patatnik
@@ -71,22 +86,28 @@ ingredients:
 steps:
   - title: Prepare the ingredients
     text: Lay out the potatoes, the onion, the eggs, the cheese, the butter and the spearmint.
+    photo: 01-rodopski-stapka-1.webp
   - title: Grate the potatoes
     text: Grate the potatoes and the onion on a coarse grater and salt them.
+    photo: 02-rodopski-stapka-2.webp
   - title: Squeeze them
     text: After 5 minutes gather the grated potatoes in the cloth and squeeze them with all your strength over a bowl.
     why: The drier the potatoes, the crisper the crust.
     cue: Nothing drips from the cloth any more.
+    photo: 03-rodopski-stapka-3.webp
   - title: Mix
     text: Stir the potatoes together with the crumbled cheese, the eggs and the spearmint.
+    photo: 04-rodopski-stapka-4.webp
   - title: Press into the pan
     text: Heat the oil and half of the butter in the pan over medium heat. Tip in the mixture, press it into an even layer with the palm of your hand or a spoon and reduce the heat. Cover and cook for 12–15 minutes.
     cue: The edge is golden and the patatnik slides out whole when you shake the pan.
     time: 15
+    photo: 05-rodopski-stapka-5.webp
   - title: Turn and finish
     text: Cover the pan with a plate, turn the patatnik out onto it, put the remaining butter in the pan and slide the patatnik back in with the raw side down. Cook for another 10–12 minutes without a lid.
     cue: Both sides have a thick golden crust and the middle is soft.
     time: 12
+    photo: 06-rodopski-stapka-6.webp
 tips:
   - Floury potatoes bind the patatnik better.
   - If you are not sure about turning it, finish the top side under the oven grill.
@@ -103,7 +124,7 @@ allergens:
   - Milk and dairy
 translation:
   status: published
-  sourceHash: "03077b49f5ccb619"
+  sourceHash: da668bda999a4142
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-20

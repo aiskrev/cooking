@@ -1,13 +1,68 @@
 {
   "slug": "skalops-s-kaperovo-maslo",
   "photos": {
+    "01-skalops-stapka-1.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 07_24_28 PM.png",
+      "sourceSha256": "4f00972b967805113b5f5c407466e813833cbf4e2a7719f8b2cb61f43e403f3f",
+      "sourceIdx": 235,
+      "sourceBytes": 2732545,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 80,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-skalops-stapka-2.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 07_24_34 PM.png",
+      "sourceSha256": "b1829119ef850185ace88aea382988211dac579a84b2b78151513239e9304a25",
+      "sourceIdx": 236,
+      "sourceBytes": 1905909,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 80,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "03-skalops-stapka-3.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 07_24_38 PM.png",
+      "sourceSha256": "ee1529260293782048f8dfc0751b68736718b074be0c53f878a38ef84f2b3f90",
+      "sourceIdx": 237,
+      "sourceBytes": 2258594,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 80,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "04-skalops-stapka-4.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 07_24_42 PM.png",
+      "sourceSha256": "4c5f2fc3036c90df63862240a0eb9fd52f6c9e4ae0b28a546e91081861386ac8",
+      "sourceIdx": 238,
+      "sourceBytes": 2154779,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 80,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "05-skalops-stapka-5.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 07_24_45 PM.png",
+      "sourceSha256": "a11d47aff11bd80e5aaecce7384270932e11b1820c88ba52cdacd4ef312b4100",
+      "sourceIdx": 239,
+      "sourceBytes": 1850855,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 80,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
     "06-skalops-stapka-6.webp": {
       "sourceName": "ChatGPT Image Jun 10, 2026, 07_24_52 PM.png",
       "sourceSha256": "98f120642df72ef8edf78a02c441343067b00fc5f603ebd747f39c8d8f222867",
       "sourceIdx": 240,
       "sourceBytes": 1813693,
       "sourceSize": "1122x1402",
-      "role": "hero",
+      "role": "step",
       "batch": 81,
       "confidence": "HIGH",
       "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
@@ -15,10 +70,5 @@
   },
   "generatedHash": "968d905e3c920b5576e4ee195679bfe2d74312db21539fa44968707566ba3d5c",
   "excludedSources": [],
-  "importedAt": "2026-11-19T05:27:54.022Z",
-  "singleHeroPolicy": {
-    "date": "2026-11-25",
-    "kept": "06-skalops-stapka-6.webp",
-    "removed": 5
-  }
+  "importedAt": "2026-11-19T05:27:54.022Z"
 }

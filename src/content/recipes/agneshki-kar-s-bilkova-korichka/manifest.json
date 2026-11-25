@@ -1,6 +1,105 @@
 {
   "slug": "agneshki-kar-s-bilkova-korichka",
   "photos": {
+    "01-agneshki-stapka-1.webp": {
+      "sourceName": "Gourmet Lamb Rack Mise en Scène-1.webp",
+      "sourceSha256": "da5ca1ecc795e881d142a9915197d44183c925248148790caf8d782d03a9d5f3",
+      "sourceIdx": 2023,
+      "sourceBytes": 1959070,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 3,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-agneshki-stapka-2.webp": {
+      "sourceName": "Rosemary-Seasoned Rack of Lamb-6.webp",
+      "sourceSha256": "6fcceed509d7db251b852892fb804570d5368d631672c1f8fb8d4dc4055faa22",
+      "sourceIdx": 2028,
+      "sourceBytes": 1735028,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 3,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "03-agneshki-stapka-3.webp": {
+      "sourceName": "Smoky Eggplant and Roasted Vegetable Mise en Place-8.webp",
+      "sourceSha256": "63ec6916332632805ad29c36b3fd3a0b4370807da05b78a6ace96df27a290196",
+      "sourceIdx": 2030,
+      "sourceBytes": 1950548,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 3,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "04-agneshki-stapka-4.webp": {
+      "sourceName": "Butter-Basted Herb-Crusted Rack of Lamb-7.webp",
+      "sourceSha256": "4e490d2a614a526a6e8ede03f42af708be1c8887f84f5294a8fe2c96dc4ebc92",
+      "sourceIdx": 2029,
+      "sourceBytes": 2066068,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 3,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "05-agneshki-stapka-6.webp": {
+      "sourceName": "Roasted Lamb Mise-en-Place-5.webp",
+      "sourceSha256": "a3b7597704a51c2ea5688157c862156627f281c66670537c2a23f23eb560002c",
+      "sourceIdx": 2027,
+      "sourceBytes": 2004048,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 3,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "06-agneshki-stapka-7.webp": {
+      "sourceName": "Rosemary-Infused Simmering Jus-9.webp",
+      "sourceSha256": "4bb576787f0fb170e9e82225d9e260df35afba708ab7482734f3359eb74b3449",
+      "sourceIdx": 2031,
+      "sourceBytes": 1565044,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 3,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "07-agneshki-stapka-8.webp": {
+      "sourceName": "Gourmet Lamb with Caramelized Vegetables-5.webp",
+      "sourceSha256": "b8cd7acd80151f07a6c949661ee4e4cbed039afd0d08022a692dee792aae82cd",
+      "sourceIdx": 2036,
+      "sourceBytes": 1987266,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 4,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "08-dopalnitelen-1.webp": {
+      "sourceName": "Gourmet Herb-Crusted Lamb Platter-2.webp",
+      "sourceSha256": "2a4f98045a3863d5f1924d5ecdc805d55e44cd056086b607943136099c6bde7f",
+      "sourceIdx": 2024,
+      "sourceBytes": 1800340,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 3,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "09-dopalnitelen-2.webp": {
+      "sourceName": "Herb-Crusted Lamb with Roasted Vegetables-4.webp",
+      "sourceSha256": "a69216d072753e3652c14c1981002d8158bd69d17488d79c8d9b75e1879c163c",
+      "sourceIdx": 2026,
+      "sourceBytes": 1761042,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 3,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
     "10-gotovo-yastie.webp": {
       "sourceName": "Gourmet Herb-Crusted Lamb with Roasted Garnishes-3.webp",
       "sourceSha256": "e0202ec4ac901587ff28d093a1694047b7cd166ebf7b17e8395915100acd00a6",
@@ -15,10 +114,5 @@
   },
   "generatedHash": "645590fa315bccaf62685e8191288b5edd3f5981918cae37dafd98d7d41de3ff",
   "excludedSources": [],
-  "importedAt": "2026-11-21T06:46:53.689Z",
-  "singleHeroPolicy": {
-    "date": "2026-11-25",
-    "kept": "10-gotovo-yastie.webp",
-    "removed": 9
-  }
+  "importedAt": "2026-11-21T06:46:53.689Z"
 }

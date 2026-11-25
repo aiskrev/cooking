@@ -1,13 +1,68 @@
 {
   "slug": "stridi-rockefeller",
   "photos": {
+    "01-stridi-stapka-1.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 06_53_00 PM.png",
+      "sourceSha256": "7c7db2390a5d8fc0da0e5736cd5e690c82be6f5201c0a2fe84d592b273e40c71",
+      "sourceIdx": 211,
+      "sourceBytes": 2549996,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 75,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-stridi-stapka-2.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 06_53_06 PM.png",
+      "sourceSha256": "722014f8b1bcba2a6de84f170878f14e7c8237a20f38bf9bfeda22410cc5de41",
+      "sourceIdx": 212,
+      "sourceBytes": 2103612,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 75,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "03-stridi-stapka-3.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 06_53_09 PM.png",
+      "sourceSha256": "e5bed5f8a64c6975a3934775712988d8673034a8c3c52fba9339c2a4f37ff4a9",
+      "sourceIdx": 213,
+      "sourceBytes": 2626552,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 75,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "04-stridi-stapka-4.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 06_53_12 PM.png",
+      "sourceSha256": "401d39eebfe37c58500edf326f851c91e06c8444bbd42b5662902964f9c63152",
+      "sourceIdx": 214,
+      "sourceBytes": 2161991,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 75,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "05-stridi-stapka-5.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 06_53_15 PM.png",
+      "sourceSha256": "9e8d9cf8cb64ab9d60cdebe1e88386a883068990fccf24b91751b18d14498607",
+      "sourceIdx": 215,
+      "sourceBytes": 2037056,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 75,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
     "06-stridi-stapka-6.webp": {
       "sourceName": "ChatGPT Image Jun 10, 2026, 06_53_20 PM.png",
       "sourceSha256": "eb872417faa6ef10a7c9ca964e498cc0eadc62485620faa1b012e9966db21815",
       "sourceIdx": 216,
       "sourceBytes": 2064725,
       "sourceSize": "1122x1402",
-      "role": "hero",
+      "role": "step",
       "batch": 75,
       "confidence": "HIGH",
       "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
@@ -15,10 +70,5 @@
   },
   "generatedHash": "b92bb9e1f314f624fbbf4bf66917e8425a8b6a93d0127f91b65fd388aef6b1c4",
   "excludedSources": [],
-  "importedAt": "2026-11-19T05:27:53.843Z",
-  "singleHeroPolicy": {
-    "date": "2026-11-25",
-    "kept": "06-stridi-stapka-6.webp",
-    "removed": 5
-  }
+  "importedAt": "2026-11-19T05:27:53.843Z"
 }

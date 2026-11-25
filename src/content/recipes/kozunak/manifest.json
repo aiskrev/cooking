@@ -1,24 +1,85 @@
 {
   "slug": "kozunak",
   "photos": {
+    "01-kozunak-stapka-1.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 04_39_40 PM.png",
+      "sourceSha256": "54a8bc753857ce6012268fe402816e5a02ebaff69b00676f7bfdbdda05775fd2",
+      "sourceIdx": 139,
+      "sourceBytes": 3072576,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 51,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-kozunak-stapka-2.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 04_39_46 PM.png",
+      "sourceSha256": "326b26b4fb9dd209a9742c439cfd79be74a76392f6250df7e5491841ff66703f",
+      "sourceIdx": 140,
+      "sourceBytes": 2261872,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 51,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "03-kozunak-stapka-3.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 04_39_49 PM.png",
+      "sourceSha256": "c0def9837914838b893c2b9341f9e997805eee3aa0f30137dbbd304a0e44d330",
+      "sourceIdx": 141,
+      "sourceBytes": 2506190,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 51,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "04-kozunak-stapka-4.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 04_39_51 PM.png",
+      "sourceSha256": "b764b22e1769fab491922c3ff5632ed52e3dab56f513523fe1c5394c5387ff77",
+      "sourceIdx": 142,
+      "sourceBytes": 2509856,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 51,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "05-kozunak-stapka-5.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 04_39_54 PM.png",
+      "sourceSha256": "8001c0b003b7fe6db3c35f8b4054bbe9eb3076123ddcc16d6b2b29836021da93",
+      "sourceIdx": 143,
+      "sourceBytes": 2327285,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 51,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
     "06-kozunak-stapka-6.webp": {
       "sourceName": "ChatGPT Image Jun 10, 2026, 04_39_56 PM.png",
       "sourceSha256": "4cf93b63382e8088a045e7bb7ac03f61c610d77ecdab1394399a4732fee8b383",
       "sourceIdx": 144,
       "sourceBytes": 2781004,
       "sourceSize": "1122x1402",
-      "role": "hero",
+      "role": "step",
       "batch": 51,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "07-dopalnitelen-1.webp": {
+      "sourceName": "ChatGPT Image Jun 3, 2026, 02_38_03 PM.png",
+      "sourceSha256": "9e60c90f09b88028ee4dc9178e7b10bbcc2084a1142ceeda6acac2d9d9829c1f",
+      "sourceIdx": 1047,
+      "sourceBytes": 2511651,
+      "sourceSize": "1448x1086",
+      "role": "extra",
+      "batch": 32,
       "confidence": "HIGH",
       "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
     }
   },
   "generatedHash": "004ee49b19d9d3e3b7e75882991b641f3bfa500951fa1c9942851d168a0d3fd6",
   "excludedSources": [],
-  "importedAt": "2026-11-19T05:27:53.501Z",
-  "singleHeroPolicy": {
-    "date": "2026-11-25",
-    "kept": "06-kozunak-stapka-6.webp",
-    "removed": 6
-  }
+  "importedAt": "2026-11-19T05:27:53.501Z"
 }

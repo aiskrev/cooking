@@ -1,13 +1,90 @@
 {
   "slug": "beef-wellington",
   "photos": {
+    "01-beef-stapka-1.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 06_15_12 PM.png",
+      "sourceSha256": "fd97b30728851275dbda0368bb1e942519194c92ce8eb425c9b82f9a70a9b5de",
+      "sourceIdx": 184,
+      "sourceBytes": 2507449,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 66,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-beef-stapka-2.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 06_15_19 PM.png",
+      "sourceSha256": "ee5be6561add52d5744e967d00699a05b0b83dc28ff73ea92dc31546fe79b56e",
+      "sourceIdx": 185,
+      "sourceBytes": 2274453,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 67,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "03-beef-stapka-3.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 06_15_22 PM.png",
+      "sourceSha256": "c8abfb0067ccc06f7647a04d5add73d86251bc78a7d87c6c4b18fb2388f05b00",
+      "sourceIdx": 186,
+      "sourceBytes": 2226665,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 67,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "04-beef-stapka-4.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 06_15_25 PM.png",
+      "sourceSha256": "72e44388bf3eee86baea5a3ac6c2225bba58d4242e6fd5db7de09422c2af23d4",
+      "sourceIdx": 187,
+      "sourceBytes": 2047616,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 67,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "05-beef-stapka-5.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 06_15_28 PM.png",
+      "sourceSha256": "bddfedb81a367a5e6976eb57c74bef030be07ccfbd7b5839f30984ae53e662be",
+      "sourceIdx": 188,
+      "sourceBytes": 2240288,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 67,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "06-beef-stapka-6.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 06_15_31 PM.png",
+      "sourceSha256": "eec1cb1bb1709037c1d41b7a1f857ba4d4ec1ff38a8b5823863e6573c631b36d",
+      "sourceIdx": 189,
+      "sourceBytes": 2066375,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 67,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "07-beef-stapka-7.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 06_15_49 PM.png",
+      "sourceSha256": "6df7d1b0733a4805a798eb16589c3cdbc326e8311b00ee3be2219d14b0479ec5",
+      "sourceIdx": 191,
+      "sourceBytes": 2015790,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 68,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
     "08-beef-stapka-8.webp": {
       "sourceName": "ChatGPT Image Jun 10, 2026, 06_15_45 PM.png",
       "sourceSha256": "4499196c63db2c0e875a4c9decf936ba014689aade3571cf39b1b41b14ece879",
       "sourceIdx": 190,
       "sourceBytes": 1999402,
       "sourceSize": "1122x1402",
-      "role": "hero",
+      "role": "step",
       "batch": 68,
       "confidence": "HIGH",
       "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
@@ -15,10 +92,5 @@
   },
   "generatedHash": "c4755dd32f4295704756634b45713ff2dfeb2239359470ee7a0bfb7ea5030bb4",
   "excludedSources": [],
-  "importedAt": "2026-11-19T05:27:53.646Z",
-  "singleHeroPolicy": {
-    "date": "2026-11-25",
-    "kept": "08-beef-stapka-8.webp",
-    "removed": 7
-  }
+  "importedAt": "2026-11-19T05:27:53.646Z"
 }

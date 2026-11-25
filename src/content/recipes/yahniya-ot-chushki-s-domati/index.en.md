@@ -28,6 +28,11 @@ photos:
   01-gotovo-yastie.webp:
     alt: "Pepper and tomato yahniya: Peppers with tomatoes in a frying pan, with cheese and fresh bread"
     caption: Peppers with tomatoes in a frying pan, with cheese and fresh bread
+  02-dopalnitelen-1.webp:
+    alt: Braised green peppers with onion and tomatoes in a frying pan with a wooden spatula
+    caption: Braised peppers with onion and tomatoes in a frying pan (a photo of unconfirmed origin, not AI-generated)
+    session: Additional photo (unconfirmed origin)
+    provenance: Снимка с непотвърден произход (интернет/Facebook), добавена по решение на собственика; не е генерирана с ИИ; авторът и правата не са потвърдени
 mise:
   - Wash the peppers, remove the stems and seeds and cut them into strips about 2 cm wide.
   - Grate the tomatoes or chop them finely; cut the onion into half-moons.
@@ -101,7 +106,7 @@ storage: Up to 3 days in the refrigerator, in a closed container.
 allergens: []
 translation:
   status: published
-  sourceHash: "e120eec5da7fd7e7"
+  sourceHash: 50a8a2d135ebc453
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-20

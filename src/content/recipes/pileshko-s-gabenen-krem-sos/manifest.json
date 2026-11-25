@@ -1,13 +1,68 @@
 {
   "slug": "pileshko-s-gabenen-krem-sos",
   "photos": {
+    "01-pileshko-stapka-1.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 07_36_14 PM.png",
+      "sourceSha256": "58951cd23bc623fe612492f0e04a34f0c133e62c1bef60e8fc0dbe1bd52cc54e",
+      "sourceIdx": 247,
+      "sourceBytes": 2416600,
+      "sourceSize": "1254x1254",
+      "role": "step",
+      "batch": 83,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-pileshko-stapka-2.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 07_36_20 PM.png",
+      "sourceSha256": "f66f9206d6d215dadc7aec171fd2a484e46c7c2420ed5c1e834e51f7dae0cbfa",
+      "sourceIdx": 248,
+      "sourceBytes": 1904521,
+      "sourceSize": "1254x1254",
+      "role": "step",
+      "batch": 83,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "03-pileshko-stapka-3.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 07_36_25 PM.png",
+      "sourceSha256": "b3c7183e23c8f4b2330e1dda864d36ee5a0848b5780dc5a0552d2141b8573eb1",
+      "sourceIdx": 249,
+      "sourceBytes": 2319508,
+      "sourceSize": "1254x1254",
+      "role": "step",
+      "batch": 83,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "04-pileshko-stapka-4.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 07_36_31 PM.png",
+      "sourceSha256": "50146798aafe0966a903e1f4d2be471890925cf85c8bd4a4b0a7c3a461616d13",
+      "sourceIdx": 251,
+      "sourceBytes": 1933386,
+      "sourceSize": "1254x1254",
+      "role": "step",
+      "batch": 83,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "05-pileshko-stapka-5.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 07_36_28 PM.png",
+      "sourceSha256": "9496252c6add6d6343cd4e728515d9e5c4be6135a96cd00a4f46676c69763326",
+      "sourceIdx": 250,
+      "sourceBytes": 2384859,
+      "sourceSize": "1254x1254",
+      "role": "step",
+      "batch": 83,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
     "06-pileshko-stapka-6.webp": {
       "sourceName": "ChatGPT Image Jun 10, 2026, 07_36_40 PM.png",
       "sourceSha256": "8ce23ff22100ad79cd3058644a2a86f27fa1f79c71fe6b8935e4554a422dc1db",
       "sourceIdx": 252,
       "sourceBytes": 1980184,
       "sourceSize": "1254x1254",
-      "role": "hero",
+      "role": "step",
       "batch": 84,
       "confidence": "HIGH",
       "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
@@ -15,10 +70,5 @@
   },
   "generatedHash": "32ec4723d80f7e70594af30bc4943c6229fe87e4962e5f631070285ee2d4f820",
   "excludedSources": [],
-  "importedAt": "2026-11-19T05:27:54.115Z",
-  "singleHeroPolicy": {
-    "date": "2026-11-25",
-    "kept": "06-pileshko-stapka-6.webp",
-    "removed": 5
-  }
+  "importedAt": "2026-11-19T05:27:54.115Z"
 }

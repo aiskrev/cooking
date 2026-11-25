@@ -1,24 +1,96 @@
 {
   "slug": "sepiya-s-cheren-mastilen-sos-grah-i-pechen-chesan",
   "photos": {
+    "01-sepiya-stapka-1.webp": {
+      "sourceName": "Cuttlefish Mise en Place with Peas and Ink-2.webp",
+      "sourceSha256": "9c401b9ee73c46a776e77558bdc9b6b87df831b84f6d6072f9e07fc7a229e2ea",
+      "sourceIdx": 4185,
+      "sourceBytes": 1769748,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 18,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-sepiya-stapka-2.webp": {
+      "sourceName": "Gourmet Cuttlefish Prep with Peas and Ink-4.webp",
+      "sourceSha256": "d465249047c75eb1a4d4e1e194540a13e6685859a5289b529acf83128466f9e3",
+      "sourceIdx": 4187,
+      "sourceBytes": 1663526,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 18,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "03-sepiya-stapka-3.webp": {
+      "sourceName": "Ink-Sauced Cuttlefish in the Pan-8.webp",
+      "sourceSha256": "35f8508a63edef038bf05281368d6eacc0ef12b20fe459f0fc8bf13e63e8a81a",
+      "sourceIdx": 4191,
+      "sourceBytes": 1710838,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 18,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "04-sepiya-stapka-5.webp": {
+      "sourceName": "Sizzling Cuttlefish Sauté with Garden Mise en Place-6.webp",
+      "sourceSha256": "8407d898464296ec337b9247be5ce3c06a23c4b61f4dc3d8df6efc7473a90fc8",
+      "sourceIdx": 4189,
+      "sourceBytes": 1865884,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 18,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "05-sepiya-stapka-6.webp": {
+      "sourceName": "Squid Ink Cuttlefish with Green Peas-10.webp",
+      "sourceSha256": "30927707a6de46bc9cd00f8f3d4e58a9e34e374e4bc40632db08a00855a21e1c",
+      "sourceIdx": 4193,
+      "sourceBytes": 1766244,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 18,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
     "06-sepiya-stapka-7.webp": {
       "sourceName": "Seared Cuttlefish with Black Ink Sauce-12.webp",
       "sourceSha256": "4a3aca3149727ccda660f9316e5cf02f7caa6034be80403d9c2ed84bcbe9f2ef",
       "sourceIdx": 4195,
       "sourceBytes": 1889816,
       "sourceSize": "1122x1402",
-      "role": "hero",
+      "role": "step",
       "batch": 18,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "07-dopalnitelen-1.webp": {
+      "sourceName": "Charred Cuttlefish with Ink and Peas-4.png",
+      "sourceSha256": "461aeb423b45720fc70ca516a41c37bdf5c1f35d6539c2b9d007c76cc31e7c16",
+      "sourceIdx": 4178,
+      "sourceBytes": 2852550,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 17,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "08-dopalnitelen-2.webp": {
+      "sourceName": "Cuttlefish in Squid Ink and Peas-7.png",
+      "sourceSha256": "1d1200cccf670434fa8597dcf43d402cb0b856182e80c5b4791bd43c0cc4ea77",
+      "sourceIdx": 4181,
+      "sourceBytes": 2838673,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 17,
       "confidence": "HIGH",
       "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
     }
   },
   "generatedHash": "6dc02135dbf18544c5a70e4e70897d043207ff43222c68b383d41d42d5232370",
   "excludedSources": [],
-  "importedAt": "2026-11-24T12:56:31.604Z",
-  "singleHeroPolicy": {
-    "date": "2026-11-25",
-    "kept": "06-sepiya-stapka-7.webp",
-    "removed": 7
-  }
+  "importedAt": "2026-11-24T12:56:31.604Z"
 }

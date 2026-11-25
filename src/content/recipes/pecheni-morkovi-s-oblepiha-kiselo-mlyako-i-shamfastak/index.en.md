@@ -28,6 +28,30 @@ servings: 4
 difficulty: Easy
 cover: 07-gotovo-yastie.webp
 photos:
+  01-dopalnitelen-1.webp:
+    alt: "Roasted carrots with sea buckthorn: Carrots with sea buckthorn, pistachios and dill"
+    caption: Carrots with sea buckthorn, pistachios and dill
+    session: Photo session 6 (November 2026)
+  02-dopalnitelen-2.webp:
+    alt: "Roasted carrots with sea buckthorn: Ember-roasted carrots with pistachios"
+    caption: Ember-roasted carrots with pistachios
+    session: Photo session 6 (November 2026)
+  03-dopalnitelen-3.webp:
+    alt: "Roasted carrots with sea buckthorn: Carrots with yoghurt and sea buckthorn"
+    caption: Carrots with yoghurt and sea buckthorn
+    session: Photo session 6 (November 2026)
+  04-dopalnitelen-4.webp:
+    alt: "Roasted carrots with sea buckthorn: Carrots with pistachios on yoghurt"
+    caption: Carrots with pistachios on yoghurt
+    session: Photo session 6 (November 2026)
+  05-dopalnitelen-5.webp:
+    alt: "Roasted carrots with sea buckthorn: Carrots with citrus and yoghurt"
+    caption: Carrots with citrus and yoghurt
+    session: Photo session 6 (November 2026)
+  06-dopalnitelen-6.webp:
+    alt: "Roasted carrots with sea buckthorn: Carrots with sea buckthorn and herb oil"
+    caption: Carrots with sea buckthorn and herb oil
+    session: Photo session 6 (November 2026)
   07-gotovo-yastie.webp:
     alt: "Roasted carrots with sea buckthorn: Roasted carrots with sea buckthorn and pistachios on yoghurt"
     caption: Roasted carrots with sea buckthorn and pistachios on yoghurt
@@ -137,7 +161,7 @@ allergens:
   - Tree nuts
 translation:
   status: published
-  sourceHash: "96e25b601b4c2b63"
+  sourceHash: 566e97acd5c560ea
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-25

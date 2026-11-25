@@ -1,6 +1,149 @@
 {
   "slug": "zhabeshki-butcheta-v-bilkovo-maslo-s-pyure-ot-kreson",
   "photos": {
+    "01-zhabeshki-stapka-1.webp": {
+      "sourceName": "Gourmet Frog Legs Mise en Place-5.webp",
+      "sourceSha256": "a2a92baf7b4606cc303dc376c31b9f4799361eaabf0b1ec2afd941bf4afac3b0",
+      "sourceIdx": 5213,
+      "sourceBytes": 2239086,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 22,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-zhabeshki-stapka-2.webp": {
+      "sourceName": "Gourmet Frog Leg Mise en Place-1 (1).webp",
+      "sourceSha256": "b3ebbfc644257fd1708dfedb8c53e4948869e52eb2c7040db736d5c481a9dc0e",
+      "sourceIdx": 5227,
+      "sourceBytes": 1796164,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 23,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "03-zhabeshki-stapka-3.webp": {
+      "sourceName": "Delicate Frog Leg Preparation in a Professional Kitchen-7.webp",
+      "sourceSha256": "81ecb92cf0c8175bed98f6b9fc3bf0fdbe3a9bd4183264a622679b4a80a782b3",
+      "sourceIdx": 5215,
+      "sourceBytes": 1894230,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 22,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "04-zhabeshki-stapka-4.webp": {
+      "sourceName": "Culinary Frog Leg Preparation-11 (1).webp",
+      "sourceSha256": "686d372c630a3d67ebe8965f00296e66b40d3378d93f836d2e4292f8e4378eb4",
+      "sourceIdx": 5261,
+      "sourceBytes": 1832508,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 24,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "05-zhabeshki-stapka-5.webp": {
+      "sourceName": "Copper Pot of Vibrant Watercress Purée-14.webp",
+      "sourceSha256": "6d0d6ba16eec0f71907820e64a6bd3a79d012f89b8a19065ec2e8b056f5916dc",
+      "sourceIdx": 5222,
+      "sourceBytes": 1953422,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 22,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "06-zhabeshki-stapka-6.webp": {
+      "sourceName": "Emerald Purée and Roasted Garlic-20 (1).webp",
+      "sourceSha256": "9b28f1f3489eb51c4d33c340dbfa38c00a8c3b028703c298bcb9e5db3b7f356a",
+      "sourceIdx": 5270,
+      "sourceBytes": 1799302,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 24,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "07-zhabeshki-stapka-7.webp": {
+      "sourceName": "Gourmet Herb-Butter Frog Legs-10.webp",
+      "sourceSha256": "29561611d43f75c349ff3d48bb848071fb907799bec8e847a988b83206442231",
+      "sourceIdx": 5218,
+      "sourceBytes": 2082960,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 22,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "08-zhabeshki-stapka-8.webp": {
+      "sourceName": "Buttery Herb-Seared Frog Legs-16 (1).webp",
+      "sourceSha256": "3109ffa6031ee636256e3108a906b82c15c9baa1a4ac4bece4ea7bea18aa3f7e",
+      "sourceIdx": 5266,
+      "sourceBytes": 2017750,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 24,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "09-zhabeshki-stapka-9.webp": {
+      "sourceName": "Gourmet Lemon Caper Pan Sauce-17.webp",
+      "sourceSha256": "84093dfd3ff1833b035018ebf1668d4c3da4db6e22c12a16ce84c586a4ce7129",
+      "sourceIdx": 5225,
+      "sourceBytes": 2000940,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 22,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "10-zhabeshki-stapka-10.webp": {
+      "sourceName": "Golden Brown Caper Herb Sauce-24 (1).webp",
+      "sourceSha256": "0e445ceb52e023721fb42893dd4d3ada1bcac9ae8866aa378cd32bfb820e61ef",
+      "sourceIdx": 5274,
+      "sourceBytes": 1750218,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 24,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "11-dopalnitelen-1.webp": {
+      "sourceName": "Herb-Butter Seared Frog Legs-12.webp",
+      "sourceSha256": "57cba6eace4d18619ec71e32347a944d94a6e6eaa1e5c78b7e10866e17e45d51",
+      "sourceIdx": 5220,
+      "sourceBytes": 2062624,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 22,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "12-dopalnitelen-2.webp": {
+      "sourceName": "Copper Pan with Vibrant Green Purée-15.webp",
+      "sourceSha256": "a77677b5022e66b32ac7287951f24cb784c07bbe2d3b551abc8afcf33c46183e",
+      "sourceIdx": 5223,
+      "sourceBytes": 1905568,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 22,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "13-dopalnitelen-3.webp": {
+      "sourceName": "Gourmet Frog Legs Mise en Place-12 (1).webp",
+      "sourceSha256": "f9ecbfc81c7372f94c48fcba22873281ff9dcfe55c0f874767daa9c5bbdc5529",
+      "sourceIdx": 5262,
+      "sourceBytes": 1911838,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 24,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
     "14-gotovo-yastie.webp": {
       "sourceName": "Herb-Butter Seared Frog Legs-11.webp",
       "sourceSha256": "aab185dec93d04d3cf48031c652d999c4edfcc551dd122147f88eaefd0fade39",
@@ -15,10 +158,5 @@
   },
   "generatedHash": "228b57522c6e0e6e775f32b6bf7c7d887d6484aef31d25c120c22e494a4f6314",
   "excludedSources": [],
-  "importedAt": "2026-11-25T13:16:56.733Z",
-  "singleHeroPolicy": {
-    "date": "2026-11-25",
-    "kept": "14-gotovo-yastie.webp",
-    "removed": 13
-  }
+  "importedAt": "2026-11-25T13:16:56.733Z"
 }

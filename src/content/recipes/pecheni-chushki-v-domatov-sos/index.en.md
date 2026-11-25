@@ -23,9 +23,45 @@ servings: 4
 difficulty: Easy
 cover: 05-pecheni-stapka-5.webp
 photos:
+  01-pecheni-stapka-1.webp:
+    alt: "Roasted peppers in tomato sauce: The ingredients for the roasted peppers in tomato sauce"
+    caption: The ingredients for the roasted peppers in tomato sauce
+  02-pecheni-stapka-2.webp:
+    alt: "Roasted peppers in tomato sauce: The tomato sauce simmering"
+    caption: The tomato sauce simmering
+  03-pecheni-stapka-3.webp:
+    alt: "Roasted peppers in tomato sauce: Tipping the roasted peppers into the sauce"
+    caption: Tipping the roasted peppers into the sauce
+  04-pecheni-stapka-4.webp:
+    alt: "Roasted peppers in tomato sauce: The finished peppers with parsley"
+    caption: The finished peppers with parsley
   05-pecheni-stapka-5.webp:
     alt: "Roasted peppers in tomato sauce: The peppers, served with salad, cheese and yogurt"
     caption: The peppers, served with salad, cheese and yogurt
+  06-dopalnitelen-1.webp:
+    alt: "Roasted peppers in tomato sauce: The ingredients (second series)"
+    caption: The ingredients (second series)
+    session: Photo session 1 (June 2026)
+  07-dopalnitelen-2.webp:
+    alt: "Roasted peppers in tomato sauce: The tomato sauce (second series)"
+    caption: The tomato sauce (second series)
+    session: Photo session 1 (June 2026)
+  08-dopalnitelen-3.webp:
+    alt: "Roasted peppers in tomato sauce: The onion with the spices (second series)"
+    caption: The onion with the spices (second series)
+    session: Photo session 1 (June 2026)
+  09-dopalnitelen-4.webp:
+    alt: "Roasted peppers in tomato sauce: The roasted peppers in the pan (second series)"
+    caption: The roasted peppers in the pan (second series)
+    session: Photo session 1 (June 2026)
+  10-dopalnitelen-5.webp:
+    alt: "Roasted peppers in tomato sauce: Tipping the peppers into the sauce (second series)"
+    caption: Tipping the peppers into the sauce (second series)
+    session: Photo session 1 (June 2026)
+  11-dopalnitelen-6.webp:
+    alt: "Roasted peppers in tomato sauce: Served with cheese (second series)"
+    caption: Served with cheese (second series)
+    session: Photo session 1 (June 2026)
 mise:
   - If the peppers are raw, roast them, steam them for 10 minutes under a lid and peel them.
   - Grate the tomatoes on a coarse grater and discard the skins.
@@ -75,18 +111,23 @@ ingredients:
 steps:
   - title: Prepare the ingredients
     text: Lay out the peeled roasted peppers, the tomatoes, the onion, the garlic, the oil and the spices.
+    photo: 01-pecheni-stapka-1.webp
   - title: Cook the sauce
     text: Sweat the onion in the oil for 4–5 minutes until soft. Add the tomatoes, the sugar and the salt and let it simmer for 20–25 minutes without a lid. At the end stir in the paprika and half of the garlic.
     cue: The sauce is thick, dark red and drops of oil appear on its surface.
     time: 25
+    photo: 02-pecheni-stapka-2.webp
   - title: Add the peppers
     text: Put the peppers in the sauce – whole or halved – and stir carefully so that they are coated.
+    photo: 03-pecheni-stapka-3.webp
   - title: Let it simmer
     text: Cook for another 10 minutes over low heat. Take it off the heat and sprinkle with the remaining garlic and the chopped parsley.
     why: The peppers are already roasted – in the sauce they only take on its flavour.
     time: 10
+    photo: 04-pecheni-stapka-4.webp
   - title: Serve
     text: Serve the peppers warm or chilled, with cheese and yogurt.
+    photo: 05-pecheni-stapka-5.webp
 tips:
   - Peppers are easiest to peel while still warm, after 10 minutes under a lid.
   - The next day, cold, they are even tastier.
@@ -102,7 +143,7 @@ storage: Up to 4 days in the refrigerator, in a closed container.
 allergens: []
 translation:
   status: published
-  sourceHash: "2603a8b191f2c6c5"
+  sourceHash: 16ff28152bb45d83
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-20

@@ -1,24 +1,338 @@
 {
   "slug": "mish-mash",
   "photos": {
+    "01-mish-stapka-1.webp": {
+      "sourceName": "Bulgarian Mish-Mash Mise en Place-2.webp",
+      "sourceSha256": "e3eb90dea63d7ca76ceee7af6cac774809d5794c19fa55ca4d4db9f70a6c8e61",
+      "sourceIdx": 436,
+      "sourceBytes": 1811900,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 107,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-mish-stapka-2.webp": {
+      "sourceName": "Flame-Roasted Charred Peppers-6.webp",
+      "sourceSha256": "25f2c5d7e541b697f2ca57b2d49923c0047c4e3184b14bf51e338ebbe857053c",
+      "sourceIdx": 440,
+      "sourceBytes": 1671384,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 107,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "03-mish-stapka-3.webp": {
+      "sourceName": "Flame-Charred Red Peppers-7.webp",
+      "sourceSha256": "a7db4c5a81c5899b3b0d573f5f55c2513e84319dba4530d929240a46c9c2a805",
+      "sourceIdx": 441,
+      "sourceBytes": 1664558,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 107,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "04-mish-stapka-4.webp": {
+      "sourceName": "Peeling Charred Roasted Peppers-10.webp",
+      "sourceSha256": "cfc36066e148fb3397e961b82c71e7c3f80ca9ae178bbefb41c99311e6914720",
+      "sourceIdx": 444,
+      "sourceBytes": 1759920,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 107,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "05-mish-stapka-5.webp": {
+      "sourceName": "Sizzling Onions in a Cast-Iron Skillet-14.webp",
+      "sourceSha256": "461f1f290c3406bc2e45f2ed3b9b8d1d7e9a1faab981fb98791fbd109ab38f82",
+      "sourceIdx": 448,
+      "sourceBytes": 1556294,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 107,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "06-mish-stapka-6.webp": {
+      "sourceName": "Sizzling Tomato Pepper Skillet-18.webp",
+      "sourceSha256": "e732ae96942a6bc03d7b5fe2f24e4d025b07b2a94478bb8ce64181dc06c448dc",
+      "sourceIdx": 452,
+      "sourceBytes": 1797524,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 107,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
     "07-mish-stapka-7.webp": {
       "sourceName": "Sizzling Tomato Pepper Skillet with Feta-22.webp",
       "sourceSha256": "c8070f0b8dd2b9c7f6db23d8d77f08a90cf2dc4aeb05b3edf2e455264123cb96",
       "sourceIdx": 456,
       "sourceBytes": 1641918,
       "sourceSize": "1122x1402",
-      "role": "hero",
+      "role": "step",
       "batch": 107,
       "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "08-dopalnitelen-1.webp": {
+      "sourceName": "Bulgarian Mish-Mash Mise en Place-1.webp",
+      "sourceSha256": "9653fb363f2ae58ab704bdd04f51ed21576dee5384fdde52e7d15a7fcf338eb0",
+      "sourceIdx": 435,
+      "sourceBytes": 1777676,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 107,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "09-dopalnitelen-2.webp": {
+      "sourceName": "Rustic Mediterranean Mise en Place-3.webp",
+      "sourceSha256": "10b5864b88062c2a87d1d691bd5f714cba8591c5c17d6a5d3d21a4faea233b30",
+      "sourceIdx": 437,
+      "sourceBytes": 1820542,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 107,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "10-dopalnitelen-3.webp": {
+      "sourceName": "Bulgarian Mish-Mash Mise en Place-4.webp",
+      "sourceSha256": "dd74c70a114a6b9dc35bf07f8649be02acf493ae21c808b1da9f569afe01ce9e",
+      "sourceIdx": 438,
+      "sourceBytes": 1750686,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 107,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "11-dopalnitelen-4.webp": {
+      "sourceName": "Charred Bell Peppers Over Flame-5.webp",
+      "sourceSha256": "2380dfddad4fe0e23a8cc43344ba8affd1152aca7b3fca855637c2a13697ebe5",
+      "sourceIdx": 439,
+      "sourceBytes": 1691590,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 107,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "12-dopalnitelen-5.webp": {
+      "sourceName": "Charred Peppers Over Open Flame-8.webp",
+      "sourceSha256": "f7a66195e55ffb5ed3f9ccd02f5d7e9e0924e68d7efeb75e1559cf99bcbbb768",
+      "sourceIdx": 442,
+      "sourceBytes": 1678078,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 107,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "13-dopalnitelen-6.webp": {
+      "sourceName": "Roasted Peppers in the Professional Kitchen-9.webp",
+      "sourceSha256": "d1168032b2795b32840f8366aaf8a3a801836486437fb806f5bda956fb7f6958",
+      "sourceIdx": 443,
+      "sourceBytes": 1719416,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 107,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "14-dopalnitelen-7.webp": {
+      "sourceName": "Peeling Charred Roasted Peppers-11.webp",
+      "sourceSha256": "4b99be503908fb2eace33c7f250d5497f0544ec25d2d5413df5edab79b93afed",
+      "sourceIdx": 445,
+      "sourceBytes": 1664758,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 107,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "15-dopalnitelen-8.webp": {
+      "sourceName": "Peeling Roasted Peppers in a Rustic Kitchen-12.webp",
+      "sourceSha256": "c9bc06c3ce2fd336f6ebd155f6824c3eab32ffb0d30f1902820247afa82c6a20",
+      "sourceIdx": 446,
+      "sourceBytes": 1740686,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 107,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "16-dopalnitelen-9.webp": {
+      "sourceName": "Caramelizing Onions in a Warm Kitchen-13.webp",
+      "sourceSha256": "cd3451ba419fca8617ed546481ec423c205014d3dcc98f228394057c5265e734",
+      "sourceIdx": 447,
+      "sourceBytes": 1542446,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 107,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "17-dopalnitelen-10.webp": {
+      "sourceName": "Sizzling Buttered Onions in a Skillet-15.webp",
+      "sourceSha256": "afd3f959e5140f7cc92830e8adc243a2059dda1e6fc62b1bab15f54f8f6022af",
+      "sourceIdx": 449,
+      "sourceBytes": 1522536,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 107,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "18-dopalnitelen-11.webp": {
+      "sourceName": "Mediterranean Skillet with Sizzling Onions-16.webp",
+      "sourceSha256": "5e403890ff07ac335302daff4f9f9d876bc8d87650c817cb2cdcb515c53fe18c",
+      "sourceIdx": 450,
+      "sourceBytes": 1709356,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 107,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "19-dopalnitelen-12.webp": {
+      "sourceName": "Simmering Roasted Pepper Tomato Stew-17.webp",
+      "sourceSha256": "5e87b4409669cc13ce8be7a4b2d4c5527b4b44e1314a37b30a95a9288dd3f56e",
+      "sourceIdx": 451,
+      "sourceBytes": 1616470,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 107,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "20-dopalnitelen-13.webp": {
+      "sourceName": "Simmering Roasted Pepper Tomato Skillet-19.webp",
+      "sourceSha256": "5215cd16a2013649ca02c77b57042d8f3b6ba691cedfd53def6c2e6729b3fdac",
+      "sourceIdx": 453,
+      "sourceBytes": 1607086,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 107,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "21-dopalnitelen-14.webp": {
+      "sourceName": "Rustic Tomato Pepper Skillet Feast-20.webp",
+      "sourceSha256": "167decdd92b71d87d9ff66c3c231022992e7fb88169ea2ff911b7d25eda4cad1",
+      "sourceIdx": 454,
+      "sourceBytes": 1821622,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 107,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "22-dopalnitelen-15.webp": {
+      "sourceName": "Rustic Skillet with Crumbled Feta-21.webp",
+      "sourceSha256": "6cdb7a786e0ad7b85dbd531b79d78b784b389c2384a513d9c18601e338d87f7e",
+      "sourceIdx": 455,
+      "sourceBytes": 1737258,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 107,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "23-dopalnitelen-16.webp": {
+      "sourceName": "Feta Sprinkled Over Simmering Peppers-23.webp",
+      "sourceSha256": "09eb3b36fcfbe10857f5d793b73f53e851bc6e932b733d4b6390e36aa2df23a5",
+      "sourceIdx": 457,
+      "sourceBytes": 1615334,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 107,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "24-dopalnitelen-17.webp": {
+      "sourceName": "Cheese Crumbles Over Rustic Skillet Shakshuka-24.webp",
+      "sourceSha256": "90376fe7e431b887af19226343fbfebfab7dc7b2023dc8b17ddd4d8f4d366922",
+      "sourceIdx": 458,
+      "sourceBytes": 1768694,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 107,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "25-dopalnitelen-18.webp": {
+      "sourceName": "ChatGPT Image Jun 5, 2026, 12_40_26 PM.png",
+      "sourceSha256": "8e830cb845c29cbd6c304a97ae07a11e3dc77ef41fb306d7dcdc2867d6d96fb7",
+      "sourceIdx": 1056,
+      "sourceBytes": 2620470,
+      "sourceSize": "1448x1086",
+      "role": "extra",
+      "batch": 41,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "26-dopalnitelen-19.webp": {
+      "sourceName": "ChatGPT Image Jun 5, 2026, 12_43_30 PM.png",
+      "sourceSha256": "179fe2bcae260c605d409eae74bc663bd1e5fa77a544b0a5a04eb2136efcd2ac",
+      "sourceIdx": 1057,
+      "sourceBytes": 2596085,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 42,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "27-dopalnitelen-20.webp": {
+      "sourceName": "ChatGPT Image Jun 5, 2026, 12_43_36 PM.png",
+      "sourceSha256": "8a8c9ccee10b31645ff9a1e9c2ce604dd7dd3a9d7d71720b5a6d64446deaab39",
+      "sourceIdx": 1058,
+      "sourceBytes": 3345257,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 43,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "28-dopalnitelen-21.webp": {
+      "sourceName": "ChatGPT Image Jun 5, 2026, 12_43_44 PM.png",
+      "sourceSha256": "7bfa3fc2a6e89689ad4e849da44b62bf183f4dddeeadce1b4a7b0c88c9598406",
+      "sourceIdx": 1059,
+      "sourceBytes": 2559217,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 44,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "29-dopalnitelen-22.webp": {
+      "sourceName": "ChatGPT Image Jun 5, 2026, 12_43_49 PM.png",
+      "sourceSha256": "967eb3c309e8ce21aa3fe2a5c77de8f6d2c378d760188742859a5211b24a76e6",
+      "sourceIdx": 1060,
+      "sourceBytes": 2628008,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 44,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "30-dopalnitelen-23.webp": {
+      "sourceName": "ChatGPT Image Jun 5, 2026, 12_43_54 PM.png",
+      "sourceSha256": "584c24456627416d335f4cabc2b8a3b20d2cc7d0b2c28ae244b97a8289edcdfa",
+      "sourceIdx": 1061,
+      "sourceBytes": 2458209,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 44,
+      "confidence": "MEDIUM",
       "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
     }
   },
   "generatedHash": "4bbec934d90c954d4abdf5f1107516e1c8a2bf83d2df3e65935b77d65948af33",
   "excludedSources": [],
-  "importedAt": "2026-11-19T05:27:49.976Z",
-  "singleHeroPolicy": {
-    "date": "2026-11-25",
-    "kept": "07-mish-stapka-7.webp",
-    "removed": 29
-  }
+  "importedAt": "2026-11-19T05:27:49.976Z"
 }

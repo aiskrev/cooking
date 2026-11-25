@@ -30,6 +30,34 @@ servings: 4
 difficulty: Intermediate
 cover: 08-gotovo-yastie.webp
 photos:
+  01-dopalnitelen-1.webp:
+    alt: "Duck breast with cherries: Duck with a berry sauce and hazelnuts"
+    caption: Duck with a berry sauce and hazelnuts
+    session: Photo session 6 (November 2026)
+  02-dopalnitelen-2.webp:
+    alt: "Duck breast with cherries: Duck with cherries and roasted endive"
+    caption: Duck with cherries and roasted endive
+    session: Photo session 6 (November 2026)
+  03-dopalnitelen-3.webp:
+    alt: "Duck breast with cherries: Duck with cherry sauce"
+    caption: Duck with cherry sauce
+    session: Photo session 6 (November 2026)
+  04-dopalnitelen-4.webp:
+    alt: "Duck breast with cherries: Duck with a cherry reduction and crisps"
+    caption: Duck with a cherry reduction and crisps
+    session: Photo session 6 (November 2026)
+  05-dopalnitelen-5.webp:
+    alt: "Duck breast with cherries: Duck with cherry sauce and endive"
+    caption: Duck with cherry sauce and endive
+    session: Photo session 6 (November 2026)
+  06-dopalnitelen-6.webp:
+    alt: "Duck breast with cherries: Duck with cherries and roasted shallot"
+    caption: Duck with cherries and roasted shallot
+    session: Photo session 6 (November 2026)
+  07-dopalnitelen-7.webp:
+    alt: "Duck breast with cherries: Duck with cherry jus and hazelnuts"
+    caption: Duck with cherry jus and hazelnuts
+    session: Photo session 6 (November 2026)
   08-gotovo-yastie.webp:
     alt: "Duck breast with cherries: Duck breast with cherries and hazelnuts on celeriac purée"
     caption: Duck breast with cherries and hazelnuts on celeriac purée
@@ -156,7 +184,7 @@ allergens:
   - Sulphites (wine)
 translation:
   status: published
-  sourceHash: "e10d2b96ada0df2f"
+  sourceHash: 36e904c58f1a9020
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-25

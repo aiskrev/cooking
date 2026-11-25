@@ -1,6 +1,204 @@
 {
   "slug": "tokachka-s-kesteni-krushi-i-savoysko-zele",
   "photos": {
+    "01-tokachka-stapka-1.webp": {
+      "sourceName": "Rustic Game Bird Harvest Mise-en-Scène-1.webp",
+      "sourceSha256": "48fb0968ceebe605afa64ac01cb8741616ca01a89628fc135f73091523482519",
+      "sourceIdx": 3011,
+      "sourceBytes": 1856050,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 1,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-tokachka-stapka-2.webp": {
+      "sourceName": "Rustic Guinea Fowl Preparation-7.webp",
+      "sourceSha256": "205d5827f3f550b3f857c00f3e322ca26756ef6ae651aa0d383bb1d3d2c71ef0",
+      "sourceIdx": 3017,
+      "sourceBytes": 1832532,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 1,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "03-tokachka-stapka-3.webp": {
+      "sourceName": "ChatGPT Image Nov 21, 2026, 02_02_34 PM-2.webp",
+      "sourceSha256": "f20ade786d37373f362a56f29a8f4a2c60f0ba39ef741cf0fd7650765fe44a7f",
+      "sourceIdx": 3195,
+      "sourceBytes": 1917102,
+      "sourceSize": "1448x1086",
+      "role": "step",
+      "batch": 16,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "04-tokachka-stapka-4.webp": {
+      "sourceName": "ChatGPT Image Nov 21, 2026, 02_02_39 PM-6.webp",
+      "sourceSha256": "58f26cc876168250f0f425f6b05cdca3e6b3992012bef662b734bd8ee89c9e14",
+      "sourceIdx": 3199,
+      "sourceBytes": 1639828,
+      "sourceSize": "1448x1086",
+      "role": "step",
+      "batch": 16,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "05-tokachka-stapka-5.webp": {
+      "sourceName": "ChatGPT Image Nov 21, 2026, 02_02_37 PM-5.webp",
+      "sourceSha256": "c2c28ce4d0474747d67d1129d9787b6b5855a0255112555008cad8aa9bcce460",
+      "sourceIdx": 3198,
+      "sourceBytes": 1802352,
+      "sourceSize": "1448x1086",
+      "role": "step",
+      "batch": 16,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "06-tokachka-stapka-6.webp": {
+      "sourceName": "Rustic Roasted Poultry with Chestnut Purée-9.webp",
+      "sourceSha256": "5da84cf1a807ce274bc21973bfc34231e53a3024d8f1fd90db551cbd91bd199d",
+      "sourceIdx": 3019,
+      "sourceBytes": 1844470,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 1,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "07-tokachka-stapka-7.webp": {
+      "sourceName": "ChatGPT Image Nov 21, 2026, 02_02_35 PM-3.webp",
+      "sourceSha256": "f01b69224c1e87c62e99eb05bbe20f58a293da625a4b0869888f40057713db26",
+      "sourceIdx": 3196,
+      "sourceBytes": 1930068,
+      "sourceSize": "1448x1086",
+      "role": "step",
+      "batch": 16,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "08-tokachka-stapka-8.webp": {
+      "sourceName": "Golden-Basted Poultry with Thyme-8.webp",
+      "sourceSha256": "84369f6bc2a2a1c103c5311f56c847291ad0e80abeeae1009fb4f49b282c44f4",
+      "sourceIdx": 3018,
+      "sourceBytes": 1749712,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 1,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "09-tokachka-stapka-9.webp": {
+      "sourceName": "Whisking a Rich Copper Pan Sauce-10.webp",
+      "sourceSha256": "d7085fd099b9c37c406f63fbb23084bdc5922d1d0e606a8b2ea1abff3325c7ec",
+      "sourceIdx": 3020,
+      "sourceBytes": 1665084,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 1,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "10-tokachka-stapka-10.webp": {
+      "sourceName": "ChatGPT Image Nov 21, 2026, 02_02_42 PM-8.webp",
+      "sourceSha256": "25fb5d21aa4150d603e7b93bd096a53a1d7c85a72973a3cd7f256c6b06b3daf7",
+      "sourceIdx": 3201,
+      "sourceBytes": 1724010,
+      "sourceSize": "1448x1086",
+      "role": "step",
+      "batch": 16,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "11-dopalnitelen-1.webp": {
+      "sourceName": "Gourmet Poultry with Chestnuts and Pears-2.webp",
+      "sourceSha256": "d78d291404dc2da390a497a686702d42c3db7a0cfdaf7b6a0e4763a4be4b1fd9",
+      "sourceIdx": 3012,
+      "sourceBytes": 1990730,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 1,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "12-dopalnitelen-2.webp": {
+      "sourceName": "Gourmet Autumn Roasted Poultry Platter-3.webp",
+      "sourceSha256": "22e7270b1ebef52bef88f8beef1ee5b1f5cdcf2022bd343f60b5eed7ff5de3a3",
+      "sourceIdx": 3013,
+      "sourceBytes": 1815544,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 1,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "13-dopalnitelen-3.webp": {
+      "sourceName": "Gourmet Roasted Poultry with Chestnut Purée-4.webp",
+      "sourceSha256": "2073f03bb3bba037eeeaf17244aee7b1de89a39270bbcf0f6cfa2116484ded59",
+      "sourceIdx": 3014,
+      "sourceBytes": 1980282,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 1,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "14-dopalnitelen-4.webp": {
+      "sourceName": "Rustic Poultry Mise en Place-6.webp",
+      "sourceSha256": "e722d7d85077793c418d614efbf3d1d7553769c89d3a4166e3676dbcbc296868",
+      "sourceIdx": 3016,
+      "sourceBytes": 1956108,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 1,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "15-dopalnitelen-5.webp": {
+      "sourceName": "ChatGPT Image Nov 21, 2026, 02_02_32 PM-1.webp",
+      "sourceSha256": "5a8d16f985f9824798f4a495c7c460db13f5fa375be99c189c96be9dd389bdd0",
+      "sourceIdx": 3194,
+      "sourceBytes": 2069052,
+      "sourceSize": "1448x1086",
+      "role": "extra",
+      "batch": 16,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "16-dopalnitelen-6.webp": {
+      "sourceName": "ChatGPT Image Nov 21, 2026, 02_02_36 PM-4.webp",
+      "sourceSha256": "9c732df9655e19c0f504054f1a37ae13c19b0ac8268dd57e6889d6c9e8eeb327",
+      "sourceIdx": 3197,
+      "sourceBytes": 1865888,
+      "sourceSize": "1448x1086",
+      "role": "extra",
+      "batch": 16,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "17-dopalnitelen-7.webp": {
+      "sourceName": "ChatGPT Image Nov 21, 2026, 02_02_40 PM-7.webp",
+      "sourceSha256": "fc9f8dc2bac2f56d5221f970f10f81cea487216933c3ce8794c6199a84a7779f",
+      "sourceIdx": 3200,
+      "sourceBytes": 1906576,
+      "sourceSize": "1448x1086",
+      "role": "extra",
+      "batch": 16,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "18-dopalnitelen-8.webp": {
+      "sourceName": "ChatGPT Image Nov 21, 2026, 02_02_45 PM-10.webp",
+      "sourceSha256": "d12a7cfcff749ec5748c0dbbeb42b26fb28b2db6bf08527a0fa6320703bafd73",
+      "sourceIdx": 3203,
+      "sourceBytes": 1975720,
+      "sourceSize": "1448x1086",
+      "role": "extra",
+      "batch": 16,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
     "19-gotovo-yastie.webp": {
       "sourceName": "ChatGPT Image Nov 21, 2026, 02_02_44 PM-9.webp",
       "sourceSha256": "cbd797a199e177926dcf2c6eaf1aadf2b6cc41e993fc9265e94d09159239cac5",
@@ -11,14 +209,86 @@
       "batch": 16,
       "confidence": "HIGH",
       "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "20-dopalnitelen-9.webp": {
+      "sourceName": "ChatGPT Image Nov 24, 2026, 08_57_27 AM-1.webp",
+      "sourceSha256": "fbfa886ee64a5c8bbf83902db6ea49f951a300cc96a2e8eded1ab548ca0d3dbe",
+      "sourceIdx": 4116,
+      "sourceBytes": 1770264,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 11,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "21-dopalnitelen-10.webp": {
+      "sourceName": "ChatGPT Image Nov 24, 2026, 08_57_27 AM-2.webp",
+      "sourceSha256": "1b0ff5f791c4a6c5c1f02147c309ccd1e1cb4166834054062aba556210c3420a",
+      "sourceIdx": 4117,
+      "sourceBytes": 1746698,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 11,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "22-dopalnitelen-11.webp": {
+      "sourceName": "ChatGPT Image Nov 24, 2026, 08_57_28 AM-3.webp",
+      "sourceSha256": "761bd2c9070371c02eae26f7dc879a7166fcb6a6e30652888a6877026080d309",
+      "sourceIdx": 4118,
+      "sourceBytes": 1703042,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 11,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "23-dopalnitelen-12.webp": {
+      "sourceName": "ChatGPT Image Nov 24, 2026, 08_57_29 AM-4.webp",
+      "sourceSha256": "197b2526495ff3d62b8f5940538d2b48834bbfa696c927297b385fb1a8ab2c59",
+      "sourceIdx": 4119,
+      "sourceBytes": 1762308,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 11,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "24-dopalnitelen-13.webp": {
+      "sourceName": "ChatGPT Image Nov 24, 2026, 08_57_30 AM-5.webp",
+      "sourceSha256": "04fe1749ddb3066e5eed9641aa5b0079c76cea51f2aebcc9a2d9bbc47bb0fd69",
+      "sourceIdx": 4120,
+      "sourceBytes": 1966204,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 11,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "25-dopalnitelen-14.webp": {
+      "sourceName": "ChatGPT Image Nov 24, 2026, 08_57_31 AM-6.webp",
+      "sourceSha256": "f672f8539033f77f33ed54a07318e31993e1d2f788f3e99670a66260626b858e",
+      "sourceIdx": 4121,
+      "sourceBytes": 1746180,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 11,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "26-dopalnitelen-15.webp": {
+      "sourceName": "ChatGPT Image Nov 24, 2026, 08_57_32 AM-7.webp",
+      "sourceSha256": "cd19ab4140c6e46f7fcb66253eaa466cc414997c360b4a003fa1c00a88189d4e",
+      "sourceIdx": 4122,
+      "sourceBytes": 1762980,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 11,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
     }
   },
   "generatedHash": "709f8723150aa5bf401a280e068e32d74fd972e54f8a1ae5b5f955a0c424c062",
   "excludedSources": [],
-  "importedAt": "2026-11-21T12:35:35.451Z",
-  "singleHeroPolicy": {
-    "date": "2026-11-25",
-    "kept": "19-gotovo-yastie.webp",
-    "removed": 25
-  }
+  "importedAt": "2026-11-21T12:35:35.451Z"
 }

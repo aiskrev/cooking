@@ -27,6 +27,42 @@ servings: 4
 difficulty: Advanced
 cover: 10-gotovo-yastie.webp
 photos:
+  01-agneshki-stapka-1.webp:
+    alt: "Herb-crusted rack of lamb: Mise en place: rack of lamb, aubergines, lemon, garlic and butter"
+    caption: "Mise en place: rack of lamb, aubergines, lemon, garlic and butter"
+    session: Photo session 3 (November 2026)
+  02-agneshki-stapka-2.webp:
+    alt: "Herb-crusted rack of lamb: Seasoning the rack of lamb before searing"
+    caption: Seasoning the rack of lamb before searing
+    session: Photo session 3 (November 2026)
+  03-agneshki-stapka-3.webp:
+    alt: "Herb-crusted rack of lamb: Smoked aubergine purée in a copper pot with roasted vegetables"
+    caption: Smoked aubergine purée in a copper pot with roasted vegetables
+    session: Photo session 3 (November 2026)
+  04-agneshki-stapka-4.webp:
+    alt: "Herb-crusted rack of lamb: Rack of lamb basted with butter and rosemary in the pan"
+    caption: Rack of lamb basted with butter and rosemary in the pan
+    session: Photo session 3 (November 2026)
+  05-agneshki-stapka-6.webp:
+    alt: "Herb-crusted rack of lamb: Mise en place for the lamb with onions, cherry tomatoes and lemon"
+    caption: Mise en place for the lamb with onions, cherry tomatoes and lemon
+    session: Photo session 3 (November 2026)
+  06-agneshki-stapka-7.webp:
+    alt: "Herb-crusted rack of lamb: Rosemary sauce simmering in a pot"
+    caption: Rosemary sauce simmering in a pot
+    session: Photo session 3 (November 2026)
+  07-agneshki-stapka-8.webp:
+    alt: "Herb-crusted rack of lamb: Rack of lamb with caramelised vegetables and sauce on a dark plate"
+    caption: Rack of lamb with caramelised vegetables and sauce on a dark plate
+    session: Photo session 3 (November 2026)
+  08-dopalnitelen-1.webp:
+    alt: "Herb-crusted rack of lamb: The finished rack with a herb crust, on the purée"
+    caption: The finished rack with a herb crust, on the purée
+    session: Photo session 3 (November 2026)
+  09-dopalnitelen-2.webp:
+    alt: "Herb-crusted rack of lamb: Rack of lamb with roasted vegetables and sauce"
+    caption: Rack of lamb with roasted vegetables and sauce
+    session: Photo session 3 (November 2026)
   10-gotovo-yastie.webp:
     alt: "Herb-crusted rack of lamb: Sliced herb-crusted rack of lamb on aubergine purée"
     caption: Sliced herb-crusted rack of lamb on aubergine purée
@@ -163,17 +199,21 @@ ingredients:
 steps:
   - title: Prepare the ingredients
     text: Lay out the rack, the aubergines, garlic, lemon, herbs, butter and the vegetables for the garnish.
+    photo: 01-agneshki-stapka-1.webp
   - title: Season the rack
     text: Season the rack with salt and black pepper on all sides.
     cue: The meat is evenly seasoned with a dry surface.
+    photo: 02-agneshki-stapka-2.webp
   - title: Make the smoked aubergine purée
     text: Cut the roasted aubergines open and scrape out the soft flesh. Leave it to drain for 10 minutes. Blend with the garlic, olive oil, lemon juice and yogurt until smooth. Season with salt and keep warm.
     cue: The purée is smooth and slightly smoky, with no water.
     time: 15
+    photo: 03-agneshki-stapka-3.webp
   - title: Sear the rack
     text: Heat a pan with the oil. Sear the rack for 1.5 minutes on every side until golden. Reduce the heat, add the butter, rosemary and garlic and baste the meat with the foaming butter several times.
     cue: The crust is golden and the butter smells of rosemary.
     time: 6
+    photo: 04-agneshki-stapka-4.webp
   - title: Coat with the herb crust
     text: Brush a thin layer of mustard over the top and press the herb mixture on so that it sticks. Roast in the oven at 200 °C for 10–14 minutes.
     why: The mustard is the glue that holds the crust.
@@ -182,13 +222,16 @@ steps:
   - title: Roast the garnish
     text: In the same oven, on a second tray, roast the onions and cherry tomatoes with the olive oil, honey and salt for 20–25 minutes.
     time: 22
+    photo: 05-agneshki-stapka-6.webp
   - title: Make the rosemary sauce
     text: In the pan used for the rack, sweat the finely chopped shallots, pour in the wine and reduce by half. Add the jus and rosemary and simmer until the sauce starts to coat the spoon. Remove the rosemary, strain and whisk in the cold butter over low heat.
     cue: The sauce is glossy, dark and slightly syrupy.
     time: 15
+    photo: 06-agneshki-stapka-7.webp
   - title: Rest, slice and serve
     text: Rest the rack for 8–10 minutes in a warm place. Cut into chops of 2 ribs each. Arrange on the aubergine purée with the onions and cherry tomatoes and spoon over the sauce.
     time: 10
+    photo: 07-agneshki-stapka-8.webp
 tips:
   - A hot oven, a short rest and a good thermometer are all you need for a perfect result.
   - If the mustard is very sharp, mix it with a little honey.
@@ -209,7 +252,7 @@ allergens:
   - Sulphites (wine)
 translation:
   status: published
-  sourceHash: "6e3c21ebfe146ec5"
+  sourceHash: a9b4908335c1854e
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-21

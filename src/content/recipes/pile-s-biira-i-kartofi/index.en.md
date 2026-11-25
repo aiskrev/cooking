@@ -23,6 +23,18 @@ servings: 5
 difficulty: Easy
 cover: 05-pile-stapka-6.webp
 photos:
+  01-pile-stapka-1.webp:
+    alt: "Beer-roasted chicken: The ingredients for the beer chicken"
+    caption: The ingredients for the beer chicken
+  02-pile-stapka-2.webp:
+    alt: "Beer-roasted chicken: Rubbing the chicken with the spices"
+    caption: Rubbing the chicken with the spices
+  03-pile-stapka-3.webp:
+    alt: "Beer-roasted chicken: Pouring the beer into the tin"
+    caption: Pouring the beer into the tin
+  04-pile-stapka-5.webp:
+    alt: "Beer-roasted chicken: The pan-crisped potatoes"
+    caption: The pan-crisped potatoes
   05-pile-stapka-6.webp:
     alt: "Beer-roasted chicken: The chicken, served"
     caption: The chicken, served
@@ -82,12 +94,15 @@ ingredients:
 steps:
   - title: Prepare the ingredients
     text: Lay out the chicken, the potatoes, the beer, the butter, the garlic and the spices.
+    photo: 01-pile-stapka-1.webp
   - title: Rub the chicken
     text: Loosen the skin on the breast with your fingers and push half of the aromatic butter under it. Coat the whole chicken with the rest. Put the two whole cloves of garlic in the cavity.
     why: The butter under the skin keeps the breast juicy – it is the driest part of the chicken.
+    photo: 02-pile-stapka-2.webp
   - title: Pour in the beer
     text: Put the chicken in a deep tin, breast up, and pour the beer into the tin – not over the chicken.
     avoid: Beer poured over the skin washes off the spices and the skin does not become crisp.
+    photo: 03-pile-stapka-3.webp
   - title: Roast
     text: Roast for 20 minutes at 200 °C, then reduce to 180 °C and roast for another 60–70 minutes. Baste the chicken with the sauce from the tin every 20 minutes.
     cue: The skin is dark golden, and the juice from the thigh, pierced with a knife, runs clear; the thermometer shows 74 °C.
@@ -95,9 +110,11 @@ steps:
   - title: Cook the potatoes
     text: While the chicken roasts, boil the potatoes in salted water for 12–15 minutes and drain them. Fry them in a wide frying pan with the oil and a few spoonfuls of the chicken sauce until they form a crust. Season with salt and sprinkle with dill.
     time: 25
+    photo: 04-pile-stapka-5.webp
   - title: Serve
     text: Let the chicken rest for 15 minutes before carving it. Serve with the potatoes, the sauce from the tin and a salad.
     why: During the rest the juices redistribute and do not run out when it is carved.
+    photo: 05-pile-stapka-6.webp
 tips:
   - Dry skin becomes crisp – dry the chicken very well.
   - If the breast darkens early, cover it with a piece of foil.
@@ -115,7 +132,7 @@ allergens:
   - Milk and dairy
 translation:
   status: published
-  sourceHash: "86cf2ddb3de0b3cd"
+  sourceHash: ede03553745a5ae1
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-20

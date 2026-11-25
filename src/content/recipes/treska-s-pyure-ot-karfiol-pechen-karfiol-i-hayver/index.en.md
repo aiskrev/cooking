@@ -29,6 +29,26 @@ servings: 4
 difficulty: Intermediate
 cover: 06-gotovo-yastie.webp
 photos:
+  01-dopalnitelen-1.webp:
+    alt: "Cod with cauliflower purée: Cod with cauliflower purée, roe and roasted florets"
+    caption: Cod with cauliflower purée, roe and roasted florets
+    session: Photo session 6 (November 2026)
+  02-dopalnitelen-2.webp:
+    alt: "Cod with cauliflower purée: The fish on cauliflower purée with herb oil"
+    caption: The fish on cauliflower purée with herb oil
+    session: Photo session 6 (November 2026)
+  03-dopalnitelen-3.webp:
+    alt: "Cod with cauliflower purée: Cod with a herb crust and leeks"
+    caption: Cod with a herb crust and leeks
+    session: Photo session 6 (November 2026)
+  04-dopalnitelen-4.webp:
+    alt: "Cod with cauliflower purée: The fish with fennel and purée"
+    caption: The fish with fennel and purée
+    session: Photo session 6 (November 2026)
+  05-dopalnitelen-5.webp:
+    alt: "Cod with cauliflower purée: Cod with roasted cauliflower and capers"
+    caption: Cod with roasted cauliflower and capers
+    session: Photo session 6 (November 2026)
   06-gotovo-yastie.webp:
     alt: "Cod with cauliflower purée: Crisp-skinned cod on cauliflower purée with roe"
     caption: Crisp-skinned cod on cauliflower purée with roe
@@ -142,7 +162,7 @@ allergens:
   - Tree nuts
 translation:
   status: published
-  sourceHash: "b2b1cccc86903946"
+  sourceHash: f286f134cac04f00
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-25

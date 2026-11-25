@@ -32,6 +32,18 @@ photos:
     alt: "Salt-baked beetroot: The finished plate: beetroot, goat curd, cherries, caraway and beet jus"
     caption: "The finished plate: beetroot, goat curd, cherries, caraway and beet jus"
     session: Photo session 5 (November 2026)
+  02-dopalnitelen-1.webp:
+    alt: "Salt-baked beetroot: Serving variation on a dark plate"
+    caption: Serving variation on a dark plate
+    session: Photo session 5 (November 2026)
+  03-dopalnitelen-2.webp:
+    alt: "Salt-baked beetroot: Variation with whole cherries and beet leaves"
+    caption: Variation with whole cherries and beet leaves
+    session: Photo session 5 (November 2026)
+  04-dopalnitelen-3.webp:
+    alt: "Salt-baked beetroot: Variation with golden and red beetroot"
+    caption: Variation with golden and red beetroot
+    session: Photo session 5 (November 2026)
 mise:
   - Heat the oven to 190 °C.
   - Wash the beetroots without cutting off the roots and tails.
@@ -139,6 +151,7 @@ steps:
     cue: The cut face shows clear rings.
   - title: Plate
     text: Pour a spoonful of jus onto the plate. Arrange the beetroot at different heights, add quenelles of goat curd, the cherries and the leaves. Sprinkle with caraway.
+    photo: 01-tsvekle-stapka-6.webp
 tips:
   - Different beetroot varieties (red, golden, candy-striped) make the plate richer.
   - The salt crust is discarded – it is only an "oven" for the beetroot.
@@ -160,7 +173,7 @@ allergens:
   - Eggs
 translation:
   status: published
-  sourceHash: "606cb8c31ccdefab"
+  sourceHash: 436375dbc9e3590a
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-24

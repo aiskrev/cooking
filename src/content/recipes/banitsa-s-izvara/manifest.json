@@ -1,6 +1,28 @@
 {
   "slug": "banitsa-s-izvara",
   "photos": {
+    "01-dopalnitelen-1.webp": {
+      "sourceName": "ChatGPT Image May 25, 2026, 11_59_12 AM - Copy.png",
+      "sourceSha256": "16da70792b47e1474413f0c41146b38ed876ff9c094ddd00aad60a788f0748bf",
+      "sourceIdx": 1018,
+      "sourceBytes": 2460111,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 9,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-dopalnitelen-2.webp": {
+      "sourceName": "ChatGPT Image May 25, 2026, 01_01_26 PM - Copy.png",
+      "sourceSha256": "796d1efb3dd7cdc3cd5bc6574b12d5c4e53aeb9fd5c064dbe85887b80808a9e1",
+      "sourceIdx": 1022,
+      "sourceBytes": 2180665,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 11,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
     "03-gotovo-yastie.webp": {
       "sourceName": "ChatGPT Image May 25, 2026, 12_48_07 PM - Copy.png",
       "sourceSha256": "56e08c40bc8a64162bdd2b3bfe34d010244b34c3df7636cf14726f34fac8d720",
@@ -15,10 +37,5 @@
   },
   "generatedHash": "3c62a5e84f144d46d479231d6a9efa13ff27c0a99776d763d91cca92d66ec09b",
   "excludedSources": [],
-  "importedAt": "2026-11-19T05:27:55.420Z",
-  "singleHeroPolicy": {
-    "date": "2026-11-25",
-    "kept": "03-gotovo-yastie.webp",
-    "removed": 2
-  }
+  "importedAt": "2026-11-19T05:27:55.420Z"
 }
