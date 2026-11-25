@@ -23,21 +23,6 @@ servings: 6
 difficulty: Easy
 cover: 06-teleshka-stapka-6.webp
 photos:
-  01-teleshka-stapka-1.webp:
-    alt: "Beef soup: The ingredients for the beef soup"
-    caption: The ingredients for the beef soup
-  02-teleshka-stapka-2.webp:
-    alt: "Beef soup: The meat simmers and the foam is skimmed"
-    caption: The meat simmers and the foam is skimmed
-  03-teleshka-stapka-3.webp:
-    alt: "Beef soup: Adding the vegetables"
-    caption: Adding the vegetables
-  04-teleshka-stapka-4.webp:
-    alt: "Beef soup: Adding the potatoes"
-    caption: Adding the potatoes
-  05-teleshka-stapka-5.webp:
-    alt: "Beef soup: The soup with a slice of lemon"
-    caption: The soup with a slice of lemon
   06-teleshka-stapka-6.webp:
     alt: "Beef soup: The soup, served with bread"
     caption: The soup, served with bread
@@ -93,28 +78,22 @@ ingredients:
 steps:
   - title: Prepare the ingredients
     text: Lay out the meat, the carrots, the celery, the onion, the potatoes and the spices.
-    photo: 01-teleshka-stapka-1.webp
   - title: Boil the meat
     text: Cover the meat with the cold water and bring it to the boil over medium heat. Skim the foam until it stops appearing, then reduce the heat to the lowest setting. Add the black peppercorns and the bay leaf and cook for about an hour and a half.
     why: In cold water the proteins are released slowly and gather as foam that is easy to skim.
     avoid: Hard boiling breaks the foam and the fat into tiny droplets and the broth turns cloudy.
     time: 90
-    photo: 02-teleshka-stapka-2.webp
   - title: Add the vegetables
     text: Add the whole carrots, the celery and the onion to the meat and salt. Cook for another 20 minutes.
     time: 20
-    photo: 03-teleshka-stapka-3.webp
   - title: Add the potatoes
     text: Take out the meat and the vegetables and cut them into bite-sized pieces. Dice the potatoes and drop them into the broth together with the meat and the vegetables. Cook for 20 minutes.
     cue: The potatoes are soft and the meat comes apart with a spoon.
     time: 20
-    photo: 04-teleshka-stapka-4.webp
   - title: Season
     text: Taste for salt, sprinkle with parsley and ladle the soup into warmed bowls. Add a slice of lemon to each.
-    photo: 05-teleshka-stapka-5.webp
   - title: Serve
     text: Serve with fresh bread and black pepper at the table.
-    photo: 06-teleshka-stapka-6.webp
 tips:
   - Meat with a bone or with a little gristle gives a richer broth.
   - If you want a completely clear broth, strain it through a fine sieve before returning the meat.
@@ -131,7 +110,7 @@ allergens:
   - Celery
 translation:
   status: published
-  sourceHash: e04686b9db119c5f
+  sourceHash: "39f9e475333866db"
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-20

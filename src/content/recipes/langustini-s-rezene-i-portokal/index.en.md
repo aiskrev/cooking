@@ -24,47 +24,11 @@ cookTime: 35
 restTime: 0
 servings: 4
 difficulty: Advanced
-cover: 10-dopalnitelen-3.webp
+cover: 09-dopalnitelen-2.webp
 photos:
-  01-langustini-stapka-1.webp:
-    alt: "Langoustines with fennel and orange: Mise en place: langoustines, fennel, orange, shallot and cognac"
-    caption: "Mise en place: langoustines, fennel, orange, shallot and cognac"
-    session: Photo session 3 (November 2026)
-  02-langustini-stapka-2.webp:
-    alt: "Langoustines with fennel and orange: Mise en place of peeled tails on trays and fennel"
-    caption: Mise en place of peeled tails on trays and fennel
-    session: Photo session 3 (November 2026)
-  03-langustini-stapka-3.webp:
-    alt: "Langoustines with fennel and orange: Peeling the langoustines on the board"
-    caption: Peeling the langoustines on the board
-    session: Photo session 3 (November 2026)
-  04-langustini-stapka-4.webp:
-    alt: "Langoustines with fennel and orange: Roasted shells and vegetables in a large tray"
-    caption: Roasted shells and vegetables in a large tray
-    session: Photo session 3 (November 2026)
-  05-langustini-stapka-5.webp:
-    alt: "Langoustines with fennel and orange: Langoustines in a pan with fennel"
-    caption: Langoustines in a pan with fennel
-    session: Photo session 3 (November 2026)
-  06-langustini-stapka-6.webp:
-    alt: "Langoustines with fennel and orange: Orange sauce in a copper pot"
-    caption: Orange sauce in a copper pot
-    session: Photo session 3 (November 2026)
-  07-langustini-stapka-7.webp:
-    alt: "Langoustines with fennel and orange: Plating langoustines with tweezers and sauce"
-    caption: Plating langoustines with tweezers and sauce
-    session: Photo session 3 (November 2026)
-  08-dopalnitelen-1.webp:
-    alt: "Langoustines with fennel and orange: Close-up of a langoustine with a glaze"
-    caption: Close-up of a langoustine with a glaze
-    session: Photo session 3 (November 2026)
   09-dopalnitelen-2.webp:
     alt: "Langoustines with fennel and orange: A finished plate of langoustines"
     caption: A finished plate of langoustines
-    session: Photo session 3 (November 2026)
-  10-dopalnitelen-3.webp:
-    alt: "Langoustines with fennel and orange: Close-up of a langoustine with orange and fennel"
-    caption: Close-up of a langoustine with orange and fennel
     session: Photo session 3 (November 2026)
 mise:
   - Remove the heads and tails of the langoustines; keep the shells for the sauce.
@@ -146,28 +110,21 @@ ingredients:
 steps:
   - title: Lay out the ingredients
     text: Lay out the langoustines, fennel, orange and seasonings.
-    photo: 01-langustini-stapka-1.webp
   - title: Prepare the langoustines
     text: Remove the heads and peel the tails, keeping the shells.
-    photo: 02-langustini-stapka-2.webp
   - title: Peel the tails
     text: Peel the tails and remove the intestinal vein.
-    photo: 03-langustini-stapka-3.webp
   - title: Roast the shells
     text: Roast the shells in oil until red, add the shallot, tomatoes and cognac and flambé or let it evaporate.
     time: 10
-    photo: 04-langustini-stapka-4.webp
   - title: Sear the tails
     text: Sear the tails in butter with the fennel for 1.5–2 minutes on each side.
     time: 3
-    photo: 05-langustini-stapka-5.webp
   - title: Make the sauce
     text: Add the water and wine to the shells, simmer for 20 minutes, strain and thicken with the orange juice; whisk in the cold butter.
     time: 25
-    photo: 06-langustini-stapka-6.webp
   - title: Plate
     text: Put down the fennel, tails and orange segments and spoon over the sauce.
-    photo: 07-langustini-stapka-7.webp
 tips:
   - Do not overcook the tails.
   - The shells give the colour and aroma of the sauce.
@@ -186,7 +143,7 @@ allergens:
   - Sulphites (wine)
 translation:
   status: published
-  sourceHash: fe57d27f213fa10d
+  sourceHash: "352862801fbf77ab"
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-21

@@ -1,68 +1,13 @@
 {
   "slug": "rodopski-patatnik",
   "photos": {
-    "01-rodopski-stapka-1.webp": {
-      "sourceName": "Rustic Ingredients on a Wooden Table-1.webp",
-      "sourceSha256": "11d8e4e0dc1e2f751519261c374d9820214f0b4c1ec322786fee32fa3def62af",
-      "sourceIdx": 284,
-      "sourceBytes": 1858902,
-      "sourceSize": "1122x1402",
-      "role": "step",
-      "batch": 93,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "02-rodopski-stapka-2.webp": {
-      "sourceName": "Cinematic Chef Grating Potatoes-2.webp",
-      "sourceSha256": "c570743359b51f2e24b3facf2b383d45afee49c225f29a502d64b4e9ae4d073b",
-      "sourceIdx": 285,
-      "sourceBytes": 1577398,
-      "sourceSize": "1122x1402",
-      "role": "step",
-      "batch": 93,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "03-rodopski-stapka-3.webp": {
-      "sourceName": "Squeezing Shredded Potatoes in a Rustic Kitchen-3.webp",
-      "sourceSha256": "f6668d9b7bd4ace36f099d2400e8d63eefc6f1b1ec4ff8f4568a4928b55e7c29",
-      "sourceIdx": 286,
-      "sourceBytes": 1595058,
-      "sourceSize": "1122x1402",
-      "role": "step",
-      "batch": 93,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "04-rodopski-stapka-4.webp": {
-      "sourceName": "Rustic Herb and Cheese Bowl Mixing-4.webp",
-      "sourceSha256": "037c1f3ab9e270c6eb2c5251977fb6c4e535ac23960472013b432b9f42d528c3",
-      "sourceIdx": 287,
-      "sourceBytes": 1744004,
-      "sourceSize": "1122x1402",
-      "role": "step",
-      "batch": 93,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "05-rodopski-stapka-5.webp": {
-      "sourceName": "Rustic Herb Mashed Potatoes in Cast Iron-5.webp",
-      "sourceSha256": "e3e7cb4beb407119c96edf6b5d6b85e3e4e1e06eaf20802b78b0e188b7cabfeb",
-      "sourceIdx": 288,
-      "sourceBytes": 1565520,
-      "sourceSize": "1122x1402",
-      "role": "step",
-      "batch": 93,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
     "06-rodopski-stapka-6.webp": {
       "sourceName": "Crispy Rosti in Cast Iron-6.webp",
       "sourceSha256": "27181671df2ecb3db22799af4f32f544a5c6500de4f4588bd655596896c7e86d",
       "sourceIdx": 289,
       "sourceBytes": 1775644,
       "sourceSize": "1122x1402",
-      "role": "step",
+      "role": "hero",
       "batch": 93,
       "confidence": "HIGH",
       "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
@@ -70,5 +15,10 @@
   },
   "generatedHash": "8ae38e8812c0968e51f21064f4dfdcee793bf8d17a5f1a8670801502986b3be1",
   "excludedSources": [],
-  "importedAt": "2026-11-19T05:27:51.298Z"
+  "importedAt": "2026-11-19T05:27:51.298Z",
+  "singleHeroPolicy": {
+    "date": "2026-11-25",
+    "kept": "06-rodopski-stapka-6.webp",
+    "removed": 5
+  }
 }

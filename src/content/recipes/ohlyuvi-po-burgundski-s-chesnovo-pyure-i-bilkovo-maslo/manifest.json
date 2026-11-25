@@ -1,68 +1,13 @@
 {
   "slug": "ohlyuvi-po-burgundski-s-chesnovo-pyure-i-bilkovo-maslo",
   "photos": {
-    "01-ohlyuvi-stapka-1.webp": {
-      "sourceName": "Gourmet Escargot Mise en Place-2.webp",
-      "sourceSha256": "10b24fdb3213b946ae41ff7863fc31e5fbbbf309961e5f7d8cd134a70b831bdf",
-      "sourceIdx": 5199,
-      "sourceBytes": 2167566,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 20,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "02-ohlyuvi-stapka-2.webp": {
-      "sourceName": "Gourmet Escargot Preparation Still Life-1.webp",
-      "sourceSha256": "b2cecbcfedd1ba378d67567955a234ca3ce39df1b01cb8865807739873623597",
-      "sourceIdx": 5198,
-      "sourceBytes": 1940742,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 20,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "03-ohlyuvi-stapka-3.webp": {
-      "sourceName": "Gourmet Escargot Preparation Station-3.webp",
-      "sourceSha256": "57a0a9ba2a4a9f5c879f1bcd63857cdafbcf1e713b3e480477a8357d2868c5ca",
-      "sourceIdx": 5200,
-      "sourceBytes": 1810254,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 20,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "04-ohlyuvi-stapka-4.webp": {
-      "sourceName": "Gourmet Garlic Purée and Herb Oil-5.webp",
-      "sourceSha256": "23847c7df643a23e3d401f7799280d6d86badea9528db1ffe7e9612cf1d98fc8",
-      "sourceIdx": 5202,
-      "sourceBytes": 1774762,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 20,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "05-ohlyuvi-stapka-5.webp": {
-      "sourceName": "Whisking Butter Into Brown Sauce-6.webp",
-      "sourceSha256": "b8d1dd6d0830f18c3fcb4bafad8876968a76b34370ff01168b3804621d8fc4dc",
-      "sourceIdx": 5203,
-      "sourceBytes": 1646100,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 20,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
     "06-ohlyuvi-stapka-6.webp": {
       "sourceName": "Gourmet Escargots in Herb Butter Sauce-4.webp",
       "sourceSha256": "7460572c818e15c3e1dfd5e717dfd0b6ae286d245ed867d50fd28dce12ad4951",
       "sourceIdx": 5201,
       "sourceBytes": 1911610,
       "sourceSize": "1536x1024",
-      "role": "step",
+      "role": "hero",
       "batch": 20,
       "confidence": "HIGH",
       "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
@@ -70,5 +15,10 @@
   },
   "generatedHash": "ec05fa05c49e590f9492083364074ae9f055d86c2e3464ba27078c2a73c43152",
   "excludedSources": [],
-  "importedAt": "2026-11-25T13:16:52.791Z"
+  "importedAt": "2026-11-25T13:16:52.791Z",
+  "singleHeroPolicy": {
+    "date": "2026-11-25",
+    "kept": "06-ohlyuvi-stapka-6.webp",
+    "removed": 5
+  }
 }

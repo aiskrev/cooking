@@ -28,89 +28,9 @@ servings: 2
 difficulty: Advanced
 cover: 09-wagyu-stapka-9.webp
 photos:
-  01-wagyu-stapka-1.webp:
-    alt: "A5 Wagyu with black truffle: The ingredients for the wagyu: meat, celeriac, leek, bone marrow, truffle, shallot and wine"
-    caption: "The ingredients for the wagyu: meat, celeriac, leek, bone marrow, truffle, shallot and wine"
-    session: Photo session 3 (November 2026)
-  02-wagyu-stapka-2.webp:
-    alt: "A5 Wagyu with black truffle: Trimming the wagyu steak on the chopping board"
-    caption: Trimming the wagyu steak on the chopping board
-    session: Photo session 3 (November 2026)
-  03-wagyu-stapka-3.webp:
-    alt: "A5 Wagyu with black truffle: Celeriac purée in a copper pot against the background of the mise en place"
-    caption: Celeriac purée in a copper pot against the background of the mise en place
-    session: Photo session 3 (November 2026)
-  04-wagyu-stapka-4.webp:
-    alt: "A5 Wagyu with black truffle: Charred leek, celeriac purée and the ingredients for the sauce"
-    caption: Charred leek, celeriac purée and the ingredients for the sauce
-    session: Photo session 3 (November 2026)
-  05-wagyu-stapka-5.webp:
-    alt: "A5 Wagyu with black truffle: Mise en place: celeriac purée, leeks in the pan and the black-garlic cream"
-    caption: "Mise en place: celeriac purée, leeks in the pan and the black-garlic cream"
-    session: Photo session 3 (November 2026)
-  06-wagyu-stapka-6.webp:
-    alt: "A5 Wagyu with black truffle: Reducing the sauce with bone marrow in a steel pot"
-    caption: Reducing the sauce with bone marrow in a steel pot
-    session: Photo session 3 (November 2026)
-  07-wagyu-stapka-7.webp:
-    alt: "A5 Wagyu with black truffle: The wagyu in the pan, basted with butter and thyme"
-    caption: The wagyu in the pan, basted with butter and thyme
-    session: Photo session 3 (November 2026)
-  08-wagyu-stapka-8.webp:
-    alt: "A5 Wagyu with black truffle: The wagyu, basted with butter during searing"
-    caption: The wagyu, basted with butter during searing
-    session: Photo session 3 (November 2026)
   09-wagyu-stapka-9.webp:
     alt: "A5 Wagyu with black truffle: The finished plate: wagyu, celeriac purée, leek, black-garlic purée, bordelaise and truffle"
     caption: "The finished plate: wagyu, celeriac purée, leek, black-garlic purée, bordelaise and truffle"
-    session: Photo session 3 (November 2026)
-  10-dopalnitelen-1.webp:
-    alt: "A5 Wagyu with black truffle: Wagyu with the ingredients for the garnishes and sauce – another angle on the mise en place"
-    caption: Wagyu with the ingredients for the garnishes and sauce – another angle on the mise en place
-    session: Photo session 3 (November 2026)
-  11-dopalnitelen-2.webp:
-    alt: "A5 Wagyu with black truffle: Ingredients for the wagyu and garnishes laid out in metal trays"
-    caption: Ingredients for the wagyu and garnishes laid out in metal trays
-    session: Photo session 3 (November 2026)
-  12-dopalnitelen-3.webp:
-    alt: "A5 Wagyu with black truffle: Mise en place from above: meat, truffle, butter and a kitchen knife"
-    caption: "Mise en place from above: meat, truffle, butter and a kitchen knife"
-    session: Photo session 3 (November 2026)
-  13-dopalnitelen-4.webp:
-    alt: "A5 Wagyu with black truffle: Seasoning the steak with salt before searing"
-    caption: Seasoning the steak with salt before searing
-    session: Photo session 3 (November 2026)
-  14-dopalnitelen-5.webp:
-    alt: "A5 Wagyu with black truffle: Glossy sauce with bone marrow, spooned"
-    caption: Glossy sauce with bone marrow, spooned
-    session: Photo session 3 (November 2026)
-  15-dopalnitelen-6.webp:
-    alt: "A5 Wagyu with black truffle: Meat, bone marrow, truffle and vegetables on the counter – a wide shot"
-    caption: Meat, bone marrow, truffle and vegetables on the counter – a wide shot
-    session: Photo session 3 (November 2026)
-  16-dopalnitelen-7.webp:
-    alt: "A5 Wagyu with black truffle: Mise en place with a salt cellar and a bowl of butter"
-    caption: Mise en place with a salt cellar and a bowl of butter
-    session: Photo session 3 (November 2026)
-  17-dopalnitelen-8.webp:
-    alt: "A5 Wagyu with black truffle: Mise en place on a dark work surface"
-    caption: Mise en place on a dark work surface
-    session: Photo session 3 (November 2026)
-  18-dopalnitelen-9.webp:
-    alt: "A5 Wagyu with black truffle: Meat, leeks and bone marrow laid out on the counter"
-    caption: Meat, leeks and bone marrow laid out on the counter
-    session: Photo session 3 (November 2026)
-  19-dopalnitelen-10.webp:
-    alt: "A5 Wagyu with black truffle: Mise en place with shallot and truffle"
-    caption: Mise en place with shallot and truffle
-    session: Photo session 3 (November 2026)
-  20-dopalnitelen-11.webp:
-    alt: "A5 Wagyu with black truffle: Salt over the meat in the mise en place"
-    caption: Salt over the meat in the mise en place
-    session: Photo session 3 (November 2026)
-  21-dopalnitelen-12.webp:
-    alt: "A5 Wagyu with black truffle: Glossy sauce with bone marrow in a large pot"
-    caption: Glossy sauce with bone marrow in a large pot
     session: Photo session 3 (November 2026)
 mise:
   - Take the meat out of the refrigerator 20–25 minutes ahead, but keep it cold until searing. Pat it very dry.
@@ -227,44 +147,35 @@ ingredients:
 steps:
   - title: Lay out the ingredients
     text: Arrange the meat, celeriac, leeks, black garlic, bone marrow, shallot, wine, jus, butter, thyme and truffle on the counter. The wagyu stays cold until searing.
-    photo: 01-wagyu-stapka-1.webp
   - title: Prepare the meat
     text: Trim off any excess hard fat but keep the marbling. Pat dry and return to the refrigerator until searing.
     cue: The surface is dry and the fat is cold and white.
-    photo: 02-wagyu-stapka-2.webp
   - title: Cook the celeriac purée
     text: Simmer the celeriac in the milk under a lid for 20–25 minutes until completely tender. Drain, keeping the cooking liquid. Blend with the butter and salt until silky, adding a little of the reserved milk as needed. Pass through a fine sieve and keep warm.
     cue: The purée falls slowly from the spoon and is free of fibres.
     time: 25
-    photo: 03-wagyu-stapka-3.webp
   - title: Glaze the leeks
     text: Heat a dry pan and sear the leeks for 60–90 seconds on each side until charred in places. Add the butter and stock, reduce the heat to medium and cook for 3–5 minutes until tender and glossy. Season with salt.
     cue: The leeks are tender, with dark stripes and a glossy glaze.
     time: 5
-    photo: 04-wagyu-stapka-4.webp
   - title: Make the black-garlic cream
     text: Blend the black garlic with the water and sherry vinegar into a smooth paste. Pass through a sieve and put into a piping bag or a small bottle.
-    photo: 05-wagyu-stapka-5.webp
   - title: Make the bordelaise sauce
     text: Sweat the shallot with a little of the butter without colouring it. Pour in the wine and reduce to about 40 ml. Add the jus and reduce until glossy and able to coat a spoon. Strain. Blanch the bone marrow in water at 85–90 °C for 3–5 minutes, cut into small dice and add to the sauce. Finally, over low heat (65–70 °C), whisk in the cold butter.
     cue: The sauce is dark and shiny and falls from the spoon in a ribbon.
     avoid: Do not let the sauce boil after the butter goes in – it will split.
     time: 20
-    photo: 06-wagyu-stapka-6.webp
   - title: Sear the wagyu
     text: Season the meat with salt just before searing. In a heated pan with no added fat, sear for 60–90 seconds on each large side until a dark caramelised crust forms. Sear the edges too. Reduce the heat, add the butter and thyme and baste the meat with the foaming butter several times.
     cue: The crust is dark and caramelised, and the thermometer reads 48–50 °C at the core.
     time: 4
-    photo: 07-wagyu-stapka-7.webp
   - title: Rest and slice
     text: Rest the meat for 3–4 minutes on a warm rack. Slice across the grain into 4 slices 8–10 mm thick.
     why: The rest returns the juices to the meat and melts the fat evenly.
     cue: The cut shows an even pink, with no grey band.
     time: 4
-    photo: 08-wagyu-stapka-8.webp
   - title: Plate and serve
     text: On each plate spoon 75–85 g of purée into an oval, slightly left of centre. Fan 4 slices of wagyu over the purée and place 2 charred leeks on the right. Add three precise dots of black-garlic purée and spoon 30–40 ml of bordelaise in an arc around the meat, without covering the crust. Finish with about 2 g of thinly shaved truffle and a few flakes of salt.
-    photo: 09-wagyu-stapka-9.webp
 tips:
   - Everything except the searing and the butter step of the sauce can be prepared ahead; the purée and the leeks are gently rewarmed over a water bath.
   - If you have no thermometer, do not cook the wagyu for more than 3 minutes in total – with meat this marbled it is safer to undercook.
@@ -286,7 +197,7 @@ allergens:
   - Sulphites (wine)
 translation:
   status: published
-  sourceHash: 5e12fe118331d123
+  sourceHash: "fe80631c73d450ff"
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-21

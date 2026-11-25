@@ -24,21 +24,6 @@ servings: 2
 difficulty: Intermediate
 cover: 06-cherna-stapka-6.webp
 photos:
-  01-cherna-stapka-1.webp:
-    alt: "Miso-glazed black cod: The ingredients for the miso cod"
-    caption: The ingredients for the miso cod
-  02-cherna-stapka-2.webp:
-    alt: "Miso-glazed black cod: The miso marinade on the hob"
-    caption: The miso marinade on the hob
-  03-cherna-stapka-3.webp:
-    alt: "Miso-glazed black cod: Marinating the fish"
-    caption: Marinating the fish
-  04-cherna-stapka-4.webp:
-    alt: "Miso-glazed black cod: The fish under the grill"
-    caption: The fish under the grill
-  05-cherna-stapka-5.webp:
-    alt: "Miso-glazed black cod: Arranging the fish"
-    caption: Arranging the fish
   06-cherna-stapka-6.webp:
     alt: "Miso-glazed black cod: The finished miso cod, served"
     caption: The finished miso cod, served
@@ -80,27 +65,21 @@ ingredients:
 steps:
   - title: Prepare the ingredients
     text: Lay out the fish, the miso, the sake, the mirin, the sugar and the ginger.
-    photo: 01-cherna-stapka-1.webp
   - title: Cook the marinade
     text: Let the sake and the mirin come to the boil for 20–30 seconds. Lower the heat, stir in the miso until smooth and add the sugar. Stir until it dissolves and let the marinade cool completely.
     cue: The marinade is smooth, glossy and as thick as honey.
     avoid: Miso burns easily – stir constantly and do not let it boil.
-    photo: 02-cherna-stapka-2.webp
   - title: Marinate
     text: Coat the fillets on all sides with the cooled marinade, arrange them in the dish, cover and leave them in the refrigerator for 24 hours – and up to 48 if you have time.
-    photo: 03-cherna-stapka-3.webp
   - title: Grill
     text: Wipe off the excess marinade with your fingers, without washing the fish. Put the fillets skin side down on a greased rack or baking paper and cook them for 8–10 minutes.
     cue: The surface is dark caramel in patches and the flesh separates into flakes.
     avoid: A thick layer of marinade burns and turns bitter before the fish is cooked.
     time: 10
-    photo: 04-cherna-stapka-4.webp
   - title: Arrange
     text: Put a small mound of cooked rice on each plate and carefully transfer the fillet with a spatula.
-    photo: 05-cherna-stapka-5.webp
   - title: Serve
     text: Add pickled ginger and a slice of lime and serve immediately.
-    photo: 06-cherna-stapka-6.webp
 tips:
   - Black cod (sablefish) is very oily and forgiving; with ordinary cod reduce the cooking by 2–3 minutes.
   - The marinade keeps for up to two weeks in the refrigerator and is also good for chicken or aubergine.
@@ -118,7 +97,7 @@ allergens:
   - Soy
 translation:
   status: published
-  sourceHash: 8db44256f0c37f96
+  sourceHash: "abde2b5de2ac8836"
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-20

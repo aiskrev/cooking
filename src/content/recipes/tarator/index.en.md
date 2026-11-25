@@ -24,81 +24,9 @@ servings: 4
 difficulty: Easy
 cover: 09-tarator-stapka-9.webp
 photos:
-  01-tarator-stapka-1.webp:
-    alt: "Tarator: The ingredients for the tarator"
-    caption: The ingredients for the tarator
-  02-tarator-stapka-2.webp:
-    alt: "Tarator: Cutting the cucumbers"
-    caption: Cutting the cucumbers
-  03-tarator-stapka-3.webp:
-    alt: "Tarator: Garlic and salt in a stone mortar"
-    caption: Garlic and salt in a stone mortar
-  04-tarator-stapka-4.webp:
-    alt: "Tarator: The toasted walnuts in the pan"
-    caption: The toasted walnuts in the pan
-  05-tarator-stapka-5.webp:
-    alt: "Tarator: Chopping the walnuts"
-    caption: Chopping the walnuts
-  06-tarator-stapka-6.webp:
-    alt: "Tarator: Whisking the yogurt"
-    caption: Whisking the yogurt
-  07-tarator-stapka-7.webp:
-    alt: "Tarator: Adding the cold water"
-    caption: Adding the cold water
-  08-tarator-stapka-8.webp:
-    alt: "Tarator: Combining the tarator (second series)"
-    caption: Combining the tarator (second series)
   09-tarator-stapka-9.webp:
     alt: "Tarator: The finished tarator with egg and dill (second series)"
     caption: The finished tarator with egg and dill (second series)
-  10-dopalnitelen-1.webp:
-    alt: "Tarator: The ingredients – second frame"
-    caption: The ingredients – second frame
-    session: Alternate takes from the same session
-  11-dopalnitelen-2.webp:
-    alt: "Tarator: The ingredients – third frame"
-    caption: The ingredients – third frame
-    session: Alternate takes from the same session
-  12-dopalnitelen-3.webp:
-    alt: "Tarator: The chopping – second frame"
-    caption: The chopping – second frame
-    session: Alternate takes from the same session
-  13-dopalnitelen-4.webp:
-    alt: "Tarator: The chopping – third frame"
-    caption: The chopping – third frame
-    session: Alternate takes from the same session
-  14-dopalnitelen-5.webp:
-    alt: "Tarator: The mortar – second frame"
-    caption: The mortar – second frame
-    session: Alternate takes from the same session
-  15-dopalnitelen-6.webp:
-    alt: "Tarator: The mortar – third frame"
-    caption: The mortar – third frame
-    session: Alternate takes from the same session
-  16-dopalnitelen-7.webp:
-    alt: "Tarator: The walnuts – second frame"
-    caption: The walnuts – second frame
-    session: Alternate takes from the same session
-  17-dopalnitelen-8.webp:
-    alt: "Tarator: The ingredients (second series)"
-    caption: The ingredients (second series)
-    session: Photo session 1 (June 2026)
-  18-dopalnitelen-9.webp:
-    alt: "Tarator: Grating the cucumber (second series)"
-    caption: Grating the cucumber (second series)
-    session: Photo session 1 (June 2026)
-  19-dopalnitelen-10.webp:
-    alt: "Tarator: Whisking the yogurt (second series)"
-    caption: Whisking the yogurt (second series)
-    session: Photo session 1 (June 2026)
-  20-dopalnitelen-11.webp:
-    alt: "Tarator: Tarator with bread and fried courgettes (second series)"
-    caption: Tarator with bread and fried courgettes (second series)
-    session: Photo session 1 (June 2026)
-  21-dopalnitelen-12.webp:
-    alt: "Tarator: Tarator with a boiled egg at a table with bread and salad (second photo session)"
-    caption: Tarator with a boiled egg at a table with bread and salad (second photo session)
-    session: Photo session 2 (May–June 2026)
 mise:
   - Chill the yogurt, the water and the serving bowls.
   - Wash the cucumbers and finely chop the dill.
@@ -146,39 +74,30 @@ ingredients:
 steps:
   - title: Prepare the ingredients
     text: Lay out the yogurt, cucumbers, dill, garlic, walnuts, oil and cold water.
-    photo: 01-tarator-stapka-1.webp
   - title: Cut the cucumbers
     text: Cut the cucumbers into very small dice, about half a centimetre on each side. If the skin is thick or bitter, peel them.
     why: Small dice stay crisp and distribute evenly in every spoonful. Grated cucumbers release more water.
-    photo: 02-tarator-stapka-2.webp
   - title: Crush the garlic
     text: Crush the garlic with the salt in a mortar to a smooth paste.
     why: The salt acts as an abrasive, so the garlic dissolves into the tarator instead of staying in small pieces.
-    photo: 03-tarator-stapka-3.webp
   - title: Toast the walnuts
     text: Toast the walnuts in a dry frying pan over medium heat for 3–4 minutes, shaking the pan.
     cue: They smell strongly and have darkened only slightly.
     avoid: Do not take your eyes off them – they burn within seconds and turn bitter.
     time: 4
-    photo: 04-tarator-stapka-4.webp
   - title: Chop the walnuts
     text: Let the walnuts cool, then chop them coarsely with a knife.
-    photo: 05-tarator-stapka-5.webp
   - title: Whisk the yogurt
     text: Whisk the yogurt in a large bowl until smooth and glossy.
-    photo: 06-tarator-stapka-6.webp
   - title: Thin it
     text: Pour in the ice-cold water in a thin stream, whisking constantly.
     cue: The consistency is like thin pouring cream – tarator is eaten with a spoon, but it should not be a paste.
-    photo: 07-tarator-stapka-7.webp
   - title: Combine
     text: Add the cucumbers, garlic, dill, oil and half of the walnuts. Stir, taste for salt and leave in the refrigerator for 20 minutes.
     why: In twenty minutes the garlic and the dill give their aroma to the yogurt.
     time: 20
-    photo: 08-tarator-stapka-8.webp
   - title: Serve
     text: Ladle into chilled bowls, sprinkle with the remaining walnuts and some dill, and add a drizzle of oil. Optionally add slices of boiled egg.
-    photo: 09-tarator-stapka-9.webp
 tips:
   - Full-fat yogurt gives a richer, softer flavour.
   - If it will stand for more than an hour, add the cucumbers at the last moment – otherwise the tarator turns watery.
@@ -197,7 +116,7 @@ allergens:
   - Eggs
 translation:
   status: published
-  sourceHash: f9c967ed78e5f56d
+  sourceHash: "644a98c4648b535e"
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-20

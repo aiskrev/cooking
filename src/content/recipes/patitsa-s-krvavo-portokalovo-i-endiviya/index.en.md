@@ -26,42 +26,6 @@ servings: 4
 difficulty: Intermediate
 cover: 10-dopalnitelen-3.webp
 photos:
-  01-patitsa-stapka-1.webp:
-    alt: "Duck breast with blood orange: Mise en place on a tray: duck, blood orange, endive and honey"
-    caption: "Mise en place on a tray: duck, blood orange, endive and honey"
-    session: Photo session 3 (November 2026)
-  02-patitsa-stapka-2.webp:
-    alt: "Duck breast with blood orange: Scoring the skin of the duck into diamonds"
-    caption: Scoring the skin of the duck into diamonds
-    session: Photo session 3 (November 2026)
-  03-patitsa-stapka-3.webp:
-    alt: "Duck breast with blood orange: Mise en place with duck breasts, endive, honey and oranges"
-    caption: Mise en place with duck breasts, endive, honey and oranges
-    session: Photo session 3 (November 2026)
-  04-patitsa-stapka-4.webp:
-    alt: "Duck breast with blood orange: Duck basted with butter and thyme in a pan"
-    caption: Duck basted with butter and thyme in a pan
-    session: Photo session 3 (November 2026)
-  05-patitsa-stapka-5.webp:
-    alt: "Duck breast with blood orange: Caramelised endive in a pan beside the finished duck"
-    caption: Caramelised endive in a pan beside the finished duck
-    session: Photo session 3 (November 2026)
-  06-patitsa-stapka-6.webp:
-    alt: "Duck breast with blood orange: Glossy orange and honey sauce in a copper pot"
-    caption: Glossy orange and honey sauce in a copper pot
-    session: Photo session 3 (November 2026)
-  07-patitsa-stapka-7.webp:
-    alt: "Duck breast with blood orange: Arranging the duck with tweezers and sauce"
-    caption: Arranging the duck with tweezers and sauce
-    session: Photo session 3 (November 2026)
-  08-dopalnitelen-1.webp:
-    alt: "Duck breast with blood orange: Sliced duck breast with blood orange – close-up"
-    caption: Sliced duck breast with blood orange – close-up
-    session: Photo session 3 (November 2026)
-  09-dopalnitelen-2.webp:
-    alt: "Duck breast with blood orange: Duck in a pan, basted with butter"
-    caption: Duck in a pan, basted with butter
-    session: Photo session 3 (November 2026)
   10-dopalnitelen-3.webp:
     alt: "Duck breast with blood orange: Duck arranged with endive and orange"
     caption: Duck arranged with endive and orange
@@ -151,34 +115,27 @@ ingredients:
 steps:
   - title: Prepare the ingredients
     text: Lay out the duck, the oranges, the endive, honey, butter and the seasonings.
-    photo: 01-patitsa-stapka-1.webp
   - title: Score and season the skin
     text: Score the skin into diamonds, then salt it and sprinkle with pepper.
     cue: The skin is properly scored without touching the meat.
-    photo: 02-patitsa-stapka-2.webp
   - title: Set out the mise en place
     text: Lay everything out on the counter before searing.
-    photo: 03-patitsa-stapka-3.webp
   - title: Sear the duck
     text: Place the breasts skin side down in a cold pan and heat over medium for 8–10 minutes, pouring off the excess fat from time to time. Turn, add the butter and thyme and baste for 1–2 minutes.
     why: A cold start melts the fat under the skin, and the skin turns crisp.
     cue: The skin is golden and crisp, and the fat has run out.
     time: 12
-    photo: 04-patitsa-stapka-4.webp
   - title: Caramelise the endive
     text: In another pan, sear the endive with the butter and honey until golden, add the orange juice and cook until tender.
     cue: The endive is tender, glossy and deep golden.
     time: 8
-    photo: 05-patitsa-stapka-5.webp
   - title: Make the sauce
     text: Reduce the blood-orange juice with the honey, vinegar and juniper by half. Add the jus and simmer to a light syrup. Strain and whisk in the cold butter.
     cue: The sauce coats the back of a spoon.
     time: 12
-    photo: 06-patitsa-stapka-6.webp
   - title: Rest, slice and serve
     text: Rest the duck for 8 minutes in a warm place. Slice thinly. Arrange with the endive and orange segments and spoon over the sauce.
     time: 8
-    photo: 07-patitsa-stapka-7.webp
 tips:
   - The fat from the duck can be saved for roasting potatoes.
   - For a lighter flavour, reduce the honey and add more vinegar.
@@ -196,7 +153,7 @@ allergens:
   - Sulphites (wine)
 translation:
   status: published
-  sourceHash: 7f946dafe9539168
+  sourceHash: "e49db465bfbb995d"
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-21

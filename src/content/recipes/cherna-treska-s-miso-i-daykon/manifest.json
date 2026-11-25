@@ -1,134 +1,13 @@
 {
   "slug": "cherna-treska-s-miso-i-daykon",
   "photos": {
-    "01-cherna-stapka-1.webp": {
-      "sourceName": "Japanese Fish Dish Still Life-5.webp",
-      "sourceSha256": "f753e0994672f5fbc170824c72bda47b03e6bcf108cb9ff334c62bfed4e98f38",
-      "sourceIdx": 2113,
-      "sourceBytes": 1853964,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 11,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "02-cherna-stapka-2.webp": {
-      "sourceName": "Japanese Miso-Glazed Black Cod Mise en Place-9.webp",
-      "sourceSha256": "1a9d4b5c4146571982e1d903f24bc5ccc706fc3463a943ce45448409f95aca59",
-      "sourceIdx": 2117,
-      "sourceBytes": 1964982,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 11,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "03-cherna-stapka-3.webp": {
-      "sourceName": "Japanese Chef Slicing Fish Fillet-10.webp",
-      "sourceSha256": "54f845057daea15700c7d254cf51af71fbf668d2cf4448bed6b1b338e8d4aa31",
-      "sourceIdx": 2118,
-      "sourceBytes": 1601232,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 11,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "04-cherna-stapka-4.webp": {
-      "sourceName": "Miso-Glazed Fish Fillets with Pastry Brush-11.webp",
-      "sourceSha256": "3073702cae017cb9cf06fb55593acf16e8797e2beee5612140534d94aa109e59",
-      "sourceIdx": 2119,
-      "sourceBytes": 1790284,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 11,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "05-cherna-stapka-5.webp": {
-      "sourceName": "Steaming Dashi and Daikon Still Life-13.webp",
-      "sourceSha256": "37121d1c9b2a8ae72dfa81466b701114003b1fe2071428743ca4bac86a5ddabd",
-      "sourceIdx": 2121,
-      "sourceBytes": 1892712,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 11,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "06-cherna-stapka-6.webp": {
-      "sourceName": "Glistening Caramelized Black Cod Fillet-12.webp",
-      "sourceSha256": "160eca10d9bbd79beae54549a5397f19813d9db71142b55824e43dddc7a6dead",
-      "sourceIdx": 2120,
-      "sourceBytes": 1677074,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 11,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "07-cherna-stapka-7.webp": {
-      "sourceName": "Artisanal Miso-Glazed Cod Plating-6.webp",
-      "sourceSha256": "d98b1de1756c0ef150b0d1bf5d2ae79b219a13a647160039ed70de317d7eb32c",
-      "sourceIdx": 2114,
-      "sourceBytes": 1526678,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 11,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "08-dopalnitelen-1.webp": {
-      "sourceName": "Japanese Miso-Marinated Fish Ingredients-1.webp",
-      "sourceSha256": "c5fdb8a7e13d15e858ae9e26011889cdc1ba01fd1c2d1060eaca761cdf8ffaab",
-      "sourceIdx": 2109,
-      "sourceBytes": 1901286,
-      "sourceSize": "1536x1024",
-      "role": "extra",
-      "batch": 11,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
     "09-dopalnitelen-2.webp": {
       "sourceName": "Miso-Glazed Fish with Yuzu and Daikon-3.webp",
       "sourceSha256": "037acae5e93f480de387440d74af8509ceb62f66ef9bb77513ffd91e55b6f68f",
       "sourceIdx": 2111,
       "sourceBytes": 1786812,
       "sourceSize": "1536x1024",
-      "role": "extra",
-      "batch": 11,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "10-dopalnitelen-3.webp": {
-      "sourceName": "Miso-Glazed Cod with Yuzu and Shiso-4.webp",
-      "sourceSha256": "c64cde0b2d8a8ca0fe15929ebd619cccd0ff870f5d8f444b759a88601703936d",
-      "sourceIdx": 2112,
-      "sourceBytes": 1910518,
-      "sourceSize": "1536x1024",
-      "role": "extra",
-      "batch": 11,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "11-dopalnitelen-4.webp": {
-      "sourceName": "Miso-Glazed Fish with Radish Garnish-7.webp",
-      "sourceSha256": "418df7985bf4783004fb720d6b31178fcdc93607aaf9c803b171187ad200b114",
-      "sourceIdx": 2115,
-      "sourceBytes": 1665436,
-      "sourceSize": "1536x1024",
-      "role": "extra",
-      "batch": 11,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "12-dopalnitelen-5.webp": {
-      "sourceName": "Japanese Miso-Glazed Fish Mise en Place-8.webp",
-      "sourceSha256": "ee2d949923d4a57e76ea637389fd0149369deba2314f1a654c09a57f418fb6f2",
-      "sourceIdx": 2116,
-      "sourceBytes": 1932486,
-      "sourceSize": "1536x1024",
-      "role": "extra",
+      "role": "hero",
       "batch": 11,
       "confidence": "HIGH",
       "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
@@ -136,5 +15,10 @@
   },
   "generatedHash": "907544aaeb91ba7c07a40517eac5cc1343a20177152a20b108a76d4e8a72cee8",
   "excludedSources": [],
-  "importedAt": "2026-11-21T06:46:55.652Z"
+  "importedAt": "2026-11-21T06:46:55.652Z",
+  "singleHeroPolicy": {
+    "date": "2026-11-25",
+    "kept": "09-dopalnitelen-2.webp",
+    "removed": 11
+  }
 }

@@ -27,54 +27,6 @@ servings: 4
 difficulty: Intermediate
 cover: 13-gotovo-yastie.webp
 photos:
-  01-byala-stapka-1.webp:
-    alt: "White asparagus with morels: Mise en place: white asparagus, morels, hazelnuts, butter, wine and tarragon"
-    caption: "Mise en place: white asparagus, morels, hazelnuts, butter, wine and tarragon"
-    session: Photo session 3 (November 2026)
-  02-byala-stapka-2.webp:
-    alt: "White asparagus with morels: Peeling white asparagus with a peeler"
-    caption: Peeling white asparagus with a peeler
-    session: Photo session 3 (November 2026)
-  03-byala-stapka-3.webp:
-    alt: "White asparagus with morels: Peeled asparagus, morels and tarragon on the board"
-    caption: Peeled asparagus, morels and tarragon on the board
-    session: Photo session 3 (November 2026)
-  04-byala-stapka-4.webp:
-    alt: "White asparagus with morels: White asparagus cooked in butter and water"
-    caption: White asparagus cooked in butter and water
-    session: Photo session 3 (November 2026)
-  05-byala-stapka-5.webp:
-    alt: "White asparagus with morels: Morels seared in butter with tarragon"
-    caption: Morels seared in butter with tarragon
-    session: Photo session 3 (November 2026)
-  06-byala-stapka-6.webp:
-    alt: "White asparagus with morels: Creamy morel sauce, whisked"
-    caption: Creamy morel sauce, whisked
-    session: Photo session 3 (November 2026)
-  07-byala-stapka-7.webp:
-    alt: "White asparagus with morels: White asparagus with butter and tarragon in a pan"
-    caption: White asparagus with butter and tarragon in a pan
-    session: Photo session 3 (November 2026)
-  08-dopalnitelen-1.webp:
-    alt: "White asparagus with morels: Mise en place with white asparagus, morels and wine"
-    caption: Mise en place with white asparagus, morels and wine
-    session: Photo session 3 (November 2026)
-  09-dopalnitelen-2.webp:
-    alt: "White asparagus with morels: Pouring wine over morels in a copper pot"
-    caption: Pouring wine over morels in a copper pot
-    session: Photo session 3 (November 2026)
-  10-dopalnitelen-3.webp:
-    alt: "White asparagus with morels: White asparagus, morels and hazelnuts on a dark counter"
-    caption: White asparagus, morels and hazelnuts on a dark counter
-    session: Photo session 3 (November 2026)
-  11-dopalnitelen-4.webp:
-    alt: "White asparagus with morels: Buttery morels with fresh herbs"
-    caption: Buttery morels with fresh herbs
-    session: Photo session 3 (November 2026)
-  12-dopalnitelen-5.webp:
-    alt: "White asparagus with morels: Morels in a creamy sauce in a copper pot"
-    caption: Morels in a creamy sauce in a copper pot
-    session: Photo session 3 (November 2026)
   13-gotovo-yastie.webp:
     alt: "White asparagus with morels: White asparagus with butter and morels"
     caption: White asparagus with butter and morels
@@ -154,30 +106,23 @@ ingredients:
 steps:
   - title: Lay out the ingredients
     text: Lay out the asparagus, morels, hazelnuts, wine and butter.
-    photo: 01-byala-stapka-1.webp
   - title: Peel the asparagus
     text: With a peeler, peel the asparagus from the tip towards the end and cut off the woody end.
     cue: The asparagus is clean, with no fibrous strips.
-    photo: 02-byala-stapka-2.webp
   - title: Prepare the mise en place
     text: Lay out the peeled asparagus, the morels and the herbs.
-    photo: 03-byala-stapka-3.webp
   - title: Cook the asparagus in butter
     text: In a wide pan with 200 ml of water, the butter, salt and sugar, lay the asparagus and cook over low heat for 10–14 minutes.
     cue: The asparagus is tender but not greasy.
     time: 12
-    photo: 04-byala-stapka-4.webp
   - title: Sear the morels
     text: In a pan with the butter, sear the morels for 4–5 minutes, add the shallots and cook for another 2 minutes.
     time: 7
-    photo: 05-byala-stapka-5.webp
   - title: Make the creamy sauce
     text: Pour in the wine, reduce and add the cream; thicken and season with lemon.
     time: 8
-    photo: 06-byala-stapka-6.webp
   - title: Plate
     text: Arrange the asparagus on a plate, spoon over the morels and sauce, and sprinkle with hazelnuts and tarragon.
-    photo: 07-byala-stapka-7.webp
 tips:
   - Fresh asparagus squeaks when rubbed – buy firm stalks.
   - Do not skip the peeling.
@@ -196,7 +141,7 @@ allergens:
   - Tree nuts
 translation:
   status: published
-  sourceHash: 779569d0239bc769
+  sourceHash: "2070832def20eb55"
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-21

@@ -24,21 +24,6 @@ servings: 10
 difficulty: Intermediate
 cover: 06-orehova-stapka-6.webp
 photos:
-  01-orehova-stapka-1.webp:
-    alt: "Walnut cake with caramel: The ingredients for the walnut cake"
-    caption: The ingredients for the walnut cake
-  02-orehova-stapka-2.webp:
-    alt: "Walnut cake with caramel: The vanilla cream in the copper pot"
-    caption: The vanilla cream in the copper pot
-  03-orehova-stapka-3.webp:
-    alt: "Walnut cake with caramel: The ladyfingers with the caramel"
-    caption: The ladyfingers with the caramel
-  04-orehova-stapka-4.webp:
-    alt: "Walnut cake with caramel: The walnuts on the cake"
-    caption: The walnuts on the cake
-  05-orehova-stapka-5.webp:
-    alt: "Walnut cake with caramel: The caramel glaze"
-    caption: The caramel glaze
   06-orehova-stapka-6.webp:
     alt: "Walnut cake with caramel: A slice of cake with orange"
     caption: A slice of cake with orange
@@ -113,26 +98,20 @@ ingredients:
 steps:
   - title: Prepare the ingredients
     text: Lay out the milk, the egg yolks, the sugar, the cornflour, the butter, the cream, the ladyfingers and the walnuts.
-    photo: 01-orehova-stapka-1.webp
   - title: Cook the cream
     text: Whisk the yolks with the sugar, the cornflour and a little of the milk. Heat the remaining milk with the vanilla and pour it in a thin stream onto the yolks, whisking. Return to the heat and cook until the cream thickens and begins to bubble. Take it off, whisk in the butter and cover with cling film pressed against the surface.
     cue: The cream is thick, glossy, and bubbles pop on its surface.
     avoid: Do not stop stirring – the cream burns on the bottom in seconds.
     time: 10
-    photo: 02-orehova-stapka-2.webp
   - title: Make the caramel and arrange the ladyfingers
     text: Melt the sugar in a dry pan over medium heat to an amber colour. Take it off the heat and carefully pour in the warm cream, then add the butter and the salt and stir until smooth. Dip the ladyfingers for a second in the milk, arrange one layer on the bottom of the tin and drizzle it with a few spoonfuls of caramel.
     avoid: Hot caramel causes serious burns – the cream is poured in slowly and off the heat, because it spits.
-    photo: 03-orehova-stapka-3.webp
   - title: Layer
     text: "Spread half of the cream over the ladyfingers and sprinkle with a third of the walnuts. Repeat once more: ladyfingers, caramel, cream, walnuts. Cover and leave in the refrigerator overnight."
-    photo: 04-orehova-stapka-4.webp
   - title: Glaze with the caramel
     text: Release the cake from the ring and move it onto a plate. Warm the remaining caramel slightly and pour it over, letting it run down the sides. Arrange the remaining walnuts on top.
-    photo: 05-orehova-stapka-5.webp
   - title: Serve
     text: Cut the cake with a knife dipped in hot water and serve each piece with a slice of orange.
-    photo: 06-orehova-stapka-6.webp
 tips:
   - Ladyfingers are dipped for a moment – soaked ones fall apart and the cake does not hold its shape.
   - The caramel firms up in the refrigerator; before glazing, warm it for a few seconds.
@@ -152,7 +131,7 @@ allergens:
   - Tree nuts
 translation:
   status: published
-  sourceHash: 8e8a58aacabb71de
+  sourceHash: "f360278dd935632d"
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-20

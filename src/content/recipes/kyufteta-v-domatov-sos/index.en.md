@@ -24,18 +24,6 @@ servings: 4
 difficulty: Easy
 cover: 05-kyufteta-stapka-5.webp
 photos:
-  01-kyufteta-stapka-1.webp:
-    alt: "Kyufteta in tomato sauce: The ingredients for the kyufteta"
-    caption: The ingredients for the kyufteta
-  02-kyufteta-stapka-2.webp:
-    alt: "Kyufteta in tomato sauce: Shaping the kyufteta"
-    caption: Shaping the kyufteta
-  03-kyufteta-stapka-3.webp:
-    alt: "Kyufteta in tomato sauce: The tomato sauce with the spices"
-    caption: The tomato sauce with the spices
-  04-kyufteta-stapka-4.webp:
-    alt: "Kyufteta in tomato sauce: Pouring the sauce over the kyufteta"
-    caption: Pouring the sauce over the kyufteta
   05-kyufteta-stapka-5.webp:
     alt: "Kyufteta in tomato sauce: The kyufteta in the tomato sauce"
     caption: The kyufteta in the tomato sauce
@@ -133,25 +121,20 @@ ingredients:
 steps:
   - title: Prepare the ingredients
     text: Lay out the mince, the onion, the egg, the breadcrumbs, the tomatoes, the carrot and the spices.
-    photo: 01-kyufteta-stapka-1.webp
   - title: Shape and fry
     text: Knead the mince with half of the onion, the egg, the breadcrumbs, the savory, the cumin, the salt and the black pepper. With wet hands shape walnut-sized balls, roll them in the flour and fry them in the oil, 3–4 minutes, until a crust forms on all sides. Take them out.
     cue: The kyufteta are brown outside; inside they are not yet done.
     time: 8
-    photo: 02-kyufteta-stapka-2.webp
   - title: Cook the sauce
     text: In the same fat sweat the remaining onion and the carrot for 4–5 minutes. Add the tomato purée, the tomatoes, the sugar, the salt, the bay leaf and the water and let it boil for 10 minutes. Off the heat, stir in the paprika and the garlic.
     time: 10
-    photo: 03-kyufteta-stapka-3.webp
   - title: Pour over the kyufteta
     text: Arrange the kyufteta in a deep pot and cover them with the sauce. Cover and let them simmer for 20 minutes over low heat.
     cue: The sauce is thickened, and a cut kyufte has no pink in the middle.
     avoid: If it boils hard, the kyufteta fall apart.
     time: 20
-    photo: 04-kyufteta-stapka-4.webp
   - title: Serve
     text: Remove the bay leaf, sprinkle with parsley and serve with bread or a side dish.
-    photo: 05-kyufteta-stapka-5.webp
 tips:
   - Wet hands stop the mince from sticking while shaping.
   - Leave the kneaded mince for 30 minutes in the refrigerator – the kyufteta hold their shape better.
@@ -169,7 +152,7 @@ allergens:
   - Eggs
 translation:
   status: published
-  sourceHash: 2ae08d1f9c4f82f1
+  sourceHash: "e7fa33765d041a2f"
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-20

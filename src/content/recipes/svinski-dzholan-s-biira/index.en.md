@@ -23,24 +23,9 @@ servings: 4
 difficulty: Intermediate
 cover: 05-svinski-stapka-5.webp
 photos:
-  01-svinski-stapka-1.webp:
-    alt: "Pork knuckle with beer: The ingredients for the pork knuckle"
-    caption: The ingredients for the pork knuckle
-  02-svinski-stapka-2.webp:
-    alt: "Pork knuckle with beer: Rubbing the knuckle with the spices"
-    caption: Rubbing the knuckle with the spices
-  03-svinski-stapka-3.webp:
-    alt: "Pork knuckle with beer: The vegetables in the clay pot"
-    caption: The vegetables in the clay pot
-  04-svinski-stapka-4.webp:
-    alt: "Pork knuckle with beer: Pouring in the beer"
-    caption: Pouring in the beer
   05-svinski-stapka-5.webp:
     alt: "Pork knuckle with beer: The roasted knuckle"
     caption: The roasted knuckle
-  06-svinski-stapka-6.webp:
-    alt: "Pork knuckle with beer: The knuckle, served with mash and beer"
-    caption: The knuckle, served with mash and beer
 mise:
   - Score the skin of the knuckle into diamonds with a sharp knife, without cutting into the meat.
   - Cut the carrots and the peppers into large pieces, the onion into quarters and the lemon into slices.
@@ -106,28 +91,22 @@ ingredients:
 steps:
   - title: Prepare the ingredients
     text: Lay out the knuckle, the vegetables, the lemon, the beer and the spices.
-    photo: 01-svinski-stapka-1.webp
   - title: Rub the knuckle
     text: Mix the salt, the black pepper and the paprika, the thyme, the crushed garlic and the oil and rub the knuckle with it, working the mixture into the cuts in the skin. Leave it for 2 hours in the refrigerator.
     why: The salt penetrates the meat and dries the skin, which later becomes crisp.
-    photo: 02-svinski-stapka-2.webp
   - title: Arrange the vegetables
     text: Arrange the carrots, the peppers, the onion and the slices of lemon on the bottom of the clay pot.
     why: The vegetables lift the knuckle above the liquid and flavour the sauce.
-    photo: 03-svinski-stapka-3.webp
   - title: Pour in the beer
     text: Put the knuckle on the vegetables and pour the beer and the stock in around it. Close it, put it in a cold oven and switch it on to 170 °C. Roast for 2 hours 30 minutes.
     cue: The meat comes away from the bone under the pressure of a fork.
     time: 150
-    photo: 04-svinski-stapka-4.webp
   - title: Crisp the skin
     text: Remove the lid, raise the temperature to 220 °C and roast for another 20–30 minutes until the skin puffs up and becomes crisp.
     cue: The skin is dark golden, blistered, and sounds hollow when tapped.
     time: 25
-    photo: 05-svinski-stapka-5.webp
   - title: Serve
     text: Let the knuckle rest for 10 minutes, then divide it into pieces with two forks. Serve with the vegetables, the sauce from the pot and mashed potatoes.
-    photo: 06-svinski-stapka-6.webp
 tips:
   - The hind knuckle is meatier than the front one.
   - If the skin does not become crisp, dry it with paper and salt it lightly before crisping it.
@@ -145,7 +124,7 @@ allergens:
   - Milk and dairy
 translation:
   status: published
-  sourceHash: 914bde5e38f33930
+  sourceHash: "033077c6fb62f541"
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-20

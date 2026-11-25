@@ -24,47 +24,9 @@ servings: 8
 difficulty: Advanced
 cover: 07-zelnik-stapka-7.webp
 photos:
-  01-zelnik-stapka-1.webp:
-    alt: "Zelnik: The ingredients for the zelnik"
-    caption: The ingredients for the zelnik
-  02-zelnik-stapka-2.webp:
-    alt: "Zelnik: Mixing the dough"
-    caption: Mixing the dough
-  03-zelnik-stapka-3.webp:
-    alt: "Zelnik: Kneading the dough"
-    caption: Kneading the dough
-  04-zelnik-stapka-4.webp:
-    alt: "Zelnik: Sweating the spinach and the leek in the pan"
-    caption: Sweating the spinach and the leek in the pan
-  05-zelnik-stapka-5.webp:
-    alt: "Zelnik: Mixing the filling"
-    caption: Mixing the filling
-  06-zelnik-stapka-6.webp:
-    alt: "Zelnik: Rolling out the dough"
-    caption: Rolling out the dough
   07-zelnik-stapka-7.webp:
     alt: "Zelnik: Stretching the dough by hand"
     caption: Stretching the dough by hand
-  08-dopalnitelen-1.webp:
-    alt: "Zelnik: The ingredients – second frame"
-    caption: The ingredients – second frame
-    session: Alternate takes from the same session
-  09-dopalnitelen-2.webp:
-    alt: "Zelnik: The kneading – second frame"
-    caption: The kneading – second frame
-    session: Alternate takes from the same session
-  10-dopalnitelen-3.webp:
-    alt: "Zelnik: The kneading – third frame"
-    caption: The kneading – third frame
-    session: Alternate takes from the same session
-  11-dopalnitelen-4.webp:
-    alt: "Zelnik: The greens – second frame"
-    caption: The greens – second frame
-    session: Alternate takes from the same session
-  12-dopalnitelen-5.webp:
-    alt: "Zelnik: The filling – second frame"
-    caption: The filling – second frame
-    session: Alternate takes from the same session
 mise:
   - Wash the spinach in several changes of water and chop it coarsely; slice the leek into thin rounds.
   - "Melt the butter: half is for the filling, half for brushing the sheets."
@@ -124,32 +86,25 @@ ingredients:
 steps:
   - title: Prepare the ingredients
     text: Lay out the flour, the spinach, the leek, the cheese, the eggs and the butter.
-    photo: 01-zelnik-stapka-1.webp
   - title: Mix the dough
     text: In a bowl mix the flour and the salt, make a well and pour in the water, the oil and the vinegar. Stir until the dough comes together.
     why: The vinegar makes the dough more elastic and the sheets crisper.
-    photo: 02-zelnik-stapka-2.webp
   - title: Knead and rest
     text: Knead for 8–10 minutes on the work surface until the dough is smooth. Divide it into 4 balls, brush them generously with oil, cover them and leave them for 30 minutes.
     cue: The dough is as soft as an earlobe and does not stick.
     time: 30
-    photo: 03-zelnik-stapka-3.webp
   - title: Sweat the spinach and the leek
     text: Sweat the leek in half of the butter for 4–5 minutes, add the spinach and cook for another 3–4 minutes until wilted. Tip it into a colander and squeeze it out well with a spoon.
     why: Unsqueezed spinach releases water during baking and the lower sheets stay raw.
     time: 8
-    photo: 04-zelnik-stapka-4.webp
   - title: Mix the filling
     text: When the greens have cooled, stir them together with the crumbled cheese, the eggs and the black pepper.
-    photo: 05-zelnik-stapka-5.webp
   - title: Roll out
     text: Roll out one ball on the floured tablecloth into a circle about 30 cm in diameter.
-    photo: 06-zelnik-stapka-6.webp
   - title: Stretch
     text: Slip your hands under the dough and stretch it with the backs of your hands from the middle outwards, walking around the table. Trim off the thick edge.
     cue: The sheet is so thin that the pattern of the tablecloth shows through it.
     avoid: Do not stretch with your fingertips – a fingernail pierces the sheet.
-    photo: 07-zelnik-stapka-7.webp
   - title: Roll up and bake
     text: Spray the sheet with butter, spread a quarter of the filling in a strip along one edge and roll it up, lifting the tablecloth. Coil the roll like a snail in a greased tin and continue with the remaining sheets. Brush with butter and bake for 40–45 minutes.
     cue: The zelnik is dark golden and crisp on top and underneath.
@@ -172,7 +127,7 @@ allergens:
   - Milk and dairy
 translation:
   status: published
-  sourceHash: 15639004246dadb3
+  sourceHash: "6914ea5cce822666"
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-20

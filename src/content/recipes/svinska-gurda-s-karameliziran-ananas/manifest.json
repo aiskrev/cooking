@@ -1,160 +1,6 @@
 {
   "slug": "svinska-gurda-s-karameliziran-ananas",
   "photos": {
-    "01-svinska-stapka-1.webp": {
-      "sourceName": "Moody Gourmet Ingredient Still Life-1.webp",
-      "sourceSha256": "7955016f89abd2f8c1b3d394088ac2ef855a785a9d2d6eb5fe7345be4822b7f8",
-      "sourceIdx": 3035,
-      "sourceBytes": 1913052,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 3,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "02-svinska-stapka-2.webp": {
-      "sourceName": "Scored Pork Belly Spice Prep-8.webp",
-      "sourceSha256": "7a07fff999935ff2117028ea822ade65139a085a1b226e59f01fcfb0ce81ceb2",
-      "sourceIdx": 3042,
-      "sourceBytes": 1709708,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 3,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "03-svinska-stapka-3.webp": {
-      "sourceName": "Golden Braised Pork Belly Pot-10.webp",
-      "sourceSha256": "2e723518ef852fe9dfe27dbb54443bfe21be528d5a64ed0c3d7ba446be49088a",
-      "sourceIdx": 3044,
-      "sourceBytes": 1850780,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 3,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "04-svinska-stapka-4.webp": {
-      "sourceName": "Rustic Braised Pork Belly Dutch Oven-11.webp",
-      "sourceSha256": "bc2690d58b52cdab5b493e714561af09a0c03230dfdf24af6b341fa538d40c72",
-      "sourceIdx": 3045,
-      "sourceBytes": 1917464,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 3,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "05-svinska-stapka-5.webp": {
-      "sourceName": "Caramelized Pineapple with Spiced Glaze-15.webp",
-      "sourceSha256": "57ade2effbd74b6d850322a6bc47b2573cc38fe9395efe15381cadd065491f3d",
-      "sourceIdx": 3049,
-      "sourceBytes": 2081758,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 3,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "06-svinska-stapka-6.webp": {
-      "sourceName": "Caramelized Pineapple with Glossy Sauce-14.webp",
-      "sourceSha256": "3347e8a985759433d551d4fa5b1a1af689d4023e0956a9cfe17221dc96e45f6a",
-      "sourceIdx": 3048,
-      "sourceBytes": 1920216,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 3,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "07-svinska-stapka-7.webp": {
-      "sourceName": "Crispy Pork Belly Sear-12.webp",
-      "sourceSha256": "6173ec96519522d54ad33d7d69c2bd1e70ed1eb83a5d9d1c748b699c61c510c8",
-      "sourceIdx": 3046,
-      "sourceBytes": 1752892,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 3,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "08-svinska-stapka-8.webp": {
-      "sourceName": "Crispy Layered Pork Belly Sizzle-13.webp",
-      "sourceSha256": "a27969925907e771404bb748dcd116bb57d529df67dd4c128531ce6747fbe094",
-      "sourceIdx": 3047,
-      "sourceBytes": 2000668,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 3,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "09-svinska-stapka-9.webp": {
-      "sourceName": "Crispy Pork Belly with Charred Pineapple-4.webp",
-      "sourceSha256": "a9ef8c4fdf519d1af8a5666a16b91b577097f9c2145b072d41069f6545ed1882",
-      "sourceIdx": 3038,
-      "sourceBytes": 1856076,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 3,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "10-dopalnitelen-1.webp": {
-      "sourceName": "Crispy Pork Belly with Charred Pineapple-5.webp",
-      "sourceSha256": "334bd167fdcfe9586d31a23162b204a3bf84cf486e47ae97ed4d69a931461a04",
-      "sourceIdx": 3039,
-      "sourceBytes": 1952770,
-      "sourceSize": "1536x1024",
-      "role": "extra",
-      "batch": 3,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "11-dopalnitelen-2.webp": {
-      "sourceName": "Luxurious Pork Belly Mise en Place-2.webp",
-      "sourceSha256": "fe8c3f9cde2e19721ae8fd742858ba456ddf2a89e1cbb26b16b247f14025a972",
-      "sourceIdx": 3036,
-      "sourceBytes": 1979462,
-      "sourceSize": "1536x1024",
-      "role": "extra",
-      "batch": 3,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "12-dopalnitelen-3.webp": {
-      "sourceName": "Rustic Pork Belly Mise en Place-6.webp",
-      "sourceSha256": "c3d966896261fc59488366893a05dc5cba083819cc89f5537c366cde73d02b6a",
-      "sourceIdx": 3040,
-      "sourceBytes": 2168260,
-      "sourceSize": "1536x1024",
-      "role": "extra",
-      "batch": 3,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "13-dopalnitelen-4.webp": {
-      "sourceName": "Tropical Pork Belly Mise en Scène-7.webp",
-      "sourceSha256": "ff1e84dd574ed2c31e2c25bed40e6a1ce4b83d9d9129cf86584b46a56809877e",
-      "sourceIdx": 3041,
-      "sourceBytes": 1935822,
-      "sourceSize": "1536x1024",
-      "role": "extra",
-      "batch": 3,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "14-dopalnitelen-5.webp": {
-      "sourceName": "Cinematic Pork Belly Preparation-9.webp",
-      "sourceSha256": "760a347796ade5eb93e0f47317936a593c4bb7f8494ef09307c2e0b548e01263",
-      "sourceIdx": 3043,
-      "sourceBytes": 1676864,
-      "sourceSize": "1536x1024",
-      "role": "extra",
-      "batch": 3,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
     "15-gotovo-yastie.webp": {
       "sourceName": "Crispy Pork Belly with Charred Pineapple-3.webp",
       "sourceSha256": "4aa440009cc605f3c36a5848a143a7d3f5f11d307c1c852f0fbf154e87fe9fb1",
@@ -165,31 +11,14 @@
       "batch": 3,
       "confidence": "HIGH",
       "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "16-dopalnitelen-6.webp": {
-      "sourceName": "Crispy Pork Belly with Charred Pineapple-2.webp",
-      "sourceSha256": "c2f5aab66cc80640bd8c23fed3bd283c64234c15969e93a52f69eb0970c57efc",
-      "sourceIdx": 4051,
-      "sourceBytes": 1762692,
-      "sourceSize": "1199x1312",
-      "role": "extra",
-      "batch": 5,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "17-dopalnitelen-7.webp": {
-      "sourceName": "Crispy Pork Belly with Charred Pineapple-4.webp",
-      "sourceSha256": "0e47eb60e2afb47d49f877785143ee6519e35b1a92d73f46d6b83517a22468f1",
-      "sourceIdx": 4053,
-      "sourceBytes": 1722312,
-      "sourceSize": "1122x1402",
-      "role": "extra",
-      "batch": 5,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
     }
   },
   "generatedHash": "3c988ec76695ce1e6ecf94b8d65e50ad29b2e83fa4f677afb953cffaf916231c",
   "excludedSources": [],
-  "importedAt": "2026-11-21T12:35:35.557Z"
+  "importedAt": "2026-11-21T12:35:35.557Z",
+  "singleHeroPolicy": {
+    "date": "2026-11-25",
+    "kept": "15-gotovo-yastie.webp",
+    "removed": 16
+  }
 }

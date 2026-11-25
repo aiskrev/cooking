@@ -26,47 +26,11 @@ cookTime: 25
 restTime: 0
 servings: 4
 difficulty: Intermediate
-cover: 10-gotovo-yastie.webp
+cover: 08-dopalnitelen-1.webp
 photos:
-  01-lavrak-stapka-1.webp:
-    alt: "Sea bass with mussels and fennel: Mise en place: fillets, mussels, fennel, lemon and butter"
-    caption: "Mise en place: fillets, mussels, fennel, lemon and butter"
-    session: Photo session 3 (November 2026)
-  02-lavrak-stapka-2.webp:
-    alt: "Sea bass with mussels and fennel: Fillets, mussels and fennel on the mise en place"
-    caption: Fillets, mussels and fennel on the mise en place
-    session: Photo session 3 (November 2026)
-  03-lavrak-stapka-3.webp:
-    alt: "Sea bass with mussels and fennel: Drying the skin of the fish with a cloth"
-    caption: Drying the skin of the fish with a cloth
-    session: Photo session 3 (November 2026)
-  04-lavrak-stapka-4.webp:
-    alt: "Sea bass with mussels and fennel: Sea bass in a pan, skin side down"
-    caption: Sea bass in a pan, skin side down
-    session: Photo session 3 (November 2026)
-  05-lavrak-stapka-5.webp:
-    alt: "Sea bass with mussels and fennel: Mussels, fennel and wine in a pan"
-    caption: Mussels, fennel and wine in a pan
-    session: Photo session 3 (November 2026)
-  06-lavrak-stapka-6.webp:
-    alt: "Sea bass with mussels and fennel: Beurre blanc sauce spooned in a pan"
-    caption: Beurre blanc sauce spooned in a pan
-    session: Photo session 3 (November 2026)
-  07-lavrak-stapka-7.webp:
-    alt: "Sea bass with mussels and fennel: Plating the sea bass with mussels"
-    caption: Plating the sea bass with mussels
-    session: Photo session 3 (November 2026)
   08-dopalnitelen-1.webp:
     alt: "Sea bass with mussels and fennel: A plated dish of sea bass and mussels"
     caption: A plated dish of sea bass and mussels
-    session: Photo session 3 (November 2026)
-  09-dopalnitelen-2.webp:
-    alt: "Sea bass with mussels and fennel: Close-up of crisp-skinned sea bass"
-    caption: Close-up of crisp-skinned sea bass
-    session: Photo session 3 (November 2026)
-  10-gotovo-yastie.webp:
-    alt: "Sea bass with mussels and fennel: Crisp sea bass with fennel and mussels on a light sauce"
-    caption: Crisp sea bass with fennel and mussels on a light sauce
     session: Photo session 3 (November 2026)
 mise:
   - Pat the fillets dry and leave them at room temperature for 10 minutes.
@@ -148,29 +112,22 @@ ingredients:
 steps:
   - title: Lay out the ingredients
     text: Lay out the fish, mussels, fennel and butter.
-    photo: 01-lavrak-stapka-1.webp
   - title: Season the fish
     text: Pat dry, salt and prepare the fish.
-    photo: 02-lavrak-stapka-2.webp
   - title: Dry the skin
     text: Dry the skin with kitchen paper.
     cue: The skin is dry and taut.
-    photo: 03-lavrak-stapka-3.webp
   - title: Sear the fish
     text: In a pan with the oil, sear skin side down for 3–4 minutes, turn, add butter and baste.
     time: 6
-    photo: 04-lavrak-stapka-4.webp
   - title: Open the mussels
     text: In a pan with the wine and shallots, cook the mussels under a lid for 3–4 minutes until they open.
     time: 4
-    photo: 05-lavrak-stapka-5.webp
   - title: Make the sauce
     text: Reduce the wine and vinegar with the shallots; whisk in the cold butter in cubes.
     time: 8
-    photo: 06-lavrak-stapka-6.webp
   - title: Plate
     text: Put down the fennel and mussels, the fish on top and spoon over the sauce.
-    photo: 07-lavrak-stapka-7.webp
 tips:
   - Dried skin is the key to crispness.
   - Discard any mussels that do not open.
@@ -190,7 +147,7 @@ allergens:
   - Sulphites (wine)
 translation:
   status: published
-  sourceHash: 9e14d5e4b6a420b3
+  sourceHash: "c827a54faf084761"
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-21

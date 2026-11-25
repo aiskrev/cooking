@@ -28,58 +28,10 @@ servings: 4
 difficulty: Intermediate
 cover: 10-gotovo-yastie.webp
 photos:
-  01-morski-stapka-1.webp:
-    alt: "Monkfish with chorizo and white beans: Mise en place: monkfish, chorizo, fennel, white beans, tomatoes and saffron"
-    caption: "Mise en place: monkfish, chorizo, fennel, white beans, tomatoes and saffron"
-    session: Photo session 4 (November 2026)
-  02-morski-stapka-2.webp:
-    alt: "Monkfish with chorizo and white beans: Cutting the monkfish into medallions"
-    caption: Cutting the monkfish into medallions
-    session: Photo session 4 (November 2026)
-  03-morski-stapka-3.webp:
-    alt: "Monkfish with chorizo and white beans: Creamy white bean purée and crisp chorizo"
-    caption: Creamy white bean purée and crisp chorizo
-    session: Photo session 4 (November 2026)
-  04-morski-stapka-4.webp:
-    alt: "Monkfish with chorizo and white beans: Saffron broth simmering in a copper pot"
-    caption: Saffron broth simmering in a copper pot
-    session: Photo session 4 (November 2026)
-  05-morski-stapka-6.webp:
-    alt: "Monkfish with chorizo and white beans: Basting the monkfish medallions with butter"
-    caption: Basting the monkfish medallions with butter
-    session: Photo session 4 (November 2026)
-  06-morski-stapka-7.webp:
-    alt: "Monkfish with chorizo and white beans: Finished plate with monkfish, chorizo and saffron broth"
-    caption: Finished plate with monkfish, chorizo and saffron broth
-    session: Photo session 4 (November 2026)
-  07-dopalnitelen-1.webp:
-    alt: "Monkfish with chorizo and white beans: Monkfish with saffron sauce – another angle"
-    caption: Monkfish with saffron sauce – another angle
-    session: Photo session 4 (November 2026)
-  08-dopalnitelen-2.webp:
-    alt: "Monkfish with chorizo and white beans: Ingredients for the monkfish with chorizo and beans"
-    caption: Ingredients for the monkfish with chorizo and beans
-    session: Photo session 4 (November 2026)
-  09-dopalnitelen-3.webp:
-    alt: "Monkfish with chorizo and white beans: Mise en place in trays: fish, beans, chorizo and saffron"
-    caption: "Mise en place in trays: fish, beans, chorizo and saffron"
-    session: Photo session 4 (November 2026)
   10-gotovo-yastie.webp:
     alt: "Monkfish with chorizo and white beans: Monkfish medallion on white bean purée with chorizo and saffron broth"
     caption: Monkfish medallion on white bean purée with chorizo and saffron broth
     session: Photo session 4 (November 2026)
-  11-dopalnitelen-4.webp:
-    alt: "Monkfish with chorizo and white beans: The ingredients: monkfish, chorizo, white beans, saffron and prawns"
-    caption: "The ingredients: monkfish, chorizo, white beans, saffron and prawns"
-    session: Photo session 5 (November 2026)
-  12-dopalnitelen-5.webp:
-    alt: "Monkfish with chorizo and white beans: Trimming the monkfish fillet"
-    caption: "Trimming the monkfish fillet"
-    session: Photo session 5 (November 2026)
-  13-dopalnitelen-6.webp:
-    alt: "Monkfish with chorizo and white beans: Searing and butter-basting the fish"
-    caption: "Searing and butter-basting the fish"
-    session: Photo session 5 (November 2026)
 mise:
   - The day before, soak the beans in cold water.
   - Remove the grey membrane from the fish – it shrinks during searing and distorts the medallions.
@@ -183,20 +135,16 @@ ingredients:
 steps:
   - title: Lay out the ingredients
     text: Arrange the fish, chorizo, beans, fennel, tomatoes, saffron and butter.
-    photo: 01-morski-stapka-1.webp
   - title: Cut the medallions
     text: Cut the fillet into medallions 3–4 cm thick and pat them dry. Keep them in the refrigerator.
-    photo: 02-morski-stapka-2.webp
   - title: Cook and blend the beans
     text: Cook the soaked beans with the bay leaf and garlic for about an hour until completely soft. Drain, keeping a little water, and blend with the olive oil and butter to a creamy purée.
     cue: The purée is smooth and silky.
     time: 60
-    photo: 03-morski-stapka-3.webp
   - title: Make the saffron broth
     text: Sweat the shallot and fennel, add the bones, wine, tomatoes, water and saffron and simmer for 25 minutes. Strain and reduce to about 300 ml.
     cue: The broth is orange-gold and fragrant.
     time: 30
-    photo: 04-morski-stapka-4.webp
   - title: Fry the chorizo
     text: Fry the diced chorizo in a dry pan over medium heat until crisp and releasing its red fat. Keep the fat.
     time: 5
@@ -204,10 +152,8 @@ steps:
     text: Season the medallions and sear them in the hot pan with the oil for 2–3 minutes per side. Add the butter and thyme and baste for 1–2 minutes.
     cue: The surface is golden and the core reads 52–55 °C.
     time: 7
-    photo: 05-morski-stapka-6.webp
   - title: Finish the broth and plate
     text: Whisk the cold butter into the warm broth. Put the purée in a shallow bowl, the medallion on top, the broth around it and the chorizo with drops of its red fat. Sprinkle with herbs.
-    photo: 06-morski-stapka-7.webp
 tips:
   - Monkfish bones are rich in gelatine – the broth turns velvety without cream.
   - The beans can also be tinned (2 jars), rinsed well.
@@ -227,7 +173,7 @@ allergens:
   - Sulphites (wine)
 translation:
   status: published
-  sourceHash: 090d613cf0b0cfa5
+  sourceHash: "41da5b3989352cc1"
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-21

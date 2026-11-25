@@ -25,47 +25,11 @@ cookTime: 30
 restTime: 8
 servings: 4
 difficulty: Intermediate
-cover: 10-gotovo-yastie.webp
+cover: 09-dopalnitelen-2.webp
 photos:
-  01-svinski-stapka-1.webp:
-    alt: "Roast pork with apple: Mise en place: marbled meat, celeriac, apple, butter and mustard"
-    caption: "Mise en place: marbled meat, celeriac, apple, butter and mustard"
-    session: Photo session 3 (November 2026)
-  02-svinski-stapka-2.webp:
-    alt: "Roast pork with apple: Seasoning the meat before searing"
-    caption: Seasoning the meat before searing
-    session: Photo session 3 (November 2026)
-  03-svinski-stapka-3.webp:
-    alt: "Roast pork with apple: Celeriac purée, diced cucumber and mustard seeds"
-    caption: Celeriac purée, diced cucumber and mustard seeds
-    session: Photo session 3 (November 2026)
-  04-svinski-stapka-4.webp:
-    alt: "Roast pork with apple: Meat in the pan, basted with butter and thyme"
-    caption: Meat in the pan, basted with butter and thyme
-    session: Photo session 3 (November 2026)
-  05-svinski-stapka-5.webp:
-    alt: "Roast pork with apple: Glossy amber sauce in a copper pot"
-    caption: Glossy amber sauce in a copper pot
-    session: Photo session 3 (November 2026)
-  06-svinski-stapka-6.webp:
-    alt: "Roast pork with apple: Sliced meat in a pan with butter"
-    caption: Sliced meat in a pan with butter
-    session: Photo session 3 (November 2026)
-  07-svinski-stapka-7.webp:
-    alt: "Roast pork with apple: Arranging the meat with tweezers on the purée"
-    caption: Arranging the meat with tweezers on the purée
-    session: Photo session 3 (November 2026)
-  08-dopalnitelen-1.webp:
-    alt: "Roast pork with apple: Mise en place with meat, butter and seasonings"
-    caption: Mise en place with meat, butter and seasonings
-    session: Photo session 3 (November 2026)
   09-dopalnitelen-2.webp:
     alt: "Roast pork with apple: The finished plate with pork, purée and mustard seeds"
     caption: The finished plate with pork, purée and mustard seeds
-    session: Photo session 3 (November 2026)
-  10-gotovo-yastie.webp:
-    alt: "Roast pork with apple: Sliced pork with creamy purée, apple and mustard seeds"
-    caption: Sliced pork with creamy purée, apple and mustard seeds
     session: Photo session 3 (November 2026)
 mise:
   - Take the meat out 30 minutes ahead, pat dry and salt.
@@ -156,30 +120,23 @@ ingredients:
 steps:
   - title: Lay out the ingredients
     text: Lay out the meat, celeriac, apple, cucumber, mustard, wine and butter.
-    photo: 01-svinski-stapka-1.webp
   - title: Season the meat
     text: Salt and sprinkle with black pepper, pressing the seasoning in.
-    photo: 02-svinski-stapka-2.webp
   - title: Prepare the purée and the garnish
     text: Simmer the celeriac in the milk and blend with the butter. Season the apple and cucumber with vinegar, honey and mustard seeds.
     time: 25
-    photo: 03-svinski-stapka-3.webp
   - title: Sear the meat
     text: Sear the meat over high heat for 2–3 minutes on each side, add butter and thyme and baste.
     cue: The crust is dark and the core is 62–63 °C.
     time: 8
-    photo: 04-svinski-stapka-4.webp
   - title: Make the sauce
     text: Sweat the shallot, pour in the wine and reduce it. Add the jus and thicken, then whisk in the cold butter.
     time: 12
-    photo: 05-svinski-stapka-5.webp
   - title: Rest and slice
     text: Rest the meat for 8 minutes and cut into slices about 1 cm thick.
     time: 8
-    photo: 06-svinski-stapka-6.webp
   - title: Plate
     text: Put down the purée, slices of meat, diced cucumber and apple, and spoon over the sauce.
-    photo: 07-svinski-stapka-7.webp
 tips:
   - Pork does not need to be well done at 63 °C – let the rest do the work.
   - The garnish is better at room temperature.
@@ -199,7 +156,7 @@ allergens:
   - Sulphites (wine)
 translation:
   status: published
-  sourceHash: ef4ee0724e677809
+  sourceHash: "54636aa64f700c11"
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-21

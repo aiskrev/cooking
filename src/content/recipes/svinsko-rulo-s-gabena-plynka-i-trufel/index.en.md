@@ -26,22 +26,6 @@ servings: 4
 difficulty: Advanced
 cover: 05-gotovo-yastie.webp
 photos:
-  01-dopalnitelen-1.webp:
-    alt: "Pork roulade: Pork roulade with mushroom stuffing and roasted carrot on purée"
-    caption: Pork roulade with mushroom stuffing and roasted carrot on purée
-    session: Photo session 2 (May–June 2026)
-  02-dopalnitelen-2.webp:
-    alt: "Pork roulade: A cross-section of the roulade – a dense dark mushroom stuffing"
-    caption: A cross-section of the roulade – a dense dark mushroom stuffing
-    session: Photo session 2 (May–June 2026)
-  03-dopalnitelen-3.webp:
-    alt: "Pork roulade: The roulade, served on purée with sauce and truffle"
-    caption: The roulade, served on purée with sauce and truffle
-    session: Photo session 2 (May–June 2026)
-  04-dopalnitelen-4.webp:
-    alt: "Pork roulade: The roulade, served at the table with a candle and a glass of red wine"
-    caption: The roulade, served at the table with a candle and a glass of red wine
-    session: Photo session 2 (May–June 2026)
   05-gotovo-yastie.webp:
     alt: "Pork roulade: Pork roulade with mushroom and truffle stuffing on purée and wine sauce"
     caption: Pork roulade with mushroom and truffle stuffing on purée and wine sauce
@@ -176,7 +160,7 @@ allergens:
   - Sulphites (wine)
 translation:
   status: published
-  sourceHash: 082bc5c89a419a12
+  sourceHash: "be939a58cc8cd19b"
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-20

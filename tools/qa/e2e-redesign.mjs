@@ -57,13 +57,11 @@ const WIDTHS = [320, 375, 430, 768, 1024, 1280, 1440];
   const s = await page.evaluate(() => ({
     rv: document.querySelectorAll('.rv').length,
     hp: document.querySelector('[data-hero]')?.style.getPropertyValue('--hp') ?? '',
-    pinned: document.querySelector('[data-journey]')?.classList.contains('is-pinned'),
     marquee: getComputedStyle(document.querySelector('.marquee-track')).animationName,
     title: getComputedStyle(document.querySelector('.hero-title .w')).animationName,
   }));
   expect(s.rv === 0, 'намалено движение: няма скрити елементи за поява');
   expect(s.hp === '', 'намалено движение: без паралакс на заглавния кадър');
-  expect(s.pinned === false, 'намалено движение: пътешествието не е закачено');
   expect(s.marquee === 'none' && s.title === 'none', `намалено движение: без анимации (${s.marquee}, ${s.title})`);
   await ctx.close();
 }
@@ -74,18 +72,20 @@ const WIDTHS = [320, 375, 430, 768, 1024, 1280, 1440];
   await page.goto(BASE + '/bg/', { waitUntil: 'load' });
   const h1 = await page.locator('h1').innerText();
   expect(/\s/.test(h1) && h1.replace(/\s+/g, ' ').trim() === 'Модерна кухня с Мишлен щрих', `заглавието се чете с интервали („${h1.replace(/\s+/g, ' ')}“)`);
-  // Пътешествие на компютър: банер – всички кадри на един ред, в ширината на екрана, страницата не се задържа
-  const j = await page.evaluate(() => {
-    const s = document.querySelector('[data-journey]');
-    const items = [...s.querySelectorAll('.journey-item')].map((li) => li.getBoundingClientRect());
-    return { n: items.length, oneRow: new Set(items.map((r) => Math.round(r.top))).size === 1, inside: items.every((r) => r.left >= 0 && r.right <= innerWidth), height: s.getBoundingClientRect().height };
-  });
-  expect(j.n >= 6 && j.oneRow && j.inside, `на компютър пътешествието е банер: ${j.n} кадъра на един ред в ширината на екрана`);
-  expect(j.height < 900, `секцията не удължава страницата (височина ${Math.round(j.height)} px)`);
-  // Клавиатура: всеки кадър е връзка, достъпна с Tab
-  const last = page.locator('.journey-item a').last();
-  await last.focus();
-  expect(await last.evaluate((a) => document.activeElement === a), 'последният кадър от пътешествието получава фокус');
+  // Пътешествие: показва се само ако някоя рецепта има поне 6 снимки към стъпките. След правилото „една снимка на рецепта“
+  // (25.11.2026) такава няма и секцията не се показва – проверява се, че липсата ѝ не оставя празно място.
+  const hasJourney = await page.evaluate(() => !!document.querySelector('[data-journey]'));
+  if (hasJourney) {
+    const j = await page.evaluate(() => {
+      const s = document.querySelector('[data-journey]');
+      const items = [...s.querySelectorAll('.journey-item')].map((li) => li.getBoundingClientRect());
+      return { n: items.length, oneRow: new Set(items.map((r) => Math.round(r.top))).size === 1, inside: items.every((r) => r.left >= 0 && r.right <= innerWidth), height: s.getBoundingClientRect().height };
+    });
+    expect(j.n >= 6 && j.oneRow && j.inside, `на компютър пътешествието е банер: ${j.n} кадъра на един ред в ширината на екрана`);
+    expect(j.height < 900, `секцията не удължава страницата (височина ${Math.round(j.height)} px)`);
+  } else {
+    expect(await page.locator('#h-new').count() === 1, 'без снимки за пътешествието секцията не се показва, останалите секции са налице');
+  }
   // Плъзгач с рецепти за фино ядене
   await page.locator('#h-fine').scrollIntoViewIfNeeded();
   const before = await page.evaluate(() => document.querySelector('[data-rail-track]').scrollLeft);
@@ -96,8 +96,10 @@ const WIDTHS = [320, 375, 430, 768, 1024, 1280, 1440];
   // Телефон: пътешествието е обикновена хоризонтална лента
   await page.setViewportSize({ width: 390, height: 844 });
   await page.reload({ waitUntil: 'load' });
-  const mob = await page.evaluate(() => { const s = document.querySelector('[data-journey]'); return { scroll: s.classList.contains('is-scrollable'), ov: getComputedStyle(s.querySelector('[data-journey-viewport]')).overflowX }; });
-  expect(mob.scroll && mob.ov === 'auto', 'на телефон пътешествието е хоризонтална лента');
+  if (hasJourney) {
+    const mob = await page.evaluate(() => { const s = document.querySelector('[data-journey]'); return { scroll: s.classList.contains('is-scrollable'), ov: getComputedStyle(s.querySelector('[data-journey-viewport]')).overflowX }; });
+    expect(mob.scroll && mob.ov === 'auto', 'на телефон пътешествието е хоризонтална лента');
+  }
   await ctx.close();
 }
 

@@ -29,58 +29,6 @@ servings: 4
 difficulty: Intermediate
 cover: 14-gotovo-yastie.webp
 photos:
-  01-zhabeshki-stapka-1.webp:
-    alt: "Frog legs with watercress purée: The ingredients: frog legs, lemon, capers, garlic and herbs"
-    caption: "The ingredients: frog legs, lemon, capers, garlic and herbs"
-    session: Photo session 6 (November 2026)
-  02-zhabeshki-stapka-2.webp:
-    alt: "Frog legs with watercress purée: Mise en place: frog legs, watercress, capers and stock"
-    caption: "Mise en place: frog legs, watercress, capers and stock"
-    session: Photo session 6 (November 2026)
-  03-zhabeshki-stapka-3.webp:
-    alt: "Frog legs with watercress purée: Trimming the frog legs"
-    caption: Trimming the frog legs
-    session: Photo session 6 (November 2026)
-  04-zhabeshki-stapka-4.webp:
-    alt: "Frog legs with watercress purée: Drying the frog legs"
-    caption: Drying the frog legs
-    session: Photo session 6 (November 2026)
-  05-zhabeshki-stapka-5.webp:
-    alt: "Frog legs with watercress purée: The bright green watercress purée"
-    caption: The bright green watercress purée
-    session: Photo session 6 (November 2026)
-  06-zhabeshki-stapka-6.webp:
-    alt: "Frog legs with watercress purée: The watercress purée and the roasted garlic"
-    caption: The watercress purée and the roasted garlic
-    session: Photo session 6 (November 2026)
-  07-zhabeshki-stapka-7.webp:
-    alt: "Frog legs with watercress purée: Searing the legs in herb butter"
-    caption: Searing the legs in herb butter
-    session: Photo session 6 (November 2026)
-  08-zhabeshki-stapka-8.webp:
-    alt: "Frog legs with watercress purée: Basting with foaming butter"
-    caption: Basting with foaming butter
-    session: Photo session 6 (November 2026)
-  09-zhabeshki-stapka-9.webp:
-    alt: "Frog legs with watercress purée: The brown butter sauce with capers and lemon"
-    caption: The brown butter sauce with capers and lemon
-    session: Photo session 6 (November 2026)
-  10-zhabeshki-stapka-10.webp:
-    alt: "Frog legs with watercress purée: Pouring the brown butter and caper sauce"
-    caption: Pouring the brown butter and caper sauce
-    session: Photo session 6 (November 2026)
-  11-dopalnitelen-1.webp:
-    alt: "Frog legs with watercress purée: The golden legs in the pan"
-    caption: The golden legs in the pan
-    session: Photo session 6 (November 2026)
-  12-dopalnitelen-2.webp:
-    alt: "Frog legs with watercress purée: Blending the watercress purée"
-    caption: Blending the watercress purée
-    session: Photo session 6 (November 2026)
-  13-dopalnitelen-3.webp:
-    alt: "Frog legs with watercress purée: Seasoned frog legs ready for searing"
-    caption: Seasoned frog legs ready for searing
-    session: Photo session 6 (November 2026)
   14-gotovo-yastie.webp:
     alt: "Frog legs with watercress purée: Frog legs seared in herb butter"
     caption: Frog legs seared in herb butter
@@ -176,39 +124,29 @@ ingredients:
 steps:
   - title: Lay out the ingredients
     text: Lay out the frog legs, watercress, parsley, garlic, lemon, capers and butter.
-    photo: 01-zhabeshki-stapka-1.webp
   - title: Prepare the mise en place
     text: Chop the garlic and parsley, measure out the butter and stock and set the watercress next to the bowl of ice.
-    photo: 02-zhabeshki-stapka-2.webp
   - title: Trim the legs
     text: Trim the joints and any excess skin and separate the pairs of legs.
-    photo: 03-zhabeshki-stapka-3.webp
   - title: Dry and season
     text: Dry thoroughly with paper and season with salt, white pepper and lemon zest.
-    photo: 04-zhabeshki-stapka-4.webp
   - title: Make the purée
     text: Blanch the watercress and parsley for 20 seconds, cool in iced water and squeeze dry. Blend with the warm stock and butter to a smooth purée and season with salt.
     why: Rapid cooling preserves the chlorophyll and the colour.
-    photo: 05-zhabeshki-stapka-5.webp
   - title: Roast the garlic
     text: Cut the head of garlic across, drizzle with olive oil, wrap in foil and roast for 35–40 minutes at 180 °C.
     time: 40
-    photo: 06-zhabeshki-stapka-6.webp
   - title: Sear the legs
     text: Heat the oil in a wide pan and sear the legs in a single layer for 3 minutes until golden.
-    photo: 07-zhabeshki-stapka-7.webp
   - title: Baste with butter
     text: Turn, add the butter, garlic and thyme and baste for 3–4 minutes.
     cue: The meat comes away easily from the bone.
     time: 4
-    photo: 08-zhabeshki-stapka-8.webp
   - title: Make the sauce
     text: Cook the butter until it smells nutty, add the capers and let them burst for 30 seconds. Take off the heat and add the lemon juice and parsley.
     avoid: Add the lemon juice off the heat – the butter spits violently.
-    photo: 09-zhabeshki-stapka-9.webp
   - title: Serve
     text: Spoon watercress purée onto the plate, top with the frog legs and roasted garlic cloves and spoon over the sauce.
-    photo: 10-zhabeshki-stapka-10.webp
 tips:
   - Frog legs are sold frozen; thaw them slowly in the refrigerator.
   - If you have no watercress, use rocket with more parsley.
@@ -227,7 +165,7 @@ allergens:
   - Milk and dairy
 translation:
   status: published
-  sourceHash: 8486497d855f6d00
+  sourceHash: "265faa0dc8ee4fc5"
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-25

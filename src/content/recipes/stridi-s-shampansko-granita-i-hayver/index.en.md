@@ -28,73 +28,9 @@ servings: 4
 difficulty: Intermediate
 cover: 07-stridi-stapka-7.webp
 photos:
-  01-stridi-stapka-1.webp:
-    alt: "Oysters with champagne granita: Mise en place: oysters on ice, apple, caviar and champagne"
-    caption: "Mise en place: oysters on ice, apple, caviar and champagne"
-    session: Photo session 3 (November 2026)
-  02-stridi-stapka-2.webp:
-    alt: "Oysters with champagne granita: Scraping champagne granita with a fork"
-    caption: Scraping champagne granita with a fork
-    session: Photo session 3 (November 2026)
-  03-stridi-stapka-3.webp:
-    alt: "Oysters with champagne granita: Diced and sliced apple, seaweed and lemon"
-    caption: Diced and sliced apple, seaweed and lemon
-    session: Photo session 3 (November 2026)
-  04-stridi-stapka-4.webp:
-    alt: "Oysters with champagne granita: The chef opening oysters over a bowl of ice"
-    caption: The chef opening oysters over a bowl of ice
-    session: Photo session 3 (November 2026)
-  05-stridi-stapka-5.webp:
-    alt: "Oysters with champagne granita: Mise en place with an oyster, apple and seaweed"
-    caption: Mise en place with an oyster, apple and seaweed
-    session: Photo session 3 (November 2026)
-  06-stridi-stapka-6.webp:
-    alt: "Oysters with champagne granita: An oyster with apple and dill on ice"
-    caption: An oyster with apple and dill on ice
-    session: Photo session 3 (November 2026)
   07-stridi-stapka-7.webp:
     alt: "Oysters with champagne granita: Oysters with caviar and granita on crushed ice"
     caption: Oysters with caviar and granita on crushed ice
-    session: Photo session 3 (November 2026)
-  08-dopalnitelen-1.webp:
-    alt: "Oysters with champagne granita: Mise en place with shells, green apples and champagne"
-    caption: Mise en place with shells, green apples and champagne
-    session: Photo session 3 (November 2026)
-  09-dopalnitelen-2.webp:
-    alt: "Oysters with champagne granita: An oyster with dill beside a whole horseradish root"
-    caption: An oyster with dill beside a whole horseradish root
-    session: Photo session 3 (November 2026)
-  10-dopalnitelen-3.webp:
-    alt: "Oysters with champagne granita: Oysters and a bowl of granita on ice"
-    caption: Oysters and a bowl of granita on ice
-    session: Photo session 3 (November 2026)
-  11-dopalnitelen-4.webp:
-    alt: "Oysters with champagne granita: Champagne granita with a spoon over oysters"
-    caption: Champagne granita with a spoon over oysters
-    session: Photo session 3 (November 2026)
-  12-dopalnitelen-5.webp:
-    alt: "Oysters with champagne granita: Crisp green garnishes and oysters"
-    caption: Crisp green garnishes and oysters
-    session: Photo session 3 (November 2026)
-  13-dopalnitelen-6.webp:
-    alt: "Oysters with champagne granita: Caviar, which goes on top of an oyster"
-    caption: Caviar, which goes on top of an oyster
-    session: Photo session 3 (November 2026)
-  14-dopalnitelen-7.webp:
-    alt: "Oysters with champagne granita: Opening oysters – a scene on the counter"
-    caption: Opening oysters – a scene on the counter
-    session: Photo session 3 (November 2026)
-  15-dopalnitelen-8.webp:
-    alt: "Oysters with champagne granita: An oyster on ice with caviar and champagne"
-    caption: An oyster on ice with caviar and champagne
-    session: Photo session 3 (November 2026)
-  16-dopalnitelen-9.webp:
-    alt: "Oysters with champagne granita: Opening an oyster with a metal glove"
-    caption: Opening an oyster with a metal glove
-    session: Photo session 3 (November 2026)
-  17-dopalnitelen-10.webp:
-    alt: "Oysters with champagne granita: Two oysters with caviar on ice"
-    caption: Two oysters with caviar on ice
     session: Photo session 3 (November 2026)
 mise:
   - "Make the granita at least 3 hours ahead: mix all the ingredients, pour into a shallow dish and in the freezer scrape with a fork every 30 minutes."
@@ -155,30 +91,23 @@ ingredients:
 steps:
   - title: Lay out the ingredients
     text: Lay out the oysters on ice, the apple, horseradish, dill and caviar.
-    photo: 01-stridi-stapka-1.webp
   - title: Make the granita
     text: Mix the champagne, water, sugar and lemon. Pour into a shallow dish and freeze, scraping with a fork every 30 minutes for 3 hours.
     cue: Dry, fluffy crystals that do not stick together.
     time: 180
-    photo: 02-stridi-stapka-2.webp
   - title: Prepare the garnish
     text: Dice the apple, grate the horseradish and chop the dill.
-    photo: 03-stridi-stapka-3.webp
   - title: Open the oysters
     text: Hold the oyster in a cloth or a glove. Insert the oyster knife at the hinge, twist and cut through the muscle. Remove the top shell.
     cue: The oyster is whole, with its liquor in the shell and no broken shell fragments.
     avoid: Do not tilt the oyster – you will lose its juices.
     time: 10
-    photo: 04-stridi-stapka-4.webp
   - title: Prepare the mise en place for serving
     text: Lay out the garnishes and the opened oysters on ice.
-    photo: 05-stridi-stapka-5.webp
   - title: Season
     text: On each oyster put a teaspoon of granita, a little diced apple, horseradish and dill.
-    photo: 06-stridi-stapka-6.webp
   - title: Add the caviar and serve
     text: Finish with a little caviar on the granita and serve at once.
-    photo: 07-stridi-stapka-7.webp
 tips:
   - The granita can be made the day before and scraped just before serving.
   - Keep the plates cold.
@@ -197,7 +126,7 @@ allergens:
   - Sulphites (wine)
 translation:
   status: published
-  sourceHash: cc485a5ae08b7d79
+  sourceHash: "c5b1731312029441"
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-21

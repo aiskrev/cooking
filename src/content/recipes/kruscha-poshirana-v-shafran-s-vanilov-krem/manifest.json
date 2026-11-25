@@ -1,134 +1,13 @@
 {
   "slug": "kruscha-poshirana-v-shafran-s-vanilov-krem",
   "photos": {
-    "01-kruscha-stapka-1.webp": {
-      "sourceName": "Gourmet Pear Dessert Ingredient Still Life-2.webp",
-      "sourceSha256": "06b6b7a38dabf773322af1fbc2bdf6e73115a25cb3e30b8cf006369a1542f2be",
-      "sourceIdx": 2291,
-      "sourceBytes": 1887484,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 27,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "02-kruscha-stapka-2.webp": {
-      "sourceName": "Pear and Saffron Baking Still Life-3.webp",
-      "sourceSha256": "5a33a16658b8b98e530493f91a15cbbf98e74e910a4f71d0de5d2724294ab520",
-      "sourceIdx": 2292,
-      "sourceBytes": 1918572,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 27,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "03-kruscha-stapka-3.webp": {
-      "sourceName": "Saffron Infusion with Ripe Pears-13.webp",
-      "sourceSha256": "382c6028e33cdd4f468399411cbcb00061bbfc767386f4313eed8b72b291b214",
-      "sourceIdx": 2302,
-      "sourceBytes": 1595408,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 27,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "04-kruscha-stapka-4.webp": {
-      "sourceName": "Golden Poached Pear in Copper Pan-9.webp",
-      "sourceSha256": "b05a8ea88e571575eb8b95fb0871fe9e9671a6ccf12938dc289fcb32f8bc2b88",
-      "sourceIdx": 2298,
-      "sourceBytes": 1481676,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 27,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "05-kruscha-stapka-5.webp": {
-      "sourceName": "Golden Pear Glazed by Hand-6.webp",
-      "sourceSha256": "30a95dd824567dba5b1d8179ca8da8c6bebcdc5e73c081235241fce395ad3e06",
-      "sourceIdx": 2295,
-      "sourceBytes": 1546434,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 27,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "06-kruscha-stapka-6.webp": {
-      "sourceName": "Vanilla Custard and Brown Butter Whisking-18.webp",
-      "sourceSha256": "8c38798697bb69430ad9b24e097e8ee9d6b1404aff4bacbbad0d4f33a7de0a28",
-      "sourceIdx": 2307,
-      "sourceBytes": 1696666,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 27,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "07-kruscha-stapka-7.webp": {
-      "sourceName": "Glistening Almond Praline in Copper Pan-15.webp",
-      "sourceSha256": "60d0aa0a0e54a60c7820fe1198a30dda8d9ca235336553067c9a041f02929966",
-      "sourceIdx": 2304,
-      "sourceBytes": 1888852,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 27,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
     "08-kruscha-stapka-8.webp": {
       "sourceName": "Saffron-Poached Pear Dessert Plating-7.webp",
       "sourceSha256": "fe9b1878019d1c65b8acf3315c3a74922775eecb71b6760b544d1efd21e9cd72",
       "sourceIdx": 2296,
       "sourceBytes": 1557444,
       "sourceSize": "1535x1024",
-      "role": "step",
-      "batch": 27,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "09-dopalnitelen-1.webp": {
-      "sourceName": "Golden Poached Pear in Copper Pan-10.webp",
-      "sourceSha256": "f765216e1644525eefcc22b5d28caf1d310322b2a1f5269f3ecce8ed8b40691a",
-      "sourceIdx": 2299,
-      "sourceBytes": 1537652,
-      "sourceSize": "1536x1024",
-      "role": "extra",
-      "batch": 27,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "10-dopalnitelen-2.webp": {
-      "sourceName": "Saffron Pear Still Life-12.webp",
-      "sourceSha256": "127571e81c17fe75e14e2f16f5c93a0fca4d7599d2b1b86127939817ef4f804f",
-      "sourceIdx": 2301,
-      "sourceBytes": 1789338,
-      "sourceSize": "1536x1024",
-      "role": "extra",
-      "batch": 27,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "11-dopalnitelen-3.webp": {
-      "sourceName": "Glossy Caramel Almond Praline Swirls-16.webp",
-      "sourceSha256": "5e94181e5d94af78217603494c75f199daab34714c80eb7a2c752dc1ab815db4",
-      "sourceIdx": 2305,
-      "sourceBytes": 1792466,
-      "sourceSize": "1536x1024",
-      "role": "extra",
-      "batch": 27,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "12-dopalnitelen-4.webp": {
-      "sourceName": "Vanilla Quenelle with Caramel Tuile-19.webp",
-      "sourceSha256": "7849ad8ead3f3a709e153002c94ccfc0aac59fff9769240e15d5256971d35b65",
-      "sourceIdx": 2308,
-      "sourceBytes": 1830892,
-      "sourceSize": "1536x1024",
-      "role": "extra",
+      "role": "hero",
       "batch": 27,
       "confidence": "HIGH",
       "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
@@ -136,5 +15,10 @@
   },
   "generatedHash": "275599f013ada608d7b8166e17a35ca3f41a1f8294ed7d9b311dc19f72456b37",
   "excludedSources": [],
-  "importedAt": "2026-11-21T06:46:56.181Z"
+  "importedAt": "2026-11-21T06:46:56.181Z",
+  "singleHeroPolicy": {
+    "date": "2026-11-25",
+    "kept": "08-kruscha-stapka-8.webp",
+    "removed": 11
+  }
 }

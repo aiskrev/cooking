@@ -28,53 +28,9 @@ servings: 6
 difficulty: Advanced
 cover: 11-dopalnitelen-3.webp
 photos:
-  01-cheren-stapka-1.webp:
-    alt: "Deconstructed Black Forest: Mise en place: cherries, chocolate, vanilla and butter"
-    caption: "Mise en place: cherries, chocolate, vanilla and butter"
-    session: Photo session 3 (November 2026)
-  02-cheren-stapka-2.webp:
-    alt: "Deconstructed Black Forest: Mise en place: cherries, eggs and chocolate sponge"
-    caption: "Mise en place: cherries, eggs and chocolate sponge"
-    session: Photo session 3 (November 2026)
-  03-cheren-stapka-3.webp:
-    alt: "Deconstructed Black Forest: Sponge, cherries and a piping bag on the counter"
-    caption: Sponge, cherries and a piping bag on the counter
-    session: Photo session 3 (November 2026)
-  04-cheren-stapka-4.webp:
-    alt: "Deconstructed Black Forest: Tempering chocolate on a marble counter"
-    caption: Tempering chocolate on a marble counter
-    session: Photo session 3 (November 2026)
-  05-cheren-stapka-5.webp:
-    alt: "Deconstructed Black Forest: Cherries and syrup for the jelly"
-    caption: Cherries and syrup for the jelly
-    session: Photo session 3 (November 2026)
-  06-cheren-stapka-6.webp:
-    alt: "Deconstructed Black Forest: Red jelly in a tray with cherries"
-    caption: Red jelly in a tray with cherries
-    session: Photo session 3 (November 2026)
-  07-cheren-stapka-7.webp:
-    alt: "Deconstructed Black Forest: Red sorbet in a bowl"
-    caption: Red sorbet in a bowl
-    session: Photo session 3 (November 2026)
-  08-cheren-stapka-8.webp:
-    alt: "Deconstructed Black Forest: Vanilla cream whisked, with a chocolate tuile"
-    caption: Vanilla cream whisked, with a chocolate tuile
-    session: Photo session 3 (November 2026)
-  09-dopalnitelen-1.webp:
-    alt: "Deconstructed Black Forest: Mise en place of the Black Forest with sorbet and jelly"
-    caption: Mise en place of the Black Forest with sorbet and jelly
-    session: Photo session 3 (November 2026)
-  10-dopalnitelen-2.webp:
-    alt: "Deconstructed Black Forest: Chocolate in a pot for ganache"
-    caption: Chocolate in a pot for ganache
-    session: Photo session 3 (November 2026)
   11-dopalnitelen-3.webp:
     alt: "Deconstructed Black Forest: Cherry sorbet in a bowl"
     caption: Cherry sorbet in a bowl
-    session: Photo session 3 (November 2026)
-  12-dopalnitelen-4.webp:
-    alt: "Deconstructed Black Forest: Vanilla cream and chocolate crumbs"
-    caption: Vanilla cream and chocolate crumbs
     session: Photo session 3 (November 2026)
 mise:
   - Stone the cherries.
@@ -161,33 +117,25 @@ ingredients:
 steps:
   - title: Lay out the ingredients
     text: Lay out the chocolate, cherries, cream, vanilla and eggs.
-    photo: 01-cheren-stapka-1.webp
   - title: Set out the mise en place
     text: Lay out all the components in small bowls.
-    photo: 02-cheren-stapka-2.webp
   - title: Bake the sponge
     text: Mix and bake the sponge; cool and crumble it.
     time: 25
-    photo: 03-cheren-stapka-3.webp
   - title: Temper the chocolate
     text: Temper chocolate for the tuile.
     time: 15
-    photo: 04-cheren-stapka-4.webp
   - title: Prepare the cherries
     text: Cook some of the cherries with kirsch and gelatine and pour into a mould.
     time: 20
-    photo: 05-cheren-stapka-5.webp
   - title: Make the jelly
     text: Leave the jelly to set.
     time: 120
-    photo: 06-cheren-stapka-6.webp
   - title: Make the sorbet
     text: Purée the cherries with the sugar and freeze.
     time: 180
-    photo: 07-cheren-stapka-7.webp
   - title: Make the vanilla cream
     text: Whip the cream with the vanilla and sugar.
-    photo: 08-cheren-stapka-8.webp
 tips:
   - It can be prepared in advance.
   - The sorbet is best freshly churned.
@@ -206,7 +154,7 @@ allergens:
   - Milk and dairy
 translation:
   status: published
-  sourceHash: c531c74bc030739d
+  sourceHash: "9ec9e28f13491666"
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-21

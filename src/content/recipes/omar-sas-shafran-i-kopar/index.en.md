@@ -25,47 +25,11 @@ cookTime: 25
 restTime: 0
 servings: 4
 difficulty: Advanced
-cover: 10-gotovo-yastie.webp
+cover: 09-dopalnitelen-2.webp
 photos:
-  01-omar-stapka-1.webp:
-    alt: "Lobster with saffron sauce: Mise en place: lobster, fennel, lemon, saffron and butter"
-    caption: "Mise en place: lobster, fennel, lemon, saffron and butter"
-    session: Photo session 3 (November 2026)
-  02-omar-stapka-2.webp:
-    alt: "Lobster with saffron sauce: Blanched lobster tails on a tray, with fennel, lemon and stock"
-    caption: Blanched lobster tails on a tray, with fennel, lemon and stock
-    session: Photo session 3 (November 2026)
-  03-omar-stapka-3.webp:
-    alt: "Lobster with saffron sauce: The chef removing the meat from the lobster on the board"
-    caption: The chef removing the meat from the lobster on the board
-    session: Photo session 3 (November 2026)
-  04-omar-stapka-4.webp:
-    alt: "Lobster with saffron sauce: Lobster and fennel in a large copper pot"
-    caption: Lobster and fennel in a large copper pot
-    session: Photo session 3 (November 2026)
-  05-omar-stapka-5.webp:
-    alt: "Lobster with saffron sauce: Lobster tail poached in butter with fennel and saffron"
-    caption: Lobster tail poached in butter with fennel and saffron
-    session: Photo session 3 (November 2026)
-  06-omar-stapka-6.webp:
-    alt: "Lobster with saffron sauce: Saffron sauce in a copper pot, spooned"
-    caption: Saffron sauce in a copper pot, spooned
-    session: Photo session 3 (November 2026)
-  07-omar-stapka-7.webp:
-    alt: "Lobster with saffron sauce: Plating the lobster with sauce and caviar, with tweezers"
-    caption: Plating the lobster with sauce and caviar, with tweezers
-    session: Photo session 3 (November 2026)
-  08-dopalnitelen-1.webp:
-    alt: "Lobster with saffron sauce: Saffron sauce and lobster – close-up"
-    caption: Saffron sauce and lobster – close-up
-    session: Photo session 3 (November 2026)
   09-dopalnitelen-2.webp:
     alt: "Lobster with saffron sauce: The lobster with sauce and caviar served on a white plate"
     caption: The lobster with sauce and caviar served on a white plate
-    session: Photo session 3 (November 2026)
-  10-gotovo-yastie.webp:
-    alt: "Lobster with saffron sauce: Lobster tail with saffron sauce, fennel and caviar"
-    caption: Lobster tail with saffron sauce, fennel and caviar
     session: Photo session 3 (November 2026)
 mise:
   - Lobsters are prepared fresh; cook them on the day of purchase.
@@ -144,37 +108,30 @@ ingredients:
 steps:
   - title: Lay out the ingredients
     text: Lay out the lobsters, fennel, saffron, butter, wine and caviar.
-    photo: 01-omar-stapka-1.webp
   - title: Blanch the lobsters
     text: "Chill the lobsters for 20 minutes in the freezer to calm them. Plunge them head first into boiling salted water: the tails are blanched for 2 minutes, the claws for another 4–5 minutes. Transfer to ice-cold water."
     why: The brief heat treatment releases the meat from the shell without cooking it through.
     cue: The meat comes away easily and is still translucent in the centre.
     time: 7
-    photo: 02-omar-stapka-2.webp
   - title: Remove the meat
     text: Cut the shells open with kitchen scissors, remove the meat from the tails and claws and take out the dark vein from the back. Keep the shells.
     cue: The meat is whole and nicely shaped.
-    photo: 03-omar-stapka-3.webp
   - title: Sweat the fennel with the shells
     text: In a wide pot melt 20 g of butter, add the strips of fennel, the crushed shells and 100 ml of water. Cook over low heat for 8–10 minutes until the fennel is tender. Remove the shells.
     why: The shells give their aroma to the fennel and, later, to the sauce.
     cue: The fennel is soft and aromatic.
     time: 10
-    photo: 04-omar-stapka-4.webp
   - title: Poach the meat in butter
     text: Warm 60 g of butter with 100 ml of water over low heat to about 65–70 °C. Lay in the meat and cook it for 4–5 minutes, basting it.
     cue: The meat is firm and milky white with red edges, and does not flake apart.
     avoid: Do not let the liquid boil – the meat turns rubbery.
     time: 5
-    photo: 05-omar-stapka-5.webp
   - title: Make the saffron sauce
     text: Sweat the finely chopped shallot, pour in the wine and reduce almost completely. Add the saffron with its water and the cream and thicken. Over low heat whisk in the cold butter in cubes, add the lemon juice and strain.
     cue: The sauce is silky, bright yellow and coats the spoon.
     time: 10
-    photo: 06-omar-stapka-6.webp
   - title: Plate and serve
     text: Put the fennel in the centre of a warmed white plate, the lobster on it, spoon over the sauce and finish with a spoonful of caviar, dill and lemon zest.
-    photo: 07-omar-stapka-7.webp
 tips:
   - Lobsters are bought live and cooked on the same day.
   - The sauce should be warm, not hot.
@@ -194,7 +151,7 @@ allergens:
   - Sulphites (wine)
 translation:
   status: published
-  sourceHash: ddd2bd92d287a477
+  sourceHash: "73671a111f717292"
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-21

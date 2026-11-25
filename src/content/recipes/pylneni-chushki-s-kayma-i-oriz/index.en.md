@@ -29,21 +29,6 @@ photos:
   01-palnene-na-chushkite.webp:
     alt: Hands filling a red pepper with a spoonful of the mince-and-rice filling; more stuffed peppers are arranged in a copper tin.
     caption: The peppers are filled with the stuffing and arranged in the tin.
-  02-gotova-palnezh.webp:
-    alt: The finished filling of mince, rice and tomatoes in a copper pan on the hob, with steam rising from it.
-    caption: The finished filling – with mince, rice and tomatoes.
-  03-zadushavane-luk-morkov.webp:
-    alt: Finely chopped onion and carrot being sweated in a copper pot with a wooden spoon.
-    caption: The onion and the carrot are sweated until soft.
-  04-narezani-luk-i-morkov.webp:
-    alt: Finely chopped onion and carrot on a wooden board, with small bowls of rice, mince, tomatoes, paprika and spices around it.
-    caption: The onion and the carrot, cut into small dice.
-  05-izchistvane-na-chushkite.webp:
-    alt: A knife removing the seeds and the white pith from a red pepper.
-    caption: The peppers are cleaned of seeds and white pith.
-  06-sastavki.webp:
-    alt: The ingredients laid out – red peppers, mince, rice, onion, carrot, tomatoes, egg, spices, parsley and yogurt.
-    caption: The ingredients for six peppers.
 mise:
   - Choose fleshy peppers with a flat bottom that stand upright.
   - Rinse the rice in cold water until it runs clear and leave it to drain.
@@ -114,30 +99,24 @@ ingredients:
 steps:
   - title: Prepare the ingredients
     text: Wash the peppers and lay out the remaining ingredients in front of you. Chop the parsley finely. The egg and the yogurt will be needed later.
-    photo: 06-sastavki.webp
   - title: Clean the peppers
     text: Cut off the caps around the stems. With a knife and your fingers remove the seeds and the white pith, rinse the peppers inside and leave them upside down to drain. If one does not stand upright, cut a very thin slice from its bottom, without piercing it.
     why: Seeds are left on the white pith, and the pith itself is slightly bitter.
-    photo: 05-izchistvane-na-chushkite.webp
   - title: Cut the onion and the carrot
     text: Cut the onion and the carrot into small dice, about half a centimetre on a side.
     why: Small dice soften quickly and are not felt as separate pieces in the filling.
-    photo: 04-narezani-luk-i-morkov.webp
   - title: Sweat the vegetables
     text: Heat the oil or the butter in a wide frying pan over moderate heat. Add the onion and the carrot with a pinch of salt and sweat them for 6–8 minutes, stirring from time to time.
     cue: The onion is translucent and soft without having darkened.
     time: 8
-    photo: 03-zadushavane-luk-morkov.webp
   - title: Cook the filling
     text: Add the mince and break it up with the spoon for about 5 minutes until it loses its pink colour. Add the rice, the black pepper, the savory and the salt and stir for 1–2 minutes. Add 250 g of tomatoes and 100 ml of warm water and let it simmer for 8–10 minutes. Take it off the hob, stir in the paprika and let the filling cool for 10 minutes. Finally add the egg and the parsley.
     why: Half-cooked rice finishes cooking inside the pepper without splitting it. The egg goes into the slightly cooled filling so that it does not curdle.
     cue: The rice has absorbed the liquid and the middle of each grain is still slightly firm.
     time: 10
-    photo: 02-gotova-palnezh.webp
   - title: Stuff the peppers
     text: Switch the oven on to 190 °C (170 °C fan). Fill the peppers with a spoon almost to the top, without pressing the filling down. Arrange them snugly, upright, in a deep tin. Mix the remaining 150 g of tomatoes with 200 ml of warm water and a pinch of salt and pour the sauce around the peppers.
     avoid: Do not pack the filling – the rice will still swell and the pepper will burst.
-    photo: 01-palnene-na-chushkite.webp
   - title: Bake
     text: Cover the tin with foil or a lid and bake for 30 minutes. Remove the foil and bake for another 20–25 minutes. The time depends on the oven and on the size of the peppers.
     cue: A knife goes into the pepper without resistance, the filling is coloured on top, and the sauce in the tin has thickened.
@@ -165,7 +144,7 @@ allergens:
   - Milk and dairy
 translation:
   status: published
-  sourceHash: 3bdce46757bd8226
+  sourceHash: "c7ab292c39a44d0c"
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-20

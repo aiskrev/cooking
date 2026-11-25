@@ -1,61 +1,6 @@
 {
   "slug": "treska-s-pyure-ot-karfiol-pechen-karfiol-i-hayver",
   "photos": {
-    "01-dopalnitelen-1.webp": {
-      "sourceName": "Rustic Fine-Dining Seared Fish Bowl-4.webp",
-      "sourceSha256": "c17f0a1fb751afa7db68f6eb339e60a623cf1e136ed5601bee0f238f37ce1f98",
-      "sourceIdx": 5039,
-      "sourceBytes": 1812128,
-      "sourceSize": "1536x1024",
-      "role": "extra",
-      "batch": 3,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "02-dopalnitelen-2.webp": {
-      "sourceName": "Gourmet Seared Fish with Herb Oil-7.webp",
-      "sourceSha256": "0d1461d652ea77933a342b6f15184644bdb2409a4550003450b96759f158b2d9",
-      "sourceIdx": 5055,
-      "sourceBytes": 2305374,
-      "sourceSize": "1254x1254",
-      "role": "extra",
-      "batch": 4,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "03-dopalnitelen-3.webp": {
-      "sourceName": "Gourmet Seared Fish with Herb Oil-3 (1).webp",
-      "sourceSha256": "fd57dd31e0ae2256cc117a81dcfba636cf6d73ce976628dc1a2336247b06f042",
-      "sourceIdx": 5084,
-      "sourceBytes": 1744476,
-      "sourceSize": "1536x1024",
-      "role": "extra",
-      "batch": 7,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "04-dopalnitelen-4.webp": {
-      "sourceName": "Gourmet Seared Fish with Herb Oil-5 (1).webp",
-      "sourceSha256": "660d0dde19379cc4fd2e5e0a4352cade9964a4e884ca83cb03c0c8dd9b2721ca",
-      "sourceIdx": 5098,
-      "sourceBytes": 1855110,
-      "sourceSize": "1536x1024",
-      "role": "extra",
-      "batch": 8,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "05-dopalnitelen-5.webp": {
-      "sourceName": "Gourmet Seared Fish with Herb Oil-15.webp",
-      "sourceSha256": "70ae4362f7c16631c728917430683d0de9d05ebb01c05949405259afbb0d6359",
-      "sourceIdx": 5108,
-      "sourceBytes": 1850040,
-      "sourceSize": "1536x1024",
-      "role": "extra",
-      "batch": 8,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
     "06-gotovo-yastie.webp": {
       "sourceName": "Crispy Fish with Roe and Herb Purée-10.webp",
       "sourceSha256": "24bd6a402c31d7d4452bcc99b878f222de2fac41f2efe07c0661b717dbb6a6f2",
@@ -70,5 +15,10 @@
   },
   "generatedHash": "5cc9d8078dfdef4784a2631f3042e2f0c82c6fcdb8bea237be165dacf3a0f29b",
   "excludedSources": [],
-  "importedAt": "2026-11-25T13:18:14.941Z"
+  "importedAt": "2026-11-25T13:18:14.941Z",
+  "singleHeroPolicy": {
+    "date": "2026-11-25",
+    "kept": "06-gotovo-yastie.webp",
+    "removed": 5
+  }
 }

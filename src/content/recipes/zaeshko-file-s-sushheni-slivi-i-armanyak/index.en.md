@@ -27,86 +27,10 @@ servings: 4
 difficulty: Advanced
 cover: 10-gotovo-yastie.webp
 photos:
-  01-zaeshko-stapka-1.webp:
-    alt: "Rabbit with prunes and Armagnac: Mise en place: rabbit legs and loin, prunes, Armagnac, carrots and mustard"
-    caption: "Mise en place: rabbit legs and loin, prunes, Armagnac, carrots and mustard"
-    session: Photo session 4 (November 2026)
-  02-zaeshko-stapka-2.webp:
-    alt: "Rabbit with prunes and Armagnac: Trimmed rabbit loin on the board beside the legs"
-    caption: Trimmed rabbit loin on the board beside the legs
-    session: Photo session 4 (November 2026)
-  03-zaeshko-stapka-3.webp:
-    alt: "Rabbit with prunes and Armagnac: Trimming the loin, the leg braising in a pan with shallots"
-    caption: Trimming the loin, the leg braising in a pan with shallots
-    session: Photo session 4 (November 2026)
-  04-zaeshko-stapka-4.webp:
-    alt: "Rabbit with prunes and Armagnac: Sauce, shallot, wholegrain mustard and Armagnac in copper pans"
-    caption: Sauce, shallot, wholegrain mustard and Armagnac in copper pans
-    session: Photo session 4 (November 2026)
-  05-zaeshko-stapka-5.webp:
-    alt: "Rabbit with prunes and Armagnac: Braised leg with shallots and prunes"
-    caption: Braised leg with shallots and prunes
-    session: Photo session 4 (November 2026)
-  06-zaeshko-stapka-6.webp:
-    alt: "Rabbit with prunes and Armagnac: Searing the rabbit loin in butter and thyme"
-    caption: Searing the rabbit loin in butter and thyme
-    session: Photo session 4 (November 2026)
-  07-zaeshko-stapka-7.webp:
-    alt: "Rabbit with prunes and Armagnac: Basting the rabbit loin with foaming butter"
-    caption: Basting the rabbit loin with foaming butter
-    session: Photo session 4 (November 2026)
-  08-zaeshko-stapka-8.webp:
-    alt: "Rabbit with prunes and Armagnac: Plating the rabbit loin, leg and sauce"
-    caption: Plating the rabbit loin, leg and sauce
-    session: Photo session 4 (November 2026)
-  09-dopalnitelen-1.webp:
-    alt: "Rabbit with prunes and Armagnac: Close-up of the rabbit loin, a prune and the sauce"
-    caption: Close-up of the rabbit loin, a prune and the sauce
-    session: Photo session 4 (November 2026)
   10-gotovo-yastie.webp:
     alt: "Rabbit with prunes and Armagnac: Rabbit loin and leg with prunes, wholegrain mustard and a dark sauce"
     caption: Rabbit loin and leg with prunes, wholegrain mustard and a dark sauce
     session: Photo session 4 (November 2026)
-  11-dopalnitelen-2.webp:
-    alt: "Rabbit with prunes and Armagnac: The ingredients: rabbit loin, legs, prunes, mustard and Armagnac"
-    caption: "The ingredients: rabbit loin, legs, prunes, mustard and Armagnac"
-    session: Photo session 5 (November 2026)
-  12-dopalnitelen-3.webp:
-    alt: "Rabbit with prunes and Armagnac: Mise en place: loins, legs, prunes and vegetables"
-    caption: "Mise en place: loins, legs, prunes and vegetables"
-    session: Photo session 5 (November 2026)
-  13-dopalnitelen-4.webp:
-    alt: "Rabbit with prunes and Armagnac: Trimming the rabbit loin"
-    caption: "Trimming the rabbit loin"
-    session: Photo session 5 (November 2026)
-  14-dopalnitelen-5.webp:
-    alt: "Rabbit with prunes and Armagnac: Searing the loin in butter"
-    caption: "Searing the loin in butter"
-    session: Photo session 5 (November 2026)
-  15-dopalnitelen-6.webp:
-    alt: "Rabbit with prunes and Armagnac: Crisp confit cylinders, prune sauce and mustard"
-    caption: "Crisp confit cylinders, prune sauce and mustard"
-    session: Photo session 5 (November 2026)
-  16-dopalnitelen-7.webp:
-    alt: "Rabbit with prunes and Armagnac: Straining the Armagnac sauce"
-    caption: "Straining the Armagnac sauce"
-    session: Photo session 5 (November 2026)
-  17-dopalnitelen-8.webp:
-    alt: "Rabbit with prunes and Armagnac: Sliced rabbit loin"
-    caption: "Sliced rabbit loin"
-    session: Photo session 5 (November 2026)
-  18-dopalnitelen-9.webp:
-    alt: "Rabbit with prunes and Armagnac: Plating and saucing"
-    caption: "Plating and saucing"
-    session: Photo session 5 (November 2026)
-  19-dopalnitelen-10.webp:
-    alt: "Rabbit with prunes and Armagnac: The finished plate: loin, confit, prunes, mustard and sauce"
-    caption: "The finished plate: loin, confit, prunes, mustard and sauce"
-    session: Photo session 5 (November 2026)
-  20-dopalnitelen-11.webp:
-    alt: "Rabbit with prunes and Armagnac: Close-up of the loin, confit and prunes"
-    caption: "Close-up of the loin, confit and prunes"
-    session: Photo session 5 (November 2026)
 mise:
   - Soak the prunes in the warm tea and Armagnac for at least 2 hours (or overnight).
   - Boil the vinegar, water and sugar, pour over the mustard seeds and leave to cool.
@@ -207,36 +131,28 @@ ingredients:
 steps:
   - title: Lay out the ingredients
     text: Arrange the legs, loin, prunes, Armagnac, mustard, carrots, shallots and butter.
-    photo: 01-zaeshko-stapka-1.webp
   - title: Trim the loin
     text: Remove the loin from the bone lengthways and take off the silver skin with a thin knife.
-    photo: 02-zaeshko-stapka-2.webp
   - title: Braise the legs
     text: Season and brown the legs in butter. Add the shallots, carrots, celery, wine and stock. Cover and braise at 150 °C for about 1 hour 30 minutes.
     cue: The meat comes away easily from the bone.
     time: 90
-    photo: 03-zaeshko-stapka-3.webp
   - title: Make the sauce
     text: Strain the braising liquid. Roast the bones, cover them with the liquid and reduce to a thick sauce. Add the Armagnac from the prunes and simmer for another 2 minutes.
     cue: The sauce is dark and glossy.
     time: 25
-    photo: 04-zaeshko-stapka-4.webp
   - title: Glaze the legs
     text: Warm the legs and shallots in a little sauce and baste them until glossy. Add the prunes for the last few minutes.
-    photo: 05-zaeshko-stapka-5.webp
   - title: Sear the loin
     text: Season the loin and sear it in the oil over medium-high heat, turning. Add the butter and thyme and baste.
     cue: The core reads 60–62 °C and the loin is springy.
     time: 6
-    photo: 06-zaeshko-stapka-6.webp
   - title: Baste and rest
     text: Baste the loin with the foaming butter for the last minute and rest it for 5 minutes somewhere warm.
     why: Resting holds the juices in the lean meat.
     time: 5
-    photo: 07-zaeshko-stapka-7.webp
   - title: Plate
     text: Slice the loin thickly. Place it next to the leg and add the prunes, a line of pickled mustard and carrots. Whisk the cold butter into the sauce and spoon it over the meat.
-    photo: 08-zaeshko-stapka-8.webp
 tips:
   - The prunes can be soaked several days ahead – they become even more fragrant.
   - The legs and sauce can be made a day ahead.
@@ -256,7 +172,7 @@ allergens:
   - Sulphites (wine)
 translation:
   status: published
-  sourceHash: 5a9143c75c9011ab
+  sourceHash: "d0a674efe75e5050"
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-21

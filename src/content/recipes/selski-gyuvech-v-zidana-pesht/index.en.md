@@ -24,27 +24,6 @@ servings: 6
 difficulty: Intermediate
 cover: 08-selski-stapka-8.webp
 photos:
-  01-selski-stapka-1.webp:
-    alt: "Village guvech: The ingredients for the village guvech"
-    caption: The ingredients for the village guvech
-  02-selski-stapka-2.webp:
-    alt: "Village guvech: The chopped vegetables"
-    caption: The chopped vegetables
-  03-selski-stapka-3.webp:
-    alt: "Village guvech: The seared meat in the clay pot"
-    caption: The seared meat in the clay pot
-  04-selski-stapka-4.webp:
-    alt: "Village guvech: The layers in the guvech"
-    caption: The layers in the guvech
-  05-selski-stapka-5.webp:
-    alt: "Village guvech: Pouring over the tomato sauce"
-    caption: Pouring over the tomato sauce
-  06-selski-stapka-6.webp:
-    alt: "Village guvech: The guvech in the masonry oven"
-    caption: The guvech in the masonry oven
-  07-selski-stapka-7.webp:
-    alt: "Village guvech: The finished village guvech"
-    caption: The finished village guvech
   08-selski-stapka-8.webp:
     alt: "Village guvech: The guvech, served with salad and wine"
     caption: The guvech, served with salad and wine
@@ -119,33 +98,25 @@ ingredients:
 steps:
   - title: Prepare the ingredients
     text: Lay out the meat, the beans, the vegetables, the olives and the spices.
-    photo: 01-selski-stapka-1.webp
   - title: Cut the vegetables
     text: Cut the potatoes, the aubergine, the courgette and the peppers into cubes of 2–3 cm, the onion finely and the tomatoes coarsely.
-    photo: 02-selski-stapka-2.webp
   - title: Sear the meat
     text: Heat two spoonfuls of oil and sear the meat over high heat, in two batches, until it forms a brown crust. Season with salt.
     time: 10
-    photo: 03-selski-stapka-3.webp
   - title: Layer
     text: In the clay pot arrange the meat, the potatoes, the beans, the vegetables and the olives – in layers or in rows. Sprinkle with the savory, the paprika and the remaining salt.
-    photo: 04-selski-stapka-4.webp
   - title: Pour over the tomato sauce
     text: Stir the tomato purée with the hot water and the remaining oil and pour it over the guvech.
     cue: The liquid comes up to about half of the contents.
-    photo: 05-selski-stapka-5.webp
   - title: Bake
     text: Close the pot, put it in a cold oven and switch it on to 180 °C. Bake for about 2 hours, then remove the lid for 10 minutes.
     cue: The meat is tender, the potatoes are soft and the sauce is thick.
     time: 130
-    photo: 06-selski-stapka-6.webp
   - title: Let it rest
     text: Take the guvech out onto a wooden board and leave it for 10 minutes. Taste for salt.
     time: 10
-    photo: 07-selski-stapka-7.webp
   - title: Serve
     text: Serve in the clay pot, with bread and a salad.
-    photo: 08-selski-stapka-8.webp
 tips:
   - If you use dried beans, soak them overnight and cook them beforehand – in the acidic tomato sauce they do not soften.
   - A new clay pot is soaked in water before its first baking.
@@ -161,7 +132,7 @@ storage: Up to 3 days in the refrigerator. Reheat under a lid over low heat.
 allergens: []
 translation:
   status: published
-  sourceHash: ce7a8d85f5f68480
+  sourceHash: "29fd5d87b3e56118"
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-20

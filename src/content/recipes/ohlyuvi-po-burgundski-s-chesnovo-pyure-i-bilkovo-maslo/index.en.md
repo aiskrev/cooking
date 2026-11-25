@@ -28,26 +28,6 @@ servings: 4
 difficulty: Intermediate
 cover: 06-ohlyuvi-stapka-6.webp
 photos:
-  01-ohlyuvi-stapka-1.webp:
-    alt: "Burgundy-style snails: The ingredients: snails, butter, lemon, garlic and parsley"
-    caption: "The ingredients: snails, butter, lemon, garlic and parsley"
-    session: Photo session 6 (November 2026)
-  02-ohlyuvi-stapka-2.webp:
-    alt: "Burgundy-style snails: Cleaned snails, brioche and white wine"
-    caption: Cleaned snails, brioche and white wine
-    session: Photo session 6 (November 2026)
-  03-ohlyuvi-stapka-3.webp:
-    alt: "Burgundy-style snails: Drying the snails"
-    caption: Drying the snails
-    session: Photo session 6 (November 2026)
-  04-ohlyuvi-stapka-4.webp:
-    alt: "Burgundy-style snails: Roasted garlic purée, herb oil and toasted brioche"
-    caption: Roasted garlic purée, herb oil and toasted brioche
-    session: Photo session 6 (November 2026)
-  05-ohlyuvi-stapka-5.webp:
-    alt: "Burgundy-style snails: Whisking the brown butter sauce"
-    caption: Whisking the brown butter sauce
-    session: Photo session 6 (November 2026)
   06-ohlyuvi-stapka-6.webp:
     alt: "Burgundy-style snails: The snails in butter with garlic and parsley"
     caption: The snails in butter with garlic and parsley
@@ -132,25 +112,19 @@ ingredients:
 steps:
   - title: Lay out the ingredients
     text: Lay out the snails, butter, shallots, garlic, lemon, parsley and brioche.
-    photo: 01-ohlyuvi-stapka-1.webp
   - title: Prepare the snails
     text: Check the snails and remove any remaining bits of shell. Measure out the wine and butter.
-    photo: 02-ohlyuvi-stapka-2.webp
   - title: Dry
     text: Dry the snails carefully with kitchen paper – moisture stops the butter from coating them.
-    photo: 03-ohlyuvi-stapka-3.webp
   - title: Make the purée and brioche
     text: Roast the garlic wrapped in foil with the olive oil for 40–45 minutes at 180 °C. Squeeze out the cloves, blend with the warmed cream and season with salt. Toast the brioche in the butter until golden.
     time: 45
-    photo: 04-ohlyuvi-stapka-4.webp
   - title: Make the brown butter
     text: Cook the butter over a medium heat until it smells nutty and the solids turn golden brown.
-    photo: 05-ohlyuvi-stapka-5.webp
   - title: Cook the snails
     text: Melt the butter, soften the shallots and garlic for 2 minutes, add the snails and wine and cook for 4–5 minutes. Add the parsley and lemon juice and season with salt.
     avoid: Do not cook the snails for long – they turn tough.
     time: 5
-    photo: 06-ohlyuvi-stapka-6.webp
 tips:
   - Ready-prepared tinned or frozen snails are the easiest choice; live ones need days of purging.
   - The roasted garlic purée keeps in the refrigerator for up to 4 days.
@@ -173,7 +147,7 @@ allergens:
   - Sulphites (wine)
 translation:
   status: published
-  sourceHash: 63f793d4427e1679
+  sourceHash: "729675f2a3bf23a8"
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-25

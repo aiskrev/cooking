@@ -1,57 +1,13 @@
 {
   "slug": "pile-s-biira-i-kartofi",
   "photos": {
-    "01-pile-stapka-1.webp": {
-      "sourceName": "ChatGPT Image Jun 10, 2026, 11_22_49 AM.png",
-      "sourceSha256": "1d3ba2a6db96fd7a990127bac759f8319901a8b3766de32d098489b3ac1d55ae",
-      "sourceIdx": 14,
-      "sourceBytes": 2068818,
-      "sourceSize": "1122x1402",
-      "role": "step",
-      "batch": 10,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "02-pile-stapka-2.webp": {
-      "sourceName": "ChatGPT Image Jun 10, 2026, 11_22_56 AM.png",
-      "sourceSha256": "7b184e4dc577e45be2d1413c6988b2fe45d50c15d1854c07d03fe3ae565b1933",
-      "sourceIdx": 15,
-      "sourceBytes": 2397384,
-      "sourceSize": "1122x1402",
-      "role": "step",
-      "batch": 11,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "03-pile-stapka-3.webp": {
-      "sourceName": "ChatGPT Image Jun 10, 2026, 11_23_00 AM.png",
-      "sourceSha256": "156f8d653c1d3bfada58eda3a08b55460cd8ff8a396e196a5ddc3cf07ffd68f0",
-      "sourceIdx": 16,
-      "sourceBytes": 2031863,
-      "sourceSize": "1122x1402",
-      "role": "step",
-      "batch": 11,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "04-pile-stapka-5.webp": {
-      "sourceName": "ChatGPT Image Jun 10, 2026, 11_23_06 AM.png",
-      "sourceSha256": "6ec543d24709112a21ceb1cc52dea9fb48ea0877219da04085fe769165a2df86",
-      "sourceIdx": 17,
-      "sourceBytes": 1955060,
-      "sourceSize": "1122x1402",
-      "role": "step",
-      "batch": 11,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
     "05-pile-stapka-6.webp": {
       "sourceName": "ChatGPT Image Jun 10, 2026, 11_23_15 AM.png",
       "sourceSha256": "e9593966a6af7ea7e94a5ae03248de58fceeeee317cd00a05576bc66b55463c9",
       "sourceIdx": 18,
       "sourceBytes": 2224907,
       "sourceSize": "1122x1402",
-      "role": "step",
+      "role": "hero",
       "batch": 12,
       "confidence": "HIGH",
       "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
@@ -59,5 +15,10 @@
   },
   "generatedHash": "b373b5be4e878a6a18dbda3d8e13d0c4d53cc714fe1e672043b77a077619c3b3",
   "excludedSources": [],
-  "importedAt": "2026-11-19T05:27:51.496Z"
+  "importedAt": "2026-11-19T05:27:51.496Z",
+  "singleHeroPolicy": {
+    "date": "2026-11-25",
+    "kept": "05-pile-stapka-6.webp",
+    "removed": 4
+  }
 }

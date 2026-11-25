@@ -27,46 +27,6 @@ servings: 4
 difficulty: Advanced
 cover: 11-gotovo-yastie.webp
 photos:
-  01-gubeno-stapka-1.webp:
-    alt: "Mushroom consommé with truffle: Mise en place: wild mushrooms, Jerusalem artichoke, truffle and broth"
-    caption: "Mise en place: wild mushrooms, Jerusalem artichoke, truffle and broth"
-    session: Photo session 3 (November 2026)
-  02-gubeno-stapka-2.webp:
-    alt: "Mushroom consommé with truffle: Slicing mushrooms on the board"
-    caption: Slicing mushrooms on the board
-    session: Photo session 3 (November 2026)
-  03-gubeno-stapka-3.webp:
-    alt: "Mushroom consommé with truffle: Mushrooms, broth and seasonings on the mise en place for the consommé"
-    caption: Mushrooms, broth and seasonings on the mise en place for the consommé
-    session: Photo session 3 (November 2026)
-  04-gubeno-stapka-4.webp:
-    alt: "Mushroom consommé with truffle: Jerusalem artichoke purée on a plate with mushrooms"
-    caption: Jerusalem artichoke purée on a plate with mushrooms
-    session: Photo session 3 (November 2026)
-  05-gubeno-stapka-5.webp:
-    alt: "Mushroom consommé with truffle: Seared wild mushrooms in a pan beside the purée"
-    caption: Seared wild mushrooms in a pan beside the purée
-    session: Photo session 3 (November 2026)
-  06-gubeno-stapka-6.webp:
-    alt: "Mushroom consommé with truffle: Pouring the consommé over the mushrooms"
-    caption: Pouring the consommé over the mushrooms
-    session: Photo session 3 (November 2026)
-  07-gubeno-stapka-7.webp:
-    alt: "Mushroom consommé with truffle: Mushrooms with truffle and herbs in the consommé"
-    caption: Mushrooms with truffle and herbs in the consommé
-    session: Photo session 3 (November 2026)
-  08-dopalnitelen-1.webp:
-    alt: "Mushroom consommé with truffle: Mushrooms and truffle in consommé – a wide shot"
-    caption: Mushrooms and truffle in consommé – a wide shot
-    session: Photo session 3 (November 2026)
-  09-dopalnitelen-2.webp:
-    alt: "Mushroom consommé with truffle: Mushrooms and purée in consommé with truffle – close-up"
-    caption: Mushrooms and purée in consommé with truffle – close-up
-    session: Photo session 3 (November 2026)
-  10-dopalnitelen-3.webp:
-    alt: "Mushroom consommé with truffle: Mushrooms in consommé, being poured with broth"
-    caption: Mushrooms in consommé, being poured with broth
-    session: Photo session 3 (November 2026)
   11-gotovo-yastie.webp:
     alt: "Mushroom consommé with truffle: Consommé with wild mushrooms and truffle on creamy purée"
     caption: Consommé with wild mushrooms and truffle on creamy purée
@@ -152,29 +112,22 @@ ingredients:
 steps:
   - title: Lay out the ingredients
     text: Lay out the mushrooms, Jerusalem artichoke, truffle and broth.
-    photo: 01-gubeno-stapka-1.webp
   - title: Cut the mushrooms
     text: Clean and slice the mushrooms.
-    photo: 02-gubeno-stapka-2.webp
   - title: Make the consommé
     text: Mix the chopped vegetables and mushrooms with the egg whites, add cold water and the dried mushrooms. Heat slowly until a raft forms and simmer for 45–60 minutes. Strain through a cloth.
     cue: The broth is crystal clear and golden.
     time: 75
-    photo: 03-gubeno-stapka-3.webp
   - title: Make the purée
     text: Cook the Jerusalem artichoke in the milk until tender and blend with the butter.
     time: 20
-    photo: 04-gubeno-stapka-4.webp
   - title: Sear the mushrooms
     text: Sear the wild mushrooms in butter for 3–4 minutes until golden.
     time: 4
-    photo: 05-gubeno-stapka-5.webp
   - title: Plate
     text: Put the purée, mushrooms and truffle in a deep plate and pour in the hot consommé.
-    photo: 06-gubeno-stapka-6.webp
   - title: Finish
     text: Add more truffle shavings and herbs.
-    photo: 07-gubeno-stapka-7.webp
 tips:
   - The broth can be made the day before.
   - Do not boil the consommé – it turns cloudy.
@@ -193,7 +146,7 @@ allergens:
   - Sulphites (wine)
 translation:
   status: published
-  sourceHash: 1ab786de608e349e
+  sourceHash: "b8d462089777d806"
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-21

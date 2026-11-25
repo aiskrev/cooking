@@ -24,21 +24,6 @@ servings: 4
 difficulty: Advanced
 cover: 06-teleshki-stapka-6.webp
 photos:
-  01-teleshki-stapka-1.webp:
-    alt: "Sous-vide beef ribs: The ingredients for the beef ribs"
-    caption: The ingredients for the beef ribs
-  02-teleshki-stapka-2.webp:
-    alt: "Sous-vide beef ribs: Sealing the ribs"
-    caption: Sealing the ribs
-  03-teleshki-stapka-3.webp:
-    alt: "Sous-vide beef ribs: The water bath at 68 °C"
-    caption: The water bath at 68 °C
-  04-teleshki-stapka-4.webp:
-    alt: "Sous-vide beef ribs: Searing the ribs"
-    caption: Searing the ribs
-  05-teleshki-stapka-5.webp:
-    alt: "Sous-vide beef ribs: Reducing the wine sauce"
-    caption: Reducing the wine sauce
   06-teleshki-stapka-6.webp:
     alt: "Sous-vide beef ribs: The ribs, served with the sauce and the mash"
     caption: The ribs, served with the sauce and the mash
@@ -91,26 +76,20 @@ ingredients:
 steps:
   - title: Prepare the ingredients
     text: Lay out the ribs, the wine, the shallots, the stock, the butter and the thyme.
-    photo: 01-teleshki-stapka-1.webp
   - title: Seal under vacuum
     text: Rub the ribs with the salt and the black pepper, put them in a bag with the thyme, in a single layer, and seal them under vacuum.
-    photo: 02-teleshki-stapka-2.webp
   - title: Cook in the water bath
     text: Immerse the bag in the water bath and cook for 24 hours at 68 °C. Check the water level from time to time.
     cue: Pressed through the bag, the meat gives like well-braised meat.
-    photo: 03-teleshki-stapka-3.webp
   - title: Sear
     text: Take out the ribs and keep the juices from the bag. Dry them very well and sear them in the heated oil, about a minute on each side.
     cue: The ribs have a dark, even crust on all sides.
     avoid: The searing is short – the meat is already done and a longer stay dries it out.
-    photo: 04-teleshki-stapka-4.webp
   - title: Make the sauce
     text: In the same pan brown the shallots for 4–5 minutes. Pour in the wine and reduce it by half. Add the stock and the strained juices from the bag and boil until the sauce becomes a syrup. Take it off the heat and whisk in the cold butter.
     cue: The sauce is dark, glossy and coats the back of the spoon.
-    photo: 05-teleshki-stapka-5.webp
   - title: Serve
     text: Put the rib on a spoonful of warm mashed potatoes and spoon the sauce and the shallots over it.
-    photo: 06-teleshki-stapka-6.webp
 tips:
   - If you will not serve straight away, chill the sealed bag in iced water and put it in the refrigerator; reheat it for 30 minutes in a bath at 60 °C and only then sear it.
   - "Without a sous-vide machine: braise the ribs under a lid in an oven at 150 °C for about 3 hours with the wine and the stock."
@@ -128,7 +107,7 @@ allergens:
   - Sulphites (wine)
 translation:
   status: published
-  sourceHash: a07f7159e1b7deec
+  sourceHash: "de8ad25d6171a565"
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-20

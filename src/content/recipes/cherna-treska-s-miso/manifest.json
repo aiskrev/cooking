@@ -1,68 +1,13 @@
 {
   "slug": "cherna-treska-s-miso",
   "photos": {
-    "01-cherna-stapka-1.webp": {
-      "sourceName": "ChatGPT Image Jun 10, 2026, 07_45_46 PM.png",
-      "sourceSha256": "b983d04cde9ac1305ce3af2c33667572d96b014010aeb85be1e3390fa7fc6f5a",
-      "sourceIdx": 259,
-      "sourceBytes": 2515301,
-      "sourceSize": "1122x1402",
-      "role": "step",
-      "batch": 87,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "02-cherna-stapka-2.webp": {
-      "sourceName": "ChatGPT Image Jun 10, 2026, 07_45_53 PM.png",
-      "sourceSha256": "a037dcc9bea7aea326aab8cd247b01953f3d28762d393818c9030d00e8759ff8",
-      "sourceIdx": 260,
-      "sourceBytes": 1825277,
-      "sourceSize": "1122x1402",
-      "role": "step",
-      "batch": 88,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "03-cherna-stapka-3.webp": {
-      "sourceName": "ChatGPT Image Jun 10, 2026, 07_45_57 PM.png",
-      "sourceSha256": "d2fd6b87633980fd66ff5802d001725219db2f99f96d7d7592f3ea8c198b228c",
-      "sourceIdx": 261,
-      "sourceBytes": 1958627,
-      "sourceSize": "1122x1402",
-      "role": "step",
-      "batch": 88,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "04-cherna-stapka-4.webp": {
-      "sourceName": "ChatGPT Image Jun 10, 2026, 07_46_00 PM.png",
-      "sourceSha256": "e6ea2a7547636b07b5b9ce4432d000cb66ef017523b455490a27d9d22ce4f6c6",
-      "sourceIdx": 262,
-      "sourceBytes": 1885675,
-      "sourceSize": "1122x1402",
-      "role": "step",
-      "batch": 88,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "05-cherna-stapka-5.webp": {
-      "sourceName": "ChatGPT Image Jun 10, 2026, 07_46_04 PM.png",
-      "sourceSha256": "4b107301b507d0e5c9a2c2ce09f66a1be6fc0e5cce92845441606b8c27ffea44",
-      "sourceIdx": 263,
-      "sourceBytes": 1715190,
-      "sourceSize": "1122x1402",
-      "role": "step",
-      "batch": 88,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
     "06-cherna-stapka-6.webp": {
       "sourceName": "ChatGPT Image Jun 10, 2026, 07_46_09 PM.png",
       "sourceSha256": "ad4917fbeb9f1b22e52a57002bdc5febf5a5e94bc011b21c24ab52d6197aa43b",
       "sourceIdx": 264,
       "sourceBytes": 1990220,
       "sourceSize": "1122x1402",
-      "role": "step",
+      "role": "hero",
       "batch": 88,
       "confidence": "HIGH",
       "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
@@ -70,5 +15,10 @@
   },
   "generatedHash": "dfcb7c49f06557989c2f1f09e345c1adbf9d65c7aa9064da8ef3ccfbe4594a50",
   "excludedSources": [],
-  "importedAt": "2026-11-19T05:27:54.214Z"
+  "importedAt": "2026-11-19T05:27:54.214Z",
+  "singleHeroPolicy": {
+    "date": "2026-11-25",
+    "kept": "06-cherna-stapka-6.webp",
+    "removed": 5
+  }
 }

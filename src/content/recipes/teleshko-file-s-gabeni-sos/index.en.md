@@ -24,28 +24,9 @@ servings: 2
 difficulty: Intermediate
 cover: 06-teleshko-stapka-6.webp
 photos:
-  01-teleshko-stapka-1.webp:
-    alt: "Beef fillet with mushroom sauce: The ingredients for the beef fillet"
-    caption: The ingredients for the beef fillet
-  02-teleshko-stapka-2.webp:
-    alt: "Beef fillet with mushroom sauce: Seasoning the fillet"
-    caption: Seasoning the fillet
-  03-teleshko-stapka-3.webp:
-    alt: "Beef fillet with mushroom sauce: Searing with the butter and thyme"
-    caption: Searing with the butter and thyme
-  04-teleshko-stapka-4.webp:
-    alt: "Beef fillet with mushroom sauce: The tray coming out of the oven"
-    caption: The tray coming out of the oven
-  05-teleshko-stapka-5.webp:
-    alt: "Beef fillet with mushroom sauce: The mushroom sauce in the pan"
-    caption: The mushroom sauce in the pan
   06-teleshko-stapka-6.webp:
     alt: "Beef fillet with mushroom sauce: The fillet, served with the mushroom sauce"
     caption: The fillet, served with the mushroom sauce
-  07-dopalnitelen-1.webp:
-    alt: "Beef fillet with mushroom sauce: A separate frame: fillet on mash"
-    caption: "A separate frame: fillet on mash"
-    session: Single frames
 mise:
   - Take the meat out of the refrigerator 30 minutes ahead and dry it.
   - Finely chop the mushrooms and the shallot; lightly crush the garlic without peeling it.
@@ -94,28 +75,22 @@ ingredients:
 steps:
   - title: Prepare the ingredients
     text: Lay out the medallions, the mushrooms, the shallot, the cream, the wine, the butter, the garlic and the thyme.
-    photo: 01-teleshko-stapka-1.webp
   - title: Season
     text: Salt the medallions generously and sprinkle them with freshly ground black pepper on all sides, just before they go into the pan.
     why: Salt applied much earlier draws moisture to the surface and the meat does not form a crust.
-    photo: 02-teleshko-stapka-2.webp
   - title: Sear and baste with butter
     text: Heat the oil in a heavy frying pan until it begins to smoke lightly. Sear the medallions for 2 minutes on each side. Lower the heat, add the butter, the garlic and the thyme and baste the meat with the foaming butter for another minute.
     cue: The crust is dark brown and even.
     time: 5
-    photo: 03-teleshko-stapka-3.webp
   - title: Finish and rest
     text: Transfer the medallions to a small tray and cook them for 4–5 minutes at 180 °C. Let them rest for 5 minutes on a rack.
     cue: The thermometer shows 52–54 °C; pressed, the meat springs back like the pad under your thumb.
     time: 5
-    photo: 04-teleshko-stapka-4.webp
   - title: Make the sauce
     text: In the same pan sweat the shallot and the mushrooms for 4–5 minutes. Pour in the wine and scrape the bottom. When the wine has almost evaporated, add the cream and let it simmer for 2–3 minutes. Season with salt and add the juice that the meat released during the rest.
     cue: The sauce coats the back of a spoon.
-    photo: 05-teleshko-stapka-5.webp
   - title: Serve
     text: Put a medallion on a warmed plate and spoon some sauce over it; serve the rest on the side.
-    photo: 06-teleshko-stapka-6.webp
 tips:
   - A heavy pan holds the heat – in a thin one the meat boils.
   - If the medallions are thinner than 3 cm, skip the oven.
@@ -133,7 +108,7 @@ allergens:
   - Sulphites (wine)
 translation:
   status: published
-  sourceHash: a91a682876d9f5bf
+  sourceHash: "332ae03f8005c69e"
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-20

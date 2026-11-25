@@ -25,40 +25,9 @@ servings: 6
 difficulty: Intermediate
 cover: 10-gotovo-yastie.webp
 photos:
-  01-teleshki-stapka-1.webp:
-    alt: "Beef guvech: The ingredients for the beef guvech"
-    caption: The ingredients for the beef guvech
-  02-teleshki-stapka-2.webp:
-    alt: "Beef guvech: Cutting the beef"
-    caption: Cutting the beef
-  03-teleshki-stapka-3.webp:
-    alt: "Beef guvech: The chopped vegetables"
-    caption: The chopped vegetables
-  04-teleshki-stapka-4.webp:
-    alt: "Beef guvech: Searing the pieces of beef"
-    caption: Searing the pieces of beef
-  05-teleshki-stapka-5.webp:
-    alt: "Beef guvech: The meat and the vegetables in the guvech"
-    caption: The meat and the vegetables in the guvech
-  06-teleshki-stapka-6.webp:
-    alt: "Beef guvech: Pouring in the wine and the stock"
-    caption: Pouring in the wine and the stock
-  07-teleshki-stapka-7.webp:
-    alt: "Beef guvech: The guvech in the oven"
-    caption: The guvech in the oven
-  08-teleshki-stapka-8.webp:
-    alt: "Beef guvech: Opening the hot guvech"
-    caption: Opening the hot guvech
-  09-teleshki-stapka-9.webp:
-    alt: "Beef guvech: The guvech, served with the sauce"
-    caption: The guvech, served with the sauce
   10-gotovo-yastie.webp:
     alt: "Beef guvech: The finished dish"
     caption: The finished dish
-  11-dopalnitelen-1.webp:
-    alt: "Beef guvech: Beef with carrots and peppers in a clay pot, with red wine (second photo session)"
-    caption: Beef with carrots and peppers in a clay pot, with red wine (second photo session)
-    session: Photo session 2 (May–June 2026)
 mise:
   - Pat the meat dry with kitchen paper and salt it.
   - Cut the potatoes into large pieces of 4–5 cm, the carrots into thick rounds and the onion into eighths.
@@ -121,39 +90,30 @@ ingredients:
 steps:
   - title: Prepare the ingredients
     text: Lay out the meat, the potatoes, the carrots, the onion, the tomatoes, the wine, the stock and the spices.
-    photo: 01-teleshki-stapka-1.webp
   - title: Prepare the meat
     text: Cut the meat into large pieces, together with the bone, dry it and rub it with the salt and the black pepper.
-    photo: 02-teleshki-stapka-2.webp
   - title: Cut the vegetables
     text: Cut the potatoes and the carrots coarsely and the onion into eighths.
     why: Finely cut vegetables fall into mush in two and a half hours.
-    photo: 03-teleshki-stapka-3.webp
   - title: Sear the meat
     text: Heat the oil in a heavy frying pan over high heat and sear the meat on all sides, in two batches, about 12 minutes in total.
     cue: The pieces are dark brown, and there are caramelised juices on the bottom of the pan.
     avoid: Do not move the meat until it releases by itself – the crust stays in the pan.
     time: 12
-    photo: 04-teleshki-stapka-4.webp
   - title: Arrange in the guvech
     text: Arrange the meat in the clay pot, and the vegetables and the tomatoes around and over it. Sprinkle with the paprika and the thyme and tuck in the bay leaves.
-    photo: 05-teleshki-stapka-5.webp
   - title: Pour in the wine and stock
     text: Pour the wine into the hot pan, scrape the bottom and pour it into the guvech together with the stock.
     why: The juices caramelised in the pan are half of the flavour of the sauce.
     cue: The liquid comes up to about two thirds of the height of the contents.
-    photo: 06-teleshki-stapka-6.webp
   - title: Bake under a lid
     text: Close the guvech, put it into a cold oven and switch it on to 180 °C. Bake for about 2 hours 30 minutes.
     time: 150
-    photo: 07-teleshki-stapka-7.webp
   - title: Check
     text: Take the guvech out onto a wooden board, lift the lid and test the meat with a fork. Taste the sauce for salt.
     cue: The meat comes away from the bone without effort, and the potatoes are soft but whole.
-    photo: 08-teleshki-stapka-8.webp
   - title: Serve
     text: Let the guvech settle for 10 minutes and serve in deep plates – a piece of meat, vegetables and plenty of sauce.
-    photo: 09-teleshki-stapka-9.webp
 tips:
   - Choose potatoes that do not boil to pieces; very floury ones will thicken the sauce but lose their shape.
   - If the stock is ready-made and salted, halve the salt.
@@ -170,7 +130,7 @@ allergens:
   - Sulphites (wine)
 translation:
   status: published
-  sourceHash: 7044cf64eabaef19
+  sourceHash: "0fb4bca79e8f70bd"
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-20
