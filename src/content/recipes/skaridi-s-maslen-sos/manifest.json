@@ -1,57 +1,13 @@
 {
   "slug": "skaridi-s-maslen-sos",
   "photos": {
-    "01-skaridi-stapka-1.webp": {
-      "sourceName": "ChatGPT Image Jun 10, 2026, 07_16_40 PM.png",
-      "sourceSha256": "b0debfc3523631dbf060fd50913933fbae1ed9b7f04831aa49ca08d6ec3f1cd2",
-      "sourceIdx": 229,
-      "sourceBytes": 2514405,
-      "sourceSize": "1254x1254",
-      "role": "step",
-      "batch": 78,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "02-skaridi-stapka-2.webp": {
-      "sourceName": "ChatGPT Image Jun 10, 2026, 07_16_53 PM.png",
-      "sourceSha256": "1a0544c4018bddb398082f8d1c735eaa84bc28a6324082fe0a81dd058aeaebef",
-      "sourceIdx": 232,
-      "sourceBytes": 1921861,
-      "sourceSize": "1254x1254",
-      "role": "step",
-      "batch": 79,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "03-skaridi-stapka-4.webp": {
-      "sourceName": "ChatGPT Image Jun 10, 2026, 07_16_50 PM.png",
-      "sourceSha256": "aae72e757a9641199ff25e2ab0068f441834077636e13485b13d98552fb492da",
-      "sourceIdx": 231,
-      "sourceBytes": 2104294,
-      "sourceSize": "1254x1254",
-      "role": "step",
-      "batch": 79,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "04-skaridi-stapka-5.webp": {
-      "sourceName": "ChatGPT Image Jun 10, 2026, 07_16_55 PM.png",
-      "sourceSha256": "ea509789a4503133f8888babfda30eafd1d8f1b98b606f8a044620dd7b1f1429",
-      "sourceIdx": 233,
-      "sourceBytes": 1934027,
-      "sourceSize": "1254x1254",
-      "role": "step",
-      "batch": 79,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
     "05-skaridi-stapka-6.webp": {
       "sourceName": "ChatGPT Image Jun 10, 2026, 07_17_01 PM.png",
       "sourceSha256": "c607c1025e1bc49fe2ed440db296ad4b002d9f6536d853137593110a706ff178",
       "sourceIdx": 234,
       "sourceBytes": 1877859,
       "sourceSize": "1254x1254",
-      "role": "step",
+      "role": "hero",
       "batch": 79,
       "confidence": "HIGH",
       "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
@@ -59,5 +15,10 @@
   },
   "generatedHash": "b374fdb40b7aa0bb0c8bc1151a2f23de3a61cc642b8d66728fea69803ed998c0",
   "excludedSources": [],
-  "importedAt": "2026-11-19T05:27:53.980Z"
+  "importedAt": "2026-11-19T05:27:53.980Z",
+  "singleHeroPolicy": {
+    "date": "2026-11-25",
+    "kept": "05-skaridi-stapka-6.webp",
+    "removed": 4
+  }
 }

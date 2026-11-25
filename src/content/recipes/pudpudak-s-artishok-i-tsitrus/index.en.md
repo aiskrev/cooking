@@ -26,53 +26,9 @@ servings: 4
 difficulty: Intermediate
 cover: 07-pudpudak-stapka-7.webp
 photos:
-  01-pudpudak-stapka-1.webp:
-    alt: "Roast quail with artichoke: Mise en place: quails, artichokes, citrus and butter"
-    caption: "Mise en place: quails, artichokes, citrus and butter"
-    session: Photo session 3 (November 2026)
-  02-pudpudak-stapka-2.webp:
-    alt: "Roast quail with artichoke: The chef preparing the quails on the board"
-    caption: The chef preparing the quails on the board
-    session: Photo session 3 (November 2026)
-  03-pudpudak-stapka-3.webp:
-    alt: "Roast quail with artichoke: Quails, butter and seasonings on the board"
-    caption: Quails, butter and seasonings on the board
-    session: Photo session 3 (November 2026)
-  04-pudpudak-stapka-4.webp:
-    alt: "Roast quail with artichoke: Quails seared with herb butter"
-    caption: Quails seared with herb butter
-    session: Photo session 3 (November 2026)
-  05-pudpudak-stapka-5.webp:
-    alt: "Roast quail with artichoke: Basting the quails with butter in the pan"
-    caption: Basting the quails with butter in the pan
-    session: Photo session 3 (November 2026)
-  06-pudpudak-stapka-6.webp:
-    alt: "Roast quail with artichoke: Glossy sauce in a pot, spooned over roasted artichoke"
-    caption: Glossy sauce in a pot, spooned over roasted artichoke
-    session: Photo session 3 (November 2026)
   07-pudpudak-stapka-7.webp:
     alt: "Roast quail with artichoke: Roast quail and artichoke arranged on a dark plate"
     caption: Roast quail and artichoke arranged on a dark plate
-    session: Photo session 3 (November 2026)
-  08-dopalnitelen-1.webp:
-    alt: "Roast quail with artichoke: Mise en place with quails and citrus"
-    caption: Mise en place with quails and citrus
-    session: Photo session 3 (November 2026)
-  09-dopalnitelen-2.webp:
-    alt: "Roast quail with artichoke: Quails with vegetables and herbs on a tray"
-    caption: Quails with vegetables and herbs on a tray
-    session: Photo session 3 (November 2026)
-  10-dopalnitelen-3.webp:
-    alt: "Roast quail with artichoke: Two quails in butter with garlic"
-    caption: Two quails in butter with garlic
-    session: Photo session 3 (November 2026)
-  11-dopalnitelen-4.webp:
-    alt: "Roast quail with artichoke: A quail basted with butter in a pan"
-    caption: A quail basted with butter in a pan
-    session: Photo session 3 (November 2026)
-  12-dopalnitelen-5.webp:
-    alt: "Roast quail with artichoke: Citrus sauce and orange in a copper pot"
-    caption: Citrus sauce and orange in a copper pot
     session: Photo session 3 (November 2026)
 mise:
   - Pat the quails dry, cut out the backbone and flatten them (spatchcock).
@@ -153,29 +109,22 @@ ingredients:
 steps:
   - title: Lay out the ingredients
     text: Lay out the quails, artichokes, citrus and butter.
-    photo: 01-pudpudak-stapka-1.webp
   - title: Prepare the birds
     text: Flatten the quails and salt them.
-    photo: 02-pudpudak-stapka-2.webp
   - title: Prepare the ingredients for the sauce
     text: Prepare the seasonings, butter, garlic and citrus.
-    photo: 03-pudpudak-stapka-3.webp
   - title: Sear the quails
     text: Sear in butter for 3–4 minutes on each side until golden, add thyme and garlic and baste.
     cue: The skin is golden and crisp.
     time: 8
-    photo: 04-pudpudak-stapka-4.webp
   - title: Finish in the oven
     text: Transfer to the oven at 200 °C for 6–8 minutes.
     time: 8
-    photo: 05-pudpudak-stapka-5.webp
   - title: Make the sauce
     text: Reduce the citrus juices, add the jus and thicken; whisk in the cold butter.
     time: 10
-    photo: 06-pudpudak-stapka-6.webp
   - title: Plate
     text: Arrange the artichoke with the citrus segments, the quail and the sauce, and decorate with rose petals.
-    photo: 07-pudpudak-stapka-7.webp
 tips:
   - Quail is thin – do not overcook it.
   - The artichoke can be boiled in advance.
@@ -193,7 +142,7 @@ allergens:
   - Sulphites (wine)
 translation:
   status: published
-  sourceHash: bccf59dd779fa111
+  sourceHash: "3e44f41affd00e36"
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-21

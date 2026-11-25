@@ -1,145 +1,13 @@
 {
   "slug": "smokini-s-koze-sirene-i-karamelizirani-orehi",
   "photos": {
-    "01-smokini-stapka-1.webp": {
-      "sourceName": "Gourmet Fig and Goat Cheese Board-1.webp",
-      "sourceSha256": "02a5ed2b5c970c9859ee81d8415caee598c0a6fe9f37cc3cc406624a8ed4ab61",
-      "sourceIdx": 2309,
-      "sourceBytes": 2096432,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 28,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "02-smokini-stapka-2.webp": {
-      "sourceName": "Gourmet Fig and Goat Cheese Mise en Place-4.webp",
-      "sourceSha256": "a54456a114dcb1e111f3ffc2e76caa2e4ea984b93b658b38054d3b651de73feb",
-      "sourceIdx": 2312,
-      "sourceBytes": 2053098,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 28,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "03-smokini-stapka-3.webp": {
-      "sourceName": "Gourmet Fig Preparation on Marble Countertop-6.webp",
-      "sourceSha256": "8ced45dfd9919752ae793bba1190de976738bdeb650c33c3520f16aaa53c0c10",
-      "sourceIdx": 2314,
-      "sourceBytes": 1815082,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 28,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "04-smokini-stapka-4.webp": {
-      "sourceName": "Caramelized Figs with Honey and Pistachios-7.webp",
-      "sourceSha256": "fe77585775eaff1f98d46a2bc1b45048c7a965132ed4347eee9883febccc7191",
-      "sourceIdx": 2315,
-      "sourceBytes": 1838864,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 28,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "05-smokini-stapka-5.webp": {
-      "sourceName": "Artisanal Goat Cheese Plating-8.webp",
-      "sourceSha256": "8227945fb0d979211233bde40f634a4b5ae8c2098a2da8718536386198f629c3",
-      "sourceIdx": 2316,
-      "sourceBytes": 1627902,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 28,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "06-smokini-stapka-6.webp": {
-      "sourceName": "Copper Pot of Glazed Caramel Walnuts-3.webp",
-      "sourceSha256": "fff2a62f7fac344980a72839b04bc569256e553a13e65722c3836ab428bd60de",
-      "sourceIdx": 2311,
-      "sourceBytes": 1808030,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 28,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "07-smokini-stapka-7.webp": {
-      "sourceName": "Caramelized Walnut and Fig Dessert-11.webp",
-      "sourceSha256": "09df96c143caa594c5ba0193275d9727392df1b3748cb405ebca80e4b9cc2e6e",
-      "sourceIdx": 2319,
-      "sourceBytes": 1810500,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 28,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "08-dopalnitelen-1.webp": {
-      "sourceName": "Gourmet Fig, Goat Cheese, and Honey Board-2.webp",
-      "sourceSha256": "111e25526fee0abbe8634169ef34a245024307f913f4ed16d426ca55b88dbf07",
-      "sourceIdx": 2310,
-      "sourceBytes": 1962790,
-      "sourceSize": "1536x1024",
-      "role": "extra",
-      "batch": 28,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "09-dopalnitelen-2.webp": {
-      "sourceName": "Fig, Goat Cheese, and Walnut Mise en Place-5.webp",
-      "sourceSha256": "1d9f9b9b40f17666a9a3ca39fc6ddbb4d96fa50247c1fd7285fd20958d27dcc6",
-      "sourceIdx": 2313,
-      "sourceBytes": 2155666,
-      "sourceSize": "1536x1024",
-      "role": "extra",
-      "batch": 28,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "10-dopalnitelen-3.webp": {
-      "sourceName": "Fig and Goat Cheese Dessert Prep-9.webp",
-      "sourceSha256": "8b3ea6a09c38ca5ce7f933149d3f9b3f1c3f5ee976bc6d265a24a4495cd2b7d1",
-      "sourceIdx": 2317,
-      "sourceBytes": 1659340,
-      "sourceSize": "1536x1024",
-      "role": "extra",
-      "batch": 28,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "11-dopalnitelen-4.webp": {
-      "sourceName": "Caramel Walnut Praline with Purple Garnishes-10.webp",
-      "sourceSha256": "6cde8681460b42dfb6581a598b7611baf44ee30283c59ca6ac35aa442b3b1031",
-      "sourceIdx": 2318,
-      "sourceBytes": 1960566,
-      "sourceSize": "1536x1024",
-      "role": "extra",
-      "batch": 28,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
     "12-dopalnitelen-5.webp": {
       "sourceName": "Honeyed Goat Cheese with Figs-12.webp",
       "sourceSha256": "3b39c2d1b06939901d87469b221b80fd49f80eafc4283b0b710ed4ad22d5d260",
       "sourceIdx": 2320,
       "sourceBytes": 1891846,
       "sourceSize": "1536x1024",
-      "role": "extra",
-      "batch": 29,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "13-dopalnitelen-6.webp": {
-      "sourceName": "Honey, Figs, and Goat Cheese Elegance-13.webp",
-      "sourceSha256": "8cd72f6c56952de5cbc76b07babd68cb66bed89c1744b9829dd2007be4365a15",
-      "sourceIdx": 2321,
-      "sourceBytes": 1804206,
-      "sourceSize": "1536x1024",
-      "role": "extra",
+      "role": "hero",
       "batch": 29,
       "confidence": "HIGH",
       "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
@@ -147,5 +15,10 @@
   },
   "generatedHash": "13bba95d5e8f7462b3708273a9aa5e390469492a1def183d1928c21153791c6f",
   "excludedSources": [],
-  "importedAt": "2026-11-21T06:46:56.220Z"
+  "importedAt": "2026-11-21T06:46:56.220Z",
+  "singleHeroPolicy": {
+    "date": "2026-11-25",
+    "kept": "12-dopalnitelen-5.webp",
+    "removed": 12
+  }
 }

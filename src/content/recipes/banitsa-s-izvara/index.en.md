@@ -25,14 +25,6 @@ servings: 8
 difficulty: Intermediate
 cover: 03-gotovo-yastie.webp
 photos:
-  01-dopalnitelen-1.webp:
-    alt: "Banitsa with izvara: A cut izvara banitsa and a small bowl of izvara"
-    caption: A cut izvara banitsa and a small bowl of izvara
-    session: Photo session 2 (May–June 2026)
-  02-dopalnitelen-2.webp:
-    alt: "Banitsa with izvara: Banitsa in a tin with a white filling"
-    caption: Banitsa in a tin with a white filling
-    session: Photo session 2 (May–June 2026)
   03-gotovo-yastie.webp:
     alt: "Banitsa with izvara: A cut rolled banitsa with an izvara filling"
     caption: A cut rolled banitsa with an izvara filling
@@ -113,7 +105,7 @@ allergens:
   - Milk and dairy
 translation:
   status: published
-  sourceHash: 479a2b807c4bbf4c
+  sourceHash: "ec0ea3c2eaf3a591"
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-20

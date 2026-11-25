@@ -24,21 +24,6 @@ servings: 8
 difficulty: Intermediate
 cover: 06-tikvenik-stapka-6.webp
 photos:
-  01-tikvenik-stapka-1.webp:
-    alt: "Tikvenik: The ingredients for the tikvenik"
-    caption: The ingredients for the tikvenik
-  02-tikvenik-stapka-2.webp:
-    alt: "Tikvenik: The sweated pumpkin with the walnuts in the pan"
-    caption: The sweated pumpkin with the walnuts in the pan
-  03-tikvenik-stapka-3.webp:
-    alt: "Tikvenik: Rolling up the tikvenik"
-    caption: Rolling up the tikvenik
-  04-tikvenik-stapka-4.webp:
-    alt: "Tikvenik: Brushing the spiral with butter"
-    caption: Brushing the spiral with butter
-  05-tikvenik-stapka-5.webp:
-    alt: "Tikvenik: The baked tikvenik"
-    caption: The baked tikvenik
   06-tikvenik-stapka-6.webp:
     alt: "Tikvenik: A piece of tikvenik with a cup of tea"
     caption: A piece of tikvenik with a cup of tea
@@ -81,27 +66,21 @@ ingredients:
 steps:
   - title: Prepare the ingredients
     text: Lay out the grated pumpkin, the walnuts, the sugar, the cinnamon, the melted butter and the filo.
-    photo: 01-tikvenik-stapka-1.webp
   - title: Cook the pumpkin
     text: Put the pumpkin with the sugar and two spoonfuls of the butter in a wide frying pan. Cook over medium heat for 10–12 minutes, stirring, until the liquid has evaporated. Take it off the heat, add the cinnamon and the walnuts and let it cool.
     cue: The pumpkin is soft and glossy, and there is no liquid on the bottom of the pan.
     avoid: A hot filling tears the sheets – wait until it has cooled to lukewarm.
     time: 12
-    photo: 02-tikvenik-stapka-2.webp
   - title: Roll
     text: Spread out one sheet, brush it thinly with butter, put a second one on top and brush it as well. Spread a strip of filling along the long side and roll up a loose roll.
-    photo: 03-tikvenik-stapka-3.webp
   - title: Shape the spiral
     text: Coil the rolls like a snail in a tin greased with butter, from the middle outwards. Brush the surface with the remaining butter.
-    photo: 04-tikvenik-stapka-4.webp
   - title: Bake
     text: Bake for 35–40 minutes, until the tikvenik is dark golden and crisp.
     cue: The crust is dry, dark golden and crackles under pressure.
     time: 40
-    photo: 05-tikvenik-stapka-5.webp
   - title: Serve
     text: Let the tikvenik cool for 15 minutes, dust it generously with icing sugar and cut it into pieces.
-    photo: 06-tikvenik-stapka-6.webp
 tips:
   - The best is butternut squash (the violin-shaped pumpkin) – it is sweet and not watery.
   - If the filling is still damp, sprinkle the sheet with a spoonful of breadcrumbs before laying it on.
@@ -120,7 +99,7 @@ allergens:
   - Tree nuts
 translation:
   status: published
-  sourceHash: 6997c88c16e45451
+  sourceHash: "05d3d44995c7b5bb"
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-20

@@ -23,21 +23,6 @@ servings: 2
 difficulty: Intermediate
 cover: 06-telesho-stapka-6.webp
 photos:
-  01-telesho-stapka-1.webp:
-    alt: "Marbled beef: The ingredients for the marbled beef"
-    caption: The ingredients for the marbled beef
-  02-telesho-stapka-2.webp:
-    alt: "Marbled beef: Cutting the meat"
-    caption: Cutting the meat
-  03-telesho-stapka-3.webp:
-    alt: "Marbled beef: Searing in the pan"
-    caption: Searing in the pan
-  04-telesho-stapka-4.webp:
-    alt: "Marbled beef: The meat resting on the board"
-    caption: The meat resting on the board
-  05-telesho-stapka-5.webp:
-    alt: "Marbled beef: Sprinkling with the citrus salt"
-    caption: Sprinkling with the citrus salt
   06-telesho-stapka-6.webp:
     alt: "Marbled beef: The sliced beef on the plate"
     caption: The sliced beef on the plate
@@ -69,28 +54,22 @@ ingredients:
 steps:
   - title: Prepare the ingredients
     text: Lay out the meat, the salt and the citrus.
-    photo: 01-telesho-stapka-1.webp
   - title: Prepare the meat
     text: If the piece is large, divide it into portions about 2.5 cm thick. Dry it and leave it at room temperature.
     why: Cold meat cooks unevenly – done on the outside, icy inside.
-    photo: 02-telesho-stapka-2.webp
   - title: Sear
     text: Heat a heavy pan, with no fat, until it begins to smoke. Put in the meat and cook it for 1.5–2 minutes on each side, turning it only once.
     cue: The crust is dark brown, and a pink stripe can be seen at the side.
     avoid: Do not add oil – the fat of the meat melts within seconds.
     time: 4
-    photo: 03-telesho-stapka-3.webp
   - title: Let it rest
     text: Move the meat onto a board and leave it for 5 minutes.
     why: The juice returns into the fibres and stays in the meat, not on the board.
     time: 5
-    photo: 04-telesho-stapka-4.webp
   - title: Slice and salt
     text: Slice the meat across the grain into slices about half a centimetre thick and sprinkle it with the citrus salt and a pinch of black pepper.
-    photo: 05-telesho-stapka-5.webp
   - title: Serve
     text: Arrange the slices on a warmed plate and serve immediately.
-    photo: 06-telesho-stapka-6.webp
 tips:
   - Salt after cooking – the coarse flakes stay crisp and are tasted separately.
   - The fat rendered in the pan is excellent for frying rice or mushrooms.
@@ -106,7 +85,7 @@ storage: Eaten immediately.
 allergens: []
 translation:
   status: published
-  sourceHash: b914c2f1781f00dd
+  sourceHash: "b67c9456de099d28"
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-20

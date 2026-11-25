@@ -23,18 +23,6 @@ servings: 4
 difficulty: Easy
 cover: 05-bob-stapka-5.webp
 photos:
-  01-bob-stapka-1.webp:
-    alt: "Bean stew with sausage: The ingredients for the beans with sausage"
-    caption: The ingredients for the beans with sausage
-  02-bob-stapka-2.webp:
-    alt: "Bean stew with sausage: The boiled beans in the clay pot"
-    caption: The boiled beans in the clay pot
-  03-bob-stapka-3.webp:
-    alt: "Bean stew with sausage: The sausage in the red sauce"
-    caption: The sausage in the red sauce
-  04-bob-stapka-4.webp:
-    alt: "Bean stew with sausage: Pouring over the zaprazhka"
-    caption: Pouring over the zaprazhka
   05-bob-stapka-5.webp:
     alt: "Bean stew with sausage: The finished bean stew with sausage"
     caption: The finished bean stew with sausage
@@ -86,27 +74,22 @@ ingredients:
 steps:
   - title: Prepare the ingredients
     text: Drain the soaked beans and lay out the sausage, the vegetables and the spices.
-    photo: 01-bob-stapka-1.webp
   - title: Boil the beans
     text: Cover the beans with fresh water, bring to the boil, boil for 5 minutes and discard the water. Pour in new water to cover them by three fingers, add the bay leaf and cook over low heat for 60–75 minutes.
     cue: The beans are completely soft but whole.
     avoid: Do not salt until the beans are tender.
     time: 75
-    photo: 02-bob-stapka-2.webp
   - title: Make the sauce and add the sausage
     text: Sweat the onion and the carrot in two spoonfuls of oil for 5–6 minutes, add the tomatoes and cook for another 5 minutes. Pour the sauce over the beans, add the sausage whole, pricked with a fork, and add the spearmint and the salt. Leave to simmer for 20–25 minutes.
     why: A pricked sausage gives its fat and flavour to the stew without bursting.
     time: 25
-    photo: 03-bob-stapka-3.webp
   - title: Pour over the zaprazhka
     text: Heat the remaining oil, take it off the heat, stir the paprika into it and immediately pour it over the stew.
     avoid: The paprika goes into the oil off the heat, otherwise it burns.
-    photo: 04-bob-stapka-4.webp
   - title: Serve
     text: Let the stew bubble for 5 minutes and then rest for 10 minutes under the lid. Slice the sausage and serve.
     cue: The stew is thick – the spoon leaves a trail.
     time: 15
-    photo: 05-bob-stapka-5.webp
 tips:
   - If the stew is thin, mash a few spoonfuls of beans and return them to the pot.
   - The sausage is cut after cooking so that it stays juicy.
@@ -122,7 +105,7 @@ storage: Up to 3 days in the refrigerator. When reheated, add a spoonful or two 
 allergens: []
 translation:
   status: published
-  sourceHash: 07447035c025db58
+  sourceHash: "c1c8e18c2a01e982"
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-20

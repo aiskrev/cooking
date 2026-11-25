@@ -1,112 +1,13 @@
 {
   "slug": "shokoladov-desert-s-karamel-i-tuil",
   "photos": {
-    "01-shokoladov-stapka-1.webp": {
-      "sourceName": "Gourmet Chocolate Dessert Mise en Place-1.webp",
-      "sourceSha256": "460cad192a14417021744b7f73943ba81d318e810c7501868d3e0b7e76322350",
-      "sourceIdx": 2279,
-      "sourceBytes": 1825264,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 26,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "02-shokoladov-stapka-2.webp": {
-      "sourceName": "Luxury Chocolate Dessert Mise en Place-7.webp",
-      "sourceSha256": "4f34f1649564a041d16db42c6224b88f95d8a7a3e20bf00c1fd2666eabc75806",
-      "sourceIdx": 2285,
-      "sourceBytes": 1756614,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 26,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "03-shokoladov-stapka-3.webp": {
-      "sourceName": "Chocolate Tempering in the Culinary Studio-8.webp",
-      "sourceSha256": "ce19d06626bce56fe5679958982a36a2459caea3285b2ca752d31df09ae0bd0a",
-      "sourceIdx": 2286,
-      "sourceBytes": 1356202,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 26,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "04-shokoladov-stapka-4.webp": {
-      "sourceName": "Chocolate Mousse Ring Assembly-9.webp",
-      "sourceSha256": "4e576f4909b5c0df4fe697981ebb003c345e4c73ec3537c5fb1759bed667a483",
-      "sourceIdx": 2287,
-      "sourceBytes": 1414186,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 26,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "05-shokoladov-stapka-5.webp": {
-      "sourceName": "Glossy Caramel Dripping into Copper Pot-10.webp",
-      "sourceSha256": "387358550ed02c3392ea46a91a01edb944816c1b2dfc1dd6e57e2888068e8776",
-      "sourceIdx": 2288,
-      "sourceBytes": 1377094,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 26,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "06-shokoladov-stapka-6.webp": {
-      "sourceName": "Artisanal Chocolate Dessert Trio-11.webp",
-      "sourceSha256": "c3b7b5606e2c1d9db5aa4d8e1a582e89251cfc4b62e3053e3e247e33eea39a72",
-      "sourceIdx": 2289,
-      "sourceBytes": 1921274,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 26,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "07-shokoladov-stapka-7.webp": {
-      "sourceName": "Salted Caramel Chocolate Quenelle-3.webp",
-      "sourceSha256": "b1c48670c1bb8ef5ad5966a1af6fbbde6aa1d4e94786f08fcac99019a708f289",
-      "sourceIdx": 2281,
-      "sourceBytes": 1748808,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 26,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "08-dopalnitelen-1.webp": {
-      "sourceName": "Luxurious Chocolate Dessert Plating-2.webp",
-      "sourceSha256": "5f959913603280c5ed51a6d33bbf2e521d689bfe4f550c575ea3216fc740f15e",
-      "sourceIdx": 2280,
-      "sourceBytes": 1809554,
-      "sourceSize": "1536x1024",
-      "role": "extra",
-      "batch": 26,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "09-dopalnitelen-2.webp": {
-      "sourceName": "Luxurious Chocolate Dessert Plating-6.webp",
-      "sourceSha256": "7c480a66cca62b5dd4e3aace648f92ad332beb0fd6d48ae0b958fad8e77dd12f",
-      "sourceIdx": 2284,
-      "sourceBytes": 1905458,
-      "sourceSize": "1536x1024",
-      "role": "extra",
-      "batch": 26,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
     "10-dopalnitelen-3.webp": {
       "sourceName": "Artful Dark Chocolate Dessert Plating-4.webp",
       "sourceSha256": "8eeef607cca3d67adad351f1ba9f94f95f7c6d68bbec93e831756e5be41f6a97",
       "sourceIdx": 2282,
       "sourceBytes": 1573826,
       "sourceSize": "1536x1024",
-      "role": "extra",
+      "role": "hero",
       "batch": 26,
       "confidence": "HIGH",
       "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
@@ -114,5 +15,10 @@
   },
   "generatedHash": "412e20f20367cf7b16f740fff54cd033899e99815b7206d0f9a8a8920b91d974",
   "excludedSources": [],
-  "importedAt": "2026-11-21T06:46:56.148Z"
+  "importedAt": "2026-11-21T06:46:56.148Z",
+  "singleHeroPolicy": {
+    "date": "2026-11-25",
+    "kept": "10-dopalnitelen-3.webp",
+    "removed": 9
+  }
 }

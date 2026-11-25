@@ -1,17 +1,6 @@
 {
   "slug": "pileshko-kiev-sas-zeleno-maslo",
   "photos": {
-    "01-dopalnitelen-1.webp": {
-      "sourceName": "ChatGPT Image May 31, 2026, 08_31_53 PM.png",
-      "sourceSha256": "16ef57fcce98e40de475d27ee88eb9476c06f386004d2d25c856593cdd492fa1",
-      "sourceIdx": 1041,
-      "sourceBytes": 2116286,
-      "sourceSize": "1122x1402",
-      "role": "extra",
-      "batch": 26,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
     "02-gotovo-yastie.webp": {
       "sourceName": "ChatGPT Image May 31, 2026, 07_41_02 PM.png",
       "sourceSha256": "8c0283b730d0e272d41b8b9afab7bc5a1f6130197a77df115ead94d6fa435569",
@@ -26,5 +15,10 @@
   },
   "generatedHash": "79b0c1e217ab69864b6c03d7faf189e2805d0c29988fb56a6335ecd9fa7b5d35",
   "excludedSources": [],
-  "importedAt": "2026-11-19T05:27:57.697Z"
+  "importedAt": "2026-11-19T05:27:57.697Z",
+  "singleHeroPolicy": {
+    "date": "2026-11-25",
+    "kept": "02-gotovo-yastie.webp",
+    "removed": 1
+  }
 }

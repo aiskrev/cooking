@@ -26,42 +26,6 @@ servings: 6
 difficulty: Advanced
 cover: 10-dopalnitelen-3.webp
 photos:
-  01-shokoladov-stapka-1.webp:
-    alt: "Chocolate dessert with salted caramel: Mise en place for a chocolate dessert: chocolate, butter, salt, caramel and ice cream"
-    caption: "Mise en place for a chocolate dessert: chocolate, butter, salt, caramel and ice cream"
-    session: Photo session 3 (November 2026)
-  02-shokoladov-stapka-2.webp:
-    alt: "Chocolate dessert with salted caramel: Mise en place for the chocolate dessert with bowls and metal moulds"
-    caption: Mise en place for the chocolate dessert with bowls and metal moulds
-    session: Photo session 3 (November 2026)
-  03-shokoladov-stapka-3.webp:
-    alt: "Chocolate dessert with salted caramel: Tempering chocolate on a marble counter"
-    caption: Tempering chocolate on a marble counter
-    session: Photo session 3 (November 2026)
-  04-shokoladov-stapka-4.webp:
-    alt: "Chocolate dessert with salted caramel: Piping chocolate mousse with a bag"
-    caption: Piping chocolate mousse with a bag
-    session: Photo session 3 (November 2026)
-  05-shokoladov-stapka-5.webp:
-    alt: "Chocolate dessert with salted caramel: Glossy caramel dripping in a copper pot"
-    caption: Glossy caramel dripping in a copper pot
-    session: Photo session 3 (November 2026)
-  06-shokoladov-stapka-6.webp:
-    alt: "Chocolate dessert with salted caramel: Crisp chocolate tuile and cocoa crumb on a tray"
-    caption: Crisp chocolate tuile and cocoa crumb on a tray
-    session: Photo session 3 (November 2026)
-  07-shokoladov-stapka-7.webp:
-    alt: "Chocolate dessert with salted caramel: The plated chocolate dessert with salted caramel"
-    caption: The plated chocolate dessert with salted caramel
-    session: Photo session 3 (November 2026)
-  08-dopalnitelen-1.webp:
-    alt: "Chocolate dessert with salted caramel: Chocolate dessert with a crisp tuile"
-    caption: Chocolate dessert with a crisp tuile
-    session: Photo session 3 (November 2026)
-  09-dopalnitelen-2.webp:
-    alt: "Chocolate dessert with salted caramel: The chocolate dessert – a second angle"
-    caption: The chocolate dessert – a second angle
-    session: Photo session 3 (November 2026)
   10-dopalnitelen-3.webp:
     alt: "Chocolate dessert with salted caramel: The finished chocolate dessert – close-up"
     caption: The finished chocolate dessert – close-up
@@ -139,30 +103,23 @@ ingredients:
 steps:
   - title: Lay out the ingredients
     text: Lay out the chocolate, cream, sugar, butter and salt.
-    photo: 01-shokoladov-stapka-1.webp
   - title: Prepare the mise en place
     text: Lay out the small bowls with each component.
-    photo: 02-shokoladov-stapka-2.webp
   - title: Temper the chocolate
     text: Spread part of the melted chocolate on a marble counter and work it until it sets, then mix it with the remaining part.
     time: 15
-    photo: 03-shokoladov-stapka-3.webp
   - title: Make the mousse
     text: Melt the chocolate, mix with the yolks, whipped cream and salt.
     time: 20
-    photo: 04-shokoladov-stapka-4.webp
   - title: Cook the caramel
     text: Cook the sugar to amber, add the hot cream and the butter, and add salt.
     cue: The caramel is smooth and glossy.
     time: 10
-    photo: 05-shokoladov-stapka-5.webp
   - title: Bake the tuile and the crumb
     text: Mix the cocoa, flour, sugar and butter; bake the crumb for 10–12 minutes at 170 °C.
     time: 12
-    photo: 06-shokoladov-stapka-6.webp
   - title: Plate
     text: Put a quenelle of mousse, caramel, crumb and tuile on a plate.
-    photo: 07-shokoladov-stapka-7.webp
 tips:
   - Work in a cool room.
   - The dessert can be made the day before, without the tuile.
@@ -181,7 +138,7 @@ allergens:
   - Milk and dairy
 translation:
   status: published
-  sourceHash: 64d2f6aadf7e6330
+  sourceHash: "578fb192c9f927d2"
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-21

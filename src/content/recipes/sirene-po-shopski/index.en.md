@@ -24,33 +24,6 @@ servings: 2
 difficulty: Easy
 cover: 10-sirene-stapka-10.webp
 photos:
-  01-sirene-stapka-1.webp:
-    alt: "Sirene po shopski: The ingredients for the sirene po shopski"
-    caption: The ingredients for the sirene po shopski
-  02-sirene-stapka-2.webp:
-    alt: "Sirene po shopski: Peeling the roasted pepper"
-    caption: Peeling the roasted pepper
-  03-sirene-stapka-3.webp:
-    alt: "Sirene po shopski: Slicing the tomatoes"
-    caption: Slicing the tomatoes
-  04-sirene-stapka-4.webp:
-    alt: "Sirene po shopski: The tomatoes with butter in the pot"
-    caption: The tomatoes with butter in the pot
-  05-sirene-stapka-5.webp:
-    alt: "Sirene po shopski: The cheese on the vegetables"
-    caption: The cheese on the vegetables
-  06-sirene-stapka-6.webp:
-    alt: "Sirene po shopski: Pouring over the butter with paprika"
-    caption: Pouring over the butter with paprika
-  07-sirene-stapka-7.webp:
-    alt: "Sirene po shopski: The pot in the oven"
-    caption: The pot in the oven
-  08-sirene-stapka-8.webp:
-    alt: "Sirene po shopski: Breaking the egg onto the cheese"
-    caption: Breaking the egg onto the cheese
-  09-sirene-stapka-9.webp:
-    alt: "Sirene po shopski: The hot pot coming out of the oven"
-    caption: The hot pot coming out of the oven
   10-sirene-stapka-10.webp:
     alt: "Sirene po shopski: The finished sirene po shopski in the pot"
     caption: The finished sirene po shopski in the pot
@@ -97,40 +70,30 @@ ingredients:
 steps:
   - title: Prepare the ingredients
     text: Lay out the cheese, the tomatoes, the roasted pepper, the eggs, the butter and the spices.
-    photo: 01-sirene-stapka-1.webp
   - title: Peel the pepper
     text: Peel the roasted pepper, remove the seeds and cut it into strips.
-    photo: 02-sirene-stapka-2.webp
   - title: Slice the tomatoes
     text: Cut the tomatoes into thick slices.
-    photo: 03-sirene-stapka-3.webp
   - title: Arrange the vegetables
     text: Grease the pots with half of the butter. Arrange the tomato slices and the strips of pepper on the bottom and sprinkle with the savory.
-    photo: 04-sirene-stapka-4.webp
   - title: Add the cheese
     text: Put a thick slice of cheese on top of the vegetables in each pot.
-    photo: 05-sirene-stapka-5.webp
   - title: Pour over the butter and paprika
     text: Melt the remaining butter, take it off the heat and stir the paprika into it. Pour it over the cheese and add a hot pepper to each pot, if you like.
     avoid: The paprika goes into the butter off the heat – otherwise it burns and turns bitter.
-    photo: 06-sirene-stapka-6.webp
   - title: Bake
     text: Put the pots with their lids on in a cold oven and switch it on to 200 °C. Bake for about 15 minutes.
     cue: The cheese has softened, and the tomatoes have released juice that bubbles at the edge.
     time: 15
-    photo: 07-sirene-stapka-7.webp
   - title: Add the egg
     text: Take the pots out, break an egg onto the cheese in each and return them to the oven without the lids for another 6–8 minutes.
     cue: The white is opaque and set, and the yolk still trembles.
     time: 8
-    photo: 08-sirene-stapka-8.webp
   - title: Take out
     text: Take the pots out onto a wooden board – the clay is very hot and keeps cooking the egg for a minute or two.
     avoid: Do not put a hot pot onto a cold or wet surface.
-    photo: 09-sirene-stapka-9.webp
   - title: Serve
     text: Sprinkle with parsley and serve immediately, in the pot, with toasted bread.
-    photo: 10-sirene-stapka-10.webp
 tips:
   - Sheep's cheese is more aromatic and melts better; cow's cheese stays firmer.
   - If you prefer a well-cooked yolk, leave the egg in for 3–4 minutes longer.
@@ -148,7 +111,7 @@ allergens:
   - Milk and dairy
 translation:
   status: published
-  sourceHash: 5601d7679ef9bff8
+  sourceHash: "87559ed50a3bbaa2"
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-20

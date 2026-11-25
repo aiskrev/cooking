@@ -23,21 +23,6 @@ servings: 4
 difficulty: Intermediate
 cover: 06-kartofeno-stapka-6.webp
 photos:
-  01-kartofeno-stapka-1.webp:
-    alt: "French-style mashed potatoes: The ingredients for the mash"
-    caption: The ingredients for the mash
-  02-kartofeno-stapka-2.webp:
-    alt: "French-style mashed potatoes: Boiling the potatoes"
-    caption: Boiling the potatoes
-  03-kartofeno-stapka-3.webp:
-    alt: "French-style mashed potatoes: Ricing the potatoes"
-    caption: Ricing the potatoes
-  04-kartofeno-stapka-4.webp:
-    alt: "French-style mashed potatoes: Beating in the butter"
-    caption: Beating in the butter
-  05-kartofeno-stapka-5.webp:
-    alt: "French-style mashed potatoes: Pouring in the hot milk"
-    caption: Pouring in the hot milk
   06-kartofeno-stapka-6.webp:
     alt: "French-style mashed potatoes: The mash, served"
     caption: The mash, served
@@ -72,29 +57,23 @@ ingredients:
 steps:
   - title: Prepare the ingredients
     text: Lay out the potatoes, the butter, the milk and the salt.
-    photo: 01-kartofeno-stapka-1.webp
   - title: Boil the potatoes
     text: Cover the potatoes with cold water, add the coarse salt and boil them gently for 25–30 minutes.
     cue: A knife goes into the potato and comes out without resistance.
     avoid: Peeled and cut potatoes absorb water and the mash turns watery.
     time: 30
-    photo: 02-kartofeno-stapka-2.webp
   - title: Rice
     text: Drain the potatoes, peel them while they are hot, holding them with a cloth, and press them through the ricer back into the pot.
     why: A hot potato is riced into fluffy strands; a cooled one turns sticky.
     avoid: A blender or a mixer tears the starch and the mash turns to glue.
-    photo: 03-kartofeno-stapka-3.webp
   - title: Beat in the butter
     text: Put the pot over low heat and stir for 2–3 minutes to evaporate the moisture. Add the cold butter a few cubes at a time, stirring vigorously with a spatula or a whisk until each portion is absorbed.
     cue: The mash is smooth, glossy and pulls away from the sides.
-    photo: 04-kartofeno-stapka-4.webp
   - title: Pour in the milk
     text: Heat the milk to boiling and pour it in in a thin stream, whisking, until the mash is as soft as you want it. Season with salt.
     cue: The mash falls from the spoon in a heavy ribbon.
-    photo: 05-kartofeno-stapka-5.webp
   - title: Serve
     text: For a completely smooth mash, rub it through a fine sieve. Shape it into an oval with two spoons and serve immediately.
-    photo: 06-kartofeno-stapka-6.webp
 tips:
   - The mash keeps warm in a bain-marie, covered, for up to 30 minutes; before serving, stir in a spoonful of hot milk.
   - For an everyday version, halve the butter and increase the milk.
@@ -111,7 +90,7 @@ allergens:
   - Milk and dairy
 translation:
   status: published
-  sourceHash: 1d47c240e0317e97
+  sourceHash: "94c81dd23b023962"
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-20

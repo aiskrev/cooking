@@ -1,110 +1,11 @@
 {
   "slug": "morski-grebenki-s-karfiol-i-leshnitsi",
   "photos": {
-    "01-morski-stapka-1.webp": {
-      "sourceName": "ChatGPT Image Nov 20, 2026, 01_33_47 PM-1.webp",
-      "sourceSha256": "413c270594066a5b9b5681b207edeb90395b8ff3352efd267040b795a1092485",
-      "sourceIdx": 2161,
-      "sourceBytes": 1822660,
-      "sourceSize": "1448x1086",
-      "role": "step",
-      "batch": 15,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "02-morski-stapka-2.webp": {
-      "sourceName": "ChatGPT Image Nov 20, 2026, 01_33_48 PM-2.webp",
-      "sourceSha256": "07f3571f4f1bddb546b7d224cb21526fb5ac74967218d59cc42b68f34c535a2b",
-      "sourceIdx": 2162,
-      "sourceBytes": 1744302,
-      "sourceSize": "1448x1086",
-      "role": "step",
-      "batch": 15,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "03-morski-stapka-3.webp": {
-      "sourceName": "ChatGPT Image Nov 20, 2026, 01_33_49 PM-3.webp",
-      "sourceSha256": "3b37a588b7e47d8383163f0e20de0ae36779f7e539eb6d6094285e58bd7b2735",
-      "sourceIdx": 2163,
-      "sourceBytes": 1602558,
-      "sourceSize": "1448x1086",
-      "role": "step",
-      "batch": 15,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "04-morski-stapka-4.webp": {
-      "sourceName": "ChatGPT Image Nov 20, 2026, 01_33_50 PM-4.webp",
-      "sourceSha256": "7669443fa3e3bcf5beefa639c183b26b0d1cd727fcccf008098f41b21b51b04f",
-      "sourceIdx": 2164,
-      "sourceBytes": 2113918,
-      "sourceSize": "1448x1086",
-      "role": "step",
-      "batch": 15,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "05-morski-stapka-5.webp": {
-      "sourceName": "ChatGPT Image Nov 20, 2026, 01_33_51 PM-5.webp",
-      "sourceSha256": "0d14e01d1058c716212da9a5582c240e3683ab2360ae8a9e25fb2bfc53049a67",
-      "sourceIdx": 2165,
-      "sourceBytes": 1760224,
-      "sourceSize": "1448x1086",
-      "role": "step",
-      "batch": 15,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "06-morski-stapka-6.webp": {
-      "sourceName": "ChatGPT Image Nov 20, 2026, 01_33_52 PM-6.webp",
-      "sourceSha256": "4651355d71bdebebe17e2136aff8c5c5347685b0bf4c2d73e7d4ee39a0b05f9c",
-      "sourceIdx": 2166,
-      "sourceBytes": 1630414,
-      "sourceSize": "1448x1086",
-      "role": "step",
-      "batch": 15,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
     "07-morski-stapka-7.webp": {
       "sourceName": "ChatGPT Image Nov 20, 2026, 01_33_55 PM-9.webp",
       "sourceSha256": "39ab36f74a65efe281c7b958aa82d72ba1cd0add8764a44596e37787251da516",
       "sourceIdx": 2169,
       "sourceBytes": 1722894,
-      "sourceSize": "1448x1086",
-      "role": "step",
-      "batch": 15,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "08-dopalnitelen-1.webp": {
-      "sourceName": "ChatGPT Image Nov 20, 2026, 01_33_53 PM-7.webp",
-      "sourceSha256": "52b609cd7ed7cdbbad097b5cd4a290dd0f87b44fda08a15268233f0ca89842c6",
-      "sourceIdx": 2167,
-      "sourceBytes": 1776492,
-      "sourceSize": "1448x1086",
-      "role": "extra",
-      "batch": 15,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "09-dopalnitelen-2.webp": {
-      "sourceName": "ChatGPT Image Nov 20, 2026, 01_33_56 PM-10.webp",
-      "sourceSha256": "90744b64dfed3e66c000efd60ea62c1ef8d3f0f5a655affe5bafa6c5e37dee86",
-      "sourceIdx": 2170,
-      "sourceBytes": 1846924,
-      "sourceSize": "1448x1086",
-      "role": "extra",
-      "batch": 15,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "10-gotovo-yastie.webp": {
-      "sourceName": "ChatGPT Image Nov 20, 2026, 01_33_54 PM-8.webp",
-      "sourceSha256": "e36ac7106f960b62cc317b3e6d99c866f7d3837b15a08fad4b9c881a3de0c01e",
-      "sourceIdx": 2168,
-      "sourceBytes": 1733046,
       "sourceSize": "1448x1086",
       "role": "hero",
       "batch": 15,
@@ -114,5 +15,10 @@
   },
   "generatedHash": "ff13aed311a8791eeac0b973f230cfdbdc6c6d5fe519de092504645ef50a4c41",
   "excludedSources": [],
-  "importedAt": "2026-11-21T06:46:55.799Z"
+  "importedAt": "2026-11-21T06:46:55.799Z",
+  "singleHeroPolicy": {
+    "date": "2026-11-25",
+    "kept": "07-morski-stapka-7.webp",
+    "removed": 9
+  }
 }

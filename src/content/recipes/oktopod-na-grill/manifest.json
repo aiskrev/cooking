@@ -1,68 +1,13 @@
 {
   "slug": "oktopod-na-grill",
   "photos": {
-    "01-oktopod-stapka-1.webp": {
-      "sourceName": "ChatGPT Image Jun 10, 2026, 06_58_30 PM.png",
-      "sourceSha256": "d8a7aebe5d0e2f3a15ebc9ba104bf0f9099254bdbd0508f5e34bfe466a8b3c22",
-      "sourceIdx": 217,
-      "sourceBytes": 2543661,
-      "sourceSize": "1122x1402",
-      "role": "step",
-      "batch": 76,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "02-oktopod-stapka-2.webp": {
-      "sourceName": "ChatGPT Image Jun 10, 2026, 06_58_36 PM.png",
-      "sourceSha256": "345200b3907b4d44e5e9b3378469a620c034e50feae0e7a1e663c32d64d0b792",
-      "sourceIdx": 218,
-      "sourceBytes": 2270397,
-      "sourceSize": "1122x1402",
-      "role": "step",
-      "batch": 76,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "03-oktopod-stapka-3.webp": {
-      "sourceName": "ChatGPT Image Jun 10, 2026, 06_58_39 PM.png",
-      "sourceSha256": "e84578c92dfc602cb742bd9d127bfeb5fd21bc9c2d41bb5ada76511b77bf20bf",
-      "sourceIdx": 219,
-      "sourceBytes": 2302297,
-      "sourceSize": "1122x1402",
-      "role": "step",
-      "batch": 76,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "04-oktopod-stapka-4.webp": {
-      "sourceName": "ChatGPT Image Jun 10, 2026, 06_58_42 PM.png",
-      "sourceSha256": "9bfb10b6a1eee0f12ddfa99695567b0309c24279936c55fabe7e169c7c0da75e",
-      "sourceIdx": 220,
-      "sourceBytes": 2212929,
-      "sourceSize": "1122x1402",
-      "role": "step",
-      "batch": 76,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "05-oktopod-stapka-5.webp": {
-      "sourceName": "ChatGPT Image Jun 10, 2026, 06_58_45 PM.png",
-      "sourceSha256": "328f91b8d181de411dc45027f4ab0df6fb270dcffae3672c0f4b8e4a0d2b22f1",
-      "sourceIdx": 221,
-      "sourceBytes": 2101816,
-      "sourceSize": "1122x1402",
-      "role": "step",
-      "batch": 76,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
     "06-oktopod-stapka-6.webp": {
       "sourceName": "ChatGPT Image Jun 10, 2026, 06_58_48 PM.png",
       "sourceSha256": "0dfd387b235d1847650b6d33aa847a484db88f8b724ac4964ead9341f4ab1ab4",
       "sourceIdx": 222,
       "sourceBytes": 1791361,
       "sourceSize": "1122x1402",
-      "role": "step",
+      "role": "hero",
       "batch": 76,
       "confidence": "HIGH",
       "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
@@ -70,5 +15,10 @@
   },
   "generatedHash": "991b6c07771e1ed017885ad5737e92f331f0f10684114dddd7329231abeaf0c6",
   "excludedSources": [],
-  "importedAt": "2026-11-19T05:27:53.891Z"
+  "importedAt": "2026-11-19T05:27:53.891Z",
+  "singleHeroPolicy": {
+    "date": "2026-11-25",
+    "kept": "06-oktopod-stapka-6.webp",
+    "removed": 5
+  }
 }

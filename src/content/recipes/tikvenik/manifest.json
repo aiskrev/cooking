@@ -1,68 +1,13 @@
 {
   "slug": "tikvenik",
   "photos": {
-    "01-tikvenik-stapka-1.webp": {
-      "sourceName": "ChatGPT Image Jun 10, 2026, 12_01_41 PM.png",
-      "sourceSha256": "701988d88f7e9e71ba1e5a182d1bce0df2231dd7fe4d25874df1687357c7b90a",
-      "sourceIdx": 27,
-      "sourceBytes": 2272982,
-      "sourceSize": "1122x1402",
-      "role": "step",
-      "batch": 17,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "02-tikvenik-stapka-2.webp": {
-      "sourceName": "ChatGPT Image Jun 10, 2026, 12_01_46 PM.png",
-      "sourceSha256": "1d9cba2a2aa0e0c4d76a4d5f56e3b026505ab2a5783394ee9245e7a4f231fccb",
-      "sourceIdx": 28,
-      "sourceBytes": 2184638,
-      "sourceSize": "1122x1402",
-      "role": "step",
-      "batch": 17,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "03-tikvenik-stapka-3.webp": {
-      "sourceName": "ChatGPT Image Jun 10, 2026, 12_01_51 PM.png",
-      "sourceSha256": "92a22c8eed3d5da6708194440ddcbf921391c7e016338052701e0ee6d8705239",
-      "sourceIdx": 29,
-      "sourceBytes": 2003834,
-      "sourceSize": "1122x1402",
-      "role": "step",
-      "batch": 17,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "04-tikvenik-stapka-4.webp": {
-      "sourceName": "ChatGPT Image Jun 10, 2026, 12_01_55 PM.png",
-      "sourceSha256": "89efec779cee08ba4a916bf65485cb56603127df1b78d92c1777bd804e6393cd",
-      "sourceIdx": 30,
-      "sourceBytes": 2125692,
-      "sourceSize": "1122x1402",
-      "role": "step",
-      "batch": 17,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "05-tikvenik-stapka-5.webp": {
-      "sourceName": "ChatGPT Image Jun 10, 2026, 12_01_58 PM.png",
-      "sourceSha256": "cbb9195518b3fd33a39521dff90135b11c2fae7d0f1eac28ebe1443b5ae9e2e8",
-      "sourceIdx": 31,
-      "sourceBytes": 2412139,
-      "sourceSize": "1122x1402",
-      "role": "step",
-      "batch": 17,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
     "06-tikvenik-stapka-6.webp": {
       "sourceName": "ChatGPT Image Jun 10, 2026, 12_02_04 PM.png",
       "sourceSha256": "1193f73e2d1ede30445c4a5a5394de8e74d3d04c6c8c59d0ac19c02f68239005",
       "sourceIdx": 32,
       "sourceBytes": 2306164,
       "sourceSize": "1122x1402",
-      "role": "step",
+      "role": "hero",
       "batch": 17,
       "confidence": "HIGH",
       "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
@@ -70,5 +15,10 @@
   },
   "generatedHash": "abc2e0191d6ac89431a932bb45e15ce79bf88f0ca98db7adf79f32f8d48df4e7",
   "excludedSources": [],
-  "importedAt": "2026-11-19T05:27:47.812Z"
+  "importedAt": "2026-11-19T05:27:47.812Z",
+  "singleHeroPolicy": {
+    "date": "2026-11-25",
+    "kept": "06-tikvenik-stapka-6.webp",
+    "removed": 5
+  }
 }

@@ -1,112 +1,13 @@
 {
   "slug": "glazirana-cherna-treska-s-kartofeno-pyure-i-hryan",
   "photos": {
-    "01-glazirana-stapka-1.webp": {
-      "sourceName": "ChatGPT Image Nov 20, 2026, 04_08_00 PM-1.webp",
-      "sourceSha256": "0a4689af58e45df388aa7989bdd3b5a710c0bde74c41d15c1dd0c6840b20ef5b",
-      "sourceIdx": 2269,
-      "sourceBytes": 1968968,
-      "sourceSize": "1122x1402",
-      "role": "step",
-      "batch": 25,
-      "confidence": "MEDIUM",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "02-glazirana-stapka-2.webp": {
-      "sourceName": "ChatGPT Image Nov 20, 2026, 04_08_01 PM-2.webp",
-      "sourceSha256": "9c8962b3b91dce2682ba1c8f0980d8bfc511511c62cb0867e883a0991bf3681a",
-      "sourceIdx": 2270,
-      "sourceBytes": 1717766,
-      "sourceSize": "1122x1402",
-      "role": "step",
-      "batch": 25,
-      "confidence": "MEDIUM",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "03-glazirana-stapka-3.webp": {
-      "sourceName": "ChatGPT Image Nov 20, 2026, 04_08_03 PM-3.webp",
-      "sourceSha256": "8f6177f2b0bc91734e12f084f718a8827fd8456df850dfd497bd236654c74438",
-      "sourceIdx": 2271,
-      "sourceBytes": 1638596,
-      "sourceSize": "1122x1402",
-      "role": "step",
-      "batch": 25,
-      "confidence": "MEDIUM",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "04-glazirana-stapka-4.webp": {
-      "sourceName": "ChatGPT Image Nov 20, 2026, 04_08_04 PM-4.webp",
-      "sourceSha256": "d4cf50bfdb8c7d5de9ce1ae91d60b60248ba3eb9f2a6c09e3a6c1f74c7f64689",
-      "sourceIdx": 2272,
-      "sourceBytes": 1474760,
-      "sourceSize": "1122x1402",
-      "role": "step",
-      "batch": 25,
-      "confidence": "MEDIUM",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "05-glazirana-stapka-5.webp": {
-      "sourceName": "ChatGPT Image Nov 20, 2026, 04_08_06 PM-5.webp",
-      "sourceSha256": "da17f428c6a8b08e976285684a2fb0bdb8c678dacb2cbd42c35ec8bd26c4597a",
-      "sourceIdx": 2273,
-      "sourceBytes": 1735114,
-      "sourceSize": "1122x1402",
-      "role": "step",
-      "batch": 25,
-      "confidence": "MEDIUM",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "06-glazirana-stapka-6.webp": {
-      "sourceName": "ChatGPT Image Nov 20, 2026, 04_08_07 PM-6.webp",
-      "sourceSha256": "67cc4dce8083104735ae2025ac94c731ae5ebb5034d17b2e28c9629264d848d2",
-      "sourceIdx": 2274,
-      "sourceBytes": 1755180,
-      "sourceSize": "1122x1402",
-      "role": "step",
-      "batch": 25,
-      "confidence": "MEDIUM",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "07-glazirana-stapka-7.webp": {
-      "sourceName": "ChatGPT Image Nov 20, 2026, 04_08_09 PM-7.webp",
-      "sourceSha256": "25dc1f33d829e64383bece9ce7b866af8589dba3fcc9d2692f46d0d2ec69248d",
-      "sourceIdx": 2275,
-      "sourceBytes": 1649810,
-      "sourceSize": "1122x1402",
-      "role": "step",
-      "batch": 25,
-      "confidence": "MEDIUM",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
     "08-glazirana-stapka-8.webp": {
       "sourceName": "ChatGPT Image Nov 20, 2026, 04_08_15 PM-10.webp",
       "sourceSha256": "faa68445ceb161f03c3a928784498636885d74bd90b0838433e771b257ae8444",
       "sourceIdx": 2278,
       "sourceBytes": 1873282,
       "sourceSize": "1122x1402",
-      "role": "step",
-      "batch": 25,
-      "confidence": "MEDIUM",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "09-dopalnitelen-1.webp": {
-      "sourceName": "ChatGPT Image Nov 20, 2026, 04_08_12 PM-8.webp",
-      "sourceSha256": "15170a8a053185c9503cf2ca360d805ea17198bcf63f27d8c157f30c2bb3712f",
-      "sourceIdx": 2276,
-      "sourceBytes": 1508216,
-      "sourceSize": "1122x1402",
-      "role": "extra",
-      "batch": 25,
-      "confidence": "MEDIUM",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "10-dopalnitelen-2.webp": {
-      "sourceName": "ChatGPT Image Nov 20, 2026, 04_08_13 PM-9.webp",
-      "sourceSha256": "5e7eb035daaadebc644bf43ffbb496c98164631a6f7807c0c1ede246361cecc4",
-      "sourceIdx": 2277,
-      "sourceBytes": 1439844,
-      "sourceSize": "1122x1402",
-      "role": "extra",
+      "role": "hero",
       "batch": 25,
       "confidence": "MEDIUM",
       "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
@@ -114,5 +15,10 @@
   },
   "generatedHash": "df8c73d8ab647f460b7c54ad2c855aa9b85261dd68504e0bb8a5de363d636715",
   "excludedSources": [],
-  "importedAt": "2026-11-21T06:46:56.117Z"
+  "importedAt": "2026-11-21T06:46:56.117Z",
+  "singleHeroPolicy": {
+    "date": "2026-11-25",
+    "kept": "08-glazirana-stapka-8.webp",
+    "removed": 9
+  }
 }

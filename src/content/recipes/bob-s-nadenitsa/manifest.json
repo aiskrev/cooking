@@ -1,57 +1,13 @@
 {
   "slug": "bob-s-nadenitsa",
   "photos": {
-    "01-bob-stapka-1.webp": {
-      "sourceName": "ChatGPT Image Jun 10, 2026, 01_42_12 PM.png",
-      "sourceSha256": "a8a9cd0c678fe7963d01e7bb2d143e4b1c6caad38d2e7549a8bc557a3585e3c0",
-      "sourceIdx": 60,
-      "sourceBytes": 2382287,
-      "sourceSize": "1254x1254",
-      "role": "step",
-      "batch": 30,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "02-bob-stapka-2.webp": {
-      "sourceName": "ChatGPT Image Jun 10, 2026, 01_42_19 PM.png",
-      "sourceSha256": "accad020453bbeab00b588b63954f31255dfc1bf2b51b612f7fa27d40a320a1d",
-      "sourceIdx": 61,
-      "sourceBytes": 2111593,
-      "sourceSize": "1254x1254",
-      "role": "step",
-      "batch": 31,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "03-bob-stapka-3.webp": {
-      "sourceName": "ChatGPT Image Jun 10, 2026, 01_42_23 PM.png",
-      "sourceSha256": "f1979727a6a061fec726c7d62d0a70dfd3b7ef320e7a6dce0eb4d111c6713cc8",
-      "sourceIdx": 62,
-      "sourceBytes": 2333247,
-      "sourceSize": "1254x1254",
-      "role": "step",
-      "batch": 31,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "04-bob-stapka-4.webp": {
-      "sourceName": "ChatGPT Image Jun 10, 2026, 01_42_27 PM.png",
-      "sourceSha256": "ba74218a1b5c18b125ae615635579ee2a0521e3296fccc6e2873cd6b9726961b",
-      "sourceIdx": 63,
-      "sourceBytes": 2615794,
-      "sourceSize": "1254x1254",
-      "role": "step",
-      "batch": 31,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
     "05-bob-stapka-5.webp": {
       "sourceName": "ChatGPT Image Jun 10, 2026, 01_42_33 PM.png",
       "sourceSha256": "65f9a5ed9339d0f5e506859d53cf0e83f4e6fae525591ae52df8b3cebae59166",
       "sourceIdx": 64,
       "sourceBytes": 2450181,
       "sourceSize": "1254x1254",
-      "role": "step",
+      "role": "hero",
       "batch": 31,
       "confidence": "HIGH",
       "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
@@ -59,5 +15,10 @@
   },
   "generatedHash": "3cb6ef95a6359928ea9dafff7b6b27b0605c40d4eda1514c017403f94c954c72",
   "excludedSources": [],
-  "importedAt": "2026-11-19T05:27:50.620Z"
+  "importedAt": "2026-11-19T05:27:50.620Z",
+  "singleHeroPolicy": {
+    "date": "2026-11-25",
+    "kept": "05-bob-stapka-5.webp",
+    "removed": 4
+  }
 }

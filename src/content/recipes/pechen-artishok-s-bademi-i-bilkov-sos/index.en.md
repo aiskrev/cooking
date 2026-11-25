@@ -27,42 +27,6 @@ servings: 4
 difficulty: Intermediate
 cover: 10-dopalnitelen-2.webp
 photos:
-  01-pechen-stapka-1.webp:
-    alt: "Roasted artichoke with almonds: Mise en place: artichokes, herbs, almonds and lemon"
-    caption: "Mise en place: artichokes, herbs, almonds and lemon"
-    session: Photo session 3 (November 2026)
-  02-pechen-stapka-2.webp:
-    alt: "Roasted artichoke with almonds: Peeling artichokes on the board"
-    caption: Peeling artichokes on the board
-    session: Photo session 3 (November 2026)
-  03-pechen-stapka-3.webp:
-    alt: "Roasted artichoke with almonds: Mise en place: artichokes, almonds, herbs and lemon"
-    caption: "Mise en place: artichokes, almonds, herbs and lemon"
-    session: Photo session 3 (November 2026)
-  04-pechen-stapka-4.webp:
-    alt: "Roasted artichoke with almonds: Artichokes braised in a herb broth"
-    caption: Artichokes braised in a herb broth
-    session: Photo session 3 (November 2026)
-  05-pechen-stapka-5.webp:
-    alt: "Roasted artichoke with almonds: Artichoke purée, almonds and lemon"
-    caption: Artichoke purée, almonds and lemon
-    session: Photo session 3 (November 2026)
-  06-pechen-stapka-6.webp:
-    alt: "Roasted artichoke with almonds: Green herb sauce and a fragrant tray"
-    caption: Green herb sauce and a fragrant tray
-    session: Photo session 3 (November 2026)
-  07-pechen-stapka-7.webp:
-    alt: "Roasted artichoke with almonds: Roasted artichoke – close-up"
-    caption: Roasted artichoke – close-up
-    session: Photo session 3 (November 2026)
-  08-pechen-stapka-8.webp:
-    alt: "Roasted artichoke with almonds: Plating the artichoke with sauce"
-    caption: Plating the artichoke with sauce
-    session: Photo session 3 (November 2026)
-  09-dopalnitelen-1.webp:
-    alt: "Roasted artichoke with almonds: Roasted artichoke with purée and green sauce – close-up"
-    caption: Roasted artichoke with purée and green sauce – close-up
-    session: Photo session 3 (November 2026)
   10-dopalnitelen-2.webp:
     alt: "Roasted artichoke with almonds: The finished plate with the artichoke"
     caption: The finished plate with the artichoke
@@ -149,30 +113,22 @@ ingredients:
 steps:
   - title: Lay out the ingredients
     text: Lay out the artichokes, lemon, almonds and herbs.
-    photo: 01-pechen-stapka-1.webp
   - title: Peel the artichokes
     text: Peel the artichokes and put them in water with lemon.
-    photo: 02-pechen-stapka-2.webp
   - title: Prepare the components
     text: Prepare the herbs, lemon and almonds.
-    photo: 03-pechen-stapka-3.webp
   - title: Braise the artichokes
     text: Braise in a broth with wine and thyme for 25–30 minutes until tender.
     time: 30
-    photo: 04-pechen-stapka-4.webp
   - title: Make the purée
     text: Blend the hearts with the milk and butter.
-    photo: 05-pechen-stapka-5.webp
   - title: Make the green sauce
     text: Blend the herbs with the olive oil, garlic and lemon.
-    photo: 06-pechen-stapka-6.webp
   - title: Roast
     text: Roast the artichokes at 220 °C for 10–15 minutes until caramelised.
     time: 12
-    photo: 07-pechen-stapka-7.webp
   - title: Plate
     text: Put down the purée, the artichoke, almonds and green sauce.
-    photo: 08-pechen-stapka-8.webp
 tips:
   - Acidulated water keeps the colour.
   - It can be braised in advance.
@@ -191,7 +147,7 @@ allergens:
   - Sulphites (wine)
 translation:
   status: published
-  sourceHash: 7ce38032744cb680
+  sourceHash: "8c0836d9c7bbce08"
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-21

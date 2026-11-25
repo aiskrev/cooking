@@ -26,10 +26,6 @@ servings: 4
 difficulty: Advanced
 cover: 02-gotovo-yastie.webp
 photos:
-  01-dopalnitelen-1.webp:
-    alt: "Chicken Kiev: Chicken Kiev with vegetable cylinders and green butter"
-    caption: Chicken Kiev with vegetable cylinders and green butter
-    session: Photo session 2 (May–June 2026)
   02-gotovo-yastie.webp:
     alt: "Chicken Kiev: A cut chicken Kiev with green butter, mashed potatoes and green beans"
     caption: A cut chicken Kiev with green butter, mashed potatoes and green beans
@@ -142,7 +138,7 @@ allergens:
   - Milk and dairy
 translation:
   status: published
-  sourceHash: 1a031746c1298f0a
+  sourceHash: "85a694c5c7feb403"
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-20

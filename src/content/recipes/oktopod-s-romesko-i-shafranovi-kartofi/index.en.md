@@ -28,74 +28,10 @@ servings: 4
 difficulty: Intermediate
 cover: 15-gotovo-yastie.webp
 photos:
-  01-oktopod-stapka-1.webp:
-    alt: "Grilled octopus with romesco: Mise en place: octopus, roasted peppers, potatoes, olives, nuts, saffron and lemon"
-    caption: "Mise en place: octopus, roasted peppers, potatoes, olives, nuts, saffron and lemon"
-    session: Photo session 4 (November 2026)
-  02-oktopod-stapka-2.webp:
-    alt: "Grilled octopus with romesco: Preparing the octopus on the counter"
-    caption: Preparing the octopus on the counter
-    session: Photo session 4 (November 2026)
-  03-oktopod-stapka-3.webp:
-    alt: "Grilled octopus with romesco: Octopus simmering in a copper pot with lemon"
-    caption: Octopus simmering in a copper pot with lemon
-    session: Photo session 4 (November 2026)
-  04-oktopod-stapka-4.webp:
-    alt: "Grilled octopus with romesco: Mise en place from above: octopus, romesco, saffron potatoes and spices"
-    caption: "Mise en place from above: octopus, romesco, saffron potatoes and spices"
-    session: Photo session 4 (November 2026)
-  05-oktopod-stapka-5.webp:
-    alt: "Grilled octopus with romesco: Straining romesco sauce in a copper kitchen"
-    caption: Straining romesco sauce in a copper kitchen
-    session: Photo session 4 (November 2026)
-  06-oktopod-stapka-6.webp:
-    alt: "Grilled octopus with romesco: Romesco and black-olive tapenade"
-    caption: Romesco and black-olive tapenade
-    session: Photo session 4 (November 2026)
-  07-oktopod-stapka-7.webp:
-    alt: "Grilled octopus with romesco: Octopus smoking on a grill over embers"
-    caption: Octopus smoking on a grill over embers
-    session: Photo session 4 (November 2026)
-  08-oktopod-stapka-8.webp:
-    alt: "Grilled octopus with romesco: Octopus tentacles over the embers"
-    caption: Octopus tentacles over the embers
-    session: Photo session 4 (November 2026)
-  09-oktopod-stapka-9.webp:
-    alt: "Grilled octopus with romesco: Octopus on romesco with saffron potatoes"
-    caption: Octopus on romesco with saffron potatoes
-    session: Photo session 4 (November 2026)
-  10-dopalnitelen-1.webp:
-    alt: "Grilled octopus with romesco: Octopus with saffron potatoes and romesco – another angle"
-    caption: Octopus with saffron potatoes and romesco – another angle
-    session: Photo session 4 (November 2026)
-  11-dopalnitelen-2.webp:
-    alt: "Grilled octopus with romesco: Grilled octopus, romesco in a copper pan and olives"
-    caption: Grilled octopus, romesco in a copper pan and olives
-    session: Photo session 4 (November 2026)
-  12-dopalnitelen-3.webp:
-    alt: "Grilled octopus with romesco: Mise en place for the octopus on a dark counter"
-    caption: Mise en place for the octopus on a dark counter
-    session: Photo session 4 (November 2026)
-  13-dopalnitelen-4.webp:
-    alt: "Grilled octopus with romesco: Dipping the octopus into the simmering broth"
-    caption: Dipping the octopus into the simmering broth
-    session: Photo session 4 (November 2026)
-  14-dopalnitelen-5.webp:
-    alt: "Grilled octopus with romesco: Octopus with red peppers, potatoes and olives"
-    caption: Octopus with red peppers, potatoes and olives
-    session: Photo session 4 (November 2026)
   15-gotovo-yastie.webp:
     alt: "Grilled octopus with romesco: Char-grilled octopus on romesco with saffron potatoes and tapenade"
     caption: Char-grilled octopus on romesco with saffron potatoes and tapenade
     session: Photo session 4 (November 2026)
-  16-dopalnitelen-6.webp:
-    alt: "Grilled octopus with romesco: The ingredients: octopus, red peppers, almonds, olives, potatoes and saffron"
-    caption: "The ingredients: octopus, red peppers, almonds, olives, potatoes and saffron"
-    session: Photo session 5 (November 2026)
-  17-dopalnitelen-7.webp:
-    alt: "Grilled octopus with romesco: The finished plate: charred octopus with romesco and saffron potatoes"
-    caption: "The finished plate: charred octopus with romesco and saffron potatoes"
-    session: Photo session 5 (November 2026)
 mise:
   - If the octopus is fresh, freeze it overnight and thaw it in the refrigerator – this tenderises the fibres.
   - Roast the peppers, tomatoes and the garlic bulb at 220 °C for 30–35 minutes until the skins darken.
@@ -228,39 +164,30 @@ ingredients:
 steps:
   - title: Lay out the ingredients
     text: Arrange the octopus, peppers, tomatoes, nuts, olives, potatoes, saffron and lemon.
-    photo: 01-oktopod-stapka-1.webp
   - title: Clean the octopus
     text: Rinse the octopus and remove the beak and eyes if still present. Prepare the tentacles.
-    photo: 02-oktopod-stapka-2.webp
   - title: Simmer the octopus
     text: Put the onion, lemon, bay leaves and peppercorns in a large pot of water and bring to a gentle simmer. Dip the octopus three times for a few seconds, then leave it in the water. Simmer for 50–70 minutes. Let it cool in the broth.
     why: Dipping curls the tentacles, and cooling in the broth keeps the meat juicy.
     cue: A knife slides into the thickest tentacle like butter.
     time: 70
-    photo: 03-oktopod-stapka-3.webp
   - title: Cook the potatoes
     text: Simmer the potatoes in the salted water with the saffron for 15–18 minutes until tender. Leave them in the saffron water to take on the colour.
     cue: The potatoes are evenly yellow and tender.
     time: 18
-    photo: 04-oktopod-stapka-4.webp
   - title: Make the romesco
     text: Peel the roasted peppers, tomatoes and garlic. Blend with the nuts, bread, vinegar, smoked paprika and olive oil to a thick, slightly grainy sauce. Pass through a sieve for a smoother texture. Season.
     cue: The sauce holds its shape on the spoon.
-    photo: 05-oktopod-stapka-5.webp
   - title: Make the tapenade
     text: Finely chop or pulse the olives, capers and garlic. Add the lemon juice and olive oil.
-    photo: 06-oktopod-stapka-6.webp
   - title: Grill the octopus
     text: Separate the tentacles, brush them with olive oil and smoked paprika and grill on a very hot grill for 2–3 minutes per side until crusted.
     cue: The tips are crisp and almost black, the middle glossy.
     time: 6
-    photo: 07-oktopod-stapka-7.webp
   - title: Finish over the embers
     text: For the last minute drizzle the tentacles with olive oil and lemon juice.
-    photo: 08-oktopod-stapka-8.webp
   - title: Plate
     text: Spread romesco on the plate, place a tentacle on top, the halved saffron potatoes around it and a little tapenade. Sprinkle with parsley and sea salt.
-    photo: 09-oktopod-stapka-9.webp
 tips:
   - The octopus broth is excellent for rice or soup.
   - Romesco is even better on the second day.
@@ -281,7 +208,7 @@ allergens:
   - Sulphites (wine)
 translation:
   status: published
-  sourceHash: 61b4085e9e1fefcd
+  sourceHash: "83966fca2f62a6b1"
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-21

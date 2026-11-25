@@ -31,42 +31,6 @@ servings: 4
 difficulty: Intermediate
 cover: 10-gotovo-yastie.webp
 photos:
-  01-karamelizirani-stapka-1.webp:
-    alt: "Caramelised peaches with verbena granita: The ingredients: peaches, cream, almonds and lemon verbena"
-    caption: "The ingredients: peaches, cream, almonds and lemon verbena"
-    session: Photo session 6 (November 2026)
-  02-karamelizirani-stapka-2.webp:
-    alt: "Caramelised peaches with verbena granita: Scraping the lemon verbena granita"
-    caption: Scraping the lemon verbena granita
-    session: Photo session 6 (November 2026)
-  03-karamelizirani-stapka-3.webp:
-    alt: "Caramelised peaches with verbena granita: Mise en place: sliced peaches, tuile batter and cream in a piping bag"
-    caption: "Mise en place: sliced peaches, tuile batter and cream in a piping bag"
-    session: Photo session 6 (November 2026)
-  04-karamelizirani-stapka-4.webp:
-    alt: "Caramelised peaches with verbena granita: Cooling the tuiles and shaping quenelles of cream"
-    caption: Cooling the tuiles and shaping quenelles of cream
-    session: Photo session 6 (November 2026)
-  05-karamelizirani-stapka-5.webp:
-    alt: "Caramelised peaches with verbena granita: Slicing the peaches"
-    caption: Slicing the peaches
-    session: Photo session 6 (November 2026)
-  06-karamelizirani-stapka-6.webp:
-    alt: "Caramelised peaches with verbena granita: Caramelising the peaches in butter"
-    caption: Caramelising the peaches in butter
-    session: Photo session 6 (November 2026)
-  07-karamelizirani-stapka-7.webp:
-    alt: "Caramelised peaches with verbena granita: Plating the dessert"
-    caption: Plating the dessert
-    session: Photo session 6 (November 2026)
-  08-dopalnitelen-1.webp:
-    alt: "Caramelised peaches with verbena granita: Caramelised peach with cream, granita and tuile"
-    caption: Caramelised peach with cream, granita and tuile
-    session: Photo session 6 (November 2026)
-  09-dopalnitelen-2.webp:
-    alt: "Caramelised peaches with verbena granita: Close-up of the dessert"
-    caption: Close-up of the dessert
-    session: Photo session 6 (November 2026)
   10-gotovo-yastie.webp:
     alt: "Caramelised peaches with verbena granita: The finished dessert: peaches, granita, tuile and cream"
     caption: "The finished dessert: peaches, granita, tuile and cream"
@@ -155,30 +119,23 @@ ingredients:
 steps:
   - title: Lay out the ingredients
     text: Lay out the peaches, mascarpone, almonds, verbena, sugar and butter.
-    photo: 01-karamelizirani-stapka-1.webp
   - title: Make the granita
     text: Bring the water and sugar to the boil, take off the heat, add the verbena and leave for 20 minutes. Strain, add the lemon juice, pour into the cold tray and freeze for 4 hours, scraping with a fork every 30–40 minutes.
     cue: The crystals are fine, dry and greenish-gold.
     time: 240
-    photo: 02-karamelizirani-stapka-2.webp
   - title: Make the tuile batter
     text: Stir the melted butter, icing sugar, egg white and flour into a smooth batter. Spread in thin strips on the paper and sprinkle with the flaked almonds.
-    photo: 03-karamelizirani-stapka-3.webp
   - title: Bake the tuiles
     text: Bake at 170 °C for 6–8 minutes until golden and leave to cool on a rack.
     time: 8
-    photo: 04-karamelizirani-stapka-4.webp
   - title: Slice the peaches
     text: Cut the peaches into thick wedges around the stone.
-    photo: 05-karamelizirani-stapka-5.webp
   - title: Caramelise the peaches
     text: Melt the butter with the sugar in a pan and caramelise the wedges for 2–3 minutes on each side. Add a few verbena leaves for aroma.
     avoid: Do not stir often – the peaches need to sit still to colour.
     time: 6
-    photo: 06-karamelizirani-stapka-6.webp
   - title: Plate
     text: Place the warm peaches on the plate, shape 2–3 quenelles of cream with two spoons, add the granita at the last moment and stand the tuiles upright. Decorate with flowers.
-    photo: 07-karamelizirani-stapka-7.webp
 tips:
   - If you have no lemon verbena, use lemon balm, or lemon zest with mint.
   - The tuiles stay crisp in a tin for up to 3 days.
@@ -200,7 +157,7 @@ allergens:
   - Gluten
 translation:
   status: published
-  sourceHash: db495b6b7c8da8d3
+  sourceHash: "c76d0a083f9ebf50"
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-25

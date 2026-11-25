@@ -30,42 +30,6 @@ servings: 4
 difficulty: Intermediate
 cover: 10-gotovo-yastie.webp
 photos:
-  01-konfitiran-stapka-1.webp:
-    alt: "Confit egg yolk with sweetcorn: The ingredients: corn, chanterelles, eggs, butter and chives"
-    caption: "The ingredients: corn, chanterelles, eggs, butter and chives"
-    session: Photo session 6 (November 2026)
-  02-konfitiran-stapka-2.webp:
-    alt: "Confit egg yolk with sweetcorn: Mise en place: corn kernels, a yolk, butter and chopped chives"
-    caption: "Mise en place: corn kernels, a yolk, butter and chopped chives"
-    session: Photo session 6 (November 2026)
-  03-konfitiran-stapka-3.webp:
-    alt: "Confit egg yolk with sweetcorn: Cutting the corn and cleaning the chanterelles"
-    caption: Cutting the corn and cleaning the chanterelles
-    session: Photo session 6 (November 2026)
-  04-konfitiran-stapka-4.webp:
-    alt: "Confit egg yolk with sweetcorn: Straining the sweetcorn purée"
-    caption: Straining the sweetcorn purée
-    session: Photo session 6 (November 2026)
-  05-konfitiran-stapka-5.webp:
-    alt: "Confit egg yolk with sweetcorn: The brown butter strained through muslin"
-    caption: The brown butter strained through muslin
-    session: Photo session 6 (November 2026)
-  06-konfitiran-stapka-6.webp:
-    alt: "Confit egg yolk with sweetcorn: The yolk in butter among the chanterelles and corn"
-    caption: The yolk in butter among the chanterelles and corn
-    session: Photo session 6 (November 2026)
-  07-konfitiran-stapka-7.webp:
-    alt: "Confit egg yolk with sweetcorn: Chanterelles and corn in foaming butter"
-    caption: Chanterelles and corn in foaming butter
-    session: Photo session 6 (November 2026)
-  08-konfitiran-stapka-8.webp:
-    alt: "Confit egg yolk with sweetcorn: Spooning over the brown butter while plating"
-    caption: Spooning over the brown butter while plating
-    session: Photo session 6 (November 2026)
-  09-dopalnitelen-1.webp:
-    alt: "Confit egg yolk with sweetcorn: Close-up: yolk, chanterelles and corn"
-    caption: "Close-up: yolk, chanterelles and corn"
-    session: Photo session 6 (November 2026)
   10-gotovo-yastie.webp:
     alt: "Confit egg yolk with sweetcorn: The finished dish: egg yolk, chanterelles and corn on a sweetcorn purée"
     caption: "The finished dish: egg yolk, chanterelles and corn on a sweetcorn purée"
@@ -143,34 +107,26 @@ ingredients:
 steps:
   - title: Lay out the ingredients
     text: Lay out the corn, chanterelles, eggs, butter, milk and chives.
-    photo: 01-konfitiran-stapka-1.webp
   - title: Prepare the mise en place
     text: Cut the kernels from the cobs, cube the butter, separate the yolks and finely chop the chives.
-    photo: 02-konfitiran-stapka-2.webp
   - title: Clean the chanterelles
     text: Trim the tough ends of the chanterelles and halve the larger ones. Set aside 120 g of the corn kernels for searing.
-    photo: 03-konfitiran-stapka-3.webp
   - title: Cook and purée the corn
     text: Simmer the remaining kernels and the chopped cobs in the milk over a low heat for 20 minutes. Remove the cobs, blend the kernels with some of the milk and the butter, and pass through a fine sieve.
     why: The cobs give the sweetest corn flavour; the sieve removes the skins.
     cue: The purée is smooth and falls slowly from the spoon.
     time: 20
-    photo: 04-konfitiran-stapka-4.webp
   - title: Make the brown butter
     text: Melt the butter and cook it over a medium heat, swirling, until the solids turn golden brown. Strain through muslin at once.
     avoid: Do not leave the butter unattended – it goes from brown to burnt in seconds.
-    photo: 05-konfitiran-stapka-5.webp
   - title: Confit the yolks
     text: Heat the confit butter to 63 °C. Slide in the yolks and hold them at that temperature for about 40 minutes.
     cue: The yolk is thick and glossy but still runs.
     time: 40
-    photo: 06-konfitiran-stapka-6.webp
   - title: Sear the chanterelles and corn
     text: Heat a pan, sear the chanterelles in butter with the thyme for 3–4 minutes, add the corn kernels and cook for another 2 minutes until they colour in spots. Season with salt.
-    photo: 07-konfitiran-stapka-7.webp
   - title: Plate
     text: Spoon warm purée into the centre of a deep plate. Place the yolk with a spoon, the chanterelles and corn around it, pour over the brown butter and finish with chives, flowers and salt flakes.
-    photo: 08-konfitiran-stapka-8.webp
 tips:
   - Without a thermometer the yolk easily overcooks – use a digital one and a small pan so the butter is at least 3 cm deep.
   - Strain the confit butter and reuse it for searing.
@@ -190,7 +146,7 @@ allergens:
   - Milk and dairy
 translation:
   status: published
-  sourceHash: 1a92eabb5729f081
+  sourceHash: "c375d003e15ba3f3"
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-25

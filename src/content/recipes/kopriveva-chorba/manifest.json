@@ -15,5 +15,10 @@
   },
   "generatedHash": "c837e72886ca2bd7f8b70e405379522129fc80878eddc5f7ebde9ce9ebb7d8f5",
   "excludedSources": [],
-  "importedAt": "2026-11-19T05:27:55.926Z"
+  "importedAt": "2026-11-19T05:27:55.926Z",
+  "singleHeroPolicy": {
+    "date": "2026-11-25",
+    "kept": "01-gotovo-yastie.webp",
+    "removed": 0
+  }
 }

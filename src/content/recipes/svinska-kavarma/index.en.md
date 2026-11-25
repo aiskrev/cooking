@@ -25,64 +25,9 @@ servings: 6
 difficulty: Intermediate
 cover: 16-gotovo-yastie.webp
 photos:
-  01-svinska-stapka-1.webp:
-    alt: "Pork kavarma: The ingredients for the pork kavarma"
-    caption: The ingredients for the pork kavarma
-  02-svinska-stapka-2.webp:
-    alt: "Pork kavarma: Cutting the pork"
-    caption: Cutting the pork
-  03-svinska-stapka-3.webp:
-    alt: "Pork kavarma: The seared meat in the pan"
-    caption: The seared meat in the pan
-  04-svinska-stapka-4.webp:
-    alt: "Pork kavarma: Peppers, onion and mushrooms in the pan"
-    caption: Peppers, onion and mushrooms in the pan
-  05-svinska-stapka-5.webp:
-    alt: "Pork kavarma: Pouring the red wine into the pan"
-    caption: Pouring the red wine into the pan
-  06-svinska-stapka-6.webp:
-    alt: "Pork kavarma: Transferring to the clay pot with the tomatoes"
-    caption: Transferring to the clay pot with the tomatoes
-  07-svinska-stapka-7.webp:
-    alt: "Pork kavarma: The guvech with its lid in the oven"
-    caption: The guvech with its lid in the oven
-  08-svinska-stapka-8.webp:
-    alt: "Pork kavarma: Thickening the sauce in the pan"
-    caption: Thickening the sauce in the pan
-  09-svinska-stapka-9.webp:
-    alt: "Pork kavarma: Serving with the sauce"
-    caption: Serving with the sauce
-  10-dopalnitelen-1.webp:
-    alt: "Pork kavarma: Ingredients for pork with mushrooms and peppers (first series)"
-    caption: Ingredients for pork with mushrooms and peppers (first series)
-    session: Photo session 1 (June 2026)
-  11-dopalnitelen-2.webp:
-    alt: "Pork kavarma: The seared meat (first series)"
-    caption: The seared meat (first series)
-    session: Photo session 1 (June 2026)
-  12-dopalnitelen-3.webp:
-    alt: "Pork kavarma: Peppers and mushrooms in the pan (first series)"
-    caption: Peppers and mushrooms in the pan (first series)
-    session: Photo session 1 (June 2026)
-  13-dopalnitelen-4.webp:
-    alt: "Pork kavarma: Transferring to the clay pot (first series)"
-    caption: Transferring to the clay pot (first series)
-    session: Photo session 1 (June 2026)
-  14-dopalnitelen-5.webp:
-    alt: "Pork kavarma: The guvech with its lid (first series)"
-    caption: The guvech with its lid (first series)
-    session: Photo session 1 (June 2026)
-  15-dopalnitelen-6.webp:
-    alt: "Pork kavarma: The dish, served (first series)"
-    caption: The dish, served (first series)
-    session: Photo session 1 (June 2026)
   16-gotovo-yastie.webp:
     alt: "Pork kavarma: The finished dish"
     caption: The finished dish
-  17-dopalnitelen-7.webp:
-    alt: "Pork kavarma: Braised pork with vegetables in a clay pot, with bread (second photo session)"
-    caption: Braised pork with vegetables in a clay pot, with bread (second photo session)
-    session: Photo session 2 (May–June 2026)
 mise:
   - Cut the meat into pieces of 3–4 cm and dry it well with kitchen paper.
   - Cut the onion into half-moons, the peppers into strips and the mushrooms into halves or quarters.
@@ -144,41 +89,32 @@ ingredients:
 steps:
   - title: Prepare the ingredients
     text: Lay out the meat, the vegetables, the spices and the wine.
-    photo: 01-svinska-stapka-1.webp
   - title: Cut and dry the meat
     text: Cut the shoulder into pieces of 3–4 cm and dry it on all sides. Salt it immediately before searing.
     why: Dry meat sears and forms a crust; wet meat gives off steam and boils.
-    photo: 02-svinska-stapka-2.webp
   - title: Sear the meat
     text: Heat the oil in a wide frying pan over high heat. Sear the meat in two or three batches, 3–4 minutes per batch, until it forms a brown crust. Take it out onto a plate.
     cue: The pieces are brown and come away from the bottom by themselves.
     avoid: Do not overcrowd the pan – the temperature drops and the meat starts to boil in its own juice.
     time: 10
-    photo: 03-svinska-stapka-3.webp
   - title: Sweat the vegetables
     text: In the same pan put the butter, the onion, the peppers and the mushrooms. Cook for 6–8 minutes over medium heat until they soften and the mushrooms release their water. Add the thyme and the black peppercorns, and at the end, off the heat, the paprika.
     time: 8
-    photo: 04-svinska-stapka-4.webp
   - title: Deglaze with the wine
     text: Return the pan to the heat, pour in the wine and scrape the bottom with a wooden spoon. Let it boil for 2–3 minutes.
     why: The juices caramelised on the bottom are the most concentrated flavour in the dish – the wine dissolves them and returns them to the sauce.
     cue: The sharp smell of alcohol has gone and the liquid has reduced by half.
     time: 3
-    photo: 05-svinska-stapka-5.webp
   - title: Transfer to the guvech
     text: Transfer the meat and the vegetables to the clay pot, add the tomatoes and the bay leaves and stir.
-    photo: 06-svinska-stapka-6.webp
   - title: Bake under a lid
     text: Close the guvech, put it into a cold oven and switch it on to 180 °C. Bake for 65–70 minutes.
     cue: The meat comes apart with a fork and the sauce is thickened.
     time: 70
-    photo: 07-svinska-stapka-7.webp
   - title: Thicken the sauce if needed
     text: If the sauce is thin, pour it off into a frying pan and let it boil for a few minutes over high heat, then return it to the meat. Taste for salt.
-    photo: 08-svinska-stapka-8.webp
   - title: Serve
     text: Serve in the guvech or in warmed plates, spooning the sauce over the meat.
-    photo: 09-svinska-stapka-9.webp
 tips:
   - Choose shoulder or neck – lean meat stays dry after long cooking.
   - The mushrooms go into a hot pan and are not salted at the start, otherwise they release water and boil.
@@ -196,7 +132,7 @@ allergens:
   - Sulphites (wine)
 translation:
   status: published
-  sourceHash: 71ae183e955a0a3f
+  sourceHash: "94319dd6ceb6cc82"
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-20

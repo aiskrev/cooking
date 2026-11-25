@@ -1,79 +1,13 @@
 {
   "slug": "kordon-blyo",
   "photos": {
-    "01-kordon-stapka-1.webp": {
-      "sourceName": "ChatGPT Image Jun 10, 2026, 06_24_16 PM.png",
-      "sourceSha256": "1e708d39ab4e722a7a6fc1acbd3207b36df9bdbd776a48738b8971fc45820d4b",
-      "sourceIdx": 192,
-      "sourceBytes": 2441660,
-      "sourceSize": "1122x1402",
-      "role": "step",
-      "batch": 69,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "02-kordon-stapka-2.webp": {
-      "sourceName": "ChatGPT Image Jun 10, 2026, 06_24_24 PM.png",
-      "sourceSha256": "67e09c9c03e99a5e48a342eee1e2e0c99211df304abc6c823b8764de3ae38c20",
-      "sourceIdx": 193,
-      "sourceBytes": 1920598,
-      "sourceSize": "1122x1402",
-      "role": "step",
-      "batch": 70,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "03-kordon-stapka-3.webp": {
-      "sourceName": "ChatGPT Image Jun 10, 2026, 06_24_27 PM.png",
-      "sourceSha256": "4d01742f3893b291b3db2d6d7bafa36fb2351de42a278bd07615e0fde423ab5a",
-      "sourceIdx": 194,
-      "sourceBytes": 1801411,
-      "sourceSize": "1122x1402",
-      "role": "step",
-      "batch": 70,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "04-kordon-stapka-4.webp": {
-      "sourceName": "ChatGPT Image Jun 10, 2026, 06_24_31 PM.png",
-      "sourceSha256": "82633ca1ebd9d87950311542667d61e3945db4be35802f772d14a997a1233544",
-      "sourceIdx": 195,
-      "sourceBytes": 1952647,
-      "sourceSize": "1122x1402",
-      "role": "step",
-      "batch": 70,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "05-kordon-stapka-5.webp": {
-      "sourceName": "ChatGPT Image Jun 10, 2026, 06_24_34 PM.png",
-      "sourceSha256": "977961432807f2676adf1fcbe5debb2ce5cc8b32bdb8d9d12894699445e5d923",
-      "sourceIdx": 196,
-      "sourceBytes": 1930492,
-      "sourceSize": "1122x1402",
-      "role": "step",
-      "batch": 70,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "06-kordon-stapka-6.webp": {
-      "sourceName": "ChatGPT Image Jun 10, 2026, 06_24_39 PM.png",
-      "sourceSha256": "7c8ad648295cc66998c4ee2c0fdb92dab836be538cdbc945edba9aaa7fd0cc98",
-      "sourceIdx": 197,
-      "sourceBytes": 1788664,
-      "sourceSize": "1122x1402",
-      "role": "step",
-      "batch": 70,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
     "07-kordon-stapka-7.webp": {
       "sourceName": "ChatGPT Image Jun 10, 2026, 06_24_42 PM.png",
       "sourceSha256": "4f8f690715eb57fad6a27ae58cf83a2c4f5c4ab7d7852e9590e44464eb2739d9",
       "sourceIdx": 198,
       "sourceBytes": 1757975,
       "sourceSize": "1122x1402",
-      "role": "step",
+      "role": "hero",
       "batch": 70,
       "confidence": "HIGH",
       "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
@@ -81,5 +15,10 @@
   },
   "generatedHash": "c237a81bda85524fa9492981ae2af75a876183ba05469fc78ead9d4f20beb52a",
   "excludedSources": [],
-  "importedAt": "2026-11-19T05:27:53.696Z"
+  "importedAt": "2026-11-19T05:27:53.696Z",
+  "singleHeroPolicy": {
+    "date": "2026-11-25",
+    "kept": "07-kordon-stapka-7.webp",
+    "removed": 6
+  }
 }

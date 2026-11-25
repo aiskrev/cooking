@@ -1,116 +1,6 @@
 {
   "slug": "sardini-s-pecheni-domati-bademov-krem-i-domatena-esentsiya",
   "photos": {
-    "01-sardini-stapka-1.webp": {
-      "sourceName": "Sardines, Tomatoes, and Herbs on Ice-1.webp",
-      "sourceSha256": "32999b0a6c4797671bcfa006c7cd5788e3e4490f7e04e14f9c71f57a7701ad33",
-      "sourceIdx": 5295,
-      "sourceBytes": 1950564,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 27,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "02-sardini-stapka-2.webp": {
-      "sourceName": "Artisanal Tomato and Herb Preparation-11.webp",
-      "sourceSha256": "255d78697c1eb6c0187aab272c87993f1f44257ae83cc119a7be5fc155af730b",
-      "sourceIdx": 5305,
-      "sourceBytes": 1721598,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 27,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "03-sardini-stapka-3.webp": {
-      "sourceName": "Tomato Essence and Herb Oil Preparation-12.webp",
-      "sourceSha256": "172cd5034a28e970212b0d44c9969aeafec570e3cdc2b8e5a23f5475372fb4de",
-      "sourceIdx": 5306,
-      "sourceBytes": 1825852,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 27,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "04-sardini-stapka-4.webp": {
-      "sourceName": "Mediterranean Sardines Mise en Place-3.webp",
-      "sourceSha256": "89e2377a570bf6ebc75c6a24af18058b7fa56cdd65f50226fc5fb221a16abd41",
-      "sourceIdx": 5297,
-      "sourceBytes": 1822044,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 27,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "05-sardini-stapka-5.webp": {
-      "sourceName": "Meticulous Fish Filleting Setup-5.webp",
-      "sourceSha256": "720238ba644d7cf0ada11685d3fa4bf1bb11ad4845d4facb2b30248435007e14",
-      "sourceIdx": 5299,
-      "sourceBytes": 1712998,
-      "sourceSize": "1535x1024",
-      "role": "step",
-      "batch": 27,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "06-sardini-stapka-6.webp": {
-      "sourceName": "Cinematic Sardine Filleting Preparation-6.webp",
-      "sourceSha256": "aa79068efd346ea5210c325afe2e1c96d82f7c279d3b3b475323265c7b1aab21",
-      "sourceIdx": 5300,
-      "sourceBytes": 1613324,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 27,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "07-sardini-stapka-7.webp": {
-      "sourceName": "Charred Tomatoes and Almond Mise en Place-9.webp",
-      "sourceSha256": "1d13cc533ba841f7a9d8407ade3dd4862d8ba603197e635897d4c078535625a8",
-      "sourceIdx": 5303,
-      "sourceBytes": 1773522,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 27,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "08-sardini-stapka-8.webp": {
-      "sourceName": "Crispy Sardines in Sizzling Herb Oil-8.webp",
-      "sourceSha256": "7ad1bf4a62057bd9a04c88b023b1cc4fca99170770f2156482cf446a0974eff1",
-      "sourceIdx": 5302,
-      "sourceBytes": 1814784,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 27,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "09-dopalnitelen-1.webp": {
-      "sourceName": "Mediterranean Sardine Feast-2.webp",
-      "sourceSha256": "f28a5bde46ca97024356c640c77276c2c532ed7ac58bdd40599abe8b26cc8948",
-      "sourceIdx": 5296,
-      "sourceBytes": 2115300,
-      "sourceSize": "1536x1024",
-      "role": "extra",
-      "batch": 27,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "10-dopalnitelen-2.webp": {
-      "sourceName": "Rustic Smoked Tomato Almond Feast-10.webp",
-      "sourceSha256": "8ad2fe55faa4898b8183a8ccb89a3598d5ae9c973d64d07f24ad55aceed4105b",
-      "sourceIdx": 5304,
-      "sourceBytes": 1829948,
-      "sourceSize": "1536x1024",
-      "role": "extra",
-      "batch": 27,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
     "11-gotovo-yastie.webp": {
       "sourceName": "Crispy Herb-Garnished Fish Skillet-7.webp",
       "sourceSha256": "9b8521dc026067d71d823f04fef2284bb064b40fa253065b40f16c1f351446d1",
@@ -125,5 +15,10 @@
   },
   "generatedHash": "f96b881f6945dd01717dcc9301daa3a3350282dde05668edc0663396acd3a045",
   "excludedSources": [],
-  "importedAt": "2026-11-25T13:17:02.254Z"
+  "importedAt": "2026-11-25T13:17:02.254Z",
+  "singleHeroPolicy": {
+    "date": "2026-11-25",
+    "kept": "11-gotovo-yastie.webp",
+    "removed": 10
+  }
 }

@@ -1,110 +1,11 @@
 {
   "slug": "lavrak-s-midi-i-rezene",
   "photos": {
-    "01-lavrak-stapka-1.webp": {
-      "sourceName": "ChatGPT Image Nov 20, 2026, 02_06_30 PM-1.webp",
-      "sourceSha256": "3658b0f6ead1624f5a26eb39fca14d253caa31cdf47b6a2f6642b08e4865c653",
-      "sourceIdx": 2195,
-      "sourceBytes": 1911610,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 18,
-      "confidence": "MEDIUM",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "02-lavrak-stapka-2.webp": {
-      "sourceName": "ChatGPT Image Nov 20, 2026, 02_06_33 PM-3.webp",
-      "sourceSha256": "ff7ea815985e0459973f48525001d0566f6a4c75685ffcefacf4034b54e3a754",
-      "sourceIdx": 2197,
-      "sourceBytes": 1953848,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 18,
-      "confidence": "MEDIUM",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "03-lavrak-stapka-3.webp": {
-      "sourceName": "ChatGPT Image Nov 20, 2026, 02_06_37 PM-6.webp",
-      "sourceSha256": "2b1e1665987797c58fb01f666ef69d4d3a48d214803dcfa02949a952ea0053ae",
-      "sourceIdx": 2200,
-      "sourceBytes": 1586272,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 18,
-      "confidence": "MEDIUM",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "04-lavrak-stapka-4.webp": {
-      "sourceName": "ChatGPT Image Nov 20, 2026, 02_06_32 PM-2.webp",
-      "sourceSha256": "45cbb516936f69e8d1f2cde9bba0e8952e1ab32596d8dfc748ace80b851393dd",
-      "sourceIdx": 2196,
-      "sourceBytes": 1919396,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 18,
-      "confidence": "MEDIUM",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "05-lavrak-stapka-5.webp": {
-      "sourceName": "ChatGPT Image Nov 20, 2026, 02_06_35 PM-5.webp",
-      "sourceSha256": "6806489dba449b1e069719f6315d58d9ac3015f19f17c5e76d21f747fd52f4cd",
-      "sourceIdx": 2199,
-      "sourceBytes": 1732786,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 18,
-      "confidence": "MEDIUM",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "06-lavrak-stapka-6.webp": {
-      "sourceName": "ChatGPT Image Nov 20, 2026, 02_06_34 PM-4.webp",
-      "sourceSha256": "84f50b21731351653352d0fbd5b279122d4e2910d1fb96c013258a092aeb7f34",
-      "sourceIdx": 2198,
-      "sourceBytes": 1535362,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 18,
-      "confidence": "MEDIUM",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "07-lavrak-stapka-7.webp": {
-      "sourceName": "ChatGPT Image Nov 20, 2026, 02_06_39 PM-8.webp",
-      "sourceSha256": "12b887011079f4d82764e2a326d66d4d6f6c2ceea7f77e3554c2803360cc9fd7",
-      "sourceIdx": 2202,
-      "sourceBytes": 1531648,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 18,
-      "confidence": "MEDIUM",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
     "08-dopalnitelen-1.webp": {
       "sourceName": "ChatGPT Image Nov 20, 2026, 02_06_40 PM-9.webp",
       "sourceSha256": "ed6a1d5689c16af55e3d54d0e3f4ee21cec4e9b1b7f20664afeeb1733d8445ba",
       "sourceIdx": 2203,
       "sourceBytes": 1753840,
-      "sourceSize": "1536x1024",
-      "role": "extra",
-      "batch": 18,
-      "confidence": "MEDIUM",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "09-dopalnitelen-2.webp": {
-      "sourceName": "ChatGPT Image Nov 20, 2026, 02_06_42 PM-10.webp",
-      "sourceSha256": "92fe185b6c18cedc8ef4c0657b71022103d764b1d8864d75e33a106bcb3435f6",
-      "sourceIdx": 2204,
-      "sourceBytes": 2063610,
-      "sourceSize": "1536x1024",
-      "role": "extra",
-      "batch": 18,
-      "confidence": "MEDIUM",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "10-gotovo-yastie.webp": {
-      "sourceName": "ChatGPT Image Nov 20, 2026, 02_06_38 PM-7.webp",
-      "sourceSha256": "40f2348ba263cab89ae4ee6255ce69ce037f5ca7fb756538c4c17f21964042aa",
-      "sourceIdx": 2201,
-      "sourceBytes": 1935628,
       "sourceSize": "1536x1024",
       "role": "hero",
       "batch": 18,
@@ -114,5 +15,10 @@
   },
   "generatedHash": "b92d4705becb4130bf7add9b37c1e1ada468f7dbf7ba414ef64a97a82c79f166",
   "excludedSources": [],
-  "importedAt": "2026-11-21T06:46:55.891Z"
+  "importedAt": "2026-11-21T06:46:55.891Z",
+  "singleHeroPolicy": {
+    "date": "2026-11-25",
+    "kept": "08-dopalnitelen-1.webp",
+    "removed": 9
+  }
 }

@@ -27,74 +27,10 @@ servings: 4
 difficulty: Intermediate
 cover: 15-gotovo-yastie.webp
 photos:
-  01-svinska-stapka-1.webp:
-    alt: "Crisp pork belly with pineapple: Mise en place: pork belly, pineapple, ginger, lime and spices"
-    caption: "Mise en place: pork belly, pineapple, ginger, lime and spices"
-    session: Photo session 4 (November 2026)
-  02-svinska-stapka-2.webp:
-    alt: "Crisp pork belly with pineapple: Scoring the skin of the pork belly"
-    caption: Scoring the skin of the pork belly
-    session: Photo session 4 (November 2026)
-  03-svinska-stapka-3.webp:
-    alt: "Crisp pork belly with pineapple: The pork belly braised in an aromatic liquid"
-    caption: The pork belly braised in an aromatic liquid
-    session: Photo session 4 (November 2026)
-  04-svinska-stapka-4.webp:
-    alt: "Crisp pork belly with pineapple: The braised belly in the pot before pressing"
-    caption: The braised belly in the pot before pressing
-    session: Photo session 4 (November 2026)
-  05-svinska-stapka-5.webp:
-    alt: "Crisp pork belly with pineapple: Caramelised pineapple and the glossy glaze in a copper pan"
-    caption: Caramelised pineapple and the glossy glaze in a copper pan
-    session: Photo session 4 (November 2026)
-  06-svinska-stapka-6.webp:
-    alt: "Crisp pork belly with pineapple: Caramelised pineapple in a pan with glaze and lime"
-    caption: Caramelised pineapple in a pan with glaze and lime
-    session: Photo session 4 (November 2026)
-  07-svinska-stapka-7.webp:
-    alt: "Crisp pork belly with pineapple: Basting the pork belly with hot oil in the pan"
-    caption: Basting the pork belly with hot oil in the pan
-    session: Photo session 4 (November 2026)
-  08-svinska-stapka-8.webp:
-    alt: "Crisp pork belly with pineapple: The crisp belly with clearly visible layers in the pan"
-    caption: The crisp belly with clearly visible layers in the pan
-    session: Photo session 4 (November 2026)
-  09-svinska-stapka-9.webp:
-    alt: "Crisp pork belly with pineapple: Finished plate: pork belly, pineapple, glaze, coriander and chilli"
-    caption: "Finished plate: pork belly, pineapple, glaze, coriander and chilli"
-    session: Photo session 4 (November 2026)
-  10-dopalnitelen-1.webp:
-    alt: "Crisp pork belly with pineapple: The pork belly with pineapple and glaze – another angle"
-    caption: The pork belly with pineapple and glaze – another angle
-    session: Photo session 4 (November 2026)
-  11-dopalnitelen-2.webp:
-    alt: "Crisp pork belly with pineapple: Mise en place: pork belly, pineapple, ginger and lime"
-    caption: "Mise en place: pork belly, pineapple, ginger and lime"
-    session: Photo session 4 (November 2026)
-  12-dopalnitelen-3.webp:
-    alt: "Crisp pork belly with pineapple: Pork belly with dried fruit, spices and pineapple"
-    caption: Pork belly with dried fruit, spices and pineapple
-    session: Photo session 4 (November 2026)
-  13-dopalnitelen-4.webp:
-    alt: "Crisp pork belly with pineapple: Mise en place with tropical fruit and spices"
-    caption: Mise en place with tropical fruit and spices
-    session: Photo session 4 (November 2026)
-  14-dopalnitelen-5.webp:
-    alt: "Crisp pork belly with pineapple: Scoring the belly with a chef’s knife"
-    caption: Scoring the belly with a chef’s knife
-    session: Photo session 4 (November 2026)
   15-gotovo-yastie.webp:
     alt: "Crisp pork belly with pineapple: Pork belly with crackling, caramelised pineapple and tamarind glaze"
     caption: Pork belly with crackling, caramelised pineapple and tamarind glaze
     session: Photo session 4 (November 2026)
-  16-dopalnitelen-6.webp:
-    alt: "Crisp pork belly with pineapple: Serving variation: crisp belly with pineapple and coriander"
-    caption: "Serving variation: crisp belly with pineapple and coriander"
-    session: Photo session 5 (November 2026)
-  17-dopalnitelen-7.webp:
-    alt: "Crisp pork belly with pineapple: Serving variation on a dark plate"
-    caption: "Serving variation on a dark plate"
-    session: Photo session 5 (November 2026)
 mise:
   - Pat the skin of the belly dry and score it in a 1 cm diamond pattern without reaching the meat.
   - Rub the salt into the skin and into the cuts; leave for 1 hour.
@@ -192,42 +128,33 @@ ingredients:
 steps:
   - title: Lay out the ingredients
     text: Arrange the belly, pineapple, ginger, garlic, spices, tamarind, lime and coriander.
-    photo: 01-svinska-stapka-1.webp
   - title: Score and salt the skin
     text: With a very sharp knife score the skin in 1 cm diamonds without cutting into the meat. Rub in the salt.
     why: The cuts let the fat run out and the skin puff up.
-    photo: 02-svinska-stapka-2.webp
   - title: Braise the belly
     text: Place the belly skin-side up in a dish, add the ginger, garlic, star anise, cinnamon, fish sauce, sugar and stock so that the skin stays above the liquid. Cover and braise at 150 °C for about 2 hours 30 minutes.
     cue: A knife slides into the meat with no resistance.
     time: 150
-    photo: 03-svinska-stapka-3.webp
   - title: Press
     text: Lift out the belly, strain the liquid and keep it. Press the belly between two trays under a weight and chill overnight. Cut into rectangular portions.
     why: Pressing levels the layers and makes neat portions.
-    photo: 04-svinska-stapka-4.webp
   - title: Make the glaze
     text: Skim the braising liquid and reduce 300 ml of it with the tamarind and honey to a syrup. Add the lime juice.
     cue: The glaze is glossy and coats the spoon.
     time: 15
-    photo: 05-svinska-stapka-5.webp
   - title: Caramelise the pineapple
     text: Sprinkle the pineapple wedges with the sugar and chilli and sear them in the butter over high heat for 2 minutes per side until they show dark stripes.
     cue: The pineapple is deep golden but still holds its shape.
     time: 5
-    photo: 06-svinska-stapka-6.webp
   - title: Crisp the skin
     text: Put the portions skin-side down in a pan with a little oil over medium heat for 8–10 minutes, basting with the hot fat, until the skin puffs up. Finish in the oven at 200 °C for 8–10 minutes.
     cue: The skin is puffed, golden and cracks when tapped.
     avoid: Beware of spitting – dry the skin well before it goes into the pan.
     time: 18
-    photo: 07-svinska-stapka-7.webp
   - title: Check the crackling
     text: Turn the portions and sear the other sides for a minute. Leave on a rack for 3 minutes.
-    photo: 08-svinska-stapka-8.webp
   - title: Plate
     text: Place the belly in the centre of a dark plate and spoon the glaze beside it without wetting the skin. Add the pineapple, coriander, chilli rings and a few drops of lime.
-    photo: 09-svinska-stapka-9.webp
 tips:
   - Chilled belly cuts cleanly – that is why pressing is essential.
   - Keep the fat skimmed from the liquid and use it to fry potatoes.
@@ -247,7 +174,7 @@ allergens:
   - Fish
 translation:
   status: published
-  sourceHash: 944b5ac0757098a9
+  sourceHash: "8e27a381bc47df82"
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-21

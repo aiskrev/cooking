@@ -25,10 +25,6 @@ servings: 2
 difficulty: Advanced
 cover: 02-gotovo-yastie.webp
 photos:
-  01-dopalnitelen-1.webp:
-    alt: "Soufflé omelette: Soufflé omelette with warm sauce and spring onion (second frame)"
-    caption: Soufflé omelette with warm sauce and spring onion (second frame)
-    session: Photo session 2 (May–June 2026)
   02-gotovo-yastie.webp:
     alt: "Soufflé omelette: Soufflé omelette with cream sauce and spring onion"
     caption: Soufflé omelette with cream sauce and spring onion
@@ -122,7 +118,7 @@ allergens:
   - Gluten
 translation:
   status: published
-  sourceHash: 47f1ec78d2dbc86b
+  sourceHash: "8019fce0fb85387d"
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-20

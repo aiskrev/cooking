@@ -23,21 +23,6 @@ servings: 2
 difficulty: Intermediate
 cover: 06-skalops-stapka-6.webp
 photos:
-  01-skalops-stapka-1.webp:
-    alt: "Seared scallops: The ingredients for the scallops"
-    caption: The ingredients for the scallops
-  02-skalops-stapka-2.webp:
-    alt: "Seared scallops: Drying and seasoning"
-    caption: Drying and seasoning
-  03-skalops-stapka-3.webp:
-    alt: "Seared scallops: Searing in the pan"
-    caption: Searing in the pan
-  04-skalops-stapka-4.webp:
-    alt: "Seared scallops: The butter with the capers in the pan"
-    caption: The butter with the capers in the pan
-  05-skalops-stapka-5.webp:
-    alt: "Seared scallops: The scallops on the purée"
-    caption: The scallops on the purée
   06-skalops-stapka-6.webp:
     alt: "Seared scallops: The scallops, served"
     caption: The scallops, served
@@ -82,28 +67,22 @@ ingredients:
 steps:
   - title: Prepare the ingredients
     text: Lay out the scallops, the butter, the capers, the lemon and the parsley.
-    photo: 01-skalops-stapka-1.webp
   - title: Dry and season
     text: Dry the scallops on all sides with kitchen paper. Season with salt and sprinkle with white pepper just before searing.
     why: Moisture is the enemy of the crust – a wet scallop steams.
-    photo: 02-skalops-stapka-2.webp
   - title: Sear
     text: Heat the oil in a heavy frying pan until it begins to smoke lightly. Arrange the scallops apart from each other and do not move them for 1.5–2 minutes. Turn them over and cook for another 1–1.5 minutes. Take them out onto a warm plate.
     cue: The crust is dark golden, and from the side the scallop is opaque only halfway up.
     avoid: In an overcrowded pan the temperature drops and the scallops release juice.
     time: 4
-    photo: 03-skalops-stapka-3.webp
   - title: Make the brown butter
     text: Lower the heat and put the butter in the same pan. When it foams and smells of hazelnuts, add the capers, and after a few seconds the lemon juice and the parsley. Take it off the heat at once.
     cue: The butter is amber, with brown specks on the bottom.
     avoid: Between brown and burnt butter there are only seconds.
-    photo: 04-skalops-stapka-4.webp
   - title: Arrange on the purée
     text: Spread the warm purée on warmed plates and arrange the scallops on it, with the better crust facing up.
-    photo: 05-skalops-stapka-5.webp
   - title: Spoon over and serve
     text: Spoon over the brown butter and the capers and serve immediately.
-    photo: 06-skalops-stapka-6.webp
 tips:
   - Buy "dry" scallops, untreated with a solution – the others release a lot of water and do not sear.
   - Thawed scallops are left on paper in the refrigerator for an hour to dry out.
@@ -122,7 +101,7 @@ allergens:
   - Celery
 translation:
   status: published
-  sourceHash: d445e20a7f1eb83d
+  sourceHash: "d5eaf331edc391e2"
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-20

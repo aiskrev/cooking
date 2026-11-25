@@ -1,105 +1,6 @@
 {
   "slug": "govezhdi-rebra-s-kafe-glazura-i-pyure-ot-pashtarnak",
   "photos": {
-    "01-govezhdi-stapka-1.webp": {
-      "sourceName": "Gourmet Braising Ingredients in Warm Kitchen Light-3.webp",
-      "sourceSha256": "0dfb0406de0c6a26c1e451dde64b970073d6015d83ed3347f60c97163a619aec",
-      "sourceIdx": 3052,
-      "sourceBytes": 1903412,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 4,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "02-govezhdi-stapka-2.webp": {
-      "sourceName": "Cinematic Beef Rib Preparation-7.webp",
-      "sourceSha256": "23f4bee04fddd704b7954808c3eeed1c53cfa275faae3f946ac500e0cce607c6",
-      "sourceIdx": 3056,
-      "sourceBytes": 1911044,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 4,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "03-govezhdi-stapka-3.webp": {
-      "sourceName": "Sizzling Coffee-Glazed Bone-In Rib Roast-8.webp",
-      "sourceSha256": "313629b0a6b98d42036e1b4c09c5c79f667e9373e9fc8926cb7865474b6699d4",
-      "sourceIdx": 3057,
-      "sourceBytes": 2060106,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 4,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "04-govezhdi-stapka-4.webp": {
-      "sourceName": "Caramelized Braised Beef Short Ribs-9.webp",
-      "sourceSha256": "c5bc90620d2ba5db6c07ff8964908e7a4de3e806166ceea4f4a130b7a1ad10dd",
-      "sourceIdx": 3058,
-      "sourceBytes": 1863562,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 4,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "05-govezhdi-stapka-5.webp": {
-      "sourceName": "Gourmet Sauce and Garnish Mise en Place-10.webp",
-      "sourceSha256": "b265aa87ea6b64cc0562033adc6b6a7353de5e242398d2d90a1f15ae26bf1f3e",
-      "sourceIdx": 3059,
-      "sourceBytes": 2030878,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 4,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "06-govezhdi-stapka-8.webp": {
-      "sourceName": "Lacquered Short Rib with Thyme and Onions-4.webp",
-      "sourceSha256": "f5675c4afb3fc3fb2a5025cb06e829c580f47a7e53ca3f88a205d3de85022309",
-      "sourceIdx": 3053,
-      "sourceBytes": 1959544,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 4,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "07-govezhdi-stapka-9.webp": {
-      "sourceName": "Glazed Short Rib with Root Purée-5.webp",
-      "sourceSha256": "751c37f65e6bb097e4a30feefd1bfe179865b2c8c2cf31180905863d7e860d5d",
-      "sourceIdx": 3054,
-      "sourceBytes": 1776760,
-      "sourceSize": "1536x1024",
-      "role": "step",
-      "batch": 4,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "08-dopalnitelen-1.webp": {
-      "sourceName": "Gourmet Braised Short Rib with Charred Onions-1.webp",
-      "sourceSha256": "4893245ca106cb9bec2af24d691ac553d56120974d41754cf7cd0c42415c0e13",
-      "sourceIdx": 3050,
-      "sourceBytes": 1972412,
-      "sourceSize": "1536x1024",
-      "role": "extra",
-      "batch": 4,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "09-dopalnitelen-2.webp": {
-      "sourceName": "Rustic Red Wine Braised Short Rib Mise en Place-6.webp",
-      "sourceSha256": "8c0bd0a047bbdc7cb52dc980dbf2cc5ee7029667b460baa7123b2a7d2003726d",
-      "sourceIdx": 3055,
-      "sourceBytes": 2032110,
-      "sourceSize": "1536x1024",
-      "role": "extra",
-      "batch": 4,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
     "10-gotovo-yastie.webp": {
       "sourceName": "Gourmet Glazed Short Rib Platter-2.webp",
       "sourceSha256": "764a4bf163010893cb397053299f953ba01dce2e72423e13dbe67982a0c67aef",
@@ -110,20 +11,14 @@
       "batch": 4,
       "confidence": "HIGH",
       "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
-    },
-    "11-dopalnitelen-3.webp": {
-      "sourceName": "Rustic Beef Braise Mise en Place-1.webp",
-      "sourceSha256": "ecbd60af0fffde6e420baf4e18025d25e50b708fd30f76107a51ae00c105e00f",
-      "sourceIdx": 4050,
-      "sourceBytes": 1810022,
-      "sourceSize": "1122x1402",
-      "role": "extra",
-      "batch": 5,
-      "confidence": "HIGH",
-      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
     }
   },
   "generatedHash": "2439eb8204233b8b771bcef32fc6e51c0b818247c88158228520e58c0c32cf2a",
   "excludedSources": [],
-  "importedAt": "2026-11-21T12:35:35.586Z"
+  "importedAt": "2026-11-21T12:35:35.586Z",
+  "singleHeroPolicy": {
+    "date": "2026-11-25",
+    "kept": "10-gotovo-yastie.webp",
+    "removed": 10
+  }
 }

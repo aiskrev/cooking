@@ -23,64 +23,9 @@ servings: 2
 difficulty: Easy
 cover: 16-gotovo-yastie.webp
 photos:
-  01-yaytsa-stapka-1.webp:
-    alt: "Panagyurishte-style eggs: The ingredients for the Panagyurishte-style eggs"
-    caption: The ingredients for the Panagyurishte-style eggs
-  02-yaytsa-stapka-2.webp:
-    alt: "Panagyurishte-style eggs: Whisking the yogurt with the garlic"
-    caption: Whisking the yogurt with the garlic
-  03-yaytsa-stapka-3.webp:
-    alt: "Panagyurishte-style eggs: The yogurt in the bowl"
-    caption: The yogurt in the bowl
-  04-yaytsa-stapka-4.webp:
-    alt: "Panagyurishte-style eggs: Breaking the eggs"
-    caption: Breaking the eggs
-  05-yaytsa-stapka-5.webp:
-    alt: "Panagyurishte-style eggs: The eggs in the simmering water"
-    caption: The eggs in the simmering water
-  06-yaytsa-stapka-6.webp:
-    alt: "Panagyurishte-style eggs: Lifting out the poached egg"
-    caption: Lifting out the poached egg
-  07-yaytsa-stapka-7.webp:
-    alt: "Panagyurishte-style eggs: The butter melting in the pan"
-    caption: The butter melting in the pan
-  08-yaytsa-stapka-8.webp:
-    alt: "Panagyurishte-style eggs: The butter with the paprika"
-    caption: The butter with the paprika
-  09-yaytsa-stapka-9.webp:
-    alt: "Panagyurishte-style eggs: Pouring the butter over the eggs"
-    caption: Pouring the butter over the eggs
-  10-dopalnitelen-1.webp:
-    alt: "Panagyurishte-style eggs: The ingredients (first series)"
-    caption: The ingredients (first series)
-    session: Photo session 1 (June 2026)
-  11-dopalnitelen-2.webp:
-    alt: "Panagyurishte-style eggs: Whisking the yogurt (first series)"
-    caption: Whisking the yogurt (first series)
-    session: Photo session 1 (June 2026)
-  12-dopalnitelen-3.webp:
-    alt: "Panagyurishte-style eggs: The poached eggs (first series)"
-    caption: The poached eggs (first series)
-    session: Photo session 1 (June 2026)
-  13-dopalnitelen-4.webp:
-    alt: "Panagyurishte-style eggs: The butter with the paprika (first series)"
-    caption: The butter with the paprika (first series)
-    session: Photo session 1 (June 2026)
-  14-dopalnitelen-5.webp:
-    alt: "Panagyurishte-style eggs: The eggs, served (first series)"
-    caption: The eggs, served (first series)
-    session: Photo session 1 (June 2026)
-  15-dopalnitelen-6.webp:
-    alt: "Panagyurishte-style eggs: In a clay bowl (first series)"
-    caption: In a clay bowl (first series)
-    session: Photo session 1 (June 2026)
   16-gotovo-yastie.webp:
     alt: "Panagyurishte-style eggs: The finished dish"
     caption: The finished dish
-  17-dopalnitelen-7.webp:
-    alt: "Panagyurishte-style eggs: Panagyurishte-style eggs with cheese, red butter and flatbread (second photo session)"
-    caption: Panagyurishte-style eggs with cheese, red butter and flatbread (second photo session)
-    session: Photo session 2 (May–June 2026)
 mise:
   - Take the yogurt out of the refrigerator 20 minutes ahead so that it is not ice-cold.
   - Crush the garlic with the salt and crumble the cheese.
@@ -127,37 +72,28 @@ ingredients:
 steps:
   - title: Prepare the ingredients
     text: Lay out the eggs, the yogurt, the cheese, the garlic, the butter and the paprika.
-    photo: 01-yaytsa-stapka-1.webp
   - title: Whisk the yogurt
     text: Whisk the yogurt with the crushed garlic until smooth.
-    photo: 02-yaytsa-stapka-2.webp
   - title: Divide among the plates
     text: Divide the yogurt between two deep plates and sprinkle with the crumbled cheese.
-    photo: 03-yaytsa-stapka-3.webp
   - title: Break the eggs
     text: Break each egg into a separate cup.
     why: From a cup the egg slides into the water all at once and the white does not scatter.
-    photo: 04-yaytsa-stapka-4.webp
   - title: Poach the eggs
     text: Pour the vinegar into the water and lower the heat until it barely trembles. Slide in the eggs one at a time and cook them for 3 minutes.
     cue: The white is opaque and set, and the yolk gives under light pressure.
     avoid: In hard-boiling water the white tears into rags.
     time: 3
-    photo: 05-yaytsa-stapka-5.webp
   - title: Take them out
     text: Lift the eggs out with a slotted spoon and leave them for a few seconds on kitchen paper.
     why: The water from the egg would thin the yogurt.
-    photo: 06-yaytsa-stapka-6.webp
   - title: Melt the butter
     text: Melt the butter in a small frying pan over medium heat and let it foam.
-    photo: 07-yaytsa-stapka-7.webp
   - title: Add the paprika
     text: Take the pan off the heat and stir the paprika into the butter.
     avoid: Over the heat the paprika burns in seconds and turns bitter.
-    photo: 08-yaytsa-stapka-8.webp
   - title: Serve
     text: Put two eggs on the yogurt, pour the hot red butter over them, sprinkle with parsley and serve immediately.
-    photo: 09-yaytsa-stapka-9.webp
 tips:
   - The fresher the egg, the firmer its white stays.
   - Strained yogurt is thicker and does not thin out under the eggs.
@@ -175,7 +111,7 @@ allergens:
   - Milk and dairy
 translation:
   status: published
-  sourceHash: 7442db759cb0ad5e
+  sourceHash: "a74c3fa970810c08"
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-20
