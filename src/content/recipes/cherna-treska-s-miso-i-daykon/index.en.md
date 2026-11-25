@@ -27,9 +27,53 @@ servings: 4
 difficulty: Intermediate
 cover: 09-dopalnitelen-2.webp
 photos:
+  01-cherna-stapka-1.webp:
+    alt: "Miso-glazed black cod: Mise en place: fish fillet, miso, daikon, yuzu and shiso"
+    caption: "Mise en place: fish fillet, miso, daikon, yuzu and shiso"
+    session: Photo session 3 (November 2026)
+  02-cherna-stapka-2.webp:
+    alt: "Miso-glazed black cod: Miso, mirin and seasonings by the fish on the board"
+    caption: Miso, mirin and seasonings by the fish on the board
+    session: Photo session 3 (November 2026)
+  03-cherna-stapka-3.webp:
+    alt: "Miso-glazed black cod: The chef slicing a fish fillet on the board"
+    caption: The chef slicing a fish fillet on the board
+    session: Photo session 3 (November 2026)
+  04-cherna-stapka-4.webp:
+    alt: "Miso-glazed black cod: Brushing the fish with the miso marinade"
+    caption: Brushing the fish with the miso marinade
+    session: Photo session 3 (November 2026)
+  05-cherna-stapka-5.webp:
+    alt: "Miso-glazed black cod: Daikon, dashi and seasonings in a copper pot"
+    caption: Daikon, dashi and seasonings in a copper pot
+    session: Photo session 3 (November 2026)
+  06-cherna-stapka-6.webp:
+    alt: "Miso-glazed black cod: Caramelised fish with a miso glaze"
+    caption: Caramelised fish with a miso glaze
+    session: Photo session 3 (November 2026)
+  07-cherna-stapka-7.webp:
+    alt: "Miso-glazed black cod: Pouring broth over the fish in a dark bowl"
+    caption: Pouring broth over the fish in a dark bowl
+    session: Photo session 3 (November 2026)
+  08-dopalnitelen-1.webp:
+    alt: "Miso-glazed black cod: Mise en place with miso, daikon and yuzu on a dark surface"
+    caption: Mise en place with miso, daikon and yuzu on a dark surface
+    session: Photo session 3 (November 2026)
   09-dopalnitelen-2.webp:
     alt: "Miso-glazed black cod: Caramelised black cod with daikon and yuzu"
     caption: Caramelised black cod with daikon and yuzu
+    session: Photo session 3 (November 2026)
+  10-dopalnitelen-3.webp:
+    alt: "Miso-glazed black cod: Cod with yuzu and shiso"
+    caption: Cod with yuzu and shiso
+    session: Photo session 3 (November 2026)
+  11-dopalnitelen-4.webp:
+    alt: "Miso-glazed black cod: Cod with radish and daikon"
+    caption: Cod with radish and daikon
+    session: Photo session 3 (November 2026)
+  12-dopalnitelen-5.webp:
+    alt: "Miso-glazed black cod: Mise en place on a dark board with miso and knives"
+    caption: Mise en place on a dark board with miso and knives
     session: Photo session 3 (November 2026)
 mise:
   - Mix the miso with the sake, mirin and sugar into a smooth marinade paste.
@@ -97,23 +141,30 @@ ingredients:
 steps:
   - title: Lay out the ingredients
     text: Lay out the fish, miso, daikon, yuzu, shiso and dashi.
+    photo: 01-cherna-stapka-1.webp
   - title: Prepare the marinade
     text: Mix the miso with the sake, mirin and sugar until it becomes a smooth paste.
+    photo: 02-cherna-stapka-2.webp
   - title: Cut the fish
     text: Cut the fillets into even portions with a sharp knife.
+    photo: 03-cherna-stapka-3.webp
   - title: Coat and marinate
     text: Using a brush, coat the fish generously with the marinade and leave it for 24 hours.
     why: Miso tenderises the fish and adds a sweetness that caramelises.
     time: 1440
+    photo: 04-cherna-stapka-4.webp
   - title: Simmer the daikon
     text: Simmer the daikon in the dashi with the soy sauce and mirin for 15–20 minutes until it is tender and has absorbed the broth.
     time: 18
+    photo: 05-cherna-stapka-5.webp
   - title: Roast the fish
     text: Wipe the excess miso from the fish and roast it in the oven at 200 °C for 8–10 minutes until a dark caramel crust forms.
     cue: The crust is glossy and darkened in places.
     time: 10
+    photo: 06-cherna-stapka-6.webp
   - title: Plate
     text: Put the daikon in a bowl, the fish on it, spoon over a little broth and finish with yuzu and shiso.
+    photo: 07-cherna-stapka-7.webp
 tips:
   - Miso burns easily – wipe off the excess before roasting.
   - The marinating time can be 12–48 hours.
@@ -132,7 +183,7 @@ allergens:
   - Gluten
 translation:
   status: published
-  sourceHash: "f976db2a7096d9fa"
+  sourceHash: 1af303d43553c77a
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-21

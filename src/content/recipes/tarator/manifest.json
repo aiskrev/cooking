@@ -1,24 +1,239 @@
 {
   "slug": "tarator",
   "photos": {
+    "01-tarator-stapka-1.webp": {
+      "sourceName": "Rustic Tarator Ingredients Still Life-1.webp",
+      "sourceSha256": "cecf9a0d5b0697ca6b3c51ecc334304506dfeef023c0579581fce3632eeb765c",
+      "sourceIdx": 296,
+      "sourceBytes": 2054348,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 95,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-tarator-stapka-2.webp": {
+      "sourceName": "Cinematic Cucumber Prep in a Warm Kitchen-4.webp",
+      "sourceSha256": "ac3150f30333638724c785b6a0a526c51644858682695e650e760518570e5352",
+      "sourceIdx": 299,
+      "sourceBytes": 1709102,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 95,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "03-tarator-stapka-3.webp": {
+      "sourceName": "Rustic Garlic and Salt Mortar Close-Up-7.webp",
+      "sourceSha256": "db2631ac69f553d8e51587d208dff2ae677147354cc4e8b2d7cdbb389760211e",
+      "sourceIdx": 302,
+      "sourceBytes": 1839098,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 95,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "04-tarator-stapka-4.webp": {
+      "sourceName": "Toasted Walnuts_ From Pan to Board-10.webp",
+      "sourceSha256": "043481889d328e6bb06f0f734894b63f2fdfb98739f3fe8a42e24258d336a2b9",
+      "sourceIdx": 305,
+      "sourceBytes": 1727704,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 95,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "05-tarator-stapka-5.webp": {
+      "sourceName": "Rustic Walnut Prep for Tarator-11.webp",
+      "sourceSha256": "0b88604574fe24c040deaa062dbafa3b6fc4148ded725493f4f4232d3fd5589b",
+      "sourceIdx": 306,
+      "sourceBytes": 1799912,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 95,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "06-tarator-stapka-6.webp": {
+      "sourceName": "Rustic Whisked Yogurt Sauce-13.webp",
+      "sourceSha256": "8c021d45f6c317524d8125eda8dff7d0d481a5b9a1e4643e357b821dfb67d517",
+      "sourceIdx": 308,
+      "sourceBytes": 1662518,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 95,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "07-tarator-stapka-7.webp": {
+      "sourceName": "Whisking Creamy Yogurt Sauce with Ice Water-14.webp",
+      "sourceSha256": "c27ee19da1919ed3fa8069880eded96f2adea99ae6dc69e39797fdaf60730259",
+      "sourceIdx": 309,
+      "sourceBytes": 1686150,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 95,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "08-tarator-stapka-8.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 04_17_34 PM.png",
+      "sourceSha256": "a24b65ca89665c37b130cea86fe6fd804b66060dd5dd528dec8ba7b1905827c7",
+      "sourceIdx": 118,
+      "sourceBytes": 2169823,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 45,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
     "09-tarator-stapka-9.webp": {
       "sourceName": "ChatGPT Image Jun 10, 2026, 04_17_36 PM.png",
       "sourceSha256": "c8b450de8d77807ab246bf0abfd8b8f9b4d869a6ed1cd59f9d26d1284aa2dc80",
       "sourceIdx": 119,
       "sourceBytes": 2865262,
       "sourceSize": "1122x1402",
-      "role": "hero",
+      "role": "step",
       "batch": 45,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "10-dopalnitelen-1.webp": {
+      "sourceName": "Rustic Tzatziki Ingredient Still Life-2.webp",
+      "sourceSha256": "9e6c19305a9a94de37f5aa7daf3b34b381a3561f0c2f24a4a6fd586f718924e6",
+      "sourceIdx": 297,
+      "sourceBytes": 2098204,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 95,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "11-dopalnitelen-2.webp": {
+      "sourceName": "Tarator Ingredients in a Rustic Kitchen-3.webp",
+      "sourceSha256": "f5865557d3e0a12f9b738ffe2cf1ff60612df130825fd9bf7ae744d73568fa7e",
+      "sourceIdx": 298,
+      "sourceBytes": 1990202,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 95,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "12-dopalnitelen-3.webp": {
+      "sourceName": "Cucumber Prep with Dill and Yogurt-5.webp",
+      "sourceSha256": "57384559e1da8414cc22ddd93214208a3a5e11fc24d5e894ed914460e3225117",
+      "sourceIdx": 300,
+      "sourceBytes": 1615532,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 95,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "13-dopalnitelen-4.webp": {
+      "sourceName": "Cucumber Prep for Rustic Tarator-6.webp",
+      "sourceSha256": "c9521e5e886f3056775dfafd6e6c08c78737ca2a237a053d1f662950c97b48ac",
+      "sourceIdx": 301,
+      "sourceBytes": 1616506,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 95,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "14-dopalnitelen-5.webp": {
+      "sourceName": "Garlic and Salt in a Stone Mortar-8.webp",
+      "sourceSha256": "bba8068e0b815a498cae0a9ab9ae32299acd5778ce9db4f4aa9d7a9a29137829",
+      "sourceIdx": 303,
+      "sourceBytes": 1737362,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 95,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "15-dopalnitelen-6.webp": {
+      "sourceName": "Rustic Garlic and Salt Crushing Scene-9.webp",
+      "sourceSha256": "c9108c6853001210d18f406a31644e26c0ccf17c9f881552abffe32de64ccf8f",
+      "sourceIdx": 304,
+      "sourceBytes": 1732418,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 95,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "16-dopalnitelen-7.webp": {
+      "sourceName": "Toasted Walnut Tarator Prep-12.webp",
+      "sourceSha256": "f8bab9c6f1369b149bfbf61b5e031289fd3b3ecfd543fe56c614e17a5ca583c5",
+      "sourceIdx": 307,
+      "sourceBytes": 1738762,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 95,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "17-dopalnitelen-8.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 04_17_19 PM.png",
+      "sourceSha256": "cfb3261d8f5756814c56b1cc6a4e87fad7a3a235498ef60579c0a5c976ba69bb",
+      "sourceIdx": 115,
+      "sourceBytes": 3154969,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 44,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "18-dopalnitelen-9.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 04_17_26 PM.png",
+      "sourceSha256": "8cfed7bc9726408c71699c2897b7c9cc8723b52c09de1eb08d5d93767c56633a",
+      "sourceIdx": 116,
+      "sourceBytes": 2229307,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 45,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "19-dopalnitelen-10.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 04_17_30 PM.png",
+      "sourceSha256": "ea9a51ca328fdbc787a50bd9a4452e584940efe4756c13c3cc2f79cea0996d67",
+      "sourceIdx": 117,
+      "sourceBytes": 2464447,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 45,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "20-dopalnitelen-11.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 04_17_42 PM.png",
+      "sourceSha256": "78d10449cdcff0903721f7bd635bf25eae0120fc8b5f4a2fbdd48d8e1936ce23",
+      "sourceIdx": 120,
+      "sourceBytes": 2616234,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 45,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "21-dopalnitelen-12.webp": {
+      "sourceName": "ChatGPT Image Jun 5, 2026, 12_26_41 PM.png",
+      "sourceSha256": "57062c2294946261ab3e8e2ebba9d19f41c241c3f2cf418a6220639ec3497e23",
+      "sourceIdx": 1055,
+      "sourceBytes": 2732302,
+      "sourceSize": "1448x1086",
+      "role": "extra",
+      "batch": 40,
       "confidence": "HIGH",
       "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
     }
   },
   "generatedHash": "6be2023664e52c42fa4eab69a421fdfc25b732dd17c42b7fef49102b3136a610",
   "excludedSources": [],
-  "importedAt": "2026-11-19T05:27:46.245Z",
-  "singleHeroPolicy": {
-    "date": "2026-11-25",
-    "kept": "09-tarator-stapka-9.webp",
-    "removed": 20
-  }
+  "importedAt": "2026-11-19T05:27:46.245Z"
 }

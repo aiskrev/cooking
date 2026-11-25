@@ -1,6 +1,160 @@
 {
   "slug": "oktopod-s-romesko-i-shafranovi-kartofi",
   "photos": {
+    "01-oktopod-stapka-1.webp": {
+      "sourceName": "Mediterranean Octopus Ingredient Still Life-2.webp",
+      "sourceSha256": "b9af8d255117e27c076498b9066083a51a5ab605cef765452676a9e6efe01f05",
+      "sourceIdx": 3061,
+      "sourceBytes": 2091984,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 5,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-oktopod-stapka-2.webp": {
+      "sourceName": "Mediterranean Octopus Preparation-6.webp",
+      "sourceSha256": "5657e25e31a60fd7e15bc02ebddfd0b6305ab9dded08b658f48b156cbb688e1f",
+      "sourceIdx": 3077,
+      "sourceBytes": 1940282,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 6,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "03-oktopod-stapka-3.webp": {
+      "sourceName": "Copper-Pot Braised Octopus with Lemon-7.webp",
+      "sourceSha256": "7ed219846e64739e2b7e3c94e39d55536172bee0b25be8fb89d2220ec68e86fb",
+      "sourceIdx": 3078,
+      "sourceBytes": 1888806,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 6,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "04-oktopod-stapka-4.webp": {
+      "sourceName": "Mediterranean Octopus Mise en Place-9.webp",
+      "sourceSha256": "05764bc4a4013d052dfdb9529017b6345ac69fd0e2134c63def8d5d9b2513820",
+      "sourceIdx": 3080,
+      "sourceBytes": 2195478,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 6,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "05-oktopod-stapka-5.webp": {
+      "sourceName": "Straining Romesco Sauce in a Copper Kitchen-10.webp",
+      "sourceSha256": "efd738dbf6b38f049a49d31efd197dfa93e722744b183705dc7b2995d4195c5b",
+      "sourceIdx": 3069,
+      "sourceBytes": 1827216,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 5,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "06-oktopod-stapka-6.webp": {
+      "sourceName": "Mediterranean Sauce and Olive Tapenade Tableau-10.webp",
+      "sourceSha256": "e62c5076f2b38ade32e3c174dfbc14f8a48a11d5459ec4faff97819462b13431",
+      "sourceIdx": 3081,
+      "sourceBytes": 1875012,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 6,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "07-oktopod-stapka-7.webp": {
+      "sourceName": "Smoky Charred Octopus on the Grill-8.webp",
+      "sourceSha256": "f26a26100535c7ff5bcb4b852fc91ad3591b7067a38e6936d02f39043403b273",
+      "sourceIdx": 3067,
+      "sourceBytes": 1931148,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 5,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "08-oktopod-stapka-8.webp": {
+      "sourceName": "Charred Octopus Tentacles Over Embers-8.webp",
+      "sourceSha256": "2ee127e8d898c4f68d46bc0d2f80f74502024af689e13bfc936a646178d996df",
+      "sourceIdx": 3079,
+      "sourceBytes": 1943646,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 6,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "09-oktopod-stapka-9.webp": {
+      "sourceName": "Charred Octopus with Saffron Potatoes-4.webp",
+      "sourceSha256": "7fa9d6bb6929976a2ae200633fa8ee20fb47c1015ca63043d63e3821c5854abe",
+      "sourceIdx": 3075,
+      "sourceBytes": 1876390,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 6,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "10-dopalnitelen-1.webp": {
+      "sourceName": "Charred Octopus with Mediterranean Garnishes-5.webp",
+      "sourceSha256": "fea7f2992e0f7cf740caa4a11eea27a315458ba39442590ee5142a729aa308a7",
+      "sourceIdx": 3076,
+      "sourceBytes": 2107114,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 6,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "11-dopalnitelen-2.webp": {
+      "sourceName": "Charred Octopus with Olive Garnish-12.webp",
+      "sourceSha256": "c797addc79ec55b5b0919b726126252bfdd05a313eba5f5bfc665ac6027ee645",
+      "sourceIdx": 3071,
+      "sourceBytes": 2000694,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 5,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "12-dopalnitelen-3.webp": {
+      "sourceName": "Mediterranean Octopus Mise en Place-4.webp",
+      "sourceSha256": "97ee4a1dad86d30baaf4e3d4ade4f57cec3b1eb9b29ea122e8bb090ad5f31c5e",
+      "sourceIdx": 3063,
+      "sourceBytes": 2009752,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 5,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "13-dopalnitelen-4.webp": {
+      "sourceName": "Chef’s Octopus in Simmering Broth-6.webp",
+      "sourceSha256": "3aa0981b6b891f91cf3de5a2b32c66798e3959175847001002852852cdf4bcfb",
+      "sourceIdx": 3065,
+      "sourceBytes": 1887546,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 5,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "14-dopalnitelen-5.webp": {
+      "sourceName": "Mediterranean Octopus Feast-1.webp",
+      "sourceSha256": "ffe3a09f81bc567a7169e026dd91a9965b1f2675777e13f81dcdb1b38071b8d2",
+      "sourceIdx": 3072,
+      "sourceBytes": 2151864,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 6,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
     "15-gotovo-yastie.webp": {
       "sourceName": "Charred Octopus Romesco Platter-2.webp",
       "sourceSha256": "e18c71f3c1f42e4972bd39d7db2504cde69990b4bc0e162c832dd5eeaebfe85f",
@@ -11,14 +165,31 @@
       "batch": 6,
       "confidence": "HIGH",
       "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "16-dopalnitelen-6.webp": {
+      "sourceName": "Mediterranean Octopus Mise en Place-3.webp",
+      "sourceSha256": "e6f2f6a73d8d43053a881eeb571c840131bea56f2e20e71b1afe8b3c9ccf2024",
+      "sourceIdx": 4062,
+      "sourceBytes": 1918324,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 6,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "17-dopalnitelen-7.webp": {
+      "sourceName": "Charred Octopus with Saffron Potatoes-9.webp",
+      "sourceSha256": "21f33e22e27a6cefc573764f039372510df30318b7a38d3d5bb795dd4649a257",
+      "sourceIdx": 4068,
+      "sourceBytes": 1966542,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 6,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
     }
   },
   "generatedHash": "811701326d26ed2af38b0f6fb9fb4301ebbf8b68be181eba5d280c4e9a07ef41",
   "excludedSources": [],
-  "importedAt": "2026-11-21T12:35:35.665Z",
-  "singleHeroPolicy": {
-    "date": "2026-11-25",
-    "kept": "15-gotovo-yastie.webp",
-    "removed": 16
-  }
+  "importedAt": "2026-11-21T12:35:35.665Z"
 }

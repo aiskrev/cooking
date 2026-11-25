@@ -28,9 +28,45 @@ cookTime: 30
 restTime: 360
 servings: 6
 difficulty: Advanced
-cover: 01-gotovo-yastie.webp
+cover: 10-gotovo-yastie.webp
 photos:
-  01-gotovo-yastie.webp:
+  01-shokoladov-stapka-1.webp:
+    alt: "Chocolate cream with cherries: The ingredients: chocolate, cherries, hazelnuts, milk, eggs and vanilla"
+    caption: "The ingredients: chocolate, cherries, hazelnuts, milk, eggs and vanilla"
+    session: Photo session 6 (November 2026)
+  02-shokoladov-stapka-2.webp:
+    alt: "Chocolate cream with cherries: Pouring the cream over the chocolate"
+    caption: Pouring the cream over the chocolate
+    session: Photo session 6 (November 2026)
+  03-shokoladov-stapka-3.webp:
+    alt: "Chocolate cream with cherries: The cherry gel"
+    caption: The cherry gel
+    session: Photo session 6 (November 2026)
+  04-shokoladov-stapka-4.webp:
+    alt: "Chocolate cream with cherries: The hazelnut crumble"
+    caption: The hazelnut crumble
+    session: Photo session 6 (November 2026)
+  05-shokoladov-stapka-5.webp:
+    alt: "Chocolate cream with cherries: Chocolate lace on baking paper"
+    caption: Chocolate lace on baking paper
+    session: Photo session 6 (November 2026)
+  06-shokoladov-stapka-6.webp:
+    alt: "Chocolate cream with cherries: The glazed chocolate cream on the plate"
+    caption: The glazed chocolate cream on the plate
+    session: Photo session 6 (November 2026)
+  07-shokoladov-stapka-7.webp:
+    alt: "Chocolate cream with cherries: Finishing with cherries and lace"
+    caption: Finishing with cherries and lace
+    session: Photo session 6 (November 2026)
+  08-dopalnitelen-1.webp:
+    alt: "Chocolate cream with cherries: Mise en place for the chocolate dessert"
+    caption: Mise en place for the chocolate dessert
+    session: Photo session 6 (November 2026)
+  09-dopalnitelen-2.webp:
+    alt: "Chocolate cream with cherries: Close-up of the dessert with its lace"
+    caption: Close-up of the dessert with its lace
+    session: Photo session 6 (November 2026)
+  10-gotovo-yastie.webp:
     alt: "Chocolate cream with cherries: The finished dessert: chocolate cream with cherries, crumble and lace"
     caption: "The finished dessert: chocolate cream with cherries, crumble and lace"
     session: Photo session 6 (November 2026)
@@ -137,22 +173,29 @@ ingredients:
 steps:
   - title: Lay out the ingredients
     text: Lay out the chocolate, cream, milk, eggs, cherries, hazelnuts, cocoa and vanilla.
+    photo: 01-shokoladov-stapka-1.webp
   - title: Make the chocolate cream
     text: Heat the cream and milk, whisk the yolks with the sugar and temper them with the hot liquid. Cook to 82–84 °C, stirring, and strain over the chocolate. Emulsify until smooth, pour into the moulds and chill for at least 6 hours.
     cue: The cream is glossy and smooth, with no sign of splitting.
     time: 15
+    photo: 02-shokoladov-stapka-2.webp
   - title: Prepare the cherries
     text: Simmer half the cherries with the sugar and lemon juice for 5 minutes, blend, add the agar and boil for 1 minute. Let the gel set and blend it again until smooth. Halve the remaining cherries.
+    photo: 03-shokoladov-stapka-3.webp
   - title: Bake the crumble
     text: Rub the flour, butter, sugar and chopped hazelnuts into crumbs, spread on a tray and bake at 170 °C for 12–15 minutes until golden.
     time: 15
+    photo: 04-shokoladov-stapka-4.webp
   - title: Make the chocolate lace
     text: Temper the chocolate and pipe it in thin, interlacing lines onto baking paper. Leave to set somewhere cool.
+    photo: 05-shokoladov-stapka-5.webp
   - title: Glaze
     text: Heat the cream with the glucose, add the chocolate and cocoa and blend without incorporating air. At 32–35 °C pour the glaze over the cold, unmoulded cream.
     avoid: Hot glaze melts the cream; cold glaze will not flow smoothly.
+    photo: 06-shokoladov-stapka-6.webp
   - title: Plate
     text: Whip the cream with the vanilla and icing sugar. Arrange the cherries and dots of gel around the cream, scatter with crumble, stand the lace upright and add a quenelle of vanilla cream.
+    photo: 07-shokoladov-stapka-7.webp
 tips:
   - The cream unmoulds most easily if frozen for 2 hours.
   - Without glucose the glaze is more matt but still usable.
@@ -174,7 +217,7 @@ allergens:
   - Gluten
 translation:
   status: published
-  sourceHash: 7bd985e162ee2037
+  sourceHash: 2fa213656147ee58
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-25

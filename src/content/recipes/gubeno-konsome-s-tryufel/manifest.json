@@ -1,6 +1,116 @@
 {
   "slug": "gubeno-konsome-s-tryufel",
   "photos": {
+    "01-gubeno-stapka-1.webp": {
+      "sourceName": "Gourmet Mushroom Mise en Place-8.webp",
+      "sourceSha256": "2fffd935c12eb22576a4b1c3a011e7774289b3c88e0883ad66c5740b777cd0e8",
+      "sourceIdx": 2188,
+      "sourceBytes": 2077826,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 17,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-gubeno-stapka-2.webp": {
+      "sourceName": "Gourmet Wild Mushroom Preparation-5.webp",
+      "sourceSha256": "26a505d7f0cd188e622e9b8fef1c8cd63ec937f12a9c63d3fdd78bf309ba38ba",
+      "sourceIdx": 2185,
+      "sourceBytes": 1577672,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 17,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "03-gubeno-stapka-3.webp": {
+      "sourceName": "Gourmet Mushroom Consommé Mise en Place-14.webp",
+      "sourceSha256": "202b28b3892704364b05740cc385d8d7b0b937bcaa4afc3479cd1110e86eace2",
+      "sourceIdx": 2194,
+      "sourceBytes": 2014652,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 17,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "04-gubeno-stapka-4.webp": {
+      "sourceName": "Truffle Sunchoke Purée Still Life-13.webp",
+      "sourceSha256": "371714eb535fdccfcd4800048189c839cabf62e24308add0c8d2b8fc2a1f842c",
+      "sourceIdx": 2193,
+      "sourceBytes": 1894634,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 17,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "05-gubeno-stapka-5.webp": {
+      "sourceName": "Gourmet Wild Mushroom Sauté-12.webp",
+      "sourceSha256": "9d6faf2fdc5e74cbb1d95162341a7cff4e11d51ad9e36de79170d98051a031d8",
+      "sourceIdx": 2192,
+      "sourceBytes": 1992586,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 17,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "06-gubeno-stapka-6.webp": {
+      "sourceName": "Golden Mushroom Consommé with Truffle-3.webp",
+      "sourceSha256": "511be04e13f35a161c99629c99efb09e8104baa93560abf33be190d260c06081",
+      "sourceIdx": 2183,
+      "sourceBytes": 1796026,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 17,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "07-gubeno-stapka-7.webp": {
+      "sourceName": "Luxurious Truffle Mushroom Consommé-10.webp",
+      "sourceSha256": "cd6e0777590c3f796ba620e627699d0c655e10b7f06453d40a294420d4bb3593",
+      "sourceIdx": 2190,
+      "sourceBytes": 1893472,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 17,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "08-dopalnitelen-1.webp": {
+      "sourceName": "Gourmet Truffle Mushroom Consommé-2.webp",
+      "sourceSha256": "ba0687f8768ec68a0d8f3477fb73a3dd7aaf0cd0ed9284bb6636cc2f5e0f34e5",
+      "sourceIdx": 2182,
+      "sourceBytes": 1735838,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 17,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "09-dopalnitelen-2.webp": {
+      "sourceName": "Truffle-Glazed Wild Mushroom Consommé-9.webp",
+      "sourceSha256": "59dee1814a078fa11abce641fae41879c683cbf111b151ed70b63d050fc77dca",
+      "sourceIdx": 2189,
+      "sourceBytes": 1777636,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 17,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "10-dopalnitelen-3.webp": {
+      "sourceName": "Luxurious Truffle Mushroom Plating-11.webp",
+      "sourceSha256": "60f465e5d0eab610931503270c8f5f6ea5171bbde3edc2a6b7839820595704ac",
+      "sourceIdx": 2191,
+      "sourceBytes": 1940158,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 17,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
     "11-gotovo-yastie.webp": {
       "sourceName": "Gourmet Wild Mushroom Truffle Platter-4.webp",
       "sourceSha256": "90c86d55cb06ce02b58099752722f12ea6fa08b93252d9a1ec1039cec8705c7e",
@@ -15,10 +125,5 @@
   },
   "generatedHash": "7614e399682684bc3faf72f59335eb3f5d6bd68bd2af22e0ae734193132b4bb8",
   "excludedSources": [],
-  "importedAt": "2026-11-21T06:46:55.862Z",
-  "singleHeroPolicy": {
-    "date": "2026-11-25",
-    "kept": "11-gotovo-yastie.webp",
-    "removed": 10
-  }
+  "importedAt": "2026-11-21T06:46:55.862Z"
 }

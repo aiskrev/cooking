@@ -8,15 +8,274 @@
       "sourceSize": "1536x1024",
       "role": "hero",
       "provenance": "ChatGPT Image (AI-генерирана илюстрация)",
-      "addedBy": "reconciliation 2026-11-25 (single hero)"
+      "addedBy": "reconciliation 2026-11-25 (по-силна корица)"
+    },
+    "01-barbunya-stapka-1.webp": {
+      "sourceName": "Gourmet Red Mullet Mise en Place-1.webp",
+      "sourceSha256": "a53a7c4ab196d19661b7deb6f312590ae4561eaaa4f34e49a89255f8dcfc47d2",
+      "sourceIdx": 3104,
+      "sourceBytes": 2172266,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 9,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-barbunya-stapka-2.webp": {
+      "sourceName": "Mediterranean Fish Filleting Scene-5.webp",
+      "sourceSha256": "825da6d98c4ad211ec629c55a956d7d2344494ae777a9d84606fcd97c1676f88",
+      "sourceIdx": 3108,
+      "sourceBytes": 1898888,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 9,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "03-barbunya-stapka-3.webp": {
+      "sourceName": "Rustic Copper Seafood Broth Simmering-18.webp",
+      "sourceSha256": "39a4418b16404ce7bc74138af3deb274a0485e520d4a25bff456dd0efb442f8e",
+      "sourceIdx": 3121,
+      "sourceBytes": 1922438,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 9,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "04-barbunya-stapka-4.webp": {
+      "sourceName": "Copper Pot Seafood Stock Straining-17.webp",
+      "sourceSha256": "4f00728f3a8038b04a9785896298595f96f7c580483f8c492123e3f45f746f31",
+      "sourceIdx": 3120,
+      "sourceBytes": 1866668,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 9,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "05-barbunya-stapka-5.webp": {
+      "sourceName": "Golden Seafood Stock in Copper Cookware-19.webp",
+      "sourceSha256": "b26f8b8c6786cfe0dde829995aa9fb9d22bc83c487bc40464f399f49f369d51a",
+      "sourceIdx": 3122,
+      "sourceBytes": 1975294,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 9,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "06-barbunya-stapka-6.webp": {
+      "sourceName": "Saffron Aioli and Crispy Chips-20.webp",
+      "sourceSha256": "14a74657bc66c64e5937201387608688efb783c1258d789b5f461078827b4f9a",
+      "sourceIdx": 3123,
+      "sourceBytes": 1932674,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 9,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "07-barbunya-stapka-7.webp": {
+      "sourceName": "Saffron Aioli and Golden Crisps-21.webp",
+      "sourceSha256": "31abd46bb8324bc2d3d0627cad3d4788f08d03a2ac08f754a32e610a3bff59f4",
+      "sourceIdx": 3124,
+      "sourceBytes": 2065528,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 9,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "08-barbunya-stapka-9.webp": {
+      "sourceName": "Crispy Red Mullet in Copper Pan-13.webp",
+      "sourceSha256": "023c82f065fc0130af8315cc8e48237d9cf3a14e1724ca413acaf9d4afc61d60",
+      "sourceIdx": 3116,
+      "sourceBytes": 1951420,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 9,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "09-barbunya-stapka-10.webp": {
+      "sourceName": "Golden Butter-Basted Crispy Fish Fillets-14.webp",
+      "sourceSha256": "012426971bf640cda0d6fd53b514f8b20b1156a778904474eef65668d82a7bcb",
+      "sourceIdx": 3117,
+      "sourceBytes": 1830904,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 9,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "10-dopalnitelen-1.webp": {
+      "sourceName": "Crispy Seared Fish with Saffron Purée-11.webp",
+      "sourceSha256": "24c73a060cdb2703a9c664309f4534e34821c59368b360dd295f9feef087ce5e",
+      "sourceIdx": 3114,
+      "sourceBytes": 1859936,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 9,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "11-dopalnitelen-2.webp": {
+      "sourceName": "Crispy Red Mullet Fillet Macro-3.webp",
+      "sourceSha256": "8dfdc4d7565199cfc1691c5a6cc6e6f026e28695b9af09856d8e831edaf061b2",
+      "sourceIdx": 3106,
+      "sourceBytes": 1974906,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 9,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "12-dopalnitelen-3.webp": {
+      "sourceName": "Crispy Seared Fish with Herb Jus-15.webp",
+      "sourceSha256": "4512bd713a7be4f6e39af5753d720c0f6dff21d26d9b5bcc1c2adc34d82665fb",
+      "sourceIdx": 3118,
+      "sourceBytes": 1994186,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 9,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "13-dopalnitelen-4.webp": {
+      "sourceName": "Crispy Red Mullet in Golden Butter-16.webp",
+      "sourceSha256": "9067ada94035d6274a7729ae24e62e5ebbd3bcfe4d9e2739954975d662bb52d6",
+      "sourceIdx": 3119,
+      "sourceBytes": 1907172,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 9,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "14-dopalnitelen-5.webp": {
+      "sourceName": "Rustic Bouillabaisse Mise en Place-2.webp",
+      "sourceSha256": "82fc6a335a402b396649b221fbbf07cd22fedd70382690d9f273d8aecc68ef7b",
+      "sourceIdx": 3105,
+      "sourceBytes": 2262318,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 9,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "15-dopalnitelen-6.webp": {
+      "sourceName": "Gourmet Seafood Mise-en-Place-4.webp",
+      "sourceSha256": "c7c678131e52fa02e41c0ab410862c63afc08b7edc2dd4116a8ab7ac75852abc",
+      "sourceIdx": 3107,
+      "sourceBytes": 1921156,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 9,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "16-dopalnitelen-7.webp": {
+      "sourceName": "Mediterranean Fish Filleting Mise en Place-6.webp",
+      "sourceSha256": "89adad9bde8b58a2b9ede68b02a4b983f2ccca49d6b8a901456cfe66a01310b6",
+      "sourceIdx": 3109,
+      "sourceBytes": 2107854,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 9,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "17-dopalnitelen-8.webp": {
+      "sourceName": "Seaside Mediterranean Fish Preparation-8.webp",
+      "sourceSha256": "59bb981ce77de506bfff3324f9925fb637f05da253811953abc9748fcb203239",
+      "sourceIdx": 3111,
+      "sourceBytes": 1889032,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 9,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "18-dopalnitelen-9.webp": {
+      "sourceName": "Bouillabaisse Mise en Place Flat Lay-9.webp",
+      "sourceSha256": "b32f21555ef1ee9444f7754faf06387ce4a4a5968e800c9244dee89a9d290e3b",
+      "sourceIdx": 3112,
+      "sourceBytes": 2561704,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 9,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "19-dopalnitelen-10.webp": {
+      "sourceName": "Mediterranean Seafood Mise en Place-10.webp",
+      "sourceSha256": "b2de1d4059d5e41a2b2ada5e3b1cf27a417826cac61266be409db838866f55ea",
+      "sourceIdx": 3113,
+      "sourceBytes": 2429862,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 9,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "20-dopalnitelen-11.webp": {
+      "sourceName": "Mediterranean Bouillabaisse Mise en Place-12.webp",
+      "sourceSha256": "7012e7bd50df5b77992d9202370a666a597db7d2b5cf93bd3ead2356ab27185e",
+      "sourceIdx": 3115,
+      "sourceBytes": 2022990,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 9,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "21-dopalnitelen-12.webp": {
+      "sourceName": "Saffron Rouille and Crispy Potato Mise-en-Place-22.webp",
+      "sourceSha256": "2488c411b3d6833d6e5a0062966c9a674e1410240a9a898d90a28349eca1ca9b",
+      "sourceIdx": 3125,
+      "sourceBytes": 1869902,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 9,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "22-gotovo-yastie.webp": {
+      "sourceName": "Crisp Red Mullet with Saffron Purée-7.webp",
+      "sourceSha256": "8977f46043e0900419b06024fb3036d5c5004c75e38250244df3c864f70dd539",
+      "sourceIdx": 3110,
+      "sourceBytes": 1766204,
+      "sourceSize": "1536x1024",
+      "role": "hero",
+      "batch": 9,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "23-dopalnitelen-13.webp": {
+      "sourceName": "Red Mullet with Saffron Rouille-2.webp",
+      "sourceSha256": "179d9e84cf6157d364999b7e06bf007dd71588812df719208cbfc496b9f2f4c8",
+      "sourceIdx": 4164,
+      "sourceBytes": 2097982,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 16,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "24-dopalnitelen-14.webp": {
+      "sourceName": "Crispy Red Mullet with Saffron and Fennel-8.webp",
+      "sourceSha256": "96bcf97b45148e8ad05dc93f7263d3c4b764758e7bf49c1b00e6590c2308d071",
+      "sourceIdx": 4170,
+      "sourceBytes": 1882164,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 16,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
     }
   },
   "generatedHash": "a4aa49349e0fcebd224b994c3465b6d4e884f0e6c58e34ee66604caf4f05a703",
   "excludedSources": [],
-  "importedAt": "2026-11-21T12:35:35.740Z",
-  "singleHeroPolicy": {
-    "date": "2026-11-25",
-    "kept": "00-gotovo-yastie.webp",
-    "removed": 24
-  }
+  "importedAt": "2026-11-21T12:35:35.740Z"
 }

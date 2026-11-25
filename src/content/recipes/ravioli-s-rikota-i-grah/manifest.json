@@ -1,13 +1,68 @@
 {
   "slug": "ravioli-s-rikota-i-grah",
   "photos": {
+    "01-ravioli-stapka-1.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 07_59_50 PM.png",
+      "sourceSha256": "25ce496cea91d3982e6298fb79910ef57dac4716fa8f8fdd8240fdb65b9688b9",
+      "sourceIdx": 278,
+      "sourceBytes": 2822789,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 91,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-ravioli-stapka-2.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 07_59_58 PM.png",
+      "sourceSha256": "2f8e37d99f0a0d03a204a8f9434f2587411ad77852b49eefdd5abe012e8e46d7",
+      "sourceIdx": 279,
+      "sourceBytes": 2101622,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 92,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "03-ravioli-stapka-3.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 08_00_01 PM.png",
+      "sourceSha256": "fd108ac20245bfc2664c4b19d8695b80b3912e2eef773aebad4a50f75ebfcca2",
+      "sourceIdx": 280,
+      "sourceBytes": 2007980,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 92,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "04-ravioli-stapka-4.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 08_00_04 PM.png",
+      "sourceSha256": "7dcd611384540958413f50141b0aa02a47fd1ece54ec141a9d6bde319b31efd6",
+      "sourceIdx": 281,
+      "sourceBytes": 1931151,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 92,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "05-ravioli-stapka-5.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 08_00_06 PM.png",
+      "sourceSha256": "5e10cc80b16a591d218cfd4823c60c9e3d75752240212cabb99c7c0d2ba1c4bc",
+      "sourceIdx": 282,
+      "sourceBytes": 2489983,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 92,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
     "06-ravioli-stapka-6.webp": {
       "sourceName": "ChatGPT Image Jun 10, 2026, 08_00_12 PM.png",
       "sourceSha256": "b9db849ee99a99fd8986d8b7b91c03b0a2ac2b8c11980b9f6f9b0ea8f5ef34d0",
       "sourceIdx": 283,
       "sourceBytes": 2080205,
       "sourceSize": "1122x1402",
-      "role": "hero",
+      "role": "step",
       "batch": 92,
       "confidence": "HIGH",
       "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
@@ -15,10 +70,5 @@
   },
   "generatedHash": "9a17adfa7a90faf632469ca616ceed7f18a3cce3b2b8eab1a4f80c126d7c212b",
   "excludedSources": [],
-  "importedAt": "2026-11-19T05:27:54.335Z",
-  "singleHeroPolicy": {
-    "date": "2026-11-25",
-    "kept": "06-ravioli-stapka-6.webp",
-    "removed": 5
-  }
+  "importedAt": "2026-11-19T05:27:54.335Z"
 }

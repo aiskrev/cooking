@@ -1,13 +1,68 @@
 {
   "slug": "orehova-torta-s-karamel",
   "photos": {
+    "01-orehova-stapka-1.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 12_14_16 PM.png",
+      "sourceSha256": "623aac1585eaea0c935feb93f8db6214252b42392388584bef347f2da3987287",
+      "sourceIdx": 33,
+      "sourceBytes": 2461685,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 18,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-orehova-stapka-2.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 12_14_27 PM.png",
+      "sourceSha256": "eb79a1366c3e44eb1f3cba2f4c2b20ff81dd1de0077d6217727b8dd87a54d76f",
+      "sourceIdx": 34,
+      "sourceBytes": 2255583,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 19,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "03-orehova-stapka-3.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 12_14_30 PM.png",
+      "sourceSha256": "4e3853ba9dfafb1f66e6fd581f99181b8b3e3a0ac8f20c6e07f8ed626894876b",
+      "sourceIdx": 35,
+      "sourceBytes": 2288132,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 19,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "04-orehova-stapka-4.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 12_14_34 PM.png",
+      "sourceSha256": "2823f11992ca3a2cf9737248affb8778f73faf6662f708f1cfa24abb24b5c4d9",
+      "sourceIdx": 36,
+      "sourceBytes": 2273908,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 19,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "05-orehova-stapka-5.webp": {
+      "sourceName": "ChatGPT Image Jun 10, 2026, 12_14_45 PM.png",
+      "sourceSha256": "cf39cc2575fd8f01c09297a1caebd9953d231ca081ef08f23cd20a610ebd9f1c",
+      "sourceIdx": 37,
+      "sourceBytes": 2243049,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 20,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
     "06-orehova-stapka-6.webp": {
       "sourceName": "ChatGPT Image Jun 10, 2026, 12_14_49 PM.png",
       "sourceSha256": "335a14f324d655206cbb651247052b83398ae6b45f4fd3263ef58ce6bcebcc2a",
       "sourceIdx": 38,
       "sourceBytes": 2104983,
       "sourceSize": "1122x1402",
-      "role": "hero",
+      "role": "step",
       "batch": 20,
       "confidence": "HIGH",
       "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
@@ -15,10 +70,5 @@
   },
   "generatedHash": "e7227b01e843ecdd01e200835dcbcf5638aff1e8182bc3f71795cb336c283064",
   "excludedSources": [],
-  "importedAt": "2026-11-19T05:27:53.549Z",
-  "singleHeroPolicy": {
-    "date": "2026-11-25",
-    "kept": "06-orehova-stapka-6.webp",
-    "removed": 5
-  }
+  "importedAt": "2026-11-19T05:27:53.549Z"
 }

@@ -31,6 +31,46 @@ servings: 4
 difficulty: Intermediate
 cover: 11-gotovo-yastie.webp
 photos:
+  01-sardini-stapka-1.webp:
+    alt: "Sardines with tomato essence: The ingredients: sardines on ice, tomatoes, almonds and herbs"
+    caption: "The ingredients: sardines on ice, tomatoes, almonds and herbs"
+    session: Photo session 6 (November 2026)
+  02-sardini-stapka-2.webp:
+    alt: "Sardines with tomato essence: The tomato essence and the basil oil"
+    caption: The tomato essence and the basil oil
+    session: Photo session 6 (November 2026)
+  03-sardini-stapka-3.webp:
+    alt: "Sardines with tomato essence: Straining the essence through muslin"
+    caption: Straining the essence through muslin
+    session: Photo session 6 (November 2026)
+  04-sardini-stapka-4.webp:
+    alt: "Sardines with tomato essence: Mise en place for the sardines"
+    caption: Mise en place for the sardines
+    session: Photo session 6 (November 2026)
+  05-sardini-stapka-5.webp:
+    alt: "Sardines with tomato essence: Filleting the sardines"
+    caption: Filleting the sardines
+    session: Photo session 6 (November 2026)
+  06-sardini-stapka-6.webp:
+    alt: "Sardines with tomato essence: Trimming the fillets"
+    caption: Trimming the fillets
+    session: Photo session 6 (November 2026)
+  07-sardini-stapka-7.webp:
+    alt: "Sardines with tomato essence: Roasted tomatoes and almond cream"
+    caption: Roasted tomatoes and almond cream
+    session: Photo session 6 (November 2026)
+  08-sardini-stapka-8.webp:
+    alt: "Sardines with tomato essence: Searing the sardines in hot olive oil"
+    caption: Searing the sardines in hot olive oil
+    session: Photo session 6 (November 2026)
+  09-dopalnitelen-1.webp:
+    alt: "Sardines with tomato essence: Fresh sardines with tomatoes and almonds"
+    caption: Fresh sardines with tomatoes and almonds
+    session: Photo session 6 (November 2026)
+  10-dopalnitelen-2.webp:
+    alt: "Sardines with tomato essence: Smoky tomatoes and almond cream"
+    caption: Smoky tomatoes and almond cream
+    session: Photo session 6 (November 2026)
   11-gotovo-yastie.webp:
     alt: "Sardines with tomato essence: Sardines with crisp skin in the pan"
     caption: Sardines with crisp skin in the pan
@@ -125,24 +165,32 @@ ingredients:
 steps:
   - title: Lay out the ingredients
     text: Lay out the sardines, tomatoes, almonds, garlic, basil and olive oil.
+    photo: 01-sardini-stapka-1.webp
   - title: Make the tomato essence
     text: Pulse the tomatoes with the salt and basil. Pour into muslin over a bowl and leave to drip in the refrigerator for at least 4 hours without pressing.
     why: Without pressing, the liquid stays clear and golden-pink.
     time: 240
+    photo: 02-sardini-stapka-2.webp
   - title: Strain and make the oil
     text: Collect the clear essence. Blanch the basil for 10 seconds, cool in iced water and blend with the olive oil; strain.
+    photo: 03-sardini-stapka-3.webp
   - title: Prepare the mise en place
     text: Set out the sardines, almonds, tomatoes and seasonings next to the filleting board.
+    photo: 04-sardini-stapka-4.webp
   - title: Fillet the sardines
     text: Scrape off the scales with the back of the knife, cut off the head, open the belly and remove the innards. Pull out the backbone with your fingers and separate the two fillets.
+    photo: 05-sardini-stapka-5.webp
   - title: Trim the fillets
     text: Trim off the fins and belly bones, rinse quickly and dry on paper skin side up.
+    photo: 06-sardini-stapka-6.webp
   - title: Roast the tomatoes and make the cream
     text: Roast the tomatoes with olive oil and salt at 230 °C for 8–10 minutes. Blend the drained almonds with the garlic, water, olive oil and vinegar to a smooth cream and season with salt.
+    photo: 07-sardini-stapka-7.webp
   - title: Sear the sardines
     text: Heat a pan with a little olive oil and the thyme until very hot. Lay the fillets skin side down for 60–90 seconds, turn for 10 seconds and take off the heat.
     cue: The skin is golden and crisp, the flesh barely opaque.
     avoid: Do not cook any longer – sardines dry out in seconds.
+    photo: 08-sardini-stapka-8.webp
 tips:
   - Buy sardines with clear eyes and firm bodies – they spoil quickly.
   - The essence is excellent on its own, as a cold soup.
@@ -162,7 +210,7 @@ allergens:
   - Tree nuts
 translation:
   status: published
-  sourceHash: "421dec0be0c60b75"
+  sourceHash: 0cdcf8598ad600cd
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-25

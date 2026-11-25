@@ -23,6 +23,18 @@ servings: 2
 difficulty: Intermediate
 cover: 05-skaridi-stapka-6.webp
 photos:
+  01-skaridi-stapka-1.webp:
+    alt: "Prawns with beurre blanc: The ingredients for the prawns"
+    caption: The ingredients for the prawns
+  02-skaridi-stapka-2.webp:
+    alt: "Prawns with beurre blanc: Cleaning the prawns"
+    caption: Cleaning the prawns
+  03-skaridi-stapka-4.webp:
+    alt: "Prawns with beurre blanc: Searing the prawns"
+    caption: Searing the prawns
+  04-skaridi-stapka-5.webp:
+    alt: "Prawns with beurre blanc: Spooning over the sauce"
+    caption: Spooning over the sauce
   05-skaridi-stapka-6.webp:
     alt: "Prawns with beurre blanc: The prawns, served with the sauce"
     caption: The prawns, served with the sauce
@@ -79,9 +91,11 @@ ingredients:
 steps:
   - title: Prepare the ingredients
     text: Lay out the prawns, the butter, the shallot, the wine, the garlic and the lemon.
+    photo: 01-skaridi-stapka-1.webp
   - title: Clean the prawns
     text: Peel the prawns, leaving the tails on. Cut shallowly along the back and remove the dark vein. Rinse them and dry them very well.
     why: The vein is the prawn's intestine and can be gritty and bitter.
+    photo: 02-skaridi-stapka-2.webp
   - title: Make the sauce
     text: Boil the shallot with the wine and the lemon juice in a small saucepan until about one tablespoon of liquid remains. Lower the heat to the lowest setting and add the cold butter cube by cube, whisking constantly. Season with salt and keep the sauce in a warm place, not on the hob.
     cue: The sauce is pale, as thick as pouring cream and glossy.
@@ -91,10 +105,13 @@ steps:
     cue: The prawns are pink, opaque and curved like the letter C.
     avoid: Prawns curled into a tight circle are overcooked and rubbery.
     time: 4
+    photo: 03-skaridi-stapka-4.webp
   - title: Spoon over the sauce
     text: Take the pan off the heat, remove the garlic and spoon a few spoonfuls of the sauce over the prawns.
+    photo: 04-skaridi-stapka-5.webp
   - title: Serve
     text: Pour the remaining sauce onto the warmed plates, arrange the prawns on it and serve immediately.
+    photo: 05-skaridi-stapka-6.webp
 tips:
   - A spoonful of cream added to the reduction before the butter makes the sauce much more stable.
   - The shells and the heads make a quick stock – do not throw them away.
@@ -113,7 +130,7 @@ allergens:
   - Sulphites (wine)
 translation:
   status: published
-  sourceHash: "0bb7f70aec07c33a"
+  sourceHash: 5ecd83d16ac86b43
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-20

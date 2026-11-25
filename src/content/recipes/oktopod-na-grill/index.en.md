@@ -24,6 +24,21 @@ servings: 4
 difficulty: Advanced
 cover: 06-oktopod-stapka-6.webp
 photos:
+  01-oktopod-stapka-1.webp:
+    alt: "Grilled octopus: The ingredients for the octopus"
+    caption: The ingredients for the octopus
+  02-oktopod-stapka-2.webp:
+    alt: "Grilled octopus: Preparing the octopus"
+    caption: Preparing the octopus
+  03-oktopod-stapka-3.webp:
+    alt: "Grilled octopus: The octopus in the vacuum bag"
+    caption: The octopus in the vacuum bag
+  04-oktopod-stapka-4.webp:
+    alt: "Grilled octopus: The octopus in the water bath"
+    caption: The octopus in the water bath
+  05-oktopod-stapka-5.webp:
+    alt: "Grilled octopus: The seared octopus on the grill"
+    caption: The seared octopus on the grill
   06-oktopod-stapka-6.webp:
     alt: "Grilled octopus: The octopus on the mashed potatoes"
     caption: The octopus on the mashed potatoes
@@ -70,21 +85,27 @@ ingredients:
 steps:
   - title: Prepare the ingredients
     text: Lay out the octopus, the lemons, the garlic, the olive oil, the smoked paprika and the thyme.
+    photo: 01-oktopod-stapka-1.webp
   - title: Clean and season
     text: Rinse the octopus, check that the beak in the middle of the tentacles has been removed and pat it dry. Rub it with the salt, the smoked paprika and two spoonfuls of the olive oil.
+    photo: 02-oktopod-stapka-2.webp
   - title: Seal under vacuum
     text: Put the octopus in a vacuum bag with the lightly crushed garlic, the thyme and a few slices of lemon and seal it.
+    photo: 03-oktopod-stapka-3.webp
   - title: Cook in the water bath
     text: Immerse the bag completely in the water and cook for 5 hours at 77 °C.
     cue: The tip of a knife goes into the thickest part of the tentacle without resistance.
     time: 300
+    photo: 04-oktopod-stapka-4.webp
   - title: Sear on the grill
     text: Take out the octopus, separate the tentacles and dry them very well. Brush them with the remaining olive oil and sear them in a grill pan heated until smoking, 1–2 minutes on each side.
     cue: The tentacles have dark stripes, and their tips are crisp.
     avoid: Wet octopus steams instead of searing.
     time: 4
+    photo: 05-oktopod-stapka-5.webp
   - title: Serve
     text: Spread the warm mash on the plate, arrange the tentacles on it, squeeze over some lemon and add a little olive oil.
+    photo: 06-oktopod-stapka-6.webp
 tips:
   - "Without a sous-vide machine: boil the octopus for 45–60 minutes in barely simmering water with a bay leaf, then sear it in the same way."
   - The cooked octopus can wait in its bag for up to 2 days in the refrigerator – sear it just before serving.
@@ -102,7 +123,7 @@ allergens:
   - Milk and dairy
 translation:
   status: published
-  sourceHash: "1783e0fc4eb7125e"
+  sourceHash: 3590ac13b01c2965
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-20

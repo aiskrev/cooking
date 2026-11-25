@@ -1,6 +1,160 @@
 {
   "slug": "beef-rossini-s-fuagra-i-tryufel",
   "photos": {
+    "01-beef-stapka-1.webp": {
+      "sourceName": "Luxury Beef Tenderloin Mise en Place-1.webp",
+      "sourceSha256": "98646643d8b141ca381a67c3d260ebe750c367c4819169b1767ca867c542bbc5",
+      "sourceIdx": 2042,
+      "sourceBytes": 1940752,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 5,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-beef-stapka-2.webp": {
+      "sourceName": "Luxury Beef Tenderloin Preparation-8.webp",
+      "sourceSha256": "beec19ffc498716984cd24dc0f94572de9468625e26b91e37779b7c96034a7d9",
+      "sourceIdx": 2049,
+      "sourceBytes": 1641198,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 5,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "03-beef-stapka-3.webp": {
+      "sourceName": "Gourmet Steak Preparation in the Kitchen-9.webp",
+      "sourceSha256": "007a257dd087ce449b02e534b6f8d26dd7e16b1b36acfc0f9e6358816fb1761c",
+      "sourceIdx": 2050,
+      "sourceBytes": 1759514,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 5,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "04-beef-stapka-4.webp": {
+      "sourceName": "Butter-Basted Filet Mignon in Cast Iron-10.webp",
+      "sourceSha256": "a4ce1cd2eb4557207656d18d09b8b500db7d68e78cb887d8baf73f01a014f6c6",
+      "sourceIdx": 2051,
+      "sourceBytes": 1948208,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 5,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "05-beef-stapka-5.webp": {
+      "sourceName": "Seared Foie Gras with Truffle and Brioche-12.webp",
+      "sourceSha256": "5b1866b10d13b70265b15b998f794ab00f537e3d53b47396400ea6b222459b45",
+      "sourceIdx": 2053,
+      "sourceBytes": 1871268,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 5,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "06-beef-stapka-6.webp": {
+      "sourceName": "Gourmet Truffle Jus in the Making-14.webp",
+      "sourceSha256": "a678352c1a075f0c52a269317aed4468af43230c4d911740e0db4a025d507898",
+      "sourceIdx": 2055,
+      "sourceBytes": 1599056,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 5,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "07-beef-stapka-7.webp": {
+      "sourceName": "Rossini-Style Filet with Truffle and Foie Gras-5.webp",
+      "sourceSha256": "6b3ce012bb92aa83843037a716f7212e707e1ebfee3fb25ac412a4d6df8aa4ec",
+      "sourceIdx": 2046,
+      "sourceBytes": 1791438,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 5,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "08-dopalnitelen-1.webp": {
+      "sourceName": "Luxurious Truffle Beef Mise en Place-2.webp",
+      "sourceSha256": "69f67cc7e4d7e7baeaa2fab00917981af56ef44233861f7b41684e4d48b1f5ea",
+      "sourceIdx": 2043,
+      "sourceBytes": 1825476,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 5,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "09-dopalnitelen-2.webp": {
+      "sourceName": "Truffle-Topped Filet with Foie Gras-4.webp",
+      "sourceSha256": "a7e46ca6a5b215a8f4a6501277f72fac00e2e9703181ad8486916ed7cfe60ecb",
+      "sourceIdx": 2045,
+      "sourceBytes": 1745502,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 5,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "10-dopalnitelen-3.webp": {
+      "sourceName": "Gourmet Steak Mise en Place-6.webp",
+      "sourceSha256": "f879621e3638b3dc68ad490a06f94207d2c7e633496dc964d2a9ef43a0d47b28",
+      "sourceIdx": 2047,
+      "sourceBytes": 1805964,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 5,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "11-dopalnitelen-4.webp": {
+      "sourceName": "Gourmet Truffle Steak Mise en Place-7.webp",
+      "sourceSha256": "333317eae82660b1ca1625af6ffa12eb021543cfc8cedbf06a64b94a175bc747",
+      "sourceIdx": 2048,
+      "sourceBytes": 1800964,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 5,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "12-dopalnitelen-5.webp": {
+      "sourceName": "Truffle-Infused Butter-Basted Tenderloin-11.webp",
+      "sourceSha256": "58740de0565b4e83def77e8d43e6eb3811b3aeb955a885f91e2e8875bc61a63d",
+      "sourceIdx": 2052,
+      "sourceBytes": 1954092,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 5,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "13-dopalnitelen-6.webp": {
+      "sourceName": "Cinematic Foie Gras Basting with Truffle-13.webp",
+      "sourceSha256": "87cb2821ca1acb21fb90106ba0221bac2ee47705beb8d4a04fc154a671887707",
+      "sourceIdx": 2054,
+      "sourceBytes": 1930934,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 5,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "14-dopalnitelen-7.webp": {
+      "sourceName": "Luxurious Truffle Sauce Mise en Place-15.webp",
+      "sourceSha256": "89f7415987c2c33f27416f1a61e20897f7cd0620d3ff6ac5455dc2d4875fb135",
+      "sourceIdx": 2056,
+      "sourceBytes": 1805530,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 5,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
     "15-gotovo-yastie.webp": {
       "sourceName": "Luxurious Beef Rossini with Black Truffle-3.webp",
       "sourceSha256": "1e4b01f61a1553895f0adb6a7cdce2d1623d71feceb5549afbe4979ed3959db7",
@@ -15,10 +169,5 @@
   },
   "generatedHash": "594216474f3d06861f8c879307b69ca8edccd35330413f76455fcb0206bedd2f",
   "excludedSources": [],
-  "importedAt": "2026-11-21T06:46:53.728Z",
-  "singleHeroPolicy": {
-    "date": "2026-11-25",
-    "kept": "15-gotovo-yastie.webp",
-    "removed": 14
-  }
+  "importedAt": "2026-11-21T06:46:53.728Z"
 }

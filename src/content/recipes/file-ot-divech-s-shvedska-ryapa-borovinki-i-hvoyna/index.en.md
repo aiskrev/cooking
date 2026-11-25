@@ -28,9 +28,49 @@ cookTime: 60
 restTime: 10
 servings: 4
 difficulty: Advanced
-cover: 01-gotovo-yastie.webp
+cover: 11-gotovo-yastie.webp
 photos:
-  01-gotovo-yastie.webp:
+  01-file-stapka-1.webp:
+    alt: "Game fillet with swede and blueberries: The ingredients: game fillet, swede, blueberries and herbs"
+    caption: "The ingredients: game fillet, swede, blueberries and herbs"
+    session: Photo session 6 (November 2026)
+  02-file-stapka-2.webp:
+    alt: "Game fillet with swede and blueberries: Mise en place around the fillet"
+    caption: Mise en place around the fillet
+    session: Photo session 6 (November 2026)
+  03-file-stapka-3.webp:
+    alt: "Game fillet with swede and blueberries: Trimming and cutting the fillet"
+    caption: Trimming and cutting the fillet
+    session: Photo session 6 (November 2026)
+  04-file-stapka-4.webp:
+    alt: "Game fillet with swede and blueberries: Tying the fillet"
+    caption: Tying the fillet
+    session: Photo session 6 (November 2026)
+  05-file-stapka-5.webp:
+    alt: "Game fillet with swede and blueberries: Basting the fillet with foaming butter"
+    caption: Basting the fillet with foaming butter
+    session: Photo session 6 (November 2026)
+  06-file-stapka-6.webp:
+    alt: "Game fillet with swede and blueberries: Swede purée and glazed cubes"
+    caption: Swede purée and glazed cubes
+    session: Photo session 6 (November 2026)
+  07-file-stapka-7.webp:
+    alt: "Game fillet with swede and blueberries: The red wine, blueberry and juniper sauce"
+    caption: The red wine, blueberry and juniper sauce
+    session: Photo session 6 (November 2026)
+  08-dopalnitelen-1.webp:
+    alt: "Game fillet with swede and blueberries: Ingredients for the game: fillet, bones, wine and blueberries"
+    caption: "Ingredients for the game: fillet, bones, wine and blueberries"
+    session: Photo session 6 (November 2026)
+  09-dopalnitelen-2.webp:
+    alt: "Game fillet with swede and blueberries: Bison fillet with stock, wine and vegetables"
+    caption: Bison fillet with stock, wine and vegetables
+    session: Photo session 6 (November 2026)
+  10-dopalnitelen-3.webp:
+    alt: "Game fillet with swede and blueberries: Mise en place for the venison fillet"
+    caption: Mise en place for the venison fillet
+    session: Photo session 6 (November 2026)
+  11-gotovo-yastie.webp:
     alt: "Game fillet with swede and blueberries: The finished dish: game medallions with swede purée and blueberry sauce"
     caption: "The finished dish: game medallions with swede purée and blueberry sauce"
     session: Photo session 6 (November 2026)
@@ -135,21 +175,28 @@ ingredients:
 steps:
   - title: Lay out the ingredients
     text: Lay out the fillet, swede, blueberries, juniper, spruce tips, butter, wine and stock.
+    photo: 01-file-stapka-1.webp
   - title: Prepare the mise en place
     text: Crush the juniper and pepper, chop the shallots and measure out the wine and stock.
+    photo: 02-file-stapka-2.webp
   - title: Trim the meat
     text: Remove the silverskin and fat with a thin knife. If serving medallions, trim off the uneven ends.
+    photo: 03-file-stapka-3.webp
   - title: Tie
     text: Season the meat with the salt, juniper and pepper and tie it with string every 2–3 cm so it stays round.
+    photo: 04-file-stapka-4.webp
   - title: Sear and baste
     text: Sear the fillet in the oil on all sides. Add the butter, thyme and shallots and baste for 4–5 minutes (or finish in the oven). Rest for 10 minutes.
     cue: The thermometer reads 52–54 °C in the centre.
     avoid: Above 58 °C the lean meat dries out.
     time: 10
+    photo: 05-file-stapka-5.webp
   - title: Prepare the swede
     text: Simmer the swede pieces in the milk for 20–25 minutes and blend with half the butter. Glaze the cubes in the remaining butter with the honey and a little water for 10–12 minutes until golden.
+    photo: 06-file-stapka-6.webp
   - title: Make the sauce
     text: Soften the shallots, add the wine and reduce by two thirds. Add the stock, juniper and half the blueberries and simmer until thick. Strain, add the remaining blueberries and stir in the cold butter.
+    photo: 07-file-stapka-7.webp
   - title: Slice and plate
     text: Remove the string and cut the meat into thick medallions. Spoon purée onto the plate, top with the medallions and glazed cubes, pour over the sauce and finish with fresh blueberries and spruce tips.
 tips:
@@ -171,7 +218,7 @@ allergens:
   - Sulphites (wine)
 translation:
   status: published
-  sourceHash: 366e9351544e66e1
+  sourceHash: aa5d65e2bedcc891
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-25

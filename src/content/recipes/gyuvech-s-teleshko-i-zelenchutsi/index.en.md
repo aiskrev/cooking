@@ -24,6 +24,57 @@ servings: 6
 difficulty: Intermediate
 cover: 16-gotovo-yastie.webp
 photos:
+  01-gyuvech-stapka-1.webp:
+    alt: "Guvech with beef: The ingredients for the guvech"
+    caption: The ingredients for the guvech
+  02-gyuvech-stapka-2.webp:
+    alt: "Guvech with beef: Cutting the vegetables"
+    caption: Cutting the vegetables
+  03-gyuvech-stapka-3.webp:
+    alt: "Guvech with beef: Searing the beef"
+    caption: Searing the beef
+  04-gyuvech-stapka-4.webp:
+    alt: "Guvech with beef: The onion and the peppers in the pan"
+    caption: The onion and the peppers in the pan
+  05-gyuvech-stapka-5.webp:
+    alt: "Guvech with beef: Layering in the clay pot"
+    caption: Layering in the clay pot
+  06-gyuvech-stapka-6.webp:
+    alt: "Guvech with beef: Pouring in the stock"
+    caption: Pouring in the stock
+  07-gyuvech-stapka-7.webp:
+    alt: "Guvech with beef: The guvech in the oven"
+    caption: The guvech in the oven
+  08-gyuvech-stapka-8.webp:
+    alt: "Guvech with beef: Dishing up the guvech"
+    caption: Dishing up the guvech
+  09-gyuvech-stapka-9.webp:
+    alt: "Guvech with beef: The finished guvech in a deep plate"
+    caption: The finished guvech in a deep plate
+  10-dopalnitelen-1.webp:
+    alt: "Guvech with beef: The ingredients – second frame"
+    caption: The ingredients – second frame
+    session: Alternate takes from the same session
+  11-dopalnitelen-2.webp:
+    alt: "Guvech with beef: The cutting – second frame"
+    caption: The cutting – second frame
+    session: Alternate takes from the same session
+  12-dopalnitelen-3.webp:
+    alt: "Guvech with beef: The searing – second frame"
+    caption: The searing – second frame
+    session: Alternate takes from the same session
+  13-dopalnitelen-4.webp:
+    alt: "Guvech with beef: The vegetables in the pan – second frame"
+    caption: The vegetables in the pan – second frame
+    session: Alternate takes from the same session
+  14-dopalnitelen-5.webp:
+    alt: "Guvech with beef: The layering – second frame"
+    caption: The layering – second frame
+    session: Alternate takes from the same session
+  15-dopalnitelen-6.webp:
+    alt: "Guvech with beef: The pouring – second frame"
+    caption: The pouring – second frame
+    session: Alternate takes from the same session
   16-gotovo-yastie.webp:
     alt: "Guvech with beef: The finished dish"
     caption: The finished dish
@@ -89,29 +140,38 @@ ingredients:
 steps:
   - title: Prepare the ingredients
     text: Lay out the meat, the vegetables, the spices and the stock.
+    photo: 01-gyuvech-stapka-1.webp
   - title: Cut the vegetables
     text: Cut the potatoes and the aubergines into cubes of 2–3 cm, the peppers and the onion into strips and the tomatoes coarsely.
     why: Pieces of equal size soften at the same time.
+    photo: 02-gyuvech-stapka-2.webp
   - title: Sear the meat
     text: Heat two spoonfuls of oil in a heavy frying pan over high heat. Sear the meat in two batches, about 10 minutes in total, season with salt and take it out.
     cue: The pieces are dark brown on at least two sides.
     time: 10
+    photo: 03-gyuvech-stapka-3.webp
   - title: Sweat the onion and the peppers
     text: In the same pan add the remaining oil, the onion and the peppers and cook for 6–8 minutes over medium heat. Off the heat, stir in the paprika.
     time: 8
+    photo: 04-gyuvech-stapka-4.webp
   - title: Layer in the guvech
     text: In the clay pot mix the meat, the sweated vegetables, the potatoes, the aubergines, the green beans and the tomatoes. Sprinkle with the savory and the remaining salt.
+    photo: 05-gyuvech-stapka-5.webp
   - title: Pour in the stock
     text: Pour in the hot stock – just enough to come up to half of the contents.
     avoid: More liquid turns the guvech into a soup – the vegetables will release enough juice.
+    photo: 06-gyuvech-stapka-6.webp
   - title: Bake
     text: Close the pot, put it into a cold oven and switch it on to 180 °C. Bake for 1 hour 40 minutes, then remove the lid for another 10–15 minutes.
     cue: The meat is tender, the potatoes soft, and the sauce thickened and glossy.
     time: 115
+    photo: 07-gyuvech-stapka-7.webp
   - title: Dish up
     text: Let the guvech settle for 10 minutes and ladle it into warmed deep plates.
+    photo: 08-gyuvech-stapka-8.webp
   - title: Serve
     text: Sprinkle with finely chopped parsley and serve with bread.
+    photo: 09-gyuvech-stapka-9.webp
 tips:
   - Aubergine that has been salted and rinsed is not bitter and absorbs less fat.
   - Green beans from a jar or the freezer go in during the last 30 minutes.
@@ -128,7 +188,7 @@ storage: Up to 3 days in the refrigerator. Reheat under a lid over low heat.
 allergens: []
 translation:
   status: published
-  sourceHash: "6c98ff755f7b9e64"
+  sourceHash: 21f8ca6fc8906277
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-20

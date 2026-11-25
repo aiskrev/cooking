@@ -7,7 +7,40 @@
       "sourceIdx": 4201,
       "sourceBytes": 1894250,
       "sourceSize": "1122x1402",
-      "role": "hero",
+      "role": "step",
+      "batch": 19,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-dopalnitelen-1.webp": {
+      "sourceName": "Ruby Beetroot with Goat Curd and Cherries-1.webp",
+      "sourceSha256": "d43a0c168d2aa9f5e7d154a49eafa3ac720bd7487fcaf17cbeaaf5e1af777410",
+      "sourceIdx": 4196,
+      "sourceBytes": 1857102,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 19,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "03-dopalnitelen-2.webp": {
+      "sourceName": "Ruby Beetroot with Cherries and Whipped Cheese-3.webp",
+      "sourceSha256": "21f3ff3016d9ffc5b091280eb2c04b44ac9b9ffda938f12c62693bc7db446e6e",
+      "sourceIdx": 4198,
+      "sourceBytes": 1935488,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 19,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "04-dopalnitelen-3.webp": {
+      "sourceName": "Elegant Beet and Goat Cheese Plate-7.webp",
+      "sourceSha256": "ca2ac513935b86f30225373523b2276a198192f47eddb6ab69505df11a8310d5",
+      "sourceIdx": 4202,
+      "sourceBytes": 1776504,
+      "sourceSize": "1122x1402",
+      "role": "extra",
       "batch": 19,
       "confidence": "HIGH",
       "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
@@ -15,10 +48,5 @@
   },
   "generatedHash": "76d9d4579b61258e55dd056c9b44fd334e750f35bd676d9fa15ceb5d520fc391",
   "excludedSources": [],
-  "importedAt": "2026-11-24T12:56:32.833Z",
-  "singleHeroPolicy": {
-    "date": "2026-11-25",
-    "kept": "01-tsvekle-stapka-6.webp",
-    "removed": 3
-  }
+  "importedAt": "2026-11-24T12:56:32.833Z"
 }

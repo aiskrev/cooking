@@ -29,9 +29,53 @@ servings: 4
 difficulty: Advanced
 cover: 07-kambala-stapka-7.webp
 photos:
+  01-kambala-stapka-1.webp:
+    alt: "Turbot with saffron hollandaise: Mise en place: whole turbot, leek, potatoes, lemon, caviar and wine"
+    caption: "Mise en place: whole turbot, leek, potatoes, lemon, caviar and wine"
+    session: Photo session 3 (November 2026)
+  02-kambala-stapka-2.webp:
+    alt: "Turbot with saffron hollandaise: The chef filleting the turbot on a marble counter"
+    caption: The chef filleting the turbot on a marble counter
+    session: Photo session 3 (November 2026)
+  03-kambala-stapka-3.webp:
+    alt: "Turbot with saffron hollandaise: Seasoning a fillet with thinly sliced lemon and butter"
+    caption: Seasoning a fillet with thinly sliced lemon and butter
+    session: Photo session 3 (November 2026)
+  04-kambala-stapka-4.webp:
+    alt: "Turbot with saffron hollandaise: Turbot basted with butter and thyme in a pan"
+    caption: Turbot basted with butter and thyme in a pan
+    session: Photo session 3 (November 2026)
+  05-kambala-stapka-5.webp:
+    alt: "Turbot with saffron hollandaise: Roasted leek and potato with herb oil"
+    caption: Roasted leek and potato with herb oil
+    session: Photo session 3 (November 2026)
+  06-kambala-stapka-6.webp:
+    alt: "Turbot with saffron hollandaise: Saffron hollandaise whisked in a copper pot"
+    caption: Saffron hollandaise whisked in a copper pot
+    session: Photo session 3 (November 2026)
   07-kambala-stapka-7.webp:
     alt: "Turbot with saffron hollandaise: A plated dish with leek, potatoes and the mise en place"
     caption: A plated dish with leek, potatoes and the mise en place
+    session: Photo session 3 (November 2026)
+  08-dopalnitelen-1.webp:
+    alt: "Turbot with saffron hollandaise: Mise en place with turbot, butter and caviar"
+    caption: Mise en place with turbot, butter and caviar
+    session: Photo session 3 (November 2026)
+  09-dopalnitelen-2.webp:
+    alt: "Turbot with saffron hollandaise: Preparing the fish and the herbs on the counter"
+    caption: Preparing the fish and the herbs on the counter
+    session: Photo session 3 (November 2026)
+  10-dopalnitelen-3.webp:
+    alt: "Turbot with saffron hollandaise: Turbot fillet with salt and lemon"
+    caption: Turbot fillet with salt and lemon
+    session: Photo session 3 (November 2026)
+  11-dopalnitelen-4.webp:
+    alt: "Turbot with saffron hollandaise: Turbot seared until golden in a pan"
+    caption: Turbot seared until golden in a pan
+    session: Photo session 3 (November 2026)
+  12-dopalnitelen-5.webp:
+    alt: "Turbot with saffron hollandaise: The saffron sauce – another frame"
+    caption: The saffron sauce – another frame
     session: Photo session 3 (November 2026)
 mise:
   - Take the fish out 15 minutes ahead, pat the fillets very dry and salt them just before searing.
@@ -129,25 +173,32 @@ ingredients:
 steps:
   - title: Lay out the ingredients
     text: Lay out the turbot, leek, potatoes, lemon, herbs, caviar and butter.
+    photo: 01-kambala-stapka-1.webp
   - title: Prepare the fish
     text: Stretch the skin, pat the fillets dry with kitchen paper and salt them.
+    photo: 02-kambala-stapka-2.webp
   - title: Season the fillets
     text: Sprinkle the fillets with salt and leave them on the counter for 2–3 minutes.
     cue: The surface is dry.
+    photo: 03-kambala-stapka-3.webp
   - title: Sear the fish
     text: In a heated pan with the oil, put the fillets skin side down and press for 10 seconds. Cook for 3–4 minutes until golden. Turn, add the butter, thyme and garlic and baste for 1–2 minutes.
     cue: The skin is crisp and golden and the flesh is milky white.
     time: 6
+    photo: 04-kambala-stapka-4.webp
   - title: Roast the leek
     text: Sear the leek with the butter for 4–5 minutes until golden, add the potatoes and 2 tablespoons of water and cook until tender.
     time: 8
+    photo: 05-kambala-stapka-5.webp
   - title: Make the saffron hollandaise
     text: Whisk the yolks with the wine and saffron over a water bath until foamy. Take off the heat and slowly, in a thin stream, add the warm butter, whisking. Season with lemon and salt.
     cue: The sauce is silky, saffron yellow and falls in a ribbon.
     avoid: Do not overheat the yolks – the sauce will split.
     time: 8
+    photo: 06-kambala-stapka-6.webp
   - title: Plate
     text: Put the leek and potatoes on a plate, the fish on them skin side up, spoon over the hollandaise and finish with caviar and lemon zest.
+    photo: 07-kambala-stapka-7.webp
 tips:
   - The hollandaise can be kept warm in a thermos flask until serving.
   - Turbot is better if it has rested for a day in the refrigerator on paper.
@@ -167,7 +218,7 @@ allergens:
   - Sulphites (wine)
 translation:
   status: published
-  sourceHash: "363423ae2434b9f8"
+  sourceHash: "764ee5dd7f6b8c14"
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-21

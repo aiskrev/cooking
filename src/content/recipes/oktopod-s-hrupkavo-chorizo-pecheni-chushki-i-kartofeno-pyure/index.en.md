@@ -29,9 +29,45 @@ cookTime: 120
 restTime: 0
 servings: 4
 difficulty: Intermediate
-cover: 01-gotovo-yastie.webp
+cover: 10-gotovo-yastie.webp
 photos:
-  01-gotovo-yastie.webp:
+  01-oktopod-stapka-1.webp:
+    alt: "Octopus with chorizo: The ingredients: octopus, potatoes, chorizo, peppers and spring onions"
+    caption: "The ingredients: octopus, potatoes, chorizo, peppers and spring onions"
+    session: Photo session 6 (November 2026)
+  02-oktopod-stapka-2.webp:
+    alt: "Octopus with chorizo: Mise en place: a cooked tentacle, roasted peppers, chorizo and spices"
+    caption: "Mise en place: a cooked tentacle, roasted peppers, chorizo and spices"
+    session: Photo session 6 (November 2026)
+  03-oktopod-stapka-3.webp:
+    alt: "Octopus with chorizo: Brushing the tentacle with paprika oil"
+    caption: Brushing the tentacle with paprika oil
+    session: Photo session 6 (November 2026)
+  04-oktopod-stapka-4.webp:
+    alt: "Octopus with chorizo: The tentacle and spring onions on the grill"
+    caption: The tentacle and spring onions on the grill
+    session: Photo session 6 (November 2026)
+  05-oktopod-stapka-5.webp:
+    alt: "Octopus with chorizo: Mashed potato and crisp chorizo crumbs"
+    caption: Mashed potato and crisp chorizo crumbs
+    session: Photo session 6 (November 2026)
+  06-oktopod-stapka-6.webp:
+    alt: "Octopus with chorizo: Straining the chorizo oil"
+    caption: Straining the chorizo oil
+    session: Photo session 6 (November 2026)
+  07-oktopod-stapka-7.webp:
+    alt: "Octopus with chorizo: Plating with tweezers"
+    caption: Plating with tweezers
+    session: Photo session 6 (November 2026)
+  08-dopalnitelen-1.webp:
+    alt: "Octopus with chorizo: Close-up: octopus with chorizo and roasted pepper"
+    caption: "Close-up: octopus with chorizo and roasted pepper"
+    session: Photo session 6 (November 2026)
+  09-dopalnitelen-2.webp:
+    alt: "Octopus with chorizo: Octopus on mash with spring onion"
+    caption: Octopus on mash with spring onion
+    session: Photo session 6 (November 2026)
+  10-gotovo-yastie.webp:
     alt: "Octopus with chorizo: The finished dish: octopus with chorizo, peppers and purée"
     caption: "The finished dish: octopus with chorizo, peppers and purée"
     session: Photo session 6 (November 2026)
@@ -120,22 +156,29 @@ ingredients:
 steps:
   - title: Lay out the ingredients
     text: Lay out the octopus, potatoes, chorizo, peppers, spring onions, butter and spices.
+    photo: 01-oktopod-stapka-1.webp
   - title: Cook the octopus
     text: Put the octopus in a pot with water, the bay leaf and onion and simmer for 60–75 minutes without a rolling boil. Let it cool in the liquid and separate the tentacles.
     why: Cooling in the liquid keeps the octopus juicy.
     cue: A knife goes into the thickest part without effort.
     time: 75
+    photo: 02-oktopod-stapka-2.webp
   - title: Brush the tentacles
     text: Dry the tentacles and brush them with olive oil mixed with the smoked paprika and a pinch of salt.
+    photo: 03-oktopod-stapka-3.webp
   - title: Grill
     text: Grill the tentacles and spring onions over strong embers or in a grill pan for 2–3 minutes on each side, until crisp and lightly charred at the edges.
     avoid: Do not grill for long – the cooked octopus only needs warming and charring.
+    photo: 04-oktopod-stapka-4.webp
   - title: Make the mash and chorizo
     text: Boil the potatoes, pass them through a ricer and add the warm milk and butter. Fry the chorizo in the olive oil over a medium heat until it forms crisp crumbs.
+    photo: 05-oktopod-stapka-5.webp
   - title: Make the red oil
     text: Strain the chorizo, keeping the coloured fat, and stir it with the sherry vinegar.
+    photo: 06-oktopod-stapka-6.webp
   - title: Plate
     text: Spoon mash onto the plate and top with a tentacle, strips of roasted pepper and spring onion. Sprinkle with the chorizo crumbs and parsley and drizzle with the red oil and herb oil.
+    photo: 07-oktopod-stapka-7.webp
 tips:
   - Roasted peppers peel easily if they rest for 10 minutes in a covered bowl.
   - The octopus cooking liquid is an excellent stock for rice.
@@ -155,7 +198,7 @@ allergens:
   - Milk and dairy
 translation:
   status: published
-  sourceHash: 02fe465e4ee6cf96
+  sourceHash: c4edaeb4d69526e2
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-25

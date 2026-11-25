@@ -1,13 +1,134 @@
 {
   "slug": "cheren-lyas-desert-s-cheresha-i-shokolad",
   "photos": {
+    "01-cheren-stapka-1.webp": {
+      "sourceName": "Decadent Black Forest Ingredients-1.webp",
+      "sourceSha256": "e9575b702292a96db2925d0bb3b31a44ff30d2847205372323c54dca0a4449f2",
+      "sourceIdx": 2322,
+      "sourceBytes": 1748226,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 30,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-cheren-stapka-2.webp": {
+      "sourceName": "Black Forest Dessert Ingredients Spread-2.webp",
+      "sourceSha256": "2cccb05ca9b5e994b505726379663a8cbef937535a8a022e56810943ec284207",
+      "sourceIdx": 2323,
+      "sourceBytes": 1966492,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 30,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "03-cheren-stapka-3.webp": {
+      "sourceName": "Black Forest Dessert Mise-en-Place-3.webp",
+      "sourceSha256": "5a833e17b9d9a115ab367d7607cbd3d682c03c20bbb1762e00c64a3262634a55",
+      "sourceIdx": 2324,
+      "sourceBytes": 1865954,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 30,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "04-cheren-stapka-4.webp": {
+      "sourceName": "Artisan Chocolate Dessert in Preparation-5.webp",
+      "sourceSha256": "90260795605ab86ee4c171c718869677fb59637e5668bc8b7424d6646177d679",
+      "sourceIdx": 2326,
+      "sourceBytes": 1687620,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 30,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "05-cheren-stapka-5.webp": {
+      "sourceName": "Gourmet Cherry Dessert Preparation-7.webp",
+      "sourceSha256": "8d6b676abc8d091e778fc1595313b97d73d6d3274c7398b45b9f30c7818f2701",
+      "sourceIdx": 2328,
+      "sourceBytes": 1989202,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 30,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "06-cheren-stapka-6.webp": {
+      "sourceName": "Cherry Patisserie Still Life-8.webp",
+      "sourceSha256": "ca6089e52487264371d746406586b5e268917510229e449a791eeaed19c70f2c",
+      "sourceIdx": 2329,
+      "sourceBytes": 2000644,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 30,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "07-cheren-stapka-7.webp": {
+      "sourceName": "Ruby Cherry Sorbet Still Life-10.webp",
+      "sourceSha256": "60835e019905e62c6557dd646c31a847f238e535706c2c5bd833e974400a3744",
+      "sourceIdx": 2331,
+      "sourceBytes": 1812696,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 30,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "08-cheren-stapka-8.webp": {
+      "sourceName": "Vanilla Cream with Chocolate Lace Tuile-11.webp",
+      "sourceSha256": "b5e838cb42bc6406515818078fa66129a8ecc1cb9365ed00eb2788b6e13dbe1e",
+      "sourceIdx": 2332,
+      "sourceBytes": 1709716,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 30,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "09-dopalnitelen-1.webp": {
+      "sourceName": "Black Forest Pastry Mise en Place-4.webp",
+      "sourceSha256": "665a78d1a2141ec1680ae1de54c5da6f969e39ae6f6fe53b2ee975ac318abb83",
+      "sourceIdx": 2325,
+      "sourceBytes": 1996312,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 30,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "10-dopalnitelen-2.webp": {
+      "sourceName": "Cinematic Chocolate Tempering Workstation-6.webp",
+      "sourceSha256": "22963bb9a06eb960b480f13dc50e33f46156ac1f510f4f82425288070aeee21b",
+      "sourceIdx": 2327,
+      "sourceBytes": 1829146,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 30,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
     "11-dopalnitelen-3.webp": {
       "sourceName": "Ruby Cherry Sorbet Mise en Place-9.webp",
       "sourceSha256": "7a849aac56c80589105416fe3cae1377746097f9be20f74165d6d4b5cd55ab59",
       "sourceIdx": 2330,
       "sourceBytes": 1993814,
       "sourceSize": "1536x1024",
-      "role": "hero",
+      "role": "extra",
+      "batch": 30,
+      "confidence": "MEDIUM",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "12-dopalnitelen-4.webp": {
+      "sourceName": "Vanilla Cream, Chocolate Tuile, and Crumble-12.webp",
+      "sourceSha256": "45c7d55decc0f99a4afdc1b3476a16541dba70f085cc147efda8be31ef52a737",
+      "sourceIdx": 2333,
+      "sourceBytes": 1911536,
+      "sourceSize": "1536x1024",
+      "role": "extra",
       "batch": 30,
       "confidence": "MEDIUM",
       "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
@@ -15,10 +136,5 @@
   },
   "generatedHash": "f232928d040d6b5aaaaab6716d0277c72ddfe1e9d603ae1aa964d87458869249",
   "excludedSources": [],
-  "importedAt": "2026-11-21T06:46:56.253Z",
-  "singleHeroPolicy": {
-    "date": "2026-11-25",
-    "kept": "11-dopalnitelen-3.webp",
-    "removed": 11
-  }
+  "importedAt": "2026-11-21T06:46:56.253Z"
 }

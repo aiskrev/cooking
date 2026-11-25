@@ -29,9 +29,45 @@ cookTime: 35
 restTime: 0
 servings: 4
 difficulty: Intermediate
-cover: 01-gotovo-yastie.webp
+cover: 10-gotovo-yastie.webp
 photos:
-  01-gotovo-yastie.webp:
+  01-treska-stapka-1.webp:
+    alt: "Cod with mussels and saffron: The ingredients: cod, mussels, fennel, kumquats and saffron"
+    caption: "The ingredients: cod, mussels, fennel, kumquats and saffron"
+    session: Photo session 6 (November 2026)
+  02-treska-stapka-2.webp:
+    alt: "Cod with mussels and saffron: The portions of fish and the sliced fennel"
+    caption: The portions of fish and the sliced fennel
+    session: Photo session 6 (November 2026)
+  03-treska-stapka-3.webp:
+    alt: "Cod with mussels and saffron: Salting the fillets"
+    caption: Salting the fillets
+    session: Photo session 6 (November 2026)
+  04-treska-stapka-4.webp:
+    alt: "Cod with mussels and saffron: Fennel braised in butter and caramelised kumquats"
+    caption: Fennel braised in butter and caramelised kumquats
+    session: Photo session 6 (November 2026)
+  05-treska-stapka-5.webp:
+    alt: "Cod with mussels and saffron: The saffron sauce with mussels"
+    caption: The saffron sauce with mussels
+    session: Photo session 6 (November 2026)
+  06-treska-stapka-6.webp:
+    alt: "Cod with mussels and saffron: Searing and basting the fish"
+    caption: Searing and basting the fish
+    session: Photo session 6 (November 2026)
+  07-treska-stapka-7.webp:
+    alt: "Cod with mussels and saffron: Plating the dish"
+    caption: Plating the dish
+    session: Photo session 6 (November 2026)
+  08-dopalnitelen-1.webp:
+    alt: "Cod with mussels and saffron: Close-up of the seared cod"
+    caption: Close-up of the seared cod
+    session: Photo session 6 (November 2026)
+  09-dopalnitelen-2.webp:
+    alt: "Cod with mussels and saffron: Cod with mussels, kumquat and saffron sauce"
+    caption: Cod with mussels, kumquat and saffron sauce
+    session: Photo session 6 (November 2026)
+  10-gotovo-yastie.webp:
     alt: "Cod with mussels and saffron: The finished dish: cod with mussels, fennel and saffron sauce"
     caption: "The finished dish: cod with mussels, fennel and saffron sauce"
     session: Photo session 6 (November 2026)
@@ -110,23 +146,30 @@ ingredients:
 steps:
   - title: Lay out the ingredients
     text: Lay out the fish, mussels, fennel, kumquats, saffron, wine, stock and cream.
+    photo: 01-treska-stapka-1.webp
   - title: Prepare the mise en place
     text: Cut the fish into even portions, slice the fennel and kumquats and clean the mussels.
+    photo: 02-treska-stapka-2.webp
   - title: Salt the fish
     text: Salt the fillets 15 minutes before cooking and pat them dry just before searing.
     why: A short salting firms the flesh and improves the crust.
+    photo: 03-treska-stapka-3.webp
   - title: Braise the fennel and kumquats
     text: Braise the fennel in the butter with the stock, covered, for 15–18 minutes. Caramelise the kumquats with the sugar in a small pan for 3–4 minutes.
     time: 18
+    photo: 04-treska-stapka-4.webp
   - title: Make the saffron sauce
     text: Soften the shallot, add the mussels and wine and cover for 3–4 minutes until they open. Lift out the mussels, strain the liquor, add the saffron and cream and reduce until thick. Whisk in the cold butter.
     avoid: Do not boil the sauce after adding the butter – it will split.
+    photo: 05-treska-stapka-5.webp
   - title: Sear the fish
     text: Sear the fillets in the hot oil for 4 minutes until golden, turn, add the butter and baste for 2–3 minutes.
     cue: The flesh separates into large, pearly flakes.
     time: 7
+    photo: 06-treska-stapka-6.webp
   - title: Plate
     text: Spoon saffron sauce onto the plate, add the fish, fennel wedges, a few mussels and kumquat slices and decorate with fennel fronds.
+    photo: 07-treska-stapka-7.webp
 tips:
   - Buy live mussels and cook them on the day of purchase.
   - Without kumquats – orange rounds with peel, caramelised the same way.
@@ -148,7 +191,7 @@ allergens:
   - Sulphites (wine)
 translation:
   status: published
-  sourceHash: e86ad70bf3059823
+  sourceHash: d90743be8b4c87ea
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-25

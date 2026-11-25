@@ -1,6 +1,171 @@
 {
   "slug": "svinsko-pecheno-s-hrupkava-kozha-dyuli-i-rezene",
   "photos": {
+    "01-svinsko-stapka-1.webp": {
+      "sourceName": "ChatGPT Image Nov 21, 2026, 09_34_50 AM-1.webp",
+      "sourceSha256": "c1a9291922f6b107258f8bba666b121410ee5b1729a2ffa41e17d9e715f3c483",
+      "sourceIdx": 3164,
+      "sourceBytes": 1886440,
+      "sourceSize": "1448x1086",
+      "role": "step",
+      "batch": 13,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-svinsko-stapka-2.webp": {
+      "sourceName": "ChatGPT Image Nov 21, 2026, 09_34_52 AM-3.webp",
+      "sourceSha256": "4127080c70041b099a495f09a02dcb74390607311a6b030d59a8edaf8f702036",
+      "sourceIdx": 3166,
+      "sourceBytes": 2031156,
+      "sourceSize": "1448x1086",
+      "role": "step",
+      "batch": 13,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "03-svinsko-stapka-3.webp": {
+      "sourceName": "Salt-Crusted Pork Preparation-5.webp",
+      "sourceSha256": "63596e9c8b3928297f33f495c830292ad01bddf15bf88a7105edd1ef3e5b4220",
+      "sourceIdx": 3064,
+      "sourceBytes": 1626264,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 5,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "04-svinsko-stapka-4.webp": {
+      "sourceName": "ChatGPT Image Nov 21, 2026, 09_34_53 AM-4.webp",
+      "sourceSha256": "e89fb83ac593bb487a12c8e7e0fd898a620c168ebda2f9cf9124d6dfd992064b",
+      "sourceIdx": 3167,
+      "sourceBytes": 1884426,
+      "sourceSize": "1448x1086",
+      "role": "step",
+      "batch": 13,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "05-svinsko-stapka-5.webp": {
+      "sourceName": "ChatGPT Image Nov 21, 2026, 09_34_54 AM-5.webp",
+      "sourceSha256": "cb441e962b597580fab48df918b0c6487579b6342110dc44aeb549aaa99ee25a",
+      "sourceIdx": 3168,
+      "sourceBytes": 2014072,
+      "sourceSize": "1448x1086",
+      "role": "step",
+      "batch": 13,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "06-svinsko-stapka-6.webp": {
+      "sourceName": "Caramelized Fruit and Braised Fennel Feast-11.webp",
+      "sourceSha256": "ea8dff65e779f7bfb837e0a9e29eae1dbdf5d7cc026bce3f298da6c04eb5a1a4",
+      "sourceIdx": 3070,
+      "sourceBytes": 1953816,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 5,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "07-svinsko-stapka-7.webp": {
+      "sourceName": "ChatGPT Image Nov 21, 2026, 09_34_55 AM-6.webp",
+      "sourceSha256": "c29196badbd9db85a286a1f22b561c8ad45df59758937ecfee2db4c35e80d6a5",
+      "sourceIdx": 3169,
+      "sourceBytes": 1905436,
+      "sourceSize": "1448x1086",
+      "role": "step",
+      "batch": 13,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "08-svinsko-stapka-9.webp": {
+      "sourceName": "ChatGPT Image Nov 21, 2026, 09_34_57 AM-8.webp",
+      "sourceSha256": "5046d1a82b56222a9d6b405002cf26889f47d5ea29b9e211077c5b015d2870c9",
+      "sourceIdx": 3171,
+      "sourceBytes": 1796240,
+      "sourceSize": "1448x1086",
+      "role": "step",
+      "batch": 13,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "09-dopalnitelen-1.webp": {
+      "sourceName": "ChatGPT Image Nov 21, 2026, 09_35_00 AM-10.webp",
+      "sourceSha256": "04ba08d0d54f01056104d6348792a0d9c72cbb3785d702ea4ad25216854c714f",
+      "sourceIdx": 3173,
+      "sourceBytes": 1935884,
+      "sourceSize": "1448x1086",
+      "role": "extra",
+      "batch": 13,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "10-dopalnitelen-2.webp": {
+      "sourceName": "ChatGPT Image Nov 21, 2026, 09_34_56 AM-7.webp",
+      "sourceSha256": "b51b579c7633e63c61b87fd842cd32112040b8e11797f21969682488a796bfd8",
+      "sourceIdx": 3170,
+      "sourceBytes": 2128882,
+      "sourceSize": "1448x1086",
+      "role": "extra",
+      "batch": 13,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "11-dopalnitelen-3.webp": {
+      "sourceName": "ChatGPT Image Nov 21, 2026, 09_34_51 AM-2.webp",
+      "sourceSha256": "3eb4728a91467d676100ddb8127b14e15c74ace7f23954afe435b9a1af7a5b89",
+      "sourceIdx": 3165,
+      "sourceBytes": 1849786,
+      "sourceSize": "1448x1086",
+      "role": "extra",
+      "batch": 13,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "12-dopalnitelen-4.webp": {
+      "sourceName": "Rustic Pork Roast Still Life-1.webp",
+      "sourceSha256": "d2e77a6d658d1f888887be3cb5bdc314cc41668887821b3543afbb1d81b904cb",
+      "sourceIdx": 3060,
+      "sourceBytes": 1974320,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 5,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "13-dopalnitelen-5.webp": {
+      "sourceName": "Rustic Roast Pork Mise en Place-3.webp",
+      "sourceSha256": "48253a8a5eb03f4723d989d09f058882b0cae175cff5bf986bedec3e4407c7a8",
+      "sourceIdx": 3062,
+      "sourceBytes": 1909476,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 5,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "14-dopalnitelen-6.webp": {
+      "sourceName": "Golden Sage-Glazed Pork Roast-7.webp",
+      "sourceSha256": "f3b5665a4839c9b8f94464f905241cecaeb1707ec0fb51693b5ba454666566f6",
+      "sourceIdx": 3066,
+      "sourceBytes": 1684122,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 5,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "15-dopalnitelen-7.webp": {
+      "sourceName": "Golden Crackling Roast Pork-9.webp",
+      "sourceSha256": "023c1949b798ef36cba4cbe507e34aafd8b2d6f93f03ade3a2fde2d045ff47ea",
+      "sourceIdx": 3068,
+      "sourceBytes": 1762446,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 5,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
     "16-gotovo-yastie.webp": {
       "sourceName": "ChatGPT Image Nov 21, 2026, 09_34_58 AM-9.webp",
       "sourceSha256": "104beea1bb593ac09f874ff5d9aa0741c8f9c9866310bed07281466137799c4f",
@@ -15,10 +180,5 @@
   },
   "generatedHash": "dfd6c494250d30c5d81cb2f5a5a1977db79f618fc179c1ccd555a92c0c86e7d5",
   "excludedSources": [],
-  "importedAt": "2026-11-21T12:35:35.627Z",
-  "singleHeroPolicy": {
-    "date": "2026-11-25",
-    "kept": "16-gotovo-yastie.webp",
-    "removed": 15
-  }
+  "importedAt": "2026-11-21T12:35:35.627Z"
 }

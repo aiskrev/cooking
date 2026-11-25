@@ -1,6 +1,160 @@
 {
   "slug": "kebapcheta",
   "photos": {
+    "01-kebapcheta-stapka-1.webp": {
+      "sourceName": "Rustic Grilled Kebapche Ingredients-5.webp",
+      "sourceSha256": "876f5fe2daae8b4eb5c920414f1a5df45d550e1d95067ae7786d398775ae9fc0",
+      "sourceIdx": 314,
+      "sourceBytes": 1875132,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 96,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-kebapcheta-stapka-2.webp": {
+      "sourceName": "Rustic Meat Seasoning by the Hearth-9.webp",
+      "sourceSha256": "ce43d50e80872e86cbc8bd24eb0e08f5bd27252f621ad20786b36c9331fb7db3",
+      "sourceIdx": 318,
+      "sourceBytes": 1786984,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 96,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "03-kebapcheta-stapka-3.webp": {
+      "sourceName": "Rustic Herb-Infused Meat Preparation-11.webp",
+      "sourceSha256": "dad1198ea96b41add55cdd436c33ea35bd24cfec7b7d0b6c04e2cd8ac745f113",
+      "sourceIdx": 320,
+      "sourceBytes": 1609702,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 96,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "04-kebapcheta-stapka-4.webp": {
+      "sourceName": "Herbed Raw Kofta on a Rustic Tray-13.webp",
+      "sourceSha256": "2a56c638b94d5aae65090905f73f391b25faa8888eda44c520e268003c064fb1",
+      "sourceIdx": 322,
+      "sourceBytes": 1816768,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 96,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "05-kebapcheta-stapka-5.webp": {
+      "sourceName": "Rustic Raw Kebab Tray with Herbs-14.webp",
+      "sourceSha256": "4fa12c5751f6fa50b767ef20c7f275b984c08692b3fe60f8024e6641606832f5",
+      "sourceIdx": 323,
+      "sourceBytes": 1966392,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 96,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "06-kebapcheta-stapka-6.webp": {
+      "sourceName": "Glowing Embers Beneath the Grill Grate-15.webp",
+      "sourceSha256": "3b33ad8f05d5269338f2c3c848ef29f68b9c36f0543acc4fb3a94d9143678db3",
+      "sourceIdx": 324,
+      "sourceBytes": 1651888,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 96,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "07-kebapcheta-stapka-7.webp": {
+      "sourceName": "Glowing Coals in a Rustic Grill-16.webp",
+      "sourceSha256": "7268a733a3fa6d8aab44c17592a29c191d3ad01cdd65db1ac6a48090ceade76b",
+      "sourceIdx": 325,
+      "sourceBytes": 1683774,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 96,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "08-kebapcheta-stapka-8.webp": {
+      "sourceName": "Smoky Charcoal-Grilled Kebabs-17.webp",
+      "sourceSha256": "700d7864e59703c50ebbb7e41c495b3c31a66ea7b740d2cc1da972eb0124c60f",
+      "sourceIdx": 326,
+      "sourceBytes": 1960808,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 96,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "09-kebapcheta-stapka-9.webp": {
+      "sourceName": "Smoky Charcoal-Grilled Kebapche-18.webp",
+      "sourceSha256": "055f19867e03af6b1c966b7f58463760599b5fa50bb4dbde6af56ebd67df2abc",
+      "sourceIdx": 327,
+      "sourceBytes": 1910738,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 96,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "10-dopalnitelen-1.webp": {
+      "sourceName": "Rustic Bulgarian Grill Ingredients-6.webp",
+      "sourceSha256": "f54c39cbdfb0ecb72d82c51ce585ef86f5d27468acc4d1dcac4d783321afeeba",
+      "sourceIdx": 315,
+      "sourceBytes": 1959854,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 96,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "11-dopalnitelen-2.webp": {
+      "sourceName": "Rustic Balkan Kebapche Prep Feast-7.webp",
+      "sourceSha256": "3fa52fe74f486fdba467a4b0eca9c18b1972965df47576a4fdb2b5363def79d8",
+      "sourceIdx": 316,
+      "sourceBytes": 1883880,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 96,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "12-dopalnitelen-3.webp": {
+      "sourceName": "Bulgarian Grill Prep Still Life-8.webp",
+      "sourceSha256": "f9c296aadd19ee4a47a729dd05479340d98fda761017bca47fc887d25a19e7ef",
+      "sourceIdx": 317,
+      "sourceBytes": 1907926,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 96,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "13-dopalnitelen-4.webp": {
+      "sourceName": "Rustic Spiced Meat Preparation-10.webp",
+      "sourceSha256": "5e8c579cc37ddc40bd3ae6cdf6967acef97a4e170703100b36f49eee2b290266",
+      "sourceIdx": 319,
+      "sourceBytes": 1805552,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 96,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "14-dopalnitelen-5.webp": {
+      "sourceName": "Rustic Chef Mixing Spiced Meat-12.webp",
+      "sourceSha256": "e2c9b203e8ad3ab285710449c2eff50312af01fdaabbcfaa9893a7ca4c18dcf7",
+      "sourceIdx": 321,
+      "sourceBytes": 1660272,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 96,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
     "15-gotovo-yastie.webp": {
       "sourceName": "Rustic Balkan Kebapche Feast-1.webp",
       "sourceSha256": "1cb5cffdc2b9b86ed46df9d5699982374bae2acb08d25bf085f42bbbdacf247b",
@@ -15,10 +169,5 @@
   },
   "generatedHash": "854022610bfae3c4bdf4f50e78c7ffd6100756fa3986bbd0ccfbd1863dbca157",
   "excludedSources": [],
-  "importedAt": "2026-11-19T05:27:45.872Z",
-  "singleHeroPolicy": {
-    "date": "2026-11-25",
-    "kept": "15-gotovo-yastie.webp",
-    "removed": 14
-  }
+  "importedAt": "2026-11-19T05:27:45.872Z"
 }

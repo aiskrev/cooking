@@ -1,11 +1,110 @@
 {
   "slug": "fuagra-s-smokini-i-leshnitsi",
   "photos": {
+    "01-fuagra-stapka-1.webp": {
+      "sourceName": "ChatGPT Image Nov 20, 2026, 02_09_54 PM-4.webp",
+      "sourceSha256": "9100d92daa2b6922b92a53d0f7188a1b8d2a0fbfaa4b810cda75147c8cff21a8",
+      "sourceIdx": 2208,
+      "sourceBytes": 1900972,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 19,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-fuagra-stapka-2.webp": {
+      "sourceName": "ChatGPT Image Nov 20, 2026, 02_10_01 PM-10.webp",
+      "sourceSha256": "3cbef662d646ab51f2a043dab3116009cfa70fadf15134a5b1f136168fc6a5bc",
+      "sourceIdx": 2214,
+      "sourceBytes": 1721818,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 19,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "03-fuagra-stapka-3.webp": {
+      "sourceName": "ChatGPT Image Nov 20, 2026, 02_09_53 PM-3.webp",
+      "sourceSha256": "f203696f4166e928c5a1117cbd12b387f12dc4b33d24df058fac82d019f1a1e4",
+      "sourceIdx": 2207,
+      "sourceBytes": 2032500,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 19,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "04-fuagra-stapka-4.webp": {
+      "sourceName": "ChatGPT Image Nov 20, 2026, 02_09_51 PM-2.webp",
+      "sourceSha256": "8973a355e35cacf44eb54c1a542c62e5fe40d23c59fb22dc6812954153b6d5c6",
+      "sourceIdx": 2206,
+      "sourceBytes": 1809172,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 19,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "05-fuagra-stapka-5.webp": {
+      "sourceName": "ChatGPT Image Nov 20, 2026, 02_09_57 PM-7.webp",
+      "sourceSha256": "a930d985746ec07cd7e148c12279dcffa72da83af7fb0e325b99866af8c36abd",
+      "sourceIdx": 2211,
+      "sourceBytes": 1722388,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 19,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
     "06-fuagra-stapka-6.webp": {
       "sourceName": "ChatGPT Image Nov 20, 2026, 02_10_00 PM-9.webp",
       "sourceSha256": "2975f5a8c5c35aa11c71c5bcd84af44297a23674a250fe6ee8ebd64f7ea3bf23",
       "sourceIdx": 2213,
       "sourceBytes": 1634706,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 19,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "07-fuagra-stapka-7.webp": {
+      "sourceName": "ChatGPT Image Nov 20, 2026, 02_09_50 PM-1.webp",
+      "sourceSha256": "1b667c7278da44da0a2825e406a0b9e9554502f68520d8de8feb04ec431364ef",
+      "sourceIdx": 2205,
+      "sourceBytes": 1633226,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 19,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "08-dopalnitelen-1.webp": {
+      "sourceName": "ChatGPT Image Nov 20, 2026, 02_09_55 PM-5.webp",
+      "sourceSha256": "51d5fe5db1e3fe39cea9328f911b847770277dc09d3126e427a051b24def77a6",
+      "sourceIdx": 2209,
+      "sourceBytes": 1653652,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 19,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "09-dopalnitelen-2.webp": {
+      "sourceName": "ChatGPT Image Nov 20, 2026, 02_09_56 PM-6.webp",
+      "sourceSha256": "d9d78339888794034f37b19de776237af34932c958176da4bd3a11e20028128d",
+      "sourceIdx": 2210,
+      "sourceBytes": 1770870,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 19,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "10-gotovo-yastie.webp": {
+      "sourceName": "ChatGPT Image Nov 20, 2026, 02_09_58 PM-8.webp",
+      "sourceSha256": "091d9611785167f5a275a30d9ff409abe453559ce337da168337b394ca52f686",
+      "sourceIdx": 2212,
+      "sourceBytes": 1978540,
       "sourceSize": "1536x1024",
       "role": "hero",
       "batch": 19,
@@ -15,10 +114,5 @@
   },
   "generatedHash": "3ef53765832c6c5decde436e47691cc07ac29e5bdadb940c8ca09e9b7d762713",
   "excludedSources": [],
-  "importedAt": "2026-11-21T06:46:55.920Z",
-  "singleHeroPolicy": {
-    "date": "2026-11-25",
-    "kept": "06-fuagra-stapka-6.webp",
-    "removed": 9
-  }
+  "importedAt": "2026-11-21T06:46:55.920Z"
 }

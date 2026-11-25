@@ -26,28 +26,19 @@ const total = d.prepTime + d.cookTime + d.restTime;
 const url = new URL(Astro.url.pathname, Astro.site).href;
 const statusKey = recipe.bg.status;
 
-// ---- Фото-история (до 10 кадъра по реда на готвенето) ----
+// ---- Снимки: една заглавна (най-силният кадър на готовото ястие) + карусел с всички кадри на рецептата ----
+// Каруселът започва със заглавната снимка, после кадрите на стъпките по реда на приготвяне и накрая останалите кадри.
+// Всеки кадър е с подпис на езика на страницата. Снимките не се повтарят до стъпките – всичко е в карусела.
 const stepPhotoFiles = d.steps.flatMap((s) => (s.photo ? [s.photo] : []));
-let storyFiles = d.carousel ?? [...new Set(stepPhotoFiles)];
-if (storyFiles.length > 10) {
-  storyFiles = Array.from({ length: 10 }, (_, i) => storyFiles[Math.round((i * (storyFiles.length - 1)) / 9)]);
-}
+const storyFiles = [...new Set([cover?.file, ...stepPhotoFiles, ...allPhotos.map((p) => p.file)].filter((f): f is string => !!f))];
 const storyPhotos = storyFiles.map((f) => photos.get(f)).filter((p): p is PhotoT => !!p);
-const showStory = storyPhotos.length >= 5;
+const showStory = storyPhotos.length >= 2;
 
 // Данни за лайтбокса се изписват само при първото появяване на снимка в страницата
 const rendered = new Set<string>();
 const first = (p: PhotoT) => { const lite = rendered.has(p.key); rendered.add(p.key); return { photo: p, lite }; };
 const heroItem = cover ? first(cover) : undefined;
 const storyItems = showStory ? storyPhotos.map(first) : [];
-
-const usedSet = new Set([...stepPhotoFiles, cover?.file, ...storyPhotos.map((p) => p.file)]);
-const extras = allPhotos.filter((p) => !usedSet.has(p.file));
-const extraGroups = new Map<string, PhotoT[]>();
-for (const p of extras) {
-  const g = d.photos[p.file]?.session ?? t(locale, 'recipe.extraShots');
-  extraGroups.set(g, [...(extraGroups.get(g) ?? []), p]);
-}
 
 // ---- Съставки ----
 const toIngs = (r: Recipe) =>
@@ -214,7 +205,7 @@ const showNote = locale === 'en' && recipe.translation && !recipe.translation.re
       <ul>
         <li><a href="#sastavki">{t(locale, 'recipe.navIngredients')}</a></li>
         <li><a href="#prigotvyane">{t(locale, 'recipe.navMethod')}</a></li>
-        {(showStory || extras.length > 0) && <li><a href="#snimki">{t(locale, 'recipe.navPhotos')}</a></li>}
+        {showStory && <li><a href="#snimki">{t(locale, 'recipe.navPhotos')}</a></li>}
         <li><a href="#ocenki">{t(locale, 'recipe.navRatings')}</a></li>
         <li><a href="#komentari">{t(locale, 'recipe.navComments')}</a></li>
       </ul>
@@ -253,27 +244,17 @@ const showNote = locale === 'en' && recipe.translation && !recipe.translation.re
       <section aria-labelledby="h-prigotvyane" class="method" id="prigotvyane">
         <h2 id="h-prigotvyane">{t(locale, 'recipe.method')}</h2>
         <ol class="steps" data-reveal-group>
-          {d.steps.map((s, i) => {
-            const p = s.photo ? photos.get(s.photo) : undefined;
-            const item = p ? first(p) : undefined;
-            return (
-              <li class="step" id={`stapka-${i + 1}`} data-step>
-                <div class="step-body">
-                  {s.title && <h3>{s.title}{s.time && <span class="step-time"> · {formatMinutes(locale, s.time)}</span>}</h3>}
-                  <p class="step-text">{s.text}</p>
-                  {s.why && <p class="step-note"><strong>{t(locale, 'recipe.why')}</strong> {s.why}</p>}
-                  {s.cue && <p class="step-note"><strong>{t(locale, 'recipe.cue')}</strong> {s.cue}</p>}
-                  {s.avoid && <p class="step-note avoid"><strong>{t(locale, 'recipe.avoid')}</strong> {s.avoid}</p>}
-                </div>
-                {item && (
-                  <figure class="step-photo">
-                    <Photo photo={item.photo} locale={locale} lite={item.lite} zoom sizes="(min-width: 640px) 416px, calc(100vw - 32px)" widths={[480, 800]} />
-                    {item.photo.caption && <figcaption>{item.photo.caption}</figcaption>}
-                  </figure>
-                )}
-              </li>
-            );
-          })}
+          {d.steps.map((s, i) => (
+            <li class="step" id={`stapka-${i + 1}`} data-step>
+              <div class="step-body">
+                {s.title && <h3>{s.title}{s.time && <span class="step-time"> · {formatMinutes(locale, s.time)}</span>}</h3>}
+                <p class="step-text">{s.text}</p>
+                {s.why && <p class="step-note"><strong>{t(locale, 'recipe.why')}</strong> {s.why}</p>}
+                {s.cue && <p class="step-note"><strong>{t(locale, 'recipe.cue')}</strong> {s.cue}</p>}
+                {s.avoid && <p class="step-note avoid"><strong>{t(locale, 'recipe.avoid')}</strong> {s.avoid}</p>}
+              </div>
+            </li>
+          ))}
         </ol>
       </section>
     </div>
@@ -317,23 +298,6 @@ const showNote = locale === 'en' && recipe.translation && !recipe.translation.re
 
     {d.allergens.length > 0 && (
       <p class="allergens"><strong>{t(locale, 'recipe.allergens')}</strong> {d.allergens.join(', ')}.</p>
-    )}
-
-    {extras.length > 0 && (
-      <section class="more-photos" aria-labelledby="h-more" id={showStory ? undefined : 'snimki'}>
-        <h2 id="h-more">{t(locale, 'recipe.morePhotos')} <span class="count">({extras.length})</span></h2>
-        {[...extraGroups.entries()].map(([group, list]) => (
-          <>
-            <h3 class="session">{group}</h3>
-            <ul class="thumbs" data-reveal-group>
-              {list.map((p) => {
-                const it = first(p);
-                return <li><Photo photo={it.photo} locale={locale} lite={it.lite} zoom label={p.caption ?? p.alt} widths={[480]} sizes="(min-width: 640px) 160px, 45vw" /></li>;
-              })}
-            </ul>
-          </>
-        ))}
-      </section>
     )}
 
     {d.tags.length > 0 && (

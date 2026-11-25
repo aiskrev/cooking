@@ -1,13 +1,134 @@
 {
   "slug": "zelnik",
   "photos": {
+    "01-zelnik-stapka-1.webp": {
+      "sourceName": "Rustic Balkan Pastry Ingredients still life-2.webp",
+      "sourceSha256": "2ea97ee69eebd2aa8e850faebe6ef8dad77cf78a20be7fc5d0ecef3cb53645b6",
+      "sourceIdx": 480,
+      "sourceBytes": 1991078,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 109,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-zelnik-stapka-2.webp": {
+      "sourceName": "Rustic Kitchen Dough Preparation-4.webp",
+      "sourceSha256": "acf47aec08df3760ebff74d26c05e9778c6bb229ad60585e8bc5653669df920f",
+      "sourceIdx": 482,
+      "sourceBytes": 1766328,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 109,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "03-zelnik-stapka-3.webp": {
+      "sourceName": "Flour-Dusted Hands Kneading Dough-6.webp",
+      "sourceSha256": "b6f3e909a127cfc7dceb9ed5afc8c47537b3f5cf544c79667a43a215386e8643",
+      "sourceIdx": 484,
+      "sourceBytes": 1608492,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 109,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "04-zelnik-stapka-4.webp": {
+      "sourceName": "Sizzling Greens in a Cast-Iron Skillet-8 - Copy.webp",
+      "sourceSha256": "79dc86c16620f921954973406becf6836eec91fae0f05532f1603934e2649cdc",
+      "sourceIdx": 486,
+      "sourceBytes": 1617382,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 109,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "05-zelnik-stapka-5.webp": {
+      "sourceName": "Rustic Leek, Greens, and Cheese Filling-11 - Copy.webp",
+      "sourceSha256": "d6e98ced2121e7d7d875c90a222a0b9ced1190cb830a4f153d459d83faa8ee8a",
+      "sourceIdx": 490,
+      "sourceBytes": 1707362,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 109,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "06-zelnik-stapka-6.webp": {
+      "sourceName": "Rustic Kitchen Dough Rolling-12 - Copy.webp",
+      "sourceSha256": "0abf6d0dfdfde48eda131af92bda5784ffebcf3bf10df6b192a5e08ef5a67eb5",
+      "sourceIdx": 492,
+      "sourceBytes": 1682086,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 109,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
     "07-zelnik-stapka-7.webp": {
       "sourceName": "Artisan Hands Stretching Phyllo Dough-13 - Copy.webp",
       "sourceSha256": "b47e854fb1edf7c96ddc59fa1bfe6f728821e3407fb671982cc2a5713bf94a40",
       "sourceIdx": 494,
       "sourceBytes": 1717036,
       "sourceSize": "1122x1402",
-      "role": "hero",
+      "role": "step",
+      "batch": 109,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "08-dopalnitelen-1.webp": {
+      "sourceName": "Rustic Zelnik Ingredients by the Hearth-1.webp",
+      "sourceSha256": "f6ee10e3c89b7460cd7fe5af233fe6712913d15e6a65571e8f07fcee661e55a6",
+      "sourceIdx": 479,
+      "sourceBytes": 2027246,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 109,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "09-dopalnitelen-2.webp": {
+      "sourceName": "Rustic Chef Kneading Fresh Dough-5.webp",
+      "sourceSha256": "0c453bfc3a325095b897fe7e898c8150d8c55934c0b1cd92d39274747517072c",
+      "sourceIdx": 483,
+      "sourceBytes": 1633332,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 109,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "10-dopalnitelen-3.webp": {
+      "sourceName": "Rustic Artisan Dough Kneading-7.webp",
+      "sourceSha256": "13e34a25a0b0df58a26c6db0983bac95c197225798552d1211d05285c2789e25",
+      "sourceIdx": 485,
+      "sourceBytes": 1686620,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 109,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "11-dopalnitelen-4.webp": {
+      "sourceName": "Sizzling Buttered Greens and Leeks-9.webp",
+      "sourceSha256": "a64c82392a062226eb90d17be6d990b2d31ed826109baad4f9a7b46de73b39c5",
+      "sourceIdx": 488,
+      "sourceBytes": 1773654,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 109,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "12-dopalnitelen-5.webp": {
+      "sourceName": "Rustic Greens, Feta, and Egg Prep-10.webp",
+      "sourceSha256": "67fa0d93ea7e654d1803e486fb3ac114f0f0ac8d96cc809cd18bbf979db7a82e",
+      "sourceIdx": 489,
+      "sourceBytes": 1617048,
+      "sourceSize": "1122x1402",
+      "role": "extra",
       "batch": 109,
       "confidence": "HIGH",
       "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
@@ -15,10 +136,5 @@
   },
   "generatedHash": "9ba30e2544d4a3950b102dad297956185eea6146f5cb23ceb3956b6ed37f8c40",
   "excludedSources": [],
-  "importedAt": "2026-11-19T05:27:50.180Z",
-  "singleHeroPolicy": {
-    "date": "2026-11-25",
-    "kept": "07-zelnik-stapka-7.webp",
-    "removed": 11
-  }
+  "importedAt": "2026-11-19T05:27:50.180Z"
 }

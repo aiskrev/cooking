@@ -23,9 +23,28 @@ servings: 10
 difficulty: Advanced
 cover: 06-kozunak-stapka-6.webp
 photos:
+  01-kozunak-stapka-1.webp:
+    alt: "Kozunak: The ingredients for the kozunak"
+    caption: The ingredients for the kozunak
+  02-kozunak-stapka-2.webp:
+    alt: "Kozunak: The activated yeast"
+    caption: The activated yeast
+  03-kozunak-stapka-3.webp:
+    alt: "Kozunak: Kneading the dough with the yolks"
+    caption: Kneading the dough with the yolks
+  04-kozunak-stapka-4.webp:
+    alt: "Kozunak: The risen dough"
+    caption: The risen dough
+  05-kozunak-stapka-5.webp:
+    alt: "Kozunak: Glazing the kozunak"
+    caption: Glazing the kozunak
   06-kozunak-stapka-6.webp:
     alt: "Kozunak: The finished kozunak"
     caption: The finished kozunak
+  07-dopalnitelen-1.webp:
+    alt: "Kozunak: A torn-open braided kozunak (second photo session)"
+    caption: A torn-open braided kozunak (second photo session)
+    session: Photo session 2 (May–June 2026)
 mise:
   - All the ingredients must be at room temperature; the milk lukewarm, about 35 °C.
   - Melt the butter together with the oil and let it cool to lukewarm.
@@ -99,27 +118,33 @@ ingredients:
 steps:
   - title: Prepare the ingredients
     text: Lay out the flour, the milk, the egg yolks, the sugar, the butter, the yeast and the raisins.
+    photo: 01-kozunak-stapka-1.webp
   - title: Activate the yeast
     text: Stir the yeast into the lukewarm milk with a spoonful of the sugar and two spoonfuls of the flour. Leave it in a warm place for 15 minutes.
     cue: The mixture is covered with a thick cap of foam.
     avoid: Milk hotter than 40 °C kills the yeast.
     time: 15
+    photo: 02-kozunak-stapka-2.webp
   - title: Knead
     text: Beat the yolks with the remaining sugar, the vanilla, the lemon zest and the salt. Combine them with the yeast and add the flour in parts. Knead for 15–20 minutes, dipping your hands several times in the lukewarm fat until it has all been worked in. Finally add the raisins.
     cue: The dough is smooth and elastic, does not stick, and stretches into a thin membrane without tearing.
     time: 20
+    photo: 03-kozunak-stapka-3.webp
   - title: Let it prove
     text: Put the dough in a greased bowl, cover it and leave it in a warm place for about an hour and a half.
     cue: The volume has increased two to three times.
     time: 90
+    photo: 04-kozunak-stapka-4.webp
   - title: Braid and glaze
     text: Divide the dough into three, roll each part into a long rope and braid them. Place the braid in a greased tin, cover and leave it to prove for another 45–60 minutes. Brush with the egg beaten with the milk and sprinkle with the sugar and the nuts.
     why: Stretching the ropes lines the dough up into fibres – that is where the threads come from.
     time: 60
+    photo: 05-kozunak-stapka-5.webp
   - title: Bake
     text: Bake for 40–45 minutes at 170 °C. If the surface darkens early, cover it with baking paper. Let the kozunak cool on a rack.
     cue: The kozunak is dark golden, and a skewer inserted in the middle comes out dry.
     time: 45
+    photo: 06-kozunak-stapka-6.webp
 tips:
   - Do not add flour during kneading – the fat on your hands does the same job and does not make the dough stiff.
   - An oven with the light switched on is a good place for proving.
@@ -139,7 +164,7 @@ allergens:
   - Tree nuts
 translation:
   status: published
-  sourceHash: "2c41d3aec7298c7c"
+  sourceHash: 0d86095dccc0545b
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-20

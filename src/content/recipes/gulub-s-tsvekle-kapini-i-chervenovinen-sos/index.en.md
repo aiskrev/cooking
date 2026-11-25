@@ -28,9 +28,53 @@ servings: 4
 difficulty: Advanced
 cover: 07-gulub-stapka-7.webp
 photos:
+  01-gulub-stapka-1.webp:
+    alt: "Roast pigeon with beetroot: Mise en place: pigeon, beetroot, blackberries, juniper and red wine"
+    caption: "Mise en place: pigeon, beetroot, blackberries, juniper and red wine"
+    session: Photo session 3 (November 2026)
+  02-gulub-stapka-2.webp:
+    alt: "Roast pigeon with beetroot: The chef carving the bird on the board"
+    caption: The chef carving the bird on the board
+    session: Photo session 3 (November 2026)
+  03-gulub-stapka-3.webp:
+    alt: "Roast pigeon with beetroot: Carving the bird on the board with beetroot"
+    caption: Carving the bird on the board with beetroot
+    session: Photo session 3 (November 2026)
+  04-gulub-stapka-4.webp:
+    alt: "Roast pigeon with beetroot: Breasts and seasonings on the mise en place"
+    caption: Breasts and seasonings on the mise en place
+    session: Photo session 3 (November 2026)
+  05-gulub-stapka-5.webp:
+    alt: "Roast pigeon with beetroot: Searing the pigeon in a pan with butter"
+    caption: Searing the pigeon in a pan with butter
+    session: Photo session 3 (November 2026)
+  06-gulub-stapka-6.webp:
+    alt: "Roast pigeon with beetroot: Red wine in a pan with the bird and herbs"
+    caption: Red wine in a pan with the bird and herbs
+    session: Photo session 3 (November 2026)
   07-gulub-stapka-7.webp:
     alt: "Roast pigeon with beetroot: The finished plate with pigeon, beetroot and blackberries"
     caption: The finished plate with pigeon, beetroot and blackberries
+    session: Photo session 3 (November 2026)
+  08-dopalnitelen-1.webp:
+    alt: "Roast pigeon with beetroot: Mise en place with the bird, beetroot and blackberries"
+    caption: Mise en place with the bird, beetroot and blackberries
+    session: Photo session 3 (November 2026)
+  09-dopalnitelen-2.webp:
+    alt: "Roast pigeon with beetroot: Mise en place of the game bird and beetroot"
+    caption: Mise en place of the game bird and beetroot
+    session: Photo session 3 (November 2026)
+  10-dopalnitelen-3.webp:
+    alt: "Roast pigeon with beetroot: The bird in a pan on the counter"
+    caption: The bird in a pan on the counter
+    session: Photo session 3 (November 2026)
+  11-dopalnitelen-4.webp:
+    alt: "Roast pigeon with beetroot: Roast beetroot in different colours with the red sauce"
+    caption: Roast beetroot in different colours with the red sauce
+    session: Photo session 3 (November 2026)
+  12-dopalnitelen-5.webp:
+    alt: "Roast pigeon with beetroot: Red wine sauce with game meat and beetroot"
+    caption: Red wine sauce with game meat and beetroot
     session: Photo session 3 (November 2026)
 mise:
   - Pat the pigeons dry and remove any feather stubs. Tie the legs.
@@ -111,20 +155,27 @@ ingredients:
 steps:
   - title: Lay out the ingredients
     text: Lay out the bird, beetroot, blackberries, wine and juniper.
+    photo: 01-gulub-stapka-1.webp
   - title: Carve the bird
     text: Separate the breasts and the legs with a sharp knife; keep the bones for the sauce.
+    photo: 02-gulub-stapka-2.webp
   - title: Prepare the breasts
     text: Season the breasts with salt and juniper.
+    photo: 03-gulub-stapka-3.webp
   - title: Prepare the mise en place
     text: Lay out the carved bird and the ingredients for the sauce.
+    photo: 04-gulub-stapka-4.webp
   - title: Sear
     text: Sear the breasts and legs in butter for 2–3 minutes on each side, basting with butter and thyme.
     time: 8
+    photo: 05-gulub-stapka-5.webp
   - title: Finish and make the sauce
     text: Finish in the oven for 6–8 minutes. In the pan, sweat the shallots, pour in the wine, add the jus and juniper and thicken; strain and whisk in the cold butter.
     time: 15
+    photo: 06-gulub-stapka-6.webp
   - title: Plate
     text: Arrange the beetroot, blackberries, bird and sauce.
+    photo: 07-gulub-stapka-7.webp
 tips:
   - The bird is best pink – check the temperature with a thermometer.
   - The bones give the best sauce.
@@ -142,7 +193,7 @@ allergens:
   - Sulphites (wine)
 translation:
   status: published
-  sourceHash: "df285c82759aad38"
+  sourceHash: e340272a536a3450
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-21

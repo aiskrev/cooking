@@ -25,6 +25,24 @@ servings: 8
 difficulty: Intermediate
 cover: 07-gris-stapka-7.webp
 photos:
+  01-gris-stapka-1.webp:
+    alt: "Semolina cake with sour cherries: The ingredients for the semolina cake"
+    caption: The ingredients for the semolina cake
+  02-gris-stapka-2.webp:
+    alt: "Semolina cake with sour cherries: Pouring in the caramel"
+    caption: Pouring in the caramel
+  03-gris-stapka-3.webp:
+    alt: "Semolina cake with sour cherries: The cherries in the tin"
+    caption: The cherries in the tin
+  04-gris-stapka-4.webp:
+    alt: "Semolina cake with sour cherries: The semolina with the vanilla"
+    caption: The semolina with the vanilla
+  05-gris-stapka-5.webp:
+    alt: "Semolina cake with sour cherries: Folding in the whipped egg whites"
+    caption: Folding in the whipped egg whites
+  06-gris-stapka-6.webp:
+    alt: "Semolina cake with sour cherries: Turning the cake out of the tin"
+    caption: Turning the cake out of the tin
   07-gris-stapka-7.webp:
     alt: "Semolina cake with sour cherries: The cake, served"
     caption: The cake, served
@@ -88,26 +106,33 @@ ingredients:
 steps:
   - title: Prepare the ingredients
     text: Lay out the semolina, the milk, the eggs, the sugar, the vanilla, the butter and the cherries.
+    photo: 01-gris-stapka-1.webp
   - title: Pour in the caramel
     text: Melt the sugar with the water in a small saucepan over medium heat, without stirring, until amber. Immediately pour it into the tin and swirl it to cover the bottom.
     cue: The caramel is the colour of dark honey.
     avoid: The caramel is above 160 °C – do not taste it and do not touch it.
+    photo: 02-gris-stapka-2.webp
   - title: Arrange the cherries
     text: Arrange the drained cherries on the set caramel.
+    photo: 03-gris-stapka-3.webp
   - title: Cook the semolina
     text: Heat the milk with the sugar, the salt and the vanilla. When it boils, pour in the semolina in a thin stream, stirring with a whisk, and cook for 5–6 minutes over low heat. Take it off the heat and stir in the butter, and after 5 minutes the yolks, one at a time.
     cue: The semolina is thick and pulls away from the sides of the pot.
     avoid: The yolks go into slightly cooled semolina – in boiling semolina they curdle.
     time: 6
+    photo: 04-gris-stapka-4.webp
   - title: Fold in the whipped whites and bake
     text: Whip the egg whites to stiff peaks and fold them into the semolina in three additions with a spatula, using movements from the bottom upwards. Pour the mixture over the cherries and level it. Put the tin into the roasting tin, pour in boiling water up to half its height and bake for 35–40 minutes.
     cue: The surface is lightly golden and springs back when touched.
     time: 40
+    photo: 05-gris-stapka-5.webp
   - title: Cool and turn out
     text: Let the cake cool and put it in the refrigerator for at least 4 hours. Run a knife around the sides, cover the tin with a plate and turn it over in one movement.
     why: In four hours the semolina firms up, and the caramel dissolves into a sauce that pours over the top.
+    photo: 06-gris-stapka-6.webp
   - title: Serve
     text: Cut the cake into pieces and serve with the cherries, the caramel from the plate and a slice of orange.
+    photo: 07-gris-stapka-7.webp
 tips:
   - If the caramel sticks to the tin, dip the bottom of the tin into hot water for half a minute before turning out.
   - Frozen cherries should be thawed and drained very well – their juice thins the caramel.
@@ -126,7 +151,7 @@ allergens:
   - Milk and dairy
 translation:
   status: published
-  sourceHash: "687445617facd0d4"
+  sourceHash: 71d143b7af688ca2
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-20

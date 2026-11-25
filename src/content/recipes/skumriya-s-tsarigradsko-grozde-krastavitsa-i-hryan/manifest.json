@@ -1,6 +1,237 @@
 {
   "slug": "skumriya-s-tsarigradsko-grozde-krastavitsa-i-hryan",
   "photos": {
+    "01-skumriya-stapka-1.webp": {
+      "sourceName": "ChatGPT Image Nov 21, 2026, 10_09_03 AM-1.webp",
+      "sourceSha256": "0e9398d1d470b2cd6e2082100cdc1f05aae9b798060b4c9190d13f14aa46d641",
+      "sourceIdx": 3174,
+      "sourceBytes": 2100042,
+      "sourceSize": "1448x1086",
+      "role": "step",
+      "batch": 14,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-skumriya-stapka-2.webp": {
+      "sourceName": "ChatGPT Image Nov 21, 2026, 10_09_04 AM-2.webp",
+      "sourceSha256": "a363652e941cf0f22df21ab11ec2e145fa887f8c9dd8ac0aa7f6c63246223a1e",
+      "sourceIdx": 3175,
+      "sourceBytes": 1950814,
+      "sourceSize": "1448x1086",
+      "role": "step",
+      "batch": 14,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "03-skumriya-stapka-3.webp": {
+      "sourceName": "Precision Mackerel Filleting on Marble-5.webp",
+      "sourceSha256": "64af378ce1f76d4b4c229a61367c9fbc135a0082ed51f3eadb6d02d8c5ae5eb2",
+      "sourceIdx": 3130,
+      "sourceBytes": 1789356,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 10,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "04-skumriya-stapka-4.webp": {
+      "sourceName": "ChatGPT Image Nov 21, 2026, 10_09_05 AM-3.webp",
+      "sourceSha256": "287bffe04ffc1ade6646fe5c07ee703bf7d52279020bb6d09d6a2baa2ce7f079",
+      "sourceIdx": 3176,
+      "sourceBytes": 2118488,
+      "sourceSize": "1448x1086",
+      "role": "step",
+      "batch": 14,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "05-skumriya-stapka-5.webp": {
+      "sourceName": "Cured Mackerel with Lemon and Dill-7.webp",
+      "sourceSha256": "238a9187b6f0a2f328521f58fd31ebea859836b5210e4113fcae21191c62a336",
+      "sourceIdx": 3132,
+      "sourceBytes": 2145938,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 10,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "06-skumriya-stapka-6.webp": {
+      "sourceName": "ChatGPT Image Nov 21, 2026, 10_09_07 AM-5.webp",
+      "sourceSha256": "b39bf4ee483ea8d01071805dfc4d049f448a2bb0ccb90dc465a373ba7e50633c",
+      "sourceIdx": 3178,
+      "sourceBytes": 2056866,
+      "sourceSize": "1448x1086",
+      "role": "step",
+      "batch": 14,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "07-skumriya-stapka-7.webp": {
+      "sourceName": "ChatGPT Image Nov 21, 2026, 10_09_10 AM-6.webp",
+      "sourceSha256": "b6ab208eafe881e5411c68be40e02628785c31716cc9a7b9245c61e1929999c1",
+      "sourceIdx": 3179,
+      "sourceBytes": 1815818,
+      "sourceSize": "1448x1086",
+      "role": "step",
+      "batch": 14,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "08-skumriya-stapka-8.webp": {
+      "sourceName": "ChatGPT Image Nov 21, 2026, 10_09_06 AM-4.webp",
+      "sourceSha256": "fb8504b6ad9e2c6dcd7ad3d79d24a2a36195c7ce1e3c631e931385ca9fb5fb81",
+      "sourceIdx": 3177,
+      "sourceBytes": 1803894,
+      "sourceSize": "1448x1086",
+      "role": "step",
+      "batch": 14,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "09-skumriya-stapka-9.webp": {
+      "sourceName": "ChatGPT Image Nov 21, 2026, 10_09_12 AM-8.webp",
+      "sourceSha256": "ace4e4115619c6b7386bc9d7764dc1340892d5151fd93049564573b328ea0ced",
+      "sourceIdx": 3181,
+      "sourceBytes": 1761286,
+      "sourceSize": "1448x1086",
+      "role": "step",
+      "batch": 14,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "10-dopalnitelen-1.webp": {
+      "sourceName": "ChatGPT Image Nov 21, 2026, 10_09_14 AM-10.webp",
+      "sourceSha256": "45cdb36d223fff835a8e67fb473f89c746040a5cc0ce02f9aec7c37c6c9e53cb",
+      "sourceIdx": 3183,
+      "sourceBytes": 1707598,
+      "sourceSize": "1448x1086",
+      "role": "extra",
+      "batch": 14,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "11-dopalnitelen-2.webp": {
+      "sourceName": "ChatGPT Image Nov 21, 2026, 10_09_11 AM-7.webp",
+      "sourceSha256": "de945a7dc240931ef144cb1739ea53a1ad97378c3f75f4e691438240b6af127f",
+      "sourceIdx": 3180,
+      "sourceBytes": 1773098,
+      "sourceSize": "1448x1086",
+      "role": "extra",
+      "batch": 14,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "12-dopalnitelen-3.webp": {
+      "sourceName": "Fresh Mackerel with Dill and Lemon-1.webp",
+      "sourceSha256": "739614efc0c42092a49e474e66f621036d793682a2a1cb7deec2ad26ae5c417d",
+      "sourceIdx": 3126,
+      "sourceBytes": 2233200,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 10,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "13-dopalnitelen-4.webp": {
+      "sourceName": "Fresh Mackerel Mise en Place-2.webp",
+      "sourceSha256": "73c54071e66d481988b8ab235bd08dc802a6df079aad1255835b850d1910f7aa",
+      "sourceIdx": 3127,
+      "sourceBytes": 2246322,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 10,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "14-dopalnitelen-5.webp": {
+      "sourceName": "Precision Fish Filleting in a Gourmet Kitchen-4.webp",
+      "sourceSha256": "f2d58732603182472d5347fcd8c0a17ea0d70d5146e0bff2aba4e832b817c290",
+      "sourceIdx": 3129,
+      "sourceBytes": 1809938,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 10,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "15-dopalnitelen-6.webp": {
+      "sourceName": "Dill-Lemon Cured Mackerel Prep-8.webp",
+      "sourceSha256": "d0af7acef4a65a1475b60e633ae9d4ed2cd927d2e6baafed398af4c6f1f937c2",
+      "sourceIdx": 3133,
+      "sourceBytes": 2058204,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 10,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "16-dopalnitelen-7.webp": {
+      "sourceName": "Torch-Seared Mackerel Fillets-10.webp",
+      "sourceSha256": "5d0d594c8abc961f472db11190b47239113af694420cda29af46dd9c7a2bd32e",
+      "sourceIdx": 3135,
+      "sourceBytes": 1790662,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 10,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "17-dopalnitelen-8.webp": {
+      "sourceName": "Torch-Seared Mackerel with Dill and Lemon-11.webp",
+      "sourceSha256": "718d6d16cf226edae3b09a6f1b181dc84928904c5790ec78ecdf7be842aa4af5",
+      "sourceIdx": 3136,
+      "sourceBytes": 1779362,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 10,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "18-dopalnitelen-9.webp": {
+      "sourceName": "Gooseberry, Cucumber, and Dill Still Life-13.webp",
+      "sourceSha256": "31ee0f43530d2ff59e3b4d718d9162d02f49ef28a70fe79ee80dcee7dd43e9fb",
+      "sourceIdx": 3138,
+      "sourceBytes": 2131738,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 10,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "19-dopalnitelen-10.webp": {
+      "sourceName": "Gourmet Mackerel Mise en Place-14.webp",
+      "sourceSha256": "54e465ca002350afc9681c62a53cbf0f542d236455af89153f71170ec6f38e32",
+      "sourceIdx": 3139,
+      "sourceBytes": 2082564,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 10,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "20-dopalnitelen-11.webp": {
+      "sourceName": "Creamy Dill Sauce Mise en Place-16.webp",
+      "sourceSha256": "21f7550c83dabee8f722a8630b0bdb3e69d63c3b2e4cf9815815c3eebda629c4",
+      "sourceIdx": 3141,
+      "sourceBytes": 1895902,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 10,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "21-dopalnitelen-12.webp": {
+      "sourceName": "Whisked Dill Sauce with Mackerel Mise-en-Place-17.webp",
+      "sourceSha256": "a8206798a58a798bd020d53b887f2ec15cd3b7a87cfad17afbafa002a2746b04",
+      "sourceIdx": 3142,
+      "sourceBytes": 2018452,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 10,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
     "22-gotovo-yastie.webp": {
       "sourceName": "ChatGPT Image Nov 21, 2026, 10_09_13 AM-9.webp",
       "sourceSha256": "12dab1fbfbbfa13a0758138f37d898245ebcae5f6887d34d6f00c10971526bd3",
@@ -15,10 +246,5 @@
   },
   "generatedHash": "840a5043719414efd958f586c25926de6f1e6b5bae548c8eb2f821dda61ca355",
   "excludedSources": [],
-  "importedAt": "2026-11-21T12:35:35.785Z",
-  "singleHeroPolicy": {
-    "date": "2026-11-25",
-    "kept": "22-gotovo-yastie.webp",
-    "removed": 21
-  }
+  "importedAt": "2026-11-21T12:35:35.785Z"
 }

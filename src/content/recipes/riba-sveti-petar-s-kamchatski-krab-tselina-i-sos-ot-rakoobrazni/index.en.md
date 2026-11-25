@@ -30,9 +30,45 @@ servings: 4
 difficulty: Advanced
 cover: 09-dopalnitelen-1.webp
 photos:
+  01-riba-stapka-1.webp:
+    alt: "John Dory with king crab: The ingredients: John Dory fillets, king crab and celery"
+    caption: "The ingredients: John Dory fillets, king crab and celery"
+    session: Photo session 6 (November 2026)
+  02-riba-stapka-2.webp:
+    alt: "John Dory with king crab: Seasoning the fillets"
+    caption: Seasoning the fillets
+    session: Photo session 6 (November 2026)
+  03-riba-stapka-3.webp:
+    alt: "John Dory with king crab: Whisking the orange shellfish sauce"
+    caption: Whisking the orange shellfish sauce
+    session: Photo session 6 (November 2026)
+  04-riba-stapka-4.webp:
+    alt: "John Dory with king crab: The crab meat, celeriac purée and glazed celery sticks"
+    caption: The crab meat, celeriac purée and glazed celery sticks
+    session: Photo session 6 (November 2026)
+  05-riba-stapka-5.webp:
+    alt: "John Dory with king crab: Drying the skin"
+    caption: Drying the skin
+    session: Photo session 6 (November 2026)
+  06-riba-stapka-6.webp:
+    alt: "John Dory with king crab: Searing the fish skin side down"
+    caption: Searing the fish skin side down
+    session: Photo session 6 (November 2026)
+  07-riba-stapka-7.webp:
+    alt: "John Dory with king crab: Close-up: crisp skin and moist flesh"
+    caption: "Close-up: crisp skin and moist flesh"
+    session: Photo session 6 (November 2026)
+  08-riba-stapka-8.webp:
+    alt: "John Dory with king crab: Plating with tweezers"
+    caption: Plating with tweezers
+    session: Photo session 6 (November 2026)
   09-dopalnitelen-1.webp:
     alt: "John Dory with king crab: The finished plate with fish, crab and sauce"
     caption: The finished plate with fish, crab and sauce
+    session: Photo session 6 (November 2026)
+  10-gotovo-yastie.webp:
+    alt: "John Dory with king crab: The finished dish: John Dory with crab, celery and shellfish sauce"
+    caption: "The finished dish: John Dory with crab, celery and shellfish sauce"
     session: Photo session 6 (November 2026)
 mise:
   - Check the fillets for bones and dry the skin.
@@ -144,24 +180,32 @@ ingredients:
 steps:
   - title: Lay out the ingredients
     text: Lay out the fish, crab, celery, butter, wine and stock.
+    photo: 01-riba-stapka-1.webp
   - title: Season the fish
     text: Salt the fillets on the flesh side and keep them in the refrigerator while you make the garnishes.
+    photo: 02-riba-stapka-2.webp
   - title: Make the sauce
     text: Sear the shells in the oil for 5 minutes, add the shallot and tomato purée, flambé with the brandy and deglaze with the wine. Add the stock and simmer for 30 minutes. Strain, pressing the shells, reduce by half, add the cream and whisk in the cold butter.
     time: 30
+    photo: 03-riba-stapka-3.webp
   - title: Make the purée and glaze the celery
     text: Simmer the diced celeriac in the milk for 15 minutes and blend with half the butter. Glaze the celery sticks in the stock with the rest of the butter for 6–8 minutes. Mix the crab with the mayonnaise, lemon juice and parsley.
+    photo: 04-riba-stapka-4.webp
   - title: Dry the skin
     text: Dry the fish skin thoroughly with paper once more.
     why: Dry skin means crisp skin.
+    photo: 05-riba-stapka-5.webp
   - title: Sear the fish
     text: Lay the fillets skin side down in the hot oil and cook for 3–4 minutes. Add the butter, turn for 30 seconds and drain.
     cue: The flesh is opaque almost to the top and the skin is golden and crisp.
     time: 4
+    photo: 06-riba-stapka-6.webp
   - title: Check and hold
     text: Set the fish skin side up and check it – the flesh should separate into large flakes.
+    photo: 07-riba-stapka-7.webp
   - title: Plate
     text: Spoon on some celeriac purée, top with the crab, the fish skin side up and two glazed celery sticks. Spoon over the sauce and decorate with celery leaves.
+    photo: 08-riba-stapka-8.webp
 tips:
   - John Dory is also sold whole – ask the fishmonger to fillet it and take the bones for stock.
   - The sauce is made in advance and reheated, with the butter added at the last moment.
@@ -184,7 +228,7 @@ allergens:
   - Sulphites (wine)
 translation:
   status: published
-  sourceHash: "9975e7814b0533e8"
+  sourceHash: "72ce508ddf00f615"
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-25

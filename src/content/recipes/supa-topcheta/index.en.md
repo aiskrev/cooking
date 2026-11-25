@@ -23,6 +23,33 @@ servings: 6
 difficulty: Intermediate
 cover: 10-supa-stapka-10.webp
 photos:
+  01-supa-stapka-1.webp:
+    alt: "Meatball soup: The ingredients for the meatball soup"
+    caption: The ingredients for the meatball soup
+  02-supa-stapka-2.webp:
+    alt: "Meatball soup: Mixing the mince with the rice"
+    caption: Mixing the mince with the rice
+  03-supa-stapka-3.webp:
+    alt: "Meatball soup: The shaped meatballs in the tray"
+    caption: The shaped meatballs in the tray
+  04-supa-stapka-4.webp:
+    alt: "Meatball soup: The vegetables in the pot"
+    caption: The vegetables in the pot
+  05-supa-stapka-5.webp:
+    alt: "Meatball soup: Dropping the meatballs into the broth"
+    caption: Dropping the meatballs into the broth
+  06-supa-stapka-6.webp:
+    alt: "Meatball soup: The soup simmering over low heat"
+    caption: The soup simmering over low heat
+  07-supa-stapka-7.webp:
+    alt: "Meatball soup: Whisking the liaison"
+    caption: Whisking the liaison
+  08-supa-stapka-8.webp:
+    alt: "Meatball soup: Tempering with hot broth"
+    caption: Tempering with hot broth
+  09-supa-stapka-9.webp:
+    alt: "Meatball soup: Pouring in the liaison"
+    caption: Pouring in the liaison
   10-supa-stapka-10.webp:
     alt: "Meatball soup: The finished meatball soup"
     caption: The finished meatball soup
@@ -113,34 +140,44 @@ ingredients:
 steps:
   - title: Prepare the ingredients
     text: Lay out the mince, the rice, the vegetables, the eggs, the yogurt and the lemon.
+    photo: 01-supa-stapka-1.webp
   - title: Knead the mince
     text: Mix the mince with the rice, the grated onion, the egg, the salt and the black pepper. Knead for 2–3 minutes until the mixture is uniform.
     why: The rice swells in cooking and makes the meatballs fluffy.
+    photo: 02-supa-stapka-2.webp
   - title: Shape the meatballs
     text: With wet hands shape hazelnut-sized balls and roll them lightly in the flour.
     why: A thin coat of flour seals the meatballs and they do not fall apart in the broth.
     cue: You get about 35–40 meatballs.
+    photo: 03-supa-stapka-3.webp
   - title: Make the broth
     text: Melt the butter in a pot and sweat the carrot, the celery and the onion for 5 minutes. Pour in the hot water, salt it and let it boil for 10 minutes.
     time: 10
+    photo: 04-supa-stapka-4.webp
   - title: Add the meatballs
     text: Lower the heat until the broth barely simmers and drop in the meatballs one by one.
     avoid: In hard-boiling broth the meatballs fall apart and the soup turns cloudy.
+    photo: 05-supa-stapka-5.webp
   - title: Let it simmer
     text: Cook for 20–25 minutes over low heat, skimming off the foam. Take the pot off the hob.
     cue: The meatballs have floated up and the rice in them is completely soft.
     time: 25
+    photo: 06-supa-stapka-6.webp
   - title: Whisk the liaison
     text: In a bowl, whisk the egg with the yogurt, the flour and the lemon juice to a smooth mixture.
+    photo: 07-supa-stapka-7.webp
   - title: Temper
     text: Add five or six spoonfuls of the hot broth to the liaison, one at a time, stirring constantly.
     why: Warming it gradually keeps the egg from curdling.
     cue: The bowl is warm to the touch.
+    photo: 08-supa-stapka-8.webp
   - title: Pour in the liaison
     text: Pour it in a thin stream into the soup, stirring. If necessary, warm it over the lowest heat without letting it boil.
     avoid: If it boils, the liaison curdles.
+    photo: 09-supa-stapka-9.webp
   - title: Serve
     text: Ladle the soup into bowls and sprinkle with finely chopped parsley.
+    photo: 10-supa-stapka-10.webp
 tips:
   - Mince with 15–20% fat gives juicy meatballs; very lean mince makes them hard.
   - Instead of using flour you can thicken with only egg yolk and yogurt – the soup is lighter, but more temperamental.
@@ -160,7 +197,7 @@ allergens:
   - Celery
 translation:
   status: published
-  sourceHash: "dce5471548f1f2c9"
+  sourceHash: 8163ac9581317f89
   reviewed: false
   translator: AI-assisted translation
   updated: 2026-11-20
