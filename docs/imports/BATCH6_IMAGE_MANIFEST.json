@@ -887,6 +887,62 @@
      "sha256": "38394681e87fc9ae6891dff01c5f27a94d391666a072373e34f4f5acf6045e7f"
     }
    ]
+  },
+  {
+   "slug": "oktopod-s-hrupkavo-chorizo-pecheni-chushki-i-kartofeno-pyure",
+   "titleBg": "Октопод на жар с хрупкаво чоризо, печени чушки и картофено пюре",
+   "titleEn": "Charcoal-Grilled Octopus with Crisp Chorizo, Roasted Peppers and Mashed Potato",
+   "status": "NEW",
+   "photos": [
+    {
+     "file": "01-gotovo-yastie.webp",
+     "source": "ChatGPT Image Nov 25, 2026, 08_11_04 AM-9.webp",
+     "role": "hero",
+     "sha256": "208c304ef7f732191f900be8155340ab58de3be26989a39ae3b1e608a96607f5"
+    }
+   ]
+  },
+  {
+   "slug": "shokoladov-krem-s-glazura-chereshi-i-leshnikov-krunch",
+   "titleBg": "Шоколадов крем с огледална глазура, череши, лешников крънч и шоколадова дантела",
+   "titleEn": "Chocolate Cream with Mirror Glaze, Cherries, Hazelnut Crumble and Chocolate Lace",
+   "status": "NEW",
+   "photos": [
+    {
+     "file": "01-gotovo-yastie.webp",
+     "source": "ChatGPT Image Nov 25, 2026, 09_52_03 AM-9.webp",
+     "role": "hero",
+     "sha256": "4bdf170b22e6ecd99bb9def2773cd3c454980d9ae28b93a5c8594e9400ff3da3"
+    }
+   ]
+  },
+  {
+   "slug": "file-ot-divech-s-shvedska-ryapa-borovinki-i-hvoyna",
+   "titleBg": "Филе от дивеч с пюре и глазирана шведска ряпа, сос от боровинки и хвойна и смърчови връхчета",
+   "titleEn": "Game Fillet with Swede Purée and Glazed Swede, Blueberry and Juniper Sauce and Spruce Tips",
+   "status": "NEW",
+   "photos": [
+    {
+     "file": "01-gotovo-yastie.webp",
+     "source": "Bison with Rutabaga Purée and Blueberries-2.webp",
+     "role": "hero",
+     "sha256": "fd6615a4c668a3b245e0f888c47938823cb7e90b71b54f467e0f664eba1fcc08"
+    }
+   ]
+  },
+  {
+   "slug": "treska-s-midi-rezene-kumkuat-i-shafranov-sos",
+   "titleBg": "Треска с миди, задушено резене, кумкуат и шафранов сос",
+   "titleEn": "Cod with Mussels, Braised Fennel, Kumquat and Saffron Sauce",
+   "status": "NEW",
+   "photos": [
+    {
+     "file": "01-gotovo-yastie.webp",
+     "source": "ChatGPT Image Nov 25, 2026, 01_49_26 PM-9.webp",
+     "role": "hero",
+     "sha256": "7557da787e47451dde1af3ca5515e368b0df4f84eeae2fb927c49b1752fd8d78"
+    }
+   ]
   }
  ]
 }

@@ -1,0 +1,19 @@
+{
+  "slug": "treska-s-midi-rezene-kumkuat-i-shafranov-sos",
+  "photos": {
+    "01-gotovo-yastie.webp": {
+      "sourceName": "ChatGPT Image Nov 25, 2026, 01_49_26 PM-9.webp",
+      "sourceSha256": "7557da787e47451dde1af3ca5515e368b0df4f84eeae2fb927c49b1752fd8d78",
+      "sourceIdx": 5283,
+      "sourceBytes": 1762244,
+      "sourceSize": "1122x1402",
+      "role": "hero",
+      "batch": 25,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    }
+  },
+  "generatedHash": "1e7777a9c765ede2332ad9d0a2fd469ff8f6fbafc8936f431d71932c3d79b0d9",
+  "excludedSources": [],
+  "importedAt": "2026-11-25T14:55:52.489Z"
+}

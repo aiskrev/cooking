@@ -47,8 +47,8 @@
   --fs-lg: clamp(1.1rem, 1.02rem + 0.35vw, 1.28rem);
   --fs-xl: clamp(1.3rem, 1.12rem + 0.8vw, 1.7rem);
   --fs-2xl: clamp(1.6rem, 1.25rem + 1.6vw, 2.4rem);
-  --fs-3xl: clamp(2rem, 1.35rem + 2.9vw, 3.5rem);
-  --fs-display: clamp(2.45rem, 1.2rem + 5.4vw, 5.6rem);
+  --fs-3xl: clamp(1.75rem, 1.35rem + 1.5vw, 2.6rem);
+  --fs-display: clamp(2.1rem, 1.45rem + 2.4vw, 3.5rem);
 
   /* Отстояния */
   --sp-1: 0.25rem; --sp-2: 0.5rem; --sp-3: 0.75rem; --sp-4: 1rem; --sp-5: 1.5rem; --sp-6: 2rem; --sp-7: 3rem; --sp-8: 4rem; --sp-9: 6rem;
@@ -103,8 +103,8 @@ img, picture { display: block; max-width: 100%; }
 ::selection { background: var(--accent); color: var(--accent-text); }
 /* Стандартни кирилски форми навсякъде (без локалните „български“ курсивни форми) – еднакво в заглавия и текст */
 body, button, input, select, textarea { font-feature-settings: 'locl' 0; }
-h1, h2, h3, h4 { font-family: var(--font-head); line-height: 1.15; font-weight: 500; margin: 0 0 0.5em; text-wrap: balance; letter-spacing: -0.012em; }
-h1 { font-size: var(--fs-3xl); letter-spacing: -0.022em; }
+h1, h2, h3, h4 { font-family: var(--font-head); line-height: 1.15; font-weight: 400; margin: 0 0 0.5em; text-wrap: balance; letter-spacing: -0.012em; }
+h1 { font-size: var(--fs-3xl); letter-spacing: -0.015em; }
 h2 { font-size: var(--fs-2xl); }
 h3 { font-size: 1.22rem; font-weight: 600; letter-spacing: 0; }
 p { margin: 0 0 1em; text-wrap: pretty; }
@@ -240,7 +240,7 @@ a:hover { text-decoration-thickness: 0.12em; }
 .home-hero-grid { display: grid; gap: 2.25rem; align-items: center; }
 @media (min-width: 900px) { .home-hero-grid { grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr); gap: clamp(2.5rem, 4.5vw, 5.5rem); } }
 .hero-copy { transform: translate3d(0, calc(var(--hp, 0) * -48px), 0); opacity: calc(1 - var(--hp, 0) * 0.35); }
-.hero-title { font-size: var(--fs-display); line-height: 1.02; letter-spacing: -0.03em; font-weight: 500; margin: 0 0 0.4em; text-wrap: balance; }
+.hero-title { font-size: var(--fs-display); line-height: 1.12; letter-spacing: -0.01em; font-weight: 400; margin: 0 0 0.45em; text-wrap: balance; }
 .hero-title .w { display: inline-block; animation: rise-in var(--dur-reveal) var(--ease-out) both; }
 .hero-title .w:nth-child(2) { animation-delay: 70ms; } .hero-title .w:nth-child(3) { animation-delay: 140ms; } .hero-title .w:nth-child(4) { animation-delay: 210ms; }
 .hero-title .w:nth-child(5) { animation-delay: 280ms; } .hero-title .w:nth-child(6) { animation-delay: 350ms; } .hero-title .w:nth-child(n+7) { animation-delay: 420ms; }
@@ -361,10 +361,18 @@ a:hover { text-decoration-thickness: 0.12em; }
 .journey-step { font-size: var(--fs-sm); color: var(--muted); line-height: 1.35; }
 .journey-progress { height: 2px; background: var(--line); margin-top: 0.75rem; }
 .journey-progress span { display: block; height: 100%; background: var(--accent); transform-origin: left; transform: scaleX(var(--jp, 0)); }
-.journey.is-pinned { height: var(--journey-h, auto); }
-.journey.is-pinned .journey-sticky { position: sticky; top: var(--header-h); min-height: calc(100vh - var(--header-h)); display: flex; flex-direction: column; justify-content: center; padding-block: 1.5rem; overflow: hidden; }
-.journey.is-pinned .journey-viewport { overflow: visible; scroll-snap-type: none; }
-.journey.is-pinned .journey-track { transform: translate3d(calc(var(--jx, 0) * -1px), 0, 0); }
+.journey:not(.is-scrollable) .journey-progress { visibility: hidden; }
+/* Компютър: всички кадри на един ред като банер – без хоризонтално превъртане и без задържане на страницата */
+@media (min-width: 1024px) {
+  .journey-viewport { overflow: visible; scroll-snap-type: none; }
+  .journey-track { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: 1rem; width: auto; }
+  .journey-item { width: auto; }
+  .journey-item .photo { aspect-ratio: 3 / 4; }
+  .journey-cap { gap: 0.5rem; margin-top: 0.6rem; }
+  .journey-no { font-size: 1.35rem; }
+  .journey-step { font-size: 0.85rem; }
+  .journey-progress { display: none; }
+}
 
 /* ---------- Снимки с цветен заместител ---------- */
 .photo { position: relative; display: block; overflow: hidden; background: var(--surface-2); }
@@ -386,7 +394,7 @@ a:hover { text-decoration-thickness: 0.12em; }
 .small-notice { font-size: 0.95rem; }
 .recipe-head { display: grid; gap: 1.75rem; padding-block: 0.75rem 1.5rem; }
 @media (min-width: 900px) { .recipe-head { grid-template-columns: minmax(0, 1fr) minmax(0, 0.86fr); gap: clamp(2.5rem, 4.5vw, 5rem); align-items: start; } }
-.recipe-head h1 { font-size: clamp(2rem, 1.25rem + 2.6vw, 3.5rem); line-height: 1.06; letter-spacing: -0.028em; animation: rise-in var(--dur-reveal) var(--ease-out) both; }
+.recipe-head h1 { font-size: clamp(1.8rem, 1.3rem + 1.7vw, 2.75rem); line-height: 1.12; letter-spacing: -0.012em; animation: rise-in var(--dur-reveal) var(--ease-out) both; }
 .recipe-head .lead { font-size: var(--fs-lg); color: var(--muted); max-width: 38rem; animation: rise-in var(--dur-reveal) var(--ease-out) 120ms both; }
 .recipe-head .intro { font-family: var(--font-head); font-size: 1.08rem; line-height: 1.6; max-width: 38rem; }
 .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr)); margin: 1.5rem 0 1.25rem; padding: 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
