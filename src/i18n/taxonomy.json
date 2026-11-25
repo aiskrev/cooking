@@ -78,7 +78,8 @@
     "Допълнителна снимка (непотвърден произход)": "Additional photo (unconfirmed origin)",
     "Фотосесия 3 (ноември 2026)": "Photo session 3 (November 2026)",
     "Фотосесия 4 (ноември 2026)": "Photo session 4 (November 2026)",
-    "Фотосесия 5 (ноември 2026)": "Photo session 5 (November 2026)"
+    "Фотосесия 5 (ноември 2026)": "Photo session 5 (November 2026)",
+    "Фотосесия 6 (ноември 2026)": "Photo session 6 (November 2026)"
   },
   "tag": {
     "агнешко": "lamb",
@@ -334,6 +335,28 @@
     "фурми": "dates",
     "хариса": "harissa",
     "хайвер от сьомга": "salmon roe",
-    "моркови": "carrots"
+    "моркови": "carrots",
+    "царевица": "sweetcorn",
+    "лисички": "chanterelles",
+    "жълтък": "egg yolk",
+    "къри листа": "curry leaves",
+    "подправки": "spices",
+    "грозде": "grapes",
+    "облепиха": "sea buckthorn",
+    "шамфъстък": "pistachios",
+    "праскови": "peaches",
+    "върбинка": "lemon verbena",
+    "какао": "cocoa",
+    "пуешко": "turkey",
+    "манатарки": "porcini",
+    "червени боровинки": "cranberries",
+    "охлюви": "snails",
+    "жабешки бутчета": "frog legs",
+    "кресон": "watercress",
+    "Свети Петър": "John Dory",
+    "краб": "crab",
+    "сардини": "sardines",
+    "змиорка": "eel",
+    "умебоши": "umeboshi"
   }
 }

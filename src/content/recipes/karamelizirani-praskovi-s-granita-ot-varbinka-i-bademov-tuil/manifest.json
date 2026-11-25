@@ -1,0 +1,118 @@
+{
+  "slug": "karamelizirani-praskovi-s-granita-ot-varbinka-i-bademov-tuil",
+  "photos": {
+    "01-karamelizirani-stapka-1.webp": {
+      "sourceName": "ChatGPT Image Nov 25, 2026, 08_15_52 AM-1.webp",
+      "sourceSha256": "8e0c570de31b64b753bd1bbac57a0e844257dade65bff6b82002c6bc0b66fbc0",
+      "sourceIdx": 5072,
+      "sourceBytes": 1785492,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 6,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-karamelizirani-stapka-2.webp": {
+      "sourceName": "ChatGPT Image Nov 25, 2026, 08_15_58 AM-5.webp",
+      "sourceSha256": "12c1abcabe8f80176a57a3ef96c057233a2ff360d3b0d622f6e7a9c31836bf22",
+      "sourceIdx": 5076,
+      "sourceBytes": 1896972,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 6,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "03-karamelizirani-stapka-3.webp": {
+      "sourceName": "ChatGPT Image Nov 25, 2026, 08_15_53 AM-2.webp",
+      "sourceSha256": "31e4a23dbd559f4f1d68331db40895089bde0ff006a757ba693912fd818d6869",
+      "sourceIdx": 5073,
+      "sourceBytes": 1959802,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 6,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "04-karamelizirani-stapka-4.webp": {
+      "sourceName": "ChatGPT Image Nov 25, 2026, 08_15_59 AM-6.webp",
+      "sourceSha256": "2eef442c0cc41ffd685da00f8583011d8fcd25466857f047bf121dcd9978dd0c",
+      "sourceIdx": 5077,
+      "sourceBytes": 1632390,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 6,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "05-karamelizirani-stapka-5.webp": {
+      "sourceName": "ChatGPT Image Nov 25, 2026, 08_15_55 AM-3.webp",
+      "sourceSha256": "304df82c5eac32b24750421a350a80e5eae9779d02072c62b388026721cbcd44",
+      "sourceIdx": 5074,
+      "sourceBytes": 1508638,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 6,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "06-karamelizirani-stapka-6.webp": {
+      "sourceName": "ChatGPT Image Nov 25, 2026, 08_15_56 AM-4.webp",
+      "sourceSha256": "31a17b9482fdbfc0d5f2776a96bd2da857d1e2e4f581e1b7e4c7da8c4c2a3e5a",
+      "sourceIdx": 5075,
+      "sourceBytes": 1725700,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 6,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "07-karamelizirani-stapka-7.webp": {
+      "sourceName": "ChatGPT Image Nov 25, 2026, 08_16_03 AM-8.webp",
+      "sourceSha256": "6db047837840d9cd1f9b042a2a9ce90a9a4784e9964307d99f6ed41245abfc60",
+      "sourceIdx": 5079,
+      "sourceBytes": 1737234,
+      "sourceSize": "1122x1402",
+      "role": "step",
+      "batch": 6,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "08-dopalnitelen-1.webp": {
+      "sourceName": "ChatGPT Image Nov 25, 2026, 08_16_01 AM-7.webp",
+      "sourceSha256": "be284c9cb2f3195b360a5d19432833a2f49fe991fca59a6c9be6becc54396a6a",
+      "sourceIdx": 5078,
+      "sourceBytes": 1798438,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 6,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "09-dopalnitelen-2.webp": {
+      "sourceName": "ChatGPT Image Nov 25, 2026, 08_16_06 AM-10.webp",
+      "sourceSha256": "59b90bfaac0eddffa466808801f1985eeaee63a58ea0dd481eb314b572465858",
+      "sourceIdx": 5081,
+      "sourceBytes": 2044120,
+      "sourceSize": "1122x1402",
+      "role": "extra",
+      "batch": 6,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "10-gotovo-yastie.webp": {
+      "sourceName": "ChatGPT Image Nov 25, 2026, 08_16_04 AM-9.webp",
+      "sourceSha256": "fb10f4cfc47c5f87650e2b10a5443e2e397c824d29c1e713dbed7bd5334e7126",
+      "sourceIdx": 5080,
+      "sourceBytes": 1724572,
+      "sourceSize": "1122x1402",
+      "role": "hero",
+      "batch": 6,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    }
+  },
+  "generatedHash": "fccbe902547cfbc1e1c94996a7f8a33a62cb929a7e97c0983d78e20e16c41c82",
+  "excludedSources": [],
+  "importedAt": "2026-11-25T13:16:44.492Z"
+}

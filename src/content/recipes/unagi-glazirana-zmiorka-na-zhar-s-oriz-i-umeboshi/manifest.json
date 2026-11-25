@@ -1,0 +1,85 @@
+{
+  "slug": "unagi-glazirana-zmiorka-na-zhar-s-oriz-i-umeboshi",
+  "photos": {
+    "01-unagi-stapka-1.webp": {
+      "sourceName": "Japanese Eel Cooking Mise en Place-1.webp",
+      "sourceSha256": "19254995f3f82900d8341306a6c6eab30c6a755bb1a7569d8da2125ab982194d",
+      "sourceIdx": 5307,
+      "sourceBytes": 1801624,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 28,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "02-unagi-stapka-2.webp": {
+      "sourceName": "Glazed Eel Sauce Reduction-7.webp",
+      "sourceSha256": "0eb83220011777166b5fae02df818592d09fcc8bdaede086b7bf891812a7f8c4",
+      "sourceIdx": 5313,
+      "sourceBytes": 1648014,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 28,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "03-unagi-stapka-3.webp": {
+      "sourceName": "Japanese Unagi Mise en Place-3.webp",
+      "sourceSha256": "38f7a9d6d25ed6388fa301976a0cc34f57523e7e6a4067a1b92fe58e2b84b269",
+      "sourceIdx": 5309,
+      "sourceBytes": 2007324,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 28,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "04-unagi-stapka-4.webp": {
+      "sourceName": "Japanese Unagi Preparation Scene-4.webp",
+      "sourceSha256": "3127dc77c9df641cbaf25c91a0e68aceef0b0890e86db9e8f141fcee1cf647c3",
+      "sourceIdx": 5310,
+      "sourceBytes": 1682700,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 28,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "05-unagi-stapka-5.webp": {
+      "sourceName": "Glazed Unagi Over Glowing Charcoal-5.webp",
+      "sourceSha256": "40315f2a8546efb7640f19c7e291929dc7e55fae093526b165098c4f83626c58",
+      "sourceIdx": 5311,
+      "sourceBytes": 1802484,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 28,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "06-unagi-stapka-6.webp": {
+      "sourceName": "Japanese Ume Rice Plating Ensemble-6.webp",
+      "sourceSha256": "2054fd8526472be4456894f0b4996bc58cef19ff90cd8c3bc9734117b0187412",
+      "sourceIdx": 5312,
+      "sourceBytes": 1802266,
+      "sourceSize": "1536x1024",
+      "role": "step",
+      "batch": 28,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    },
+    "07-dopalnitelen-1.webp": {
+      "sourceName": "Japanese Unagi Mise en Place-2.webp",
+      "sourceSha256": "38394681e87fc9ae6891dff01c5f27a94d391666a072373e34f4f5acf6045e7f",
+      "sourceIdx": 5308,
+      "sourceBytes": 1918270,
+      "sourceSize": "1536x1024",
+      "role": "extra",
+      "batch": 28,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    }
+  },
+  "generatedHash": "b48ca5ac08dca741c01d1b87c58285040e3f5c109f0c998aa179c50a3623c400",
+  "excludedSources": [],
+  "importedAt": "2026-11-25T13:17:04.087Z"
+}
