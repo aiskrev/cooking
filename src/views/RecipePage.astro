@@ -195,7 +195,7 @@ const showNote = locale === 'en' && recipe.translation && !recipe.translation.re
       </div>
       {heroItem && (
         <figure class="hero-fig">
-          <Photo photo={heroItem.photo} locale={locale} lite={heroItem.lite} zoom eager class="hero-photo" sizes="(min-width: 900px) 430px, calc(100vw - 32px)" widths={[480, 800, 1120]} />
+          <Photo photo={heroItem.photo} locale={locale} lite={heroItem.lite} zoom eager class="hero-photo" sizes="(min-width: 1280px) 560px, (min-width: 900px) 44vw, calc(100vw - 32px)" widths={[480, 800, 1120]} />
           {d.illustrative && <p class="photo-note"><span class="badge">{t(locale, 'recipe.illustrative')}</span></p>}
         </figure>
       )}
@@ -252,7 +252,7 @@ const showNote = locale === 'en' && recipe.translation && !recipe.translation.re
 
       <section aria-labelledby="h-prigotvyane" class="method" id="prigotvyane">
         <h2 id="h-prigotvyane">{t(locale, 'recipe.method')}</h2>
-        <ol class="steps">
+        <ol class="steps" data-reveal-group>
           {d.steps.map((s, i) => {
             const p = s.photo ? photos.get(s.photo) : undefined;
             const item = p ? first(p) : undefined;
@@ -279,7 +279,7 @@ const showNote = locale === 'en' && recipe.translation && !recipe.translation.re
     </div>
 
     {chef.length > 0 && (
-      <section class="chef" aria-labelledby="h-chef">
+      <section class="chef" aria-labelledby="h-chef" data-reveal>
         <h2 id="h-chef">{t(locale, 'recipe.chef')}</h2>
         <div class="chef-grid">
           {chef.map((c) => (
@@ -290,7 +290,7 @@ const showNote = locale === 'en' && recipe.translation && !recipe.translation.re
     )}
 
     {(d.tips.length > 0 || d.mistakes.length > 0 || d.substitutions.length > 0) && (
-      <section class="advice" aria-labelledby="h-tips">
+      <section class="advice" aria-labelledby="h-tips" data-reveal>
         <h2 id="h-tips">{t(locale, 'recipe.advice')}</h2>
         <div class="chef-grid">
           {d.tips.length > 0 && <div class="chef-card"><h3>{t(locale, 'recipe.tips')}</h3><ul>{d.tips.map((x) => <li>{x}</li>)}</ul></div>}
@@ -301,7 +301,7 @@ const showNote = locale === 'en' && recipe.translation && !recipe.translation.re
     )}
 
     {(d.plating || d.serving || d.storage) && (
-      <section class="serve" aria-labelledby="h-serve">
+      <section class="serve" aria-labelledby="h-serve" data-reveal>
         <h2 id="h-serve">{t(locale, 'recipe.serve')}</h2>
         <dl class="serve-list">
           {d.plating && <div><dt>{t(locale, 'recipe.plating')}</dt><dd>{d.plating}</dd></div>}
@@ -325,7 +325,7 @@ const showNote = locale === 'en' && recipe.translation && !recipe.translation.re
         {[...extraGroups.entries()].map(([group, list]) => (
           <>
             <h3 class="session">{group}</h3>
-            <ul class="thumbs">
+            <ul class="thumbs" data-reveal-group>
               {list.map((p) => {
                 const it = first(p);
                 return <li><Photo photo={it.photo} locale={locale} lite={it.lite} zoom label={p.caption ?? p.alt} widths={[480]} sizes="(min-width: 640px) 160px, 45vw" /></li>;
@@ -351,7 +351,7 @@ const showNote = locale === 'en' && recipe.translation && !recipe.translation.re
   {related.length > 0 && (
     <section class="wrap related" aria-labelledby="h-related">
       <h2 id="h-related">{t(locale, 'recipe.related')}</h2>
-      <ul class="grid">
+      <ul class="grid" data-reveal-group>
         {related.map((r) => <li><RecipeCard recipe={r} locale={locale} level={3} /></li>)}
       </ul>
     </section>

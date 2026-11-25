@@ -1,0 +1,30 @@
+---
+// Редакционен акцент: голяма снимка и текст една до друга (на компютър редуват страната с reverse).
+// Цялата площ е една връзка към рецептата (заглавието); снимката е декоративна връзка без фокус – както при картите.
+import type { Recipe } from '../lib/recipes';
+import { getCoverPhoto } from '../lib/recipes';
+import { formatMinutes, href, t, type Locale } from '../i18n';
+import Photo from './Photo.astro';
+interface Props { recipe: Recipe; locale: Locale; reverse?: boolean; index?: number }
+const { recipe, locale, reverse = false, index } = Astro.props;
+const cover = await getCoverPhoto(recipe);
+const d = recipe.data;
+const total = d.prepTime + d.cookTime + d.restTime;
+const url = href(locale, 'recipes', recipe.id);
+---
+<article class={`feature${reverse ? ' reverse' : ''}`} data-reveal data-slug={recipe.id}>
+  {cover && (
+    <a class="feature-media" href={url} tabindex="-1" aria-hidden="true">
+      <Photo photo={cover} locale={locale} sizes="(min-width: 900px) 640px, calc(100vw - 32px)" widths={[480, 800, 1120]} />
+    </a>
+  )}
+  <div class="feature-body">
+    {index !== undefined && <p class="feature-no" aria-hidden="true">{String(index).padStart(2, '0')}</p>}
+    <p class="feature-meta">
+      {d.category} · {formatMinutes(locale, total)}{d.difficulty && <> · {d.difficulty}</>}
+    </p>
+    <h3 class="feature-title"><a href={url}>{d.title}</a></h3>
+    <p class="feature-desc">{d.description}</p>
+    <p class="feature-go" aria-hidden="true">{t(locale, 'home.toRecipe').replace(/\s*→\s*$/, '')} <span class="btn-arrow">→</span></p>
+  </div>
+</article>

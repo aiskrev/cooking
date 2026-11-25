@@ -509,4 +509,15 @@ export const en: Record<UiKey, string> = {
   // ---- Privacy ----
   'privacy.title': 'Privacy and rules',
   'privacy.description': 'What data we keep, why and for how long; rules for comments.',
+  // ---- Redesign: footer, rails, filters, tags ----
+  'footer.navLabel': 'Footer navigation',
+  'footer.explore': 'Explore',
+  'footer.info': 'Information',
+  'rail.prev': 'Previous recipes',
+  'rail.next': 'Next recipes',
+  'catalog.filtersToggle': 'More filters',
+  'catalog.activeFilters': 'Active filters',
+  'catalog.removeFilter': 'Remove the filter “{name}”',
+  'categories.popular': 'Most used',
+  'categories.az': 'All tags from A to Z',
 };

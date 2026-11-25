@@ -35,7 +35,15 @@ const recipes = await getRecipes(locale);
   let server: string[] = [];
   const current = () => new Set(member ? server : localFavorites());
 
+  // Кратко „изчезване“ на картата преди премахването (без него при намалено движение)
+  const leave = (li: HTMLElement) => new Promise<void>((done) => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return done();
+    li.classList.add('is-leaving');
+    window.setTimeout(() => { li.classList.remove('is-leaving'); done(); }, 220);
+  });
+
   async function remove(slug: string, li: HTMLElement) {
+    await leave(li);
     if (!member) { setLocalFavorites(localFavorites().filter((x) => x !== slug)); render(); return; }
     const before = server;
     server = server.filter((x) => x !== slug); render(); // оптимистично

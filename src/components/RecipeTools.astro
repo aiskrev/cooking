@@ -46,7 +46,11 @@ const { locale, servings, canScale } = Astro.props;
         if (!ing || !ing.s) return;
         li.querySelector<HTMLElement>('.ing-text')!.textContent = ingredientLine(locale, ing, k);
       });
-      if (out) out.textContent = String(servings);
+      if (out) {
+        out.textContent = String(servings);
+        // кратък визуален отклик при промяна на порциите (само CSS анимация; при намалено движение е изключена)
+        out.classList.remove('bump'); void out.offsetWidth; out.classList.add('bump');
+      }
       if (reset) reset.hidden = servings === base;
       document.dispatchEvent(new CustomEvent('recipe:scaled'));
     };

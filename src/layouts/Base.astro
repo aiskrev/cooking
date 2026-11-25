@@ -136,10 +136,38 @@ switchTo[other] = switchHref;
       <slot />
     </main>
     <footer class="site-footer">
-      <div class="wrap footer-inner">
+      {/* Декоративна бягаща лента с името и мотото (същият текст е в заглавката и по-долу; при намалено движение стои неподвижно) */}
+      <div class="footer-marquee" aria-hidden="true">
+        <div class="marquee-track">
+          {[0, 1, 2, 3].map(() => <><span>{text.name}</span><span>{text.tagline}</span></>)}
+        </div>
+      </div>
+      <div class="wrap footer-grid">
+        <div class="footer-brand">
+          <img src="/brand/mark-80.webp" width="44" height="44" alt="" decoding="async" loading="lazy" />
+          <div>
+            <p class="footer-name">{text.name}</p>
+            <p class="footer-tagline">{text.tagline}</p>
+          </div>
+        </div>
+        <nav aria-label={t(locale, 'footer.navLabel')}>
+          <p class="footer-h">{t(locale, 'footer.explore')}</p>
+          <ul class="footer-links">
+            {nav.map((n) => <li><a href={n.href}>{n.label}</a></li>)}
+          </ul>
+        </nav>
+        <div class="footer-inner">
+          <p class="footer-h">{t(locale, 'footer.info')}</p>
+          <ul class="footer-links">
+            <li><a href={`/${locale}/rss.xml`}>{t(locale, 'footer.rss')}</a></li>
+            <li><a href="/sitemap-index.xml">{t(locale, 'footer.sitemap')}</a></li>
+            <li><a href={href(locale, 'privacy')}>{t(locale, 'footer.privacyLink')}</a></li>
+          </ul>
+          <p class="footer-note">{t(locale, 'footer.privacy')}</p>
+        </div>
+      </div>
+      <div class="wrap footer-bottom">
         <p>{t(locale, 'footer.copyright', { year: new Date().getFullYear(), holder: copyrightHolder[locale] })}</p>
-        <p><a href={`/${locale}/rss.xml`}>{t(locale, 'footer.rss')}</a> · <a href="/sitemap-index.xml">{t(locale, 'footer.sitemap')}</a> · <a href={href(locale, 'privacy')}>{t(locale, 'footer.privacyLink')}</a></p>
-        <p class="muted">{t(locale, 'footer.privacy')}</p>
       </div>
     </footer>
     {/* Известие за бисквитките и личните данни (GDPR). Сайтът ползва само необходими бисквитки, затова няма нужда от избор „приемам/отказвам“ –
@@ -160,6 +188,7 @@ switchTo[other] = switchHref;
       import '../scripts/summary';
       import '../scripts/header-account';
       import '../scripts/cookie-notice';
+      import '../scripts/motion';
     </script>
     <script>
       const root = document.documentElement;

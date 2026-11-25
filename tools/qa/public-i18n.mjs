@@ -46,6 +46,8 @@ const browser = await launch();
       await page.setViewportSize({ width: w, height: 900 });
       for (const [loc, p] of PAGES) {
         await page.goto(BASE + p, { waitUntil: 'load' }); await page.waitForTimeout(500);
+        // изчаква крайните анимации при зареждане (поява на заглавието) – по време на избледняване контрастът е временно по-нисък
+        await page.waitForFunction(() => document.getAnimations().every((a) => a.effect?.getTiming().iterations === Infinity || a.playState !== 'running'), null, { timeout: 5000 });
         await page.evaluate(axeSrc);
         const res = await page.evaluate(() => window.axe.run(document, { runOnly: { type: 'tag', values: ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa', 'best-practice'] } }));
         const v = res.violations.map((x) => `${x.id}(${x.nodes.length})`);
@@ -80,11 +82,13 @@ const browser = await launch();
   expect(page.url().endsWith('/bg/recepti/tarator/'), 'обратно към българската рецепта');
   // страница с филтри: заявката се запазва при смяна на езика
   await page.goto(BASE + '/bg/recepti/?category=' + encodeURIComponent('Супи'), { waitUntil: 'load' }); await page.waitForTimeout(500);
+  // броят супи зависи от съдържанието: сравнява се с българската страница вместо с фиксирано число
+  const soupsBg = await page.evaluate(() => [...document.querySelectorAll('[data-grid] > li')].filter((l) => !l.hidden).length);
   await Promise.all([page.waitForURL('**/en/recipes/**'), page.click('[data-lang-switch] a[data-lang="en"]')]);
   await page.waitForTimeout(600);
   expect(decodeURIComponent(page.url()).includes('category=Супи'), 'филтърът по категория се запазва при смяна на езика');
   const visible = await page.evaluate(() => [...document.querySelectorAll('[data-grid] > li')].filter((l) => !l.hidden).length);
-  expect(visible === 5, `на английски същият филтър показва 5 супи (${visible})`);
+  expect(visible === soupsBg && visible > 0, `на английски същият филтър показва толкова супи, колкото на български (${visible} / ${soupsBg})`);
   const opt = await page.evaluate(() => document.getElementById('f-category').selectedOptions[0].textContent);
   expect(opt.startsWith('Soups'), `етикетът на категорията е на английски („${opt}“)`);
   // 404 за непознат език

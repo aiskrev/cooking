@@ -1,33 +1,52 @@
 ---
 import Base from '../layouts/Base.astro';
+import CategoryTiles from '../components/CategoryTiles.astro';
 import { getRecipes, getCategories, getTags } from '../lib/recipes';
-import { href, t, type Locale } from '../i18n';
+import { href, t, localeInfo, type Locale } from '../i18n';
 
 interface Props { locale: Locale }
 const { locale } = Astro.props;
 const recipes = await getRecipes(locale);
 const categories = getCategories(recipes, locale);
 const tags = getTags(recipes, locale);
+// Най-често срещаните етикети отгоре; под тях всички етикети по азбучен ред, групирани по първа буква (всички остават връзки)
+const intl = localeInfo[locale].intl;
+const popular = [...tags].sort((a, b) => b.recipes.length - a.recipes.length || a.name.localeCompare(b.name, intl)).slice(0, 14);
+const groups = new Map<string, typeof tags>();
+for (const x of [...tags].sort((a, b) => a.name.localeCompare(b.name, intl))) {
+  const letter = x.name.trim().charAt(0).toLocaleUpperCase(intl);
+  groups.set(letter, [...(groups.get(letter) ?? []), x]);
+}
 ---
 <Base locale={locale} title={t(locale, 'categories.title')} description={t(locale, 'categories.description')} alt={{ bg: href('bg', 'categories'), en: href('en', 'categories') }}>
   <div class="wrap">
     <div class="page-head"><h1>{t(locale, 'categories.heading')}</h1></div>
     <section class="section" aria-labelledby="h-c">
-      <h2 id="h-c">{t(locale, 'nav.categories')}</h2>
-      <ul class="chips">
-        {categories.map((c) => (
-          <li><a href={href(locale, 'categories', c.slug)}>{c.name}<span class="count">{c.recipes.length}</span></a></li>
-        ))}
-      </ul>
+      <div class="section-head"><h2 id="h-c">{t(locale, 'nav.categories')}</h2></div>
+      <CategoryTiles locale={locale} categories={categories} />
     </section>
     {tags.length > 0 && (
       <section class="section" aria-labelledby="h-t">
-        <h2 id="h-t">{t(locale, 'recipe.tagsHeading')}</h2>
-        <ul class="chips">
-          {tags.map((x) => (
+        <div class="section-head"><h2 id="h-t">{t(locale, 'recipe.tagsHeading')}</h2></div>
+        <h3 class="session">{t(locale, 'categories.popular')}</h3>
+        <ul class="chips big">
+          {popular.map((x) => (
             <li><a href={href(locale, 'tags', x.slug)}>{x.name}<span class="count">{x.recipes.length}</span></a></li>
           ))}
         </ul>
+        <h3 class="session">{t(locale, 'categories.az')}</h3>
+        <div class="tag-groups">
+          {[...groups.entries()].map(([letter, list]) => (
+            <div class="tag-group">
+              <p class="tag-letter" aria-hidden="true">{letter}</p>
+              <ul>
+                {list.map((x) => (
+                  <li><a href={href(locale, 'tags', x.slug)}><span>{x.name}</span><span class="count">{x.recipes.length}</span></a></li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
       </section>
     )}
   </div>
