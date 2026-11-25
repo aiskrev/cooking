@@ -74,19 +74,18 @@ const WIDTHS = [320, 375, 430, 768, 1024, 1280, 1440];
   await page.goto(BASE + '/bg/', { waitUntil: 'load' });
   const h1 = await page.locator('h1').innerText();
   expect(/\s/.test(h1) && h1.replace(/\s+/g, ' ').trim() === 'Модерна кухня с Мишлен щрих', `заглавието се чете с интервали („${h1.replace(/\s+/g, ' ')}“)`);
-  const j = await page.evaluate(() => { const s = document.querySelector('[data-journey]'); return { pinned: s.classList.contains('is-pinned'), n: s.querySelectorAll('.journey-item').length }; });
-  expect(j.pinned && j.n >= 6, `на компютър пътешествието е закачено и има ${j.n} кадъра`);
-  // Превъртането движи кадрите наляво
-  await page.evaluate(() => { const s = document.querySelector('[data-journey]'); window.scrollTo({ top: s.getBoundingClientRect().top + scrollY + 600, behavior: 'instant' }); });
-  await page.waitForTimeout(400);
-  const jx = await page.evaluate(() => Number(document.querySelector('[data-journey]').style.getPropertyValue('--jx')));
-  expect(jx > 100, `вертикалното превъртане движи пътешествието (${Math.round(jx)} px)`);
-  // Клавиатура: последният кадър става видим при фокус
+  // Пътешествие на компютър: банер – всички кадри на един ред, в ширината на екрана, страницата не се задържа
+  const j = await page.evaluate(() => {
+    const s = document.querySelector('[data-journey]');
+    const items = [...s.querySelectorAll('.journey-item')].map((li) => li.getBoundingClientRect());
+    return { n: items.length, oneRow: new Set(items.map((r) => Math.round(r.top))).size === 1, inside: items.every((r) => r.left >= 0 && r.right <= innerWidth), height: s.getBoundingClientRect().height };
+  });
+  expect(j.n >= 6 && j.oneRow && j.inside, `на компютър пътешествието е банер: ${j.n} кадъра на един ред в ширината на екрана`);
+  expect(j.height < 900, `секцията не удължава страницата (височина ${Math.round(j.height)} px)`);
+  // Клавиатура: всеки кадър е връзка, достъпна с Tab
   const last = page.locator('.journey-item a').last();
   await last.focus();
-  await page.waitForTimeout(300);
-  const inView = await last.evaluate((a) => { const r = a.getBoundingClientRect(); return r.left >= 0 && r.right <= innerWidth && r.top >= 0 && r.bottom <= innerHeight; });
-  expect(inView, 'фокусираният последен кадър от пътешествието е изцяло видим');
+  expect(await last.evaluate((a) => document.activeElement === a), 'последният кадър от пътешествието получава фокус');
   // Плъзгач с рецепти за фино ядене
   await page.locator('#h-fine').scrollIntoViewIfNeeded();
   const before = await page.evaluate(() => document.querySelector('[data-rail-track]').scrollLeft);
@@ -97,8 +96,8 @@ const WIDTHS = [320, 375, 430, 768, 1024, 1280, 1440];
   // Телефон: пътешествието е обикновена хоризонтална лента
   await page.setViewportSize({ width: 390, height: 844 });
   await page.reload({ waitUntil: 'load' });
-  const mob = await page.evaluate(() => { const s = document.querySelector('[data-journey]'); return { pinned: s.classList.contains('is-pinned'), ov: getComputedStyle(s.querySelector('[data-journey-viewport]')).overflowX }; });
-  expect(!mob.pinned && mob.ov === 'auto', 'на телефон пътешествието е хоризонтална лента без закачане');
+  const mob = await page.evaluate(() => { const s = document.querySelector('[data-journey]'); return { scroll: s.classList.contains('is-scrollable'), ov: getComputedStyle(s.querySelector('[data-journey-viewport]')).overflowX }; });
+  expect(mob.scroll && mob.ov === 'auto', 'на телефон пътешествието е хоризонтална лента');
   await ctx.close();
 }
 

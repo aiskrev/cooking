@@ -7,7 +7,6 @@
 
 const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
 const root = document.documentElement;
-const ric = (fn: () => void) => requestAnimationFrame(() => requestAnimationFrame(fn));
 
 // ---------- Сянка на заглавката след началото на страницата ----------
 const header = document.querySelector<HTMLElement>('.site-header');
@@ -68,61 +67,23 @@ function setupHero() {
   update();
 }
 
-// ---------- Фотографско пътешествие: хоризонтално движение, водено от вертикалното превъртане ----------
+// ---------- Фотографско пътешествие ----------
+// На компютър всички кадри стоят на един ред като банер (само CSS). Когато лентата се плъзга хоризонтално (телефон, таблет),
+// линията под нея показва докъде е стигнал посетителят. Вертикалното превъртане никога не се задържа.
 function setupJourney() {
   document.querySelectorAll<HTMLElement>('[data-journey]').forEach((sec) => {
     const viewport = sec.querySelector<HTMLElement>('[data-journey-viewport]')!;
-    const track = sec.querySelector<HTMLElement>('[data-journey-track]')!;
-    const sticky = sec.querySelector<HTMLElement>('.journey-sticky')!;
-    const big = window.matchMedia('(min-width: 1024px) and (min-height: 700px)');
-    let dist = 0;
-    let pinned = false;
     let ticking = false;
-
-    const progressFromScroll = () => {
-      if (pinned) {
-        // Секцията „залепва“ под заглавката: напредъкът започва, когато горният ѝ ръб стигне долния ръб на заглавката
-        const top = sec.getBoundingClientRect().top - (header?.offsetHeight ?? 0);
-        const p = Math.min(1, Math.max(0, -top / Math.max(1, dist)));
-        sec.style.setProperty('--jx', (p * dist).toFixed(1));
-        sec.style.setProperty('--jp', p.toFixed(4));
-      } else {
-        const max = viewport.scrollWidth - viewport.clientWidth;
-        sec.style.setProperty('--jp', max > 0 ? (viewport.scrollLeft / max).toFixed(4) : '1');
-      }
+    const progress = () => {
+      ticking = false;
+      const max = viewport.scrollWidth - viewport.clientWidth;
+      sec.classList.toggle('is-scrollable', max > 4);
+      sec.style.setProperty('--jp', max > 4 ? (viewport.scrollLeft / max).toFixed(4) : '1');
     };
-    const layout = () => {
-      const want = big.matches && !reduced.matches;
-      sec.classList.remove('is-pinned');
-      sec.style.removeProperty('--journey-h');
-      sec.style.removeProperty('--jx');
-      dist = Math.max(0, track.scrollWidth - viewport.clientWidth);
-      pinned = want && dist > 40;
-      if (pinned) {
-        sec.classList.add('is-pinned');
-        // Височината на секцията = залепената част + хоризонталното разстояние: превъртането надолу движи кадрите наляво
-        sec.style.setProperty('--journey-h', `${sticky.offsetHeight + dist}px`);
-      }
-      progressFromScroll();
-    };
-    const onScroll = () => { if (!ticking) { ticking = true; requestAnimationFrame(() => { ticking = false; progressFromScroll(); }); } };
-    window.addEventListener('scroll', onScroll, { passive: true });
+    const onScroll = () => { if (!ticking) { ticking = true; requestAnimationFrame(progress); } };
     viewport.addEventListener('scroll', onScroll, { passive: true });
-    window.addEventListener('resize', () => ric(layout), { passive: true });
-    big.addEventListener?.('change', layout);
-    reduced.addEventListener?.('change', layout);
-    // Клавиатура: фокусиран кадър, който е извън екрана, се довежда до видимата част (без капан за превъртането)
-    track.addEventListener('focusin', (e) => {
-      if (!pinned) return;
-      const item = (e.target as HTMLElement).closest('li');
-      if (!item) return;
-      const want = Math.min(dist, Math.max(0, item.offsetLeft - (viewport.clientWidth - item.offsetWidth) / 2));
-      const secTop = sec.getBoundingClientRect().top + window.scrollY - (header?.offsetHeight ?? 0);
-      window.scrollTo({ top: secTop + want, behavior: 'instant' });
-    });
-    // Снимките се зареждат мързеливо – размерите на пистата са известни още от CSS, но при шрифтове/снимки преизчисляваме
-    window.addEventListener('load', layout, { once: true });
-    layout();
+    window.addEventListener('resize', onScroll, { passive: true });
+    progress();
   });
 }
 

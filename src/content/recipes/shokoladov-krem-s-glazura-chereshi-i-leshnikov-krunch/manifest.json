@@ -1,0 +1,19 @@
+{
+  "slug": "shokoladov-krem-s-glazura-chereshi-i-leshnikov-krunch",
+  "photos": {
+    "01-gotovo-yastie.webp": {
+      "sourceName": "ChatGPT Image Nov 25, 2026, 09_52_03 AM-9.webp",
+      "sourceSha256": "4bdf170b22e6ecd99bb9def2773cd3c454980d9ae28b93a5c8594e9400ff3da3",
+      "sourceIdx": 5130,
+      "sourceBytes": 1609160,
+      "sourceSize": "1122x1402",
+      "role": "hero",
+      "batch": 10,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    }
+  },
+  "generatedHash": "f8e73ddaef0b68a908ef75a234a96287782b05c2b0e60ded718729aab08d971d",
+  "excludedSources": [],
+  "importedAt": "2026-11-25T14:55:51.692Z"
+}

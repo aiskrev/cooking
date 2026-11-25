@@ -1,0 +1,19 @@
+{
+  "slug": "oktopod-s-hrupkavo-chorizo-pecheni-chushki-i-kartofeno-pyure",
+  "photos": {
+    "01-gotovo-yastie.webp": {
+      "sourceName": "ChatGPT Image Nov 25, 2026, 08_11_04 AM-9.webp",
+      "sourceSha256": "208c304ef7f732191f900be8155340ab58de3be26989a39ae3b1e608a96607f5",
+      "sourceIdx": 5070,
+      "sourceBytes": 1783658,
+      "sourceSize": "1122x1402",
+      "role": "hero",
+      "batch": 5,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    }
+  },
+  "generatedHash": "ae1f33fef9a3416171f635588a688b44b767b967d0d3b317125bd4365bcd1aab",
+  "excludedSources": [],
+  "importedAt": "2026-11-25T14:55:51.298Z"
+}

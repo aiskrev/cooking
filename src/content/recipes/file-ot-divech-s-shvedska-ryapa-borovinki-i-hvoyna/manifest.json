@@ -1,0 +1,19 @@
+{
+  "slug": "file-ot-divech-s-shvedska-ryapa-borovinki-i-hvoyna",
+  "photos": {
+    "01-gotovo-yastie.webp": {
+      "sourceName": "Bison with Rutabaga Purée and Blueberries-2.webp",
+      "sourceSha256": "fd6615a4c668a3b245e0f888c47938823cb7e90b71b54f467e0f664eba1fcc08",
+      "sourceIdx": 5133,
+      "sourceBytes": 2027782,
+      "sourceSize": "1536x1024",
+      "role": "hero",
+      "batch": 11,
+      "confidence": "HIGH",
+      "provenance": "ChatGPT Image (AI-генерирана илюстрация)"
+    }
+  },
+  "generatedHash": "c582cff22702c9abe123eec8df5b55e9399334a29ab5e8028b1005311fbc04f0",
+  "excludedSources": [],
+  "importedAt": "2026-11-25T14:55:52.123Z"
+}
